@@ -376,7 +376,8 @@ url-prefix("https://www.dndbeyond.com/modifier/") {
 	.tooltip-hover:hover,
 	.tooltip-hover:focus,
 	.tooltip-hover:active,
-	.tooltip-hover:visited {
+	.tooltip-hover:visited,
+    h4.adventure-chapter-header a{
 		color: /*[[linkColor]]*/
 		!important
 	}
