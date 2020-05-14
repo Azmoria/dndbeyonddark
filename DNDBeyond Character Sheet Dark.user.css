@@ -1,180 +1,197 @@
 /* ==UserStyle==
-@name         DNDBeyond Character Sheet Dark
-@namespace    Jay_Lane
-@version      0.0.1
+@name         DNDBeyond Dark Theme
+@namespace    Azmoria
 @preprocessor uso
-@author       Jay_Lane
-@var text backgroundImg "Background image URL: two double quotes for dndbeyond background choice, url for custom or blank for background color" ""
-@var color background "Background Color" "#000"
-@var color sheetColor "Sheet Color" #000
-@var color fontColor "Font Color" #ddd
-@var color borderColor "Border Color" #114
-@var color highlightColor "Highlight Color" #59d
-@var color scrollbarColor "Scrollbar Color" #114
-@var color rollColor "Rollable Items Color" #59d
-@var color rollCalcColor "Roll History Background Color" #030f1aea
-@var text filter "Icons filter - for dark backgrounds: invert(100%) for light background: none" "invert(100%)"
+@version      1.0
+@author       Azmoria
+@var color backgroundColor "Background Color" #000
+@var color transparencyBackgroundColor "Background Color of things that can be transparent" #000000e0
+@var color fontColor "Font Color" #c0c0c0
+@var color linkColor "Link Color" #88bcd6
+@var color borderColor "Border Color" #fff
+@var text borderStyle "Border Style eg. dotted" "solid"
+@var text borderWidth "Border Width eg. 2px" "1px"
+@var color scrollbarColor "Scrollbar Color" #88bcd6
+==/UserStyle==*/
+/* Alternative Color for font to match DND Beyond Green #47D18C */
+@-moz-document url-prefix("https://www.dndbeyond.com/sources"),
+url-prefix("https://www.dndbeyond.com/forums"),
+url-prefix("https://www.dndbeyond.com/spells"),
+url-prefix("https://www.dndbeyond.com/classes"),
+url-prefix("https://www.dndbeyond.com/monsters"),
+url-prefix("https://www.dndbeyond.com/magic-items"),
+url-prefix("https://www.dndbeyond.com/backgrounds"),
+url-prefix("https://www.dndbeyond.com/feats"),
+url-prefix("https://www.dndbeyond.com/equipment"),
+url-prefix("https://www.dndbeyond.com/vehicles"),
+url-prefix("https://www.dndbeyond.com/homebrew"),
+url-prefix("https://www.dndbeyond.com/races"),
+url-prefix("https://www.dndbeyond.com/posts"),
+url-prefix("https://www.dndbeyond.com/my-collection"),
+url-prefix("https://www.dndbeyond.com/my-creations"),
+url-prefix("https://www.dndbeyond.com/my-campaigns"),
+url-prefix("https://www.dndbeyond.com/campaigns"),
+regexp("https://www.dndbeyond.com/profile/.*/characters/.*/builder#/.*"),
+url-prefix("https://www.dndbeyond.com/my-characters"),
+url-prefix("https://www.dndbeyond.com/search"),
+url-prefix("https://www.dndbeyond.com/modifier/") {
 
 
 
-==/UserStyle== */
-@-moz-document regexp("https://www.dndbeyond.com/profile/.*/characters/\\d*"),
-regexp("https://www.dndbeyond.com/characters/.*") {
-
-	/*Scrollbar style */
 	::-webkit-scrollbar {
-		width: 10px;
+		width: 3px;
 	}
 
 	::-webkit-scrollbar-track {
-		background: /*[[sheetColor]]*/;
+		background: /*[[backgroundColor]]*/;
 	}
 	::-webkit-scrollbar-thumb {
 		background-color: /*[[scrollbarColor]]*/;
 		border-radius: 6px;
-		background-clip: padding-box;
-		border: 4px solid rgba(0, 0, 0, 0);
+		border: none;
 	}
-
-	/*Background colors, images and styles */
-	html body.body-rpgcharacter-sheet {
-		background: url("/*[[backgroundImg]]*/");
-		background-color: /*[[background]]*/;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: cover;
-	}
-
-	.ct-health-summary__adjuster-field-input,
-	.ddbc-campaign-summary,
-	.ct-sidebar__pane-content,
-	.ct-sidebar__pane-gap,
-	.ct-sidebar thead td,
-	.ct-sidebar thead th,
-	.ct-sidebar .compendium-left-aligned-table td,
-	.ct-sidebar .summoning-creatures-table td,
-	body:not(.body-forum):not(.section-posts):not(.section-changelog):not(.body-privatemessage-details) blockquote,
-	.ct-editor-box,
-	input:not(.es-form-field-query),
-	.ddbc-checkbox__input,
-	.ct-item-detail__tag,
-	.ct-spell-detail__tag,
-	.ddbc-collapsible__header,
-	.ct-select,
-	.ct-creature-pane__tag,
-	.ddbc-number-bar__option,
-	.ct-condition-manage-pane__condition-content,
-	.ct-sidebar td,
-	textarea,
-	.ct-spells-filter__adv-filter-button,
-	.ct-equipment-shop__item > .ddbc-collapsible__content,
-	.ct-spell-manager__spell > .ddbc-collapsible__content,
-	.site .ct-button.ct-theme-button--outline:disabled,
-	.ct-feats-manage-pane__feat-content,
-	.ct-spell-caster__casting-action-count.ct-spell-caster__casting-action-count--spellcasting,
-	.ddbc-ability-score-manager__component-value,
-	.ct-component-carousel__placeholders,
-	.ct-component-carousel__active,
-	.ct-mobile-divider__label,
-	.ct-main-mobile__saving-throws,
-	.ct-main-mobile .ct-senses,
-	.ct-sidebar__mask,
-	.ct-description-mobile .ct-description,
-	.ct-proficiency-groups-mobile,
-	.ct-notes-mobile .ct-notes,
-	.ct-features-mobile,
-	.ct-spells-mobile,
-	.ct-equipment-mobile,
-	.ct-actions-mobile .ddbc-tab-options,
-	.ct-combat-tablet__cta-button,
-	.ct-tablet-box__inner,
-	.ct-tablet-box__header,
-	.ct-skills-mobile .ct-skills,
-	.ct-extras-mobile,
-	.ajs-dialog,
-	.ajs-header,
-	.ajs-primary.ajs-buttons,
-	.beyond20-roll-cell,
-	.beyond20-description,
-	.beyond20-dice-roller-content,
-	.ajs-footer,
-	.beyond20-message .beyond20-description,
-	.beyond20-message details table,
-	.beyond20-tooltip .beyond20-tooltip-content,
-	.dice-formula.beyond20-roll-formula,
-	.beyond20-roll-cell,
-	.beyond20-roll-die-result {
-		background-color: /*[[sheetColor]]*/
-		!important;
-		color: /*[[fontColor]]*/
-		!important;
-	}
-	.ddbc-no-proficiency-icon {
-		background: /*[[fontColor]]*/
-		!important
-	}
-	.ddbc-tab-options--layout-pill .ddbc-tab-options__header-heading,
-	.ct-slot-manager__slot,
-	.site .ct-button.ct-theme-button--outline,
-	.ct-character-header-desktop__button,
-	.site .ct-button.ct-theme-button--filled:disabled,
-	.site .ct-button.ct-theme-button--filled,
-	.site .ct-theme-button--outline.ct-button:hover,
-	.site .ct-theme-button--outline.ct-button:active {
-		background: /*[[sheetColor]]*/
-		!important;
-	}
-	.ct-slot-manager__slot--used:before,
-	.ct-spells-spell__scaled-level,
-	.ddbc-tab-options__header-heading.ddbc-tab-options__header-heading--is-active,
-	.ddbc-tab-options__header-heading.ddbc-tab-options__header-heading--is-active:hover,
-	.ddbc-number-bar__option.ddbc-number-bar__option--active.ddbc-number-bar__option--interactive,
-	.ddbc-toggle-field--is-enabled .ddbc-toggle-field__nub,
-	.ddbc-toggle-field--is-enabled,
-	.ct-spells-filter__active,
-	button.ct-theme-button.ct-remove-button.ct-theme-button--filled.ct-theme-button--interactive.ct-button.character-button.character-button-small,
-	button.ct-theme-button.ct-theme-button--filled.ct-theme-button--interactive.ct-button.character-button.character-button-small {
-		background: /*[[highlightColor]]*/
-		!important;
-	}
-
-	body:not(.body-forum):not(.section-posts):not(.section-changelog):not(.body-privatemessage-details) blockquote::before,
-	body:not(.body-forum):not(.section-posts):not(.section-changelog):not(.body-privatemessage-details) blockquote::after,
-	.ddbc-creature-block,
-	.ddbc-creature-block:after,
-	.ddbc-creature-block:before {
-		background-image: none !important;
-	}
-
-	.ct-quick-nav__toggle,
-	.ct-quick-nav__edge-toggle {
-		background-color: /*[[highlightColor]]*/;
-	}
-
-	.ct-spells-filter__input[type=search],
-	.ct-inventory-filter__input[type=search],
-	.ct-extras-filter__input[type=search] {
-		background: none !important;
-	}
-
-
-
-
-
-	/*Font colors and styles*/
-	#content,
-	.ddbc-item-name--rarity-common,
-	.ddbc-ability-summary__primary,
-	.ddbc-tab-options--layout-pill .ddbc-tab-options__header-heading,
-	.ct-health-summary__hp-item-label,
-	.ddbc-ability-summary__label,
-	.ddbc-ability-summary__heading span,
-	.ct-proficiency-bonus-box div,
-	.ct-proficiency-bonus-box span,
-	.ddbc-ability-summary__primary span,
-	span,
-	.ct-speed-box div,
-	.ct-speed-box span,
+	body.responsive-enabled #site #site-main .container #content,
+	body.responsive-enabled #site #site-main.fixed .container #content,
+	#site-main,
+	.compendium-hr,
+	.sidebar-menu,
+	.secondary-content,
+	.top-next-nav,
+	.b-breadcrumb,
+	.sidebar-menu-top,
+	.sidenav-next-nav,
+	.sidenav-prev-page,
+	.quick-menu-tier-1,
+	#site .forum-row td,
+	#site .forum-thread-row td,
+	#site .forum-row .status-icon,
+	.p-forum-a .announcements .forum-thread-row,
+	#site .forum-row .status-icon,
+	#site .forum-thread-row .status-icon,
+	.forum-thread-row .col-thread .title,
+	.p-comments-b .p-comment-wrapper,
+	.body-forum .comment-preview li .p-comment-wrapper,
+	.body-forum-search .p-comments-a .p-comment-wrapper,
+	body.body-forum .single-column #content .p-forum-a .p-comment-post p,
+	body.body-user .single-column #content .p-forum-a .p-comment-post p,
+	body.body-devtracker .single-column #content .p-forum-a .p-comment-post p,
+	.comment .p-comment-notes .p-comment-edit-notes,
+	.comment .p-comment-notes .p-comment-edited,
+	.comment .p-comment-user-background,
+	.comment .source-quote .quote-source,
+	.comment .source-quote,
+	body.body-forum .single-column #content .p-forum-a table:not(.mceLayout):not(.mceToolbar):not(.mceListBox):not(.mceSplitButton) tr td,
+	body.body-user .single-column #content .p-forum-a table:not(.mceLayout):not(.mceToolbar):not(.mceListBox):not(.mceSplitButton) tr td,
+	body.body-devtracker .single-column #content .p-forum-a table:not(.mceLayout):not(.mceToolbar):not(.mceListBox):not(.mceSplitButton) tr td,
+	.p-comments-b .p-comment-user .p-comment-stats .p-comment-statitem .postbit-item,
+	.body-forum .comment-preview li .p-comment-user .p-comment-stats .p-comment-statitem .postbit-item,
+	.body-forum-search .p-comments-a .p-comment-user .p-comment-stats .p-comment-statitem .postbit-item,
+	blockquote,
+	.mce-panel,
+	.mce-container,
+	.mce-container *,
+	.mce-widget,
+	.mce-widget *,
+	.mce-reset,
+	.body-forum .listing .b-table-header .b-table-heading,
+	.body-forum .listing .b-table-header .b-table-heading a,
+	.select2-container-multi .select2-choices .select2-search-field input,
+	.listing-filters .form-field input,
+	.listing-filters .form-field select,
+	.irace-listing .more-info,
+	.RPGMonster-listing .more-info,
+	.RPGMagicItem-listing .more-info,
+	.ihomebrewable-listing .more-info,
+	.RPGSpell-listing .more-info,
+	.IGear-listing .more-info,
+	.RPGFeat-listing .more-info,
+	.RPGBackground-listing .more-info,
+	.RPGSubclass-listing .more-info,
+	.ddb-statblock-item-label,
+	.ddb-statblock-item-value,
+	.irace-listing .more-info-body-description,
+	.RPGMagicItem-listing .more-info-body-description,
+	.ihomebrewable-listing .more-info-body-description,
+	.RPGSpell-listing .more-info-body-description,
+	.IGear-listing .more-info-body-description,
+	.RPGFeat-listing .more-info-body-description,
+	.RPGBackground-listing .more-info-body-description,
+	.RPGSubclass-listing .more-info-body-description,
+	.irace-listing .more-info-footer-tags .tag,
+	.RPGMonster-listing .more-info-footer-tags .tag,
+	.RPGMagicItem-listing .more-info-footer-tags .tag,
+	.ihomebrewable-listing .more-info-footer-tags .tag,
+	.RPGSpell-listing .more-info-footer-tags .tag,
+	.IGear-listing .more-info-footer-tags .tag,
+	.RPGFeat-listing .more-info-footer-tags .tag,
+	.RPGBackground-listing .more-info-footer-tags .tag,
+	.RPGSubclass-listing .more-info-footer-tags .tag,
+	.static-container-details .content-container table thead th,
+	.static-container-details .content-container table tbody tr:nth-child(odd),
+	.static-container-details .content-container table tbody tr,
+	.sidebar-menu-top-link,
+	.comment .p-comment-container,
+	.p-comments-a .p-comment-wrapper,
+	.ddb-collapsible-filter__box,
+	.listing-card__content,
+	.irace-listing .more-info-body-description table tbody tr,
+	.RPGMonster-listing .more-info-body-description table tbody tr,
+	.RPGMagicItem-listing .more-info-body-description table tbody tr,
+	.ihomebrewable-listing .more-info-body-description table tbody tr,
+	.RPGSpell-listing .more-info-body-description table tbody tr,
+	.IGear-listing .more-info-body-description table tbody tr,
+	.RPGFeat-listing .more-info-body-description table tbody tr,
+	.RPGBackground-listing .more-info-body-description table tbody tr,
+	.RPGSubclass-listing .more-info-body-description table tbody tr,
+	.irace-listing .more-info-body-description table thead th,
+	.RPGMonster-listing .more-info-body-description table thead th,
+	.RPGMagicItem-listing .more-info-body-description table thead th,
+	.ihomebrewable-listing .more-info-body-description table thead th,
+	.RPGSpell-listing .more-info-body-description table thead th,
+	.IGear-listing .more-info-body-description table thead th,
+	.RPGFeat-listing .more-info-body-description table thead th,
+	.RPGBackground-listing .more-info-body-description table thead th,
+	.RPGSubclass-listing .more-info-body-description table thead th,
+	.details-container-content-description-text,
+	.compendium-toc-full-text,
+	.listing-filters .form-field .select2-container .select2-choices,
+	.listing-filters .form-field .select2-container .select2-choice,
+	.listing-filters .form-field-text-field > div:not(:first-child),
+	.compendium-disclaimer-footer,
+	.compendium-toc-block-text,
+	li.b-pagination-item a[rel="prev"]:not(.s-active),
+	li.b-pagination-item a[rel="next"]:not(.s-active),
+	li.b-pagination-item .b-pagination-item:not(.s-active),
+	blockquote.adventure-read-aloud-text,
+	.body-page .p-article-a .p-article-content table thead th,
+	.section-posts .p-article-a .p-article-content table thead th,
+	.p-article-a .section-changelog .p-article-content table thead th,
+	.body-page .p-article-a .p-article-content table tbody tr td,
+	.section-posts .p-article-a .p-article-content table tbody tr td,
+	.p-article-a .section-changelog .p-article-content table tbody tr td,
+	.Basic-Text-Frame,
+	aside,
+	.section-posts .p-article-a,
+	.section-changelog .p-article-a,
+	.p-article-a .p-article-footer .p-article-tags .tag,
+	.post-excerpt__content,
+	.ddb-campaigns-list-item,
+	.ddb-campaigns-invite-wrapper,
+	.ddb-campaigns-detail-body-listing-campaign-link,
+	.ddb-campaigns-character-card-footer,
+	.more-info,
+	.details-container,
+	.details-container-content-footer .tags .tag,
+	.details-container-content-description-text table thead th,
+	.details-container-content-description-text table tbody tr td,
+	.more-info-content table tbody tr,
+	.more-info-content table thead th,
+	.vehicle-stat-block,
+	.vehicle-stat-block__attribute,
+	.vehicle-stat-block__feature,
+	.vehicle-stat-block__stat-block .ability-block,
+	.vehicle-stat-block__description-block-heading,
+	.mon-stat-block,
 	input[type="text"],
 	input[type="number"],
 	input[type="search"],
@@ -182,318 +199,538 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 	input[type="email"],
 	textarea,
 	select,
-	.ct-defenses-summary__default,
-	.ct-conditions-summary__default,
-	.ct-proficiency-groups__group-label,
-	p,
-	span,
-	.ddbc-armor-class-box div,
-	.ct-saving-throws-details__empty,
-	.ct-saving-throws-box__modifiers.ct-saving-throws-box__modifiers--empty,
-	.ct-senses__summary.ct-senses__summary--empty,
-	.ddbc-attunement-slot--empty,
-	.ct-attunement__group-empty,
-	.ct-attunement__group-header,
-	.ct-skills__item .ct-skills__col--stat,
-	.ct-spells-level-casting__info-label,
-	.ddbc-signed-number__sign,
-	span.ct-spell-detail__components-description,
-	.ddbc-spell-name__level,
-	.ct-skills__additional--empty,
-	.ct-skill-pane__header-ability,
-	.ct-character-sheet--dice-enabled .integrated-dice__container,
-	.beyond20-roll-detail-normal,
-	.ct-reset-pane__intro,
-	.ct-custom-skill-pane__header-ability,
-	.dice_result__info__dicenotation,
-	.dice_result__info__breakdown strong,
-	.dice_result__total,
-	.dice_notification_controls span,
-	.ct-actions__attacks-per-action,
-	.ddbc-weight-number__label,
-	.ct-equipment-overview__weight-speed
-	{
-		color: /*[[fontColor]]*/;
+	.filter-listing-item,
+	.ability-score-calc-component-value,
+	.collapsible-body,
+	.textarea-editor,
+	.equipment-manager-inventory-header,
+	.site .character-button-outline,
+	.ct-item-detail__tag,
+	.ddb-characters-listing-actions__search-box,
+	.more-info footer .tags .tag,
+	.ddb-top-result,
+	.classes-manage-hitpoints,
+	.ddb-homebrew-portal-wrapper,
+	.ddb-homebrew-portal-item .button,
+	.select2-drop,
+	.select2-container .select2-choice,
+	.ddb-homebrew-create-special .button,
+	.ddb-homebrew-create-special .listing-body table thead th,
+	.ddb-homebrew-create-special .listing-body table tbody tr td,
+	#site .select2-search-choice,
+	.select2-container-multi .select2-choices,
+	.select2-results .select2-no-results,
+	.select2-results .select2-searching,
+	.select2-results .select2-ajax-error,
+	.select2-results .select2-selection-limit,
+	#es-form-main,
+	input,
+	ul.ui-autocomplete.ui-menu.ui-widget.ui-widget-content.ui-corner-all.ddb-search-autocomplete {
+		background-color: /*[[backgroundColor]]*/
+		!important;
+		color: /*[[fontColor]]*/
+		!important;
 	}
-	.ddbc-tab-list__nav-item--is-active,
-	.site .ddbc-theme-link,
-	.ct-actions__attacks-heading,
-	.ct-actions-list__heading,
-	.ct-content-group__header-content,
-	.ct-spells-spell__at-will,
-	.ct-spells-spell__as-ritual,
-	.ct-spells-filter__clear,
-	.ddbc-note-components__component--scaled,
-	.ct-class-detail__name,
-	.ct-trait-content--no-content .ct-trait-content__content,
-	.ct-notes__note--no-content,
-	.ddbc-creature-block__name,
-	.ddbc-creature-block__abilities,
-	.ddbc-creature-block__description-block-heading,
+	.listing-card__body,
+	.ddb-top-result-footer .button-rule,
+	.ddb-top-result-footer .button-wprop,
+	.ddb-top-result-footer .button-page,
+	.ddb-top-result-footer .button-skill,
+	.ddb-top-result-footer .button-action,
+	.ddb-top-result-footer .button-condition,
+	.portal-listing-item-body-buttons .button-homebrew,
+	.portal-listing-item-body-buttons .button-homebrew:hover{
+		background-color: /*[[transparencyBackgroundColor]]*/
+	}
+
+	.irace-listing .more-info,
+	.RPGMonster-listing .more-info,
+	.RPGMagicItem-listing .more-info,
+	.ihomebrewable-listing .more-info,
+	.RPGSpell-listing .more-info,
+	.IGear-listing .more-info,
+	.RPGFeat-listing .more-info,
+	.RPGBackground-listing .more-info,
+	.RPGSubclass-listing .more-info {
+		width: 100%;
+	}
+
+	::selection {
+		background: #aaa !important;
+		color: #ddd !important;
+	}
+	::-moz-selection {
+		background: #aaa !important;
+		color: #ddd !important;
+	}
+	.RPGMonster-listing .more-info {
+		color: #000 !important;
+	}
+
+	.extra-forum-header,
+	.p-forum-a .col-forum .active-viewers,
+	.body-forum .listing .b-table-header .b-table-heading,
+	.listing .info .row > span,
+	.adohand > div span,
+	.listing-filters .main-filter .main-list .item label,
+	.static-container-details .content-container p,
+	input[type="text"],
+	input[type="number"],
+	input[type="search"],
+	input[type="password"],
+	input[type="email"],
+	textarea,
+	select,
+	.listing-card__description,
+	.ddb-collapsible__label,
+	.list-row-primary-text,
+	.list-column-header-item,
+	.page-title,
+	.button span,
+	.u-button span,
+	.select2-chosen,
+	.listing-filters .form-field-text-field > div:not(:first-child) span,
+	body.body-forum .single-column #content .p-forum-a .user-actions-forums + h2,
+	body.body-forum .single-column #content .p-forum-a .user-actions-threads + h2,
+	.p-comments-b .p-comment-user,
+	.body-forum .comment-preview li .p-comment-user,
+	.body-forum-search .p-comments-a .p-comment-user,
+	.content-container h1,
+	.content-container h2,
+	.content-container h3,
+	.content-container h4,
+	.content-container h5,
+	.content-container h6,
+	.ddb-campaigns-listing-active-header-secondary,
+	.ddb-campaigns-listing-inactive-header-secondary,
+	.ddb-campaigns-listing-active-header-primary,
+	.ddb-campaigns-listing-inactive-header-primary,
+	.ddb-campaigns-list-item-body-title,
+	.ddb-campaigns-list-item-body-date,
+	.ddb-campaigns-list-item-body-players .player-count .count,
+	.ddb-campaigns-list-item-body-players .slots-used .count,
+	.ddb-campaigns-list-item-body-players .player-count .label,
+	.ddb-campaigns-list-item-body-players .slots-used .label,
+	.ddb-campaigns-list-item-body-role,
+	.ddb-campaigns-list-item-body-sharing,
+	.ddb-campaigns-invite-secondary,
+	.ddb-campaigns-detail-body-listing-header-primary,
+	.ddb-campaigns-detail-body-listing-header-secondary,
+	.mon-stat-block__attribute-label,
+	.mon-stat-block__feature-label,
+	.mon-stat-block__attribute,
+	.mon-stat-block__feature,
+	.mon-stat-block__stat-block .ability-block,
+	.mon-stat-block__tidbit,
+	.mon-stat-block__description-block-heading,
+	.mon-stat-block__description-block h3,
+	.builder-field-toggle-description,
+	.builder-field-select-description,
+	.ct-item-name--rarity-common,
+	.ddb-characters-listing-actions__sort-label,
+	.ddb-characters-listing-header-primary-title,
+	.ddb-search-results-listing-item-body-snippet,
+	.ddb-search-results-counts-text,
+	.ddb-search-filter-item.selected > div > div,
+	.ddb-campaigns-detail-body-dm-notes-label .text,
+	.ddb-campaigns-detail-header-secondary-description p,
+	.ddb-homebrew-portal-item-header-text,
+	.ddb-homebrew-portal-item-selector-label,
+	.ddb-homebrew-create-header-secondary-text,
+	.ddb-homebrew-create-header-primary-text,
+	.ddb-homebrew-create-header-secondary-text,
+	.ddb-homebrew-create-form-fields-item-label,
+	.ddb-homebrew-create-form-fields-item-label.tip::after,
+	#site .select2-search-choice div,
+	input#field-large-avatar,
+	input#field-avatar,
+	.ddb-top-result-header-secondary-text,
+	.ddb-statblock-ability-scores .score,
+	.ddbc-item-name--rarity-common,
+	.p-comments span{
+		color: /*[[fontColor]]*/
+		!important;
+	}
+
+
+	.thread-prefix span.thread-prefix {
+		background-color: #333;
+	}
+	.select2-container-multi .select2-choices {
+		padding: 0px;
+	}
+
+	a,
 	a:visited,
-	a:hover,
-	a
-	{
-		color: /*[[highlightColor]]*/
+	a > span,
+	span[role=button],
+	.forum-row .col-forum .title a,
+	.content-container h3 a,
+	.tooltip-hover,
+	.tooltip-hover:hover,
+	.tooltip-hover:focus,
+	.tooltip-hover:active,
+	.tooltip-hover:visited {
+		color: /*[[linkColor]]*/
+		!important
 	}
-
-	.ct-character-sheet--dice-enabled .integrated-dice__container span {
-		color: /*[[rollColor]]*/;
+	.quick-menu-item-label {
+		border: none;
 	}
-
-	/*If you hit the beautify button add a space between each 0 and / */
-	.ct-combat__summary-label--outline,
-	.ct-inspiration__label,
-	.ct-combat-tablet__initiative-label {
-		text-shadow: 1px 1px 0 /*[[sheetColor]]*/
-		, -1px -1px 0 /*[[sheetColor]]*/
-		, -1px 1px 0 /*[[sheetColor]]*/
-		, 1px -1px 0 /*[[sheetColor]]*/
+	.quick-menu-item-active > .quick-menu-item-label {
+		border-left-color: /*[[linkColor]]*/
+		!important;
+		border-left-width: 3px;
+		border-left-style: solid;
 	}
-
-
-
-
-	/*Borders*/
-	.ct-health-summary__adjuster-field-input,
-	.ct-character-header-desktop__button,
-	.site .ct-button.ct-theme-button--outline,
-	.site .ct-button.ct-theme-button--filled:disabled,
-	.site .ct-button.ct-theme-button--filled,
-	.ddbc-campaign-summary,
-	.ct-sidebar__pane-gap,
-	.ct-sidebar__pane-content,
-	.ct-combat-tablet__cta-button,
-	.ct-status-summary-mobile__health,
-	.ct-status-summary-mobile__button,
-	.ct-character-header-tablet__button,
-	.ct-tablet-box__border,
-	.beyond20-roll-cell {
+	.quick-menu-item-closed > .quick .sidenav-next-nav,
+	.sidebar-menu.se-fixed,
+	.listing .info:nth-of-type(8n+1),
+	.listing .info:nth-of-type(8n+3),
+	.listing .info:nth-of-type(8n+5),
+	.listing .info:nth-of-type(8n+7),
+	.listing .info:nth-of-type(8n+2),
+	.listing .info:nth-of-type(8n+4),
+	.listing .info:nth-of-type(8n+6),
+	.listing .info:nth-of-type(8n+8),
+	li:nth-of-type(odd) .list-row,
+	li:nth-of-type(even) .list-row,
+	.compendium-toc-full-text,
+	blockquote.adventure-read-aloud-text,
+	.body-category-details .section-compendium-content .page-heading,
+	h2.adventure-chapter-header,
+	aside.rules-text,
+	.compendium-toc-full-header h2,
+	.compendium-toc-block-header h2,
+	.compendium-toc-block-text,
+	aside,
+	body:not(.body-forum):not(.section-posts):not(.section-changelog):not(.body-privatemessage-details) blockquote,
+	.post-excerpt,
+	ddb-campaigns-list-item-wrapper,
+	.ddb-campaigns-list-item,
+	.ddb-campaigns-character-card,
+	.collapsible,
+	.textarea-editor,
+	.equipment-manager-inventory-header,
+	.ddb-top-result,
+	.ddb-top-result-footer .button-rule,
+	.ddb-top-result-footer .button-wprop,
+	.ddb-top-result-footer .button-page,
+	.ddb-top-result-footer .button-skill,
+	.ddb-top-result-footer .button-action,
+	.ddb-top-result-footer .button-condition,
+	.ddb-homebrew-portal-item .button,
+	.ddb-homebrew-create-special .button,
+	.ddb-homebrew-create-magic-item .ddb-homebrew-create-form-footer .button,
+	.select2-search-field,
+	.portal-listing-item-body-buttons .button-homebrew{
+		border-width: /*[[borderWidth]]*/
+		!important;
+		border-style: /*[[borderStyle]]*/
+		!important;
 		border-color: /*[[borderColor]]*/
 		!important;
 	}
 
-	.ddbc-tab-list__nav-item--is-active {
-		border-bottom-color: /*[[highlightColor]]*/
+	.compendium-toc-block-text {
+		margin-left: -1px;
+	}
+	.quick-menu-item-trigger::before,
+	.i-hamburger,
+	.i-concentration,
+	.i-homebrew,
+	.i-spell-melee,
+	.i-spell-ranged,
+	.i-favorite,
+	.i-strength-save,
+	.i-dexterity-save,
+	.i-constitution-save,
+	.i-charisma-save,
+	.i-wisdom-save,
+	.i-intelligence-save,
+	.i-type-acid,
+	.i-type-bludgeoning,
+	.i-type-cold,
+	.i-type-fire,
+	.i-type-force,
+	.i-type-lightning,
+	.i-type-necrotic,
+	.i-type-piercing,
+	.i-type-poison,
+	.i-type-psychic,
+	.i-type-radiant,
+	.i-type-slashing,
+	.i-type-thunder,
+	.i-condition-blinded,
+	.i-condition-charmed,
+	.i-condition-deafened,
+	.i-condition-exhaustion,
+	.i-condition-exhausted,
+	.i-condition-frightened,
+	.i-condition-grappled,
+	.i-condition-incapacitated,
+	.i-condition-invisible,
+	.i-condition-paralyzed,
+	.i-condition-petrified,
+	.i-condition-poisoned,
+	.i-condition-prone,
+	.i-condition-restrained,
+	.i-condition-stunned,
+	.i-condition-unconscious,
+	.i-condition-white-blinded,
+	.i-condition-white-charmed,
+	.i-condition-white-deafened,
+	.i-condition-white-exhaustion,
+	.i-condition-white-exhausted,
+	.i-condition-white-frightened,
+	.i-condition-white-grappled,
+	.i-condition-white-incapacitated,
+	.i-condition-white-invisible,
+	.i-condition-white-paralyzed,
+	.i-condition-white-petrified,
+	.i-condition-white-poisoned,
+	.i-condition-white-prone,
+	.i-condition-white-restrained,
+	.i-condition-white-stunned,
+	.i-condition-white-unconscious,
+	.i-aoe-cone,
+	.i-aoe-cube,
+	.i-aoe-cylinder,
+	.i-aoe-line,
+	.i-aoe-sphere,
+	.i-aoe-square,
+	.i-artificer,
+	.i-bard,
+	.i-cleric,
+	.i-druid,
+	.i-paladin,
+	.i-ranger,
+	.i-sorcerer,
+	.i-warlock,
+	.i-wizard,
+	.i-barbarian,
+	.i-fighter,
+	.i-monk,
+	.i-rogue,
+	.i-aberration,
+	.i-beast,
+	.i-celestial,
+	.i-construct,
+	.i-dragon,
+	.i-elemental,
+	.i-fey,
+	.i-fiend,
+	.i-giant,
+	.i-humanoid,
+	.i-monstrosity,
+	.i-ooze,
+	.i-plant,
+	.i-undead,
+	.i-ritual,
+	.i-req-attunement,
+	.i-legendary-monster,
+	.i-checkmark,
+	.ddb-statblock.ddb-statblock-monster.ddb-statblock-ability-scores div::before,
+	.es-form-icon,
+	#field-body-wysiwyg_ifr {
+		filter: invert(100);
+	}
+	.p-article-a .compendium-toc-blockquote > a,
+	.p-article-a .compendium-toc-blockquote > a:hover,
+	.ddb-campaigns-list-item-body-sharing-box,
+	#content-management-link {
+
+		background-color: /*[[backgroundColor]]*/;
 	}
 
-	.ct-spell-caster__casting-action-count.ct-spell-caster__casting-action-count--spellcasting,
-	.ct-quick-nav__button,
-	.ct-quick-nav__button:hover {
-		border-color: /*[[highlightColor]]*/;
+	.listing .info:nth-of-type(8n+1),
+	.listing .info:nth-of-type(8n+3),
+	.listing .info:nth-of-type(8n+5),
+	.listing .info:nth-of-type(8n+7),
+	.listing .info:nth-of-type(8n+2),
+	.listing .info:nth-of-type(8n+4),
+	.listing .info:nth-of-type(8n+6),
+	.listing .info:nth-of-type(8n+8),
+	.listing-card__content,
+	li:nth-of-type(odd) .list-row,
+	li:nth-of-type(even) .list-row,
+	.compendium-toc-block::after,
+	body blockquote.mordy-handwriting,
+	body.body-forum .single-column #content .p-forum-a .p-comment-post .p-comment-user-background,
+	body.body-user .single-column #content .p-forum-a .p-comment-post .p-comment-user-background,
+	body.body-devtracker .single-column #content .p-forum-a .p-comment-post .p-comment-user-background,
+	.ddb-campaigns-list-item::before,
+	.ddb-campaigns-list-item::after,
+	.ddb-campaigns-character-card::after,
+	.mon-stat-block,
+	.collapsible-header:hover,
+	.collapsible-header,
+	.select2-container .select2-choice,
+	.select2-results {
+		background-image: none !important;
 	}
-	.ct-character-sheet--dice-enabled .integrated-dice__container:hover {
-		border-color: /*[[rollColor]]*/;
+	aside,
+	.more-info::after {
+		border-image: none !important;
 	}
-	.ct-character-sheet--dice-enabled .integrated-dice__container {
-		border: none;
+	.irace-listing .more-info::after,
+	.RPGMonster-listing .more-info::after,
+	.RPGMagicItem-listing .more-info::after,
+	.ihomebrewable-listing .more-info::after,
+	.RPGSpell-listing .more-info::after,
+	.IGear-listing .more-info::after,
+	.RPGFeat-listing .more-info::after,
+	.RPGBackground-listing .more-info::after,
+	.RPGSubclass-listing .more-info::after,
+	body:not(.body-forum):not(.section-posts):not(.section-changelog):not(.body-privatemessage-details) blockquote::before,
+	body:not(.body-forum):not(.section-posts):not(.section-changelog):not(.body-privatemessage-details) blockquote::after,
+	.compendium-toc-full::after,
+	.section-posts .p-article-a::after,
+	.section-changelog .p-article-a::after,
+	.details-container::after,
+	.collapsible-body:after,
+	.ddb-top-result::before,
+	.ddb-top-result::after {
+		display: none
+	}
+
+	.irace-listing .more-info,
+	.RPGMonster-listing .more-info,
+	.RPGMagicItem-listing .more-info,
+	.ihomebrewable-listing .more-info,
+	.RPGSpell-listing .more-info,
+	.IGear-listing .more-info,
+	.RPGFeat-listing .more-info,
+	.RPGBackground-listing .more-info,
+	.RPGSubclass-listing .more-info,
+	body:not(.body-forum):not(.section-posts):not(.section-changelog):not(.body-privatemessage-details) blockquote,
+	.section-posts .p-article-a,
+	.more-info,
+	.details-container {
+		border-bottom-width: /*[[borderWidth]]*/;
+		border-left-width: /*[[borderWidth]]*/;
+		border-right-width: /*[[borderWidth]]*/;
+		border-top-width: 0px;
+		border-style: /*[[borderStyle]]*/;
+		border-color: /*[[borderColor]]*/;
+	}
+
+	.collapsible-body {
+		border: none !important;
 	}
 
 
-	/*Icon Filter for dark theme*/
-	.ddbc-combat-attack__icon,
-	.ddbc-note-components i,
-	.ct-spells-spell__damage i,
-	.ct-spell-caster i,
-	.ddbc-property-list__property-content i,
-	.ddbc-damage__icon i,
-	.ddbc-tab-options__nav.ddbc-tab-options__nav--no-border i,
-	.ct-spells-spell__name i,
-	.ddbc-spell-name i,
-	.ct-inventory-item__name i,
-	.ddbc-healing-icon__icon,
-	.ct-condition-manage-pane__conditions i,
-	.ajs-content iframe {
-		filter: /*[[filter]]*/
-		!important;
-	}
-
-	.ajs-content iframe html {
-		filter: hue-rotate(180deg) !important;
-	}
-
-
-	/*Fills and Strokes*/
-	.ct-skills__col--proficiency circle,
-	.ct-skills__col--proficiency path,
-	.ddbc-saving-throws-summary__ability-proficiency circle,
-	.ddbc-svg.ddbc-builder-svg.ddbc-svg--light path,
-	.ddbc-svg.ddbc-long-rest-svg.ddbc-svg--themed path,
-	.ddbc-svg.ddbc-short-rest-svg.ddbc-svg--themed path,
-	.ddbc-svg.ddbc-share-svg.ddbc-svg--themed path,
-	svg.ddbc-svg.ct-sidebar__control-icon path,
-	svg.ddbc-svg.ct-sidebar__control-icon polygon,
-	svg.ddbc-svg.ct-sidebar__control-icon rect,
-	.ct-value-editor__property-value path,
-	.ddbc-collapsible__header-status path,
-	.ddbc-popout-menu__item path,
-	.ddbc-popout-menu__item circle,
-	.ct-inspiration__status.ct-inspiration__status--active g:first-child path,
-	.ct-spells-filter__advanced path,
-	.ddbc-checkbox--is-enabled .ddbc-checkbox__input .ddbc-check-svg path,
-	.ddbc-attunement-slot.ddbc-attunement-slot--filled path,
-	.ddbc-svg.ddbc-proficiency-svg.ddbc-proficiency-icon.ddbc-proficiency-level-icon circle,
-	.ddbc-svg.ddbc-proficiency-half-svg.ddbc-half-proficiency-icon.ddbc-proficiency-level-icon path,
-	.ddbc-svg.ddbc-proficiency-half-svg.ddbc-twice-proficiency-icon__inner circle,
-	.ddbc-svg.ddbc-proficiency-half-svg.ddbc-twice-proficiency-icon__inner path {
-		fill: /*[[highlightColor]]*/
-		!important;
-	}
-	svg > path + path,
-	.ct-combat__statuses path,
-	.ct-initiative-box path,
-	.ct-inspiration path,
-	.ct-proficiency-groups-box path,
-	.ddbc-attunement-slot.ddbc-attunement-slot--empty path {
-		fill: /*[[borderColor]]*/
-		!important;
-	}
-
-	svg > path,
-	.ct-combat__statuses polygon,
-	.ct-initiative-box polygon,
-	#InspirationBoxSvg-Fill-1,
-	.ddbc-svg.ddbc-ability-score-box-svg > path:nth-child(2),
-	.ct-proficiency-groups-box polygon,
-	.ct-sidebar__pane-top path,
-	.ct-sidebar__pane-bottom path {
-		fill: /*[[sheetColor]]*/
-		!important;
-	}
-	.ct-sidebar__pane-bottom path,
-	.ct-sidebar__pane-top path {
-		stroke: /*[[borderColor]]*/
-	}
-	.ddbc-svg.ddbc-long-rest-svg.ddbc-svg--themed ellipse,
-	svg.ddbc-svg.ct-sidebar__control-icon line,
-	.ddbc-popout-menu__item-prefix rect {
-		stroke: /*[[highlightColor]]*/;
-	}
-
-	/*Selection settings */
-	::selection {
-		background: /*[[highlightColor]]*/
-		!important;
-		color: /*[[fontColor]]*/
-		!important;
-	}
-	::-moz-selection {
-		background: /*[[highlightColor]]*/
-		!important;
-		color: /*[[fontColor]]*/
-		!important;
-	}
-
-	/*Dice Alpha Size and position changes*/
-	.ct-character-sheet--dice-enabled .ct-skills__item .integrated-dice__container,
-	.ct-character-sheet--dice-enabled .ct-spells-spell__tohit .integrated-dice__container,
-	.ct-character-sheet--dice-enabled .ddbc-combat-attack__tohit .integrated-dice__container {
-		height: auto;
-		font-size: 15px;
-		width: auto;
-		margin-bottom: 3px;
-	}
-
-	.ct-skills__item .ct-skills__col--skill {
-		padding: 2px !important;
-	}
-
-	.ct-skills__item .ct-skills__col--modifier {
-		padding: 0px !important;
-		line-height: 16px;
-	}
-	.ct-skills__item .ct-skills__col--adjustments {
-		align-self: center;
-		padding: 0px !important;
-		padding-bottom: 4px !important;
-		padding-right: 5px !important;
-	}
-
-	.ct-character-sheet--dice-enabled .ddbc-combat-attack__damage .integrated-dice__container,
-	.ct-character-sheet--dice-enabled .ddbc-combat-item-attack__damage .integrated-dice__container,
-	.ct-character-sheet--dice-enabled .ddbc-spell-damage-effect__damages .integrated-dice__container,
-	.ct-character-sheet--dice-enabled .ddbc-spell-damage-effect__healing .integrated-dice__container,
-	.ct-character-sheet--dice-enabled .ddbc-combat-attack__damage .integrated-dice__container:hover,
-	.ct-character-sheet--dice-enabled .ddbc-combat-item-attack__damage .integrated-dice__container:hover,
-	.ct-character-sheet--dice-enabled .ddbc-spell-damage-effect__damages .integrated-dice__container:hover,
-	.ct-character-sheet--dice-enabled .ddbc-spell-damage-effect__healing .integrated-dice__container:hover {
-		padding: 0px;
-		height: auto;
-	}
-
-	.ddbc-tab-list .integrated-dice__container span {
-		font-size: 14px;
-	}
-
-	.dice_result__divider {
-		background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='19' height='100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='/*[[fontColor]]*/' d='M10 0v65H9V300z'/%3E%3Cpath fill='/*[[fontColor]]*/' d='M10 0v35H9V0z'/%3E%3Cpath fill='/*[[fontColor]]*/' d='M19 57H0v-3h19zM19 47H0v-3h19z'/%3E%3C/svg%3E")
-	}
-	.dice_result,
-	.dice_notification_controls .dice_notification_control,
-	.dice-toolbar,
-	.dice-toolbar:hover,
-	.dice-toolbar__dropdown-selected .dice-toolbar__dropdown-die,
-	.dice-die-button {
-		background: /*[[rollCalcColor]]*/
-	}
-	.dice-toolbar:hover {
-		border: 1px solid/*[[rollColor]]*/
-	}
-	.dice-toolbar__dropdown-selected .dice-toolbar__dropdown-die,
-	.dice-toolbar__dropdown-selected .dice-toolbar__dropdown-die:hover {
-		border-color: /*[[rollColor]]*/
-		!important;
-	}
-	.dice_result__info .dice-icon-die {
-		background-color: /*[[fontColor]]*/
-		;
-	}
-
-	.dice_notification_controls__clear i {
-		background: url("data:image/svg+xml;charset=utf-8,%3Csvg width='18' height='18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 8h-6V2a1 1 0 10-2 0v6H2a1 1 0 100 2h6v6a1 1 0 102 0v-6h6a1 1 0 100-2z' fill='/*[[fontColor]]*/'/%3E%3C/svg%3E")
-	}
-
-	.dice_notification_controls__uncollapse i {
-		background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='18' height='18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M17.707 4.293a.999.999 0 00-1.414 0L9 11.586 1.707 4.293A.999.999 0 10.293 5.707l8 8a.997.997 0 001.414 0l8-8a.999.999 0 000-1.414z' fill='/*[[fontColor]]*/'/%3E%3C/svg%3E")
-	}
-
-	.dice_notification_controls__collapse i {
-		background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='18' height='18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M17.707 4.293a.999.999 0 00-1.414 0L9 11.586 1.707 4.293A.999.999 0 10.293 5.707l8 8a.997.997 0 001.414 0l8-8a.999.999 0 000-1.414z' fill='/*[[fontColor]]*/'/%3E%3C/svg%3E")
-	}
-
-	/*Fixed settings*/
-	button.ct-theme-button.ct-health-summary__adjuster-button.ct-health-summary__adjuster-button--heal.ct-theme-button--outline.ct-theme-button--interactive.ct-button.character-button.character-button-block-small:hover {
-		background: #040 !important;
-	}
-	button.ct-theme-button.ct-health-summary__adjuster-button.ct-health-summary__adjuster-button--damage.ct-theme-button--outline.ct-theme-button--interactive.ct-button.character-button.character-button-block-small:hover {
-		background: #400 !important;
-	}
-	.ddbc-item-name--rarity-very-rare,
+	.listing .info .row.item-name .name .very-rare,
 	.very-rare {
 		color: #9810E0 !important;
 	}
-	.ddbc-item-name--rarity-rare,
+	.listing .info .row.item-name .name .rare,
 	.rare {
 		color: #4990E2 !important;
 	}
-	.ddbc-item-name--rarity-uncommon,
+	.listing .info .row.item-name .name .uncommon,
 	.uncommon {
 		color: #1FC219 !important;
 	}
-	.ddbc-item-name--rarity-legendary,
+	.listing .info .row.item-name .name .legendary,
 	.legendary {
 		color: #FEA227 !important;
 	}
+	.listing .info .row.item-name .name .common,
+	.common,
+	a.button,
+	a.u-button {
+		color: /*[[fontColor]]*/
+		!important;
+	}
+	.listing .info .row.item-name .name .artifact,
+	.artifact {
+		color: #BE8972 !important;
+	}
+	.mordy-handwriting {
+		font-weight: normal !important;
+	}
+	.ddb-campaigns-list-item {
+		min-height: 315px;
+	}
+	footer#footer {
+		margin: 0px;
+	}
+}
 
-	.ct-slot-manager__slot,
-	.site .ct-theme-button--filled.ct-button:hover {
-		box-shadow: none;
+
+@-moz-document url("https://www.dndbeyond.com/") {
+
+	::-webkit-scrollbar {
+		width: 3px;
 	}
 
-	.ct-equipment-overview__weight-speed--encumbered,
-	.ct-equipment-overview__weight-speed--heavily-encumbered,
-	.ct-equipment-overview__weight-speed--over-carrying-capacity,
-	.ct-equipment-overview__weight-speed--push-drag-lift {
-		color: #d24040;
+	::-webkit-scrollbar-track {
+		background: /*[[backgroundColor]]*/;
 	}
+	::-webkit-scrollbar-thumb {
+		background-color: /*[[scrollbarColor]]*/;
+		border-radius: 6px;
+		border: none;
+	}
+	#site-main,
+	.post-excerpt__content {
+		background-color: /*[[backgroundColor]]*/
+		!important;
+		color: /*[[fontColor]]*/
+		!important;
+	}
+
+	.post-excerpt {
+		border-width: /*[[borderWidth]]*/
+		!important;
+		border-style: /*[[borderStyle]]*/
+		!important;
+		border-color: /*[[borderColor]]*/
+		!important;
+	}
+
+	.body-home-index .post-listing > li:first-child .post-excerpt__content,
+	.body-home-index .post-listing > li:first-child .post-excerpt {
+		background: none !important;
+		border: none !important;
+	}
+	a,
+	a:visited,
+	a > span,
+	span[role=button],
+	.forum-row .col-forum .title a {
+		color: /*[[linkColor]]*/
+		!important
+	}
+
+	.ddb-home-body .see-all-container .button,
+	.ddb-home-body .see-all-container .button:hover,
+	.ddb-home-body .see-all-container .button:focus,
+	.ddb-home-body .see-all-container .button:active,
+	.ddb-home-body .see-all-container .button:visited {
+		color: /*[[fontColor]]*/
+		!important;
+	}
+	footer#footer {
+		margin: 0px;
+	}
+
+	.post-excerpt__description,
+	.post-excerpt__content {	
+   		text-shadow:
+      	 2px 2px #000,
+     	-1px -1px 0 #000,  
+     	 1px -1px 0 #000,
+     	 -1px 1px 0 #000,
+      	 1px 1px 0 #000;
+		
+	}
+	.post-excerpt__description{
+		background: /*[[transparencyBackgroundColor]]*/;
+		border-radius: 5px;
+		padding: 5px
+		
+	}
+	
 }
