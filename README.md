@@ -1,7 +1,9 @@
 # dndbeyonddark
-Dark themes for dndbeyond and character sheet
+Themes for DNDBeyond allowing for custom colors. Dark theme by default.
 
 
-You will need Stylus or another User CSS addon to apply these themes. 
+You will need Stylus or another User CSS extension to apply these themes. 
 
-There is a theme for character sheets and a theme for the rest of the site.
+If using the Stylus extension open the raw user.css files and click install.
+
+
