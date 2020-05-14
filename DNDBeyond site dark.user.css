@@ -4,6 +4,7 @@
 @preprocessor uso
 @version      1.0.0
 @author       Azmoria
+@updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
 @var color transparencyBackgroundColor "Background Color of things that can be transparent" #000000e0
 @var color fontColor "Font Color" #c0c0c0
