@@ -37,3 +37,5 @@ Rest of the site examples:
 
 With the exception of the dice roller most of the alpha or beta content has not been themed as I am waiting for finalized versions and they either have their own dark mode available (such as the encounter builder) or are darker than the original site design.
 
+I also probably will not touch the marketplace at all.
+
