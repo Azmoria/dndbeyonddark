@@ -9,15 +9,11 @@ You can get Stylus here:
 <a href="https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?hl=en">For Chrome</a><br>
 <a href="https://addons.mozilla.org/en-CA/firefox/addon/styl-us/">For Firefox</a>
 
-Once you have Stylus installed click the links below to install the themes.
+Once you have Stylus installed click the links below to install the themes. I suggest opening them in a new tab clicking install then closing the tab.
 
 <a href="https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20Character%20Sheet.user.css">Character Sheet Theme</a>
 <br>
 <a href="https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css">The rest of DNDBeyond site</a>
-
-
-Once installed you can close the window that pops up.
-
 
 
 
