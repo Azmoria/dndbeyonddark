@@ -6,9 +6,15 @@ You will need Stylus or another User CSS extension to apply these themes.
 
 You can get Stylus here:
 
-<a href="https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?hl=en">For Chrome</a><br><br>
+<a href="https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?hl=en">For Chrome</a><br>
 <a href="https://addons.mozilla.org/en-CA/firefox/addon/styl-us/">For Firefox</a>
 
-If using the Stylus extension open the raw user.css files and click install.
+Once you have Stylus installed click either or both of the below links to install the themes.
+
+<a href="https://github.com/Azmoria/dndbeyonddark/blob/master/DNDBeyond%20Character%20Sheet.user.css">Character Sheet Theme</a>
+
+<br>
+
+<a href="https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css">The rest of DNDBeyond site</a>
 
 
