@@ -4,7 +4,7 @@
 @version      1.0.0
 @preprocessor uso
 @author       Azmoria
-@updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20Character%20Sheet%20Dark.user.css
+@updateURL https://github.com/Azmoria/dndbeyonddark/blob/master/DNDBeyond%20Character%20Sheet.user.css
 @var text backgroundImg "Background image URL: two double quotes for dndbeyond background choice, url for custom or blank for background color" ""
 @var color background "Background Color" "#000"
 @var color sheetColor "Sheet Color" #000
