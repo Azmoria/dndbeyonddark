@@ -11,7 +11,7 @@ You can get Stylus here:
 
 Once you have Stylus installed click either or both of the below links to install the themes.
 
-<a href="https://github.com/Azmoria/dndbeyonddark/blob/master/DNDBeyond%20Character%20Sheet.user.css">Character Sheet Theme</a>
+<a href="https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20Character%20Sheet.user.css">Character Sheet Theme</a>
 
 <br>
 
