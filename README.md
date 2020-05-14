@@ -16,6 +16,8 @@ Once you have Stylus installed click the links below to install the themes.
 <a href="https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css">The rest of DNDBeyond site</a>
 
 
+Once installed you can close the window that pops up.
+
 
 
 
