@@ -1,0 +1,500 @@
+/* ==UserStyle==
+@name         DNDBeyond Character Sheet Dark
+@namespace    Azmoria
+@version      1.0.0
+@preprocessor uso
+@author       Azmoria
+@updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20Character%20Sheet%20Dark.user.css
+@var text backgroundImg "Background image URL: two double quotes for dndbeyond background choice, url for custom or blank for background color" ""
+@var color background "Background Color" "#000"
+@var color sheetColor "Sheet Color" #000
+@var color fontColor "Font Color" #ddd
+@var color borderColor "Border Color" #114
+@var color highlightColor "Highlight Color" #59d
+@var color scrollbarColor "Scrollbar Color" #114
+@var color rollColor "Rollable Items Color" #59d
+@var color rollCalcColor "Roll History Background Color" #030f1aea
+@var text filter "Icons filter - for dark backgrounds: invert(100%) for light background: none" "invert(100%)"
+
+
+
+==/UserStyle== */
+@-moz-document regexp("https://www.dndbeyond.com/profile/.*/characters/\\d*"),
+regexp("https://www.dndbeyond.com/characters/.*") {
+
+	/*Scrollbar style */
+	::-webkit-scrollbar {
+		width: 10px;
+	}
+
+	::-webkit-scrollbar-track {
+		background: /*[[sheetColor]]*/;
+	}
+	::-webkit-scrollbar-thumb {
+		background-color: /*[[scrollbarColor]]*/;
+		border-radius: 6px;
+		background-clip: padding-box;
+		border: 4px solid rgba(0, 0, 0, 0);
+	}
+
+	/*Background colors, images and styles */
+	html body.body-rpgcharacter-sheet {
+		background: url("/*[[backgroundImg]]*/");
+		background-color: /*[[background]]*/;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+
+	.ct-health-summary__adjuster-field-input,
+	.ddbc-campaign-summary,
+	.ct-sidebar__pane-content,
+	.ct-sidebar__pane-gap,
+	.ct-sidebar thead td,
+	.ct-sidebar thead th,
+	.ct-sidebar .compendium-left-aligned-table td,
+	.ct-sidebar .summoning-creatures-table td,
+	body:not(.body-forum):not(.section-posts):not(.section-changelog):not(.body-privatemessage-details) blockquote,
+	.ct-editor-box,
+	input:not(.es-form-field-query),
+	.ddbc-checkbox__input,
+	.ct-item-detail__tag,
+	.ct-spell-detail__tag,
+	.ddbc-collapsible__header,
+	.ct-select,
+	.ct-creature-pane__tag,
+	.ddbc-number-bar__option,
+	.ct-condition-manage-pane__condition-content,
+	.ct-sidebar td,
+	textarea,
+	.ct-spells-filter__adv-filter-button,
+	.ct-equipment-shop__item > .ddbc-collapsible__content,
+	.ct-spell-manager__spell > .ddbc-collapsible__content,
+	.site .ct-button.ct-theme-button--outline:disabled,
+	.ct-feats-manage-pane__feat-content,
+	.ct-spell-caster__casting-action-count.ct-spell-caster__casting-action-count--spellcasting,
+	.ddbc-ability-score-manager__component-value,
+	.ct-component-carousel__placeholders,
+	.ct-component-carousel__active,
+	.ct-mobile-divider__label,
+	.ct-main-mobile__saving-throws,
+	.ct-main-mobile .ct-senses,
+	.ct-sidebar__mask,
+	.ct-description-mobile .ct-description,
+	.ct-proficiency-groups-mobile,
+	.ct-notes-mobile .ct-notes,
+	.ct-features-mobile,
+	.ct-spells-mobile,
+	.ct-equipment-mobile,
+	.ct-actions-mobile .ddbc-tab-options,
+	.ct-combat-tablet__cta-button,
+	.ct-tablet-box__inner,
+	.ct-tablet-box__header,
+	.ct-skills-mobile .ct-skills,
+	.ct-extras-mobile,
+	.ajs-dialog,
+	.ajs-header,
+	.ajs-primary.ajs-buttons,
+	.beyond20-roll-cell,
+	.beyond20-description,
+	.beyond20-dice-roller-content,
+	.ajs-footer,
+	.beyond20-message .beyond20-description,
+	.beyond20-message details table,
+	.beyond20-tooltip .beyond20-tooltip-content,
+	.dice-formula.beyond20-roll-formula,
+	.beyond20-roll-cell,
+	.beyond20-roll-die-result {
+		background-color: /*[[sheetColor]]*/
+		!important;
+		color: /*[[fontColor]]*/
+		!important;
+	}
+	.ddbc-no-proficiency-icon {
+		background: /*[[fontColor]]*/
+		!important
+	}
+	.ddbc-tab-options--layout-pill .ddbc-tab-options__header-heading,
+	.ct-slot-manager__slot,
+	.site .ct-button.ct-theme-button--outline,
+	.ct-character-header-desktop__button,
+	.site .ct-button.ct-theme-button--filled:disabled,
+	.site .ct-button.ct-theme-button--filled,
+	.site .ct-theme-button--outline.ct-button:hover,
+	.site .ct-theme-button--outline.ct-button:active {
+		background: /*[[sheetColor]]*/
+		!important;
+	}
+	.ct-slot-manager__slot--used:before,
+	.ct-spells-spell__scaled-level,
+	.ddbc-tab-options__header-heading.ddbc-tab-options__header-heading--is-active,
+	.ddbc-tab-options__header-heading.ddbc-tab-options__header-heading--is-active:hover,
+	.ddbc-number-bar__option.ddbc-number-bar__option--active.ddbc-number-bar__option--interactive,
+	.ddbc-toggle-field--is-enabled .ddbc-toggle-field__nub,
+	.ddbc-toggle-field--is-enabled,
+	.ct-spells-filter__active,
+	button.ct-theme-button.ct-remove-button.ct-theme-button--filled.ct-theme-button--interactive.ct-button.character-button.character-button-small,
+	button.ct-theme-button.ct-theme-button--filled.ct-theme-button--interactive.ct-button.character-button.character-button-small {
+		background: /*[[highlightColor]]*/
+		!important;
+	}
+
+	body:not(.body-forum):not(.section-posts):not(.section-changelog):not(.body-privatemessage-details) blockquote::before,
+	body:not(.body-forum):not(.section-posts):not(.section-changelog):not(.body-privatemessage-details) blockquote::after,
+	.ddbc-creature-block,
+	.ddbc-creature-block:after,
+	.ddbc-creature-block:before {
+		background-image: none !important;
+	}
+
+	.ct-quick-nav__toggle,
+	.ct-quick-nav__edge-toggle {
+		background-color: /*[[highlightColor]]*/;
+	}
+
+	.ct-spells-filter__input[type=search],
+	.ct-inventory-filter__input[type=search],
+	.ct-extras-filter__input[type=search] {
+		background: none !important;
+	}
+
+
+
+
+
+	/*Font colors and styles*/
+	#content,
+	.ddbc-item-name--rarity-common,
+	.ddbc-ability-summary__primary,
+	.ddbc-tab-options--layout-pill .ddbc-tab-options__header-heading,
+	.ct-health-summary__hp-item-label,
+	.ddbc-ability-summary__label,
+	.ddbc-ability-summary__heading span,
+	.ct-proficiency-bonus-box div,
+	.ct-proficiency-bonus-box span,
+	.ddbc-ability-summary__primary span,
+	span,
+	.ct-speed-box div,
+	.ct-speed-box span,
+	input[type="text"],
+	input[type="number"],
+	input[type="search"],
+	input[type="password"],
+	input[type="email"],
+	textarea,
+	select,
+	.ct-defenses-summary__default,
+	.ct-conditions-summary__default,
+	.ct-proficiency-groups__group-label,
+	p,
+	span,
+	.ddbc-armor-class-box div,
+	.ct-saving-throws-details__empty,
+	.ct-saving-throws-box__modifiers.ct-saving-throws-box__modifiers--empty,
+	.ct-senses__summary.ct-senses__summary--empty,
+	.ddbc-attunement-slot--empty,
+	.ct-attunement__group-empty,
+	.ct-attunement__group-header,
+	.ct-skills__item .ct-skills__col--stat,
+	.ct-spells-level-casting__info-label,
+	.ddbc-signed-number__sign,
+	span.ct-spell-detail__components-description,
+	.ddbc-spell-name__level,
+	.ct-skills__additional--empty,
+	.ct-skill-pane__header-ability,
+	.ct-character-sheet--dice-enabled .integrated-dice__container,
+	.beyond20-roll-detail-normal,
+	.ct-reset-pane__intro,
+	.ct-custom-skill-pane__header-ability,
+	.dice_result__info__dicenotation,
+	.dice_result__info__breakdown strong,
+	.dice_result__total,
+	.dice_notification_controls span,
+	.ct-actions__attacks-per-action,
+	.ddbc-weight-number__label,
+	.ct-equipment-overview__weight-speed
+	{
+		color: /*[[fontColor]]*/;
+	}
+	.ddbc-tab-list__nav-item--is-active,
+	.site .ddbc-theme-link,
+	.ct-actions__attacks-heading,
+	.ct-actions-list__heading,
+	.ct-content-group__header-content,
+	.ct-spells-spell__at-will,
+	.ct-spells-spell__as-ritual,
+	.ct-spells-filter__clear,
+	.ddbc-note-components__component--scaled,
+	.ct-class-detail__name,
+	.ct-trait-content--no-content .ct-trait-content__content,
+	.ct-notes__note--no-content,
+	.ddbc-creature-block__name,
+	.ddbc-creature-block__abilities,
+	.ddbc-creature-block__description-block-heading,
+	a:visited,
+	a:hover,
+	a
+	{
+		color: /*[[highlightColor]]*/
+	}
+
+	.ct-character-sheet--dice-enabled .integrated-dice__container span {
+		color: /*[[rollColor]]*/;
+	}
+
+	/*If you hit the beautify button add a space between each 0 and / */
+	.ct-combat__summary-label--outline,
+	.ct-inspiration__label,
+	.ct-combat-tablet__initiative-label {
+		text-shadow: 1px 1px 0 /*[[sheetColor]]*/
+		, -1px -1px 0 /*[[sheetColor]]*/
+		, -1px 1px 0 /*[[sheetColor]]*/
+		, 1px -1px 0 /*[[sheetColor]]*/
+	}
+
+
+
+
+	/*Borders*/
+	.ct-health-summary__adjuster-field-input,
+	.ct-character-header-desktop__button,
+	.site .ct-button.ct-theme-button--outline,
+	.site .ct-button.ct-theme-button--filled:disabled,
+	.site .ct-button.ct-theme-button--filled,
+	.ddbc-campaign-summary,
+	.ct-sidebar__pane-gap,
+	.ct-sidebar__pane-content,
+	.ct-combat-tablet__cta-button,
+	.ct-status-summary-mobile__health,
+	.ct-status-summary-mobile__button,
+	.ct-character-header-tablet__button,
+	.ct-tablet-box__border,
+	.beyond20-roll-cell {
+		border-color: /*[[borderColor]]*/
+		!important;
+	}
+
+	.ddbc-tab-list__nav-item--is-active {
+		border-bottom-color: /*[[highlightColor]]*/
+	}
+
+	.ct-spell-caster__casting-action-count.ct-spell-caster__casting-action-count--spellcasting,
+	.ct-quick-nav__button,
+	.ct-quick-nav__button:hover {
+		border-color: /*[[highlightColor]]*/;
+	}
+	.ct-character-sheet--dice-enabled .integrated-dice__container:hover {
+		border-color: /*[[rollColor]]*/;
+	}
+	.ct-character-sheet--dice-enabled .integrated-dice__container {
+		border: none;
+	}
+
+
+	/*Icon Filter for dark theme*/
+	.ddbc-combat-attack__icon,
+	.ddbc-note-components i,
+	.ct-spells-spell__damage i,
+	.ct-spell-caster i,
+	.ddbc-property-list__property-content i,
+	.ddbc-damage__icon i,
+	.ddbc-tab-options__nav.ddbc-tab-options__nav--no-border i,
+	.ct-spells-spell__name i,
+	.ddbc-spell-name i,
+	.ct-inventory-item__name i,
+	.ddbc-healing-icon__icon,
+	.ct-condition-manage-pane__conditions i,
+	.ajs-content iframe {
+		filter: /*[[filter]]*/
+		!important;
+	}
+
+	.ajs-content iframe html {
+		filter: hue-rotate(180deg) !important;
+	}
+
+
+	/*Fills and Strokes*/
+	.ct-skills__col--proficiency circle,
+	.ct-skills__col--proficiency path,
+	.ddbc-saving-throws-summary__ability-proficiency circle,
+	.ddbc-svg.ddbc-builder-svg.ddbc-svg--light path,
+	.ddbc-svg.ddbc-long-rest-svg.ddbc-svg--themed path,
+	.ddbc-svg.ddbc-short-rest-svg.ddbc-svg--themed path,
+	.ddbc-svg.ddbc-share-svg.ddbc-svg--themed path,
+	svg.ddbc-svg.ct-sidebar__control-icon path,
+	svg.ddbc-svg.ct-sidebar__control-icon polygon,
+	svg.ddbc-svg.ct-sidebar__control-icon rect,
+	.ct-value-editor__property-value path,
+	.ddbc-collapsible__header-status path,
+	.ddbc-popout-menu__item path,
+	.ddbc-popout-menu__item circle,
+	.ct-inspiration__status.ct-inspiration__status--active g:first-child path,
+	.ct-spells-filter__advanced path,
+	.ddbc-checkbox--is-enabled .ddbc-checkbox__input .ddbc-check-svg path,
+	.ddbc-attunement-slot.ddbc-attunement-slot--filled path,
+	.ddbc-svg.ddbc-proficiency-svg.ddbc-proficiency-icon.ddbc-proficiency-level-icon circle,
+	.ddbc-svg.ddbc-proficiency-half-svg.ddbc-half-proficiency-icon.ddbc-proficiency-level-icon path,
+	.ddbc-svg.ddbc-proficiency-half-svg.ddbc-twice-proficiency-icon__inner circle,
+	.ddbc-svg.ddbc-proficiency-half-svg.ddbc-twice-proficiency-icon__inner path {
+		fill: /*[[highlightColor]]*/
+		!important;
+	}
+	svg > path + path,
+	.ct-combat__statuses path,
+	.ct-initiative-box path,
+	.ct-inspiration path,
+	.ct-proficiency-groups-box path,
+	.ddbc-attunement-slot.ddbc-attunement-slot--empty path {
+		fill: /*[[borderColor]]*/
+		!important;
+	}
+
+	svg > path,
+	.ct-combat__statuses polygon,
+	.ct-initiative-box polygon,
+	#InspirationBoxSvg-Fill-1,
+	.ddbc-svg.ddbc-ability-score-box-svg > path:nth-child(2),
+	.ct-proficiency-groups-box polygon,
+	.ct-sidebar__pane-top path,
+	.ct-sidebar__pane-bottom path {
+		fill: /*[[sheetColor]]*/
+		!important;
+	}
+	.ct-sidebar__pane-bottom path,
+	.ct-sidebar__pane-top path {
+		stroke: /*[[borderColor]]*/
+	}
+	.ddbc-svg.ddbc-long-rest-svg.ddbc-svg--themed ellipse,
+	svg.ddbc-svg.ct-sidebar__control-icon line,
+	.ddbc-popout-menu__item-prefix rect {
+		stroke: /*[[highlightColor]]*/;
+	}
+
+	/*Selection settings */
+	::selection {
+		background: /*[[highlightColor]]*/
+		!important;
+		color: /*[[fontColor]]*/
+		!important;
+	}
+	::-moz-selection {
+		background: /*[[highlightColor]]*/
+		!important;
+		color: /*[[fontColor]]*/
+		!important;
+	}
+
+	/*Dice Alpha Size and position changes*/
+	.ct-character-sheet--dice-enabled .ct-skills__item .integrated-dice__container,
+	.ct-character-sheet--dice-enabled .ct-spells-spell__tohit .integrated-dice__container,
+	.ct-character-sheet--dice-enabled .ddbc-combat-attack__tohit .integrated-dice__container {
+		height: auto;
+		font-size: 15px;
+		width: auto;
+		margin-bottom: 3px;
+	}
+
+	.ct-skills__item .ct-skills__col--skill {
+		padding: 2px !important;
+	}
+
+	.ct-skills__item .ct-skills__col--modifier {
+		padding: 0px !important;
+		line-height: 16px;
+	}
+	.ct-skills__item .ct-skills__col--adjustments {
+		align-self: center;
+		padding: 0px !important;
+		padding-bottom: 4px !important;
+		padding-right: 5px !important;
+	}
+
+	.ct-character-sheet--dice-enabled .ddbc-combat-attack__damage .integrated-dice__container,
+	.ct-character-sheet--dice-enabled .ddbc-combat-item-attack__damage .integrated-dice__container,
+	.ct-character-sheet--dice-enabled .ddbc-spell-damage-effect__damages .integrated-dice__container,
+	.ct-character-sheet--dice-enabled .ddbc-spell-damage-effect__healing .integrated-dice__container,
+	.ct-character-sheet--dice-enabled .ddbc-combat-attack__damage .integrated-dice__container:hover,
+	.ct-character-sheet--dice-enabled .ddbc-combat-item-attack__damage .integrated-dice__container:hover,
+	.ct-character-sheet--dice-enabled .ddbc-spell-damage-effect__damages .integrated-dice__container:hover,
+	.ct-character-sheet--dice-enabled .ddbc-spell-damage-effect__healing .integrated-dice__container:hover {
+		padding: 0px;
+		height: auto;
+	}
+
+	.ddbc-tab-list .integrated-dice__container span {
+		font-size: 14px;
+	}
+
+	.dice_result__divider {
+		background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='19' height='100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='/*[[fontColor]]*/' d='M10 0v65H9V300z'/%3E%3Cpath fill='/*[[fontColor]]*/' d='M10 0v35H9V0z'/%3E%3Cpath fill='/*[[fontColor]]*/' d='M19 57H0v-3h19zM19 47H0v-3h19z'/%3E%3C/svg%3E")
+	}
+	.dice_result,
+	.dice_notification_controls .dice_notification_control,
+	.dice-toolbar,
+	.dice-toolbar:hover,
+	.dice-toolbar__dropdown-selected .dice-toolbar__dropdown-die,
+	.dice-die-button {
+		background: /*[[rollCalcColor]]*/
+	}
+	.dice-toolbar:hover {
+		border: 1px solid/*[[rollColor]]*/
+	}
+	.dice-toolbar__dropdown-selected .dice-toolbar__dropdown-die,
+	.dice-toolbar__dropdown-selected .dice-toolbar__dropdown-die:hover {
+		border-color: /*[[rollColor]]*/
+		!important;
+	}
+	.dice_result__info .dice-icon-die {
+		background-color: /*[[fontColor]]*/
+		;
+	}
+
+	.dice_notification_controls__clear i {
+		background: url("data:image/svg+xml;charset=utf-8,%3Csvg width='18' height='18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 8h-6V2a1 1 0 10-2 0v6H2a1 1 0 100 2h6v6a1 1 0 102 0v-6h6a1 1 0 100-2z' fill='/*[[fontColor]]*/'/%3E%3C/svg%3E")
+	}
+
+	.dice_notification_controls__uncollapse i {
+		background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='18' height='18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M17.707 4.293a.999.999 0 00-1.414 0L9 11.586 1.707 4.293A.999.999 0 10.293 5.707l8 8a.997.997 0 001.414 0l8-8a.999.999 0 000-1.414z' fill='/*[[fontColor]]*/'/%3E%3C/svg%3E")
+	}
+
+	.dice_notification_controls__collapse i {
+		background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='18' height='18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M17.707 4.293a.999.999 0 00-1.414 0L9 11.586 1.707 4.293A.999.999 0 10.293 5.707l8 8a.997.997 0 001.414 0l8-8a.999.999 0 000-1.414z' fill='/*[[fontColor]]*/'/%3E%3C/svg%3E")
+	}
+
+	/*Fixed settings*/
+	button.ct-theme-button.ct-health-summary__adjuster-button.ct-health-summary__adjuster-button--heal.ct-theme-button--outline.ct-theme-button--interactive.ct-button.character-button.character-button-block-small:hover {
+		background: #040 !important;
+	}
+	button.ct-theme-button.ct-health-summary__adjuster-button.ct-health-summary__adjuster-button--damage.ct-theme-button--outline.ct-theme-button--interactive.ct-button.character-button.character-button-block-small:hover {
+		background: #400 !important;
+	}
+	.ddbc-item-name--rarity-very-rare,
+	.very-rare {
+		color: #9810E0 !important;
+	}
+	.ddbc-item-name--rarity-rare,
+	.rare {
+		color: #4990E2 !important;
+	}
+	.ddbc-item-name--rarity-uncommon,
+	.uncommon {
+		color: #1FC219 !important;
+	}
+	.ddbc-item-name--rarity-legendary,
+	.legendary {
+		color: #FEA227 !important;
+	}
+
+	.ct-slot-manager__slot,
+	.site .ct-theme-button--filled.ct-button:hover {
+		box-shadow: none;
+	}
+
+	.ct-equipment-overview__weight-speed--encumbered,
+	.ct-equipment-overview__weight-speed--heavily-encumbered,
+	.ct-equipment-overview__weight-speed--over-carrying-capacity,
+	.ct-equipment-overview__weight-speed--push-drag-lift {
+		color: #d24040;
+	}
+}
