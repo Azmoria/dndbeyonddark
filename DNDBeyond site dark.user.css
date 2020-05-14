@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.0.7
+@version      1.0.8
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -32,7 +32,7 @@ url-prefix("https://www.dndbeyond.com/my-collection"),
 url-prefix("https://www.dndbeyond.com/my-creations"),
 url-prefix("https://www.dndbeyond.com/my-campaigns"),
 url-prefix("https://www.dndbeyond.com/campaigns"),
-regexp("https://www.dndbeyond.com/profile/.*/characters/.*/builder#/.*"),
+regexp("https://www.dndbeyond.com/profile/.*/characters/.*/builder#/.*"), regexp("https://www.dndbeyond.com/characters/builder#/"),
 url-prefix("https://www.dndbeyond.com/my-characters"),
 url-prefix("https://www.dndbeyond.com/search"),
 url-prefix("https://www.dndbeyond.com/modifier/") {
@@ -228,7 +228,10 @@ url-prefix("https://www.dndbeyond.com/modifier/") {
 	input,
 	ul.ui-autocomplete.ui-menu.ui-widget.ui-widget-content.ui-corner-all.ddb-search-autocomplete,
 	.body-rpgcharacterbuilder th,
-	.body-rpgcharacterbuilder td{
+	.body-rpgcharacterbuilder td,
+    .body-rpgcharacterbuilder.site,
+    .builder-type-options,
+    .fullscreen-modal-content{
 		background-color: /*[[backgroundColor]]*/
 		!important;
 		color: /*[[fontColor]]*/
@@ -569,7 +572,8 @@ url-prefix("https://www.dndbeyond.com/modifier/") {
 	.collapsible-header:hover,
 	.collapsible-header,
 	.select2-container .select2-choice,
-	.select2-results {
+	.select2-results,
+    .ddbc-truncated-content--is-hidden .ddbc-truncated-content__content:after{
 		background-image: none !important;
 	}
 	aside,
@@ -659,6 +663,9 @@ url-prefix("https://www.dndbeyond.com/modifier/") {
 	footer#footer {
 		margin: 0px;
 	}
+    input.es-form-field-query.ui-autocomplete-input[placeholder="Search Everything..."]{
+        background: none !important;
+    }
 }
 
 
@@ -694,7 +701,8 @@ url-prefix("https://www.dndbeyond.com/modifier/") {
 	}
 
 	.body-home-index .post-listing > li:first-child .post-excerpt__content,
-	.body-home-index .post-listing > li:first-child .post-excerpt {
+	.body-home-index .post-listing > li:first-child .post-excerpt
+    {
 		background: none !important;
 		border: none !important;
 	}
