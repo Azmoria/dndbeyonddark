@@ -231,7 +231,8 @@ url-prefix("https://www.dndbeyond.com/modifier/") {
 	.body-rpgcharacterbuilder td,
     .body-rpgcharacterbuilder.site,
     .builder-type-options,
-    .fullscreen-modal-content{
+    .fullscreen-modal-content,
+    .p-forum-a .statistics .statistics-body, .listing-forum-search .statistics .statistics-body{
 		background-color: /*[[backgroundColor]]*/
 		!important;
 		color: /*[[fontColor]]*/
@@ -353,7 +354,9 @@ url-prefix("https://www.dndbeyond.com/modifier/") {
 	.ddb-top-result-header-secondary-text,
 	.ddb-statblock-ability-scores .score,
 	.ddbc-item-name--rarity-common,
-	.p-comments span{
+	.p-comments span,
+    body.body-forum .single-column #content .p-forum-a footer.statistics .statistics-body .info .item, 
+    body.body-forum .single-column #content .p-forum-a footer.statistics .statistics-body .count .item{
 		color: /*[[fontColor]]*/
 		!important;
 	}
