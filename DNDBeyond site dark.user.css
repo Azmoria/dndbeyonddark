@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @namespace    Azmoria
 @preprocessor uso
-@version      1.0.2
+@version      1.0.3
 @author       Azmoria
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -226,7 +226,9 @@ url-prefix("https://www.dndbeyond.com/modifier/") {
 	.select2-results .select2-selection-limit,
 	#es-form-main,
 	input,
-	ul.ui-autocomplete.ui-menu.ui-widget.ui-widget-content.ui-corner-all.ddb-search-autocomplete {
+	ul.ui-autocomplete.ui-menu.ui-widget.ui-widget-content.ui-corner-all.ddb-search-autocomplete,
+	.body-rpgcharacterbuilder th,
+	.body-rpgcharacterbuilder td{
 		background-color: /*[[backgroundColor]]*/
 		!important;
 		color: /*[[fontColor]]*/
