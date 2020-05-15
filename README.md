@@ -1,5 +1,5 @@
 # dndbeyonddark
-Themes for DNDBeyond allowing for custom colors. Dark theme by default.
+Themes for DNDBeyond allowing for custom colors. Dark theme by default. The character sheet theme will only work with the updated framework and also works for the dice alpha.
 
 
 You will need Stylus or another User CSS extension to apply these themes. 
