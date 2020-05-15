@@ -232,7 +232,9 @@ url-prefix("https://www.dndbeyond.com/modifier/") {
     .body-rpgcharacterbuilder.site,
     .builder-type-options,
     .fullscreen-modal-content,
-    .p-forum-a .statistics .statistics-body, .listing-forum-search .statistics .statistics-body{
+    .p-forum-a .statistics .statistics-body,
+    .listing-forum-search .statistics .statistics-body,
+    body.hide-ads footer#footer, body.disable-ads footer#footer{
 		background-color: /*[[backgroundColor]]*/
 		!important;
 		color: /*[[fontColor]]*/
