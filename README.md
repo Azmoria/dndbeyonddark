@@ -22,7 +22,7 @@ Character Sheet examples:
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Character%20Sheet/Color%20Adjustments.PNG?raw=true"/>
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Character%20Sheet/DNDbeyond%20Char%20dark.PNG?raw=true"/>
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Character%20Sheet/DNDbeyond%20color%20example.PNG?raw=true"/>
-
+<img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Character%20Sheet/Charsheetgif.gif?raw=true"/>
 
 Rest of the site examples:
 
