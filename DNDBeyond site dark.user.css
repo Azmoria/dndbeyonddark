@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.0.0
+@version      1.0.1
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -234,7 +234,12 @@ url-prefix("https://www.dndbeyond.com/modifier/") {
     .fullscreen-modal-content,
     .p-forum-a .statistics .statistics-body,
     .listing-forum-search .statistics .statistics-body,
-    body.hide-ads footer#footer, body.disable-ads footer#footer{
+    body.hide-ads footer#footer, body.disable-ads footer#footer,
+    .u-dropDown .u-dropDownMenu li>a:hover,
+    .u-dropDown .u-dropDownMenu li>a,
+    .u-dropDown .u-dropDownMenu li>a span,
+    .u-dropDown .u-dropDownMenu li,
+    .u-dropDown .u-dropDownMenu{
 		background-color: /*[[backgroundColor]]*/
 		!important;
 		color: /*[[fontColor]]*/
@@ -619,7 +624,7 @@ url-prefix("https://www.dndbeyond.com/modifier/") {
 	body:not(.body-forum):not(.section-posts):not(.section-changelog):not(.body-privatemessage-details) blockquote,
 	.section-posts .p-article-a,
 	.more-info,
-	.details-container {
+	.details-container{
 		border-bottom-width: /*[[borderWidth]]*/;
 		border-left-width: /*[[borderWidth]]*/;
 		border-right-width: /*[[borderWidth]]*/;
