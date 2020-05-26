@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.0.1
+@version      1.0.2
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -15,7 +15,7 @@
 @var color rollColor "Rollable Items Color" #59d
 @var color rollCalcColor "Roll History Background Color" #030f1aea
 @var text filter "Icons filter - for dark backgrounds: invert(100%) for light background: none" "invert(100%)"
-@var text zindex "z-index for dice result, 9999999 for above dice 999 for below dice" "999"
+@var text zindex "z-index for dice result, less than 57000 for below dice higher than 57000 for above dice" "999"
 
 
 
@@ -475,7 +475,10 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     #noty_layout__topLeft, 
     #noty_layout__topRight, 
     .noty_layout_mixin{
-    z-index: /*[[zindex]]*/;
+     z-index: /*[[zindex]]*/;
+    }
+    .dice-rolling-panel .dice-toolbar{
+        z-index: calc( /*[[zindex]]*/ - 57000 );
     }
 
 	/*Fixed settings*/
