@@ -674,7 +674,8 @@ url-prefix("https://www.dndbeyond.com/modifier/") {
 		color: #BE8972 !important;
 	}
       body.body-forum .single-column #content .p-forum-a .p-comment-post .u-dropDown span.user-role-moderator{
-     color: #ff8502 !important;
+        color: #ff8502 !important;
+        background: url(https://media-waterdeep.cursecdn.com/attachments/0/21/ddbmod.png) no-repeat left center !important;
     }
 	.mordy-handwriting {
 		font-weight: normal !important;
