@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.0.5
+@version      1.0.6
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -366,7 +366,8 @@ url-prefix("https://www.dndbeyond.com/modifier/") {
 	.ddbc-item-name--rarity-common,
 	.p-comments span,
     body.body-forum .single-column #content .p-forum-a footer.statistics .statistics-body .info .item, 
-    body.body-forum .single-column #content .p-forum-a footer.statistics .statistics-body .count .item{
+    body.body-forum .single-column #content .p-forum-a footer.statistics .statistics-body .count .item,
+    .RPGMonster-listing .more-info{
 		color: /*[[fontColor]]*/
 		!important;
 	}
