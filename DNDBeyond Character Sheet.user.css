@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.0.5
+@version      1.0.6
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -22,6 +22,7 @@
 ==/UserStyle== */
 @-moz-document regexp("https://www.dndbeyond.com/profile/.*/characters/\\d*"),
 regexp("https://www.dndbeyond.com/characters/.*") {
+
 
 	/*Scrollbar style */
 	::-webkit-scrollbar {
@@ -156,8 +157,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 
 	.ct-spells-filter__input[type=search],
 	.ct-inventory-filter__input[type=search],
-	.ct-extras-filter__input[type=search],      
-    .integrated-dice__container:hover
+	.ct-extras-filter__input[type=search]      
     {
 		background: none !important;
 	}
@@ -304,6 +304,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .integrated-dice__container:hover{
         border-width: 1px !important;
     }
+    
+
 
 
 	/*Icon Filter for dark theme*/
@@ -415,23 +417,31 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     padding: 2px 0px !important;
     }
 
-
-
-
 	.ct-skills__item .ct-skills__col--modifier {
 		padding: 0px !important;
 		line-height: 16px;
 	}
 
-	.ct-character-sheet--dice-enabled .ddbc-combat-attack__damage .integrated-dice__container,
+    .ct-character-sheet--dice-enabled .ddbc-combat-attack__tohit .integrated-dice__container,
+    .ct-character-sheet--dice-enabled .ddbc-combat-attack__damage .integrated-dice__container,
 	.ct-character-sheet--dice-enabled .ddbc-combat-item-attack__damage .integrated-dice__container,
 	.ct-character-sheet--dice-enabled .ddbc-spell-damage-effect__damages .integrated-dice__container,
 	.ct-character-sheet--dice-enabled .ddbc-spell-damage-effect__healing .integrated-dice__container,
-	.ct-character-sheet--dice-enabled .ddbc-combat-attack__damage .integrated-dice__container:hover,
+    .ct-character-sheet--dice-enabled .ct-skills__col--modifier .integrated-dice__container,
+    .ct-character-sheet--dice-enabled .ddbc-combat-attack__tohit .integrated-dice__container,
+    .ct-character-sheet--dice-enabled .ddbc-ability-summary__primary .integrated-dice__container,
+    .ct-character-sheet--dice-enabled .ct-initiative-box__value .integrated-dice__container
+    .ct-character-sheet--dice-enabled .ddbc-combat-attack__tohit .integrated-dice__container:hover,
+    .ct-character-sheet--dice-enabled .ddbc-combat-attack__damage .integrated-dice__container:hover,
 	.ct-character-sheet--dice-enabled .ddbc-combat-item-attack__damage .integrated-dice__container:hover,
 	.ct-character-sheet--dice-enabled .ddbc-spell-damage-effect__damages .integrated-dice__container:hover,
 	.ct-character-sheet--dice-enabled .ddbc-spell-damage-effect__healing .integrated-dice__container:hover,
-    .ct-character-sheet--dice-enabled .integrated-dice__container{
+    .ct-character-sheet--dice-enabled .ct-skills__col--modifier .integrated-dice__container:hover,
+    .ct-character-sheet--dice-enabled .ddbc-combat-attack__tohit .integrated-dice__container:hover,
+    .ct-character-sheet--dice-enabled .ddbc-ability-summary__primary .integrated-dice__container:hover,
+    .ct-character-sheet--dice-enabled .ct-initiative-box__value .integrated-dice__container:hover
+    
+    {
 		padding: 0px 1px;
 		height: auto;
 	}
@@ -449,7 +459,17 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 	.dice-toolbar,
 	.dice-toolbar:hover,
 	.dice-toolbar__dropdown-selected .dice-toolbar__dropdown-die,
-	.dice-die-button {
+	.dice-die-button,
+    .ct-character-sheet--dice-enabled .ddbc-combat-attack__damage .integrated-dice__container:hover,
+	.ct-character-sheet--dice-enabled .ddbc-combat-item-attack__damage .integrated-dice__container:hover,
+	.ct-character-sheet--dice-enabled .ddbc-spell-damage-effect__damages .integrated-dice__container:hover,
+	.ct-character-sheet--dice-enabled .ddbc-spell-damage-effect__healing .integrated-dice__container:hover,
+    .ct-character-sheet--dice-enabled .ct-skills__col--modifier .integrated-dice__container:hover,
+    .ct-character-sheet--dice-enabled .ddbc-combat-attack__tohit .integrated-dice__container:hover,
+    .ct-character-sheet--dice-enabled .ddbc-ability-summary__primary .integrated-dice__container:hover,
+    .ct-character-sheet--dice-enabled .ct-initiative-box__value .integrated-dice__container:hover,
+    .ct-character-sheet--dice-enabled .ct-skills__item .integrated-dice__container:hover,
+	.ct-character-sheet--dice-enabled .ct-spells-spell__tohit .integrated-dice__container:hover{
 		background: /*[[rollCalcColor]]*/
 	}
 	.dice-toolbar:hover {
@@ -479,6 +499,12 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     
     .dice-rolling-panel{
         z-index: /*[[zindex]]*/ !important;
+    }
+    
+        
+    .ct-character-sheet--dice-enabled .integrated-dice__container:hover~.ddbc-saving-throw-selection-box-svg path, 
+    .ct-character-sheet--dice-enabled .integrated-dice__container:hover~.ddbc-saving-throw-selection-small-box-svg path{
+        fill: /*[[rollCalcColor]]*/ !important;
     }
 
 	/*Fixed settings*/
@@ -516,4 +542,5 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 	.ct-equipment-overview__weight-speed--push-drag-lift {
 		color: #d24040;
 	}
+
 }
