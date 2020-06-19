@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.0.4
+@version      1.0.5
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -409,7 +409,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 		height: auto;
 		font-size: 15px;
 		width: auto;
-		margin-bottom: 3px;
+		margin-bottom: 0px;
 	}
     .ct-character-sheet--dice-enabled .ct-skills__item .ct-skills__col--skill{
     padding: 2px 0px !important;
@@ -422,12 +422,6 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 		padding: 0px !important;
 		line-height: 16px;
 	}
-	.ct-skills__item .ct-skills__col--adjustments {
-		align-self: center;
-		padding: 0px !important;
-		padding-bottom: 4px !important;
-		padding-right: 5px !important;
-	}
 
 	.ct-character-sheet--dice-enabled .ddbc-combat-attack__damage .integrated-dice__container,
 	.ct-character-sheet--dice-enabled .ddbc-combat-item-attack__damage .integrated-dice__container,
@@ -436,17 +430,19 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 	.ct-character-sheet--dice-enabled .ddbc-combat-attack__damage .integrated-dice__container:hover,
 	.ct-character-sheet--dice-enabled .ddbc-combat-item-attack__damage .integrated-dice__container:hover,
 	.ct-character-sheet--dice-enabled .ddbc-spell-damage-effect__damages .integrated-dice__container:hover,
-	.ct-character-sheet--dice-enabled .ddbc-spell-damage-effect__healing .integrated-dice__container:hover {
-		padding: 0px;
+	.ct-character-sheet--dice-enabled .ddbc-spell-damage-effect__healing .integrated-dice__container:hover,
+    .ct-character-sheet--dice-enabled .integrated-dice__container{
+		padding: 0px 1px;
 		height: auto;
 	}
+    
 
 	.ddbc-tab-list .integrated-dice__container span {
 		font-size: 14px;
 	}
 
 	.dice_result__divider {
-		background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='19' height='100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='/*[[fontColor]]*/' d='M10 0v65H9V300z'/%3E%3Cpath fill='/*[[fontColor]]*/' d='M10 0v35H9V0z'/%3E%3Cpath fill='/*[[fontColor]]*/' d='M19 57H0v-3h19zM19 47H0v-3h19z'/%3E%3C/svg%3E")
+		background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='19' height='80' viewBox='0 0 19 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='/*[[fontColor]]*/' d='M10 0v35H9V0z'/%3E%3Cpath fill='/*[[fontColor]]*/' d='M10 70v105H9V70Z'/%3E%3Cpath fill='/*[[rollCalcColor]]*/' d='M19 68H0V33h19z'/%3E%3Cpath fill='/*[[fontColor]]*/' d='M19 57H0v-3h19zM19 47H0v-3h19z'/%3E%3C/svg%3E")
 	}
 	.dice_result,
 	.dice_notification_controls .dice_notification_control,
@@ -457,7 +453,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 		background: /*[[rollCalcColor]]*/
 	}
 	.dice-toolbar:hover {
-		border: 1px solid/*[[rollColor]]*/
+		border: 1px solid /*[[rollColor]]*/
 	}
 	.dice-toolbar__dropdown-selected .dice-toolbar__dropdown-die,
 	.dice-toolbar__dropdown-selected .dice-toolbar__dropdown-die:hover {
