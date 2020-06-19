@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.0.2
+@version      1.0.3
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -15,7 +15,7 @@
 @var color rollColor "Rollable Items Color" #59d
 @var color rollCalcColor "Roll History Background Color" #030f1aea
 @var text filter "Icons filter - for dark backgrounds: invert(100%) for light background: none" "invert(100%)"
-@var text zindex "z-index for dice result, less than 57000 for below dice higher than 57000 for above dice" "999"
+@var text zindex "Z-index for dice: above 60001 for above results; below 60001 for below results" "60000"
 
 
 
@@ -105,7 +105,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 	.beyond20-tooltip .beyond20-tooltip-content,
 	.dice-formula.beyond20-roll-formula,
 	.beyond20-roll-cell,
-	.beyond20-roll-die-result {
+	.beyond20-roll-die-result,
+    .integrated-dice-menu__item{
 		background-color: /*[[sheetColor]]*/
 		!important;
 		color: /*[[fontColor]]*/
@@ -155,7 +156,9 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 
 	.ct-spells-filter__input[type=search],
 	.ct-inventory-filter__input[type=search],
-	.ct-extras-filter__input[type=search] {
+	.ct-extras-filter__input[type=search],      
+    .integrated-dice__container:hover
+    {
 		background: none !important;
 	}
 
@@ -270,10 +273,14 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 	.ct-status-summary-mobile__button,
 	.ct-character-header-tablet__button,
 	.ct-tablet-box__border,
-	.beyond20-roll-cell {
+	.beyond20-roll-cell,
+    .integrated-dice-menu__item{
 		border-color: /*[[borderColor]]*/
 		!important;
 	}
+    .integrated-dice-menu-carrot{
+        border-top-color: /*[[borderColor]]*/
+    }
 
 	.ddbc-tab-list__nav-item--is-active {
 		border-bottom-color: /*[[highlightColor]]*/
@@ -290,6 +297,13 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 	.ct-character-sheet--dice-enabled .integrated-dice__container {
 		border: none;
 	}
+    .integrated-dice-menu-carrot:after{
+        border-top-color: /*[[sheetColor]]*/
+    }
+    
+    .integrated-dice__container:hover{
+        border-width: 1px !important;
+    }
 
 
 	/*Icon Filter for dark theme*/
@@ -390,16 +404,16 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 	/*Dice Alpha Size and position changes*/
 	.ct-character-sheet--dice-enabled .ct-skills__item .integrated-dice__container,
 	.ct-character-sheet--dice-enabled .ct-spells-spell__tohit .integrated-dice__container,
-	.ct-character-sheet--dice-enabled .ddbc-combat-attack__tohit .integrated-dice__container {
+	.ct-character-sheet--dice-enabled .ddbc-combat-attack__tohit .integrated-dice__container
+    {
 		height: auto;
 		font-size: 15px;
 		width: auto;
 		margin-bottom: 3px;
 	}
 
-	.ct-skills__item .ct-skills__col--skill {
-		padding: 2px !important;
-	}
+
+
 
 	.ct-skills__item .ct-skills__col--modifier {
 		padding: 0px !important;
@@ -464,21 +478,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 		background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='18' height='18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M17.707 4.293a.999.999 0 00-1.414 0L9 11.586 1.707 4.293A.999.999 0 10.293 5.707l8 8a.997.997 0 001.414 0l8-8a.999.999 0 000-1.414z' fill='/*[[fontColor]]*/'/%3E%3C/svg%3E")
 	}
     
-    #noty_layout__bottom, 
-    #noty_layout__bottomCenter, 
-    #noty_layout__bottomLeft, 
-    #noty_layout__bottomRight, 
-    #noty_layout__center, 
-    #noty_layout__centerLeft, 
-    #noty_layout__centerRight, 
-    #noty_layout__top, #noty_layout__topCenter, 
-    #noty_layout__topLeft, 
-    #noty_layout__topRight, 
-    .noty_layout_mixin{
-     z-index: /*[[zindex]]*/;
-    }
-    .dice-rolling-panel .dice-toolbar{
-        z-index: calc( /*[[zindex]]*/ - 57000 );
+    .dice-rolling-panel{
+        z-index: /*[[zindex]]*/ !important;
     }
 
 	/*Fixed settings*/
