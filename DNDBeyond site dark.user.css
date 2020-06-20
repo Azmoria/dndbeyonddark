@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.0.9
+@version      1.0.10
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -704,7 +704,8 @@ url-prefix("https://www.dndbeyond.com/modifier/") {
     .p-article-a .section-changelog .p-article-content h3::after,
     .body-page .p-article-a .p-article-content h1::after, 
     .section-posts .p-article-a .p-article-content h1::after, 
-    .p-article-a .section-changelog .p-article-content h1::after{
+    .p-article-a .section-changelog .p-article-content h1::after,
+    .nav-back-to-top{
         background-color: /*[[linkColor]]*/
     }
     
