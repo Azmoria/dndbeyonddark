@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.0.8
+@version      1.0.9
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -13,6 +13,7 @@
 @var text borderStyle "Border Style eg. dotted" "solid"
 @var text borderWidth "Border Width eg. 2px" "1px"
 @var color scrollbarColor "Scrollbar Color" #88bcd6
+@var text filter "Icons filter - for dark backgrounds: invert(100%) for light background: none" "invert(100%)"
 ==/UserStyle==*/
 /* Alternative Color for font to match DND Beyond Green #47D18C */
 @-moz-document url-prefix("https://www.dndbeyond.com/sources"),
@@ -558,7 +559,7 @@ url-prefix("https://www.dndbeyond.com/modifier/") {
 	.ddb-statblock.ddb-statblock-monster.ddb-statblock-ability-scores div::before,
 	.es-form-icon,
 	#field-body-wysiwyg_ifr {
-		filter: invert(100);
+		filter: /*[[filter]]*/;
 	}
 	.p-article-a .compendium-toc-blockquote > a,
 	.p-article-a .compendium-toc-blockquote > a:hover,
