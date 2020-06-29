@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.0.11
+@version      1.0.12
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -244,7 +244,8 @@ url-prefix("https://www.dndbeyond.com/modifier/") {
     body.body-forum .single-column #content .p-forum-a .p-comment-post .u-dropDown span,
     .ct-spell-detail__tag,
     .class-spell-list-header,
-    .p-forum-poll .b-poll-a{
+    .p-forum-poll .b-poll-a,
+    blockquote.Call-Out-Box{
 		background-color: /*[[backgroundColor]]*/
 		!important;
 		color: /*[[fontColor]]*/
