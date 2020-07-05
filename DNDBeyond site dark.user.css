@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.0.13
+@version      1.0.14
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -372,7 +372,8 @@ url-prefix("https://www.dndbeyond.com/modifier/") {
     body.body-forum .single-column #content .p-forum-a footer.statistics .statistics-body .count .item,
     .RPGMonster-listing .more-info,
     .Flowchart-Block,
-    .ddbc-tab-list__nav-item--is-active{
+    .ddbc-tab-list__nav-item--is-active,
+    .ddb-campaigns-body-form .form-label{
 		color: /*[[fontColor]]*/
 		!important;
 	}
@@ -1381,7 +1382,10 @@ url-prefix("https://www.dndbeyond.com/modifier/") {
 	.i-checkmark,
 	.ddb-statblock.ddb-statblock-monster.ddb-statblock-ability-scores div::before,
 	.es-form-icon,
-	#field-body-wysiwyg_ifr {
+	#field-body-wysiwyg_ifr,
+    iframe#field-description-wysiwyg_ifr,
+    iframe#field-private-notes-wysiwyg_ifr,
+    iframe#field-public-notes-wysiwyg_ifr{
 		filter: /*[[filter]]*/;
 	}
 	.p-article-a .compendium-toc-blockquote > a,
