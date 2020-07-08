@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.0.6
+@version      1.0.7
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -124,7 +124,10 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 	.site .ct-button.ct-theme-button--filled:disabled,
 	.site .ct-button.ct-theme-button--filled,
 	.site .ct-theme-button--outline.ct-button:hover,
-	.site .ct-theme-button--outline.ct-button:active {
+	.site .ct-theme-button--outline.ct-button:active,
+    .ct-character-manage-pane__intro,
+    .ct-dice-preference-manager__primary,
+    .ct-dice-preference-manager__link-out{
 		background: /*[[sheetColor]]*/
 		!important;
 	}
@@ -137,7 +140,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 	.ddbc-toggle-field--is-enabled,
 	.ct-spells-filter__active,
 	button.ct-theme-button.ct-remove-button.ct-theme-button--filled.ct-theme-button--interactive.ct-button.character-button.character-button-small,
-	button.ct-theme-button.ct-theme-button--filled.ct-theme-button--interactive.ct-button.character-button.character-button-small {
+	button.ct-theme-button.ct-theme-button--filled.ct-theme-button--interactive.ct-button.character-button.character-button-small,
+    .ct-dice-preference-manager__primary-info-version{
 		background: /*[[highlightColor]]*/
 		!important;
 	}
@@ -216,7 +220,12 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 	.dice_notification_controls span,
 	.ct-actions__attacks-per-action,
 	.ddbc-weight-number__label,
-	.ct-equipment-overview__weight-speed
+	.ct-equipment-overview__weight-speed,
+    .ct-character-manage-pane,
+    .ct-character-manage-pane__class-list-item-label,
+    .ct-character-manage-pane__class-list-item-meta,
+    .ct-dice-preference-manager__link-out-label,
+    .ct-dice-preference-manager__primary-info-version
 	{
 		color: /*[[fontColor]]*/;
 	}
@@ -354,7 +363,17 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 	.ddbc-svg.ddbc-proficiency-svg.ddbc-proficiency-icon.ddbc-proficiency-level-icon circle,
 	.ddbc-svg.ddbc-proficiency-half-svg.ddbc-half-proficiency-icon.ddbc-proficiency-level-icon path,
 	.ddbc-svg.ddbc-proficiency-half-svg.ddbc-twice-proficiency-icon__inner circle,
-	.ddbc-svg.ddbc-proficiency-half-svg.ddbc-twice-proficiency-icon__inner path {
+	.ddbc-svg.ddbc-proficiency-half-svg.ddbc-twice-proficiency-icon__inner path,
+    .ddbc-svg.ddbc-dice-svg.ddbc-svg--themed path,
+    .ddbc-svg.ddbc-link-out-svg.ddbc-svg--light path,
+    svg.ddbc-svg.ddbc-builder-svg.ddbc-svg--themed path,
+    svg.ddbc-svg.ddbc-manage-level-svg.ddbc-svg--themed circle,
+    svg.ddbc-svg.ddbc-backdrop-svg.ddbc-svg--themed path,
+    svg.ddbc-svg.ddbc-theme-icon-svg.ddbc-svg--themed path,
+    svg.ddbc-svg.ddbc-portrait-svg.ddbc-svg--themed path,
+    svg.ddbc-svg.ddbc-preferences-svg.ddbc-svg--themed path,
+    svg.ddbc-svg.ddbc-export-svg.ddbc-svg--themed path
+    {
 		fill: /*[[highlightColor]]*/
 		!important;
 	}
@@ -363,7 +382,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 	.ct-initiative-box path,
 	.ct-inspiration path,
 	.ct-proficiency-groups-box path,
-	.ddbc-attunement-slot.ddbc-attunement-slot--empty path {
+	.ddbc-attunement-slot.ddbc-attunement-slot--empty path
+    {
 		fill: /*[[borderColor]]*/
 		!important;
 	}
@@ -375,7 +395,9 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 	.ddbc-svg.ddbc-ability-score-box-svg > path:nth-child(2),
 	.ct-proficiency-groups-box polygon,
 	.ct-sidebar__pane-top path,
-	.ct-sidebar__pane-bottom path {
+	.ct-sidebar__pane-bottom path,
+    svg.ddbc-svg.ddbc-manage-level-svg.ddbc-svg--themed path
+    {
 		fill: /*[[sheetColor]]*/
 		!important;
 	}
@@ -385,7 +407,9 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 	}
 	.ddbc-svg.ddbc-long-rest-svg.ddbc-svg--themed ellipse,
 	svg.ddbc-svg.ct-sidebar__control-icon line,
-	.ddbc-popout-menu__item-prefix rect {
+	.ddbc-popout-menu__item-prefix rect,
+    svg.ddbc-svg.ddbc-frame-svg.ddbc-svg--themed rect
+    {
 		stroke: /*[[highlightColor]]*/;
 	}
 
