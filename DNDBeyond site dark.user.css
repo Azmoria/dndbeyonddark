@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.0.16
+@version      1.0.17
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -248,7 +248,8 @@ url-prefix("https://www.dndbeyond.com/modifier/") {
     blockquote.Call-Out-Box,
     .character-screen-details,
     .starting-equipment-rule-slots,
-    .starting-equipment-rule-slot+.starting-equipment-rule-slot:before{
+    .starting-equipment-rule-slot+.starting-equipment-rule-slot:before,
+    .Basic-Text-Frame-2, .Basic-Text-Frame-3{
 		background-color: /*[[backgroundColor]]*/
 		!important;
 		color: /*[[fontColor]]*/
