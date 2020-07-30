@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.0.7
+@version      1.0.8
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -297,7 +297,9 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 
 	.ct-spell-caster__casting-action-count.ct-spell-caster__casting-action-count--spellcasting,
 	.ct-quick-nav__button,
-	.ct-quick-nav__button:hover {
+	.ct-quick-nav__button:hover,
+    .ct-character-sheet--dice-enabled .ddbc-combat-attack--crit .ddbc-combat-attack__damage .integrated-dice__container:hover,
+    .ct-character-sheet--dice-enabled .ddbc-combat-attack--crit .ddbc-combat-attack__damage .integrated-dice__container {
 		border-color: /*[[highlightColor]]*/;
 	}
 	.ct-character-sheet--dice-enabled .integrated-dice__container:hover {
@@ -493,7 +495,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-character-sheet--dice-enabled .ddbc-ability-summary__primary .integrated-dice__container:hover,
     .ct-character-sheet--dice-enabled .ct-initiative-box__value .integrated-dice__container:hover,
     .ct-character-sheet--dice-enabled .ct-skills__item .integrated-dice__container:hover,
-	.ct-character-sheet--dice-enabled .ct-spells-spell__tohit .integrated-dice__container:hover{
+	.ct-character-sheet--dice-enabled .ct-spells-spell__tohit .integrated-dice__container:hover,
+    .ct-character-sheet--dice-enabled .ddbc-combat-attack--crit .ddbc-combat-attack__damage .integrated-dice__container:hover{
 		background: /*[[rollCalcColor]]*/
 	}
 	.dice-toolbar:hover {
