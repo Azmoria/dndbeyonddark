@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.0.18
+@version      1.0.19
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -36,7 +36,8 @@ url-prefix("https://www.dndbeyond.com/campaigns"),
 regexp("https://www.dndbeyond.com/profile/.*/characters/.*/builder#/.*"), regexp("https://www.dndbeyond.com/characters/builder#/"),
 url-prefix("https://www.dndbeyond.com/my-characters"),
 url-prefix("https://www.dndbeyond.com/search"),
-url-prefix("https://www.dndbeyond.com/modifier/") {
+url-prefix("https://www.dndbeyond.com/modifier/"),
+url-prefix("https://www.dndbeyond.com/entity/"){
 
 
 
@@ -89,12 +90,6 @@ url-prefix("https://www.dndbeyond.com/modifier/") {
 	.body-forum .comment-preview li .p-comment-user .p-comment-stats .p-comment-statitem .postbit-item,
 	.body-forum-search .p-comments-a .p-comment-user .p-comment-stats .p-comment-statitem .postbit-item,
 	blockquote,
-	.mce-panel,
-	.mce-container,
-	.mce-container *,
-	.mce-widget,
-	.mce-widget *,
-	.mce-reset,
 	.body-forum .listing .b-table-header .b-table-heading,
 	.body-forum .listing .b-table-header .b-table-heading a,
 	.select2-container-multi .select2-choices .select2-search-field input,
@@ -567,7 +562,8 @@ url-prefix("https://www.dndbeyond.com/modifier/") {
 	.i-checkmark,
 	.ddb-statblock.ddb-statblock-monster.ddb-statblock-ability-scores div::before,
 	.es-form-icon,
-	#field-body-wysiwyg_ifr {
+	#field-body-wysiwyg_ifr,
+    #field-item-description-wysiwyg_ifr{
 		filter: /*[[filter]]*/;
 	}
 	.p-article-a .compendium-toc-blockquote > a,
@@ -927,7 +923,7 @@ url-prefix("https://www.dndbeyond.com/modifier/") {
 	blockquote,
 	.mce-panel,
 	.mce-container,
-	.mce-container *,
+	.mce-container *:not(div),
 	.mce-widget,
 	.mce-widget *,
 	.mce-reset,
@@ -1080,7 +1076,8 @@ url-prefix("https://www.dndbeyond.com/modifier/") {
     body.body-forum .single-column #content .p-forum-a .p-comment-post .u-dropDown span,
     .ct-spell-detail__tag,
     .class-spell-list-header,
-    .p-forum-poll .b-poll-a{
+    .p-forum-poll .b-poll-a,
+    .mce-menu-item-normal.mce-active{
 		background-color: /*[[backgroundColor]]*/
 		!important;
 		color: /*[[fontColor]]*/
@@ -1237,7 +1234,8 @@ url-prefix("https://www.dndbeyond.com/modifier/") {
 	.quick-menu-item-label {
 		border: none;
 	}
-	.quick-menu-item-active > .quick-menu-item-label {
+	.quick-menu-item-active > .quick-menu-item-label,
+    .mce-menu-item-normal.mce-active{
 		border-left-color: /*[[linkColor]]*/
 		!important;
 		border-left-width: 3px;
@@ -1485,7 +1483,9 @@ url-prefix("https://www.dndbeyond.com/modifier/") {
 	.collapsible-body {
 		border: none !important;
 	}
-    .p-comments .p-comment-actions .p-comment-actionsAdmin>.label:after{
+    .p-comments .p-comment-actions .p-comment-actionsAdmin>.label:after,
+    .mce-caret
+    {
     border-top-color: /*[[fontColor]]*/
     }
     
