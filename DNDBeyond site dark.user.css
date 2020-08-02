@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.0.19
+@version      1.0.20
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -13,7 +13,7 @@
 @var text borderStyle "Border Style eg. dotted" "solid"
 @var text borderWidth "Border Width eg. 2px" "1px"
 @var color scrollbarColor "Scrollbar Color" #88bcd6
-@var text filter "Icons filter - for dark backgrounds: invert(100%) for light background: none" "invert(100%)"
+@var text filter "Icons filter - for dark backgrounds: invert(100%) hue-rotate(180deg) for light background: none" "invert(100%) hue-rotate(180deg)"
 ==/UserStyle==*/
 /* Alternative Color for font to match DND Beyond Green #47D18C */
 @-moz-document url-prefix("https://www.dndbeyond.com/sources"),
@@ -37,7 +37,8 @@ regexp("https://www.dndbeyond.com/profile/.*/characters/.*/builder#/.*"), regexp
 url-prefix("https://www.dndbeyond.com/my-characters"),
 url-prefix("https://www.dndbeyond.com/search"),
 url-prefix("https://www.dndbeyond.com/modifier/"),
-url-prefix("https://www.dndbeyond.com/entity/"){
+url-prefix("https://www.dndbeyond.com/entity/"),
+    url-prefix("https://www.dndbeyond.com/monster/"){
 
 
 
@@ -563,7 +564,7 @@ url-prefix("https://www.dndbeyond.com/entity/"){
 	.ddb-statblock.ddb-statblock-monster.ddb-statblock-ability-scores div::before,
 	.es-form-icon,
 	#field-body-wysiwyg_ifr,
-    #field-item-description-wysiwyg_ifr{
+    .mce-edit-area iframe{
 		filter: /*[[filter]]*/;
 	}
 	.p-article-a .compendium-toc-blockquote > a,
