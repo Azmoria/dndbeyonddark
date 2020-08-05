@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.0.8
+@version      1.0.9
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -443,7 +443,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     padding: 2px 0px !important;
     }
 
-	.ct-skills__item .ct-skills__col--modifier {
+	.ct-skills__item .ct-skills__col--modifier, 
+    .ct-skills__item .ct-skills__col--adjustments {
 		padding: 0px !important;
 		line-height: 16px;
 	}
