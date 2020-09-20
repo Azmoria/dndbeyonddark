@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.0.10
+@version      1.0.11
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -108,7 +108,9 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 	.beyond20-roll-cell,
 	.beyond20-roll-die-result,
     .integrated-dice-menu__item,
-    .Basic-Text-Frame{
+    .Basic-Text-Frame,
+    .body-rpgcharacterbuilder.site,
+    .filter-listing-item{
 		background-color: /*[[sheetColor]]*/
 		!important;
 		color: /*[[fontColor]]*/
@@ -151,7 +153,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 	body:not(.body-forum):not(.section-posts):not(.section-changelog):not(.body-privatemessage-details) blockquote::after,
 	.ddbc-creature-block,
 	.ddbc-creature-block:after,
-	.ddbc-creature-block:before {
+	.ddbc-creature-block:before,
+    .body-rpgcharacterbuilder.site{
 		background-image: none !important;
 	}
 
@@ -376,7 +379,9 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     svg.ddbc-svg.ddbc-theme-icon-svg.ddbc-svg--themed path,
     svg.ddbc-svg.ddbc-portrait-svg.ddbc-svg--themed path,
     svg.ddbc-svg.ddbc-preferences-svg.ddbc-svg--themed path,
-    svg.ddbc-svg.ddbc-export-svg.ddbc-svg--themed path
+    svg.ddbc-svg.ddbc-export-svg.ddbc-svg--themed path,
+    .ddbc-svg.ddbc-chevron-svg.ddbc-chevron-right-svg.ddbc-svg--builder path,
+    .ddbc-svg.ddbc-chevron-svg.ddbc-chevron-down-svg.ddbc-svg--disabled path
     {
 		fill: /*[[highlightColor]]*/
 		!important;
