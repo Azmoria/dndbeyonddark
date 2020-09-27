@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.0.25
+@version      1.0.26
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -40,7 +40,9 @@ url-prefix("https://www.dndbeyond.com/modifier"),
 url-prefix("https://www.dndbeyond.com/entity"),
     url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyond.com/subclasses"), url-prefix("https://www.dndbeyond.com/articles"), url-prefix("https://www.dndbeyond.com/tag"), url-prefix("https://www.dndbeyond.com/subraces"), url-prefix("https://www.dndbeyond.com/changelog"){
 
-
+div#site{
+    height: initial;
+        }
 
 	::-webkit-scrollbar {
 		width: 3px;
@@ -247,7 +249,8 @@ url-prefix("https://www.dndbeyond.com/entity"),
     .starting-equipment-rule-slot+.starting-equipment-rule-slot:before,
     .Basic-Text-Frame-2, .Basic-Text-Frame-3,
     .comment .forum-post-body-content .spoiler,
-    .iDQHiI .listing
+    .iDQHiI .listing,
+    blockquote.paper-background
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
@@ -604,12 +607,14 @@ url-prefix("https://www.dndbeyond.com/entity"),
 	.select2-results,
     .ddbc-truncated-content--is-hidden .ddbc-truncated-content__content:after,
     body.body-forum .single-column #content .p-forum-a .p-comment-post .u-dropDown span,
-    .Basic-Text-Frame.stat-block-finder{
+    .Basic-Text-Frame.stat-block-finder,
+    .stat-block-background{
 		background-image: none !important;
 	}
 	aside,
 	.more-info::after,
-    blockquote.block-colored{
+    blockquote.block-colored,
+    blockquote.paper-background{
 		border-image: none !important;
 	}
 	.irace-listing .more-info::after,
