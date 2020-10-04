@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.0.12
+@version      1.0.13
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -229,7 +229,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-character-manage-pane__class-list-item-label,
     .ct-character-manage-pane__class-list-item-meta,
     .ct-dice-preference-manager__link-out-label,
-    .ct-dice-preference-manager__primary-info-version
+    .ct-dice-preference-manager__primary-info-version,
+    .alertify .ajs-body 
 	{
 		color: /*[[fontColor]]*/;
 	}
