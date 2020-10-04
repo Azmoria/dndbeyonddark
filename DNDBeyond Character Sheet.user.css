@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.0.14
+@version      1.0.15
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -117,7 +117,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     input[type="password"], 
     input[type="email"], 
     textarea, 
-    select{
+    select,
+    .alertify .ajs-footer .ajs-buttons .ajs-button{
 		background-color: /*[[sheetColor]]*/
 		!important;
 		color: /*[[fontColor]]*/
