@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.0.13
+@version      1.0.14
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -110,7 +110,14 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .integrated-dice-menu__item,
     .Basic-Text-Frame,
     .body-rpgcharacterbuilder.site,
-    .filter-listing-item{
+    .filter-listing-item,
+    input[type="text"], 
+    input[type="number"], 
+    input[type="search"], 
+    input[type="password"], 
+    input[type="email"], 
+    textarea, 
+    select{
 		background-color: /*[[sheetColor]]*/
 		!important;
 		color: /*[[fontColor]]*/
@@ -322,6 +329,9 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         border-width: 1px !important;
     }
     
+    input[type="text"], input[type="number"], input[type="search"], input[type="password"], input[type="email"], textarea, select{
+        opacity: initial;
+    }
 
 
 
