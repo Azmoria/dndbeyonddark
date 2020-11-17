@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.0.29
+@version      1.0.30
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -733,6 +733,31 @@ div#site{
     .body-page .p-article-a .p-article-content h1::after, 
     .section-posts .p-article-a .p-article-content h1::after, 
     .p-article-a .section-changelog .p-article-content h1::after{
+        background-color: /*[[linkColor]]*/
+    }
+        
+    .ddbc-toggle-field.ddbc-toggle-field--is-enabled.ddbc-toggle-field--is-interactive::after{
+    content: 'ON';
+    font-size: 10px;
+    color: /*[[backgroundColor]]*/;
+    left: 15px;
+    position: absolute;
+    top: -1px;
+    }
+        
+    .ddbc-toggle-field.ddbc-toggle-field--is-disabled.ddbc-toggle-field--is-interactive::after{
+    content: 'OFF';
+    font-size: 9px;
+    color: /*[[backgroundColor]]*/;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    }
+        
+    .ddbc-toggle-field--is-enabled .ddbc-toggle-field__nub{
+        background-color: /*[[linkColor]]*/
+    }
+    .ddbc-toggle-field--is-enabled{
         background-color: /*[[linkColor]]*/
     }
     
@@ -1564,9 +1589,12 @@ url-prefix("https://www.dndbeyond.com/modifier/") {
     .body-page .p-article-a .p-article-content h1::after, 
     .section-posts .p-article-a .p-article-content h1::after, 
     .p-article-a .section-changelog .p-article-content h1::after{
-        background-color: /*[[linkColor]]*/
+        background-color: /*[[linkColor]]*/;
     }
     
+   
+    
+
     
     
     /* SVG Recolors to selectable colors*/
