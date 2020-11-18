@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.0.30
+@version      1.0.31
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -284,7 +284,7 @@ div#site{
 		width: 100%;
 	}
 
-	::selection {
+	::selection{
 		background: #aaa !important;
 		color: #ddd !important;
 	}
@@ -295,6 +295,10 @@ div#site{
 	.RPGMonster-listing .more-info {
 		color: #000 !important;
 	}
+        
+    .body-rpgcharacterbuilder.site{
+    background: /*[[backgroundColor]]*/
+    }
 
 	.extra-forum-header,
 	.p-forum-a .col-forum .active-viewers,
@@ -754,13 +758,16 @@ div#site{
     top: 0px;
     }
         
-    .ddbc-toggle-field--is-enabled .ddbc-toggle-field__nub{
-        background-color: /*[[linkColor]]*/
+   .ddbc-toggle-field--is-enabled .ddbc-toggle-field__nub{
+        background-color: /*[[linkColor]]*/;
+        box-shadow: -12px 0px 20px 1px /*[[backgroundColor]]*/;
+
+        
     }
-    .ddbc-toggle-field--is-enabled{
-        background-color: /*[[linkColor]]*/
+    .ddbc-toggle-field.ddbc-toggle-field--is-enabled.ddbc-toggle-field--is-interactive{
+        background-color: /*[[linkColor]]*/;
     }
-    
+     
     
     
     /* SVG Recolors to selectable colors*/
