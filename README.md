@@ -35,7 +35,7 @@ Rest of the site examples:
 
 <s>With the exception of the dice roller most of the alpha or beta content has not been themed as I am waiting for finalized versions and they either have their own dark mode available (such as the encounter builder) or are darker than the original site design.</s>
 
-Encounter Builder and Combat tracker supported as of 1.1.1
+Encounter Builder and Combat tracker are now included as of 1.1.1
 
 I also probably will not touch the marketplace at all as this is more for everyday use pages.
 
