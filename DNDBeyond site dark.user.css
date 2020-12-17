@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.1.0
+@version      1.1.1
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -38,7 +38,7 @@ url-prefix("https://www.dndbeyond.com/my-characters"),
 url-prefix("https://www.dndbeyond.com/search"),
 url-prefix("https://www.dndbeyond.com/modifier"),
 url-prefix("https://www.dndbeyond.com/entity"),
-    url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyond.com/subclasses"), url-prefix("https://www.dndbeyond.com/articles"), url-prefix("https://www.dndbeyond.com/tag"), url-prefix("https://www.dndbeyond.com/subraces"), url-prefix("https://www.dndbeyond.com/changelog"), regexp("https://www.dndbeyond.com/profile/.*/characters"){
+    url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyond.com/subclasses"), url-prefix("https://www.dndbeyond.com/articles"), url-prefix("https://www.dndbeyond.com/tag"), url-prefix("https://www.dndbeyond.com/subraces"), url-prefix("https://www.dndbeyond.com/changelog"), regexp("https://www.dndbeyond.com/profile/.*/characters"), regexp("https://www.dndbeyond.com/encounter-builder"), regexp("https://www.dndbeyond.com/my-encounters"), regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond.com/combat-tracker/.*"){
 
 div#site{
     height: initial;
@@ -258,7 +258,45 @@ div#site{
     .custom-background-editor,
     .notification.notification-success.notification-visible,
     .ddbeb-modal__content,
-        .mce-container, .mce-container *, .mce-widget, .mce-widget *, .mce-reset
+    .mce-container, .mce-container *, .mce-widget, .mce-widget *, .mce-reset,
+    .encounter-builder-sidebar,
+    .encounter-builder-sidebar__header,
+    .encounter-builder-sidebar__summary,
+    .encounter-monster__summary,
+    .encounter-monster__difficulty .difficulty__value,
+    .monster-row__line,
+    button.sortable-label,
+    .monster-row__cell--text,
+    .monster-row__cell--drag-handle,
+    .ddbeb-button,
+    .ddb-tabs__tab>a[aria-selected=true],
+    .monster-filters,
+    .range-slider__label-text,
+    .input-select__button,
+    .input-select__button-text,
+    .input-select__button-icon,
+    .input-checkbox,
+    .monster-row__body,
+    .input-select__dropdown-wrapper,
+    .chip-bag,
+    .chip,
+    .encounter-details__content-section,
+    .encounter-details-summary,
+    .encounter-details-monster,
+    .encounter-details-monster__name,
+    .encounter-details-monster .line-item__value,
+    .combat-tracker-page__content-section,
+    .combat-tracker,
+    .combatants__header,
+    .combatant-card__mid-bit,
+    .combatant-summary__name,
+    .combatant-card__left-bit,
+    .combatant-card__hp,
+    .combatant-card__hp-current,
+    .ddbeb-flyout, .ddbeb-flyout__arrow,
+    .flyout-input-number__input-wrapper,
+    .encounter-row,
+    body
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
@@ -727,6 +765,12 @@ div#site{
     .mce-btn i{
         text-shadow: none !important
     }
+    .hit-point-adjuster__heal{
+        background-color: #00c79266 !important;
+    }
+    .hit-point-adjuster__damage{
+        background-color: #bc0f0f66 !important;
+    }
 
 	.listing .info .row.item-name .name .very-rare,
 	.very-rare {
@@ -930,12 +974,13 @@ div#site{
         box-shadow: none !important;
     }
     .class-manager-tabs .ddbc-tab-list__nav-item--is-active svg path,
-    .manage-race-tabs .ddbc-tab-list__nav-item--is-active, svg path{
+    .manage-race-tabs .ddbc-tab-list__nav-item--is-active svg path{
         fill: /*[[fontColor]]*/ !important;
     }
     .ddbc-tab-list__nav-item:hover svg path{
         fill: /*[[linkColor]]*/ !important;
     }
+
     /* SVG Recolors to selectable colors*/
     
     
