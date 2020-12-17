@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.0.31
+@version      1.1.0
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -38,7 +38,7 @@ url-prefix("https://www.dndbeyond.com/my-characters"),
 url-prefix("https://www.dndbeyond.com/search"),
 url-prefix("https://www.dndbeyond.com/modifier"),
 url-prefix("https://www.dndbeyond.com/entity"),
-    url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyond.com/subclasses"), url-prefix("https://www.dndbeyond.com/articles"), url-prefix("https://www.dndbeyond.com/tag"), url-prefix("https://www.dndbeyond.com/subraces"), url-prefix("https://www.dndbeyond.com/changelog"){
+    url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyond.com/subclasses"), url-prefix("https://www.dndbeyond.com/articles"), url-prefix("https://www.dndbeyond.com/tag"), url-prefix("https://www.dndbeyond.com/subraces"), url-prefix("https://www.dndbeyond.com/changelog"), regexp("https://www.dndbeyond.com/profile/.*/characters"){
 
 div#site{
     height: initial;
@@ -253,7 +253,12 @@ div#site{
     blockquote.paper-background,
     .tooltip,
     .ct-optional-feature,
-    .ddbc-checkbox__input
+    .ddbc-checkbox__input,
+    .ddbc-collapsible__header,
+    .custom-background-editor,
+    .notification.notification-success.notification-visible,
+    .ddbeb-modal__content,
+        .mce-container, .mce-container *, .mce-widget, .mce-widget *, .mce-reset
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
@@ -268,7 +273,19 @@ div#site{
 	.ddb-top-result-footer .button-action,
 	.ddb-top-result-footer .button-condition,
 	.portal-listing-item-body-buttons .button-homebrew,
-	.portal-listing-item-body-buttons .button-homebrew:hover{
+	.portal-listing-item-body-buttons .button-homebrew:hover, 
+    .site .character-button, 
+    .site .character-button-block, 
+    .site .character-button-block-large,
+    .site .character-button-block-oversized, 
+    .site .character-button-block-small, 
+    .site .character-button-large, 
+    .site .character-button-medium, 
+    .site .character-button-modal, 
+    .site .character-button-modal-cancel, 
+    .site .character-button-outline, 
+    .site .character-button-oversized, 
+    .site .character-button-small{
 		background-color: /*[[transparencyBackgroundColor]]*/
 	}
 
@@ -414,7 +431,9 @@ div#site{
 	.tooltip-hover:focus,
 	.tooltip-hover:active,
 	.tooltip-hover:visited,
-    h4.adventure-chapter-header a{
+    h4.adventure-chapter-header a,
+    .starting-equipment-choice,
+    .ddbc-tab-list__nav-item:hover{
 		color: /*[[linkColor]]*/
 		!important
 	}
@@ -469,7 +488,21 @@ div#site{
 	.select2-search-field,
 	.portal-listing-item-body-buttons .button-homebrew,
     .class-spell-list-header,
-    .Flowchart-Block
+    .Flowchart-Block,
+    .ddbc-collapsible__header,
+    .ability-score-dice,
+    .site .character-button, 
+    .site .character-button-block, 
+    .site .character-button-block-large,
+    .site .character-button-block-oversized, 
+    .site .character-button-block-small, 
+    .site .character-button-large, 
+    .site .character-button-medium, 
+    .site .character-button-modal, 
+    .site .character-button-modal-cancel, 
+    .site .character-button-outline, 
+    .site .character-button-oversized, 
+    .site .character-button-small
     {
 		border-width: /*[[borderWidth]]*/
 		!important;
@@ -669,12 +702,22 @@ div#site{
 		border-style: /*[[borderStyle]]*/;
 		border-color: /*[[borderColor]]*/;
 	}
+    .notification.notification-success.notification-visible{
+        border-top: 2px solid /*[[linkColor]]*/ !important;
+    }
 
 	.collapsible-body {
 		border: none !important;
 	}
     .p-comments .p-comment-actions .p-comment-actionsAdmin>.label:after{
     border-top-color: /*[[fontColor]]*/
+    }
+    .fullscreen-modal-footer{
+        border-top-color: /*[[linkColor]]*/
+    }
+    .class-manager-tabs .ddbc-tab-list__nav-item--is-active,
+    .manage-race-tabs .ddbc-tab-list__nav-item--is-active{
+        border-bottom-color: /*[[linkColor]]*/
     }
     
     .character-screen-details{
@@ -737,7 +780,7 @@ div#site{
     .body-page .p-article-a .p-article-content h1::after, 
     .section-posts .p-article-a .p-article-content h1::after, 
     .p-article-a .section-changelog .p-article-content h1::after{
-        background-color: /*[[linkColor]]*/
+        background-color: /*[[linkColor]]*/ !important;
     }
         
     .ddbc-toggle-field.ddbc-toggle-field--is-enabled.ddbc-toggle-field--is-interactive::after{
@@ -760,16 +803,139 @@ div#site{
         
    .ddbc-toggle-field--is-enabled .ddbc-toggle-field__nub{
         background-color: /*[[linkColor]]*/;
-        box-shadow: -12px 0px 20px 1px /*[[backgroundColor]]*/;
-
-        
+        box-shadow: -12px 0px 20px 1px /*[[backgroundColor]]*/;      
     }
+        
     .ddbc-toggle-field.ddbc-toggle-field--is-enabled.ddbc-toggle-field--is-interactive{
         background-color: /*[[linkColor]]*/;
     }
-     
-    
-    
+        
+    .site .ct-button.ct-theme-button--filled{
+	    background: /*[[transparencyBackgroundColor]]*/;
+     }
+    .site .character-button, .site .character-button-block,
+    .site .character-button-block-large,
+    .site .character-button-block-oversized,
+    .site .character-button-block-small, 
+    .site .character-button-large, 
+    .site .character-button-medium, 
+    .site .character-button-modal, 
+    .site .character-button-modal-cancel, 
+    .site .character-button-outline, 
+    .site .character-button-oversized,
+    .site .character-button-small,.ct-button__confirmed{
+        color: /*[[fontColor]]*/ !important;
+    }
+    .site .ct-button.ct-theme-button--filled:active, 
+    .site .ct-button.ct-theme-button--filled:hover,
+    .site .character-button-block-large:active, 
+    .site .character-button-block-oversized:active, 
+    .site .character-button-block-small:active, 
+    .site .character-button-block:active, 
+    .site .character-button-large:active, 
+    .site .character-button-medium:active, 
+    .site .character-button-modal-cancel:active, 
+    .site .character-button-modal:active, 
+    .site .character-button-outline:active, 
+    .site .character-button-oversized:active, 
+    .site .character-button-small:active, 
+    .site .character-button:active,
+    .site .character-button-block-large:hover, 
+    .site .character-button-block-oversized:hover, 
+    .site .character-button-block-small:hover, 
+    .site .character-button-block:hover, 
+    .site .character-button-large:hover, 
+    .site .character-button-medium:hover, 
+    .site .character-button-modal-cancel:hover, 
+    .site .character-button-modal:hover, 
+    .site .character-button-outline:hover, 
+    .site .character-button-oversized:hover, 
+    .site .character-button-small:hover, 
+    .site .character-button:hover,
+    span.notification-dismiss,
+    .site .ddbc-remove-button.character-button-outline:active,
+    .site .ddbc-remove-button.character-button-outline:focus,
+    .site .ddbc-remove-button.character-button-outline:hover,
+    .site .character-button-block-large:disabled, 
+    .site .character-button-block-oversized:disabled, 
+    .site .character-button-block-small:disabled, 
+    .site .character-button-block:disabled, 
+    .site .character-button-large:disabled, 
+    .site .character-button-medium:disabled, 
+    .site .character-button-modal-cancel:disabled, 
+    .site .character-button-modal:disabled, 
+    .site .character-button-outline:disabled, 
+    .site .character-button-oversized:disabled, 
+    .site .character-button-small:disabled, 
+    .site .character-button:disabled,
+    .site .ct-button.ct-theme-button--filled:focus{
+        background-color: /*[[transparencyBackgroundColor]]*/ !important;
+        box-shadow: inset 0 0 25px 0px #eaeaea;
+    }
+        
+        
+    .site .character-button-block-large:disabled:hover, 
+    .site .character-button-block-oversized:disabled:hover,
+    .site .character-button-block-small:disabled:hover,
+    .site .character-button-block:disabled:hover,
+    .site .character-button-large:disabled:hover,
+    .site .character-button-medium:disabled:hover,
+    .site .character-button-modal-cancel:disabled:hover,
+    .site .character-button-modal:disabled:hover,
+    .site .character-button-outline:disabled:hover,
+    .site .character-button-oversized:disabled:hover,
+    .site .character-button-small:disabled:hover,
+    .site .character-button:disabled:hover,
+    .ddbc-dice-roll__dice-value.ddbc-dice-roll__dice-value--discarded{
+        background-color: /*[[transparencyBackgroundColor]]*/ !important;
+        box-shadow: inset 0 0 25px 0px #eaeaea !important;
+    }
+        
+    button.ct-button.character-button.ddbc-button.character-button-block,
+    button.ct-button.character-button.ddbc-button.character-button-block:hover,
+    .ddbc-dice-roll__dice-value,
+    .site .character-button-block-large:active, 
+    .site .character-button-block-oversized:active, 
+    .site .character-button-block-small:active, 
+    .site .character-button-block:active, 
+    .site .character-button-large:active, 
+    .site .character-button-medium:active, 
+    .site .character-button-modal-cancel:active, 
+    .site .character-button-modal:active, 
+    .site .character-button-outline:active, 
+    .site .character-button-oversized:active, 
+    .site .character-button-small:active, 
+    .site .character-button:active,
+    .site .character-button-block-large:hover, 
+    .site .character-button-block-oversized:hover, 
+    .site .character-button-block-small:hover, 
+    .site .character-button-block:hover, 
+    .site .character-button-large:hover, 
+    .site .character-button-medium:hover, 
+    .site .character-button-modal-cancel:hover, 
+    .site .character-button-modal:hover, 
+    .site .character-button-outline:hover, 
+    .site .character-button-oversized:hover, 
+    .site .character-button-small:hover, 
+    .site .character-button:hover,
+    span.notification-dismiss,
+    .site .ct-button.ct-theme-button--filled:focus{
+        background-color: /*[[backgroundColor]]*/ !important;
+         box-shadow: inset 0px 0px 25px 0px /*[[linkColor]]*/ !important;
+    }
+    button.ct-button.character-button.ddbc-button.character-button-block.character-button-outline,
+    button.ct-button.character-button.ddbc-button.character-button-block.character-button-outline:hover
+    {
+        background-color: /*[[backgroundColor]]*/ !important;
+        box-shadow: none !important;
+    }
+    .class-manager-tabs .ddbc-tab-list__nav-item--is-active svg path,
+    .manage-race-tabs .ddbc-tab-list__nav-item--is-active, svg path{
+        fill: /*[[fontColor]]*/ !important;
+    }
+    .ddbc-tab-list__nav-item:hover svg path{
+        fill: /*[[linkColor]]*/ !important;
+    }
     /* SVG Recolors to selectable colors*/
     
     
@@ -818,7 +984,7 @@ div#site{
 		border: none;
 	}
 	#site-main,
-	.post-excerpt__content {
+	.post-excerpt__content{
 		background-color: /*[[backgroundColor]]*/
 		!important;
 		color: /*[[fontColor]]*/
@@ -880,837 +1046,4 @@ div#site{
 
 	
 }
-/* ==UserStyle==
-@name         DNDBeyond Dark Theme
-@preprocessor uso
-@namespace    Azmoria (Jay_Lane)
-@version      1.0.11
-@author       Azmoria (Jay_Lane)
-@updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
-@var color backgroundColor "Background Color" #000
-@var color transparencyBackgroundColor "Background Color of things that can be transparent" #000000e0
-@var color fontColor "Font Color" #c0c0c0
-@var color linkColor "Link Color" #88bcd6
-@var color borderColor "Border Color" #fff
-@var text borderStyle "Border Style eg. dotted" "solid"
-@var text borderWidth "Border Width eg. 2px" "1px"
-@var color scrollbarColor "Scrollbar Color" #88bcd6
-@var text filter "Icons filter - for dark backgrounds: invert(100%) for light background: none" "invert(100%)"
-==/UserStyle==*/
-/* Alternative Color for font to match DND Beyond Green #47D18C */
-@-moz-document url-prefix("https://www.dndbeyond.com/sources"),
-url-prefix("https://www.dndbeyond.com/forums"),
-url-prefix("https://www.dndbeyond.com/spells"),
-url-prefix("https://www.dndbeyond.com/classes"),
-url-prefix("https://www.dndbeyond.com/monsters"),
-url-prefix("https://www.dndbeyond.com/magic-items"),
-url-prefix("https://www.dndbeyond.com/backgrounds"),
-url-prefix("https://www.dndbeyond.com/feats"),
-url-prefix("https://www.dndbeyond.com/equipment"),
-url-prefix("https://www.dndbeyond.com/vehicles"),
-url-prefix("https://www.dndbeyond.com/homebrew"),
-url-prefix("https://www.dndbeyond.com/races"),
-url-prefix("https://www.dndbeyond.com/posts"),
-url-prefix("https://www.dndbeyond.com/my-collection"),
-url-prefix("https://www.dndbeyond.com/my-creations"),
-url-prefix("https://www.dndbeyond.com/my-campaigns"),
-url-prefix("https://www.dndbeyond.com/campaigns"),
-regexp("https://www.dndbeyond.com/profile/.*/characters/.*/builder#/.*"), regexp("https://www.dndbeyond.com/characters/builder#/"),
-url-prefix("https://www.dndbeyond.com/my-characters"),
-url-prefix("https://www.dndbeyond.com/search"),
-url-prefix("https://www.dndbeyond.com/modifier/") {
 
-
-
-	::-webkit-scrollbar {
-		width: 3px;
-	}
-
-	::-webkit-scrollbar-track {
-		background: /*[[backgroundColor]]*/;
-	}
-	::-webkit-scrollbar-thumb {
-		background-color: /*[[scrollbarColor]]*/;
-		border-radius: 6px;
-		border: none;
-	}
-	body.responsive-enabled #site #site-main .container #content,
-	body.responsive-enabled #site #site-main.fixed .container #content,
-	#site-main,
-	.compendium-hr,
-	.sidebar-menu,
-	.secondary-content,
-	.top-next-nav,
-	.b-breadcrumb,
-	.sidebar-menu-top,
-	.sidenav-next-nav,
-	.sidenav-prev-page,
-	.quick-menu-tier-1,
-	#site .forum-row td,
-	#site .forum-thread-row td,
-	#site .forum-row .status-icon,
-	.p-forum-a .announcements .forum-thread-row,
-	#site .forum-row .status-icon,
-	#site .forum-thread-row .status-icon,
-	.forum-thread-row .col-thread .title,
-	.p-comments-b .p-comment-wrapper,
-	.body-forum .comment-preview li .p-comment-wrapper,
-	.body-forum-search .p-comments-a .p-comment-wrapper,
-	body.body-forum .single-column #content .p-forum-a .p-comment-post p,
-	body.body-user .single-column #content .p-forum-a .p-comment-post p,
-	body.body-devtracker .single-column #content .p-forum-a .p-comment-post p,
-	.comment .p-comment-notes .p-comment-edit-notes,
-	.comment .p-comment-notes .p-comment-edited,
-	.comment .p-comment-user-background,
-	.comment .source-quote .quote-source,
-	.comment .source-quote,
-	body.body-forum .single-column #content .p-forum-a table:not(.mceLayout):not(.mceToolbar):not(.mceListBox):not(.mceSplitButton) tr td,
-	body.body-user .single-column #content .p-forum-a table:not(.mceLayout):not(.mceToolbar):not(.mceListBox):not(.mceSplitButton) tr td,
-	body.body-devtracker .single-column #content .p-forum-a table:not(.mceLayout):not(.mceToolbar):not(.mceListBox):not(.mceSplitButton) tr td,
-	.p-comments-b .p-comment-user .p-comment-stats .p-comment-statitem .postbit-item,
-	.body-forum .comment-preview li .p-comment-user .p-comment-stats .p-comment-statitem .postbit-item,
-	.body-forum-search .p-comments-a .p-comment-user .p-comment-stats .p-comment-statitem .postbit-item,
-	blockquote,
-	.mce-panel,
-	.mce-container,
-	.mce-container *:not(div),
-	.mce-widget,
-	.mce-widget *,
-	.mce-reset,
-	.body-forum .listing .b-table-header .b-table-heading,
-	.body-forum .listing .b-table-header .b-table-heading a,
-	.select2-container-multi .select2-choices .select2-search-field input,
-	.listing-filters .form-field input,
-	.listing-filters .form-field select,
-	.irace-listing .more-info,
-	.RPGMonster-listing .more-info,
-	.RPGMagicItem-listing .more-info,
-	.ihomebrewable-listing .more-info,
-	.RPGSpell-listing .more-info,
-	.IGear-listing .more-info,
-	.RPGFeat-listing .more-info,
-	.RPGBackground-listing .more-info,
-	.RPGSubclass-listing .more-info,
-	.ddb-statblock-item-label,
-	.ddb-statblock-item-value,
-	.irace-listing .more-info-body-description,
-	.RPGMagicItem-listing .more-info-body-description,
-	.ihomebrewable-listing .more-info-body-description,
-	.RPGSpell-listing .more-info-body-description,
-	.IGear-listing .more-info-body-description,
-	.RPGFeat-listing .more-info-body-description,
-	.RPGBackground-listing .more-info-body-description,
-	.RPGSubclass-listing .more-info-body-description,
-	.irace-listing .more-info-footer-tags .tag,
-	.RPGMonster-listing .more-info-footer-tags .tag,
-	.RPGMagicItem-listing .more-info-footer-tags .tag,
-	.ihomebrewable-listing .more-info-footer-tags .tag,
-	.RPGSpell-listing .more-info-footer-tags .tag,
-	.IGear-listing .more-info-footer-tags .tag,
-	.RPGFeat-listing .more-info-footer-tags .tag,
-	.RPGBackground-listing .more-info-footer-tags .tag,
-	.RPGSubclass-listing .more-info-footer-tags .tag,
-	.static-container-details .content-container table thead th,
-	.static-container-details .content-container table tbody tr:nth-child(odd),
-	.static-container-details .content-container table tbody tr,
-	.sidebar-menu-top-link,
-	.comment .p-comment-container,
-	.p-comments-a .p-comment-wrapper,
-	.ddb-collapsible-filter__box,
-	.listing-card__content,
-	.irace-listing .more-info-body-description table tbody tr,
-	.RPGMonster-listing .more-info-body-description table tbody tr,
-	.RPGMagicItem-listing .more-info-body-description table tbody tr,
-	.ihomebrewable-listing .more-info-body-description table tbody tr,
-	.RPGSpell-listing .more-info-body-description table tbody tr,
-	.IGear-listing .more-info-body-description table tbody tr,
-	.RPGFeat-listing .more-info-body-description table tbody tr,
-	.RPGBackground-listing .more-info-body-description table tbody tr,
-	.RPGSubclass-listing .more-info-body-description table tbody tr,
-	.irace-listing .more-info-body-description table thead th,
-	.RPGMonster-listing .more-info-body-description table thead th,
-	.RPGMagicItem-listing .more-info-body-description table thead th,
-	.ihomebrewable-listing .more-info-body-description table thead th,
-	.RPGSpell-listing .more-info-body-description table thead th,
-	.IGear-listing .more-info-body-description table thead th,
-	.RPGFeat-listing .more-info-body-description table thead th,
-	.RPGBackground-listing .more-info-body-description table thead th,
-	.RPGSubclass-listing .more-info-body-description table thead th,
-	.details-container-content-description-text,
-	.compendium-toc-full-text,
-	.listing-filters .form-field .select2-container .select2-choices,
-	.listing-filters .form-field .select2-container .select2-choice,
-	.listing-filters .form-field-text-field > div:not(:first-child),
-	.compendium-disclaimer-footer,
-	.compendium-toc-block-text,
-	li.b-pagination-item a[rel="prev"]:not(.s-active),
-	li.b-pagination-item a[rel="next"]:not(.s-active),
-	li.b-pagination-item .b-pagination-item:not(.s-active),
-	blockquote.adventure-read-aloud-text,
-	.body-page .p-article-a .p-article-content table thead th,
-	.section-posts .p-article-a .p-article-content table thead th,
-	.p-article-a .section-changelog .p-article-content table thead th,
-	.body-page .p-article-a .p-article-content table tbody tr td,
-	.section-posts .p-article-a .p-article-content table tbody tr td,
-	.p-article-a .section-changelog .p-article-content table tbody tr td,
-	.Basic-Text-Frame,
-	aside,
-	.section-posts .p-article-a,
-	.section-changelog .p-article-a,
-	.p-article-a .p-article-footer .p-article-tags .tag,
-	.post-excerpt__content,
-	.ddb-campaigns-list-item,
-	.ddb-campaigns-invite-wrapper,
-	.ddb-campaigns-detail-body-listing-campaign-link,
-	.ddb-campaigns-character-card-footer,
-	.more-info,
-	.details-container,
-	.details-container-content-footer .tags .tag,
-	.details-container-content-description-text table thead th,
-	.details-container-content-description-text table tbody tr td,
-	.more-info-content table tbody tr,
-	.more-info-content table thead th,
-	.vehicle-stat-block,
-	.vehicle-stat-block__attribute,
-	.vehicle-stat-block__feature,
-	.vehicle-stat-block__stat-block .ability-block,
-	.vehicle-stat-block__description-block-heading,
-	.mon-stat-block,
-	input[type="text"],
-	input[type="number"],
-	input[type="search"],
-	input[type="password"],
-	input[type="email"],
-	textarea,
-	select,
-	.filter-listing-item,
-	.ability-score-calc-component-value,
-	.collapsible-body,
-	.textarea-editor,
-	.equipment-manager-inventory-header,
-	.site .character-button-outline,
-	.ct-item-detail__tag,
-	.ddb-characters-listing-actions__search-box,
-	.more-info footer .tags .tag,
-	.ddb-top-result,
-	.classes-manage-hitpoints,
-	.ddb-homebrew-portal-wrapper,
-	.ddb-homebrew-portal-item .button,
-	.select2-drop,
-	.select2-container .select2-choice,
-	.ddb-homebrew-create-special .button,
-	.ddb-homebrew-create-special .listing-body table thead th,
-	.ddb-homebrew-create-special .listing-body table tbody tr td,
-	#site .select2-search-choice,
-	.select2-container-multi .select2-choices,
-	.select2-results .select2-no-results,
-	.select2-results .select2-searching,
-	.select2-results .select2-ajax-error,
-	.select2-results .select2-selection-limit,
-	#es-form-main,
-	input,
-	ul.ui-autocomplete.ui-menu.ui-widget.ui-widget-content.ui-corner-all.ddb-search-autocomplete,
-	.body-rpgcharacterbuilder th,
-	.body-rpgcharacterbuilder td,
-    .body-rpgcharacterbuilder.site,
-    .builder-type-options,
-    .fullscreen-modal-content,
-    .p-forum-a .statistics .statistics-body,
-    .listing-forum-search .statistics .statistics-body,
-    body.hide-ads footer#footer, body.disable-ads footer#footer,
-    .u-dropDown .u-dropDownMenu li>a:hover,
-    .u-dropDown .u-dropDownMenu li>a,
-    .u-dropDown .u-dropDownMenu li>a span,
-    .u-dropDown .u-dropDownMenu li,
-    .u-dropDown .u-dropDownMenu,
-    body.body-forum .single-column #content .p-forum-a .p-comment-post .u-dropDown span,
-    .ct-spell-detail__tag,
-    .class-spell-list-header,
-    .p-forum-poll .b-poll-a,
-    .mce-menu-item-normal.mce-active{
-		background-color: /*[[backgroundColor]]*/
-		!important;
-		color: /*[[fontColor]]*/
-		!important;
-	}
-	.listing-card__body,
-	.ddb-top-result-footer .button-rule,
-	.ddb-top-result-footer .button-wprop,
-	.ddb-top-result-footer .button-page,
-	.ddb-top-result-footer .button-skill,
-	.ddb-top-result-footer .button-action,
-	.ddb-top-result-footer .button-condition,
-	.portal-listing-item-body-buttons .button-homebrew,
-	.portal-listing-item-body-buttons .button-homebrew:hover{
-		background-color: /*[[transparencyBackgroundColor]]*/
-	}
-
-	.irace-listing .more-info,
-	.RPGMonster-listing .more-info,
-	.RPGMagicItem-listing .more-info,
-	.ihomebrewable-listing .more-info,
-	.RPGSpell-listing .more-info,
-	.IGear-listing .more-info,
-	.RPGFeat-listing .more-info,
-	.RPGBackground-listing .more-info,
-	.RPGSubclass-listing .more-info {
-		width: 100%;
-	}
-
-	::selection {
-		background: #aaa !important;
-		color: #ddd !important;
-	}
-	::-moz-selection {
-		background: #aaa !important;
-		color: #ddd !important;
-	}
-	.RPGMonster-listing .more-info {
-		color: #000 !important;
-	}
-
-	.extra-forum-header,
-	.p-forum-a .col-forum .active-viewers,
-	.body-forum .listing .b-table-header .b-table-heading,
-	.listing .info .row > span,
-	.adohand > div span,
-	.listing-filters .main-filter .main-list .item label,
-	.static-container-details .content-container p,
-	input[type="text"],
-	input[type="number"],
-	input[type="search"],
-	input[type="password"],
-	input[type="email"],
-	textarea,
-	select,
-	.listing-card__description,
-	.ddb-collapsible__label,
-	.list-row-primary-text,
-	.list-column-header-item,
-	.page-title,
-	.button span,
-	.u-button span,
-	.select2-chosen,
-	.listing-filters .form-field-text-field > div:not(:first-child) span,
-	body.body-forum .single-column #content .p-forum-a .user-actions-forums + h2,
-	body.body-forum .single-column #content .p-forum-a .user-actions-threads + h2,
-	.p-comments-b .p-comment-user,
-	.body-forum .comment-preview li .p-comment-user,
-	.body-forum-search .p-comments-a .p-comment-user,
-	.content-container h1,
-	.content-container h2,
-	.content-container h3,
-	.content-container h4,
-	.content-container h5,
-	.content-container h6,
-	.ddb-campaigns-listing-active-header-secondary,
-	.ddb-campaigns-listing-inactive-header-secondary,
-	.ddb-campaigns-listing-active-header-primary,
-	.ddb-campaigns-listing-inactive-header-primary,
-	.ddb-campaigns-list-item-body-title,
-	.ddb-campaigns-list-item-body-date,
-	.ddb-campaigns-list-item-body-players .player-count .count,
-	.ddb-campaigns-list-item-body-players .slots-used .count,
-	.ddb-campaigns-list-item-body-players .player-count .label,
-	.ddb-campaigns-list-item-body-players .slots-used .label,
-	.ddb-campaigns-list-item-body-role,
-	.ddb-campaigns-list-item-body-sharing,
-	.ddb-campaigns-invite-secondary,
-	.ddb-campaigns-detail-body-listing-header-primary,
-	.ddb-campaigns-detail-body-listing-header-secondary,
-	.mon-stat-block__attribute-label,
-	.mon-stat-block__feature-label,
-	.mon-stat-block__attribute,
-	.mon-stat-block__feature,
-	.mon-stat-block__stat-block .ability-block,
-	.mon-stat-block__tidbit,
-	.mon-stat-block__description-block-heading,
-	.mon-stat-block__description-block h3,
-	.builder-field-toggle-description,
-	.builder-field-select-description,
-	.ct-item-name--rarity-common,
-	.ddb-characters-listing-actions__sort-label,
-	.ddb-characters-listing-header-primary-title,
-	.ddb-search-results-listing-item-body-snippet,
-	.ddb-search-results-counts-text,
-	.ddb-search-filter-item.selected > div > div,
-	.ddb-campaigns-detail-body-dm-notes-label .text,
-	.ddb-campaigns-detail-header-secondary-description p,
-	.ddb-homebrew-portal-item-header-text,
-	.ddb-homebrew-portal-item-selector-label,
-	.ddb-homebrew-create-header-secondary-text,
-	.ddb-homebrew-create-header-primary-text,
-	.ddb-homebrew-create-header-secondary-text,
-	.ddb-homebrew-create-form-fields-item-label,
-	.ddb-homebrew-create-form-fields-item-label.tip::after,
-	#site .select2-search-choice div,
-	input#field-large-avatar,
-	input#field-avatar,
-	.ddb-top-result-header-secondary-text,
-	.ddb-statblock-ability-scores .score,
-	.ddbc-item-name--rarity-common,
-	.p-comments span,
-    body.body-forum .single-column #content .p-forum-a footer.statistics .statistics-body .info .item, 
-    body.body-forum .single-column #content .p-forum-a footer.statistics .statistics-body .count .item,
-    .RPGMonster-listing .more-info,
-    .Flowchart-Block{
-		color: /*[[fontColor]]*/
-		!important;
-	}
-
-
-	.thread-prefix span.thread-prefix {
-		background-color: #333;
-	}
-	.select2-container-multi .select2-choices {
-		padding: 0px;
-	}
-
-	a,
-	a:visited,
-	a > span,
-	span[role=button],
-	.forum-row .col-forum .title a,
-	.content-container h3 a,
-	.tooltip-hover,
-	.tooltip-hover:hover,
-	.tooltip-hover:focus,
-	.tooltip-hover:active,
-	.tooltip-hover:visited,
-    h4.adventure-chapter-header a{
-		color: /*[[linkColor]]*/
-		!important
-	}
-	.quick-menu-item-label {
-		border: none;
-	}
-	.quick-menu-item-active > .quick-menu-item-label,
-    .mce-menu-item-normal.mce-active{
-		border-left-color: /*[[linkColor]]*/
-		!important;
-		border-left-width: 3px;
-		border-left-style: solid;
-	}
-	.quick-menu-item-closed > .quick .sidenav-next-nav,
-	.sidebar-menu.se-fixed,
-	.listing .info:nth-of-type(8n+1),
-	.listing .info:nth-of-type(8n+3),
-	.listing .info:nth-of-type(8n+5),
-	.listing .info:nth-of-type(8n+7),
-	.listing .info:nth-of-type(8n+2),
-	.listing .info:nth-of-type(8n+4),
-	.listing .info:nth-of-type(8n+6),
-	.listing .info:nth-of-type(8n+8),
-	li:nth-of-type(odd) .list-row,
-	li:nth-of-type(even) .list-row,
-	.compendium-toc-full-text,
-	blockquote.adventure-read-aloud-text,
-	.body-category-details .section-compendium-content .page-heading,
-	h2.adventure-chapter-header,
-	aside.rules-text,
-	.compendium-toc-full-header h2,
-	.compendium-toc-block-header h2,
-	.compendium-toc-block-text,
-	aside,
-	body:not(.body-forum):not(.section-posts):not(.section-changelog):not(.body-privatemessage-details) blockquote,
-	.post-excerpt,
-	ddb-campaigns-list-item-wrapper,
-	.ddb-campaigns-list-item,
-	.ddb-campaigns-character-card,
-	.collapsible,
-	.textarea-editor,
-	.equipment-manager-inventory-header,
-	.ddb-top-result,
-	.ddb-top-result-footer .button-rule,
-	.ddb-top-result-footer .button-wprop,
-	.ddb-top-result-footer .button-page,
-	.ddb-top-result-footer .button-skill,
-	.ddb-top-result-footer .button-action,
-	.ddb-top-result-footer .button-condition,
-	.ddb-homebrew-portal-item .button,
-	.ddb-homebrew-create-special .button,
-	.ddb-homebrew-create-magic-item .ddb-homebrew-create-form-footer .button,
-	.select2-search-field,
-	.portal-listing-item-body-buttons .button-homebrew,
-    .class-spell-list-header,
-    .Flowchart-Block{
-		border-width: /*[[borderWidth]]*/
-		!important;
-		border-style: /*[[borderStyle]]*/
-		!important;
-		border-color: /*[[borderColor]]*/
-		!important;
-	}
-
-	.compendium-toc-block-text {
-		margin-left: -1px;
-	}
-	.quick-menu-item-trigger::before,
-	.i-hamburger,
-	.i-concentration,
-	.i-homebrew,
-	.i-spell-melee,
-	.i-spell-ranged,
-	.i-favorite,
-	.i-strength-save,
-	.i-dexterity-save,
-	.i-constitution-save,
-	.i-charisma-save,
-	.i-wisdom-save,
-	.i-intelligence-save,
-	.i-type-acid,
-	.i-type-bludgeoning,
-	.i-type-cold,
-	.i-type-fire,
-	.i-type-force,
-	.i-type-lightning,
-	.i-type-necrotic,
-	.i-type-piercing,
-	.i-type-poison,
-	.i-type-psychic,
-	.i-type-radiant,
-	.i-type-slashing,
-	.i-type-thunder,
-	.i-condition-blinded,
-	.i-condition-charmed,
-	.i-condition-deafened,
-	.i-condition-exhaustion,
-	.i-condition-exhausted,
-	.i-condition-frightened,
-	.i-condition-grappled,
-	.i-condition-incapacitated,
-	.i-condition-invisible,
-	.i-condition-paralyzed,
-	.i-condition-petrified,
-	.i-condition-poisoned,
-	.i-condition-prone,
-	.i-condition-restrained,
-	.i-condition-stunned,
-	.i-condition-unconscious,
-	.i-condition-white-blinded,
-	.i-condition-white-charmed,
-	.i-condition-white-deafened,
-	.i-condition-white-exhaustion,
-	.i-condition-white-exhausted,
-	.i-condition-white-frightened,
-	.i-condition-white-grappled,
-	.i-condition-white-incapacitated,
-	.i-condition-white-invisible,
-	.i-condition-white-paralyzed,
-	.i-condition-white-petrified,
-	.i-condition-white-poisoned,
-	.i-condition-white-prone,
-	.i-condition-white-restrained,
-	.i-condition-white-stunned,
-	.i-condition-white-unconscious,
-	.i-aoe-cone,
-	.i-aoe-cube,
-	.i-aoe-cylinder,
-	.i-aoe-line,
-	.i-aoe-sphere,
-	.i-aoe-square,
-	.i-artificer,
-	.i-bard,
-	.i-cleric,
-	.i-druid,
-	.i-paladin,
-	.i-ranger,
-	.i-sorcerer,
-	.i-warlock,
-	.i-wizard,
-	.i-barbarian,
-	.i-fighter,
-	.i-monk,
-	.i-rogue,
-	.i-aberration,
-	.i-beast,
-	.i-celestial,
-	.i-construct,
-	.i-dragon,
-	.i-elemental,
-	.i-fey,
-	.i-fiend,
-	.i-giant,
-	.i-humanoid,
-	.i-monstrosity,
-	.i-ooze,
-	.i-plant,
-	.i-undead,
-	.i-ritual,
-	.i-req-attunement,
-	.i-legendary-monster,
-	.i-checkmark,
-	.ddb-statblock.ddb-statblock-monster.ddb-statblock-ability-scores div::before,
-	.es-form-icon,
-	#field-body-wysiwyg_ifr,
-    iframe#field-description-wysiwyg_ifr,
-    iframe#field-private-notes-wysiwyg_ifr,
-    iframe#field-public-notes-wysiwyg_ifr{
-		filter: /*[[filter]]*/;
-	}
-	.p-article-a .compendium-toc-blockquote > a,
-	.p-article-a .compendium-toc-blockquote > a:hover,
-	.ddb-campaigns-list-item-body-sharing-box,
-	#content-management-link {
-
-		background-color: /*[[backgroundColor]]*/;
-	}
-
-	.listing .info:nth-of-type(8n+1),
-	.listing .info:nth-of-type(8n+3),
-	.listing .info:nth-of-type(8n+5),
-	.listing .info:nth-of-type(8n+7),
-	.listing .info:nth-of-type(8n+2),
-	.listing .info:nth-of-type(8n+4),
-	.listing .info:nth-of-type(8n+6),
-	.listing .info:nth-of-type(8n+8),
-	.listing-card__content,
-	li:nth-of-type(odd) .list-row,
-	li:nth-of-type(even) .list-row,
-	.compendium-toc-block::after,
-	body blockquote.mordy-handwriting,
-	body.body-forum .single-column #content .p-forum-a .p-comment-post .p-comment-user-background,
-	body.body-user .single-column #content .p-forum-a .p-comment-post .p-comment-user-background,
-	body.body-devtracker .single-column #content .p-forum-a .p-comment-post .p-comment-user-background,
-	.ddb-campaigns-list-item::before,
-	.ddb-campaigns-list-item::after,
-	.ddb-campaigns-character-card::after,
-	.mon-stat-block,
-	.collapsible-header:hover,
-	.collapsible-header,
-	.select2-container .select2-choice,
-	.select2-results,
-    .ddbc-truncated-content--is-hidden .ddbc-truncated-content__content:after,
-    body.body-forum .single-column #content .p-forum-a .p-comment-post .u-dropDown span{
-		background-image: none !important;
-	}
-	aside,
-	.more-info::after {
-		border-image: none !important;
-	}
-	.irace-listing .more-info::after,
-	.RPGMonster-listing .more-info::after,
-	.RPGMagicItem-listing .more-info::after,
-	.ihomebrewable-listing .more-info::after,
-	.RPGSpell-listing .more-info::after,
-	.IGear-listing .more-info::after,
-	.RPGFeat-listing .more-info::after,
-	.RPGBackground-listing .more-info::after,
-	.RPGSubclass-listing .more-info::after,
-	body:not(.body-forum):not(.section-posts):not(.section-changelog):not(.body-privatemessage-details) blockquote::before,
-	body:not(.body-forum):not(.section-posts):not(.section-changelog):not(.body-privatemessage-details) blockquote::after,
-	.compendium-toc-full::after,
-	.section-posts .p-article-a::after,
-	.section-changelog .p-article-a::after,
-	.details-container::after,
-	.collapsible-body:after,
-	.ddb-top-result::before,
-	.ddb-top-result::after {
-		display: none
-	}
-
-	.irace-listing .more-info,
-	.RPGMonster-listing .more-info,
-	.RPGMagicItem-listing .more-info,
-	.ihomebrewable-listing .more-info,
-	.RPGSpell-listing .more-info,
-	.IGear-listing .more-info,
-	.RPGFeat-listing .more-info,
-	.RPGBackground-listing .more-info,
-	.RPGSubclass-listing .more-info,
-	body:not(.body-forum):not(.section-posts):not(.section-changelog):not(.body-privatemessage-details) blockquote,
-	.section-posts .p-article-a,
-	.more-info,
-	.details-container{
-		border-bottom-width: /*[[borderWidth]]*/;
-		border-left-width: /*[[borderWidth]]*/;
-		border-right-width: /*[[borderWidth]]*/;
-		border-top-width: 0px;
-		border-style: /*[[borderStyle]]*/;
-		border-color: /*[[borderColor]]*/;
-	}
-
-	.collapsible-body {
-		border: none !important;
-	}
-    .p-comments .p-comment-actions .p-comment-actionsAdmin>.label:after,
-    .mce-caret
-    {
-    border-top-color: /*[[fontColor]]*/
-    }
-    
-    .tooltip::after{
-        background-image: linear-gradient(to top, /*[[backgroundColor]]*/, #00000000);
-    }
-
-
-	.listing .info .row.item-name .name .very-rare,
-	.very-rare {
-		color: #9810E0 !important;
-	}
-	.listing .info .row.item-name .name .rare,
-	.rare {
-		color: #4990E2 !important;
-	}
-	.listing .info .row.item-name .name .uncommon,
-	.uncommon {
-		color: #1FC219 !important;
-	}
-	.listing .info .row.item-name .name .legendary,
-	.legendary {
-		color: #FEA227 !important;
-	}
-	.listing .info .row.item-name .name .common,
-	.common,
-	a.button,
-	a.u-button {
-		color: /*[[fontColor]]*/
-		!important;
-	}
-	.listing .info .row.item-name .name .artifact,
-	.artifact {
-		color: #BE8972 !important;
-	}
-      body.body-forum .single-column #content .p-forum-a .p-comment-post .u-dropDown span.user-role-moderator{
-        color: #ff8502 !important;
-        background: url(https://media-waterdeep.cursecdn.com/attachments/0/21/ddbmod.png) no-repeat left center !important;
-    }
-	.mordy-handwriting {
-		font-weight: normal !important;
-	}
-	.ddb-campaigns-list-item {
-		min-height: 315px;
-	}
-	footer#footer {
-		margin: 0px;
-	}
-    input.es-form-field-query.ui-autocomplete-input[placeholder="Search Everything..."]{
-        background: none !important;
-    }
-    .body-page .p-article-a .p-article-content h2::after, 
-    .body-page .p-article-a .p-article-content h3::after, 
-    .section-posts .p-article-a .p-article-content h2::after, 
-    .section-posts .p-article-a .p-article-content h3::after, 
-    .p-article-a .section-changelog .p-article-content h2::after, 
-    .p-article-a .section-changelog .p-article-content h3::after,
-    .body-page .p-article-a .p-article-content h1::after, 
-    .section-posts .p-article-a .p-article-content h1::after, 
-    .p-article-a .section-changelog .p-article-content h1::after{
-        background-color: /*[[linkColor]]*/;
-    }
-    
-   
-    
-
-    
-    
-    /* SVG Recolors to selectable colors*/
-    
-    
-    .nav-back-to-top{
-        background-color: /*[[backgroundColor]]*/;
-        border-width: /*[[borderWidth]]*/
-		!important;
-		border-style: /*[[borderStyle]]*/
-		!important;
-		border-color: /*[[linkColor]]*/
-		!important;
-        background-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%20fill%3D%22none%22%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M0.99975%208C0.99975%207.744%201.09775%207.488%201.29275%207.293L8.29275%200.293C8.38875%200.196%208.49975%200.124%208.61875%200.0749996C8.73475%200.0269996%208.86275%20-3.5569e-07%208.99675%20-3.49833e-07L9.00275%20-3.49571e-07C9.13675%20-3.43714e-07%209.26475%200.0269997%209.38075%200.0749997C9.49975%200.124%209.61075%200.196%209.70675%200.293L16.7067%207.293C17.0977%207.684%2017.0977%208.316%2016.7067%208.707C16.3157%209.098%2015.6837%209.098%2015.2927%208.707L9.99975%203.414L9.99975%2017C9.99975%2017.553%209.55275%2018%208.99975%2018C8.44675%2018%207.99975%2017.553%207.99975%2017L7.99975%203.414L2.70675%208.707C2.31575%209.098%201.68375%209.098%201.29275%208.707C1.09775%208.512%200.99975%208.256%200.99975%208Z%22%20fill%3D%22/*[[linkColor]]*/%22%2F%3E%0A%3Cmask%20id%3D%22mask0%22%20mask-type%3D%22alpha%22%20maskUnits%3D%22userSpaceOnUse%22%20x%3D%220%22%20y%3D%220%22%20width%3D%2217%22%20height%3D%2218%22%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M0.99975%208C0.99975%207.744%201.09775%207.488%201.29275%207.293L8.29275%200.293C8.38875%200.196%208.49975%200.124%208.61875%200.0749996C8.73475%200.0269996%208.86275%20-3.5569e-07%208.99675%20-3.49833e-07L9.00275%20-3.49571e-07C9.13675%20-3.43714e-07%209.26475%200.0269997%209.38075%200.0749997C9.49975%200.124%209.61075%200.196%209.70675%200.293L16.7067%207.293C17.0977%207.684%2017.0977%208.316%2016.7067%208.707C16.3157%209.098%2015.6837%209.098%2015.2927%208.707L9.99975%203.414L9.99975%2017C9.99975%2017.553%209.55275%2018%208.99975%2018C8.44675%2018%207.99975%2017.553%207.99975%2017L7.99975%203.414L2.70675%208.707C2.31575%209.098%201.68375%209.098%201.29275%208.707C1.09775%208.512%200.99975%208.256%200.99975%208Z%22%20fill%3D%22/*[[linkColor]]*/%22%2F%3E%0A%3C%2Fmask%3E%0A%3Cg%20mask%3D%22url(%23mask0)%22%3E%0A%3C%2Fg%3E%0A%3Cstyle%20id%3D%22stylus-14%22%20type%3D%22text%2Fcss%22%20class%3D%22stylus%22%3E%09%3A%3A-webkit-scrollbar%20%7B%0A%09%09width%3A%203px%3B%0A%09%7D%0A%0A%09%3A%3A-webkit-scrollbar-track%20%7B%0A%09%09background%3A%20%23000%3B%0A%09%7D%0A%09%3A%3A-webkit-scrollbar-thumb%20%7B%0A%09%09background-color%3A%20%23333%3B%0A%09%09border-radius%3A%208px%3B%0A%09%09border%3A%20none%3B%0A%09%7D%3C%2Fstyle%3E%3C%2Fsvg%3E')
-    }
-    
-    
-.top-next-page, .sidenav-next-page{
-        background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20version%3D%221.1%22%20id%3D%22Layer_1%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%201035%201612%22%20style%3D%22enable-background%3Anew%200%200%201035%201612%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cstyle%20type%3D%22text%2Fcss%22%3E%0A%09.st0%7Bfill%3A%20/*[[linkColor]]*/%3B%7D%0A%3C%2Fstyle%3E%0A%3Ctitle%3Echevron-left-white%3C%2Ftitle%3E%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M275%2C19l741%2C742c12.7%2C12.7%2C19%2C27.7%2C19%2C45s-6.3%2C32.3-19%2C45l-741%2C742c-12.7%2C12.7-27.8%2C19-45.5%2C19%20%20s-32.8-6.3-45.5-19L19%2C1427c-12.7-12.7-19-27.7-19-45s6.3-32.3%2C19-45l531-531L19%2C275C6.3%2C262.3%2C0%2C247.3%2C0%2C230c0-17.3%2C6.3-32.3%2C19-45%20%20L184%2C19c12.7-12.7%2C27.8-19%2C45.5-19S262.3%2C6.3%2C275%2C19z%22%2F%3E%0A%3Cstyle%20id%3D%22stylus-14%22%20type%3D%22text%2Fcss%22%20class%3D%22stylus%22%3E%09%3A%3A-webkit-scrollbar%20%7B%0A%09%09width%3A%203px%3B%0A%09%7D%0A%0A%09%3A%3A-webkit-scrollbar-track%20%7B%0A%09%09background%3A%20%23000%3B%0A%09%7D%0A%09%3A%3A-webkit-scrollbar-thumb%20%7B%0A%09%09background-color%3A%20%23333%3B%0A%09%09border-radius%3A%208px%3B%0A%09%09border%3A%20none%3B%0A%09%7D%3C%2Fstyle%3E%3C%2Fsvg%3E')
-    }
-  
-    .top-prev-page, .sidenav-prev-page{
-        background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20viewBox%3D%220%200%201035%201612%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20.cls-1%20%7B%0A%20%20%20%20%20%20%20%20fill%3A%20/*[[linkColor]]*/%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%3C%2Fstyle%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%3Ctitle%3Echevron-left-white%3C%2Ftitle%3E%0A%20%20%3Cpath%20class%3D%22cls-1%22%20d%3D%22M1184%2C90q26.5%2C0%2C45.5%2C19l165%2C166q19%2C19%2C19%2C45t-19%2C45l-531%2C531%2C531%2C531q19%2C19%2C19%2C45t-19%2C45l-165%2C166q-19%2C19-45.5%2C19t-45.5-19l-741-742q-19-19-19-45t19-45l741-742Q1157.5%2C90%2C1184%2C90Z%22%20transform%3D%22translate(-378.5%20-90)%22%2F%3E%0A%3Cstyle%20id%3D%22stylus-14%22%20type%3D%22text%2Fcss%22%20class%3D%22stylus%22%3E%09%3A%3A-webkit-scrollbar%20%7B%0A%09%09width%3A%203px%3B%0A%09%7D%0A%0A%09%3A%3A-webkit-scrollbar-track%20%7B%0A%09%09background%3A%20%23000%3B%0A%09%7D%0A%09%3A%3A-webkit-scrollbar-thumb%20%7B%0A%09%09background-color%3A%20%23333%3B%0A%09%09border-radius%3A%208px%3B%0A%09%09border%3A%20none%3B%0A%09%7D%3C%2Fstyle%3E%3C%2Fsvg%3E')
-        
-    }
-    
-    
-    .top-table-page a, .sidenav-comp-page a{
-        background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2043.29%2041.42%22%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill%3A/*[[linkColor]]*/%3B%7D%3C%2Fstyle%3E%3C%2Fdefs%3E%3Ctitle%3EAsset%201%3C%2Ftitle%3E%3Cg%20id%3D%22Layer_2%22%20data-name%3D%22Layer%202%22%3E%3Cg%20id%3D%22Layer_1-2%22%20data-name%3D%22Layer%201%22%3E%3Cpolygon%20class%3D%22cls-1%22%20points%3D%2238.39%2024.21%2038.34%2024.25%2038.4%2024.23%2038.39%2024.21%22%2F%3E%3Cpath%20class%3D%22cls-1%22%20d%3D%22M22.57%2C16.2c-1.2%2C0-2.69-.28-3-1.6-.47-1.91%2C2.32-3%2C2.43-3.1l6.79-1.95L26.51%2C6.09h0l-.05.06a1.72%2C1.72%2C0%2C0%2C1-2.43%2C0%2C1.81%2C1.81%2C0%2C0%2C1-.35-.53%2C1.7%2C1.7%2C0%2C0%2C1-2-.29%2C1.67%2C1.67%2C0%2C0%2C1-.49-1.18h0L9.92%2C6.68a1.68%2C1.68%2C0%2C0%2C1%2C.21.81A1.71%2C1.71%2C0%2C0%2C1%2C8.9%2C9.13%2C1.8%2C1.8%2C0%2C0%2C1%2C9%2C9.75a1.71%2C1.71%2C0%2C0%2C1-1.45%2C1.69l7.85%2C15%2C.06%2C0a1.7%2C1.7%2C0%2C0%2C1%2C2.34.61%2C1.72%2C1.72%2C0%2C0%2C1%2C.21.6%2C1.72%2C1.72%2C0%2C0%2C1%2C1.9.79%2C1.68%2C1.68%2C0%2C0%2C1%2C.2%2C1.13l14.46-4.2a2.29%2C2.29%2C0%2C0%2C1-.07-.28%2C1.72%2C1.72%2C0%2C0%2C1%2C1-1.79%2C1.53%2C1.53%2C0%2C0%2C1-.21-.6%2C1.71%2C1.71%2C0%2C0%2C1%2C.91-1.75l-4.37-6.66c-1.63.42-4.06%2C1-7.71%2C1.79A8.12%2C8.12%2C0%2C0%2C1%2C22.57%2C16.2Z%22%2F%3E%3Cpolygon%20class%3D%22cls-1%22%20points%3D%221.4%205.48%201.39%205.53%202.95%208.45%201.4%205.48%22%2F%3E%3Cpolygon%20class%3D%22cls-1%22%20points%3D%2243.29%2033.49%2043.03%2032.58%2016.16%2040.43%2016.16%2035.26%201.02%206.95%200%2010.86%2016.16%2041.42%2016.16%2041.42%2016.16%2041.42%2043.29%2033.49%22%2F%3E%3Cpolygon%20class%3D%22cls-1%22%20points%3D%222.95%208.45%202.95%208.45%208.78%2019.6%202.95%208.45%22%2F%3E%3Cpath%20class%3D%22cls-1%22%20d%3D%22M42.68%2C26%2C34.46%2C13.47c-.34.13-.84.3-1.58.51L40%2C24.81l-23%2C6.7L4.1%2C7%2C25.16%2C2.21l4.63%2C7.05L31.4%2C8.8%2C25.63%2C0%2C1.4%2C5.48%2C3%2C8.45%2C16.43%2C33.64Z%22%2F%3E%3Cpolygon%20class%3D%22cls-1%22%20points%3D%2216.16%2033.72%2016.43%2033.64%202.95%208.45%208.78%2019.6%2016.16%2033.72%22%2F%3E%3Cpolygon%20class%3D%22cls-1%22%20points%3D%2216.16%2033.72%2016.16%2033.72%208.78%2019.6%2016.16%2033.72%22%2F%3E%3Cpath%20class%3D%22cls-1%22%20d%3D%22M33.48%2C10.15a1.35%2C1.35%2C0%2C0%2C0-1.38-.51l-.13%2C0-1.61.47-1%2C.29-7%2C2c-.5.2-2%2C1-1.79%2C1.91.27%2C1.08%2C2.61.87%2C3.41.71%2C2.28-.49%2C5.17-1.16%2C7.34-1.71l1-.27c.68-.18%2C1.23-.34%2C1.61-.47a2.93%2C2.93%2C0%2C0%2C0%2C.38-.14A3.46%2C3.46%2C0%2C0%2C0%2C33.48%2C10.15ZM23.14%2C14.44a.8.8%2C0%2C1%2C1%2C.79-.79A.79.79%2C0%2C0%2C1%2C23.14%2C14.44Z%22%2F%3E%3Cpolygon%20class%3D%22cls-1%22%20points%3D%2242.38%2028.29%2042.38%2026.87%2016.8%2034.35%2016.8%2035.43%2023.38%2034.19%2016.8%2036%2016.8%2036.97%2029.8%2033.93%2016.8%2037.9%2016.8%2038.65%2042.38%2031.2%2042.38%2028.78%2029%2031.96%2042.38%2028.29%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3Cstyle%20id%3D%22stylus-14%22%20type%3D%22text%2Fcss%22%20class%3D%22stylus%22%3E%09%3A%3A-webkit-scrollbar%20%7B%0A%09%09width%3A%203px%3B%0A%09%7D%0A%0A%09%3A%3A-webkit-scrollbar-track%20%7B%0A%09%09background%3A%20%23000%3B%0A%09%7D%0A%09%3A%3A-webkit-scrollbar-thumb%20%7B%0A%09%09background-color%3A%20%23333%3B%0A%09%09border-radius%3A%208px%3B%0A%09%09border%3A%20none%3B%0A%09%7D%3C%2Fstyle%3E%3C%2Fsvg%3E')
-    }
-    
-    
-}
-
-
-@-moz-document url("https://www.dndbeyond.com/") {
-
-	::-webkit-scrollbar {
-		width: 3px;
-	}
-
-	::-webkit-scrollbar-track {
-		background: /*[[backgroundColor]]*/;
-	}
-	::-webkit-scrollbar-thumb {
-		background-color: /*[[scrollbarColor]]*/;
-		border-radius: 6px;
-		border: none;
-	}
-	#site-main,
-	.post-excerpt__content {
-		background-color: /*[[backgroundColor]]*/
-		!important;
-		color: /*[[fontColor]]*/
-		!important;
-	}
-
-	.post-excerpt {
-		border-width: /*[[borderWidth]]*/
-		!important;
-		border-style: /*[[borderStyle]]*/
-		!important;
-		border-color: /*[[borderColor]]*/
-		!important;
-	}
-
-	.body-home-index .post-listing > li:first-child .post-excerpt__content,
-	.body-home-index .post-listing > li:first-child .post-excerpt
-    {
-		background: none !important;
-		border: none !important;
-	}
-	a,
-	a:visited,
-	a > span,
-	span[role=button],
-	.forum-row .col-forum .title a {
-		color: /*[[linkColor]]*/
-		!important
-	}
-
-	.ddb-home-body .see-all-container .button,
-	.ddb-home-body .see-all-container .button:hover,
-	.ddb-home-body .see-all-container .button:focus,
-	.ddb-home-body .see-all-container .button:active,
-	.ddb-home-body .see-all-container .button:visited {
-		color: /*[[fontColor]]*/
-		!important;
-	}
-	footer#footer {
-		margin: 0px;
-	}
-
-	.post-excerpt__description,
-	.post-excerpt__content {	
-   		text-shadow:
-      	 2px 2px #000,
-     	-1px -1px 0 #000,  
-     	 1px -1px 0 #000,
-     	 -1px 1px 0 #000,
-      	 1px 1px 0 #000;
-		
-	}
-    
-	.post-excerpt__description{
-		background: /*[[transparencyBackgroundColor]]*/;
-		border-radius: 5px;
-		padding: 5px
-		
-	}
-	
-}
