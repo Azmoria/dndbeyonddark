@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.1.1
+@version      1.1.2
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -296,7 +296,11 @@ div#site{
     .ddbeb-flyout, .ddbeb-flyout__arrow,
     .flyout-input-number__input-wrapper,
     .encounter-row,
-    body
+    body,
+    .tooltip-body-description table tbody tr:nth-child(odd),
+    .tooltip-body-description table tbody tr:nth-child(even),
+    .tooltip-body-description table tbody tr,
+    .monster-drag-preview
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
@@ -980,7 +984,9 @@ div#site{
     .ddbc-tab-list__nav-item:hover svg path{
         fill: /*[[linkColor]]*/ !important;
     }
-
+    .tooltip::after{
+    background: linear-gradient(to top, /*[[backgroundColor]]*/, #00000000) !important;
+    }
     /* SVG Recolors to selectable colors*/
     
     
