@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.1.2
+@version      1.1.3
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -300,7 +300,9 @@ div#site{
     .tooltip-body-description table tbody tr:nth-child(odd),
     .tooltip-body-description table tbody tr:nth-child(even),
     .tooltip-body-description table tbody tr,
-    .monster-drag-preview
+    .monster-drag-preview,
+    .ddbeb-button[disabled],
+    .flyout-input-number__label
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
@@ -916,12 +918,7 @@ div#site{
     .site .character-button-oversized:disabled, 
     .site .character-button-small:disabled, 
     .site .character-button:disabled,
-    .site .ct-button.ct-theme-button--filled:focus{
-        background-color: /*[[transparencyBackgroundColor]]*/ !important;
-        box-shadow: inset 0 0 25px 0px #eaeaea;
-    }
-        
-        
+    .site .ct-button.ct-theme-button--filled:focus,
     .site .character-button-block-large:disabled:hover, 
     .site .character-button-block-oversized:disabled:hover,
     .site .character-button-block-small:disabled:hover,
@@ -936,8 +933,9 @@ div#site{
     .site .character-button:disabled:hover,
     .ddbc-dice-roll__dice-value.ddbc-dice-roll__dice-value--discarded{
         background-color: /*[[transparencyBackgroundColor]]*/ !important;
-        box-shadow: inset 0 0 25px 0px #eaeaea !important;
+        box-shadow: inset 0 0 25px 0px #eaeaea;
     }
+        
         
     button.ct-button.character-button.ddbc-button.character-button-block,
     button.ct-button.character-button.ddbc-button.character-button-block:hover,
