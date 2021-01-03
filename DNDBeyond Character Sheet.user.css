@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.1.0
+@version      1.1.1
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -478,7 +478,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 }
 
 @-moz-document regexp("https://www.dndbeyond.com/profile/.*/characters/\\d*"),
-regexp("https://www.dndbeyond.com/characters/.*"), regexp("https://www.dndbeyond.com/encounter-builder"), regexp("https://www.dndbeyond.com/combat-tracker/.*") {
+regexp("https://www.dndbeyond.com/characters/.*"), regexp("https://www.dndbeyond.com/encounter-builder"), regexp("https://www.dndbeyond.com/combat-tracker/.*"), regexp("https://www.dndbeyond.com/monsters/.*") {
 
 /*Dice Alpha Size and position changes*/
 	.ct-character-sheet--dice-enabled .ct-skills__item .integrated-dice__container,
