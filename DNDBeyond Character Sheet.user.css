@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.0.19
+@version      1.1.0
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -94,19 +94,6 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 	.ct-tablet-box__header,
 	.ct-skills-mobile .ct-skills,
 	.ct-extras-mobile,
-	.ajs-dialog,
-	.ajs-header,
-	.ajs-primary.ajs-buttons,
-	.beyond20-roll-cell,
-	.beyond20-description,
-	.beyond20-dice-roller-content,
-	.ajs-footer,
-	.beyond20-message .beyond20-description,
-	.beyond20-message details table,
-	.beyond20-tooltip .beyond20-tooltip-content,
-	.dice-formula.beyond20-roll-formula,
-	.beyond20-roll-cell,
-	.beyond20-roll-die-result,
     .integrated-dice-menu__item,
     .Basic-Text-Frame,
     .body-rpgcharacterbuilder.site,
@@ -118,7 +105,6 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     input[type="email"], 
     textarea, 
     select,
-    .alertify .ajs-footer .ajs-buttons .ajs-button,
     .starting-equipment-rule-slots,
     .starting-equipment-rule-slot+.starting-equipment-rule-slot:before,
     .starting-equipment-rule-slot-inactive{
@@ -227,7 +213,6 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 	.ct-skills__additional--empty,
 	.ct-skill-pane__header-ability,
 	.ct-character-sheet--dice-enabled .integrated-dice__container,
-	.beyond20-roll-detail-normal,
 	.ct-reset-pane__intro,
 	.ct-custom-skill-pane__header-ability,
 	.dice_result__info__dicenotation,
@@ -241,8 +226,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-character-manage-pane__class-list-item-label,
     .ct-character-manage-pane__class-list-item-meta,
     .ct-dice-preference-manager__link-out-label,
-    .ct-dice-preference-manager__primary-info-version,
-    .alertify .ajs-body 
+    .ct-dice-preference-manager__primary-info-version
 	{
 		color: /*[[fontColor]]*/;
 	}
@@ -453,7 +437,50 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 		!important;
 	}
 
-	/*Dice Alpha Size and position changes*/
+	
+
+	/*Fixed settings*/
+	button.ct-theme-button.ct-health-summary__adjuster-button.ct-health-summary__adjuster-button--heal.ct-theme-button--outline.ct-theme-button--interactive.ct-button.character-button.character-button-block-small:hover {
+		background: #040 !important;
+	}
+	button.ct-theme-button.ct-health-summary__adjuster-button.ct-health-summary__adjuster-button--damage.ct-theme-button--outline.ct-theme-button--interactive.ct-button.character-button.character-button-block-small:hover {
+		background: #400 !important;
+	}
+	.ddbc-item-name--rarity-very-rare,
+	.very-rare {
+		color: #9810E0 !important;
+	}
+	.ddbc-item-name--rarity-rare,
+	.rare {
+		color: #4990E2 !important;
+	}
+	.ddbc-item-name--rarity-uncommon,
+	.uncommon {
+		color: #1FC219 !important;
+	}
+	.ddbc-item-name--rarity-legendary,
+	.legendary {
+		color: #FEA227 !important;
+	}
+
+	.ct-slot-manager__slot,
+	.site .ct-theme-button--filled.ct-button:hover {
+		box-shadow: none;
+	}
+
+	.ct-equipment-overview__weight-speed--encumbered,
+	.ct-equipment-overview__weight-speed--heavily-encumbered,
+	.ct-equipment-overview__weight-speed--over-carrying-capacity,
+	.ct-equipment-overview__weight-speed--push-drag-lift {
+		color: #d24040;
+	}
+
+}
+
+@-moz-document regexp("https://www.dndbeyond.com/profile/.*/characters/\\d*"),
+regexp("https://www.dndbeyond.com/characters/.*"), regexp("https://www.dndbeyond.com/encounter-builder"), regexp("https://www.dndbeyond.com/combat-tracker/.*") {
+
+/*Dice Alpha Size and position changes*/
 	.ct-character-sheet--dice-enabled .ct-skills__item .integrated-dice__container,
 	.ct-character-sheet--dice-enabled .ct-spells-spell__tohit .integrated-dice__container,
 	.ct-character-sheet--dice-enabled .ddbc-combat-attack__tohit .integrated-dice__container
@@ -558,41 +585,50 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-character-sheet--dice-enabled .integrated-dice__container:hover~.ddbc-saving-throw-selection-small-box-svg path{
         fill: /*[[rollCalcColor]]*/ !important;
     }
+    
+    
+/*Beyond 20 rolls settings*/
+    
+    .beyond20-roll-cell,
+	.beyond20-description,
+	.beyond20-dice-roller-content,
+	.ajs-footer,
+	.beyond20-message .beyond20-description,
+	.beyond20-message details table,
+	.beyond20-tooltip .beyond20-tooltip-content,
+	.dice-formula.beyond20-roll-formula,
+	.beyond20-roll-cell,
+	.beyond20-roll-die-result,
+    .ajs-dialog,
+	.ajs-header,
+	.ajs-primary.ajs-buttons,
+    .beyond20-roll-detail-normal{
+        background-color: /*[[sheetColor]]*/ !important;
+		color: /*[[fontColor]]*/ !important;
+    }
+    
+    .beyond20-roll-cell, 
+    .beyond20-message details summary, 
+    .beyond20-title,
+    .beyond20-dice-roller-content,
+    .beyond20-tooltip .beyond20-tooltip-content,
+    .beyond20-roll-cell, 
+    .beyond20-roll-die-result{
+        border-color: /*[[highlightColor]]*/ !important;
 
-	/*Fixed settings*/
-	button.ct-theme-button.ct-health-summary__adjuster-button.ct-health-summary__adjuster-button--heal.ct-theme-button--outline.ct-theme-button--interactive.ct-button.character-button.character-button-block-small:hover {
-		background: #040 !important;
-	}
-	button.ct-theme-button.ct-health-summary__adjuster-button.ct-health-summary__adjuster-button--damage.ct-theme-button--outline.ct-theme-button--interactive.ct-button.character-button.character-button-block-small:hover {
-		background: #400 !important;
-	}
-	.ddbc-item-name--rarity-very-rare,
-	.very-rare {
-		color: #9810E0 !important;
-	}
-	.ddbc-item-name--rarity-rare,
-	.rare {
-		color: #4990E2 !important;
-	}
-	.ddbc-item-name--rarity-uncommon,
-	.uncommon {
-		color: #1FC219 !important;
-	}
-	.ddbc-item-name--rarity-legendary,
-	.legendary {
-		color: #FEA227 !important;
-	}
-
-	.ct-slot-manager__slot,
-	.site .ct-theme-button--filled.ct-button:hover {
-		box-shadow: none;
-	}
-
-	.ct-equipment-overview__weight-speed--encumbered,
-	.ct-equipment-overview__weight-speed--heavily-encumbered,
-	.ct-equipment-overview__weight-speed--over-carrying-capacity,
-	.ct-equipment-overview__weight-speed--push-drag-lift {
-		color: #d24040;
-	}
-
+    }
+    
+    .beyond20-message details summary, .beyond20-title{
+        color: /*[[highlightColor]]*/ !important;
+    }
+    
+    .beyond20-roll-detail-crit-fail,
+    .beyond20-roll-detail-fail{
+        color: #F00 !important;  
+    }
+    
+    .beyond20-roll-detail-crit{
+        color: #0F0 !important;
+    }
+    
 }
