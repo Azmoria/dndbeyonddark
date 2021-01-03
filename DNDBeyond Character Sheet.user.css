@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.1.1
+@version      1.1.2
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -107,7 +107,9 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     select,
     .starting-equipment-rule-slots,
     .starting-equipment-rule-slot+.starting-equipment-rule-slot:before,
-    .starting-equipment-rule-slot-inactive{
+    .starting-equipment-rule-slot-inactive,
+    .ct-inventory-filter__adv-filter-button,
+    .ct-extras-filter__adv-filter-button{
 		background-color: /*[[sheetColor]]*/
 		!important;
 		color: /*[[fontColor]]*/
@@ -142,7 +144,17 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 	button.ct-theme-button.ct-remove-button.ct-theme-button--filled.ct-theme-button--interactive.ct-button.character-button.character-button-small,
 	button.ct-theme-button.ct-theme-button--filled.ct-theme-button--interactive.ct-button.character-button.character-button-small,
     .ct-dice-preference-manager__primary-info-version,
-    .starting-equipment button.ct-button.character-button.character-button{
+    .starting-equipment button.ct-button.character-button.character-button,
+    .ct-spells-filter__advanced-callout, 
+    .ct-inventory-filter__advanced-callout,
+    .ct-spells-filter__active, 
+    .ct-inventory-filter__active,
+    .ct-spells-filter__adv-filter-button--active, 
+    .ct-inventory-filter__adv-filter-button--active,
+    .ct-extras-filter__adv-filter-button--active,
+    .ct-extras-filter__active,
+    .ct-extras-filter__advanced-callout,
+    .ct-spells__tab-level-callout{
 		background: /*[[highlightColor]]*/
 		!important;
 	}
@@ -248,7 +260,10 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 	a:visited,
 	a:hover,
 	a,
-    .beyond20-message details summary, .beyond20-title
+    .beyond20-message details summary, .beyond20-title,
+    .ct-spells-filter__clear, 
+    .ct-inventory-filter__clear,
+    .ct-extras-filter__clear
 	{
 		color: /*[[highlightColor]]*/
 	}
@@ -315,15 +330,19 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         border-top-color: /*[[sheetColor]]*/
     }
     
-    .integrated-dice__container:hover{
+    .integrated-dice__container:hover
+    {
         border-width: 1px !important;
     }
     
     input[type="text"], input[type="number"], input[type="search"], input[type="password"], input[type="email"], textarea, select{
         opacity: initial;
     }
-
-
+    .ct-inventory-filter__adv-filter-button,
+    .ct-extras-filter__adv-filter-button,
+    .ct-spells-filter__adv-filter-button{
+        border: solid 1px /*[[highlightColor]]*/ !important;
+    }
 
 	/*Icon Filter for dark theme*/
 	.ddbc-combat-attack__icon,
@@ -382,7 +401,9 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     svg.ddbc-svg.ddbc-preferences-svg.ddbc-svg--themed path,
     svg.ddbc-svg.ddbc-export-svg.ddbc-svg--themed path,
     .ddbc-svg.ddbc-chevron-svg.ddbc-chevron-right-svg.ddbc-svg--builder path,
-    .ddbc-svg.ddbc-chevron-svg.ddbc-chevron-down-svg.ddbc-svg--disabled path
+    .ddbc-svg.ddbc-chevron-svg.ddbc-chevron-down-svg.ddbc-svg--disabled path,
+    .ct-extras-filter__advanced svg path,
+    .ct-inventory-filter__advanced svg path
     {
 		fill: /*[[highlightColor]]*/
 		!important;
