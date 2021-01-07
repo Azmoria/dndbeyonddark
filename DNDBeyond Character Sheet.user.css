@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.1.2
+@version      1.1.3
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -109,7 +109,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .starting-equipment-rule-slot+.starting-equipment-rule-slot:before,
     .starting-equipment-rule-slot-inactive,
     .ct-inventory-filter__adv-filter-button,
-    .ct-extras-filter__adv-filter-button{
+    .ct-extras-filter__adv-filter-button,
+    .alertify .ajs-body{
 		background-color: /*[[sheetColor]]*/
 		!important;
 		color: /*[[fontColor]]*/
