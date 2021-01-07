@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.1.5
+@version      1.1.6
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -305,7 +305,8 @@ div#site{
     .flyout-input-number__label,
     .add-combatant-modal__header,
     .add-combatant-modal__body,
-    .add-combatant-modal__controls
+    .add-combatant-modal__controls,
+    .listing .no-results
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
