@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.1.3
+@version      1.1.4
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -341,7 +341,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     }
     .ct-inventory-filter__adv-filter-button,
     .ct-extras-filter__adv-filter-button,
-    .ct-spells-filter__adv-filter-button{
+    .ct-spells-filter__adv-filter-button,
+    .site .ct-button.ct-theme-button--filled{
         border: solid 1px /*[[highlightColor]]*/ !important;
     }
 
