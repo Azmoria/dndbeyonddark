@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.1.9
+@version      1.1.10
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -308,7 +308,8 @@ div#site{
     .add-combatant-modal__controls,
     .listing .no-results,
     .starting-equipment-rule-slot-inactive,
-        .spoiler
+    .spoiler,
+    .p-forum-poll .b-poll-a .b-poll-voting .form-field-string-choice-field>label:first-child
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
