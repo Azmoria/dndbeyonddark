@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.1.12
+@version      1.1.13
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -311,7 +311,12 @@ div#site{
     .spoiler,
     .p-forum-poll .b-poll-a .b-poll-voting .form-field-string-choice-field>label:first-child,
     .gamelog-button,
-    .dice-set__info__desc
+    .dice-set__info__desc,
+    [class^="party-selector-"],
+    [class^="party-stats_"],
+    [class^="abstract-character_"],
+    [class^="character-card"],
+    .context-menu-option
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
