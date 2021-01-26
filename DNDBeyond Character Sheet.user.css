@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.1.5
+@version      1.1.6
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -505,7 +505,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 }
 
 @-moz-document regexp("https://www.dndbeyond.com/profile/.*/characters/\\d*"),
-regexp("https://www.dndbeyond.com/characters/.*"), regexp("https://www.dndbeyond.com/encounter-builder"), regexp("https://www.dndbeyond.com/combat-tracker/.*"), regexp("https://www.dndbeyond.com/monsters/.*"), regexp("https://www.dndbeyond.com/campaigns/.*") {
+regexp("https://www.dndbeyond.com/characters/.*"), regexp("https://www.dndbeyond.com/encounter-builder"), regexp("https://www.dndbeyond.com/combat-tracker/.*"), regexp("https://www.dndbeyond.com/monsters/.*"), regexp("https://www.dndbeyond.com/campaigns/.*"), regexp("https://www.dndbeyond.com/encounters/.*") {
 
 /*Dice Alpha Size and position changes*/
 	.ct-character-sheet--dice-enabled .ct-skills__item .integrated-dice__container,
@@ -572,7 +572,10 @@ regexp("https://www.dndbeyond.com/characters/.*"), regexp("https://www.dndbeyond
     }
     .DiceMessage_Number__1Nc8Y.DiceMessage_Other__1WOi1,
     .DiceMessage_Total__2Rria.DiceMessage_Other__1WOi1,
-    .GameLogEntry_Message__1GoY3.GameLogEntry_Other__2PSbv{
+    .GameLogEntry_Message__1GoY3.GameLogEntry_Other__2PSbv,
+    .DiceMessage_DiceResultContainer__1a1ly,
+    .DiceMessage_Number__eP0ur.DiceMessage_Other__3utqb,
+    .DiceMessage_Total__2Yxcy.DiceMessage_Other__3utqb{
         color: /*[[fontColor]]*/
 		!important;
     }
@@ -596,8 +599,9 @@ regexp("https://www.dndbeyond.com/characters/.*"), regexp("https://www.dndbeyond
     .ct-character-sheet--dice-enabled .ddbc-combat-attack--crit .ddbc-combat-attack__damage .integrated-dice__container:hover,
     ._1_4XN--HbdIB3j-9HVLY3F._1A4s1zb6oW_YWMDyXPDnr0,
     ._1_4XN--HbdIB3j-9HVLY3F._1YyaUXFtqDrdcyg8t55fTr,
-    .GameLogEntry_Message__1GoY3.GameLogEntry_Other__2PSbv{
-		background: /*[[rollCalcColor]]*/
+    .GameLogEntry_Message__1GoY3.GameLogEntry_Other__2PSbv,
+    .GameLogEntry_Message__LMnm6.GameLogEntry_Other__2mQFH{
+		background: /*[[rollCalcColor]]*/ !important;
 	}
 	.dice-toolbar:hover,
     ._1_4XN--HbdIB3j-9HVLY3F._1YyaUXFtqDrdcyg8t55fTr{
