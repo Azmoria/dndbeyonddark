@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.1.10
+@version      1.1.11
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -309,7 +309,8 @@ div#site{
     .listing .no-results,
     .starting-equipment-rule-slot-inactive,
     .spoiler,
-    .p-forum-poll .b-poll-a .b-poll-voting .form-field-string-choice-field>label:first-child
+    .p-forum-poll .b-poll-a .b-poll-voting .form-field-string-choice-field>label:first-child,
+    .gamelog-button
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
@@ -562,6 +563,16 @@ div#site{
 		border-color: /*[[borderColor]]*/
 		!important;
 	}
+        
+    .gamelog-button{
+        padding: 6px 20px 6px 12px;
+        border-width: /*[[borderWidth]]*/
+		!important;
+		border-style: /*[[borderStyle]]*/
+		!important;
+		border-color: /*[[borderColor]]*/
+		!important;
+    }
 
 	.compendium-toc-block-text {
 		margin-left: -1px;
