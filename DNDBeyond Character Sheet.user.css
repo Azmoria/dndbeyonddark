@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.1.8
+@version      1.1.9
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -570,23 +570,20 @@ regexp("https://www.dndbeyond.com/characters/.*"), regexp("https://www.dndbeyond
         border: 1px solid /*[[borderColor]]*/;
         box-shadow: none;
     }
-    .DiceMessage_Number__1Nc8Y,
-    .DiceMessage_Total__2Rria
-    .GameLogEntry_Message__1GoY3,
-    .DiceMessage_DiceResultContainer__1a1ly,
-    .DiceMessage_Number__eP0ur,
-    .DiceMessage_Total__2Yxcy,
-    .GameLogEntry_Line__uZgrb,
-    .GameLogEntry_Message__LMnm6,
-    .NqiCVC0GrZuvS78caRRC0,
-    ._1_4XN--HbdIB3j-9HVLY3F
+
+    [class^="DiceMessage_Number"],
+    [class^="DiceMessage_Total"],
+    [class^="DiceMessage_Line"],
+    [class^="GameLogEntry_"],
+    ._1_4XN--HbdIB3j-9HVLY3F,
+    ._31r1gjOw0T79LKVLAldcq0
     {
         color: /*[[fontColor]]*/
 		!important;
     }
     
 	.dice_result,
-	.dice_notification_controls .dice_notification_control  ,
+	.dice_notification_controls .dice_notification_control,
 	.dice-toolbar,
 	.dice-toolbar:hover,
 	.dice-toolbar__dropdown-selected .dice-toolbar__dropdown-die,
@@ -602,7 +599,7 @@ regexp("https://www.dndbeyond.com/characters/.*"), regexp("https://www.dndbeyond
     .ct-character-sheet--dice-enabled .ct-skills__item .integrated-dice__container:hover,
 	.ct-character-sheet--dice-enabled .ct-spells-spell__tohit .integrated-dice__container:hover,
     .ct-character-sheet--dice-enabled .ddbc-combat-attack--crit .ddbc-combat-attack__damage .integrated-dice__container:hover,
-    .GameLogEntry_Message__LMnm6,
+    [class^="GameLogEntry_Message_"],
     ._1_4XN--HbdIB3j-9HVLY3F{
 		background: /*[[rollCalcColor]]*/ !important;
 	}
