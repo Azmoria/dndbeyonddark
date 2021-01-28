@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.1.13
+@version      1.1.14
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -729,6 +729,10 @@ div#site{
     .tasha-notes{
 		border-image: none !important;
 	}
+        
+    .input-select__dropdown-wrapper{
+        z-index: 5
+    }
 	.irace-listing .more-info::after,
 	.RPGMonster-listing .more-info::after,
 	.RPGMagicItem-listing .more-info::after,
