@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.1.10
+@version      1.1.11
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -110,7 +110,9 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .starting-equipment-rule-slot-inactive,
     .ct-inventory-filter__adv-filter-button,
     .ct-extras-filter__adv-filter-button,
-    .alertify .ajs-body{
+    .alertify .ajs-body,
+    ._3A6FDLVnjjt8AEw9hQLvFY,
+    ._1WXtuzqHtOKDwJKEVpp6Oi{
 		background-color: /*[[sheetColor]]*/
 		!important;
 		color: /*[[fontColor]]*/
@@ -304,7 +306,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 	.ct-tablet-box__border,
     .integrated-dice-menu__item,
     .body-rpgcharacter-sheet .site-bar,
-    .ct-character-header-desktop__group--game-log{
+    .ct-character-header-desktop__group--game-log,
+    ._3A6FDLVnjjt8AEw9hQLvFY{
 		border-color: /*[[borderColor]]*/
 		!important;
 	}
@@ -600,7 +603,8 @@ regexp("https://www.dndbeyond.com/characters/.*"), regexp("https://www.dndbeyond
 	.ct-character-sheet--dice-enabled .ct-spells-spell__tohit .integrated-dice__container:hover,
     .ct-character-sheet--dice-enabled .ddbc-combat-attack--crit .ddbc-combat-attack__damage .integrated-dice__container:hover,
     [class^="GameLogEntry_Message_"],
-    ._1_4XN--HbdIB3j-9HVLY3F{
+    ._1_4XN--HbdIB3j-9HVLY3F,
+    ._1KM4FtjuhNomsZCIfBsJQ1{
 		background: /*[[rollCalcColor]]*/ !important;
 	}
 	.dice-toolbar:hover,
