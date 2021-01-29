@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.1.9
+@version      1.1.10
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -268,7 +268,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-inventory-filter__clear,
     .ct-extras-filter__clear
 	{
-		color: /*[[highlightColor]]*/
+		color: /*[[highlightColor]]*/ !important;
 	}
 
 	.ct-character-sheet--dice-enabled .integrated-dice__container span {
