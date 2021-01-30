@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.1.14
+@version      1.1.15
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -719,7 +719,8 @@ div#site{
     .ddbc-truncated-content--is-hidden .ddbc-truncated-content__content:after,
     body.body-forum .single-column #content .p-forum-a .p-comment-post .u-dropDown span,
     .Basic-Text-Frame.stat-block-finder,
-    .stat-block-background{
+    .stat-block-background,
+        .stat-block-background--3{
 		background-image: none !important;
 	}
 	aside,
