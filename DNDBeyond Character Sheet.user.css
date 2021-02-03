@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.1.11
+@version      1.1.12
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -158,7 +158,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-extras-filter__adv-filter-button--active,
     .ct-extras-filter__active,
     .ct-extras-filter__advanced-callout,
-    .ct-spells__tab-level-callout{
+    .ct-spells__tab-level-callout,
+    .ct-character-header__group--game-log{
 		background: /*[[highlightColor]]*/
 		!important;
 	}
@@ -307,7 +308,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .integrated-dice-menu__item,
     .body-rpgcharacter-sheet .site-bar,
     .ct-character-header-desktop__group--game-log,
-    ._3A6FDLVnjjt8AEw9hQLvFY{
+    ._3A6FDLVnjjt8AEw9hQLvFY,
+    .ct-character-header__group--game-log{
 		border-color: /*[[borderColor]]*/
 		!important;
 	}
