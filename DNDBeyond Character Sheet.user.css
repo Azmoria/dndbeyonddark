@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.1.13
+@version      1.1.14
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -380,6 +380,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 
 
 	/*Fills and Strokes*/
+    
 	.ct-skills__col--proficiency circle,
 	.ct-skills__col--proficiency path,
 	.ddbc-saving-throws-summary__ability-proficiency circle,
@@ -544,7 +545,7 @@ regexp("https://www.dndbeyond.com/characters/.*"), regexp("https://www.dndbeyond
     .ct-character-sheet--dice-enabled .ct-skills__col--modifier .integrated-dice__container,
     .ct-character-sheet--dice-enabled .ddbc-combat-attack__tohit .integrated-dice__container,
     .ct-character-sheet--dice-enabled .ddbc-ability-summary__primary .integrated-dice__container,
-    .ct-character-sheet--dice-enabled .ct-initiative-box__value .integrated-dice__container
+    .ct-character-sheet--dice-enabled .ct-initiative-box__value .integrated-dice__container,
     .ct-character-sheet--dice-enabled .ddbc-combat-attack__tohit .integrated-dice__container:hover,
     .ct-character-sheet--dice-enabled .ddbc-combat-attack__damage .integrated-dice__container:hover,
 	.ct-character-sheet--dice-enabled .ddbc-combat-item-attack__damage .integrated-dice__container:hover,
