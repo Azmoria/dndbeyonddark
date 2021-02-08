@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.1.16
+@version      1.1.17
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -56,6 +56,8 @@ div#site{
 		border-radius: 6px;
 		border: none;
 	}
+        
+    
 	body.responsive-enabled #site #site-main .container #content,
 	body.responsive-enabled #site #site-main.fixed .container #content,
 	#site-main,
@@ -316,7 +318,8 @@ div#site{
     [class^="party-stats_"],
     [class^="abstract-character_"],
     [class^="character-card"],
-    .context-menu-option
+    .context-menu-option,
+    .Flowchart-Block
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
@@ -721,14 +724,16 @@ div#site{
     .Basic-Text-Frame.stat-block-finder,
     .stat-block-background,
     .stat-block-background--3,
-    body{
+    body,
+    .Flowchart-Block{
 		background-image: none !important;
 	}
 	aside,
 	.more-info::after,
     blockquote.block-colored,
     blockquote.paper-background,
-    .tasha-notes{
+    .tasha-notes,
+    .Flowchart-Block{
 		border-image: none !important;
 	}
         
