@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.1.18
+@version      1.1.19
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -56,7 +56,7 @@ div#site{
 		border-radius: 6px;
 		border: none;
 	}
-        
+ 
     
 	body.responsive-enabled #site #site-main .container #content,
 	body.responsive-enabled #site #site-main.fixed .container #content,
@@ -361,6 +361,10 @@ div#site{
 	.RPGSubclass-listing .more-info {
 		width: 100%;
 	}
+    a.character-button-block.builder-button {
+    background: none !important;
+    border-style: none !important;
+    }   
 
 	::selection{
 		background: #aaa !important;
@@ -377,6 +381,7 @@ div#site{
     .body-rpgcharacterbuilder.site{
     background: /*[[backgroundColor]]*/
     }
+        
 
 	.extra-forum-header,
 	.p-forum-a .col-forum .active-viewers,
@@ -498,7 +503,8 @@ div#site{
 		color: /*[[linkColor]]*/
 		!important
 	}
-	.quick-menu-item-label {
+	.quick-menu-item-label,
+    a.character-button-block{
 		border: none;
 	}
 	.quick-menu-item-active > .quick-menu-item-label {
@@ -1109,6 +1115,8 @@ div#site{
         background: /*[[linkColor]]*/;
         padding: 12px;
     }
+        
+
     
     
 }
