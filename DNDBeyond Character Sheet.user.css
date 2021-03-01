@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.1.14
+@version      1.1.15
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -113,7 +113,9 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .alertify .ajs-body,
     ._3A6FDLVnjjt8AEw9hQLvFY,
     ._1WXtuzqHtOKDwJKEVpp6Oi,
-    .body-rpgcharacter-sheet{
+    .body-rpgcharacter-sheet,
+    [class^="ct-vehicle-block__block"],
+    .ct-vehicle-pane__tag{
 		background-color: /*[[sheetColor]]*/
 		!important;
 		color: /*[[fontColor]]*/
@@ -264,13 +266,16 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 	.ddbc-creature-block__name,
 	.ddbc-creature-block__abilities,
 	.ddbc-creature-block__description-block-heading,
+    [class^="ct-vehicle-block__section-header"],
 	a:visited,
 	a:hover,
 	a,
     .beyond20-message details summary, .beyond20-title,
     .ct-spells-filter__clear, 
     .ct-inventory-filter__clear,
-    .ct-extras-filter__clear
+    .ct-extras-filter__clear,
+    .ct-vehicle-block__ability-heading,
+    .ct-vehicle-block__name
 	{
 		color: /*[[highlightColor]]*/ !important;
 	}
