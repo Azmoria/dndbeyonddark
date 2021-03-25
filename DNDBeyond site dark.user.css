@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.1.21
+@version      1.1.22
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -320,7 +320,8 @@ div#site{
     [class^="character-card"],
     .context-menu-option,
     .Flowchart-Block,
-    .body-page .p-article-a .p-article-content table
+    .body-page .p-article-a .p-article-content table,
+    .details-container-content-description-text table tbody tr:nth-child(odd)
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
