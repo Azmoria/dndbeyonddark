@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.1.17
+@version      1.1.18
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -270,6 +270,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 	a:visited,
 	a:hover,
 	a,
+    [role=button],
     .beyond20-message details summary, .beyond20-title,
     .ct-spells-filter__clear, 
     .ct-inventory-filter__clear,
@@ -280,9 +281,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 		color: /*[[highlightColor]]*/ !important;
 	}
 
-	.ct-character-sheet--dice-enabled .integrated-dice__container span {
-		color: /*[[rollColor]]*/;
-	}
+
 
 	/*If you hit the beautify button add a space between each 0 and / */
 	.ct-combat__summary-label--outline,
@@ -337,6 +336,9 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 	}
 	.ct-character-sheet--dice-enabled .integrated-dice__container:hover {
 		border-color: /*[[rollColor]]*/;
+	}
+    .ct-character-sheet--dice-enabled .integrated-dice__container span {
+		color: /*[[rollColor]]*/;
 	}
 	.ct-character-sheet--dice-enabled .integrated-dice__container {
 		border: none;
@@ -618,20 +620,35 @@ regexp("https://www.dndbeyond.com/characters/.*"), regexp("https://www.dndbeyond
     .ct-character-sheet--dice-enabled .ddbc-combat-attack--crit .ddbc-combat-attack__damage .integrated-dice__container:hover,
     [class^="GameLogEntry_Message_"],
     ._1_4XN--HbdIB3j-9HVLY3F,
-    ._1KM4FtjuhNomsZCIfBsJQ1{
+    ._1KM4FtjuhNomsZCIfBsJQ1,
+    .dice-die-button__tooltip,
+    .dice-die-button__tooltip__pip,
+    .dice-die-button__count{
 		background: /*[[rollCalcColor]]*/ !important;
 	}
 	.dice-toolbar:hover,
     .GameLogEntry_Message__LMnm6,
-    ._1_4XN--HbdIB3j-9HVLY3F{
+    ._1_4XN--HbdIB3j-9HVLY3F,
+
+    .dice-die-button__tooltip{
 		border: 1px solid /*[[rollColor]]*/ !important;
 	}
+    
+    .dice-die-button__tooltip__pip{
+        border-left-color: /*[[rollColor]]*/;
+        border-bottom-color: /*[[rollColor]]*/;
+    }
+    
 	.dice-toolbar__dropdown-selected .dice-toolbar__dropdown-die,
 	.dice-toolbar__dropdown-selected .dice-toolbar__dropdown-die:hover,
-    .GameLogEntry_Message__1GoY3.GameLogEntry_Other__2PSbv{
+    .GameLogEntry_Message__1GoY3.GameLogEntry_Other__2PSbv,
+    .dice-icon-die:hover{
 		border-color: /*[[rollColor]]*/
 		!important;
 	}
+   .dice-die-button:hover .dice-icon-die{
+        background-color: /*[[rollColor]]*/;
+    }
 	.dice_result__info .dice-icon-die {
 		background-color: /*[[fontColor]]*/;
 	}
@@ -721,6 +738,10 @@ regexp("https://www.dndbeyond.com/characters/.*"), regexp("https://www.dndbeyond
     .beyond20-roll-detail-crit{
         color: #0F0 !important;
     }
+    .dice-die-button__count,
+    .dice-die-button__tooltip{
+     color: /*[[rollColor]]*/   
+    }
     
     .encounter-builder-app .integrated-dice__container{
   
@@ -728,10 +749,15 @@ regexp("https://www.dndbeyond.com/characters/.*"), regexp("https://www.dndbeyond
         background: /*[[background]]*/ ;
         border: none;
     }
-    .encounter-builder-app .integrated-dice__container:hover,
-    .encounter-builder-app .integrated-dice__container:focus{
+    .encounter-builder-app .integrated-dice__container:hover{
         border: 1px /*[[rollColor]]*/ solid !important;
-        outline-style: solid!important;
+        
+    }
+    
+    
+    .encounter-builder-app .integrated-dice__container:focus
+    {
+        outline: none !important;
     }
     
 }
