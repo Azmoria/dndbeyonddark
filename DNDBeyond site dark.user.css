@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.1.22
+@version      1.1.23
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -38,7 +38,7 @@ url-prefix("https://www.dndbeyond.com/my-characters"),
 url-prefix("https://www.dndbeyond.com/search"),
 url-prefix("https://www.dndbeyond.com/modifier"),
 url-prefix("https://www.dndbeyond.com/entity"),
-    url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyond.com/subclasses"), url-prefix("https://www.dndbeyond.com/articles"), url-prefix("https://www.dndbeyond.com/tag"), url-prefix("https://www.dndbeyond.com/subraces"), url-prefix("https://www.dndbeyond.com/changelog"), regexp("https://www.dndbeyond.com/profile/.*/characters"), regexp("https://www.dndbeyond.com/encounter-builder"), regexp("https://www.dndbeyond.com/my-encounters"), regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond.com/combat-tracker/.*"), regexp("https://www.dndbeyond.com/items"), regexp("https://www.dndbeyond.com/my-dice"){
+    url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyond.com/subclasses"), url-prefix("https://www.dndbeyond.com/articles"), url-prefix("https://www.dndbeyond.com/tag"), url-prefix("https://www.dndbeyond.com/subraces"), url-prefix("https://www.dndbeyond.com/changelog"), regexp("https://www.dndbeyond.com/profile/.*/characters"), regexp("https://www.dndbeyond.com/encounter-builder"), regexp("https://www.dndbeyond.com/my-encounters"), regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond.com/combat-tracker/.*"), regexp("https://www.dndbeyond.com/items"), regexp("https://www.dndbeyond.com/my-dice"), regexp("https://www.dndbeyond.com/members/.*"), regexp("https://www.dndbeyond.com/private-messages.*"){
 
 div#site{
     height: initial;
@@ -321,7 +321,47 @@ div#site{
     .context-menu-option,
     .Flowchart-Block,
     .body-page .p-article-a .p-article-content table,
-    .details-container-content-description-text table tbody tr:nth-child(odd)
+    .details-container-content-description-text table tbody tr:nth-child(odd),
+    .p-user-a .p-user-stats, 
+    .p-user-a.s_myAccount .p-user-stats, 
+    .p-user-a.s_myProfile .p-user-stats, 
+    .p-user-a.s_myStreams .p-user-stats, 
+    .p-user-a.s_newContent .p-user-stats,
+    .p-user-a .p-user-interaction .p-user-content, 
+    .p-user-a.s_myAccount .p-user-interaction .p-user-content, 
+    .p-user-a.s_myProfile .p-user-interaction .p-user-content, 
+    .p-user-a.s_myStreams .p-user-interaction .p-user-content, 
+    .p-user-a.s_newContent .p-user-interaction .p-user-content,
+    .p-user-a .listing .latest-post-item .post-date, 
+    .p-user-a.s_myAccount .listing .latest-post-item .post-date, 
+    .p-user-a.s_myProfile .listing .latest-post-item .post-date, 
+    .p-user-a.s_myStreams .listing .latest-post-item .post-date, 
+    .p-user-a.s_newContent .listing .latest-post-item .post-date,
+    .p-user-content span.tip::before,
+    .p-user-content abbr.tip::before,
+    .p-user-a .listing .latest-post-item .post-location, 
+    .p-user-a.s_myAccount .listing .latest-post-item .post-location, 
+    .p-user-a.s_myProfile .listing .latest-post-item .post-location, 
+    .p-user-a.s_myStreams .listing .latest-post-item .post-location, 
+    .p-user-a.s_newContent .listing .latest-post-item .post-location,
+    body.body-user.responsive-enabled .p-user-a .p-user-interaction .profile-nav-container nav, 
+    body.user.responsive-enabled .p-user-a .p-user-interaction .profile-nav-container nav,
+    body.responsive-enabled .scroll-container .scrolled-content,
+    .p-user-a .p-user-interaction .p-nav .b-list-item:hover a, 
+    .p-user-a .p-user-interaction .p-nav .b-list-item.selected a, 
+    .p-user-a.s_myAccount .p-user-interaction .p-nav .b-list-item:hover a, 
+    .p-user-a.s_myAccount .p-user-interaction .p-nav .b-list-item.selected a, 
+    .p-user-a.s_myProfile .p-user-interaction .p-nav .b-list-item:hover a, 
+    .p-user-a.s_myProfile .p-user-interaction .p-nav .b-list-item.selected a, 
+    .p-user-a.s_myStreams .p-user-interaction .p-nav .b-list-item:hover a, 
+    .p-user-a.s_myStreams .p-user-interaction .p-nav .b-list-item.selected a, 
+    .p-user-a.s_newContent .p-user-interaction .p-nav .b-list-item:hover a, 
+    .p-user-a.s_newContent .p-user-interaction .p-nav .b-list-item.selected a,
+    .p-user-a .p-user-interaction .p-nav .b-list-item a, 
+    .p-user-a.s_myAccount .p-user-interaction .p-nav .b-list-item a, 
+    .p-user-a.s_myProfile .p-user-interaction .p-nav .b-list-item a, 
+    .p-user-a.s_myStreams .p-user-interaction .p-nav .b-list-item a, 
+    .p-user-a.s_newContent .p-user-interaction .p-nav .b-list-item a
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
@@ -475,7 +515,12 @@ div#site{
     .non-sortable-label,
     .tooltip-body-statblock-item-value,
     .tooltip-body-statblock-item-label,
-    .tooltip-body-description{
+    .tooltip-body-description,
+    .p-user-a .p-user-interaction .p-user-content .member-profile .profile-field-group .profile-field-text, 
+    .p-user-a.s_myAccount .p-user-interaction .p-user-content .member-profile .profile-field-group .profile-field-text, 
+    .p-user-a.s_myProfile .p-user-interaction .p-user-content .member-profile .profile-field-group .profile-field-text, 
+    .p-user-a.s_myStreams .p-user-interaction .p-user-content .member-profile .profile-field-group .profile-field-text, 
+    .p-user-a.s_newContent .p-user-interaction .p-user-content .member-profile .profile-field-group .profile-field-text{
 		color: /*[[fontColor]]*/
 		!important;
 	}
@@ -734,7 +779,12 @@ div#site{
     .stat-block-background,
     .stat-block-background--3,
     body,
-    .Flowchart-Block{
+    .Flowchart-Block,
+    .p-user-a .p-user-stats, 
+    .p-user-a.s_myAccount .p-user-stats, 
+    .p-user-a.s_myProfile .p-user-stats, 
+    .p-user-a.s_myStreams .p-user-stats, 
+    .p-user-a.s_newContent .p-user-stats{
 		background-image: none !important;
 	}
 	aside,
@@ -790,6 +840,13 @@ div#site{
 		border-style: /*[[borderStyle]]*/;
 		border-color: /*[[borderColor]]*/;
 	}
+        
+        .p-user-a .listing .latest-post-item, .p-user-a.s_myAccount .listing .latest-post-item, .p-user-a.s_myProfile .listing .latest-post-item, .p-user-a.s_myStreams .listing .latest-post-item, .p-user-a.s_newContent .listing .latest-post-item{
+    border-color: /*[[fontColor]]*/;
+            
+        }
+        
+        
     .notification.notification-success.notification-visible{
         border-top: 2px solid /*[[linkColor]]*/ !important;
     }
@@ -873,7 +930,13 @@ div#site{
     .p-article-a .section-changelog .p-article-content h3::after,
     .body-page .p-article-a .p-article-content h1::after, 
     .section-posts .p-article-a .p-article-content h1::after, 
-    .p-article-a .section-changelog .p-article-content h1::after{
+    .p-article-a .section-changelog .p-article-content h1::after,
+    body.body-user.responsive-enabled .p-user-a .p-user-interaction .profile-nav-container nav .p-nav .b-list-item:hover a::after, 
+    body.body-user.responsive-enabled .p-user-a .p-user-interaction .profile-nav-container nav .p-nav .b-list-item.selected a::after, 
+    body.user.responsive-enabled .p-user-a .p-user-interaction .profile-nav-container nav .p-nav .b-list-item:hover a::after, 
+    body.user.responsive-enabled .p-user-a .p-user-interaction .profile-nav-container nav .p-nav .b-list-item.selected a::after,
+    body.responsive-enabled .scroll-container .scrolled-content ul.tabbed-tabs .b-tab-item:hover a::after, 
+    body.responsive-enabled .scroll-container .scrolled-content ul.tabbed-tabs .b-tab-item.selected a::after{
         background-color: /*[[linkColor]]*/ !important;
     }
         
