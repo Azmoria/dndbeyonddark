@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.1.21
+@version      1.1.22
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -24,6 +24,8 @@
 regexp("https://www.dndbeyond.com/characters/.*") {
 
 
+ /*Character Sheet only*/
+    
 	/*Scrollbar style */
 	::-webkit-scrollbar {
 		width: 10px;
@@ -526,7 +528,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 @-moz-document regexp("https://www.dndbeyond.com/profile/.*/characters/\\d*"),
 regexp("https://www.dndbeyond.com/characters/.*"), regexp("https://www.dndbeyond.com/encounter-builder"), regexp("https://www.dndbeyond.com/combat-tracker/.*"), regexp("https://www.dndbeyond.com/monsters/.*"), regexp("https://www.dndbeyond.com/campaigns/.*"), regexp("https://www.dndbeyond.com/encounters/.*") {
 
-/*Dice Alpha Size and position changes*/
+/*Dice Alpha Size and position changes for full site*/
 	.ct-character-sheet--dice-enabled .ct-skills__item .integrated-dice__container,
 	.ct-character-sheet--dice-enabled .ct-spells-spell__tohit .integrated-dice__container,
 	.ct-character-sheet--dice-enabled .ddbc-combat-attack__tohit .integrated-dice__container
