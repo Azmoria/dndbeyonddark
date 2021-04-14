@@ -1,12 +1,12 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.1.19
+@version      1.1.20
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20Character%20Sheet.user.css
 @var text backgroundImg "Background image URL: two double quotes for dndbeyond background choice, url for custom or blank for background color" ""
-@var color background "Background Color" "#000"
+@var color background "Background Color" "#000000ff"
 @var color sheetColor "Sheet Color" #000
 @var color fontColor "Font Color" #ddd
 @var color borderColor "Border Color" #114
@@ -36,17 +36,24 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 		background-color: /*[[scrollbarColor]]*/;
 		border-radius: 6px;
 		background-clip: padding-box;
-		border: 4px solid rgba(0, 0, 0, 0);
+		border: 4px dotted rgba(0, 0, 0, 0);
 	}
 
 	/*Background colors, images and styles */
-	html body.body-rpgcharacter-sheet {
-		background: url("/*[[backgroundImg]]*/");
-		background-color: /*[[background]]*/;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: cover;
-	}
+    
+    html body.body-rpgcharacter-sheet{
+    background: url("/*[[backgroundImg]]*/") no-repeat !important;
+	background-color: /*[[background]]*/ !important;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
+    }
+    .ct-component-carousel__active{
+     background: transparent !important;
+    }
+        
+    
 
 	.ct-health-summary__adjuster-field-input,
 	.ddbc-campaign-summary,
@@ -77,7 +84,6 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 	.ct-spell-caster__casting-action-count.ct-spell-caster__casting-action-count--spellcasting,
 	.ddbc-ability-score-manager__component-value,
 	.ct-component-carousel__placeholders,
-	.ct-component-carousel__active,
 	.ct-mobile-divider__label,
 	.ct-main-mobile__saving-throws,
 	.ct-main-mobile .ct-senses,
