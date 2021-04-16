@@ -1,26 +1,44 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.1.26
+@version      1.1.27
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20Character%20Sheet.user.css
 @var text backgroundImg "Background image URL: two double quotes for dndbeyond background choice, url for custom or blank for background color" ""
+@advanced  dropdown backgroundImg "Background" {
+  color "Color" <<<EOT
+    background-image: none; EOT;
+  dnd "DnDBeyond Set" <<<EOT
+ EOT;
+  custom "Custom Image" <<<EOT
+background-image: var(--custom-background); EOT;
+}
+@var text customBackground "Custom Background url; eg. url(.../image.jpg)" "url()"
 @var color background "Background Color" "#000000"
 @var color sheetColor "Sheet Color" #000
+@var range sheetOpacity "Sheet Opacity" [1, 0, 1, 0.01]
 @var color fontColor "Font Color" #ddd
 @var color borderColor "Border Color" #114
 @var color highlightColor "Highlight Color" #59d
 @var color scrollbarColor "Scrollbar Color" #114
 @var color rollColor "Rollable Items Color" #59d
 @var color rollCalcColor "Roll History Background Color" #030f1aea
-@var text filter "Icons filter - for dark backgrounds: invert(100%) for light background: none" "invert(100%)"
-@var text zindex "Z-index for dice: above 60001 for above results; below 60001 for below results" "60000"
+@var select filter "Icon Color" {
+ "Light": "invert(100%)",
+ "Dark": "none",
+}
+@var select zindex "Dice over or Under the results" {
+ "Over": "60002",
+ "Under": "60000"
+}
 ==/UserStyle== */
 @-moz-document regexp("https://www.dndbeyond.com/profile/.*/characters/\\d*"),
 regexp("https://www.dndbeyond.com/characters/.*") {
 
-
+:root{
+    --custom-background: /*[[customBackground]]*/;
+    }
  /*Character Sheet only*/
     
 	/*Scrollbar style */
@@ -29,7 +47,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 	}
 
 	::-webkit-scrollbar-track {
-		background: /*[[sheetColor]]*/;
+		background: none;
 	}
 	::-webkit-scrollbar-thumb {
 		background-color: /*[[scrollbarColor]]*/;
@@ -41,7 +59,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 	/*Background colors, images and styles */
     
     html body.body-rpgcharacter-sheet{
-    background: url("/*[[backgroundImg]]*/") !important;
+    /*[[backgroundImg]]*/
 	background-color: /*[[background]]*/ !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
@@ -458,8 +476,9 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 	.ct-sidebar__pane-bottom path,
     svg.ddbc-svg.ddbc-manage-level-svg.ddbc-svg--themed path
     {
-		fill: /*[[sheetColor]]*/
-		!important;
+		fill: /*[[sheetColor]]*/ !important;
+        opacity: /*[[sheetOpacity]]*/ !important;
+	
 	}
 	.ct-sidebar__pane-bottom path,
 	.ct-sidebar__pane-top path {
