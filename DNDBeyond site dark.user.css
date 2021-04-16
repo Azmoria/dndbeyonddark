@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.1.27
+@version      1.1.28
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -48,7 +48,16 @@ none EOT;
 custom "Custom icon filter" <<<EOT
 var(--custom-icon-filter) EOT;
 }
-@var text iconFilter "Custom Icon css filter" " invert(75%) sepia(100%) hue-rotate(160deg) saturate(150%)"
+@var text iconFilter "Custom Icon css filter" "invert(75%) sepia(100%) hue-rotate(160deg) saturate(150%)"
+@advanced dropdown iFrameFilter "iFrame filters"{
+    dark "Dark iFrames" <<<EOT
+invert(100%)  EOT;
+light "Light iFrames" <<<EOT
+none EOT;
+custom "Custom icon filter" <<<EOT
+var(--custom-iframe-filter) EOT;
+}
+@var text customiFrameFilter "Custom iFrameFilter "invert(75%) sepia(100%) hue-rotate(160deg) saturate(150%)"
 ==/UserStyle==*/
 /* Alternative Color for font to match DND Beyond Green #47D18C */
 @-moz-document url-prefix("https://www.dndbeyond.com/sources"),
@@ -73,13 +82,14 @@ url-prefix("https://www.dndbeyond.com/my-characters"),
 url-prefix("https://www.dndbeyond.com/search"),
 url-prefix("https://www.dndbeyond.com/modifier"),
 url-prefix("https://www.dndbeyond.com/entity"),
-url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyond.com/subclasses"), url-prefix("https://www.dndbeyond.com/articles"), url-prefix("https://www.dndbeyond.com/tag"), url-prefix("https://www.dndbeyond.com/subraces"), url-prefix("https://www.dndbeyond.com/changelog"), regexp("https://www.dndbeyond.com/profile/.*/characters"), regexp("https://www.dndbeyond.com/encounter-builder"), regexp("https://www.dndbeyond.com/my-encounters"), regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond.com/combat-tracker/.*"), regexp("https://www.dndbeyond.com/items"), regexp("https://www.dndbeyond.com/my-dice"), regexp("https://www.dndbeyond.com/members/.*"), regexp("https://www.dndbeyond.com/private-messages.*"){
+url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyond.com/subclasses"), url-prefix("https://www.dndbeyond.com/articles"), url-prefix("https://www.dndbeyond.com/tag"), url-prefix("https://www.dndbeyond.com/subraces"), url-prefix("https://www.dndbeyond.com/changelog"), regexp("https://www.dndbeyond.com/profile/.*/characters"), regexp("https://www.dndbeyond.com/encounter-builder"), regexp("https://www.dndbeyond.com/my-encounters"), regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond.com/combat-tracker/.*"), regexp("https://www.dndbeyond.com/items"), regexp("https://www.dndbeyond.com/my-dice"), regexp("https://www.dndbeyond.com/members/.*"), regexp("https://www.dndbeyond.com/private-messages.*"), regexp("https://www.dndbeyond.com/content/.*"){
 
     :root{
     --custom-transparency: /*[[backgroundColor]]*//*[[customTransparency]]*/;
     --semi: /*[[backgroundColor]]*/aa;
     --opaque: /*[[backgroundColor]]*/ff;
     --custom-icon-filter: /*[[iconFilter]]*/;
+    --custom-iframe-filter: /*[[customiFrameFilter]]*/;
     }
         
 div#site{
@@ -98,7 +108,7 @@ div#site{
 		border-radius: 6px;
 		border: none;
 	}
- 
+
     
 	body.responsive-enabled #site #site-main .container #content,
 	body.responsive-enabled #site #site-main.fixed .container #content,
@@ -778,11 +788,15 @@ div#site{
 	.i-legendary-monster,
 	.i-checkmark,
 	.ddb-statblock.ddb-statblock-monster.ddb-statblock-ability-scores div::before,
-	.es-form-icon,
-	#field-body-wysiwyg_ifr,
-    .mce-edit-area iframe{
+	.es-form-icon{
 		filter: /*[[filter]]*/;
 	}
+    
+    
+	#field-body-wysiwyg_ifr,
+    .mce-edit-area iframe{
+        filter: /*[[iFrameFilter]]*/
+    }
 	.p-article-a .compendium-toc-blockquote > a,
 	.p-article-a .compendium-toc-blockquote > a:hover,
 	.ddb-campaigns-list-item-body-sharing-box,
@@ -1236,6 +1250,7 @@ div#site{
     --semi: /*[[backgroundColor]]*/aa;
     --opaque: /*[[backgroundColor]]*/ff;
     --custom-icon-filter: /*[[iconFilter]]*/;
+    --custom-iFrame-filter: /*[[customiFrameFilter]]*/;
     }
 	::-webkit-scrollbar {
 		width: 3px;
