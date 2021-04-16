@@ -48,7 +48,7 @@ none EOT;
 custom "Custom icon filter" <<<EOT
 var(--custom-icon-filter) EOT;
 }
-@var text iconFilter "Custom Icon css filter" "invert(75%) sepia(100%) hue-rotate(160deg) saturate(200%))"
+@var text iconFilter "Custom Icon css filter" "invert(75%) sepia(100%) hue-rotate(160deg) saturate(200%)"
 ==/UserStyle==*/
 /* Alternative Color for font to match DND Beyond Green #47D18C */
 @-moz-document url-prefix("https://www.dndbeyond.com/sources"),
