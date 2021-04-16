@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.1.28
+@version      1.1.29
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -23,10 +23,15 @@ background-image: var(--custom-background); EOT;
 @var color scrollbarColor "Scrollbar Color" #114
 @var color rollColor "Rollable Items Color" #59d
 @var color rollCalcColor "Roll History Background Color" #030f1aea
-@var select filter "Icon Color" {
- "Light": "invert(100%)",
- "Dark": "none",
+@advanced dropdown filter "Icon Color Use light icons on a dark background" {
+    light "Light icons" <<<EOT
+invert(100%) EOT;
+dark "Dark icons" <<<EOT
+none EOT;
+custom "Custom icon filter" <<<EOT
+var(--custom-icon-filter) EOT;
 }
+@var text iconFilter "Custom Icon css filter" "invert(75%) sepia(100%) hue-rotate(160deg) saturate(200%)"
 @var select zindex "Dice over or Under the results" {
  "Over": "60002",
  "Under": "60000"
@@ -37,6 +42,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 
 :root{
     --custom-background: /*[[customBackground]]*/;
+    --custom-icon-filter: /*[[iconFilter]]*/;
     }
  /*Character Sheet only*/
     
@@ -547,6 +553,10 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 
 @-moz-document regexp("https://www.dndbeyond.com/profile/.*/characters/\\d*"),
 regexp("https://www.dndbeyond.com/characters/.*"), regexp("https://www.dndbeyond.com/encounter-builder"), regexp("https://www.dndbeyond.com/combat-tracker/.*"), regexp("https://www.dndbeyond.com/monsters/.*"), regexp("https://www.dndbeyond.com/campaigns/.*"), regexp("https://www.dndbeyond.com/encounters/.*") {
+    :root{
+    --custom-background: /*[[customBackground]]*/;
+    --custom-icon-filter: /*[[iconFilter]]*/;
+    }
 
 /*Dice Alpha Size and position changes for full site*/
 	.ct-character-sheet--dice-enabled .ct-skills__item .integrated-dice__container,
