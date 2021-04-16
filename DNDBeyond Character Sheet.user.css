@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.1.31
+@version      1.1.32
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -16,7 +16,7 @@ background-image: var(--custom-background); EOT;
 @var text customBackground "Custom Background url; eg. url(.../image.jpg)" "url()"
 @var color background "Background Color" "#000000"
 @var color sheetColor "Sheet Color" #000
-@var range sheetOpacity "Sheet Opacity" [1, 0, 1, 0.01]
+@var range sheetOpacity "Sheet Opacity" [1, 0.01, 1, 0.01]
 @var color fontColor "Font Color" #ddd
 @var color borderColor "Border Color" #114
 @var color highlightColor "Highlight Color" #59d
@@ -36,6 +36,12 @@ var(--custom-icon-filter) EOT;
  "Over": "60002",
  "Under": "60000"
 }
+@advanced dropdown titleToggle "Character Title background toggle" {
+on "ON"<<<EOT
+ EOT;
+off "OFF"<<<EOT
+background: none; EOT;
+}
 ==/UserStyle== */
 @-moz-document regexp("https://www.dndbeyond.com/profile/.*/characters/\\d*"),
 regexp("https://www.dndbeyond.com/characters/.*") {
@@ -49,20 +55,26 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 	/*Scrollbar style */
 	::-webkit-scrollbar {
 		width: 10px;
+     
 	}
 
 	::-webkit-scrollbar-track {
-		background: none;
+		background: none;       
 	}
 	::-webkit-scrollbar-thumb {
 		background-color: /*[[scrollbarColor]]*/;
-		border-radius: 6px;
+		border-radius: 4px;
 		background-clip: padding-box;
-		border: 4px solid rgba(0, 0, 0, 0);
+		border: 3px solid rgba(0, 0, 0, 0);       
 	}
 
 	/*Background colors, images and styles */
-    
+    body{    
+        overflow: overlay;
+    }
+    .ct-character-sheet:before{
+     /*[[titleToggle]]*/
+    }
     html body.body-rpgcharacter-sheet{
     /*[[backgroundImg]]*/
 	background-color: /*[[background]]*/ !important;
@@ -459,19 +471,18 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     {
 		fill: /*[[highlightColor]]*/
 		!important;
+            opacity: 1 !important;
 	}
-	svg > path + path,
-	.ct-combat__statuses path,
-	.ct-initiative-box path,
-	.ct-inspiration path,
-	.ct-proficiency-groups-box path,
-	.ddbc-attunement-slot.ddbc-attunement-slot--empty path
-    {
-		fill: /*[[borderColor]]*/
-		!important;
-	}
+    
+    .ct-character-header-desktop svg > path,
+    .ct-sidebar svg > path{
+        opacity: 1 !important;
+    }
 
-	svg > path,
+
+	.ct-quick-info svg > path,
+    
+    svg > path,
 	.ct-combat__statuses polygon,
 	.ct-initiative-box polygon,
 	#InspirationBoxSvg-Fill-1,
@@ -484,6 +495,19 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 		fill: /*[[sheetColor]]*/ !important;
         opacity: /*[[sheetOpacity]]*/ !important;
 	
+	}
+    
+    svg > path + path,
+	.ct-combat__statuses path,
+	.ct-initiative-box path,
+	.ct-inspiration path,
+	.ct-proficiency-groups-box path,
+	.ddbc-attunement-slot.ddbc-attunement-slot--empty path,
+    .ct-quick-info svg > path + path
+    {
+		fill: /*[[borderColor]]*/
+		!important;
+        opacity: /*[[sheetOpacity]]*/;
 	}
 	.ct-sidebar__pane-bottom path,
 	.ct-sidebar__pane-top path {
