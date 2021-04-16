@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.1.29
+@version      1.1.30
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -23,7 +23,7 @@ background-image: var(--custom-background); EOT;
 @var color scrollbarColor "Scrollbar Color" #114
 @var color rollColor "Rollable Items Color" #59d
 @var color rollCalcColor "Roll History Background Color" #030f1aea
-@advanced dropdown filter "Icon Color Use light icons on a dark background" {
+@advanced dropdown filter "Icon Color" {
     light "Light icons" <<<EOT
 invert(100%) EOT;
 dark "Dark icons" <<<EOT
