@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.1.25
+@version      1.1.26
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -40,13 +40,15 @@ none EOT;
 }
 @var range borderWidth "Border Width" [1, 1, 10, 1, 'px']
 @var color scrollbarColor "Scrollbar Color" #88bcd6
-@var text filter "Icons filter - for dark backgrounds: invert(100%) hue-rotate(180deg) for light background: none" "invert(100%) hue-rotate(180deg)"
-@advanced dropdown filter "Icon Color" {
+@advanced dropdown filter "Icon Color Use light icons on a dark background" {
     light "Light icons" <<<EOT
 invert(100%) hue-rotate(180deg) EOT;
 dark "Dark icons" <<<EOT
 none EOT;
+custom "Custom icon filter" <<<EOT
+var(--custom-icon-filter) EOT;
 }
+@var text iconFilter "Custom Icon css filter" "invert(75%) sepia(100%) hue-rotate(160deg) saturate(200%))"
 ==/UserStyle==*/
 /* Alternative Color for font to match DND Beyond Green #47D18C */
 @-moz-document url-prefix("https://www.dndbeyond.com/sources"),
@@ -77,6 +79,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     --custom-transparency: /*[[backgroundColor]]*//*[[customTransparency]]*/;
     --semi: /*[[backgroundColor]]*/aa;
     --opaque: /*[[backgroundColor]]*/ff;
+    --custom-icon-filter: /*[[iconFilter]]*/;
     }
         
 div#site{
@@ -1232,6 +1235,7 @@ div#site{
     --custom-transparency: /*[[backgroundColor]]*//*[[customTransparency]]*/;
     --semi: /*[[backgroundColor]]*/aa;
     --opaque: /*[[backgroundColor]]*/ff;
+    --custom-icon-filter: /*[[iconFilter]]*/;
     }
 	::-webkit-scrollbar {
 		width: 3px;
