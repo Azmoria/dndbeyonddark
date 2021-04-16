@@ -27,8 +27,6 @@ Character Sheet examples:
 Rest of the site examples:
 
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/DNDBeyond%20Dark/DNDbeyond%20main%20page.PNG?raw=true"/>
-<img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/DNDBeyond%20Dark/Forums.PNG?raw=true"/>
-<img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/DNDBeyond%20Dark/Forums2.PNG?raw=true"/>
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/DNDBeyond%20Dark/basic.PNG?raw=true"/>
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/DNDBeyond%20Dark/players-hand.PNG?raw=true"/>
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/DNDBeyond%20Dark/spells.PNG"/>
