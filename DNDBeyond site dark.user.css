@@ -2,18 +2,51 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.1.23
+@version      1.1.24
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
-@var color transparencyBackgroundColor "Background Color of things that can be transparent" #000000e0
+@advanced dropdown transparencyBackgroundColor "Transparency of somebackgrounds/buttons" {
+semi "Semi-transparent"<<<EOT
+background-color: var(--semi); EOT;
+opaque "Opaque"<<<EOT
+background-color: var(--opaque); EOT;
+custom "Custom (Hex)"<<<EOT
+background: var(--custom-transparency) !important; EOT;
+}
+@var text customTransparency "Custom Transparency (Hex 00 to FF)" "55"
 @var color fontColor "Font Color" #c0c0c0
 @var color linkColor "Link Color" #88bcd6
 @var color borderColor "Border Color" #fff
-@var text borderStyle "Border Style eg. dotted" "solid"
-@var text borderWidth "Border Width eg. 2px" "1px"
+@advanced dropdown borderStyle "Border Style" {
+solid "Solid" <<<EOT
+solid EOT;
+dotted "Dotted" <<<EOT
+dotted EOT;
+dashed "Dashed" <<<EOT
+dashed EOT;
+double "Double" <<<EOT
+double EOT;
+groove "Groove" <<<EOT
+groove EOT;
+ridge "Ridge" <<<EOT
+ridge EOT;
+inset "Inset" <<<EOT
+inset EOT;
+outset "Outset" <<<EOT
+outset EOT;
+none "None" <<<EOT
+none EOT;
+}
+@var range borderWidth "Border Width" [1, 1, 10, 1, 'px']
 @var color scrollbarColor "Scrollbar Color" #88bcd6
 @var text filter "Icons filter - for dark backgrounds: invert(100%) hue-rotate(180deg) for light background: none" "invert(100%) hue-rotate(180deg)"
+@advanced dropdown filter "Icon Color" {
+    dark "Dark Background" <<<EOT
+invert(100%) hue-rotate(180deg) EOT;
+light "Light Background" <<<EOT
+none EOT;
+}
 ==/UserStyle==*/
 /* Alternative Color for font to match DND Beyond Green #47D18C */
 @-moz-document url-prefix("https://www.dndbeyond.com/sources"),
@@ -38,8 +71,14 @@ url-prefix("https://www.dndbeyond.com/my-characters"),
 url-prefix("https://www.dndbeyond.com/search"),
 url-prefix("https://www.dndbeyond.com/modifier"),
 url-prefix("https://www.dndbeyond.com/entity"),
-    url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyond.com/subclasses"), url-prefix("https://www.dndbeyond.com/articles"), url-prefix("https://www.dndbeyond.com/tag"), url-prefix("https://www.dndbeyond.com/subraces"), url-prefix("https://www.dndbeyond.com/changelog"), regexp("https://www.dndbeyond.com/profile/.*/characters"), regexp("https://www.dndbeyond.com/encounter-builder"), regexp("https://www.dndbeyond.com/my-encounters"), regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond.com/combat-tracker/.*"), regexp("https://www.dndbeyond.com/items"), regexp("https://www.dndbeyond.com/my-dice"), regexp("https://www.dndbeyond.com/members/.*"), regexp("https://www.dndbeyond.com/private-messages.*"){
+url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyond.com/subclasses"), url-prefix("https://www.dndbeyond.com/articles"), url-prefix("https://www.dndbeyond.com/tag"), url-prefix("https://www.dndbeyond.com/subraces"), url-prefix("https://www.dndbeyond.com/changelog"), regexp("https://www.dndbeyond.com/profile/.*/characters"), regexp("https://www.dndbeyond.com/encounter-builder"), regexp("https://www.dndbeyond.com/my-encounters"), regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond.com/combat-tracker/.*"), regexp("https://www.dndbeyond.com/items"), regexp("https://www.dndbeyond.com/my-dice"), regexp("https://www.dndbeyond.com/members/.*"), regexp("https://www.dndbeyond.com/private-messages.*"){
 
+    :root{
+    --custom-transparency: /*[[backgroundColor]]*//*[[customTransparency]]*/;
+    --semi: /*[[backgroundColor]]*/aa;
+    --opaque: /*[[backgroundColor]]*/ff;
+    }
+        
 div#site{
     height: initial;
         }
@@ -389,7 +428,7 @@ div#site{
     .site .character-button-outline, 
     .site .character-button-oversized, 
     .site .character-button-small{
-		background-color: /*[[transparencyBackgroundColor]]*/
+		/*[[transparencyBackgroundColor]]*/
 	}
 
 	.irace-listing .more-info,
@@ -968,7 +1007,7 @@ div#site{
     }
         
     .site .ct-button.ct-theme-button--filled{
-	    background: /*[[transparencyBackgroundColor]]*/;
+	    /*[[transparencyBackgroundColor]]*/
      }
     .site .character-button, .site .character-button-block,
     .site .character-button-block-large,
@@ -1040,7 +1079,7 @@ div#site{
     .site .character-button:disabled:hover,
     .ddbc-dice-roll__dice-value.ddbc-dice-roll__dice-value--discarded,
     .add-combatant-modal__controls-button+.add-combatant-modal__controls-button[disabled]{
-        background-color: /*[[transparencyBackgroundColor]]*/ !important;
+       /*[[transparencyBackgroundColor]]*/ 
         box-shadow: inset 0 0 25px 0px #eaeaea;
     }
         
@@ -1189,7 +1228,11 @@ div#site{
 
 
 @-moz-document url("https://www.dndbeyond.com/") {
-
+  :root{
+    --custom-transparency: /*[[backgroundColor]]*//*[[customTransparency]]*/;
+    --semi: /*[[backgroundColor]]*/aa;
+    --opaque: /*[[backgroundColor]]*/ff;
+    }
 	::-webkit-scrollbar {
 		width: 3px;
 	}
@@ -1257,7 +1300,7 @@ div#site{
 		
 	}
 	.post-excerpt__description{
-		background: /*[[transparencyBackgroundColor]]*/;
+		/*[[transparencyBackgroundColor]]*/;
 		border-radius: 5px;
 		padding: 5px
 		
