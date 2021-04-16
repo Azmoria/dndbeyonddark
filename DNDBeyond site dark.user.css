@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.1.26
+@version      1.1.27
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -48,7 +48,7 @@ none EOT;
 custom "Custom icon filter" <<<EOT
 var(--custom-icon-filter) EOT;
 }
-@var text iconFilter "Custom Icon css filter" "invert(75%) sepia(100%) hue-rotate(160deg) saturate(200%)"
+@var text iconFilter "Custom Icon css filter" " invert(75%) sepia(100%) hue-rotate(160deg) saturate(150%)"
 ==/UserStyle==*/
 /* Alternative Color for font to match DND Beyond Green #47D18C */
 @-moz-document url-prefix("https://www.dndbeyond.com/sources"),
