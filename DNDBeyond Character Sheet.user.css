@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.1.30
+@version      1.1.31
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -31,7 +31,7 @@ none EOT;
 custom "Custom icon filter" <<<EOT
 var(--custom-icon-filter) EOT;
 }
-@var text iconFilter "Custom Icon css filter" "invert(75%) sepia(100%) hue-rotate(160deg) saturate(200%)"
+@var text iconFilter "Custom Icon css filter" "invert(75%) sepia(100%) hue-rotate(170deg) brightness(75%) saturate(300%)"
 @var select zindex "Dice over or Under the results" {
  "Over": "60002",
  "Under": "60000"
