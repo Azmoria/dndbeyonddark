@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.1.35
+@version      1.1.36
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -478,13 +478,13 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-sidebar svg > path{
         opacity: 1 !important;
     }
-    .ddbc-builder-svg,
-    .ct-sidebar__control-icon{  
-    filter: drop-shadow(1px 1px 1px black);
-    }
 
+    .ddbc-builder-svg,
+    .ct-sidebar__control-icon,
+    .ddbc-character-tidbits__body {
+    filter: drop-shadow(1px 1px 0px #000);
+    }
 	.ct-quick-info svg > path,
-    
     svg > path,
 	.ct-combat__statuses polygon,
 	.ct-initiative-box polygon,
