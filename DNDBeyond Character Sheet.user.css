@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.1.33
+@version      1.1.34
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -739,9 +739,7 @@ regexp("https://www.dndbeyond.com/characters/.*"), regexp("https://www.dndbeyond
         background-image: none
 	}
     
-    .dice-rolling-panel,
-    .ct-sidebar,
-    .sidebar{
+    .dice-rolling-panel{
         z-index: /*[[zindex]]*/ !important;
     }
 
