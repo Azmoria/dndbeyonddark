@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.1.37
+@version      1.1.38
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -625,7 +625,9 @@ regexp("https://www.dndbeyond.com/characters/.*"), regexp("https://www.dndbeyond
     .ct-character-sheet--dice-enabled .ct-skills__col--modifier .integrated-dice__container:hover,
     .ct-character-sheet--dice-enabled .ddbc-combat-attack__tohit .integrated-dice__container:hover,
     .ct-character-sheet--dice-enabled .ddbc-ability-summary__primary .integrated-dice__container:hover,
-    .ct-character-sheet--dice-enabled .ct-initiative-box__value .integrated-dice__container:hover
+    .ct-character-sheet--dice-enabled .ct-initiative-box__value .integrated-dice__container:hover,
+    .encounter-builder-app [aria-haspopup=menu].integrated-dice__container,
+    .encounter-builder-app [aria-haspopup=menu].integrated-dice__container:hover
     
     {
 		padding: 0px 1px;
