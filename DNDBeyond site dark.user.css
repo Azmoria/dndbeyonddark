@@ -6,7 +6,7 @@
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
-@advanced dropdown transparencyBackgroundColor "Transparency of somebackgrounds/buttons" {
+@advanced dropdown transparencyBackgroundColor "Transparency of some backgrounds/buttons" {
 semi "Semi-transparent"<<<EOT
 background-color: var(--semi); EOT;
 opaque "Opaque"<<<EOT
