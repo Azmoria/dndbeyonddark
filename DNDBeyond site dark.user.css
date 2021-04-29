@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.1.34
+@version      1.1.35
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -576,7 +576,9 @@ div#site{
     .p-user-a.s_myStreams .p-user-interaction .p-user-content .member-profile .profile-field-group .profile-field-text, 
     .p-user-a.s_newContent .p-user-interaction .p-user-content .member-profile .profile-field-group .profile-field-text,
     .p-article-a .p-article-byline .p-article-author,
-    .p-forum-a .col-forum .description
+    .p-forum-a .col-forum .description,
+    .combatant-summary__stats .line-item__label,
+    .combatant-card__initiative-input-wrapper
     {
 		color: /*[[fontColor]]*/
 		!important;
