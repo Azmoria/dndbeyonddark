@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.1.33
+@version      1.1.34
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -473,10 +473,11 @@ div#site{
 		color: #000 !important;
 	}
         
-    .body-rpgcharacterbuilder.site{
+    .body-rpgcharacterbuilder.site,
+    .input-select__clear-button{
         background: /*[[backgroundColor]]*/
     }
-        
+
 
 	.extra-forum-header,
 	.p-forum-a .col-forum .active-viewers,
@@ -681,7 +682,16 @@ div#site{
 		!important;
 		border-color: /*[[borderColor]]*/
 		!important;
+        outline: none !important;
 	}
+    
+    .input-select__clear-button{
+        border-color: /*[[linkColor]]*/
+    }
+
+    .input-checkbox__input:focus~.input-checkbox__focus-indicator{
+        outline: none !important;
+    }
         
     .gamelog-button{
         padding: 6px 20px 6px 12px;
@@ -901,7 +911,9 @@ div#site{
 		border-color: /*[[borderColor]]*/;
 	}
         
-        .p-user-a .listing .latest-post-item, .p-user-a.s_myAccount .listing .latest-post-item, .p-user-a.s_myProfile .listing .latest-post-item, .p-user-a.s_myStreams .listing .latest-post-item, .p-user-a.s_newContent .listing .latest-post-item{
+    .p-user-a .listing .latest-post-item, .p-user-a.s_myAccount .listing .latest-post-item, 
+    .p-user-a.s_myProfile .listing .latest-post-item, .p-user-a.s_myStreams .listing .latest-post-item, 
+    .p-user-a.s_newContent .listing .latest-post-item{
     border-color: /*[[fontColor]]*/;
             
         }
@@ -1143,6 +1155,11 @@ div#site{
     {
         background-color: /*[[backgroundColor]]*/ !important;
         box-shadow: none !important;
+    }
+    
+    
+    [aria-selected=true] label{
+        box-shadow: inset 0px 0px 50px 1px /*[[linkColor]]*/ !important;
     }
     .class-manager-tabs .ddbc-tab-list__nav-item--is-active svg path,
     .manage-race-tabs .ddbc-tab-list__nav-item--is-active svg path,
