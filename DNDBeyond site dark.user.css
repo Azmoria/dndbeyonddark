@@ -2,15 +2,15 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.1.36
+@version      1.1.37
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
 @advanced dropdown transparencyBackgroundColor "Transparency of some backgrounds/buttons" {
 semi "Semi-transparent"<<<EOT
-background-color: var(--semi); EOT;
+background-color: var(--semi) !important; EOT;
 opaque "Opaque"<<<EOT
-background-color: var(--opaque); EOT;
+background-color: var(--opaque) !important; EOT;
 custom "Custom (Hex)"<<<EOT
 background: var(--custom-transparency) !important; EOT;
 }
@@ -441,7 +441,9 @@ div#site{
     .site .character-button-modal-cancel, 
     .site .character-button-outline, 
     .site .character-button-oversized, 
-    .site .character-button-small{
+    .site .character-button-small,
+    .character-card__overlay,
+    .character-card__overlay-message{
 		/*[[transparencyBackgroundColor]]*/
 	}
 
