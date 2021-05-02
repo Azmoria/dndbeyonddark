@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.1.39
+@version      1.1.40
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -11,7 +11,7 @@
   dnd "DnDBeyond Set" <<<EOT
  EOT;
   custom "Custom Image" <<<EOT
-background-image: var(--custom-background); EOT;
+background-image: var(--custom-background) !important; EOT;
 }
 @var text customBackground "Custom Background url; Include url() eg. url(http://imgur.com/img.jpg)" "url()"
 @var color background "Background Color" "#000000"
@@ -497,8 +497,23 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     {
 		fill: /*[[sheetColor]]*/ !important;
         opacity: /*[[sheetOpacity]]*/ !important;
-	
 	}
+    
+     .ct-main-mobile__saving-throws,
+	.ct-main-mobile .ct-senses,
+    .ct-mobile-divider__label,
+	.ct-mobile-divider__label,
+	.ct-main-mobile__saving-throws,
+	.ct-main-mobile .ct-senses,
+	.ct-description-mobile .ct-description,
+	.ct-proficiency-groups-mobile,
+	.ct-notes-mobile .ct-notes,
+	.ct-features-mobile,
+	.ct-spells-mobile,
+	.ct-equipment-mobile,
+	.ct-actions-mobile .ddbc-tab-options{
+    opacity: /*[[sheetOpacity]]*/
+    }
     
     svg > path + path,
 	.ct-combat__statuses path,
@@ -506,7 +521,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 	.ct-inspiration path,
 	.ct-proficiency-groups-box path,
 	.ddbc-attunement-slot.ddbc-attunement-slot--empty path,
-    .ct-quick-info svg > path + path
+    .ct-quick-info svg > path + path,
+    .ct-mobile-divider__repeat svg > path
     {
 		fill: /*[[borderColor]]*/
 		!important;
