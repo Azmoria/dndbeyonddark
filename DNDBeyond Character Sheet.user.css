@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.1.38
+@version      1.1.39
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -13,7 +13,7 @@
   custom "Custom Image" <<<EOT
 background-image: var(--custom-background); EOT;
 }
-@var text customBackground "Custom Background url; eg. url(.../image.jpg)" "url()"
+@var text customBackground "Custom Background url; Include url() eg. url(http://imgur.com/img.jpg)" "url()"
 @var color background "Background Color" "#000000"
 @var color sheetColor "Sheet Color" #000
 @var range sheetOpacity "Sheet Opacity" [1, 0.01, 1, 0.01]
