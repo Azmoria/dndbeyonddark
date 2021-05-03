@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.1.40
+@version      1.1.41
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -42,6 +42,25 @@ on "ON"<<<EOT
 off "OFF"<<<EOT
 background: none; EOT;
 }
+  @advanced dropdown outlineToggle "Text Outline" {
+Outline "ON" <<<EOT
+
+    .ddbc-builder-svg,
+    .ct-sidebar__control-icon,
+    .ddbc-character-tidbits__body,
+    {
+      filter: drop-shadow(1px 1px 0px var(--outline-color));
+    }
+    .ct-character-sheet__inner *{
+    text-shadow:
+   -1px -1px 0px var(--outline-color),  
+    1px -1px 0px var(--outline-color),
+    -1px 1px 0px var(--outline-color),
+     1px 1px 0px var(--outline-color);
+    } EOT;
+}
+@var color outlineColor "Outline Color" #000
+
 ==/UserStyle== */
 @-moz-document regexp("https://www.dndbeyond.com/profile/.*/characters/\\d*"),
 regexp("https://www.dndbeyond.com/characters/.*") {
@@ -49,6 +68,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 :root{
     --custom-background: /*[[customBackground]]*/;
     --custom-icon-filter: /*[[iconFilter]]*/;
+    --outline-color: /*[[outlineColor]]*/;
     }
  /*Character Sheet only*/
     
@@ -291,7 +311,15 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-character-manage-pane__class-list-item-meta,
     .ct-dice-preference-manager__link-out-label,
     .ct-dice-preference-manager__primary-info-version,
-    ._1_4XN--HbdIB3j-9HVLY3F._1YyaUXFtqDrdcyg8t55fTr
+    ._1_4XN--HbdIB3j-9HVLY3F._1YyaUXFtqDrdcyg8t55fTr,
+    .ct-skills__heading,
+    .ddbc-combat-attack__range-value-long,
+    .ddbc-combat-attack__save-label,
+    .ddbc-distance-number__label,
+    .ddbc-combat-attack__range-label,
+    .ct-spells-spell__save-label,
+    .ct-spells-spell__activation-extra
+    
 	{
 		color: /*[[fontColor]]*/;
 	}
@@ -320,7 +348,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-inventory-filter__clear,
     .ct-extras-filter__clear,
     .ct-vehicle-block__ability-heading,
-    .ct-vehicle-block__name
+    .ct-vehicle-block__name,
+    .ddbc-manage-icon--interactive:hover span
 	{
 		color: /*[[highlightColor]]*/ !important;
 	}
@@ -396,9 +425,17 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         border-width: 1px !important;
     }
     
-    input[type="text"], input[type="number"], input[type="search"], input[type="password"], input[type="email"], textarea, select{
+    input[type="text"], 
+    input[type="number"], 
+    input[type="search"], 
+    input[type="password"], 
+    input[type="email"], 
+    textarea, 
+    select,
+    .ct-condition-manage-pane__condition-icon{
         opacity: initial;
     }
+    
     .ct-inventory-filter__adv-filter-button,
     .ct-extras-filter__adv-filter-button,
     .ct-spells-filter__adv-filter-button,
@@ -539,6 +576,17 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     {
 		stroke: /*[[highlightColor]]*/;
 	}
+    
+    .ddbc-manage-icon--interactive:hover .ddbc-manage-icon__icon {
+
+	-webkit-mask: url("https://www.dndbeyond.com/Content/Skins/Waterdeep/images/icons/gear-grey.svg") no-repeat 100% 100%;
+        background-color: /*[[highlightColor]]*/;
+         -webkit-mask-size: cover;
+        mask-size: cover;
+        background-image: none
+    }
+    
+    /*[[outlineToggle]]*/
 
 	/*Selection settings */
 	::selection {
@@ -553,6 +601,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 		color: /*[[fontColor]]*/
 		!important;
 	}
+    
 
 	
 
