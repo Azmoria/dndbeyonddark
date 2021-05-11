@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.1.42
+@version      1.1.43
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -15,7 +15,7 @@ background-image: var(--custom-background) !important; EOT;
 }
 @var text customBackground "Custom Background url; Include url() eg. url(http://imgur.com/img.jpg)" "url()"
 @var color background "Background Color" "#000000"
-@var color sheetColor "Sheet Color" #000
+@var color sheetColor "Sheet Color" #000000
 @var range sheetOpacity "Sheet Opacity" [1, 0.01, 1, 0.01]
 @var color fontColor "Font Color" #ddd
 @var color borderColor "Border Color" #114
@@ -43,7 +43,7 @@ off "OFF"<<<EOT
 background: none; EOT;
 }
   @advanced dropdown outlineToggle "Text Outline" {
-Outline "ON" <<<EOT
+on "ON" <<<EOT
 
     .ddbc-builder-svg,
     .ct-sidebar__control-icon,
@@ -58,8 +58,19 @@ Outline "ON" <<<EOT
     -1px 1px 0px var(--outline-color),
      1px 1px 0px var(--outline-color);
     } EOT;
+off "OFF"<<<EOT
+EOT;
 }
 @var color outlineColor "Outline Color" #000
+@advanced dropdown mobileOpacity "Mobile Opacity"{
+opaque "Opaque" <<<EOT
+var(--mobile-opacity-opaque) EOT;
+semitransparent "Semi-Transparent" <<<EOT
+var(--mobile-opacity-semi) EOT;
+custom "Custom Mobile Opacity" <<<EOT
+var(--custom-mobile-opacity) EOT;
+}
+@var text customMobileOpacity "Mobile Opacity; Hex 00 to FF" "55"
 
 ==/UserStyle== */
 @-moz-document regexp("https://www.dndbeyond.com/profile/.*/characters/\\d*"),
@@ -69,6 +80,10 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     --custom-background: /*[[customBackground]]*/;
     --custom-icon-filter: /*[[iconFilter]]*/;
     --outline-color: /*[[outlineColor]]*/;
+    --custom-mobile-opacity: /*[[sheetColor]]*//*[[customMobileOpacity]]*/;
+    --mobile-opacity-semi: /*[[sheetColor]]*/CC;
+    --mobile-opacity-opaque: /*[[sheetColor]]*/FF;
+    
     }
  /*Character Sheet only*/
     
@@ -530,29 +545,14 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 	.ct-proficiency-groups-box polygon,
 	.ct-sidebar__pane-top path,
 	.ct-sidebar__pane-bottom path,
-    svg.ddbc-svg.ddbc-manage-level-svg.ddbc-svg--themed path,
-    .ct-skills-mobile .ct-skills
+    svg.ddbc-svg.ddbc-manage-level-svg.ddbc-svg--themed path
     {
 		fill: /*[[sheetColor]]*/ !important;
         opacity: /*[[sheetOpacity]]*/ !important;
 	}
+  
     
-     .ct-main-mobile__saving-throws,
-	.ct-main-mobile .ct-senses,
-    .ct-mobile-divider__label,
-	.ct-mobile-divider__label,
-	.ct-main-mobile__saving-throws,
-	.ct-main-mobile .ct-senses,
-	.ct-description-mobile .ct-description,
-	.ct-proficiency-groups-mobile,
-	.ct-notes-mobile .ct-notes,
-	.ct-features-mobile,
-	.ct-spells-mobile,
-	.ct-equipment-mobile,
-	.ct-actions-mobile .ddbc-tab-options{
-    opacity: /*[[sheetOpacity]]*/
-    }
-    
+   
     svg > path + path,
 	.ct-combat__statuses path,
 	.ct-initiative-box path,
@@ -642,6 +642,22 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 		color: #d24040;
 	}
 
+    @media screen and (max-width: 767px){
+      .ct-mobile-divider__label,
+	.ct-main-mobile__saving-throws,
+	.ct-main-mobile .ct-senses,
+	.ct-description-mobile .ct-description,
+	.ct-proficiency-groups-mobile,
+	.ct-notes-mobile .ct-notes,
+	.ct-features-mobile,
+	.ct-spells-mobile,
+	.ct-equipment-mobile,
+	.ct-actions-mobile .ddbc-tab-options,
+	.ct-skills-mobile .ct-skills,
+	.ct-extras-mobile{
+    background: /*[[mobileOpacity]]*/ !important;
+    }
+    }
 }
 
 @-moz-document regexp("https://www.dndbeyond.com/profile/.*/characters/\\d*"),
