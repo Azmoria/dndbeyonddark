@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.1.41
+@version      1.1.42
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -530,7 +530,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 	.ct-proficiency-groups-box polygon,
 	.ct-sidebar__pane-top path,
 	.ct-sidebar__pane-bottom path,
-    svg.ddbc-svg.ddbc-manage-level-svg.ddbc-svg--themed path
+    svg.ddbc-svg.ddbc-manage-level-svg.ddbc-svg--themed path,
+    .ct-skills-mobile .ct-skills
     {
 		fill: /*[[sheetColor]]*/ !important;
         opacity: /*[[sheetOpacity]]*/ !important;
