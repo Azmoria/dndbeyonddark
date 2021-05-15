@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.1.43
+@version      1.1.44
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -194,7 +194,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     ._3A6FDLVnjjt8AEw9hQLvFY,
     ._1WXtuzqHtOKDwJKEVpp6Oi,
     [class^="ct-vehicle-block__block"],
-    .ct-vehicle-pane__tag{
+    .ct-vehicle-pane__tag,
+    .talespireLink{
 		background-color: /*[[sheetColor]]*/
 		!important;
 		color: /*[[fontColor]]*/
