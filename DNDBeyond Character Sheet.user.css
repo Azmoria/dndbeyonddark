@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.1.44
+@version      1.1.45
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -194,8 +194,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     ._3A6FDLVnjjt8AEw9hQLvFY,
     ._1WXtuzqHtOKDwJKEVpp6Oi,
     [class^="ct-vehicle-block__block"],
-    .ct-vehicle-pane__tag,
-    .talespireLink{
+    .ct-vehicle-pane__tag{
 		background-color: /*[[sheetColor]]*/
 		!important;
 		color: /*[[fontColor]]*/
@@ -216,7 +215,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-character-manage-pane__intro,
     .ct-dice-preference-manager__primary,
     .ct-dice-preference-manager__link-out,
-    .ct-character-header-desktop__group--game-log{
+    .ct-character-header-desktop__group--game-log,
+    .talespireLink{
 		background: /*[[sheetColor]]*/
 		!important;
 	}
@@ -365,7 +365,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-extras-filter__clear,
     .ct-vehicle-block__ability-heading,
     .ct-vehicle-block__name,
-    .ddbc-manage-icon--interactive:hover span
+    .ddbc-manage-icon--interactive:hover span,
+    .talespireLink
 	{
 		color: /*[[highlightColor]]*/ !important;
 	}
@@ -655,7 +656,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 	.ct-equipment-mobile,
 	.ct-actions-mobile .ddbc-tab-options,
 	.ct-skills-mobile .ct-skills,
-	.ct-extras-mobile{
+	.ct-extras-mobile,
+    .talespireLink{
     background: /*[[mobileOpacity]]*/ !important;
     }
     }
