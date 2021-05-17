@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.1.49
+@version      1.1.50
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -732,10 +732,7 @@ regexp("https://www.dndbeyond.com/characters/.*"), regexp("https://www.dndbeyond
         background-image: none
 	}
 	
-    .sidebar__pane-content{
-       	background-color: /*[[sheetColor]]*/
-		!important;	
-    }
+    
     .sidebar__pane-content{
         border: 1px solid /*[[borderColor]]*/;
         box-shadow: none;
@@ -780,7 +777,7 @@ regexp("https://www.dndbeyond.com/characters/.*"), regexp("https://www.dndbeyond
     .dice-die-button__tooltip__pip,
     .dice-die-button__count,
 .glc-game-log>div>ol>li>div>div:nth-of-type(2),
-    [style^="top:"]>div>div{
+    [style^="top:"]>div>div:not(.ddbeb-flyout__arrow):not(.flyout-input-number){
 		background: /*[[rollCalcColor]]*/ !important;
 	}
 	.dice-toolbar:hover,
@@ -801,10 +798,12 @@ regexp("https://www.dndbeyond.com/characters/.*"), regexp("https://www.dndbeyond
     .GameLogEntry_Message__1GoY3.GameLogEntry_Other__2PSbv,
     .dice-icon-die:hover,
     .glc-game-log ol div,
-    [style^="top:"]>div>div{
+    [style^="top:"]>div>div:not(.ddbeb-flyout__arrow):not(.flyout-input-number){
 		border-color: /*[[rollColor]]*/
 		!important;
 	}
+    
+    
    .dice-die-button:hover .dice-icon-die{
         background-color: /*[[rollColor]]*/;
     }
@@ -900,7 +899,11 @@ regexp("https://www.dndbeyond.com/characters/.*"), regexp("https://www.dndbeyond
     .dice-die-button__tooltip{
      color: /*[[rollColor]]*/   
     }
-    
+ 
+    .sidebar__pane-content{
+       	background-color: /*[[sheetColor]]*/ !important;	
+    }
+  
     .encounter-builder-app .integrated-dice__container{
   
         color: /*[[rollColor]]*/;
