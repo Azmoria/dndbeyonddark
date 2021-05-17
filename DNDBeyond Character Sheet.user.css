@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.1.48
+@version      1.1.49
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -748,7 +748,9 @@ regexp("https://www.dndbeyond.com/characters/.*"), regexp("https://www.dndbeyond
     ._1_4XN--HbdIB3j-9HVLY3F,
     ._31r1gjOw0T79LKVLAldcq0,
     .glc-game-log>div>ol>li>div>div:nth-of-type(2)>div>div>div>div:nth-of-type(2)>span,
-    [style^="top:"]>div>div>span>span:last-of-type
+    [style^="top:"]>div>div>span>span:last-of-type,
+    .dice_result__total-result,
+    .dice_result__info__breakdown
     {
         color: /*[[fontColor]]*/
 		!important;
