@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.1.50
+@version      1.1.51
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -112,7 +112,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     }
     html body.body-rpgcharacter-sheet{
     /*[[backgroundImg]]*/
-	background-color: /*[[background]]*/ !important;
+	background: /*[[background]]*/ !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
     background-attachment: fixed !important;
@@ -334,7 +334,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ddbc-distance-number__label,
     .ddbc-combat-attack__range-label,
     .ct-spells-spell__save-label,
-    .ct-spells-spell__activation-extra
+    .ct-spells-spell__activation-extra,
+    .content-container h2
     
 	{
 		color: /*[[fontColor]]*/;
@@ -656,8 +657,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 	.ct-equipment-mobile,
 	.ct-actions-mobile .ddbc-tab-options,
 	.ct-skills-mobile .ct-skills,
-	.ct-extras-mobile,
-    .talespireLink{
+	.ct-extras-mobile{
     background: /*[[mobileOpacity]]*/ !important;
     }
     }
@@ -668,6 +668,10 @@ regexp("https://www.dndbeyond.com/characters/.*"), regexp("https://www.dndbeyond
     :root{
     --custom-background: /*[[customBackground]]*/;
     --custom-icon-filter: /*[[iconFilter]]*/;
+    --outline-color: /*[[outlineColor]]*/;
+    --custom-mobile-opacity: /*[[sheetColor]]*//*[[customMobileOpacity]]*/;
+    --mobile-opacity-semi: /*[[sheetColor]]*/CC;
+    --mobile-opacity-opaque: /*[[sheetColor]]*/FF;
     }
 
 /*Dice Alpha Size and position changes for full site*/
@@ -919,6 +923,23 @@ regexp("https://www.dndbeyond.com/characters/.*"), regexp("https://www.dndbeyond
     .encounter-builder-app .integrated-dice__container:focus
     {
         outline: none !important;
+    }
+    
+    .talespireLink{
+    background: /*[[sheetColor]]*/ !important;
+    color: /*[[highlightColor]]*/ !important;
+    }
+    
+    .ajs-content iframe{
+        filter: /*[[filter]]*/ !important;
+    }
+    
+   
+    
+    @media screen and (max-width: 767px){
+    .talespireLink{
+    background: /*[[mobileOpacity]]*/ !important;
+    }
     }
     
 }
