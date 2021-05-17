@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.1.47
+@version      1.1.48
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -747,7 +747,8 @@ regexp("https://www.dndbeyond.com/characters/.*"), regexp("https://www.dndbeyond
     [class^="GameLogEntry_"],
     ._1_4XN--HbdIB3j-9HVLY3F,
     ._31r1gjOw0T79LKVLAldcq0,
-    .glc-game-log>div>ol>li>div>div:nth-of-type(2)>div>div>div>div:nth-of-type(2)>span
+    .glc-game-log>div>ol>li>div>div:nth-of-type(2)>div>div>div>div:nth-of-type(2)>span,
+    [style^="top:"]>div>div>span>span:last-of-type
     {
         color: /*[[fontColor]]*/
 		!important;
@@ -776,7 +777,8 @@ regexp("https://www.dndbeyond.com/characters/.*"), regexp("https://www.dndbeyond
     .dice-die-button__tooltip,
     .dice-die-button__tooltip__pip,
     .dice-die-button__count,
-.glc-game-log>div>ol>li>div>div:nth-of-type(2){
+.glc-game-log>div>ol>li>div>div:nth-of-type(2),
+    [style^="top:"]>div>div{
 		background: /*[[rollCalcColor]]*/ !important;
 	}
 	.dice-toolbar:hover,
@@ -796,7 +798,8 @@ regexp("https://www.dndbeyond.com/characters/.*"), regexp("https://www.dndbeyond
 	.dice-toolbar__dropdown-selected .dice-toolbar__dropdown-die:hover,
     .GameLogEntry_Message__1GoY3.GameLogEntry_Other__2PSbv,
     .dice-icon-die:hover,
-    .glc-game-log ol div{
+    .glc-game-log ol div,
+    [style^="top:"]>div>div{
 		border-color: /*[[rollColor]]*/
 		!important;
 	}
