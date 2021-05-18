@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.1.51
+@version      1.1.52
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -749,7 +749,7 @@ regexp("https://www.dndbeyond.com/characters/.*"), regexp("https://www.dndbeyond
     ._1_4XN--HbdIB3j-9HVLY3F,
     ._31r1gjOw0T79LKVLAldcq0,
     .glc-game-log>div>ol>li>div>div:nth-of-type(2)>div>div>div>div:nth-of-type(2)>span,
-    [style^="top:"]>div>div>span>span:last-of-type,
+    div[class^="_1I"]>span>span:last-of-type,
     .dice_result__total-result,
     .dice_result__info__breakdown
     {
@@ -781,7 +781,8 @@ regexp("https://www.dndbeyond.com/characters/.*"), regexp("https://www.dndbeyond
     .dice-die-button__tooltip__pip,
     .dice-die-button__count,
 .glc-game-log>div>ol>li>div>div:nth-of-type(2),
-    [style^="top:"]>div>div:not(.ddbeb-flyout__arrow):not(.flyout-input-number){
+    div[class^="_1I"]
+    {
 		background: /*[[rollCalcColor]]*/ !important;
 	}
 	.dice-toolbar:hover,
@@ -802,7 +803,7 @@ regexp("https://www.dndbeyond.com/characters/.*"), regexp("https://www.dndbeyond
     .GameLogEntry_Message__1GoY3.GameLogEntry_Other__2PSbv,
     .dice-icon-die:hover,
     .glc-game-log ol div,
-    [style^="top:"]>div>div:not(.ddbeb-flyout__arrow):not(.flyout-input-number){
+    div[class^="_1I"]{
 		border-color: /*[[rollColor]]*/
 		!important;
 	}
