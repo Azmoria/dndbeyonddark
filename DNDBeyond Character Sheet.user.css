@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.1.53
+@version      1.1.54
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -102,6 +102,10 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 		background-clip: padding-box;
 		border: 4px solid rgba(0, 0, 0, 0);       
 	}
+    *{
+    scrollbar-width: thin;
+    scrollbar-color: /*[[scrollbarColor]]*/ /*[[sheetColor]]*/;
+    }
 
 	/*Background colors, images and styles */
     body{    
