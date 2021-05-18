@@ -7,7 +7,7 @@ You will need Stylus or another User CSS extension to apply these themes.
 You can get Stylus here:
 
 <a href="https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?hl=en">For Chrome</a><br>
-<a href="https://addons.mozilla.org/en-CA/firefox/addon/styl-us/">For Firefox</a> *Note I do not play using firefox - testing will be slow. Please report any issues you find and I will attempt to fix them.
+<a href="https://addons.mozilla.org/en-CA/firefox/addon/styl-us/">For Firefox</a>  <i>**Note I do not play using firefox - testing will be slow. Please report any issues you find and I will attempt to fix them.</i>
 
 Once you have Stylus installed click the links below to install the themes. I suggest opening them in a new tab clicking install then closing the tab.
 
@@ -18,7 +18,7 @@ Once you have Stylus installed click the links below to install the themes. I su
 
 For android devices (mobile/tablet) <a href="https://kiwibrowser.com/">Kiwi Browser</a> allows the installation of desktop Chrome extentions. There may be alternatives that work for iOS. However I only own android devices so I am unaware of which ones would work or exist.
 
-**Note: Mobile/tablet testing will be slow - please add issses for problems you find, either desktop or other devices, as your help finding problems is appreciated. If you have requests you can also add them to issues and I will attempt to add what I can.
+<i>**Note: Mobile/tablet testing will be slow - please add issses for problems you find, either desktop or other devices, as your help finding problems is appreciated. If you have requests you can also add them to issues and I will attempt to add what I can.</i>
 
 The images below are out of date as there are more options now but they give an idea of what the theme can do. I will update when I can.
 
