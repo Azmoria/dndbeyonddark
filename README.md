@@ -16,6 +16,11 @@ Once you have Stylus installed click the links below to install the themes. I su
 <a href="https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css">The rest of DNDBeyond site</a>
 
 
+For android mobile/tablets<a href="https://kiwibrowser.com/">Kiwi Broswer</a> allows the installation of desktop Chrome extentions
+
+Install Kiwi Browser then install the above extension and theme.
+
+
 
 Character Sheet examples:
 
