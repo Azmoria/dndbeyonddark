@@ -16,9 +16,11 @@ Once you have Stylus installed click the links below to install the themes. I su
 <a href="https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css">The rest of DNDBeyond site</a>
 
 
-For android mobile/tablets<a href="https://kiwibrowser.com/">Kiwi Broswer</a> allows the installation of desktop Chrome extentions
+For android devices (mobile/tablet) <a href="https://kiwibrowser.com/">Kiwi Broswer</a> allows the installation of desktop Chrome extentions. There may be alternatives that work for iOS
 
-Install Kiwi Browser then install the above extension and theme.
+**Note: Mobile/tablet testing will be slow - please report issues you find here as I mostly play on desktop and your help finding problems is appreciated. 
+
+The images below are out of date there are more options now but they give an idea of what the theme can do. I will update when I can.
 
 
 
