@@ -20,7 +20,7 @@ For android devices (mobile/tablet) <a href="https://kiwibrowser.com/">Kiwi Bros
 
 **Note: Mobile/tablet testing will be slow - please add issses for problems you find, either desktop or other devices, as your help finding problems is appreciated. If you have requests you can also add them to issues and I will attempt to add what I can.
 
-The images below are out of date there are more options now but they give an idea of what the theme can do. I will update when I can.
+The images below are out of date as there are more options now but they give an idea of what the theme can do. I will update when I can.
 
 
 
