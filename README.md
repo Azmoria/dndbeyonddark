@@ -18,7 +18,7 @@ Once you have Stylus installed click the links below to install the themes. I su
 
 For android devices (mobile/tablet) <a href="https://kiwibrowser.com/">Kiwi Browser</a> allows the installation of desktop Chrome extentions. There may be alternatives that work for iOS. However I only own android devices so I am unaware of which ones would work or exist.
 
-<i>**Note: Mobile/tablet testing will be slow - please add issses for problems you find, either desktop or other devices, as your help finding problems is appreciated. If you have requests you can also add them to issues and I will attempt to add what I can.</i>
+<i>**Note: Mobile/tablet testing will be slow as I primarily play on desktop - please add issues for problems you find, either desktop or other devices, as your help finding problems is appreciated. If you have requests you can also add them to issues and I will attempt to add what I can.</i>
 
 The images below are out of date as there are more options now but they give an idea of what the theme can do. I will update when I can.
 
