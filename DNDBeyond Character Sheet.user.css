@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.1.55
+@version      1.2.1
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -24,7 +24,7 @@
 @var color highlightColor "Highlight Color" #59d
 @var color scrollbarColor "Scrollbar Color" #114
 @var color rollColor "Rollable Items Color" #59d
-@var color rollCalcColor "Roll History Background Color" #030f1aea
+@advanced color rollCalcColor "Roll History Background Color" #030f1a
 @advanced dropdown filter "Icon Color" {
     light "Light icons" <<<EOT
         invert(100%) 
@@ -160,7 +160,6 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-feats-manage-pane__feat-content,
     .ct-spell-caster__casting-action-count.ct-spell-caster__casting-action-count--spellcasting,
     .ddbc-ability-score-manager__component-value,
-    .ct-component-carousel__placeholders,
     .ct-mobile-divider__label,
     .ct-main-mobile__saving-throws,
     .ct-main-mobile .ct-senses,
@@ -197,7 +196,9 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     ._3A6FDLVnjjt8AEw9hQLvFY,
     ._1WXtuzqHtOKDwJKEVpp6Oi,
     [class^="ct-vehicle-block__block"],
-    .ct-vehicle-pane__tag {
+    .ct-vehicle-pane__tag,
+    .ct-quick-nav__button
+    {
         background-color: /*[[sheetColor]]*/ !important;
         color: /*[[fontColor]]*/ !important;
     }
@@ -216,7 +217,10 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-dice-preference-manager__primary,
     .ct-dice-preference-manager__link-out,
     .ct-character-header-desktop__group--game-log,
-    .talespireLink {
+    .talespireLink,
+    .ct-combat-mobile,
+    .ct-character-sheet-mobile__header .ct-character-header-mobile,
+    .ct-section-placeholder__icon{
         background: /*[[sheetColor]]*/ !important;
     }
     .ct-slot-manager__slot--used:before,
@@ -257,7 +261,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 
     .ct-quick-nav__toggle,
     .ct-quick-nav__edge-toggle {
-        background-color: /*[[highlightColor]]*/;
+        background-color: /*[[rollCalcColor]]*/;
     }
 
     .ct-spells-filter__input[type=search],
@@ -401,7 +405,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .body-rpgcharacter-sheet .site-bar,
     .ct-character-header-desktop__group--game-log,
     ._3A6FDLVnjjt8AEw9hQLvFY,
-    .ct-character-header__group--game-log {
+    .ct-character-header__group--game-log,
+    .ct-section-placeholder{
         border-color: /*[[borderColor]]*/ !important;
     }
     .integrated-dice-menu-carrot {
@@ -451,7 +456,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-inventory-filter__adv-filter-button,
     .ct-extras-filter__adv-filter-button,
     .ct-spells-filter__adv-filter-button,
-    .site .ct-button.ct-theme-button--filled {
+    .site .ct-button.ct-theme-button--filled,
+    .ct-section-placeholder__icon{
         border: solid 1px /*[[highlightColor]]*/ !important;
     }
 
@@ -514,7 +520,13 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ddbc-svg.ddbc-chevron-svg.ddbc-chevron-down-svg.ddbc-svg--disabled path,
     .ct-extras-filter__advanced svg path,
     .ct-inventory-filter__advanced svg path,
-    .ct-character-header-desktop__group--game-log path {
+    .ct-character-header-desktop__group--game-log path,
+    .ct-section-placeholder__icon path,
+    .ct-section-placeholder__icon polygon,
+    .ct-section-placeholder__icon circle,
+    .ct-quick-nav__button path,
+    .ct-quick-nav__button polygon,
+    .ct-quick-nav__button circle{
         fill: /*[[highlightColor]]*/ !important;
         opacity: 1 !important;
     }
@@ -658,6 +670,15 @@ regexp("https://www.dndbeyond.com/characters/.*") {
             border-color: /*[[borderColor]]*/   
         }
         
+        
+        .ct-section-placeholder,
+        .ct-component-carousel__placeholders{
+            background: /*[[mobileOpacity]]*/ !important;
+        }
+        .ct-section-placeholder{
+            box-shadow: inset 0 0 0 1px /*[[highlightColor]]*/;
+        }
+        
     }
 
     @media screen and (max-width: 767px) {
@@ -672,14 +693,11 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         .ct-equipment-mobile,
         .ct-actions-mobile .ddbc-tab-options,
         .ct-skills-mobile .ct-skills,
-        .ct-extras-mobile {
+        .ct-extras-mobile,
+        .ct-combat-mobile__cta-button{
             background: /*[[mobileOpacity]]*/ !important;
         }
         
-        .ct-combat-mobile,
-        .ct-character-sheet-mobile__header .ct-character-header-mobile{
-        /*[[titleToggle]]*/
-        }
     }
 }
 
@@ -951,7 +969,7 @@ regexp("https://www.dndbeyond.com/encounters/.*") {
 
 
     @media screen and (max-width: 767px) {
-        .talespireLink {
+    .talespireLink{
             background: /*[[mobileOpacity]]*/ !important;
         }
     }
