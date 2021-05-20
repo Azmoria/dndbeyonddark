@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.1.37
+@version      1.1.38
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -82,7 +82,7 @@ url-prefix("https://www.dndbeyond.com/my-characters"),
 url-prefix("https://www.dndbeyond.com/search"),
 url-prefix("https://www.dndbeyond.com/modifier"),
 url-prefix("https://www.dndbeyond.com/entity"),
-url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyond.com/subclasses"), url-prefix("https://www.dndbeyond.com/articles"), url-prefix("https://www.dndbeyond.com/tag"), url-prefix("https://www.dndbeyond.com/subraces"), url-prefix("https://www.dndbeyond.com/changelog"), regexp("https://www.dndbeyond.com/profile/.*/characters"), regexp("https://www.dndbeyond.com/encounter-builder"), regexp("https://www.dndbeyond.com/my-encounters"), regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond.com/combat-tracker.*"), regexp("https://www.dndbeyond.com/items"), regexp("https://www.dndbeyond.com/my-dice"), regexp("https://www.dndbeyond.com/members/.*"), regexp("https://www.dndbeyond.com/private-messages.*"), regexp("https://www.dndbeyond.com/content/.*"){
+url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyond.com/subclasses"), url-prefix("https://www.dndbeyond.com/articles"), url-prefix("https://www.dndbeyond.com/tag"), url-prefix("https://www.dndbeyond.com/subraces"), url-prefix("https://www.dndbeyond.com/changelog"), regexp("https://www.dndbeyond.com/profile/.*/characters"), regexp("https://www.dndbeyond.com/encounter-builder"), regexp("https://www.dndbeyond.com/my-encounters"), regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond.com/combat-tracker.*"), regexp("https://www.dndbeyond.com/items"), regexp("https://www.dndbeyond.com/my-dice"), regexp("https://www.dndbeyond.com/members/.*"), regexp("https://www.dndbeyond.com/private-messages.*"), regexp("https://www.dndbeyond.com/content/.*"), url-prefix("https://www.dndbeyond.com/account"), url-prefix("https://linkst.dndbeyond.com"), url-prefix("https://www.dndbeyond.com/new-content"){
 
     :root{
     --custom-transparency: /*[[backgroundColor]]*//*[[customTransparency]]*/;
@@ -413,7 +413,13 @@ div#site{
     .p-user-a.s_myAccount .p-user-interaction .p-nav .b-list-item a, 
     .p-user-a.s_myProfile .p-user-interaction .p-nav .b-list-item a, 
     .p-user-a.s_myStreams .p-user-interaction .p-nav .b-list-item a, 
-    .p-user-a.s_newContent .p-user-interaction .p-nav .b-list-item a
+    .p-user-a.s_newContent .p-user-interaction .p-nav .b-list-item a,
+    .ddb-auth-link-manager__header__primary,
+    .ddb-auth-link-manager__header__secondary,
+    .ddb-auth-link-manager__card,
+    .profile-field-group,
+    .ddb-account-tab-body .listing-container-table table thead th,
+    .ddb-account-tab-body .listing-container-table table tbody tr td
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
@@ -581,7 +587,11 @@ div#site{
     .p-forum-a .col-forum .description,
     .combatant-summary__stats .line-item__label,
     .combatant-card__initiative-input-wrapper,
-    .combatant-summary__stats .line-item__value
+    .combatant-summary__stats .line-item__value,
+    .ddb-auth-link-manager__card__provider-info__title,
+    .ddb-auth-link-manager__card__account__descriptor,
+    .ddb-account-tab-header-primary,
+    .ddb-account-tab-header-secondary
     {
 		color: /*[[fontColor]]*/
 		!important;
@@ -608,7 +618,12 @@ div#site{
 	.tooltip-hover:visited,
     h4.adventure-chapter-header a,
     .starting-equipment-choice,
-    .ddbc-tab-list__nav-item:hover{
+    .ddbc-tab-list__nav-item:hover,
+    .ddb-account-tab-marketplace .listing-orders td:nth-of-type(4) .link, 
+    .ddb-account-tab-marketplace .listing-orders td:nth-of-type(4) .link:hover, 
+    .ddb-account-tab-marketplace .listing-orders td:nth-of-type(4) .link:focus, 
+    .ddb-account-tab-marketplace .listing-orders td:nth-of-type(4) .link:active, 
+    .ddb-account-tab-marketplace .listing-orders td:nth-of-type(4) .link:visited{
 		color: /*[[linkColor]]*/
 		!important
 	}
@@ -1178,6 +1193,17 @@ div#site{
     .tooltip::after{
     background: linear-gradient(to top, /*[[backgroundColor]]*/, #00000000) !important;
     }
+    
+    
+    body.body-user.responsive-enabled .p-user-a .p-user-interaction .profile-nav-container a#rightArrow, body.user.responsive-enabled .p-user-a .p-user-interaction .profile-nav-container a#rightArrow{
+        background-image: linear-gradient(to left, /*[[backgroundColor]]*/ 60%,rgba(255,255,255,0) 100%)
+    }
+    
+    body.body-user.responsive-enabled .p-user-a .p-user-interaction .profile-nav-container a#leftArrow, body.user.responsive-enabled .p-user-a .p-user-interaction .profile-nav-container a#leftArrow{
+        background-image: linear-gradient(to right,/*[[backgroundColor]]*/ 60%,rgba(255,255,255,0) 100%);   
+    }
+    
+    
     /* SVG Recolors to selectable colors*/
     
     
@@ -1263,6 +1289,10 @@ div#site{
         background: /*[[linkColor]]*/;
         padding: 12px;
     }
+    
+    body[contenteditable$="true"]{
+     background: #000 !important;   
+    }
         
 
     
@@ -1276,7 +1306,7 @@ div#site{
     --semi: /*[[backgroundColor]]*/aa;
     --opaque: /*[[backgroundColor]]*/ff;
     --custom-icon-filter: /*[[iconFilter]]*/;
-    --custom-iFrame-filter: /*[[customiFrameFilter]]*/;
+    --custom-iFrame-filter: /*[[customFrameFilter]]*/;
     }
 	::-webkit-scrollbar {
 		width: 3px;
