@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.1
+@version      1.2.2
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -424,7 +424,10 @@ div#site{
     .p-notifications-a .listing-container .listing-body .user-notification-listing>.b-list-item .notification-content-container,
     .p-notifications-a .listing-container .listing-body .user-notification-listing>.b-list-item .notification-content-container a,
     .p-notifications-a .listing-container .listing-body .user-notification-listing>.b-list-item .notification-content-container strong,
-    .p-notifications-a .listing-container .listing-body .user-notification-listing>.b-list-item .notification-content-container p
+    .p-notifications-a .listing-container .listing-body .user-notification-listing>.b-list-item .notification-content-container p,
+    .equipment-manager-attuned-item-name,
+    html body.hide-ads #site-main #footer-push, 
+    html body.disable-ads #site-main #footer-push
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
@@ -641,7 +644,8 @@ div#site{
     .ddb-account-tab-marketplace .listing-orders td:nth-of-type(4) .link:visited,
     .forum-thread-row .col-thread .title:hover,
     .p-forum-a .col-forum .forum-subs a:hover,
-    .user:hover{
+    .user:hover,
+    .ddbc-truncated-content__trigger-label{
 		color: /*[[linkColor]]*/
 		!important
 	}
@@ -713,7 +717,8 @@ div#site{
     .site .character-button-outline, 
     .site .character-button-oversized, 
     .site .character-button-small,
-    .p-notifications-a .listing-container .listing-body .user-notification-listing>.b-list-item .notification-content-container
+    .p-notifications-a .listing-container .listing-body .user-notification-listing>.b-list-item .notification-content-container,
+    .equipment-manager-attuned-item-preview
     {
 		border-width: /*[[borderWidth]]*/
 		!important;
@@ -727,7 +732,8 @@ div#site{
     
   
     
-    .input-select__clear-button{
+    .input-select__clear-button,
+    .equipment-manager-attuned-add{
         border-color: /*[[linkColor]]*/
     }
 
@@ -1164,32 +1170,32 @@ div#site{
     button.ct-button.character-button.ddbc-button.character-button-block,
     button.ct-button.character-button.ddbc-button.character-button-block:hover,
     .ddbc-dice-roll__dice-value,
-    .site .character-button-block-large:active, 
-    .site .character-button-block-oversized:active, 
-    .site .character-button-block-small:active, 
-    .site .character-button-block:active, 
-    .site .character-button-large:active, 
-    .site .character-button-medium:active, 
-    .site .character-button-modal-cancel:active, 
-    .site .character-button-modal:active, 
-    .site .character-button-outline:active, 
-    .site .character-button-oversized:active, 
-    .site .character-button-small:active, 
-    .site .character-button:active,
-    .site .character-button-block-large:hover, 
-    .site .character-button-block-oversized:hover, 
-    .site .character-button-block-small:hover, 
-    .site .character-button-block:hover, 
-    .site .character-button-large:hover, 
-    .site .character-button-medium:hover, 
-    .site .character-button-modal-cancel:hover, 
-    .site .character-button-modal:hover, 
-    .site .character-button-outline:hover, 
-    .site .character-button-oversized:hover, 
-    .site .character-button-small:hover, 
-    .site .character-button:hover,
+    .site .character-button-block-large:enabled:active, 
+    .site .character-button-block-oversized:enabled:active, 
+    .site .character-button-block-small:enabled:active, 
+    .site .character-button-block:enabled:active, 
+    .site .character-button-large:enabled:active, 
+    .site .character-button-medium:enabled:active, 
+    .site .character-button-modal-cancel:enabled:active, 
+    .site .character-button-modal:enabled:active, 
+    .site .character-button-outline:enabled:active, 
+    .site .character-button-oversized:enabled:active, 
+    .site .character-button-small:enabled:active, 
+    .site .character-button:enabled:active,
+    .site .character-button-block-large:enabled:hover, 
+    .site .character-button-block-oversized:enabled:hover, 
+    .site .character-button-block-small:enabled:hover, 
+    .site .character-button-block:enabled:hover, 
+    .site .character-button-large:enabled:hover, 
+    .site .character-button-medium:enabled:hover, 
+    .site .character-button-modal-cancel:enabled:hover, 
+    .site .character-button-modal:enabled:hover, 
+    .site .character-button-outline:enabled:hover, 
+    .site .character-button-oversized:enabled:hover, 
+    .site .character-button-small:enabled:hover, 
+    .site .character-button:enabled:hover,
     span.notification-dismiss,
-    .site .ct-button.ct-theme-button--filled:focus,
+    .site .ct-button.ct-theme-button--filled:enabled:focus,
     .add-combatant-modal__controls-button+.add-combatant-modal__controls-button:enabled,
     .b-pagination-b li.b-pagination-item>a:hover, .b-pagination-b li.b-pagination-item a:visited:hover{
         background-color: /*[[backgroundColor]]*/ !important;
@@ -1300,9 +1306,42 @@ div#site{
         content: '';
         padding: 2px 10px;      
         }
+    
+    .equipment-manager-attuned-add:before{
+        background-image: none !important;
+        -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3E%3Cpath d='M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z'/%3E%3C/svg%3E");
+        mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3E%3Cpath d='M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z'/%3E%3C/svg%3E");
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        background: /*[[linkColor]]*/;
+        content: '';
+    }
+
+     .collapsible-collapsed .collapsible-header-trigger,
+    .equipment-manager-inventory-group-collapsed .equipment-manager-inventory-trigger{
+          background-image: none !important;
+        -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3E%3Cpath d='M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z'/%3E%3C/svg%3E");
+         mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3E%3Cpath d='M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z'/%3E%3C/svg%3E");
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        background: /*[[linkColor]]*/;
+        content: '';
+    }
+    
+    
+    .collapsible-opened .collapsible-header-trigger,
+    .equipment-manager-inventory-group-opened .equipment-manager-inventory-trigger{
+           background-image: none !important;
+        -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3E%3Cpath d='M0 10h24v4h-24z'/%3E%3C/svg%3E");
+        mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3E%3Cpath d='M0 10h24v4h-24z'/%3E%3C/svg%3E");
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        background: /*[[linkColor]]*/;
+        content: '';
+    
+    
         
-        
-        
+    }
         
    
      .sidenav-comp-page a{
