@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.3
+@version      1.2.4
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -1378,11 +1378,12 @@ div#site{
    
     
     
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 767px){
         body.body-forum.responsive-enabled .container .p-forum-a li.forum-announcement .col-status {
                 background: /*[[backgroundColor]]*/ !important;
                 color: /*[[fontColor]]*/ !important;
         }
+        
     }
         
 
@@ -1591,7 +1592,16 @@ div#site{
     background-image: url(https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Dark%20Images/strip-compendium-content.png?raw=true);
     }
 
-    
+      @media screen and (max-width: 767px){
+ 
+        
+        .body-home-index .post-listing > li:first-child .post-excerpt{
+            /*[[transparencyBackgroundColor]]*/ 
+            border-width: /*[[borderWidth]]*/!important;
+            border-style: /*[[borderStyle]]*/ !important;
+            border-color: /*[[borderColor]]*/ !important;
+        }
+    }
     
 	
 }
