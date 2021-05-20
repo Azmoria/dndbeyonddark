@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.1.38
+@version      1.1.39
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -419,7 +419,9 @@ div#site{
     .ddb-auth-link-manager__card,
     .profile-field-group,
     .ddb-account-tab-body .listing-container-table table thead th,
-    .ddb-account-tab-body .listing-container-table table tbody tr td
+    .ddb-account-tab-body .listing-container-table table tbody tr td,
+    .b-pagination-b li.b-pagination-item>a, 
+    .b-pagination-b li.b-pagination-item a:visited
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
@@ -591,7 +593,10 @@ div#site{
     .ddb-auth-link-manager__card__provider-info__title,
     .ddb-auth-link-manager__card__account__descriptor,
     .ddb-account-tab-header-primary,
-    .ddb-account-tab-header-secondary
+    .ddb-account-tab-header-secondary,
+    .forum-row .col-forum .title a,
+    .user,
+    .p-forum-a .col-forum .forum-subs a
     {
 		color: /*[[fontColor]]*/
 		!important;
@@ -609,7 +614,7 @@ div#site{
 	a:visited,
 	a > span,
 	span[role=button],
-	.forum-row .col-forum .title a,
+	.forum-row .col-forum .title a:hover,
 	.content-container h3 a,
 	.tooltip-hover,
 	.tooltip-hover:hover,
@@ -623,7 +628,10 @@ div#site{
     .ddb-account-tab-marketplace .listing-orders td:nth-of-type(4) .link:hover, 
     .ddb-account-tab-marketplace .listing-orders td:nth-of-type(4) .link:focus, 
     .ddb-account-tab-marketplace .listing-orders td:nth-of-type(4) .link:active, 
-    .ddb-account-tab-marketplace .listing-orders td:nth-of-type(4) .link:visited{
+    .ddb-account-tab-marketplace .listing-orders td:nth-of-type(4) .link:visited,
+    .forum-thread-row .col-thread .title:hover,
+    .p-forum-a .col-forum .forum-subs a:hover,
+    .user:hover{
 		color: /*[[linkColor]]*/
 		!important
 	}
@@ -1166,7 +1174,8 @@ div#site{
     .site .character-button:hover,
     span.notification-dismiss,
     .site .ct-button.ct-theme-button--filled:focus,
-    .add-combatant-modal__controls-button+.add-combatant-modal__controls-button:enabled{
+    .add-combatant-modal__controls-button+.add-combatant-modal__controls-button:enabled,
+    .b-pagination-b li.b-pagination-item>a:hover, .b-pagination-b li.b-pagination-item a:visited:hover{
         background-color: /*[[backgroundColor]]*/ !important;
          box-shadow: inset 0px 0px 25px 0px /*[[linkColor]]*/ !important;
     }
@@ -1292,6 +1301,10 @@ div#site{
     
     body[contenteditable$="true"]{
      background: #000 !important;   
+    }
+    
+    .forum-thread-row.has-dev-comments .col-thread::before{
+        opacity: .5 !important;   
     }
         
 
