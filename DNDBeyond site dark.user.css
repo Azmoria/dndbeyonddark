@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.2
+@version      1.2.3
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -1375,6 +1375,8 @@ div#site{
         padding: 0px
     }
     
+   
+    
     
     @media screen and (max-width: 768px){
         body.body-forum.responsive-enabled .container .p-forum-a li.forum-announcement .col-status {
@@ -1569,7 +1571,28 @@ div#site{
 		padding: 5px
 		
 	}
+     .ddb-strip-aligned-item-create-a-character,
+    .ddb-strip-item-create-a-character{
+        background-image: url("https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Dark%20Images/strip-create-a-character.png?raw=true") !important;   
+    }
+    
+    .ddb-strip-aligned-item-homebrew-content,
+    .ddb-strip-item-homebrew-content{
+        background-image: url("https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Dark%20Images/strip-homebrew-content.png?raw=true") !important;   
+    }
+    
+    .ddb-strip-aligned-item-build-encounter,
+    .ddb-strip-item-build-encounter{
+        background-image: url("https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Dark%20Images/strip-encounter-builder.png?raw=true") !important;   
+    }
+    
+    .ddb-strip-aligned-item-compendium-content,
+    .ddb-strip-item-compendium-content{
+    background-image: url(https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Dark%20Images/strip-compendium-content.png?raw=true);
+    }
 
+    
+    
 	
 }
 
