@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.1.39
+@version      1.1.40
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -82,7 +82,7 @@ url-prefix("https://www.dndbeyond.com/my-characters"),
 url-prefix("https://www.dndbeyond.com/search"),
 url-prefix("https://www.dndbeyond.com/modifier"),
 url-prefix("https://www.dndbeyond.com/entity"),
-url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyond.com/subclasses"), url-prefix("https://www.dndbeyond.com/articles"), url-prefix("https://www.dndbeyond.com/tag"), url-prefix("https://www.dndbeyond.com/subraces"), url-prefix("https://www.dndbeyond.com/changelog"), regexp("https://www.dndbeyond.com/profile/.*/characters"), regexp("https://www.dndbeyond.com/encounter-builder"), regexp("https://www.dndbeyond.com/my-encounters"), regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond.com/combat-tracker.*"), regexp("https://www.dndbeyond.com/items"), regexp("https://www.dndbeyond.com/my-dice"), regexp("https://www.dndbeyond.com/members/.*"), regexp("https://www.dndbeyond.com/private-messages.*"), regexp("https://www.dndbeyond.com/content/.*"), url-prefix("https://www.dndbeyond.com/account"), url-prefix("https://linkst.dndbeyond.com"), url-prefix("https://www.dndbeyond.com/new-content"){
+url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyond.com/subclasses"), url-prefix("https://www.dndbeyond.com/articles"), url-prefix("https://www.dndbeyond.com/tag"), url-prefix("https://www.dndbeyond.com/subraces"), url-prefix("https://www.dndbeyond.com/changelog"), regexp("https://www.dndbeyond.com/profile/.*/characters"), regexp("https://www.dndbeyond.com/encounter-builder"), regexp("https://www.dndbeyond.com/my-encounters"), regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond.com/combat-tracker.*"), regexp("https://www.dndbeyond.com/items"), regexp("https://www.dndbeyond.com/my-dice"), regexp("https://www.dndbeyond.com/members/.*"), regexp("https://www.dndbeyond.com/private-messages.*"), regexp("https://www.dndbeyond.com/content/.*"), url-prefix("https://www.dndbeyond.com/account"), url-prefix("https://linkst.dndbeyond.com"), url-prefix("https://www.dndbeyond.com/new-content"), url-prefix("https://www.dndbeyond.com/my-notifications"){
 
     :root{
     --custom-transparency: /*[[backgroundColor]]*//*[[customTransparency]]*/;
@@ -421,7 +421,11 @@ div#site{
     .ddb-account-tab-body .listing-container-table table thead th,
     .ddb-account-tab-body .listing-container-table table tbody tr td,
     .b-pagination-b li.b-pagination-item>a, 
-    .b-pagination-b li.b-pagination-item a:visited
+    .b-pagination-b li.b-pagination-item a:visited,
+    .p-notifications-a .listing-container .listing-body .user-notification-listing>.b-list-item .notification-content-container,
+    .p-notifications-a .listing-container .listing-body .user-notification-listing>.b-list-item .notification-content-container a,
+    .p-notifications-a .listing-container .listing-body .user-notification-listing>.b-list-item .notification-content-container strong,
+    .p-notifications-a .listing-container .listing-body .user-notification-listing>.b-list-item .notification-content-container p
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
@@ -702,7 +706,8 @@ div#site{
     .site .character-button-modal-cancel, 
     .site .character-button-outline, 
     .site .character-button-oversized, 
-    .site .character-button-small
+    .site .character-button-small,
+    .p-notifications-a .listing-container .listing-body .user-notification-listing>.b-list-item .notification-content-container
     {
 		border-width: /*[[borderWidth]]*/
 		!important;
@@ -712,6 +717,8 @@ div#site{
 		!important;
         outline: none !important;
 	}
+    
+  
     
     .input-select__clear-button{
         border-color: /*[[linkColor]]*/
@@ -1226,7 +1233,7 @@ div#site{
 		!important;
     
     }
-        
+
     .sidenav-next-nav{
         padding: 10px 0px;
         }
@@ -1306,6 +1313,9 @@ div#site{
     .forum-thread-row.has-dev-comments .col-thread::before{
         opacity: .5 !important;   
     }
+    
+        
+
         
 
     
@@ -1341,7 +1351,7 @@ div#site{
 		!important;
 	}
 
-	.post-excerpt {
+	.post-excerpt{
 		border-width: /*[[borderWidth]]*/
 		!important;
 		border-style: /*[[borderStyle]]*/
@@ -1349,6 +1359,8 @@ div#site{
 		border-color: /*[[borderColor]]*/
 		!important;
 	}
+
+
 
 	.body-home-index .post-listing > li:first-child .post-excerpt__content,
 	.body-home-index .post-listing > li:first-child .post-excerpt
