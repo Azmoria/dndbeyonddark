@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.1.40
+@version      1.2.1
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -128,7 +128,6 @@ div#site{
 	.p-forum-a .announcements .forum-thread-row,
 	#site .forum-row .status-icon,
 	#site .forum-thread-row .status-icon,
-	.forum-thread-row .col-thread .title,
 	.p-comments-b .p-comment-wrapper,
 	.body-forum .comment-preview li .p-comment-wrapper,
 	.body-forum-search .p-comments-a .p-comment-wrapper,
@@ -470,10 +469,12 @@ div#site{
 	.RPGSubclass-listing .more-info {
 		width: 100%;
 	}
-    a.character-button-block.builder-button {
+    
+    a.character-button-block.builder-button,
+    .whats-new-button{
         background: none !important;
-        border-style: none !important;
-    }   
+    }
+
 
 	::selection{
 		background: #aaa !important;
@@ -600,7 +601,12 @@ div#site{
     .ddb-account-tab-header-secondary,
     .forum-row .col-forum .title a,
     .user,
-    .p-forum-a .col-forum .forum-subs a
+    .p-forum-a .col-forum .forum-subs a,
+    .p-comment-actions .user-actions .user-action .u-icon::after,
+    .forum-thread-row .col-thread .title,
+    .ddb-characters-listing-count-active, 
+    .ddb-characters-listing-count-max,
+    .p-comments .p-comment-actions .user-actions>li a
     {
 		color: /*[[fontColor]]*/
 		!important;
@@ -717,6 +723,7 @@ div#site{
 		!important;
         outline: none !important;
 	}
+
     
   
     
@@ -724,7 +731,8 @@ div#site{
         border-color: /*[[linkColor]]*/
     }
 
-    .input-checkbox__input:focus~.input-checkbox__focus-indicator{
+    .input-checkbox__input:focus~.input-checkbox__focus-indicator,
+    .whats-new-button{
         outline: none !important;
     }
         
@@ -937,7 +945,8 @@ div#site{
 	body:not(.body-forum):not(.section-posts):not(.section-changelog):not(.body-privatemessage-details) blockquote,
 	.section-posts .p-article-a,
 	.more-info,
-	.details-container{
+	.details-container,
+    .builder-type-options{
 		border-bottom-width: /*[[borderWidth]]*/;
 		border-left-width: /*[[borderWidth]]*/;
 		border-right-width: /*[[borderWidth]]*/;
@@ -1314,10 +1323,126 @@ div#site{
         opacity: .5 !important;   
     }
     
+    .forum-thread-row.has-dev-comments .col-thread{
+        z-index: 1;    
+    }
+    
+    .forum-thread-row.has-dev-comments .col-thread::before{
+        z-index: -1;      
+    }
+    
+    .ddb-collapsible-filter--stuck{
+        background: none;
+        padding: 0px
+    }
+    
+    
+    @media screen and (max-width: 768px){
+        body.body-forum.responsive-enabled .container .p-forum-a li.forum-announcement .col-status {
+                background: /*[[backgroundColor]]*/ !important;
+                color: /*[[fontColor]]*/ !important;
+        }
+    }
         
 
+    
+    @media screen and (max-width: 640px){
         
-
+        .encounter-builder__header, .encounter-builder__header.ddb-page-header{
+            width: 100%;   
+        }
+        body.body-forum.responsive-enabled .container .listing-container .p-comment-user ul.p-comment-stats li:last-of-type, 
+        body.body-forum.responsive-enabled .container .comment-preview .p-comment-user ul.p-comment-stats li:last-of-type, 
+        body.body-devtracker.responsive-enabled .container .listing-container .p-comment-user ul.p-comment-stats li:last-of-type, 
+        body.body-devtracker.responsive-enabled .container .comment-preview .p-comment-user ul.p-comment-stats li:last-of-type,
+        body.body-forum.responsive-enabled .container .listing-container .p-comment-user ul.p-comment-stats, 
+        body.body-forum.responsive-enabled .container .comment-preview .p-comment-user ul.p-comment-stats,
+        body.body-devtracker.responsive-enabled .container .listing-container .p-comment-user ul.p-comment-stats, 
+        body.body-devtracker.responsive-enabled .container .comment-preview .p-comment-user ul.p-comment-stats,
+        body.body-forum.responsive-enabled .container #mobile-forum-thread-actions .b-pagination-a, 
+        body.body-devtracker.responsive-enabled .container #mobile-forum-thread-actions .b-pagination-a{
+            
+            background: /*[[backgroundColor]]*/;
+            color: /*[[fontColor]]*/;
+            
+        }
+        body.body-forum.responsive-enabled .container #mobile-forum-thread-actions .b-pagination-a ul li.b-pagination-item>a, 
+        body.body-forum.responsive-enabled .container #mobile-forum-thread-actions .b-pagination-a ul li.b-pagination-item #mobile-comments-jump, 
+        body.body-devtracker.responsive-enabled .container #mobile-forum-thread-actions .b-pagination-a ul li.b-pagination-item>a, 
+        body.body-devtracker.responsive-enabled .container #mobile-forum-thread-actions .b-pagination-a ul li.b-pagination-item #mobile-comments-jump{
+            color: /*[[linkColor]]*/ !important;
+        }
+        
+        body.body-forum.responsive-enabled .container .listing-container .p-comment-user ul.p-comment-stats li:last-of-type, 
+        body.body-forum.responsive-enabled .container .comment-preview .p-comment-user ul.p-comment-stats li:last-of-type, 
+        body.body-devtracker.responsive-enabled .container .listing-container .p-comment-user ul.p-comment-stats li:last-of-type, 
+        body.body-devtracker.responsive-enabled .container .comment-preview .p-comment-user ul.p-comment-stats li:last-of-type{
+            border-width: /*[[borderWidth]]*/;
+            border-style: /*[[borderStyle]]*/;
+            border-color: /*[[borderColor]]*/;
+            border-top: none;
+            border-left: none;
+            border-right:none;
+        }
+        
+        body.body-forum.responsive-enabled .container .listing-container .p-comment-user ul.p-comment-stats li:last-of-type::after, 
+        body.body-forum.responsive-enabled .container .comment-preview .p-comment-user ul.p-comment-stats li:last-of-type::after, 
+        body.body-devtracker.responsive-enabled .container .listing-container .p-comment-user ul.p-comment-stats li:last-of-type::after, 
+        body.body-devtracker.responsive-enabled .container .comment-preview .p-comment-user ul.p-comment-stats li:last-of-type::after,
+        body.body-forum.responsive-enabled .container .listing-container .p-comment-user ul.p-comment-stats li:last-of-type::before, 
+        body.body-forum.responsive-enabled .container .comment-preview .p-comment-user ul.p-comment-stats li:last-of-type::before, 
+        body.body-devtracker.responsive-enabled .container .listing-container .p-comment-user ul.p-comment-stats li:last-of-type::before, 
+        body.body-devtracker.responsive-enabled .container .comment-preview .p-comment-user ul.p-comment-stats li:last-of-type::before{
+            border-top-color: /*[[borderColor]]*/;
+        }
+        
+        body.body-forum.responsive-enabled .container .listing-container .p-comment-user ul.p-comment-stats.open li:last-of-type::after, 
+        body.body-forum.responsive-enabled .container .comment-preview .p-comment-user ul.p-comment-stats.open li:last-of-type::after, 
+        body.body-devtracker.responsive-enabled .container .listing-container .p-comment-user ul.p-comment-stats.open li:last-of-type::after, 
+        body.body-devtracker.responsive-enabled .container .comment-preview .p-comment-user ul.p-comment-stats.open li:last-of-type::after,
+        body.body-forum.responsive-enabled .container .listing-container .p-comment-user ul.p-comment-stats.open li:last-of-type::before, 
+        body.body-forum.responsive-enabled .container .comment-preview .p-comment-user ul.p-comment-stats.open li:last-of-type::before, 
+        body.body-devtracker.responsive-enabled .container .listing-container .p-comment-user ul.p-comment-stats.open li:last-of-type::before,
+        body.body-devtracker.responsive-enabled .container .comment-preview .p-comment-user ul.p-comment-stats.open li:last-of-type::before{
+            border-bottom-color: /*[[borderColor]]*/;
+        }
+        
+        body.body-forum .single-column #content .p-forum-a .p-comment-post .u-dropDown span{
+            background: none !important;
+        }
+        
+        body.body-forum .single-column #content .p-forum-a .listing-container .p-comment-wrapper .p-comment-footer{
+            border: none !important;   
+        }
+        
+        body.body-forum.responsive-enabled .container .listing-container .p-comment-user ul.p-comment-stats:hover li:last-of-type::after, 
+        body.body-forum.responsive-enabled .container .comment-preview .p-comment-user ul.p-comment-stats:hover li:last-of-type::after, 
+        body.body-devtracker.responsive-enabled .container .listing-container .p-comment-user ul.p-comment-stats:hover li:last-of-type::after, 
+        body.body-devtracker.responsive-enabled .container .comment-preview .p-comment-user ul.p-comment-stats:hover li:last-of-type::after,
+        body.body-forum.responsive-enabled .container .listing-container .p-comment-user ul.p-comment-stats:hover li:last-of-type::before, 
+        body.body-forum.responsive-enabled .container .comment-preview .p-comment-user ul.p-comment-stats:hover li:last-of-type::before, 
+        body.body-devtracker.responsive-enabled .container .listing-container .p-comment-user ul.p-comment-stats:hover li:last-of-type::before, 
+        body.body-devtracker.responsive-enabled .container .comment-preview .p-comment-user ul.p-comment-stats:hover li:last-of-type::before{
+            border-top-color: /*[[linkColor]]*/ !important;
+            
+        }
+        
+        body.body-forum.responsive-enabled .container .listing-container .p-comment-user ul.p-comment-stats.open:hover li:last-of-type::after, 
+        body.body-forum.responsive-enabled .container .comment-preview .p-comment-user ul.p-comment-stats.open:hover li:last-of-type::after, 
+        body.body-devtracker.responsive-enabled .container .listing-container .p-comment-user ul.p-comment-stats.open:hover li:last-of-type::after, 
+        body.body-devtracker.responsive-enabled .container .comment-preview .p-comment-user ul.p-comment-stats.open:hover li:last-of-type::after,
+        body.body-forum.responsive-enabled .container .listing-container .p-comment-user ul.p-comment-stats.open:hover li:last-of-type::before, 
+        body.body-forum.responsive-enabled .container .comment-preview .p-comment-user ul.p-comment-stats.open:hover li:last-of-type::before, 
+        body.body-devtracker.responsive-enabled .container .listing-container .p-comment-user ul.p-comment-stats.open:hover li:last-of-type::before,
+        body.body-devtracker.responsive-enabled .container .comment-preview .p-comment-user ul.p-comment-stats.open:hover li:last-of-type::before{
+            border-bottom-color: /*[[linkColor]]*/;
+        }
+        
+        
+         ul.p-comment-stats:hover li:last-of-type{
+            color: /*[[linkColor]]*/ !important;    
+        }
+    }
     
     
 }
