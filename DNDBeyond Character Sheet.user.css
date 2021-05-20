@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.2.1
+@version      1.2.2
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -701,7 +701,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     }
 }
 
-@-moz-document regexp("https://www.dndbeyond.com/profile/.*/characters/\\d*"),
+@-moz-document regexp("https://www.dndbeyond.com/profile/.*/characters/\\d.*"),
 regexp("https://www.dndbeyond.com/characters/.*"),
 regexp("https://www.dndbeyond.com/encounter-builder"),
 regexp("https://www.dndbeyond.com/combat-tracker.*"),
@@ -819,7 +819,8 @@ regexp("https://www.dndbeyond.com/encounters/.*") {
     .dice-die-button__tooltip__pip,
     .dice-die-button__count,
     .glc-game-log > div > ol > li > div > div:nth-of-type(2),
-    div[class^="_1I"] {
+    div[class^="_1I"],
+    .encounter-builder-sidebar__open-button{
         background: /*[[rollCalcColor]]*/ !important;
     }
     .dice-toolbar:hover,
