@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.2.3
+@version      1.2.4
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -57,7 +57,10 @@
         {
           filter: drop-shadow(1px 1px 0px var(--outline-color));
         }
-        .ct-character-sheet__inner *{
+        .ct-character-sheet__inner *,
+        .dice_result *,
+        .glc-game-log *,
+        .dice-rolling-panel *{
        text-shadow: 1px 0px 0
       var(--outline-color),
     0.9239px 0.3827px 0
@@ -876,7 +879,8 @@ regexp("https://www.dndbeyond.com/encounters/.*") {
     .dice-die-button:hover .dice-icon-die {
         background-color: /*[[rollColor]]*/;
     }
-    .dice_result__info .dice-icon-die {
+    .dice_result__info .dice-icon-die,
+    .dice-icon-die{
         background-color: /*[[fontColor]]*/;
     }
 
