@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.2.2
+@version      1.2.3
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -58,11 +58,38 @@
           filter: drop-shadow(1px 1px 0px var(--outline-color));
         }
         .ct-character-sheet__inner *{
-        text-shadow:
-       -1px -1px 0px var(--outline-color),  
-        1px -1px 0px var(--outline-color),
-        -1px 1px 0px var(--outline-color),
-         1px 1px 0px var(--outline-color);
+       text-shadow: 1px 0px 0
+      var(--outline-color),
+    0.9239px 0.3827px 0
+      var(--outline-color),
+    0.7071px 0.7071px 0
+      var(--outline-color),
+    0.3827px 0.9239px 0
+      var(--outline-color),
+    0px 1px 0
+      var(--outline-color),
+    -0.3827px 0.9239px 0
+      var(--outline-color),
+    -0.7071px 0.7071px 0
+      var(--outline-color),
+    -0.9239px 0.3827px 0
+      var(--outline-color),
+    -1px 0px 0
+      var(--outline-color),
+    -0.9239px -0.3827px 0
+      var(--outline-color),
+    -0.7071px -0.7071px 0
+      var(--outline-color),
+    -0.3827px -0.9239px 0
+      var(--outline-color),
+    0px -1px 0
+      var(--outline-color),
+    0.3827px -0.9239px 0
+      var(--outline-color),
+    0.7071px -0.7071px 0
+      var(--outline-color),
+    0.9239px -0.3827px 0
+      var(--outline-color);
         } 
     EOT;
     off "OFF"<<<EOT
