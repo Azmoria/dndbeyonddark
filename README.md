@@ -20,16 +20,25 @@ For android devices (mobile/tablet) <a href="https://kiwibrowser.com/">Kiwi Brow
 
 <i>**Note: Mobile/tablet testing will be slow as I primarily play on desktop - please add issues for problems you find, either desktop or other devices, as your help finding problems is appreciated. If you have requests you can also add them to issues and I will attempt to add what I can.</i>
 
-The images below are out of date as there are more options now but they give an idea of what the theme can do. I will update when I can.
+
 
 
 
 Character Sheet examples:
 
+
+
+<img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Character%20Sheet/Character%20Sheet%20Example%20Ice.JPG?raw=true"/>
+<img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Character%20Sheet/CharSheetExampleV2.gif"/>
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Character%20Sheet/Color%20Adjustments.PNG?raw=true"/>
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Character%20Sheet/DNDbeyond%20Char%20dark.PNG?raw=true"/>
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Character%20Sheet/DNDbeyond%20color%20example.PNG?raw=true"/>
-<img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Character%20Sheet/Charsheetgif.gif?raw=true"/>
+
+
+Mobile character sheet examples:
+
+<img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Character%20Sheet/Mobile%20Char%20Sheet.jpg?raw=true"/>
+<img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Character%20Sheet/Mobile%20Char%20Sheet%20Swipe.jpg?raw=true"/>
 
 Rest of the site examples:
 
