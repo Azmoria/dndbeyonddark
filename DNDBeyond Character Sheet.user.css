@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.2.10
+@version      1.2.11
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -374,7 +374,11 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ddbc-combat-attack__range-label,
     .ct-spells-spell__save-label,
     .ct-spells-spell__activation-extra,
-    .content-container h2 {
+    .content-container h2,
+    .ct-equipment-overview__currency-label,
+    [class^=ct-combat-mobile],
+    [class^=ct-extra-row__speed-callout],
+    [class^=ct-extra-row__hp]{
         color: /*[[fontColor]]*/;
     }
     .ddbc-tab-list__nav-item--is-active,
