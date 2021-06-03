@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.2.13
+@version      1.2.14
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -19,12 +19,21 @@
 @var color background "Background Color" "#000000"
 @var color sheetColor "Sheet Color" #000000
 @var range sheetOpacity "Sheet Opacity" [1, 0.01, 1, 0.01]
+@var range diceOpacity "Dice Opacity" [1, 0.01, 1, 0.01]
 @var color fontColor "Font Color" #ddd
 @var color borderColor "Border Color" #114
 @var color highlightColor "Highlight Color" #59d
 @var color scrollbarColor "Scrollbar Color" #114
 @var color rollColor "Rollable Items Color" #59d
 @advanced color rollCalcColor "Roll History Background Color" #030f1a
+@advanced dropdown rollCalcTransparency "Roll result Opacity"{
+    semitransparent "Semi-Transparent" <<<EOT
+        var(--roll-opacity-semi) 
+    EOT;
+    opaque "Opaque" <<<EOT
+        var(--roll-opacity-opaque) 
+    EOT;
+}
 @advanced dropdown filter "Icon Color" {
     light "Light icons" <<<EOT
         invert(100%) 
@@ -38,8 +47,8 @@
 }
 @var text iconFilter "Custom Icon css filter" "invert(75%) sepia(100%) hue-rotate(170deg) brightness(75%) saturate(300%)"
 @var select zindex "Dice over or Under the results" {
- "Over": "60002",
- "Under": "60000"
+ "Under": "60000",
+ "Over": "60002"
 }
 @advanced dropdown titleToggle "Character Title Background" {
     on "Default"<<<EOT
@@ -775,6 +784,8 @@ regexp("https://www.dndbeyond.com/encounters/.*") {
         --mobile-opacity-semi: /*[[sheetColor]]*/BB;
         --mobile-opacity-opaque: /*[[sheetColor]]*/FF;
         --sheet-color: /*[[sheetColor]]*/;
+        --roll-opacity-semi: /*[[rollCalcColor]]*/BB;
+        --roll-opacity-opaque: /*[[rollCalcColor]]*/FF;
     }
 
     /*Dice Alpha Size and position changes for full site*/
@@ -874,7 +885,7 @@ regexp("https://www.dndbeyond.com/encounters/.*") {
         color: /*[[rollColor]]*/ !important;   
     }
 
-    .dice_result,
+ 
     .dice_notification_controls .dice_notification_control,
     .dice-toolbar,
     .dice-toolbar:hover,
@@ -908,6 +919,11 @@ regexp("https://www.dndbeyond.com/encounters/.*") {
     .MuiList-root 
     {
         background: /*[[rollCalcColor]]*/ !important;
+    }
+    
+    .dice_result,
+    .dice_notification_controls .dice_notification_control{
+        background: /*[[rollCalcTransparency]]*/ !important;
     }
  
     
@@ -1046,6 +1062,10 @@ regexp("https://www.dndbeyond.com/encounters/.*") {
     .dice-toolbar:hover .dice-toolbar__dropdown-selected .dice-toolbar__dropdown-die
     {
         border: 3px /*[[rollColor]]*/ solid !important;
+    }
+    
+    canvas.dice-rolling-panel__container{
+        opacity: /*[[diceOpacity]]*/;  
     }
 
 
