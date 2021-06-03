@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.2.12
+@version      1.2.13
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -378,9 +378,12 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-equipment-overview__currency-label,
     [class^=ct-combat-mobile],
     [class^=ct-extra-row__speed-callout],
-    [class^=ct-extra-row__hp]{
+    [class^=ct-extra-row__hp],
+    .ct-inventory__choose-action-sep{
         color: /*[[fontColor]]*/;
     }
+    
+    
     .ddbc-tab-list__nav-item--is-active,
     .site .ddbc-theme-link,
     .ct-actions__attacks-heading,
@@ -409,7 +412,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-vehicle-block__ability-heading,
     .ct-vehicle-block__name,
     .ddbc-manage-icon--interactive:hover span,
-    .talespireLink {
+    .talespireLink{
         color: /*[[highlightColor]]*/ !important;
     }
 
