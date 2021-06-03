@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.2.5
+@version      1.2.6
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -828,14 +828,18 @@ regexp("https://www.dndbeyond.com/encounters/.*") {
     .jss2 .MuiListSubheader-root,
     .MuiButtonBase-root,
     .MuiList-root div,
-    .dice-toolbar__target-user{
+    .dice-toolbar__target-user,
+    .ct-game-log-pane>div>div:first-of-type>span,
+    .ct-game-log-pane>div>div:first-of-type>div>span,
+    .MuiButton-label{
         color: /*[[fontColor]]*/ !important;
     }
     
     .jss2 .MuiListItem-root:hover span,
     .MuiButtonBase-root:hover span,
     .MuiList-root li ul li:hover div,
-    li.MuiButtonBase-root:hover div
+    li.MuiButtonBase-root:hover div,
+    .MuiButtonBase-root:hover span
     {
         color: /*[[rollColor]]*/ !important;   
     }
@@ -872,7 +876,8 @@ regexp("https://www.dndbeyond.com/encounters/.*") {
     .jss2 .MuiListItem-root:hover,
     [class^="GameLogHeader_Container"],
     .MuiButtonBase-root,
-    .MuiList-root
+    .MuiList-root,
+    .ct-game-log-pane>div>div:first-of-type
     {
         background: /*[[rollCalcColor]]*/ !important;
     }
@@ -908,8 +913,9 @@ regexp("https://www.dndbeyond.com/encounters/.*") {
         border-color: /*[[rollColor]]*/ !important;
     }
     
-    [class^="GameLogHeader_Container"]{
-        box-shadow: 1px 1px 30px /*[[background]]*/;   
+    [class^="GameLogHeader_Container"],
+    .ct-game-log-pane>div>div:first-of-type{
+        box-shadow: 1px 1px 30px /*[[sheetColor]]*/;   
         z-index: 1;
     }
     
