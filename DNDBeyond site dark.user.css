@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.6
+@version      1.2.7
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -108,6 +108,10 @@ div#site{
 		border-radius: 6px;
 		border: none;
 	}
+    
+    :focus{
+    outline: none !important;   
+    }
 
     
 	body.responsive-enabled #site #site-main .container #content,
