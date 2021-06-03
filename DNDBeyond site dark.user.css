@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.8
+@version      1.2.9
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -437,7 +437,10 @@ div#site{
     .homebrew-versions-listing table tbody tr:nth-child(even),
     .info-tooltip-popup,
     .info-tooltip-popup tr,
-    .info-tooltip-popup tr
+    .info-tooltip-popup tr,
+    .ui-widget-content,
+    #rating-likes tbody tr.even td,
+    #rating-likes tbody tr.odd td
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
@@ -622,7 +625,18 @@ div#site{
     .p-comments .p-comment-actions .user-actions>li a,
     .homebrew-previous-versions .h2 h2,
     .homebrew-versions-listing table.listing td,
-    .ddb-campaigns-detail-body-listing-unassigned-active-header-primary
+    .ddb-campaigns-detail-body-listing-unassigned-active-header-primary,
+    .post-author,
+    .post-date,
+    span.tip, 
+    abbr.tip,
+    .forum-thread-row .col-thread .thread-author,
+    .forum-thread-row .col-thread .active-viewers,
+    .b-pagination-a .b-pagination-list>.b-pagination-item>a.s-active, 
+    .b-pagination-a .b-pagination-list>.b-pagination-item>span.s-active,
+    .p-comments-b .p-comment-footer .forum-post-rating .content-box-rating span.like::before, 
+    .body-forum .comment-preview li .p-comment-footer .forum-post-rating .content-box-rating span.like::before, 
+    .body-forum-search .p-comments-a .p-comment-footer .forum-post-rating .content-box-rating span.like::before
     {
 		color: /*[[fontColor]]*/
 		!important;
@@ -658,7 +672,14 @@ div#site{
     .forum-thread-row .col-thread .title:hover,
     .p-forum-a .col-forum .forum-subs a:hover,
     .user:hover,
-    .ddbc-truncated-content__trigger-label{
+    .ddbc-truncated-content__trigger-label,
+    .body-forum li.b-pagination-item a[rel="prev"]:hover, 
+    .body-forum li.b-pagination-item a[rel="next"]:hover, 
+    .body-forum li.b-pagination-item .b-pagination-item:hover,
+    .p-comments-b .p-comment-footer .forum-post-rating .content-box-rating span.like:hover::before, 
+    .body-forum .comment-preview li .p-comment-footer .forum-post-rating .content-box-rating span.like:hover::before, 
+    .body-forum-search .p-comments-a .p-comment-footer .forum-post-rating .content-box-rating span.like:hover::before,
+    .b-ratingForm-a a:hover .num-likes{
 		color: /*[[linkColor]]*/
 		!important
 	}
@@ -746,9 +767,15 @@ div#site{
   
     
     .input-select__clear-button,
-    .equipment-manager-attuned-add{
-        border-color: /*[[linkColor]]*/
+    .equipment-manager-attuned-add,
+    .body-forum li.b-pagination-item .s-active,
+    .body-forum li.b-pagination-item a[rel="prev"]:hover, 
+    .body-forum li.b-pagination-item a[rel="next"]:hover, 
+    .body-forum li.b-pagination-item .b-pagination-item:hover{
+        border-color: /*[[linkColor]]*/ !important;
     }
+    
+    
 
     .input-checkbox__input:focus~.input-checkbox__focus-indicator,
     .whats-new-button{
@@ -763,6 +790,16 @@ div#site{
 		!important;
 		border-color: /*[[borderColor]]*/
 		!important;
+    }
+    
+    .u-icon-jump:after,
+    .go-next:after{
+        border-left-color: /*[[fontColor]]*/ !important;   
+    }
+    
+    .u-icon-jump:hover:after,
+    .go-next:hover:after{
+        border-left-color: /*[[linkColor]]*/ !important;   
     }
 
 	.compendium-toc-block-text {
@@ -974,12 +1011,16 @@ div#site{
 		border-color: /*[[borderColor]]*/;
 	}
         
-    .p-user-a .listing .latest-post-item, .p-user-a.s_myAccount .listing .latest-post-item, 
-    .p-user-a.s_myProfile .listing .latest-post-item, .p-user-a.s_myStreams .listing .latest-post-item, 
-    .p-user-a.s_newContent .listing .latest-post-item{
-    border-color: /*[[fontColor]]*/;
-            
-        }
+    .p-user-a .listing .latest-post-item, 
+    .p-user-a.s_myAccount .listing .latest-post-item, 
+    .p-user-a.s_myProfile .listing .latest-post-item, 
+    .p-user-a.s_myStreams .listing .latest-post-item, 
+    .p-user-a.s_newContent .listing .latest-post-item,
+    li.b-pagination-item a[rel="prev"]:not(.s-active), 
+    li.b-pagination-item a[rel="next"]:not(.s-active), 
+    li.b-pagination-item .b-pagination-item:not(.s-active){
+    border-color: /*[[fontColor]]*/;            
+    }
         
         
     .notification.notification-success.notification-visible{
@@ -1013,6 +1054,12 @@ div#site{
     .hit-point-adjuster__damage{
         background-color: #bc0f0f66 !important;
     }
+    
+    #notifications li{
+        background-color: #222 !important;
+
+    }
+
 
 	.listing .info .row.item-name .name .very-rare,
 	.very-rare {
@@ -1213,6 +1260,21 @@ div#site{
     .b-pagination-b li.b-pagination-item>a:hover, .b-pagination-b li.b-pagination-item a:visited:hover{
         background-color: /*[[backgroundColor]]*/ !important;
          box-shadow: inset 0px 0px 25px 0px /*[[linkColor]]*/ !important;
+    }
+    
+    li.b-pagination-item a[rel="prev"]:not(.s-active), 
+    li.b-pagination-item a[rel="next"]:not(.s-active), 
+    li.b-pagination-item .b-pagination-item:not(.s-active){
+        background-color: /*[[backgroundColor]]*/ !important;
+        box-shadow: inset 0px 0px 4px 0px /*[[fontColor]]*/ !important;
+    }
+    
+    .body-forum li.b-pagination-item .s-active,
+    .body-forum li.b-pagination-item a[rel="prev"]:hover, 
+    .body-forum li.b-pagination-item a[rel="next"]:hover, 
+    .body-forum li.b-pagination-item .b-pagination-item:hover{
+        background-color: /*[[backgroundColor]]*/ !important;
+         box-shadow: inset 0px 0px 4px 0px /*[[linkColor]]*/ !important;
     }
     button.ct-button.character-button.ddbc-button.character-button-block.character-button-outline,
     button.ct-button.character-button.ddbc-button.character-button-block.character-button-outline:hover
@@ -1605,6 +1667,8 @@ div#site{
     .ddb-strip-item-compendium-content{
     background-image: url(https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Dark%20Images/strip-compendium-content.png?raw=true);
     }
+    
+ 
 
       @media screen and (max-width: 767px){
  
