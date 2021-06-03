@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.2.4
+@version      1.2.5
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -816,13 +816,28 @@ regexp("https://www.dndbeyond.com/encounters/.*") {
     [class^="DiceMessage_Total"],
     [class^="DiceMessage_Line"],
     [class^="GameLogEntry_"],
+    [class^="GameLogHeader_Container"],
+    [class^="GameLogHeader_Container"] span,
     ._1_4XN--HbdIB3j-9HVLY3F,
     ._31r1gjOw0T79LKVLAldcq0,
     .glc-game-log > div > ol > li > div > div:nth-of-type(2) > div > div > div > div:nth-of-type(2) > span,
     div[class^="_1I"] > span > span:last-of-type,
     .dice_result__total-result,
-    .dice_result__info__breakdown {
+    .dice_result__info__breakdown,
+    .MuiBox-root,
+    .jss2 .MuiListSubheader-root,
+    .MuiButtonBase-root,
+    .MuiList-root div,
+    .dice-toolbar__target-user{
         color: /*[[fontColor]]*/ !important;
+    }
+    
+    .jss2 .MuiListItem-root:hover span,
+    .MuiButtonBase-root:hover span,
+    .MuiList-root li ul li:hover div,
+    li.MuiButtonBase-root:hover div
+    {
+        color: /*[[rollColor]]*/ !important;   
     }
 
     .dice_result,
@@ -850,29 +865,56 @@ regexp("https://www.dndbeyond.com/encounters/.*") {
     .dice-die-button__count,
     .glc-game-log > div > ol > li > div > div:nth-of-type(2),
     div[class^="_1I"],
-    .encounter-builder-sidebar__open-button{
+    .encounter-builder-sidebar__open-button,
+    .dice-toolbar__dropdown .dice-toolbar__target-menu-button,
+    .MuiBox-root,
+    .dice-toolbar__dropdown-die:hover,
+    .jss2 .MuiListItem-root:hover,
+    [class^="GameLogHeader_Container"],
+    .MuiButtonBase-root,
+    .MuiList-root
+    {
         background: /*[[rollCalcColor]]*/ !important;
     }
-    .dice-toolbar:hover,
+ 
+    
     .GameLogEntry_Message__LMnm6,
     ._1_4XN--HbdIB3j-9HVLY3F,
-
-    .dice-die-button__tooltip {
+    .dice-die-button__tooltip{
         border: 1px solid /*[[rollColor]]*/ !important;
     }
 
+    .dice-toolbar{
+        height: auto !important;   
+    }
+    
     .dice-die-button__tooltip__pip {
         border-left-color: /*[[rollColor]]*/;
         border-bottom-color: /*[[rollColor]]*/;
     }
+    
+    
+    
+
 
     .dice-toolbar__dropdown-selected .dice-toolbar__dropdown-die,
     .dice-toolbar__dropdown-selected .dice-toolbar__dropdown-die:hover,
     .GameLogEntry_Message__1GoY3.GameLogEntry_Other__2PSbv,
     .dice-icon-die:hover,
     .glc-game-log ol div,
-    div[class^="_1I"] {
+    div[class^="_1I"],
+    .MuiPaper-root
+    {
         border-color: /*[[rollColor]]*/ !important;
+    }
+    
+    [class^="GameLogHeader_Container"]{
+        box-shadow: 1px 1px 30px /*[[background]]*/;   
+        z-index: 1;
+    }
+    
+    .MuiButtonBase-root{
+        border:none !important;   
     }
 
 
@@ -914,16 +956,64 @@ regexp("https://www.dndbeyond.com/encounters/.*") {
 
 
     .ct-character-sheet--dice-enabled .integrated-dice__container:hover ~ .ddbc-saving-throw-selection-box-svg path,
-    .ct-character-sheet--dice-enabled .integrated-dice__container:hover ~ .ddbc-saving-throw-selection-small-box-svg path {
+    .ct-character-sheet--dice-enabled .integrated-dice__container:hover ~ .ddbc-saving-throw-selection-small-box-svg path,
+    .MuiSvgIcon-root polygon:first-of-type{
         fill: /*[[rollCalcColor]]*/ !important;
     }
 
     ._1_4XN--HbdIB3j-9HVLY3F path,
-    .glc-game-log ol div path {
+    .glc-game-log ol div path,
+    .MuiSvgIcon-root path,
+    .MuiSvgIcon-root polygon:nth-of-type(2),
+    .MuiButtonBase-root path{
         fill: /*[[fontColor]]*/ !important;
+        opacity: 1 !important;
+    }
+    
+    .MuiButtonBase-root:hover path,
+    .MuiButtonBase-root:hover polygon:nth-of-type(2),
+    .MuiButtonBase-root:hover path
+    {
+        fill: /*[[rollColor]]*/ !important;   
+        opacity: 1 !important;
+    }
+    .dice-die-button__count,
+    .dice-die-button__tooltip {
+        color: /*[[rollColor]]*/
     }
 
-    /*Beyond 20 rolls settings*/
+    .sidebar__pane-content {
+        background-color: /*[[sheetColor]]*/ !important;
+    }
+
+    .encounter-builder-app .integrated-dice__container {
+
+        color: /*[[rollColor]]*/;
+        background: /*[[background]]*/;
+        border: none;
+    }
+    .encounter-builder-app .integrated-dice__container:hover {
+        border: 1px /*[[rollColor]]*/ solid !important;
+    }
+
+
+    .encounter-builder-app .integrated-dice__container:focus {
+        outline: none !important;
+    }
+
+    
+    .dice-toolbar:hover .dice-toolbar__dropdown-die{
+        border: 1px /*[[rollColor]]*/ solid !important;
+    }
+    
+    .dice-toolbar__dropdown-selected .dice-toolbar__dropdown-die,
+    .dice-toolbar:hover .dice-toolbar__dropdown-selected .dice-toolbar__dropdown-die
+    {
+        border: 3px /*[[rollColor]]*/ solid !important;
+    }
+
+
+/*Beyond 20 + Talespire rolls settings*/
     .beyond20-roll-cell,
     .beyond20-description,
     .beyond20-dice-roller-content,
@@ -965,30 +1055,6 @@ regexp("https://www.dndbeyond.com/encounters/.*") {
     .beyond20-roll-detail-crit {
         color: #0F0 !important;
     }
-    .dice-die-button__count,
-    .dice-die-button__tooltip {
-        color: /*[[rollColor]]*/
-    }
-
-    .sidebar__pane-content {
-        background-color: /*[[sheetColor]]*/ !important;
-    }
-
-    .encounter-builder-app .integrated-dice__container {
-
-        color: /*[[rollColor]]*/;
-        background: /*[[background]]*/;
-        border: none;
-    }
-    .encounter-builder-app .integrated-dice__container:hover {
-        border: 1px /*[[rollColor]]*/ solid !important;
-    }
-
-
-    .encounter-builder-app .integrated-dice__container:focus {
-        outline: none !important;
-    }
-
     .talespireLink {
         background: /*[[sheetColor]]*/ !important;
         color: /*[[highlightColor]]*/ !important;
@@ -997,7 +1063,9 @@ regexp("https://www.dndbeyond.com/encounters/.*") {
     .ajs-content iframe {
         filter: /*[[filter]]*/ !important;
     }
-
+    
+    
+/*Mobile and Tablet*/
 
 
     @media screen and (max-width: 767px) {
