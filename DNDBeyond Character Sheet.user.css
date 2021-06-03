@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.2.7
+@version      1.2.8
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -43,6 +43,7 @@
 }
 @advanced dropdown titleToggle "Character Title background toggle" {
     on "ON"<<<EOT
+         background: var(--sheet-color) 
     EOT;
     off "OFF"<<<EOT
         background: none !important; 
@@ -250,8 +251,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .talespireLink,
     .ct-combat-mobile,
     .ct-character-sheet-mobile__header .ct-character-header-mobile,
-    .ct-section-placeholder__icon,
-    .ct-character-sheet:before{
+    .ct-section-placeholder__icon{
         background: /*[[sheetColor]]*/ !important;
     }
     .ct-slot-manager__slot--used:before,
@@ -765,6 +765,7 @@ regexp("https://www.dndbeyond.com/encounters/.*") {
         --custom-mobile-opacity: /*[[sheetColor]]*//*[[customMobileOpacity]]*/;
         --mobile-opacity-semi: /*[[sheetColor]]*/BB;
         --mobile-opacity-opaque: /*[[sheetColor]]*/FF;
+        --sheet-color: /*[[sheetColor]]*/;
     }
 
     /*Dice Alpha Size and position changes for full site*/
