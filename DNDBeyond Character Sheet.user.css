@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.2.11
+@version      1.2.12
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -901,10 +901,8 @@ regexp("https://www.dndbeyond.com/encounters/.*") {
     .MuiBox-root,
     .dice-toolbar__dropdown-die:hover,
     .jss2 .MuiListItem-root:hover,
-    [class^="GameLogHeader_Container"],
     .MuiButtonBase-root,
-    .MuiList-root,
-    .ct-game-log-pane>div>div:first-of-type
+    .MuiList-root 
     {
         background: /*[[rollCalcColor]]*/ !important;
     }
@@ -1015,7 +1013,9 @@ regexp("https://www.dndbeyond.com/encounters/.*") {
         color: /*[[rollColor]]*/
     }
 
-    .sidebar__pane-content {
+    .sidebar__pane-content,
+    .ct-game-log-pane>div>div:first-of-type,
+    [class^="GameLogHeader_Container"]{
         background-color: /*[[sheetColor]]*/ !important;
     }
 
