@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.2.9
+@version      1.2.10
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -41,8 +41,11 @@
  "Over": "60002",
  "Under": "60000"
 }
-@advanced dropdown titleToggle "Character Title background toggle" {
-    on "ON"<<<EOT
+@advanced dropdown titleToggle "Character Title Background" {
+    on "Default"<<<EOT
+    EOT;
+    sheetColor "Sheet Color"<<<EOT
+        background: var(--sheet-color);
     EOT;
     off "OFF"<<<EOT
         background: none !important; 
@@ -764,6 +767,7 @@ regexp("https://www.dndbeyond.com/encounters/.*") {
         --custom-mobile-opacity: /*[[sheetColor]]*//*[[customMobileOpacity]]*/;
         --mobile-opacity-semi: /*[[sheetColor]]*/BB;
         --mobile-opacity-opaque: /*[[sheetColor]]*/FF;
+        --sheet-color: /*[[sheetColor]]*/;
     }
 
     /*Dice Alpha Size and position changes for full site*/
