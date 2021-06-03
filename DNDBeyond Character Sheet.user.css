@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.2.6
+@version      1.2.7
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -250,7 +250,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .talespireLink,
     .ct-combat-mobile,
     .ct-character-sheet-mobile__header .ct-character-header-mobile,
-    .ct-section-placeholder__icon{
+    .ct-section-placeholder__icon,
+    .ct-character-sheet:before{
         background: /*[[sheetColor]]*/ !important;
     }
     .ct-slot-manager__slot--used:before,
@@ -298,6 +299,10 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-inventory-filter__input[type=search],
     .ct-extras-filter__input[type=search] {
         background: none !important;
+    }
+    
+    .ct-character-sheet:before{
+        opacity: /*[[sheetOpacity]]*/ !important;   
     }
 
 
@@ -584,8 +589,10 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         fill: /*[[sheetColor]]*/ !important;
         opacity: /*[[sheetOpacity]]*/ !important;
     }
-
-
+    
+    .ddbc-saving-throws-summary__ability-modifier svg path{
+        fill: none !important;
+    }
 
     svg > path + path,
     .ct-combat__statuses path,
@@ -666,8 +673,22 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-equipment-overview__weight-speed--push-drag-lift {
         color: #d24040;
     }
-
-
+    
+  
+    
+    @media (min-width: 768px){
+        .ct-character-sheet:before {       
+            height: 78px;
+        }
+    }
+    
+    @media (min-width: 1200px){
+        .ct-character-sheet:before {       
+            height: 95px;
+        }
+    }
+    
+    
     @media (max-width: 1023px) {
         .ct-character-header-tablet__button,
         .ct-status-summary-mobile__health,
@@ -727,7 +748,6 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         .ct-combat-mobile__cta-button{
             background: /*[[mobileOpacity]]*/ !important;
         }
-        
     }
 }
 
