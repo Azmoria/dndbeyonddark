@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.2.18
+@version      1.2.19
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -112,7 +112,7 @@
 @advanced dropdown diceTint "Dice Tint" {
     on "Default"<<<EOT
     EOT;
-    Custom "Custom Hue Rotation"<<<EOT
+    Custom "Custom Dice Sliders"<<<EOT
     canvas.dice-rolling-panel__container{
         filter: var(--dice-color);
     }
