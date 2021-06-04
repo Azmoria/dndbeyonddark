@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.2.16
+@version      1.2.17
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -109,6 +109,17 @@
         background: none !important; 
     EOT;
 }
+@advanced dropdown diceTint "Dice Tint" {
+    on "Default"<<<EOT
+    EOT;
+    Custom "Custom Hue Rotation"<<<EOT
+    canvas.dice-rolling-panel__container{
+        filter: var(--dice-color);
+    }
+    EOT;
+}
+@var range hueRotation "Custom Hue Rotation" [1, 1, 360, 1]
+
 
 @advanced dropdown mobileOpacity "Tablet/Mobile Opacity; Screen sizes<1024px; Set Sheet Opacity above to 1 "{
     opaque "Opaque" <<<EOT
@@ -529,7 +540,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ddbc-healing-icon__icon,
     .ct-condition-manage-pane__conditions i,
     .ajs-content iframe,
-    .i-req-attunement{
+    .i-req-attunement
+    {
         filter: /*[[filter]]*/ !important;
     }
     
@@ -668,7 +680,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     content: "";
     display: block;
     height: 16px;
-    width: 16px;
+    width: 16px;    
     background-image: none;
     -webkit-mask: url(https://www.dndbeyond.com/Content/Skins/Waterdeep/images/sprites/plus_minus-white.svg);
     -webkit-mask-position: 0 0;
@@ -821,6 +833,7 @@ regexp("https://www.dndbeyond.com/encounters/.*") {
         --sheet-color: /*[[sheetColor]]*/;
         --roll-opacity-semi: /*[[rollCalcColor]]*/BB;
         --roll-opacity-opaque: /*[[rollCalcColor]]*/FF;
+        --dice-color: hue-rotate(/*[[hueRotation]]*/deg);
     }
 
     /*Dice Alpha Size and position changes for full site*/
@@ -1102,6 +1115,8 @@ regexp("https://www.dndbeyond.com/encounters/.*") {
     canvas.dice-rolling-panel__container{
         opacity: /*[[diceOpacity]]*/;  
     }
+    
+    /*[[diceTint]]*/
 
 
 /*Beyond 20 + Talespire rolls settings*/
