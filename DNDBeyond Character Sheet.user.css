@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.2.17
+@version      1.2.18
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -118,7 +118,11 @@
     }
     EOT;
 }
-@var range hueRotation "Custom Hue Rotation" [1, 1, 360, 1]
+@var range diceSepia "Custom Dice Sepia %" [1, 1, 100, 1]
+@var range hueRotation "Custom Dice Hue Rotation" [1, 1, 360, 1]
+@var range diceBrightness "Custom Dice Brightness %" [1, 1, 500, 1]
+@var range diceSaturation "Custom Dice Saturation %" [1, 1, 500, 1]
+
 
 
 @advanced dropdown mobileOpacity "Tablet/Mobile Opacity; Screen sizes<1024px; Set Sheet Opacity above to 1 "{
@@ -833,7 +837,7 @@ regexp("https://www.dndbeyond.com/encounters/.*") {
         --sheet-color: /*[[sheetColor]]*/;
         --roll-opacity-semi: /*[[rollCalcColor]]*/BB;
         --roll-opacity-opaque: /*[[rollCalcColor]]*/FF;
-        --dice-color: hue-rotate(/*[[hueRotation]]*/deg);
+        --dice-color: sepia(/*[[diceSepia]]*/%) hue-rotate(/*[[hueRotation]]*/deg) brightness(/*[[diceBrightness]]*/%) saturate(/*[[diceSaturation]]*/%);
     }
 
     /*Dice Alpha Size and position changes for full site*/
