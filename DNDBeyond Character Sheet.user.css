@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.2.20
+@version      1.2.21
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -122,6 +122,11 @@
 @var range hueRotation "Custom Dice Hue Rotation" [1, 1, 360, 1]
 @var range diceBrightness "Custom Dice Brightness %" [100, 1, 500, 1]
 @var range diceSaturation "Custom Dice Saturation %" [100, 1, 500, 1]
+@var range diceContrast "Custom Dice Contrast %" [100, 1, 500, 1]
+@var select diceInvert "Invert Dice Color" {
+ "No": "0",
+ "Yes": "1"
+}
 
 
 
@@ -837,7 +842,7 @@ regexp("https://www.dndbeyond.com/encounters/.*") {
         --sheet-color: /*[[sheetColor]]*/;
         --roll-opacity-semi: /*[[rollCalcColor]]*/BB;
         --roll-opacity-opaque: /*[[rollCalcColor]]*/FF;
-        --dice-color: sepia(/*[[diceSepia]]*/%) hue-rotate(/*[[hueRotation]]*/deg) brightness(/*[[diceBrightness]]*/%) saturate(/*[[diceSaturation]]*/%);
+        --dice-color: sepia(/*[[diceSepia]]*/%) hue-rotate(/*[[hueRotation]]*/deg) brightness(/*[[diceBrightness]]*/%) saturate(/*[[diceSaturation]]*/%) contrast(/*[[diceContrast]]*/%) invert(/*[[diceInvert]]*/);
     }
 
     /*Dice Alpha Size and position changes for full site*/
