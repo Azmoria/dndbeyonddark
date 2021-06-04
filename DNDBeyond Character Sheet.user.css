@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.2.19
+@version      1.2.20
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -120,8 +120,8 @@
 }
 @var range diceSepia "Custom Dice Sepia %" [1, 1, 100, 1]
 @var range hueRotation "Custom Dice Hue Rotation" [1, 1, 360, 1]
-@var range diceBrightness "Custom Dice Brightness %" [1, 1, 500, 1]
-@var range diceSaturation "Custom Dice Saturation %" [1, 1, 500, 1]
+@var range diceBrightness "Custom Dice Brightness %" [100, 1, 500, 1]
+@var range diceSaturation "Custom Dice Saturation %" [100, 1, 500, 1]
 
 
 
