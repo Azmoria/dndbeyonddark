@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.2.15
+@version      1.2.16
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -387,7 +387,9 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     [class^=ct-combat-mobile],
     [class^=ct-extra-row__speed-callout],
     [class^=ct-extra-row__hp],
-    .ct-inventory__choose-action-sep{
+    .ct-inventory__choose-action-sep,
+    .ddbc-character-name,
+    .ct-character-header-desktop{
         color: /*[[fontColor]]*/;
     }
     
@@ -527,13 +529,16 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ddbc-healing-icon__icon,
     .ct-condition-manage-pane__conditions i,
     .ajs-content iframe,
-    .i-req-attunement {
+    .i-req-attunement{
         filter: /*[[filter]]*/ !important;
     }
+    
 
     .ajs-content iframe html {
         filter: hue-rotate(180deg) !important;
     }
+    
+  
 
 
     /*Fills and Strokes*/
@@ -632,13 +637,44 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     svg.ddbc-svg.ddbc-frame-svg.ddbc-svg--themed rect {
         stroke: /*[[highlightColor]]*/;
     }
+    
+     .ddbc-manage-icon--interactive .ddbc-manage-icon__icon {
+        -webkit-mask: url("https://www.dndbeyond.com/Content/Skins/Waterdeep/images/icons/gear-grey.svg") no-repeat 100% 100%;
+        background-color: /*[[fontColor]]*/;
+        -webkit-mask-size: cover;
+        mask-size: cover;
+        background-image: none
+    }
 
-    .ddbc-manage-icon--interactive:hover .ddbc-manage-icon__icon {
+    .ddbc-manage-icon--interactive:hover span.ddbc-manage-icon__icon,
+    .ddbc-character-tidbits.ddbc-character-tidbits--is-interactive:hover .ddbc-manage-icon__icon{
         -webkit-mask: url("https://www.dndbeyond.com/Content/Skins/Waterdeep/images/icons/gear-grey.svg") no-repeat 100% 100%;
         background-color: /*[[highlightColor]]*/;
         -webkit-mask-size: cover;
         mask-size: cover;
         background-image: none
+    }
+    
+    
+    .ct-health-manager__adjuster-buttons .action-decrease:before,
+    .ct-health-adjuster__buttons .action-decrease:before{
+    -webkit-mask-position: -17px 0 !important;
+    }
+
+    .ct-health-manager__adjuster-buttons .action-decrease:before, 
+    .ct-health-manager__adjuster-buttons .action-increase:before,
+    .ct-health-adjuster__buttons .action-decrease:before,
+    .ct-health-adjuster__buttons .action-increase:before{
+    content: "";
+    display: block;
+    height: 16px;
+    width: 16px;
+    background-image: none;
+    -webkit-mask: url(https://www.dndbeyond.com/Content/Skins/Waterdeep/images/sprites/plus_minus-white.svg);
+    -webkit-mask-position: 0 0;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: cover;
+    background-color: /*[[fontColor]]*/;
     }
 
     /*[[outlineToggle]]*/
