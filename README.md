@@ -35,9 +35,7 @@ Character Sheet examples:
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Character%20Sheet/DNDbeyond%20Char%20dark.PNG?raw=true"/>
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Character%20Sheet/DNDbeyond%20color%20example.PNG?raw=true"/>
 
-Dice examples:
-
-
+Dice customization examples:
 
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Dice%20Examples/Prestige.PNG?raw=true"/>
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Dice%20Examples/Poison.PNG?raw=true"/>
