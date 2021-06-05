@@ -1,5 +1,5 @@
 # dndbeyonddark
-Themes for DNDBeyond allowing for custom colors. Dark theme by default.
+Themes for DNDBeyond allowing for custom colors. It's set to a dark mode by default.
 
 
 You will need Stylus or another User CSS extension to apply these themes. 
