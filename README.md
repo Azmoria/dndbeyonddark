@@ -1,6 +1,7 @@
 # dndbeyonddark
 Themes for DNDBeyond allowing for custom colors. It's set to a dark mode by default.
 
+Now includes customizing Dice Tint. See Images below for examples.
 
 You will need Stylus or another User CSS extension to apply these themes. 
 
@@ -33,6 +34,18 @@ Character Sheet examples:
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Character%20Sheet/Color%20Adjustments.PNG?raw=true"/>
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Character%20Sheet/DNDbeyond%20Char%20dark.PNG?raw=true"/>
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Character%20Sheet/DNDbeyond%20color%20example.PNG?raw=true"/>
+
+Dice examples:
+
+
+
+<img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Dice%20Examples/Prestige.PNG?raw=true"/>
+<img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Dice%20Examples/Poison.PNG?raw=true"/>
+<img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Dice%20Examples/Fireball.PNG?raw=true"/>
+<img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Dice%20Examples/Shadow.PNG?raw=true"/>
+<img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Dice%20Examples/dark%20side.PNG?raw=true"/>
+<img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Dice%20Examples/Diamond.PNG?raw=true"/>
+<img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Dice%20Examples/Necrotic.PNG?raw=true"/>
 
 
 Mobile character sheet examples:
