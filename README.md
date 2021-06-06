@@ -37,6 +37,7 @@ Character Sheet examples:
 
 Dice customization examples:
 
+<img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Dice%20Examples/rgb-rainbow.gif?raw=true"/>
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Dice%20Examples/Prestige.PNG?raw=true"/>
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Dice%20Examples/Poison.PNG?raw=true"/>
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Dice%20Examples/Fireball.PNG?raw=true"/>
