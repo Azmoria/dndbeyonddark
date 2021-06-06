@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.2.21
+@version      1.2.22
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -118,6 +118,7 @@
     }
     EOT;
 }
+
 @var range diceSepia "Custom Dice Sepia %" [1, 1, 100, 1]
 @var range hueRotation "Custom Dice Hue Rotation" [1, 1, 360, 1]
 @var range diceBrightness "Custom Dice Brightness %" [100, 1, 500, 1]
@@ -126,6 +127,34 @@
 @var select diceInvert "Invert Dice Color" {
  "No": "0",
  "Yes": "1"
+}
+@advanced dropdown rgbDice "RGB Dice"{
+
+off "OFF"<<<EOT
+EOT;
+Rainbow "Rainbow"<<<EOT
+    canvas.dice-rolling-panel__container {
+
+        -webkit-animation: rainbow 4s steps(360) infinite;
+        }
+
+        @-webkit-keyframes rainbow {
+            from { -webkit-filter: var(--dice-color) hue-rotate(10deg); }
+            to { -webkit-filter: var(--dice-color) hue-rotate(360deg); }
+        }
+
+        @keyframes rainbow {
+            from {
+            -webkit-filter: var(--dice-color) hue-rotate(10deg);
+                    filter: var(--dice-color) hue-rotate(10deg);
+            }
+          to {
+            -webkit-filter: var(--dice-color) hue-rotate(360deg);
+                    filter: var(--dice-color) hue-rotate(360deg);
+            }
+        }
+    EOT;
+
 }
 
 
@@ -1124,8 +1153,9 @@ regexp("https://www.dndbeyond.com/encounters/.*") {
     canvas.dice-rolling-panel__container{
         opacity: /*[[diceOpacity]]*/;  
     }
-    
+    /*[[rgbDice]]*/
     /*[[diceTint]]*/
+
 
 
 /*Beyond 20 + Talespire rolls settings*/
