@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.2.26
+@version      1.2.27
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -73,9 +73,18 @@
 @var color highlightColor "Highlight Color" #59d
 @var color scrollbarColor "Scrollbar Color" #114
 @var color rollColor "Rollable Items Color" #59d
-@var range diceOpacity "Dice Opacity" [1, 0.01, 1, 0.01]
-@advanced color rollCalcColor "Roll History Background Color" #030f1a
-@advanced dropdown rollCalcTransparency "Roll Popup Result Opacity"{
+@advanced dropdown titleToggle "Character Title Background" {
+    on "Default"<<<EOT
+    EOT;
+    sheetColor "Sheet Color"<<<EOT
+        background: var(--sheet-color);
+    EOT;
+    off "OFF"<<<EOT
+        background: none !important; 
+    EOT;
+}
+@advanced color rollCalcColor "Roll Results Background Color" #030f1a
+@advanced dropdown rollCalcTransparency "Roll Results Popup Opacity"{
     semitransparent "Semi-Transparent" <<<EOT
         var(--roll-opacity-semi) 
     EOT;
@@ -94,21 +103,13 @@
         var(--custom-icon-filter) 
     EOT;
 }
-@var text iconFilter "Custom Icon css filter" "invert(75%) sepia(100%) hue-rotate(170deg) brightness(75%) saturate(300%)"
-@var select zindex "Dice over or Under the results" {
+@var text iconFilter "Custom Icon CSS Filter" "invert(75%) sepia(100%) hue-rotate(170deg) brightness(75%) saturate(300%)"
+@var select zindex "Dice Over/Under the Results Popup" {
  "Under": "60000",
  "Over": "60002"
 }
-@advanced dropdown titleToggle "Character Title Background" {
-    on "Default"<<<EOT
-    EOT;
-    sheetColor "Sheet Color"<<<EOT
-        background: var(--sheet-color);
-    EOT;
-    off "OFF"<<<EOT
-        background: none !important; 
-    EOT;
-}
+@var range diceOpacity "Dice Opacity" [1, 0.01, 1, 0.01]
+
 @advanced dropdown diceTint "Dice Tint" {
     on "Default"<<<EOT
     EOT;
@@ -133,9 +134,9 @@
 off "OFF"<<<EOT
 EOT;
 Rainbow "Rainbow"<<<EOT
-    canvas.dice-rolling-panel__container {
+    canvas.dice-rolling-panel__container{
 
-        -webkit-animation: rainbow var(--rgb-speed) steps(359) infinite;
+        -webkit-animation: rainbow var(--rgb-speed) steps(360) infinite;
         }
 
         @-webkit-keyframes rainbow {
