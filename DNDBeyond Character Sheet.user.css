@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.2.24
+@version      1.2.25
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -135,7 +135,7 @@ EOT;
 Rainbow "Rainbow"<<<EOT
     canvas.dice-rolling-panel__container {
 
-        -webkit-animation: rainbow 6s steps(359) infinite;
+        -webkit-animation: rainbow var(--rgb-speed) steps(359) infinite;
         }
 
         @-webkit-keyframes rainbow {
@@ -156,7 +156,7 @@ Rainbow "Rainbow"<<<EOT
     EOT;
 
 }
-
+@var range rgbSpeed "RGB Speed; Second(s) per Cycle" [1, 1, 8, 1]
 
 
 @advanced dropdown mobileOpacity "Tablet/Mobile Opacity; Screen sizes<1024px; Set Sheet Opacity above to 1 "{
@@ -872,6 +872,7 @@ regexp("https://www.dndbeyond.com/encounters/.*") {
         --roll-opacity-semi: /*[[rollCalcColor]]*/BB;
         --roll-opacity-opaque: /*[[rollCalcColor]]*/FF;
         --dice-color: sepia(/*[[diceSepia]]*/%) hue-rotate(/*[[hueRotation]]*/deg) brightness(/*[[diceBrightness]]*/%) saturate(/*[[diceSaturation]]*/%) contrast(/*[[diceContrast]]*/%) invert(/*[[diceInvert]]*/);
+        --rgb-speed: /*[[rgbSpeed]]*/s;
     }
 
     /*Dice Alpha Size and position changes for full site*/
