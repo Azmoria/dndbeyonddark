@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.2.25
+@version      1.2.26
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -156,7 +156,7 @@ Rainbow "Rainbow"<<<EOT
     EOT;
 
 }
-@var range rgbSpeed "RGB Speed; Second(s) per Cycle" [1, 1, 8, 1]
+@var range rgbSpeed "RGB Speed; Second(s) per Cycle" [6, 1, 8, 1]
 
 
 @advanced dropdown mobileOpacity "Tablet/Mobile Opacity; Screen sizes<1024px; Set Sheet Opacity above to 1 "{
