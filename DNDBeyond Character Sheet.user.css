@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.2.27
+@version      1.2.28
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -131,33 +131,58 @@
 }
 @advanced dropdown rgbDice "RGB Dice"{
 
-off "OFF"<<<EOT
-EOT;
-Rainbow "Rainbow"<<<EOT
-    canvas.dice-rolling-panel__container{
-
-        -webkit-animation: rainbow var(--rgb-speed) steps(360) infinite;
-        }
-
-        @-webkit-keyframes rainbow {
-            from { -webkit-filter: var(--dice-color) hue-rotate(1deg); }
-            to { -webkit-filter: var(--dice-color) hue-rotate(360deg); }
-        }
-
-        @keyframes rainbow {
-            from {
-            -webkit-filter: var(--dice-color) hue-rotate(1deg);
-                    filter: var(--dice-color) hue-rotate(1deg);
-            }
-          to {
-            -webkit-filter: var(--dice-color) hue-rotate(360deg);
-                    filter: var(--dice-color) hue-rotate(360deg);
-            }
-        }
+    off "OFF"<<<EOT
     EOT;
-
+    Rainbow "Rainbow"<<<EOT
+    canvas.dice-rolling-panel__container{
+        -webkit-animation: rainbow var(--rgb-speed) steps(360) infinite;
+    }
+    @-webkit-keyframes rainbow {
+        from { 
+            -webkit-filter: var(--dice-color) hue-rotate(1deg); 
+        }
+        to { 
+            -webkit-filter: var(--dice-color) hue-rotate(360deg); 
+        }
+    }
+    @keyframes rainbow {
+        from {
+            -webkit-filter: var(--dice-color) hue-rotate(1deg);
+            filter: var(--dice-color) hue-rotate(1deg);
+        }
+        to {
+            -webkit-filter: var(--dice-color) hue-rotate(360deg);
+            filter: var(--dice-color) hue-rotate(360deg);
+        }
+    }
+    EOT;
+    Custom "Custom RGB"<<<EOT
+        canvas.dice-rolling-panel__container{
+            -webkit-animation: rgb var(--rgb-speed) steps(360) infinite;
+            }
+        @-webkit-keyframes rgb {
+                0%, 100% { 
+                    -webkit-filter: var(--dice-color) var(--rgb-from); 
+                }
+                50% { 
+                    -webkit-filter: var(--dice-color) var(--rgb-to); 
+                }
+            }
+        @keyframes rgb {
+                0%, 100% {
+                    -webkit-filter: var(--dice-color) var(--rgb-from);
+                    filter: var(--dice-color) var(--rgb-from);
+                }
+              50% {
+                    -webkit-filter: var(--dice-color) var(--rgb-to);
+                    filter: var(--dice-color) var(--rgb-to);
+                }
+            }
+    EOT;
 }
 @var range rgbSpeed "RGB Speed; Second(s) per Cycle" [6, 1, 8, 1]
+@var range rgbFrom "Custom RGB Starting Hue Rotation" [100, 1, 360, 1]
+@var range rgbTo "Custom RGB Ending Hue Rotation" [200, 1, 360, 1]
 
 
 @advanced dropdown mobileOpacity "Tablet/Mobile Opacity; Screen sizes<1024px; Set Sheet Opacity above to 1 "{
@@ -874,6 +899,8 @@ regexp("https://www.dndbeyond.com/encounters/.*") {
         --roll-opacity-opaque: /*[[rollCalcColor]]*/FF;
         --dice-color: sepia(/*[[diceSepia]]*/%) hue-rotate(/*[[hueRotation]]*/deg) brightness(/*[[diceBrightness]]*/%) saturate(/*[[diceSaturation]]*/%) contrast(/*[[diceContrast]]*/%) invert(/*[[diceInvert]]*/);
         --rgb-speed: /*[[rgbSpeed]]*/s;
+        --rgb-from: hue-rotate(/*[[rgbFrom]]*/deg);
+        --rgb-to: hue-rotate(/*[[rgbTo]]*/deg);
     }
 
     /*Dice Alpha Size and position changes for full site*/
