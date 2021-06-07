@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.2.23
+@version      1.2.24
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -135,18 +135,18 @@ EOT;
 Rainbow "Rainbow"<<<EOT
     canvas.dice-rolling-panel__container {
 
-        -webkit-animation: rainbow 8s steps(360) infinite;
+        -webkit-animation: rainbow 6s steps(359) infinite;
         }
 
         @-webkit-keyframes rainbow {
-            from { -webkit-filter: var(--dice-color) hue-rotate(10deg); }
+            from { -webkit-filter: var(--dice-color) hue-rotate(1deg); }
             to { -webkit-filter: var(--dice-color) hue-rotate(360deg); }
         }
 
         @keyframes rainbow {
             from {
-            -webkit-filter: var(--dice-color) hue-rotate(10deg);
-                    filter: var(--dice-color) hue-rotate(10deg);
+            -webkit-filter: var(--dice-color) hue-rotate(1deg);
+                    filter: var(--dice-color) hue-rotate(1deg);
             }
           to {
             -webkit-filter: var(--dice-color) hue-rotate(360deg);
