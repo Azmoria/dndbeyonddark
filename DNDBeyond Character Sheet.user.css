@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.2.29
+@version      1.2.30
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -659,7 +659,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-section-placeholder__icon circle,
     .ct-quick-nav__button path,
     .ct-quick-nav__button polygon,
-    .ct-quick-nav__button circle{
+    .ct-quick-nav__button circle,
+    div .ddbc-chevron-svg svg path{
         fill: /*[[highlightColor]]*/ !important;
         opacity: 1 !important;
     }
@@ -803,6 +804,11 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-equipment-overview__weight-speed--over-carrying-capacity,
     .ct-equipment-overview__weight-speed--push-drag-lift {
         color: #d24040;
+    }
+    
+    .ddbc-collapsible__header-status .ddbc-chevron-svg{
+        height: 18px;
+        width: 18px;
     }
     
   
