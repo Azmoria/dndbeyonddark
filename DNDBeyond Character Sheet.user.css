@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.2.30
+@version      1.2.31
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -660,7 +660,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-quick-nav__button path,
     .ct-quick-nav__button polygon,
     .ct-quick-nav__button circle,
-    div .ddbc-chevron-svg svg path{
+    div .ddbc-chevron-svg svg path,
+    .ddbc-svg.ct-sidebar__pane-control-icon path{
         fill: /*[[highlightColor]]*/ !important;
         opacity: 1 !important;
     }
