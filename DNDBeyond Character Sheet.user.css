@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.2.31
+@version      1.2.32
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -464,7 +464,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     [class^=ct-extra-row__hp],
     .ct-inventory__choose-action-sep,
     .ddbc-character-name,
-    .ct-character-header-desktop{
+    .ct-character-header-desktop,
+    .ddbc-character-progression-summary__xp-data{
         color: /*[[fontColor]]*/;
     }
     
