@@ -51,4 +51,4 @@ Style the theme you created to your liking and you're done.
 
 See here for more information on creating a companion style - or if you would like assistance setting this up you can add me on discord at Azmoria#7532
 
-https://github.com/openstyles/stylus/wiki/Writing-styles#making-a-companion-style
+https://github.com/openstyles/stylus/wiki/Writing-styles#making-a-companion-style 
