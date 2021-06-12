@@ -27,6 +27,7 @@ For android devices (mobile/tablet) <a href="https://kiwibrowser.com/">Kiwi Brow
 
 Character Sheet examples:
 
+[![DNDBeyond Dark Mode and Dice Coloration](https://user-images.githubusercontent.com/65363489/121787540-988e6800-cb94-11eb-9ca0-695b3a45caa6.png)](https://www.youtube.com/watch?v=DbYnbr3esnI "DNDBeyond Dark Mode and Dice Coloration")
 
 
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Character%20Sheet/Character%20Sheet%20Example%20Ice.JPG?raw=true"/>
