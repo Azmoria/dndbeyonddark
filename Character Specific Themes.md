@@ -42,7 +42,7 @@ Go to the character sheet you made the theme for. Click on stylus again. Click t
 
 ![image](https://user-images.githubusercontent.com/65363489/121786601-d8525100-cb8e-11eb-8505-c6d6c95489d0.png)
 
-Style the theme you created to your liking and your done. 
+Style the theme you created to your liking and you're done. 
 
 ***NOTE:*** Character specific themes will not automatically update as they have manual changes. You can manually update them but it will overide your changes and you will have to repeat the above steps starting with changing the name and replacing the URL.
 
