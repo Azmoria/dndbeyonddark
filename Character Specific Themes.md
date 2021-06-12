@@ -44,7 +44,7 @@ Go to the character sheet you made the theme for. Click on stylus again. Click t
 
 Style the theme you created to your liking and you're done. 
 
-***NOTE:*** Character specific themes will not automatically update as they have manual changes. You can manually update them but it will overide your changes and you will have to repeat the above steps starting with changing the name and replacing the URL.
+***NOTE:*** Character specific themes will not automatically update as they have manual changes. You can manually update them by forcing the update but it will overide your changes and you will have to repeat the above steps starting with changing the name and replacing the URL.
 
 See here for more information on creating a companion style - or if you would like assistance setting this up you can add me on discord at Azmoria#7532
 
