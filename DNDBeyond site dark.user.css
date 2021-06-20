@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.14
+@version      1.2.15
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -1291,8 +1291,12 @@ div#site{
     }
     
     
-    [aria-selected=true] label{
+    [aria-selected=true] label, [id^=encounter-builder-tabs_tab][aria-selected=true]{
         box-shadow: inset 0px 0px 50px 1px /*[[linkColor]]*/ !important;
+    }
+    
+    a[id^=encounter-builder-tabs_tab]{
+        border-radius: 5px;
     }
     .class-manager-tabs .ddbc-tab-list__nav-item--is-active svg path,
     .manage-race-tabs .ddbc-tab-list__nav-item--is-active svg path,
