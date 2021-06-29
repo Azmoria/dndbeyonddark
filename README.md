@@ -21,9 +21,11 @@ For android devices (mobile/tablet) <a href="https://kiwibrowser.com/">Kiwi Brow
 
 <i>**Note: Mobile/tablet testing will be slow as I primarily play on desktop - please add issues for problems you find, either desktop or other devices, as your help finding problems is appreciated. If you have requests you can also add them to issues and I will attempt to add what I can.</i>
 
+<br>
 
+<a href="https://github.com/Azmoria/dndbeyonddark/blob/master/Character%20Specific%20Themes.md">How to create character specific themes</a>
 
-
+<br>
 
 Character Sheet examples:
 
