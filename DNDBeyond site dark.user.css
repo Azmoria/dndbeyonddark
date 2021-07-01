@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.15
+@version      1.2.16
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -759,7 +759,8 @@ div#site{
     .p-notifications-a .listing-container .listing-body .user-notification-listing>.b-list-item .notification-content-container,
     .equipment-manager-attuned-item-preview,
     .react-responsive-modal-modal,
-    [class^=ddb-linkout] a
+    [class^=ddb-linkout] a,
+    .currency-list-item-row
     {
 		border-width: /*[[borderWidth]]*/
 		!important;
@@ -960,7 +961,8 @@ div#site{
     .p-user-a.s_myAccount .p-user-stats, 
     .p-user-a.s_myProfile .p-user-stats, 
     .p-user-a.s_myStreams .p-user-stats, 
-    .p-user-a.s_newContent .p-user-stats{
+    .p-user-a.s_newContent .p-user-stats,
+    .currency-list-item-row{
 		background-image: none !important;
 	}
 	aside,
