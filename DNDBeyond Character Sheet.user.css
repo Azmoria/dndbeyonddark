@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.2.33
+@version      1.3.1
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -69,10 +69,12 @@
     EOT;
 }
 @var color outlineColor "Outline Color" #000
-@var color borderColor "Border Color" #114
-@var color highlightColor "Highlight Color" #59d
-@var color scrollbarColor "Scrollbar Color" #114
-@var color rollColor "Rollable Items Color" #59d
+@var color borderColor "Border Color" #5dbbf7
+@var color highlightColor "Highlight Color" #5dbbf7
+@var color iconPrimary "Icon Primary Color" #5dbbf7
+@var color iconSecondary "Icon Secondary Color" #041925
+@var color scrollbarColor "Scrollbar Color" #5dbbf7
+@var color rollColor "Rollable Items Color" #5dbbf7
 @advanced dropdown titleToggle "Character Title Background" {
     on "Default"<<<EOT
     EOT;
@@ -83,7 +85,7 @@
         background: none !important; 
     EOT;
 }
-@advanced color rollCalcColor "Roll Results Background Color" #030f1a
+@var color rollCalcColor "Roll Results Background Color" #030f1a
 @advanced dropdown rollCalcTransparency "Roll Results Popup Opacity"{
     semitransparent "Semi-Transparent" <<<EOT
         var(--roll-opacity-semi) 
@@ -92,18 +94,6 @@
         var(--roll-opacity-opaque) 
     EOT;
 }
-@advanced dropdown filter "Icon Color" {
-    light "Light icons" <<<EOT
-        invert(100%) 
-    EOT;
-    dark "Dark icons" <<<EOT
-        none 
-    EOT;
-    custom "Custom icon filter" <<<EOT
-        var(--custom-icon-filter) 
-    EOT;
-}
-@var text iconFilter "Custom Icon CSS Filter" "invert(75%) sepia(100%) hue-rotate(170deg) brightness(75%) saturate(300%)"
 @var select zindex "Dice Over/Under the Results Popup" {
  "Under": "60000",
  "Over": "60002"
@@ -241,6 +231,9 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         -o-background-size: cover !important;
         background-size: cover !important;
     }
+    .ct-character-sheet-mobile--dark-mode{
+        background: none !important;   
+    }
 
     .ct-component-carousel__active {
         background: transparent !important;
@@ -334,7 +327,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .talespireLink,
     .ct-combat-mobile,
     .ct-character-sheet-mobile__header .ct-character-header-mobile,
-    .ct-section-placeholder__icon{
+    .ct-section-placeholder__icon,
+    .currency-list-item-row{
         background: /*[[sheetColor]]*/ !important;
     }
     .ct-slot-manager__slot--used:before,
@@ -369,7 +363,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ddbc-creature-block,
     .ddbc-creature-block:after,
     .ddbc-creature-block:before,
-    .body-rpgcharacterbuilder.site {
+    .body-rpgcharacterbuilder.site{
         background-image: none !important;
     }
 
@@ -380,7 +374,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 
     .ct-spells-filter__input[type=search],
     .ct-inventory-filter__input[type=search],
-    .ct-extras-filter__input[type=search] {
+    .ct-extras-filter__input[type=search]{
         background: none !important;
     }
     
@@ -463,8 +457,16 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-inventory__choose-action-sep,
     .ddbc-character-name,
     .ct-character-header-desktop,
-    .ddbc-character-progression-summary__xp-data{
-        color: /*[[fontColor]]*/;
+    .ddbc-character-progression-summary__xp-data,
+    .ct-combat__summary-label,
+    .ct-spells-level__spells-col,
+    .ct-spells-spell__damage span,
+    .ddbc-note-components span,
+    .ct-equipment-overview__currency-label,
+    .ct-feature-snippet div,
+    .ct-actions-list__basic div,
+    .ddbc-attack-table__col{
+        color: /*[[fontColor]]*/ !important;
     }
     
     
@@ -550,14 +552,149 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-quick-nav__button:hover,
     .ct-character-sheet--dice-enabled .ddbc-combat-attack--crit .ddbc-combat-attack__damage .integrated-dice__container:hover,
     .ct-character-sheet--dice-enabled .ddbc-combat-attack--crit .ddbc-combat-attack__damage .integrated-dice__container,
-    .beyond20-roll-cell {
-        border-color: /*[[highlightColor]]*/;
+    .beyond20-roll-cell,  
+    .ct-skills__col--adjustments,
+    .ddbc-attack-table .ddbc-combat-attack+.ddbc-combat-attack,
+    .ct-actions-list__basic-list,
+    .ct-actions-list__spells-list,
+    .ct-combat__statuses-group.ct-combat__statuses-group--conditions,
+    .ct-proficiency-groups__group,
+    .ct-slot-manager__slot--used, .ct-sidebar--is-dark-mode .ct-slot-manager__slot--used,
+    .ct-actions-list__heading,
+    .ddbc-tab-list__nav-item--is-active,
+    .ct-content-group__header,
+    .ct-description__traits,
+    .ct-spells-level-casting,
+    .ct-features__management-link, 
+    .ct-spells-spell + .ct-spells-spell, 
+    .ct-inventory-item + .ct-inventory-item, 
+    .ct-attunement__item + .ct-attunement__item, 
+    .ct-feats-manage-pane__feat, 
+    .ct-equipment__overview, 
+    .ct-saving-throws-pane__details, 
+    .ct-saving-throws-pane__description, 
+    .ct-sense-manage-pane__customize, 
+    .ct-sense-manage-pane__description, 
+    .ct-proficiencies-pane__proficiency + .ct-proficiencies-pane__proficiency, 
+    .ct-proficiency-groups__group + .ct-proficiency-groups__group, 
+    .ct-proficiencies-pane__groups, 
+    .ct-skill-pane__customize, 
+    .ct-skill-pane__description, 
+    .ct-skills__col--skill, 
+    .ct-skills__col--modifier, 
+    .ct-ability-pane__description, 
+    .ct-speed-manage-pane__customize, 
+    .ct-speed-manage-pane__description, 
+    .ct-armor-manage-pane__items, 
+    .ct-armor-manage-pane__customize, 
+    .ct-armor-manage-pane__description, 
+    .ct-health-manager__deathsaves, 
+    .ct-health-manager__restore-life, 
+    .ct-health-manager__health, 
+    .ct-health-manager__overrides, 
+    .ct-defense-manage-pane__custom, 
+    .ct-condition-manage-pane__condition--special, 
+    .ct-currency-pane__currency + .ct-currency-pane__currency, 
+    .ct-currency-pane__adjuster, 
+    .ct-currency-pane__lifestyle, 
+    .ct-extra-manage-pane__group-heading, 
+    .ct-extra-manage-pane__extra, 
+    .ct-extra-manage-pane__extras, 
+    .ct-item-detail__customize, 
+    .ct-item-detail__customize, 
+    .ct-item-detail__description, 
+    .ct-item-detail__actions, 
+    .ct-spell-caster, 
+    .ct-spell-detail__customize, 
+    .ct-spell-detail__properties, 
+    .ct-spell-detail__description, 
+    .ct-spell-detail__tags, 
+    .ct-action-detail__customize, 
+    .ct-action-detail__properties, 
+    .ct-action-detail__description, 
+    .ct-action-detail__limited-uses, 
+    .ct-background-pane__data, 
+    .line, 
+    .ct-feat-pane__prerequisite, 
+    .ct-infusions__infusion + .ct-infusions__infusion, 
+    .ct-infusions__infusion-item + .ct-infusions__infusion-item, 
+    .ct-infusion-choice-pane__step, 
+    .ct-infusion-choice-pane__actions, 
+    .ct-infusion-choice-pane__description, 
+    .ct-infusion-choice-pane__ui-group, 
+    .ct-spells-level-casting, 
+    .ct-features__management-link, 
+    .ct-spells-spell + .ct-spells-spell, 
+    .ct-inventory-item + .ct-inventory-item, 
+    .ct-attunement__item + .ct-attunement__item, 
+    .ct-feats-manage-pane__feat, 
+    .ct-equipment__overview, 
+    .ct-saving-throws-pane__details, 
+    .ct-saving-throws-pane__description, 
+    .ct-sense-manage-pane__customize, 
+    .ct-sense-manage-pane__description, 
+    .ct-proficiencies-pane__proficiency + .ct-proficiencies-pane__proficiency, 
+    .ct-proficiency-groups__group + .ct-proficiency-groups__group, 
+    .ct-proficiencies-pane__groups, 
+    .ct-skill-pane__customize, 
+    .ct-skill-pane__description, 
+    .ct-skills__col--skill, 
+    .ct-skills__col--modifier, 
+    .ct-ability-pane__description, 
+    .ct-speed-manage-pane__customize, 
+    .ct-speed-manage-pane__description, 
+    .ct-armor-manage-pane__items, 
+    .ct-armor-manage-pane__customize, 
+    .ct-armor-manage-pane__description, 
+    .ct-health-manager__deathsaves, 
+    .ct-health-manager__restore-life, 
+    .ct-health-manager__health, 
+    .ct-health-manager__overrides, 
+    .ct-defense-manage-pane__custom, 
+    .ct-condition-manage-pane__condition--special, 
+    .ct-currency-pane__currency + .ct-currency-pane__currency, 
+    .ct-currency-pane__adjuster, 
+    .ct-currency-pane__lifestyle, 
+    .ct-extra-manage-pane__group-heading, 
+    .ct-extra-manage-pane__extra, 
+    .ct-extra-manage-pane__extras, 
+    .ct-item-detail__customize, 
+    .ct-item-detail__customize, 
+    .ct-item-detail__description, 
+    .ct-item-detail__actions, 
+    .ct-spell-caster, 
+    .ct-spell-detail__customize, 
+    .ct-spell-detail__properties, 
+    .ct-spell-detail__description, 
+    .ct-spell-detail__tags, 
+    .ct-action-detail__customize, 
+    .ct-action-detail__properties, 
+    .ct-action-detail__description, 
+    .ct-action-detail__limited-uses, 
+    .ct-background-pane__data, 
+    .line, 
+    .ct-feat-pane__prerequisite, 
+    .ct-infusions__infusion + .ct-infusions__infusion, 
+    .ct-infusions__infusion-item + .ct-infusions__infusion-item, 
+    .ct-infusion-choice-pane__step, 
+    .ct-infusion-choice-pane__actions, 
+    .ct-infusion-choice-pane__description, 
+    .ct-infusion-choice-pane__ui-group,
+    .ct-feature-snippet__extra
+    {
+        border-color: /*[[highlightColor]]*/ !important;
     }
+    
+    .ct-slot-manager__slot{
+        border-color: /*[[fontColor]]*/ !important;
+    }
+    
+
     .ct-character-sheet--dice-enabled .integrated-dice__container:hover {
         border-color: /*[[rollColor]]*/;
     }
-    .ct-character-sheet--dice-enabled .integrated-dice__container span {
-        color: /*[[rollColor]]*/;
+    .integrated-dice__container span {
+        color: /*[[rollColor]]*/ !important;
     }
     .ct-character-sheet--dice-enabled .integrated-dice__container {
         border: none;
@@ -605,7 +742,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ajs-content iframe,
     .i-req-attunement
     {
-        filter: /*[[filter]]*/ !important;
+        /*filter: /*[[filter]] !important;*/
     }
     
 
@@ -686,7 +823,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-proficiency-groups-box polygon,
     .ct-sidebar__pane-top path,
     .ct-sidebar__pane-bottom path,
-    svg.ddbc-svg.ddbc-manage-level-svg.ddbc-svg--themed path {
+    svg.ddbc-svg.ddbc-manage-level-svg.ddbc-svg--themed path
+    {
         fill: /*[[sheetColor]]*/ !important;
         opacity: /*[[sheetOpacity]]*/ !important;
     }
@@ -702,13 +840,102 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-proficiency-groups-box path,
     .ddbc-attunement-slot.ddbc-attunement-slot--empty path,
     .ct-quick-info svg > path + path,
-    .ct-mobile-divider__repeat svg > path {
+    .ct-mobile-divider__repeat svg > path,
+    .ddbc-svg--themed path,
+    .ddbc-saving-throws-summary__ability-modifier path{
         fill: /*[[borderColor]]*/ !important;
         opacity: /*[[sheetOpacity]]*/;
     }
+    
+   
+    .ddbc-damage-type-icon__img--necrotic>path:first-of-type,
+    .ddbc-damage-type-icon__img--necrotic>path:nth-of-type(2),
+    .ddbc-damage-type-icon__img--necrotic>polygon:first-of-type,
+    .ddbc-aoe-type-icon path,
+    .ddbc-concentration-icon>rect,
+    .ddbc-ritual-icon>path:first-of-type,
+    .ddbc-damage-type-icon__img--piercing>path:first-of-type,
+    .ddbc-damage-type-icon__img--piercing>polygon,
+    .ddbc-damage-type-icon__img--psychic>polygon,
+    .ddbc-damage-type-icon__img--psychic>path:first-of-type,
+    .ddbc-damage-type-icon__img--force>line,
+    .ddbc-damage-type-icon__img--force>path,
+    .ddbc-combat-attack__icon-img--weapon-ranged path,
+    .ddbc-combat-attack__icon-img--action-attack-weapon-melee path,
+    .ddbc-combat-attack__icon-img--weapon-melee path,
+    svg.ddbc-svg.ddbc-combat-attack__icon-img--weapon-melee.ddbc-attack-type-icon.ddbc-attack-type-icon--1-1 path:first-of-type,
+    svg.ddbc-svg.ddbc-combat-attack__icon-img--weapon-melee.ddbc-attack-type-icon.ddbc-attack-type-icon--1-1 path:nth-of-type(2),
+    .ddbc-damage-type-icon__img--bludgeoning>polygon,
+    .ddbc-damage-type-icon__img--slashing>path,
+    .ddbc-damage-type-icon__img--acid>path,
+    .ddbc-damage-type-icon__img--poison>path,
+    .ddbc-damage-type-icon__img--thunder>path,
+    .ddbc-damage-type-icon__img--thunder>polygon,
+    .ddbc-damage-type-icon__img--lightning>path,
+    .ddbc-spell-school-icon--transmutation>path,
+    .ddbc-spell-school-icon--evocation>path,
+    .ddbc-damage-type-icon__img--cold>path,
+    .ddbc-damage-type-icon__img--fire>path,
+    .ddbc-damage-type-icon__img--radiant>path,
+    .ddbc-spell-school-icon--conjuration>path,
+    .ddbc-attack-type-icon--1-1 path:nth-of-type(3)
+    {
+        fill: /*[[iconPrimary]]*/ !important;
+        opacity: 1 !important;
+    }
+    
+    
+    .ddbc-damage-type-icon__img--necrotic>path:nth-of-type(3),
+    .ddbc-damage-type-icon__img--necrotic>path:nth-of-type(4),
+    .ddbc-concentration-icon>path,
+    .ddbc-ritual-icon>path:nth-of-type(2),
+    .ddbc-damage-type-icon__img--piercing>path:nth-of-type(2),
+    .ddbc-damage-type-icon__img--psychic>path:nth-of-type(2),
+    .ddbc-damage-type-icon__img--bludgeoning>path,
+    .ct-character-sheet--dark-mode .ddbc-attack-type-icon--1-1 path:nth-of-type(3)
+    {
+        fill: /*[[iconSecondary]]*/ !important;
+        opacity: 1 !important;
+    }
+    
+    
+    .ddbc-aoe-type-icon rect,
+    .ddbc-disadvantage-svg polygon,
+    .ddbc-advantage-svg polygon:first-of-type{
+        fill: /*[[sheetColor]]*/ !important;  
+    }
+    
+    .ddbc-damage-type-icon__img--necrotic>line,
+    .prefix__st8,
+    .prefix__st9
+    {
+        stroke: none;
+    }
+    
+    .ddbc-damage-type-icon__img--force>line,
+    .ddbc-damage-type-icon__img--force>path,
+    .ddbc-aoe-type-icon rect{
+        stroke: /*[[iconPrimary]]*/ !important; 
+        opacity: 1 !important;
+    }
+    
+    .ddbc-disadvantage-svg path{
+        fill: #b00000 !important;  
+    }
+    
+    
+    .ddbc-advantage-svg path,
+    .ddbc-advantage-svg polygon:nth-of-type(2){
+        fill: #2C9400 !important;
+    }
+    
+  
+    
     .ct-sidebar__pane-bottom path,
-    .ct-sidebar__pane-top path {
-        stroke: /*[[borderColor]]*/
+    .ct-sidebar__pane-top path,
+    .ddbc-saving-throw-selection-box-svg path,
+    .ddbc-saving-throw-selection-small-box-svg path{
+        stroke: /*[[borderColor]]*/ !important;
     }
     .ddbc-svg.ddbc-long-rest-svg.ddbc-svg--themed ellipse,
     svg.ddbc-svg.ct-sidebar__control-icon line,
@@ -1129,6 +1356,7 @@ regexp("https://www.dndbeyond.com/encounters/.*") {
     .ct-character-sheet--dice-enabled .integrated-dice__container:hover ~ .ddbc-saving-throw-selection-small-box-svg path,
     .MuiSvgIcon-root polygon:first-of-type{
         fill: /*[[rollCalcColor]]*/ !important;
+        opacity: 1 !important;
     }
 
     ._1_4XN--HbdIB3j-9HVLY3F path,
