@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.3
+@version      1.3.4
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -465,7 +465,27 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-equipment-overview__currency-label,
     .ct-feature-snippet div,
     .ct-actions-list__basic div,
-    .ddbc-attack-table__col{
+    .ddbc-attack-table__col,
+    .ct-combat-tablet__initiative-label,
+    .ct-description,
+    .ct-notes__note,
+    .ct-extra-row__ac,
+    .ct-character-sheet,
+    .ct-skills__col--skill,
+    .ct-inspiration__label,
+    .ddbc-saving-throws-summary__ability-name,
+    .ct-senses__callout-label,
+    .ct-senses__callout-value,
+    .ct-sidebar__heading,
+    .ct-feature-snippet__choice,
+    .ct-sidebar__subheading,
+    .ct-proficiency-groups__group-items,
+    .ct-proficiency-groups__group-item,
+    .ddbc-ability-summary__secondary,
+    .ct-health-summary__hp-number,
+    .ct-condition-manage-pane__condition-level, 
+    .ct-condition-manage-pane__condition-name
+    {
         color: /*[[fontColor]]*/ !important;
     }
     
@@ -995,9 +1015,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         background: /*[[highlightColor]]*/ !important;
         color: /*[[fontColor]]*/ !important;
     }
-
-
-
+    
 
     /*Fixed settings*/
     button.ct-theme-button.ct-health-summary__adjuster-button.ct-health-summary__adjuster-button--heal.ct-theme-button--outline.ct-theme-button--interactive.ct-button.character-button.character-button-block-small:hover {
@@ -1022,7 +1040,24 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .legendary {
         color: #FEA227 !important;
     }
-
+    
+    .ct-health-manager__adjuster-healing-label {
+        color: #40d250 !important;
+        
+    }
+    .ct-health-manager__adjuster-healing {
+        border: 1px solid #40d250 !important;
+    }
+    
+    .ct-health-manager__adjuster-damage {
+        border-color: #c53131 !important;
+    }
+    .ct-health-manager__adjuster-damage-label,
+    .ct-health-manager__status--negative{
+         color: #c53131 !important;
+    }
+    
+    
     .ct-slot-manager__slot,
     .site .ct-theme-button--filled.ct-button:hover {
         box-shadow: none;
@@ -1040,8 +1075,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         width: 18px;
     }
     
-  
-    
+     
     @media (min-width: 768px){
         .ct-character-sheet:before {       
             height: 78px;
