@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.7
+@version      1.3.8
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -93,6 +93,16 @@
     opaque "Opaque" <<<EOT
         var(--roll-opacity-opaque) 
     EOT;
+}
+@advanced dropdown beyond20Invert "Invert Beyond20 Menu"{
+yes "Yes" <<<EOT
+.ajs-dialog
+    {
+        filter: invert(1)   
+    }
+EOT;
+no "No" <<<EOT
+EOT;
 }
 @var select zindex "Dice Over/Under the Results Popup" {
  "Under": "60000",
@@ -485,6 +495,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-health-summary__hp-number,
     .ct-condition-manage-pane__condition-level, 
     .ct-condition-manage-pane__condition-name
+   
     {
         color: /*[[fontColor]]*/ !important;
     }
@@ -1664,23 +1675,8 @@ regexp("https://www.dndbeyond.com/encounters/.*") {
     }
 
 /*Beyond 20 + Talespire rolls settings*/
-    .beyond20-roll-cell,
-    .beyond20-description,
-    .beyond20-dice-roller-content,
-    .ajs-footer,
-    .beyond20-message .beyond20-description,
-    .beyond20-message details table,
-    .beyond20-tooltip .beyond20-tooltip-content,
-    .dice-formula.beyond20-roll-formula,
-    .beyond20-roll-cell,
-    .beyond20-roll-die-result,
-    .ajs-dialog,
-    .ajs-header,
-    .ajs-primary.ajs-buttons,
-    .beyond20-roll-detail-normal {
-        background-color: /*[[sheetColor]]*/ !important;
-        color: /*[[fontColor]]*/ !important;
-    }
+  
+    /*[[beyond20Invert]]*/
 
     .beyond20-roll-cell,
     .beyond20-message details summary,
