@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.14
+@version      1.3.15
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -365,17 +365,45 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-extras-filter__active,
     .ct-extras-filter__advanced-callout,
     .ct-spells__tab-level-callout,
-    .ct-character-header__group--game-log,
+    
     .ct-status-summary-mobile__button--active {
         box-shadow: 0 0 20px 1px /*[[highlightColor]]*/ inset !important;
         background-color: /*[[sheetColor]]*/ !important;
     }
+    .ct-character-header__group--game-log{
+        background-color: /*[[highlightColor]]*/ !important;
+    }
+
+
+    
+    
+        [class$=filter__active-remove-icon]
+    {
+        background-position: -20px 0 !important;  
+    }
     
 
     
-    .ct-character-sheet .ct-slot-manager__slot--used{
-        border-color: /*[[highlightColor]]*/ !important;
+    .ct-equipment-shop__levels button.ct-theme-button.ct-theme-button--filled,
+    button.ct-theme-button.ct-theme-button--filled:disabled:hover,
+    button.ct-theme-button.ct-theme-button--outline:hover, 
+    button.ct-theme-button.ct-theme-button--outline:active
+    {
+            box-shadow: 0 0 15px 1px /*[[highlightColor]]*/ inset !important;
     }
+    .ct-health-summary__adjuster button.ct-health-summary__adjuster-button:hover{
+        box-shadow: none !important;
+    }
+    .site .ct-button.ct-theme-button--outline:disabled,
+    .site .ct-button.ct-theme-button--outline:disabled:hover
+    {
+        border-color: /*[[fontColor]]*/ !important;
+        box-shadow: none !important;
+        opacity: 0.4;
+        cursor: default;
+    }
+    
+
 
     body:not(.body-forum):not(.section-posts):not(.section-changelog):not(.body-privatemessage-details) blockquote::before,
     body:not(.body-forum):not(.section-posts):not(.section-changelog):not(.body-privatemessage-details) blockquote::after,
@@ -726,7 +754,12 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-infusion-choice-pane__actions, 
     .ct-infusion-choice-pane__description, 
     .ct-infusion-choice-pane__ui-group,
-    .ct-feature-snippet__extra
+    .ct-feature-snippet__extra,
+    .ct-trait-pane__content,
+    .ct-character-sheet .ct-slot-manager__slot--used,
+    .ct-description-pane__entry select.ddbc-select.ct-description-pane__editor-input,
+    .ct-description-pane__entry input.ct-description-pane__editor-input,
+    .ct-health-manage-pane input.character-input.ct-health-manager__input
     {
         border-color: /*[[highlightColor]]*/ !important;
     }
@@ -768,7 +801,13 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-extras-filter__adv-filter-button,
     .ct-spells-filter__adv-filter-button,
     .site .ct-button.ct-theme-button--filled,
-    .ct-section-placeholder__icon{
+    .ct-section-placeholder__icon,
+    .ct-editor-box, 
+    .ct-note-manage-pane__content,
+    .ct-editor-box input,
+    .ct-editor-box div.ddbc-checkbox__input,
+    .ct-editor-box .ddbc-select 
+    {
         border: solid 1px /*[[highlightColor]]*/ !important;
     }
 
@@ -965,6 +1004,18 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ddbc-popout-menu__item-prefix rect,
     svg.ddbc-svg.ddbc-frame-svg.ddbc-svg--themed rect {
         stroke: /*[[highlightColor]]*/;
+    }
+    
+    .ct-sidebar__pane-top svg path{
+        fill: none !important;   
+    }
+    
+    .ct-sidebar__pane-top svg path:first-of-type{
+        fill: /*[[sheetColor]]*/ !important;
+        stroke: none !important;
+    }
+    .ct-sidebar__pane-top svg path:nth-of-type(9){
+        fill: /*[[highlightColor]]*/ !important;       
     }
     
      .ddbc-manage-icon--interactive .ddbc-manage-icon__icon {
@@ -1297,30 +1348,11 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     }
     
     
-    [class$=filter__active-remove-icon]
-    {
-        background-position: -20px 0 !important;  
-    }
-    
 
     
-    .ct-equipment-shop__levels button.ct-theme-button.ct-theme-button--filled,
-    button.ct-theme-button.ct-theme-button--filled:disabled:hover,
-    button.ct-theme-button.ct-theme-button--outline:hover, 
-    button.ct-theme-button.ct-theme-button--outline:active
-    {
-            box-shadow: 0 0 15px 1px /*[[highlightColor]]*/ inset !important;
-    }
     
-    .site .ct-button.ct-theme-button--outline:disabled,
-    .site .ct-button.ct-theme-button--outline:disabled:hover
-    {
-        border-color: /*[[fontColor]]*/ !important;
-        box-shadow: none !important;
-        opacity: 0.4;
-        cursor: default;
-    }
-    
+
+
     
     @media (min-width: 768px){
         .ct-character-sheet:before {       
@@ -1705,6 +1737,18 @@ regexp("https://www.dndbeyond.com/encounters/.*") {
       
     canvas.dice-rolling-panel__container{
         filter: /*[[diceTint]]*/
+    }
+    
+    .rolltype_roll {
+    color: #f5a623 !important;
+    }
+    
+    .rolltype_damage {
+    color: #df7b7b !important;
+    }
+    
+    .rolltype_tohit {
+    color: #1b9af0 !important;
     }
 
 /*Beyond 20 + Talespire rolls settings*/
