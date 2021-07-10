@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.16
+@version      1.3.17
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -364,9 +364,9 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-extras-filter__adv-filter-button--active,
     .ct-extras-filter__active,
     .ct-extras-filter__advanced-callout,
-    .ct-spells__tab-level-callout,
-    
-    .ct-status-summary-mobile__button--active {
+    .ct-spells__tab-level-callout,   
+    .ct-status-summary-mobile__button--active,
+    .ct-spell-caster__casting-action-count{
         box-shadow: 0 0 20px 1px /*[[highlightColor]]*/ inset !important;
         background-color: /*[[sheetColor]]*/ !important;
     }
@@ -389,7 +389,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     button.ct-theme-button.ct-theme-button--outline:hover, 
     button.ct-theme-button.ct-theme-button--outline:active
     {
-            box-shadow: 0 0 15px 1px /*[[highlightColor]]*/ inset !important;
+        box-shadow: 0 0 15px 1px /*[[highlightColor]]*/ inset !important;
     }
     .ct-health-summary__adjuster button.ct-health-summary__adjuster-button:hover{
         box-shadow: none !important;
@@ -759,7 +759,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-character-sheet .ct-slot-manager__slot--used,
     .ct-description-pane__entry select.ddbc-select.ct-description-pane__editor-input,
     .ct-description-pane__entry input.ct-description-pane__editor-input,
-    .ct-health-manage-pane input.character-input.ct-health-manager__input
+    .ct-health-manage-pane input.character-input.ct-health-manager__input,
+    .ct-spells-spell__scaled-level
     {
         border-color: /*[[highlightColor]]*/ !important;
     }
