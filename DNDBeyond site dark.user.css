@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.19
+@version      1.2.20
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -643,7 +643,8 @@ div#site{
     .p-comments-b .p-comment-footer .forum-post-rating .content-box-rating span.like::before, 
     .body-forum .comment-preview li .p-comment-footer .forum-post-rating .content-box-rating span.like::before, 
     .body-forum-search .p-comments-a .p-comment-footer .forum-post-rating .content-box-rating span.like::before,
-    .dice-set__info__title
+    .dice-set__info__title,
+    .ddb-modal-header-text
     {
 		color: /*[[fontColor]]*/
 		!important;
@@ -1725,6 +1726,11 @@ div#site{
     .ddb-strip-aligned-item-compendium-content,
     .ddb-strip-item-compendium-content{
     background-image: url(https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Dark%20Images/strip-compendium-content.png?raw=true);
+    }
+    
+    .ddb-strip-item-subscription-benefits,
+    .ddb-strip-aligned-item-subscription-benefits{
+        background-image: url(https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Dark%20Images/strip-subscription-benefits-trans.png?raw=true);
     }
     
  
