@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.19
+@version      1.3.20
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -1572,13 +1572,16 @@ regexp("https://www.dndbeyond.com/encounters/.*") {
     .glc-game-log > div > ol > li > div > div:nth-of-type(2),
     div[class^="_1I"],
     .encounter-builder-sidebar__open-button,
-    .dice-toolbar__dropdown .dice-toolbar__target-menu-button,
     .dice-toolbar__dropdown-die:hover,
     .jss2 .MuiListItem-root:hover,
     .MuiList-root,
     .dice-toolbar__dropdown-die
     {
         background: /*[[rollCalcColor]]*/ !important;
+    }
+    
+    .dice-toolbar__dropdown .dice-toolbar__target-menu-button{
+        background: none !important;     
     }
     
     .dice_result,
