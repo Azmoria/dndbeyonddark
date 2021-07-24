@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.17
+@version      1.3.18
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -17,8 +17,8 @@
 }
 @var text customBackground "Custom Background url; Include url() eg. url(http://imgur.com/img.jpg)" "url()"
 @var color background "Background Color" "#000000"
-@var color sheetColor "Sheet Color" #000000
-@var range sheetOpacity "Sheet Opacity" [1, 0.01, 1, 0.01]
+@var color sheetColor "Sheet Color" #000000aa
+@var color sidebarColor "Sidebar Color" #000000ff
 @var color fontColor "Font Color" #ddd
 @advanced dropdown outlineToggle "Text Outline" {
     on "ON" <<<EOT
@@ -88,14 +88,6 @@
     EOT;
 }
 @var color rollCalcColor "Roll Results Background Color" #030f1a
-@advanced dropdown rollCalcTransparency "Roll Results Popup Opacity"{
-    semitransparent "Semi-Transparent" <<<EOT
-        var(--roll-opacity-semi) 
-    EOT;
-    opaque "Opaque" <<<EOT
-        var(--roll-opacity-opaque) 
-    EOT;
-}
 @advanced dropdown beyond20Invert "Invert Beyond20 Menu"{
 yes "Yes" <<<EOT
 .ajs-dialog iframe
@@ -185,18 +177,6 @@ EOT;
 @var range rgbTo "Custom RGB Ending Hue Rotation" [200, 1, 360, 1]
 
 
-@advanced dropdown mobileOpacity "Tablet/Mobile Opacity; Screen sizes<1024px; Set Sheet Opacity above to 1 "{
-    opaque "Opaque" <<<EOT
-        var(--mobile-opacity-opaque) 
-    EOT;
-    semitransparent "Semi-Transparent" <<<EOT
-        var(--mobile-opacity-semi) 
-    EOT;
-    custom "Custom Mobile Opacity" <<<EOT
-        var(--custom-mobile-opacity) 
-    EOT;
-}
-@var text customMobileOpacity "Mobile Opacity; Hex 00 to FF" "55"
 
 ==/UserStyle== */
 @-moz-document regexp("https://www.dndbeyond.com/profile/.*/characters/\\d*"),
@@ -253,12 +233,6 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 
     .ct-health-summary__adjuster-field-input,
     .ddbc-campaign-summary,
-    .ct-sidebar__pane-content,
-    .ct-sidebar__pane-gap,
-    .ct-sidebar thead td,
-    .ct-sidebar thead th,
-    .ct-sidebar .compendium-left-aligned-table td,
-    .ct-sidebar .summoning-creatures-table td,
     body:not(.body-forum):not(.section-posts):not(.section-changelog):not(.body-privatemessage-details) blockquote,
     .ct-editor-box,
     input:not(.es-form-field-query),
@@ -321,6 +295,15 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         background-color: /*[[sheetColor]]*/ !important;
         color: /*[[fontColor]]*/ !important;
     }
+    .ct-sidebar__pane-content,
+    .ct-sidebar__pane-gap,
+    .ct-sidebar thead td,
+    .ct-sidebar thead th,
+    .ct-sidebar .compendium-left-aligned-table td,
+    .ct-sidebar .summoning-creatures-table td{
+       background: /*[[sidebarColor]]*/ !important;   
+    }
+    
     .ddbc-no-proficiency-icon {
         background: /*[[fontColor]]*/ !important
     }
@@ -425,9 +408,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         background: none !important;
     }
     
-    .ct-character-sheet:before{
-        opacity: /*[[sheetOpacity]]*/ !important;   
-    }
+
 
 
 
@@ -537,7 +518,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-extras-filter__active, 
     .ct-spells-filter__active, 
     .ct-inventory-filter__active, 
-    .ct-extras-filter__active
+    .ct-extras-filter__active,
+    .ct-sidebar__inner
    
     {
         color: /*[[fontColor]]*/ !important;
@@ -881,13 +863,16 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     #InspirationBoxSvg-Fill-1,
     .ddbc-svg.ddbc-ability-score-box-svg > path:nth-child(2),
     .ct-proficiency-groups-box polygon,
-    .ct-sidebar__pane-top path,
-    .ct-sidebar__pane-bottom path,
     svg.ddbc-svg.ddbc-manage-level-svg.ddbc-svg--themed path
     {
         fill: /*[[sheetColor]]*/ !important;
-        opacity: /*[[sheetOpacity]]*/ !important;
     }
+    
+    .ct-sidebar__pane-top path,
+    .ct-sidebar__pane-bottom path{
+        fill: /*[[sidebarColor]]*/ !important;    
+    }
+    
     
     .ddbc-saving-throws-summary__ability-modifier svg path{
         fill: none !important;
@@ -904,7 +889,6 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ddbc-svg--themed path,
     .ddbc-saving-throws-summary__ability-modifier path{
         fill: /*[[borderColor]]*/ !important;
-        opacity: /*[[sheetOpacity]]*/;
     }
     
    
@@ -1011,13 +995,26 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         fill: none !important;   
     }
     
-    .ct-sidebar__pane-top svg path:first-of-type{
-        fill: /*[[sheetColor]]*/ !important;
+    .ct-sidebar__pane-top svg path:first-of-type,
+    .ct-sidebar__pane-bottom svg path:first-of-type
+    {
+        fill: /*[[sidebarColor]]*/ !important;
         stroke: none !important;
     }
-    .ct-sidebar__pane-top svg path:nth-of-type(9){
+    .ct-sidebar__pane-top svg path:nth-of-type(9),
+    .ct-sidebar__pane-bottom svg path:nth-of-type(9){
         fill: /*[[highlightColor]]*/ !important;       
     }
+    .ct-sidebar__pane-bottom svg path{
+        fill: /*[[sidebarColor]]*/ !important;
+        
+    }
+    .ct-sidebar__pane-bottom svg path[fill="none"]{
+        fill: none !important;
+        
+    }
+    
+    
     
      .ddbc-manage-icon--interactive .ddbc-manage-icon__icon {
         -webkit-mask: url("https://www.dndbeyond.com/Content/Skins/Waterdeep/images/icons/gear-grey.svg") no-repeat 100% 100%;
@@ -1375,7 +1372,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         .ct-combat-tablet__cta-button,
         .ddbc-campaign-summary
         {
-            background-color: /*[[mobileOpacity]]*/ !important;
+            background-color: /*[[sheetColor]]*/ !important;
         }
         
         .ct-status-summary-mobile__button--active{
@@ -1389,10 +1386,13 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         #InspirationBoxSvg-Fill-1,
         .ddbc-svg.ddbc-ability-score-box-svg > path:nth-child(2),
         .ct-proficiency-groups-box polygon,
-        .ct-sidebar__pane-top path,
-        .ct-sidebar__pane-bottom path,
         svg.ddbc-svg.ddbc-manage-level-svg.ddbc-svg--themed path{
-            fill: /*[[mobileOpacity]]*/ !important;
+            fill: /*[[sheetColor]]*/ !important;
+        }
+        
+        .ct-sidebar__pane-top path,
+        .ct-sidebar__pane-bottom path{
+            fill: /*[[sidebarColor]]*/ !important;
         }
         
         .ct-combat-mobile__cta-button,
@@ -1403,7 +1403,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         
         .ct-section-placeholder,
         .ct-component-carousel__placeholders{
-            background: /*[[mobileOpacity]]*/ !important;
+            background: /*[[sheetColor]]*/ !important;
         }
         .ct-section-placeholder
         {
@@ -1426,7 +1426,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         .ct-skills-mobile .ct-skills,
         .ct-extras-mobile,
         .ct-combat-mobile__cta-button{
-            background: /*[[mobileOpacity]]*/ !important;
+            background: /*[[sheetColor]]*/ !important;
         }
     }
 }
@@ -1441,12 +1441,7 @@ regexp("https://www.dndbeyond.com/encounters/.*") {
     :root {
         --custom-background: /*[[customBackground]]*/;
         --outline-color: /*[[outlineColor]]*/;
-        --custom-mobile-opacity: /*[[sheetColor]]*//*[[customMobileOpacity]]*/;
-        --mobile-opacity-semi: /*[[sheetColor]]*/BB;
-        --mobile-opacity-opaque: /*[[sheetColor]]*/FF;
         --sheet-color: /*[[sheetColor]]*/;
-        --roll-opacity-semi: /*[[rollCalcColor]]*/BB;
-        --roll-opacity-opaque: /*[[rollCalcColor]]*/FF;
         --dice-color: sepia(/*[[diceSepia]]*/%) hue-rotate(/*[[hueRotation]]*/deg) brightness(/*[[diceBrightness]]*/%) saturate(/*[[diceSaturation]]*/%) contrast(/*[[diceContrast]]*/%) invert(/*[[diceInvert]]*/);
         --rgb-speed: /*[[rgbSpeed]]*/s;
         --rgb-from: hue-rotate(/*[[rgbFrom]]*/deg);
@@ -1578,10 +1573,8 @@ regexp("https://www.dndbeyond.com/encounters/.*") {
     div[class^="_1I"],
     .encounter-builder-sidebar__open-button,
     .dice-toolbar__dropdown .dice-toolbar__target-menu-button,
-    .MuiBox-root,
     .dice-toolbar__dropdown-die:hover,
     .jss2 .MuiListItem-root:hover,
-    .MuiButtonBase-root,
     .MuiList-root,
     .dice-toolbar__dropdown-die
     {
@@ -1590,7 +1583,7 @@ regexp("https://www.dndbeyond.com/encounters/.*") {
     
     .dice_result,
     .dice_notification_controls .dice_notification_control{
-        background: /*[[rollCalcTransparency]]*/ !important;
+        background: /*[[rollCalcColor]]*/ !important;
     }
  
     
@@ -1798,7 +1791,7 @@ regexp("https://www.dndbeyond.com/encounters/.*") {
 
     @media screen and (max-width: 767px) {
     .talespireLink{
-            background: /*[[mobileOpacity]]*/ !important;
+            background: /*[[sheetColor]]*/ !important;
         }
     }
 }
