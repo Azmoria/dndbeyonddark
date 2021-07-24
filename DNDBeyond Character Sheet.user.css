@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.20
+@version      1.3.21
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -925,7 +925,9 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ddbc-attack-type-icon--1-1 path:nth-of-type(3),
     .ddbc-spell-school-icon path,
     .ddbc-attack-type-icon--weapon-spell path,
-    svg.ddbc-svg.ddbc-combat-attack__icon-img--action-attack-general-ranged.ddbc-attack-type-icon.ddbc-attack-type-icon--3-2 path
+    svg.ddbc-svg.ddbc-combat-attack__icon-img--action-attack-general-ranged.ddbc-attack-type-icon.ddbc-attack-type-icon--3-2 path,
+    .ddbc-attunement-svg polygon,
+    .ddbc-attunement-svg path
     {
         fill: /*[[iconPrimary]]*/ !important;
         opacity: 1 !important;
