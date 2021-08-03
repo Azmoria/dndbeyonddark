@@ -1435,7 +1435,13 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     }
 }
 
-@-moz-document url-prefix("https://www.dndbeyond.com") {
+@-moz-document regexp("https://www.dndbeyond.com/profile/.*/characters/\\d.*"),
+regexp("https://www.dndbeyond.com/characters/.*"),
+regexp("https://www.dndbeyond.com/encounter-builder"),
+regexp("https://www.dndbeyond.com/combat-tracker.*"),
+regexp("https://www.dndbeyond.com/monsters/.*"),
+regexp("https://www.dndbeyond.com/campaigns/.*"),
+regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond.com/my-encounters") {
     :root {
         --custom-background: /*[[customBackground]]*/;
         --outline-color: /*[[outlineColor]]*/;
