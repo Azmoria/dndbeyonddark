@@ -2,19 +2,11 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.21
+@version      1.2.22
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
-@advanced dropdown transparencyBackgroundColor "Transparency of some backgrounds/buttons" {
-semi "Semi-transparent"<<<EOT
-background-color: var(--semi) !important; EOT;
-opaque "Opaque"<<<EOT
-background-color: var(--opaque) !important; EOT;
-custom "Custom (Hex)"<<<EOT
-background: var(--custom-transparency) !important; EOT;
-}
-@var text customTransparency "Custom Transparency (Hex 00 to FF)" "55"
+@var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
 @var color fontColor "Font Color" #c0c0c0
 @var color linkColor "Link Color" #88bcd6
 @var color borderColor "Border Color" #fff
@@ -85,9 +77,6 @@ url-prefix("https://www.dndbeyond.com/entity"),
 url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyond.com/subclasses"), url-prefix("https://www.dndbeyond.com/articles"), url-prefix("https://www.dndbeyond.com/tag"), url-prefix("https://www.dndbeyond.com/subraces"), url-prefix("https://www.dndbeyond.com/changelog"), regexp("https://www.dndbeyond.com/profile/.*/characters"), regexp("https://www.dndbeyond.com/encounter-builder"), regexp("https://www.dndbeyond.com/my-encounters"), regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond.com/combat-tracker.*"), regexp("https://www.dndbeyond.com/items"), regexp("https://www.dndbeyond.com/my-dice"), regexp("https://www.dndbeyond.com/members/.*"), regexp("https://www.dndbeyond.com/private-messages.*"), regexp("https://www.dndbeyond.com/content/.*"), url-prefix("https://www.dndbeyond.com/account"), url-prefix("https://linkst.dndbeyond.com"), url-prefix("https://www.dndbeyond.com/new-content"), url-prefix("https://www.dndbeyond.com/my-notifications"), url-prefix("https://www.dndbeyond.com/linkout"), url-prefix("https://www.dndbeyond.com/members"), url-prefix("https://www.dndbeyond.com/comments"){
 
     :root{
-    --custom-transparency: /*[[backgroundColor]]*//*[[customTransparency]]*/;
-    --semi: /*[[backgroundColor]]*/aa;
-    --opaque: /*[[backgroundColor]]*/ff;
     --custom-icon-filter: /*[[iconFilter]]*/;
     --custom-frame-filter: /*[[customFrameFilter]]*/;
     }
@@ -109,8 +98,10 @@ div#site{
 		border: none;
 	}
     
-    :focus{
-    outline: none !important;   
+    :focus,
+    .ddbeb-button:focus{
+    outline: none !important;
+
     }
 
     
@@ -446,7 +437,9 @@ div#site{
     [class^=ddb-linkout] a,
     .body-memberlist .listing-body .b-media,
     .attachment-title-container,
-    .p-attachments-list
+    .p-attachments-list,
+    .actions-container>button,
+    .actions-container .actions__tooltip>ul
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
@@ -477,7 +470,7 @@ div#site{
     .site .character-button-small,
     .character-card__overlay,
     .character-card__overlay-message{
-		/*[[transparencyBackgroundColor]]*/
+		background-color: /*[[transparencyBackgroundColor]]*/ !important;
 	}
 
 	.irace-listing .more-info,
@@ -644,7 +637,12 @@ div#site{
     .body-forum .comment-preview li .p-comment-footer .forum-post-rating .content-box-rating span.like::before, 
     .body-forum-search .p-comments-a .p-comment-footer .forum-post-rating .content-box-rating span.like::before,
     .dice-set__info__title,
-    .ddb-modal-header-text
+    .ddb-modal-header-text,
+    .actions-container .actions__tooltip>ul li a span,
+    .actions-container .actions__tooltip>ul li,
+    .ddbeb-button:visited,
+    .encounter-row__name,
+    .encounter-row__name:visited
     {
 		color: /*[[fontColor]]*/
 		!important;
@@ -687,7 +685,13 @@ div#site{
     .p-comments-b .p-comment-footer .forum-post-rating .content-box-rating span.like:hover::before, 
     .body-forum .comment-preview li .p-comment-footer .forum-post-rating .content-box-rating span.like:hover::before, 
     .body-forum-search .p-comments-a .p-comment-footer .forum-post-rating .content-box-rating span.like:hover::before,
-    .b-ratingForm-a a:hover .num-likes{
+    .b-ratingForm-a a:hover .num-likes,
+    .turn-controls__round, 
+    .turn-controls__turn,
+    .actions-container .actions__tooltip>ul li:hover,
+    .actions-container .actions__tooltip>ul li:hover a span,
+    .encounter-row__name:hover,
+    .encounter-row__name:hover:visited{
 		color: /*[[linkColor]]*/
 		!important
 	}
@@ -763,7 +767,8 @@ div#site{
     .equipment-manager-attuned-item-preview,
     .react-responsive-modal-modal,
     [class^=ddb-linkout] a,
-    .currency-list-item-row
+    .currency-list-item-row,
+    .ddbeb-button
     {
 		border-width: /*[[borderWidth]]*/
 		!important;
@@ -1108,6 +1113,23 @@ div#site{
         color: #ff8502 !important;
         background: url(https://media-waterdeep.cursecdn.com/attachments/0/21/ddbmod.png) no-repeat left center !important;
     }
+    
+    .difficulty-text--hard{
+        color: #ff7300 !important; 
+    }
+    
+    .difficulty-text--deadly {
+        color: #e72c2c !important; 
+    }
+    
+    .difficulty-text--easy {
+        color: #00c797 !important; 
+    }
+    
+    .difficulty-text--medium {
+        color: #f5c823 !important; 
+    }
+    
 	.mordy-handwriting {
 		font-weight: normal !important;
 	}
@@ -1166,7 +1188,7 @@ div#site{
     }
         
     .site .ct-button.ct-theme-button--filled{
-	    /*[[transparencyBackgroundColor]]*/
+	    background-color: /*[[transparencyBackgroundColor]]*/ !important;
      }
     .site .character-button, .site .character-button-block,
     .site .character-button-block-large,
@@ -1238,7 +1260,7 @@ div#site{
     .site .character-button:disabled:hover,
     .ddbc-dice-roll__dice-value.ddbc-dice-roll__dice-value--discarded,
     .add-combatant-modal__controls-button+.add-combatant-modal__controls-button[disabled]{
-       /*[[transparencyBackgroundColor]]*/ 
+        background-color: /*[[transparencyBackgroundColor]]*/ !important;
         box-shadow: inset 0 0 25px 0px #eaeaea;
     }
         
@@ -1273,7 +1295,11 @@ div#site{
     span.notification-dismiss,
     .site .ct-button.ct-theme-button--filled:enabled:focus,
     .add-combatant-modal__controls-button+.add-combatant-modal__controls-button:enabled,
-    .b-pagination-b li.b-pagination-item>a:hover, .b-pagination-b li.b-pagination-item a:visited:hover{
+    .b-pagination-b li.b-pagination-item>a:hover, .b-pagination-b li.b-pagination-item a:visited:hover,
+    .actions-container .actions__tooltip>ul>li:active, .actions-container .actions__tooltip>ul>li:hover,
+    .ddbeb-button:hover:not([disabled]),
+    .gamelog-button:hover:not([disabled]),
+    .actions-container>button:hover:not([disabled]){
         background-color: /*[[backgroundColor]]*/ !important;
          box-shadow: inset 0px 0px 25px 0px /*[[linkColor]]*/ !important;
     }
@@ -1309,10 +1335,14 @@ div#site{
     }
     .class-manager-tabs .ddbc-tab-list__nav-item--is-active svg path,
     .manage-race-tabs .ddbc-tab-list__nav-item--is-active svg path,
-    .ddbeb-modal__close-button svg rect{
+    .ddbeb-modal__close-button svg rect,
+    .actions-container>button svg path{
         fill: /*[[fontColor]]*/ !important;
     }
-    .ddbc-tab-list__nav-item:hover svg path
+    .ddbc-tab-list__nav-item:hover svg path,
+    .actions-container>button:hover svg path,
+    .actions-container .actions__tooltip>ul svg path,
+    .actions-container .actions__tooltip>ul svg rect
      {
         fill: /*[[linkColor]]*/ !important;
     }
@@ -1509,6 +1539,10 @@ div#site{
         z-index: 1;   
     }
     
+    .encounter-row__name.is-missing-name{
+        opacity: 1;   
+    }
+    
 
     
    
@@ -1703,7 +1737,7 @@ div#site{
 		
 	}
 	.post-excerpt__description{
-		/*[[transparencyBackgroundColor]]*/;
+		background-color: /*[[transparencyBackgroundColor]]*/ !important;
 		border-radius: 5px;
 		padding: 5px
 		
@@ -1739,7 +1773,7 @@ div#site{
  
         
         .body-home-index .post-listing > li:first-child .post-excerpt{
-            /*[[transparencyBackgroundColor]]*/ 
+            background-color: /*[[transparencyBackgroundColor]]*/ !important;
             border-width: /*[[borderWidth]]*/!important;
             border-style: /*[[borderStyle]]*/ !important;
             border-color: /*[[borderColor]]*/ !important;
