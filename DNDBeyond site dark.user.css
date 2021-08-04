@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.23
+@version      1.2.24
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -691,7 +691,8 @@ div#site{
     .actions-container .actions__tooltip>ul li:hover,
     .actions-container .actions__tooltip>ul li:hover a span,
     .encounter-row__name:hover,
-    .encounter-row__name:hover:visited{
+    .encounter-row__name:hover:visited,
+    .encounter-row__cell a.ddbeb-button:hover{
 		color: /*[[linkColor]]*/
 		!important
 	}
@@ -1373,6 +1374,20 @@ div#site{
 		!important;
     
     }
+    
+    
+    .combatant-card.is-turn .combatant-card__mid-bit,
+    .combatant-card.is-turn .combatant-card__right-bit,
+    .combatant-card.is-turn .combatant-card__left-bit{
+        border-color: /*[[linkColor]]*/ !important;
+        box-shadow: 0px 0px 5px 1px /*[[linkColor]]*/;
+    }
+    .is-turn .combatant-summary__avatar{
+        border-color: /*[[linkColor]]*/ !important;
+        box-shadow: 0px 2px 5px 1px /*[[linkColor]]*/;
+    }
+    
+
 
     .sidenav-next-nav,
     .homebrew-versions-listing table thead th{
@@ -1527,7 +1542,9 @@ div#site{
         opacity: .5 !important;   
     }
     
-    .forum-thread-row.has-dev-comments .col-thread{
+    .forum-thread-row.has-dev-comments .col-thread,
+    .dice-set-current,
+    .encounter-builder__header div label{
         z-index: 1;    
     }
     
@@ -1540,16 +1557,15 @@ div#site{
         padding: 0px
     }
     
-    .dice-set-current{
-        z-index: 1;   
-    }
+
+    
+    
     
     .encounter-row__name.is-missing-name{
         opacity: 1;   
     }
     
 
-    
    
     
     
