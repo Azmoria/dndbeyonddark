@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.24
+@version      1.3.25
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -300,7 +300,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-sidebar thead td,
     .ct-sidebar thead th,
     .ct-sidebar .compendium-left-aligned-table td,
-    .ct-sidebar .summoning-creatures-table td{
+    .ct-sidebar .summoning-creatures-table td,
+    .ct-container-pane .ddbc-collapsible__content{
        background: /*[[sidebarColor]]*/ !important;   
     }
     
@@ -398,7 +399,9 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     }
 
     .ct-quick-nav__toggle,
-    .ct-quick-nav__edge-toggle {
+    .ct-quick-nav__edge-toggle,
+    .ct-character-sheet-MuiPaper-root,
+    .ct-character-sheet-MuiListItem-button:hover{
         background-color: /*[[rollCalcColor]]*/;
     }
 
@@ -519,8 +522,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-spells-filter__active, 
     .ct-inventory-filter__active, 
     .ct-extras-filter__active,
-    .ct-sidebar__inner
-   
+    .ct-sidebar__inner,
+    .ct-character-sheet-MuiListSubheader-root
     {
         color: /*[[fontColor]]*/ !important;
     }
@@ -554,7 +557,11 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-vehicle-block__ability-heading,
     .ct-vehicle-block__name,
     .ddbc-manage-icon--interactive:hover span,
-    .talespireLink{
+    .talespireLink,
+    li.ct-character-sheet-MuiListItem-button:hover,
+    .ct-inventory__action:hover,
+    .ct-sidebar__pane-content .ddbc-collapsible__header:hover,
+    .ct-sidebar__pane-content .ddbc-collapsible__header:hover .ddbc-item-name{
         color: /*[[highlightColor]]*/ !important;
     }
 
@@ -827,8 +834,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     svg.ddbc-svg.ddbc-portrait-svg.ddbc-svg--themed path,
     svg.ddbc-svg.ddbc-preferences-svg.ddbc-svg--themed path,
     svg.ddbc-svg.ddbc-export-svg.ddbc-svg--themed path,
-    .ddbc-svg.ddbc-chevron-svg.ddbc-chevron-right-svg.ddbc-svg--builder path,
-    .ddbc-svg.ddbc-chevron-svg.ddbc-chevron-down-svg.ddbc-svg--disabled path,
+    .ddbc-collapsible__header:hover .ddbc-svg.ddbc-chevron-svg.ddbc-chevron-right-svg.ddbc-svg--builder path,
+    .ddbc-collapsible__header:hover .ddbc-svg.ddbc-chevron-svg path,
     .ct-extras-filter__advanced svg path,
     .ct-inventory-filter__advanced svg path,
     .ct-character-header-desktop__group--game-log path,
@@ -838,11 +845,17 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-quick-nav__button path,
     .ct-quick-nav__button polygon,
     .ct-quick-nav__button circle,
-    div .ddbc-chevron-svg svg path,
+    .ddbc-collapsible__header:hover div .ddbc-chevron-svg svg path,
     .ddbc-svg.ct-sidebar__pane-control-icon path,
     .ct-content-group__header-extra a.ct-equipment__builder-link svg path{
         fill: /*[[highlightColor]]*/ !important;
         opacity: 1 !important;
+    }
+    
+    .ddbc-svg.ddbc-chevron-svg.ddbc-chevron-right-svg.ddbc-svg--builder path,
+    .ddbc-svg.ddbc-chevron-svg path,
+    div .ddbc-chevron-svg svg path{
+        fill: /*[[fontColor]]*/ !important;
     }
 
 
@@ -954,6 +967,11 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ddbc-disadvantage-svg polygon,
     .ddbc-advantage-svg polygon:first-of-type{
         fill: /*[[sheetColor]]*/ !important;  
+    }
+    
+    
+    .ct-character-sheet-MuiSvgIcon-root path{
+        fill: /*[[fontColor]]*/ !important;
     }
     
     .ddbc-damage-type-icon__img--necrotic>line,
@@ -1093,6 +1111,11 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ddbc-item-name--rarity-legendary,
     .legendary {
         color: #FEA227 !important;
+    }
+    
+    .ddbc-item-name--rarity-artifact,
+    .artifact{
+        color: #be8972 !important;
     }
     
     .ct-health-manager__adjuster-healing-label {
