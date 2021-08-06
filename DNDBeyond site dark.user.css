@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.27
+@version      1.2.28
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -643,7 +643,8 @@ div#site{
     .ddbeb-button:visited,
     .encounter-row__name,
     .encounter-row__name:visited,
-    .encounter-details-summary__monsters-title
+    .encounter-details-summary__monsters-title,
+    .p-user-content .p-comment-wrapper span
     {
 		color: /*[[fontColor]]*/
 		!important;
