@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.28
+@version      1.2.30
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -439,7 +439,8 @@ div#site{
     .attachment-title-container,
     .p-attachments-list,
     .actions-container>button,
-    .actions-container .actions__tooltip>ul
+    .actions-container .actions__tooltip>ul,
+    .p-article-a .p-article-top-tags .p-article-tags .tag
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
@@ -1303,8 +1304,10 @@ div#site{
     span.notification-dismiss,
     .site .ct-button.ct-theme-button--filled:enabled:focus,
     .add-combatant-modal__controls-button+.add-combatant-modal__controls-button:enabled,
-    .b-pagination-b li.b-pagination-item>a:hover, .b-pagination-b li.b-pagination-item a:visited:hover,
-    .actions-container .actions__tooltip>ul>li:active, .actions-container .actions__tooltip>ul>li:hover,
+    .b-pagination-b li.b-pagination-item>a:hover, 
+    .b-pagination-b li.b-pagination-item a:visited:hover,
+    .actions-container .actions__tooltip>ul>li:active, 
+    .actions-container .actions__tooltip>ul>li:hover,
     .ddbeb-button:hover:not([disabled]),
     .gamelog-button:hover:not([disabled]),
     .actions-container>button:hover:not([disabled]){
@@ -1386,7 +1389,8 @@ div#site{
     
     .combatant-card.is-turn .combatant-card__mid-bit,
     .combatant-card.is-turn .combatant-card__right-bit,
-    .combatant-card.is-turn .combatant-card__left-bit{
+    .combatant-card.is-turn .combatant-card__left-bit,
+    .p-article-a .p-article-top-tags .p-article-tags .tag:hover{
         border-color: /*[[linkColor]]*/ !important;
         box-shadow: 0px 0px 5px 1px /*[[linkColor]]*/;
     }
@@ -1571,6 +1575,10 @@ div#site{
     
     .encounter-row__name.is-missing-name{
         opacity: 1;   
+    }
+    
+    .heading-anchor a:first-of-type:before {
+    z-index: 1;
     }
     
 
