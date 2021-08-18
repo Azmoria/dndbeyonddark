@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.27
+@version      1.3.28
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -524,7 +524,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-extras-filter__active,
     .ct-sidebar__inner,
     .ct-character-sheet-MuiListSubheader-root,
-    .ct-sidebar .ddbc-creature-block
+    .ct-sidebar .ddbc-creature-block,
+    .ct-character-sheet-MuiButtonBase-root
     {
         color: /*[[fontColor]]*/ !important;
     }
