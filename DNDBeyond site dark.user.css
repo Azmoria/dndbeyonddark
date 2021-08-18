@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.31
+@version      1.2.32
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -441,7 +441,11 @@ div#site{
     .actions-container>button,
     .actions-container .actions__tooltip>ul,
     .p-article-a .p-article-top-tags .p-article-tags .tag,
-    .j-private-message-members ul li
+    .j-private-message-members ul li,
+    .conversation-listing .conversation-row td,
+    body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions li a, 
+    body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions li:hover a,
+    .p-comments .p-comment-actions .p-comment-actionsAdmin>.label
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
@@ -646,7 +650,8 @@ div#site{
     .encounter-row__name,
     .encounter-row__name:visited,
     .encounter-details-summary__monsters-title,
-    .p-user-content .p-comment-wrapper span
+    .p-user-content .p-comment-wrapper span,
+    body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions>li.b-userAction-item>a span
     {
 		color: /*[[fontColor]]*/
 		!important;
@@ -975,9 +980,11 @@ div#site{
     .p-user-a.s_myProfile .p-user-stats, 
     .p-user-a.s_myStreams .p-user-stats, 
     .p-user-a.s_newContent .p-user-stats,
-    .currency-list-item-row{
+    .currency-list-item-row,
+    .p-comments .p-comment-actions .p-comment-actionsAdmin>.label{
 		background-image: none !important;
 	}
+    
 	aside,
 	.more-info::after,
     blockquote.block-colored,
@@ -1166,7 +1173,8 @@ div#site{
     body.user.responsive-enabled .p-user-a .p-user-interaction .profile-nav-container nav .p-nav .b-list-item:hover a::after, 
     body.user.responsive-enabled .p-user-a .p-user-interaction .profile-nav-container nav .p-nav .b-list-item.selected a::after,
     body.responsive-enabled .scroll-container .scrolled-content ul.tabbed-tabs .b-tab-item:hover a::after, 
-    body.responsive-enabled .scroll-container .scrolled-content ul.tabbed-tabs .b-tab-item.selected a::after{
+    body.responsive-enabled .scroll-container .scrolled-content ul.tabbed-tabs .b-tab-item.selected a::after,
+    body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions>li.b-userAction-item>a::before{
         background-color: /*[[linkColor]]*/ !important;
     }
         
@@ -1311,9 +1319,11 @@ div#site{
     .actions-container .actions__tooltip>ul>li:hover,
     .ddbeb-button:hover:not([disabled]),
     .gamelog-button:hover:not([disabled]),
-    .actions-container>button:hover:not([disabled]){
+    .actions-container>button:hover:not([disabled]),
+    body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions li.selected a,
+    body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions li:hover a{
         background-color: /*[[backgroundColor]]*/ !important;
-         box-shadow: inset 0px 0px 25px 0px /*[[linkColor]]*/ !important;
+        box-shadow: inset 0px 0px 25px 0px /*[[linkColor]]*/ !important;
     }
     
     li.b-pagination-item a[rel="prev"]:not(.s-active), 
