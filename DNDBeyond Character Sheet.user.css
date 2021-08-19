@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.28
+@version      1.3.29
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -87,7 +87,7 @@
         background: none !important; 
     EOT;
 }
-@var color rollCalcColor "Roll Results Background Color" #030f1a
+@var color rollCalcColor "Roll Results Background Color" #030f1acc
 @advanced dropdown beyond20Invert "Invert Beyond20 Menu"{
 yes "Yes" <<<EOT
 .ajs-dialog iframe
@@ -290,7 +290,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     ._1WXtuzqHtOKDwJKEVpp6Oi,
     [class^="ct-vehicle-block__block"],
     .ct-vehicle-pane__tag,
-    .ct-quick-nav__button
+    .ct-quick-nav__button,
+    .ct-reset-pane__hitdie-manager-dice .integrated-dice__container
     {
         background-color: /*[[sheetColor]]*/ !important;
         color: /*[[fontColor]]*/ !important;
@@ -350,12 +351,24 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-extras-filter__advanced-callout,
     .ct-spells__tab-level-callout,   
     .ct-status-summary-mobile__button--active,
-    .ct-spell-caster__casting-action-count{
+    .ct-spell-caster__casting-action-count,
+    .ct-reset-pane__action .ct-theme-button--interactive:hover,
+     .ct-reset-pane__hitdie-manager-dice .integrated-dice__container:hover{
         box-shadow: 0 0 20px 1px /*[[highlightColor]]*/ inset !important;
         background-color: /*[[sheetColor]]*/ !important;
     }
     .ct-character-header__group--game-log{
         background-color: /*[[highlightColor]]*/ !important;
+    }
+    
+    .site .ct-button--is-confirmed, 
+    .site .ct-button--is-confirming,
+    .site .ct-button--is-confirmed:hover,
+    .site .ct-button--is-confirming:hover,
+    .site .ct-button--is-confirmed:focus,
+    .site .ct-button--is-confirming:focus
+    {
+        box-shadow: 0 0 30px 1px #35b000 inset !important;
     }
 
 
@@ -601,7 +614,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-character-header-desktop__group--game-log,
     ._3A6FDLVnjjt8AEw9hQLvFY,
     .ct-character-header__group--game-log,
-    .ct-section-placeholder{
+    .ct-section-placeholder,
+    .ct-reset-pane__hitdie-manager-dice .integrated-dice__container{
         border-color: /*[[borderColor]]*/ !important;
     }
     .integrated-dice-menu-carrot {
@@ -751,7 +765,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-description-pane__entry select.ddbc-select.ct-description-pane__editor-input,
     .ct-description-pane__entry input.ct-description-pane__editor-input,
     .ct-health-manage-pane input.character-input.ct-health-manager__input,
-    .ct-spells-spell__scaled-level
+    .ct-spells-spell__scaled-level,
+    .ct-slot-manager__slot.ct-slot-manager__slot--used 
     {
         border-color: /*[[highlightColor]]*/ !important;
     }
@@ -774,7 +789,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         border-top-color: /*[[sheetColor]]*/
     }
 
-    .integrated-dice__container:hover {
+    .integrated-dice__container:hover,
+    .integrated-dice__container{
         border-width: 1px !important;
     }
 
