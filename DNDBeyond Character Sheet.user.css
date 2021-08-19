@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.30
+@version      1.3.31
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -783,15 +783,16 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         color: /*[[rollColor]]*/ !important;
     }
     .ct-character-sheet--dice-enabled .integrated-dice__container {
-        border: none;
+        border-width: 0px !important;
+        
     }
     .integrated-dice-menu-carrot:after {
         border-top-color: /*[[sheetColor]]*/
     }
 
-    .integrated-dice__container:hover,
+    .ct-character-sheet--dice-enabled .integrated-dice__container:hover,
     .ct-reset-pane__hitdie-manager-dice .integrated-dice__container{
-        border-width: 1px !important;
+        border-width: 1px !important;   
     }
 
     input[type="text"],
