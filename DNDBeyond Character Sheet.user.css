@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.29
+@version      1.3.30
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -790,7 +790,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     }
 
     .integrated-dice__container:hover,
-    .integrated-dice__container{
+    .ct-reset-pane__hitdie-manager-dice .integrated-dice__container{
         border-width: 1px !important;
     }
 
