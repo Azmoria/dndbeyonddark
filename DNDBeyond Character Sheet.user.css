@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.31
+@version      1.3.32
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -111,7 +111,6 @@ EOT;
         var(--dice-color);
     EOT;
 }
-
 @var range diceSepia "Custom Dice Sepia %" [1, 1, 100, 1]
 @var range hueRotation "Custom Dice Hue Rotation" [1, 1, 360, 1]
 @var range diceBrightness "Custom Dice Brightness %" [100, 1, 500, 1]
@@ -127,7 +126,7 @@ EOT;
     EOT;
     Rainbow "Rainbow"<<<EOT
     canvas.dice-rolling-panel__container{
-        -webkit-animation: rainbow var(--rgb-speed) steps(360) infinite;
+    -webkit-animation: rainbow var(--rgb-speed) steps(360) infinite;
     }
     @-webkit-keyframes rainbow {
         from { 
@@ -175,6 +174,24 @@ EOT;
 @var range rgbSpeed "RGB Speed; Second(s) per Cycle" [6, 1, 8, 1]
 @var range rgbFrom "Custom RGB Starting Hue Rotation" [100, 1, 360, 1]
 @var range rgbTo "Custom RGB Ending Hue Rotation" [200, 1, 360, 1]
+
+
+@advanced dropdown frameTint "Frame Tint" {
+    on "Default"<<<EOT
+    EOT;
+    Custom "Custom Dice Sliders"<<<EOT
+        var(--frame-color);
+    EOT;
+}
+@var range frameSepia "Custom Frame Sepia %" [1, 1, 100, 1]
+@var range frameHueRotation "Custom Frame Hue Rotation" [1, 1, 360, 1]
+@var range frameBrightness "Custom Frame Brightness %" [100, 1, 500, 1]
+@var range frameSaturation "Custom Frame Saturation %" [100, 1, 500, 1]
+@var range frameContrast "Custom Frame Contrast %" [100, 1, 500, 1]
+@var select frameInvert "Invert Frame Color" {
+ "No": "0",
+ "Yes": "1"
+}
 
 
 
@@ -1395,6 +1412,13 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         pointer-events: none;
     }
     
+    [class^="ddbc-character-avatar__frame"]
+    {
+        filter: /*[[frameTint]]*/;   
+    }
+    
+    
+    
     
 
     
@@ -1497,6 +1521,7 @@ regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond
         --rgb-from: hue-rotate(/*[[rgbFrom]]*/deg);
         --rgb-to: hue-rotate(/*[[rgbTo]]*/deg);
         --rgb-sliders-check: /*[[diceTint]]*/;
+        --frame-color: sepia(/*[[frameSepia]]*/%) hue-rotate(/*[[frameHueRotation]]*/deg) brightness(/*[[frameBrightness]]*/%) saturate(/*[[frameSaturation]]*/%) contrast(/*[[frameContrast]]*/%) invert(/*[[frameInvert]]*/);
     }
 
     /*Dice Alpha Size and position changes for full site*/
