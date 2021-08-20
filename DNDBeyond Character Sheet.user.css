@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.35
+@version      1.3.36
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -1468,12 +1468,15 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         pointer-events: none;
     }
     
+    
+     /*[[rgbFrame]]*/
+    
     .ddbc-character-avatar>[class^="ddbc-character-avatar__frame"]
     {
         filter: /*[[frameTint]]*/;   
     }
     
-    /*[[rgbFrame]]*/;
+   
     
     
 
