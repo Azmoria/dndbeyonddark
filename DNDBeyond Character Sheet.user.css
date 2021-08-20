@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.34
+@version      1.3.35
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -171,9 +171,9 @@ EOT;
             }
     EOT;
 }
-@var range rgbSpeed "RGB Speed; Second(s) per Cycle" [6, 1, 8, 1]
-@var range rgbFrom "Custom RGB Starting Hue Rotation" [100, 1, 360, 1]
-@var range rgbTo "Custom RGB Ending Hue Rotation" [200, 1, 360, 1]
+@var range rgbSpeed "Dice RGB Speed; Second(s) per Cycle" [6, 1, 8, 1]
+@var range rgbFrom "Custom Dice RGB Starting Hue Rotation" [100, 1, 360, 1]
+@var range rgbTo "Custom Dice RGB Ending Hue Rotation" [200, 1, 360, 1]
 
 
 @advanced dropdown frameTint "Frame Tint" {
@@ -192,6 +192,62 @@ EOT;
  "No": "0",
  "Yes": "1"
 }
+
+@advanced dropdown rgbFrame "RGB Frame"{
+
+    off "OFF"<<<EOT
+    EOT;
+    Rainbow "Rainbow"<<<EOT
+    .ddbc-character-avatar>[class^="ddbc-character-avatar__frame"]{
+    -webkit-animation: rainbowFrame var(--rgb-frame-speed) steps(360) infinite;
+    }
+    @-webkit-keyframes rainbowFrame {
+        from { 
+            -webkit-filter: var(--rgb-frame-check) hue-rotate(1deg); 
+        }
+        to { 
+            -webkit-filter: var(--rgb-frame-check) hue-rotate(360deg); 
+        }
+    }
+    @keyframes rainbowFrame {
+        from {
+            -webkit-filter: var(--rgb-frame-check) hue-rotate(1deg);
+            filter: var(--rgb-frame-check) hue-rotate(1deg);
+        }
+        to {
+            -webkit-filter: var(--rgb-frame-check) hue-rotate(360deg);
+            filter: var(--rgb-frame-check) hue-rotate(360deg);
+        }
+    }
+    EOT;
+    Custom "Custom RGB"<<<EOT
+        .ddbc-character-avatar>[class^="ddbc-character-avatar__frame"]{
+            -webkit-animation: rgbFrame var(--rgb-frame-speed) steps(360) infinite;
+            }
+        @-webkit-keyframes rgbFrame {
+                0%, 100% { 
+                    -webkit-filter: var(--rgb-frame-check) var(--rgb-frame-from); 
+                }
+                50% { 
+                    -webkit-filter: var(--rgb-frame-check) var(--rgb-frame-to); 
+                }
+            }
+        @keyframes rgbFrame {
+                0%, 100% {
+                    -webkit-filter: var(--rgb-frame-check) var(--rgb-frame-from);
+                    filter: var(--rgb-frame-check) var(--rgb-frame-from);
+                }
+              50% {
+                    -webkit-filter: var(--rgb-frame-check) var(--rgb-frame-to);
+                    filter: var(--rgb-frame-check) var(--rgb-frame-to);
+                }
+            }
+    EOT;
+}
+
+@var range frameRgbSpeed "Frame RGB Speed; Second(s) per Cycle" [6, 1, 8, 1]
+@var range frameRgbFrom "Custom Frame RGB Starting Hue Rotation" [100, 1, 360, 1]
+@var range frameRgbTo "Custom Frame RGB Ending Hue Rotation" [200, 1, 360, 1]
 
 
 
@@ -1417,7 +1473,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         filter: /*[[frameTint]]*/;   
     }
     
-    
+    /*[[rgbFrame]]*/;
     
     
 
@@ -1522,6 +1578,11 @@ regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond
         --rgb-to: hue-rotate(/*[[rgbTo]]*/deg);
         --rgb-sliders-check: /*[[diceTint]]*/;
         --frame-color: sepia(/*[[frameSepia]]*/%) hue-rotate(/*[[frameHueRotation]]*/deg) brightness(/*[[frameBrightness]]*/%) saturate(/*[[frameSaturation]]*/%) contrast(/*[[frameContrast]]*/%) invert(/*[[frameInvert]]*/);
+        --rgb-frame-check: /*[[frameTint]]*/;
+        --rgb-frame-speed: /*[[frameRgbSpeed]]*/s;
+        --rgb-frame-from: hue-rotate(/*[[frameRgbFrom]]*/deg);
+        --rgb-frame-to: hue-rotate(/*[[frameRgbTo]]*/deg);
+
     }
 
     /*Dice Alpha Size and position changes for full site*/
