@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.36
+@version      1.3.37
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -250,6 +250,132 @@ EOT;
 @var range frameRgbTo "Custom Frame RGB Ending Hue Rotation" [200, 1, 360, 1]
 
 
+@advanced dropdown diceTray "Dice tray; Here's a custom background to simulate a dice tray https://i.imgur.com/W5cLzvI.jpeg"{
+    off "Default Character Sheet"<<<EOT
+    EOT;
+
+    diceTrayLog "Dice Tray with popup/log" <<<EOT
+        .ct-character-sheet__inner div.ct-character-header-desktop>div:not(.ct-character-header-desktop__group--campaign),
+        .ct-quick-info,
+        .ct-subsections,
+        .ct-character-header-mobile,
+        .ct-combat-mobile,
+        .ct-main-mobile__abilities,
+        .ct-subsection-mobile>div>div:not(.ct-main-mobile__campaign),
+        .ct-quick-nav__toggle,
+        .ct-character-header-tablet,
+        .ct-combat-tablet__extras,
+        .ct-main-tablet__abilities,
+        .ct-main-tablet__large-boxes        
+        {
+            display: none;
+        } 
+        .ct-main-mobile__campaign{
+            border: none;
+        }
+        .ct-character-header-desktop__group--campaign{
+            position: absolute;
+            right: 0px;
+            top: 10px;
+        }
+        .ct-main-mobile__campaign{
+        position: absolute;
+        right: 5px;
+        top: 60px
+        }       
+        .ct-main-tablet__campaign{
+        position: absolute;
+        right: 5px;
+        top: 10px
+        }   
+
+        .ct-sidebar{
+            position: fixed;
+            top: 0px;
+            bottom: 0px;
+            height: auto
+        }   
+         body{
+            overflow: hidden;
+        }   
+    EOT;
+    
+    diceTray "Dice Tray Log only"<<<EOT 
+         .ct-character-sheet__inner div.ct-character-header-desktop>div:not(.ct-character-header-desktop__group--campaign),
+        .ct-quick-info,
+        .ct-subsections,
+        .ct-character-header-mobile,
+        .ct-combat-mobile,
+        .ct-main-mobile__abilities,
+        .ct-subsection-mobile>div>div:not(.ct-main-mobile__campaign),
+        .ct-quick-nav__toggle,
+        .ct-character-header-tablet,
+        .ct-combat-tablet__extras,
+        .ct-main-tablet__abilities,
+        .ct-main-tablet__large-boxes, 
+        #noty_layout__bottomRight
+        {
+            display: none;
+        } 
+        .ct-main-mobile__campaign{
+            border: none;
+        }
+        .ct-character-header-desktop__group--campaign{
+            position: absolute;
+            right: 0px;
+            top: 10px;
+        }
+        .ct-main-mobile__campaign{
+            position: absolute;
+            right: 5px;
+            top: 60px
+        }       
+        .ct-main-tablet__campaign{
+            position: absolute;
+            right: 5px;
+            top: 10px
+        }   
+        .ct-sidebar{
+            position: fixed;
+            top: 0px;
+            bottom: 0px;
+            height: auto
+        } 
+        body{
+            overflow: hidden;
+        }       
+    EOT;
+
+    diceTrayOnly "Dice Tray no popup/log"<<<EOT
+        .ct-character-sheet__inner div.ct-character-header-desktop>div,
+        .ct-quick-info,
+        .ct-subsections,
+        .ct-character-header-mobile,
+        .ct-combat-mobile,
+        .ct-main-mobile__abilities,
+        .ct-subsection-mobile>div>div,
+        .ct-quick-nav__toggle,
+        #noty_layout__bottomRight,
+        .ct-quick-nav__footer-sidebar,
+        .ct-sidebar,
+        .ct-character-header-tablet,
+        .ct-combat-tablet__extras,
+        .ct-main-tablet__abilities,
+        .ct-main-tablet__large-boxes,
+        .ct-main-tablet__campaign
+
+        {
+            display: none;
+        } 
+         body{
+            overflow: hidden;
+        }   
+  
+    EOT;
+
+   
+}
+
 
 ==/UserStyle== */
 @-moz-document regexp("https://www.dndbeyond.com/profile/.*/characters/\\d*"),
@@ -271,18 +397,23 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         background-clip: padding-box;
         border: 4px solid rgba(0, 0, 0, 0);
     }
+   
     * {
         scrollbar-width: thin;
         scrollbar-color: /*[[scrollbarColor]]*/ /*[[sheetColor]]*/;
     }
-
+       
     /*Background colors, images and styles */
     body {
         overflow: overlay;
     }
+    
+     /*[[diceTray]]*/
+    
     .ct-character-sheet:before {
         /*[[titleToggle]]*/
     }
+    
     html body.body-rpgcharacter-sheet {
         /*[[backgroundImg]]*/
         background-color: /*[[background]]*/
@@ -299,7 +430,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-character-sheet-mobile--dark-mode{
         background: none !important;   
     }
-
+   
     .ct-component-carousel__active {
         background: transparent !important;
     }
@@ -369,6 +500,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         background-color: /*[[sheetColor]]*/ !important;
         color: /*[[fontColor]]*/ !important;
     }
+    
     .ct-sidebar__pane-content,
     .ct-sidebar__pane-gap,
     .ct-sidebar thead td,
@@ -382,6 +514,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ddbc-no-proficiency-icon {
         background: /*[[fontColor]]*/ !important
     }
+    
     .ddbc-tab-options--layout-pill .ddbc-tab-options__header-heading,
     .ct-slot-manager__slot,
     .site .ct-button.ct-theme-button--outline,
@@ -401,6 +534,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .currency-list-item-row{
         background: /*[[sheetColor]]*/ !important;
     }
+    
     .ct-slot-manager__slot--used:before,
     .ct-spells-spell__scaled-level,
     .ddbc-tab-options__header-heading.ddbc-tab-options__header-heading--is-active,
@@ -497,11 +631,6 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         background: none !important;
     }
     
-
-
-
-
-
 
     /*Font colors and styles*/
     #content,
@@ -653,8 +782,6 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         color: /*[[highlightColor]]*/ !important;
     }
 
-
-
     /*If you hit the beautify button add a space between each 0 and / */
     .ct-combat__summary-label--outline,
     .ct-inspiration__label,
@@ -664,8 +791,6 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         , -1px 1px 0 /*[[sheetColor]]*/
         , 1px -1px 0 /*[[sheetColor]]*/
     }
-
-
 
 
     /*Borders*/
@@ -892,7 +1017,6 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     {
         border: solid 1px /*[[highlightColor]]*/ !important;
     }
-
 
     /*Fills and Strokes*/
     .ct-skills__col--proficiency circle,
@@ -1467,16 +1591,14 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-sidebar .ddbc-collapsible__header svg.ddbc-svg {
         pointer-events: none;
     }
-    
-    
-     /*[[rgbFrame]]*/
+       
+    /*[[rgbFrame]]*/
     
     .ddbc-character-avatar>[class^="ddbc-character-avatar__frame"]
     {
         filter: /*[[frameTint]]*/;   
     }
-    
-   
+ 
     
     
 
