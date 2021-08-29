@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.32
+@version      1.2.33
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -1590,6 +1590,10 @@ div#site{
     
     .heading-anchor a:first-of-type:before {
     z-index: 1;
+    }
+    
+    .encounter-builder__header div label{
+        pointer-events: none;   
     }
     
 
