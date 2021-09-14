@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.35
+@version      1.2.36
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -446,7 +446,7 @@ div#site{
     body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions li a, 
     body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions li:hover a,
     .p-comments .p-comment-actions .p-comment-actionsAdmin>.label,
-    .p-forum-a.s-search .forum-selection, 
+    .p-forum-a.s-search .forum-selection, 	
     .listing-forum-search.s-search .forum-selection
     {
 		background-color: /*[[backgroundColor]]*/
@@ -653,7 +653,9 @@ div#site{
     .encounter-row__name:visited,
     .encounter-details-summary__monsters-title,
     .p-user-content .p-comment-wrapper span,
-    body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions>li.b-userAction-item>a span
+    body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions>li.b-userAction-item>a span,
+    .post-highlighted-articles-item-author-by,
+    .post-highlighted-articles-item-author-name
     {
 		color: /*[[fontColor]]*/
 		!important;
@@ -703,7 +705,9 @@ div#site{
     .actions-container .actions__tooltip>ul li:hover a span,
     .encounter-row__name:hover,
     .encounter-row__name:hover:visited,
-    .encounter-row__cell a.ddbeb-button:hover{
+    .encounter-row__cell a.ddbeb-button:hover,
+    .post-highlighted-articles-item-title a,
+       .post-highlighted-articles-item-title a:visited{
 		color: /*[[linkColor]]*/
 		!important
 	}
@@ -780,7 +784,8 @@ div#site{
     .react-responsive-modal-modal,
     [class^=ddb-linkout] a,
     .currency-list-item-row,
-    .ddbeb-button
+    .ddbeb-button,
+    .post-highlighted-articles-item
     {
 		border-width: /*[[borderWidth]]*/
 		!important;
