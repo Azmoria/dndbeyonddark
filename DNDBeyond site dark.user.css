@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.39
+@version      1.2.40
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -449,7 +449,8 @@ div#site{
     .p-forum-a.s-search .forum-selection, 	
     .listing-forum-search.s-search .forum-selection,
     .active-subscription__block,
-    [id^="Ability Score Increases, Languages, and Alignment-"]
+    [id^="Ability Score Increases, Languages, and Alignment-"],
+    .section-posts .p-article-a .p-article-content table tbody tr:nth-child(odd)
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
