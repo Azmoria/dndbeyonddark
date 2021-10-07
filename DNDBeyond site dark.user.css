@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.38
+@version      1.2.39
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -1341,7 +1341,8 @@ div#site{
     .gamelog-button:hover:not([disabled]),
     .actions-container>button:hover:not([disabled]),
     body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions li.selected a,
-    body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions li:hover a{
+    body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions li:hover a,
+    .body-rpgmagicitem .listing-filters .form-field-text-field>div:not(:first-child).grissel-pete-who-even-is-this-guy{
         background-color: /*[[backgroundColor]]*/ !important;
         box-shadow: inset 0px 0px 25px 0px /*[[linkColor]]*/ !important;
     }
