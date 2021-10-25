@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.40
+@version      1.2.41
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -450,7 +450,10 @@ div#site{
     .listing-forum-search.s-search .forum-selection,
     .active-subscription__block,
     [id^="Ability Score Increases, Languages, and Alignment-"],
-    .section-posts .p-article-a .p-article-content table tbody tr:nth-child(odd)
+    .section-posts .p-article-a .p-article-content table tbody tr:nth-child(odd),
+    .ac_results,
+    .ac_odd,
+    .ac_even
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
@@ -1157,6 +1160,8 @@ div#site{
         stroke: #0c0a08;
     }
     
+
+    
    .ddbc-svg path[d="M1 0.832519C1 0.556377 1.22386 0.33252 1.5 0.33252H22.5C22.7761 0.33252 23 0.556377 23 0.83252V23.7334C23 24.0454 22.7175 24.2812 22.4106 24.2253L12.0894 22.3488C12.0303 22.338 11.9697 22.338 11.9106 22.3488L1.58944 24.2253C1.28252 24.2812 1 24.0454 1 23.7334V0.832519Z"],
     [id="Ability Score Increases, Languages, and Alignment-header"]:hover .ddbc-svg path[d="M1 0.832519C1 0.556377 1.22386 0.33252 1.5 0.33252H22.5C22.7761 0.33252 23 0.556377 23 0.83252V23.7334C23 24.0454 22.7175 24.2812 22.4106 24.2253L12.0894 22.3488C12.0303 22.338 11.9697 22.338 11.9106 22.3488L1.58944 24.2253C1.28252 24.2812 1 24.0454 1 23.7334V0.832519Z"]
     {
@@ -1302,7 +1307,10 @@ div#site{
         background-color: /*[[transparencyBackgroundColor]]*/ !important;
         box-shadow: inset 0 0 25px 0px #eaeaea;
     }
-        
+    .ac_results li.ac_over a, 
+    .ac_results li.ac_over>div{
+        background: none !important;        
+    }
         
     button.ct-button.character-button.ddbc-button.character-button-block,
     button.ct-button.character-button.ddbc-button.character-button-block:hover,
@@ -1343,7 +1351,9 @@ div#site{
     .actions-container>button:hover:not([disabled]),
     body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions li.selected a,
     body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions li:hover a,
-    .body-rpgmagicitem .listing-filters .form-field-text-field>div:not(:first-child).grissel-pete-who-even-is-this-guy{
+    .body-rpgmagicitem .listing-filters .form-field-text-field>div:not(:first-child).grissel-pete-who-even-is-this-guy,
+    .ac_results li:hover
+    {
         background-color: /*[[backgroundColor]]*/ !important;
         box-shadow: inset 0px 0px 25px 0px /*[[linkColor]]*/ !important;
     }
