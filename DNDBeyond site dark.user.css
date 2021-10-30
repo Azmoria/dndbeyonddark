@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.44
+@version      1.2.45
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -806,7 +806,8 @@ div#site{
         font-size: 14pt;
     }
     .dice-set__info__desc{
-         font-size: 12pt;  
+        font-size: 12pt; 
+        line-height: 15pt;
     }
     .dice-set {
     margin: 5px;
@@ -821,8 +822,16 @@ div#site{
     position: relative;
     display: inline-block;
     vertical-align: text-top;
-    min-height: 350px;
+    min-height: 280px;
 
+    }
+    
+    .dice-set-current-label{
+        position: absolute;
+        margin: 0px;
+        padding: 1px 3px;
+        left: 15px;
+        bottom: 5px;
     }
     
     .dice-set__subsets {
