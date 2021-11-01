@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.46
+@version      1.2.47
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -803,11 +803,11 @@ div#site{
 	}
 
     .dice-set__info__title{
-        font-size: 14pt;
+        font-size: 12pt;
     }
     .dice-set__info__desc{
-        font-size: 12pt; 
-        line-height: 15pt;
+        font-size: 10pt; 
+        line-height: 11pt;
     }
     .dice-set {
     margin: 5px;
@@ -818,7 +818,7 @@ div#site{
 		!important;
 	border-color: /*[[borderColor]]*/
 		!important;
-    max-width: 400px;
+    max-width: 375px;
     position: relative;
     display: inline-block;
     vertical-align: text-top;
@@ -1209,6 +1209,198 @@ div#site{
     
 
     
+    /* =========================== */
+/*            Vanity User Titles                     */
+/* =========================== */
+
+    
+    /*Azmoria*/
+    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="100666635"] .p-comment-user-background {
+    background-image: url(https://github.com/Azmoria/dndbeyonddark/blob/master/Images/DNDBeyond%20Dark/azmoria-forum-profile-bg.png?raw=true) !important;
+    background-repeat: no-repeat !important;
+    background-position: top left !important;
+    background-size: 100% auto !important;
+    opacity: 0.4;
+    }
+    
+    /* Adam Bradford */
+    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="23611187"] .p-comment-statitem.forum-title {
+        padding-left: 3.5em;
+        text-decoration: overline;
+        font-size: 14px;
+        text-shadow: 0 0 3px #536A9C;
+    }
+
+    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="23611187"] .p-comment-user-background {
+    background-image: url(https://media-waterdeep.cursecdn.com/attachments/0/79/bebackground.jpg) !important;
+    background-repeat: no-repeat !important;
+    }
+
+    /* Bullethawk */
+    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="106022107"] .p-comment-statitem.forum-title {
+    font-size: 12px;
+        color: #5d3b13;
+        text-align:center;
+        text-shadow: 0 0 4px #f89910;
+    }
+
+    /* molster */
+    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="4371937"] .p-comment-statitem.forum-title {
+    font-size: 16px;
+        color: #5d3b13;
+        text-shadow: 0 0 7px #f89910;
+    }
+
+    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="4371937"] .p-comment-user-background {
+    background-image: url(https://media-waterdeep.cursecdn.com/attachments/0/43/background.jpg) !important;
+    background-repeat: no-repeat !important;
+    }
+
+    /* Avi Samloff */
+    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="15949613"] .p-comment-statitem.forum-title {
+        cursor: default;
+        color: #673150;
+        text-transform: uppercase;
+        justify-content: center;
+    }
+   body.body-forum .single-column #content .p-forum-a  div.j-comment[data-author-id="15949613"] .p-comment-user-background {
+        background-image: url("http://i.imgur.com/KMbT0oP.jpg") !important;
+        opacity: 0.2;
+        background-position: center center !important;
+    }
+    @keyframes marquee {
+        0%   { text-indent: 180px }
+        100% { text-indent: -180px }
+    }
+
+    /* Benes */
+    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="28667811"] .p-comment-statitem.forum-title {
+        color: #3cd8fd;
+        text-shadow: 1px 1px 0px #0081a0, 2px 2px 0px #018cad;
+        transform: rotateZ(-2deg) translateY(-6px);
+        font-size: 11px;
+    }
+
+    /* Caiazzo */
+   body.body-forum .single-column #content .p-forum-a  div.j-comment[data-author-id="25503598"] .p-comment-user-background {
+    background-image: url(https://media-waterdeep.cursecdn.com/avatars/thumbnails/13/142/315/315/636357409885255293.png) !important;
+    background-repeat: no-repeat !important;
+    opacity: 0.5;
+    }
+
+    /* Hartless */
+    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="8500863"] .p-comment-statitem.forum-title {
+    text-shadow:1px 1px 3px rgba(0,0,0,1);
+    color:#E40812;
+    letter-spacing:2pt;
+    word-spacing:2pt;
+    font-size:14px;
+    text-align:center;
+    line-height:1;
+    }
+
+    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="8500863"] .p-comment-user-background {
+    background-image: url(https://media-waterdeep.cursecdn.com/attachments/0/59/stevanus4.jpg) !important;
+    background-repeat: no-repeat !important;
+    }
+
+    /* Elliot */
+    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="100022645"] .p-comment-user-background {
+    background-image: url(https://media-waterdeep.cursecdn.com/attachments/0/52/elliot_bg3.jpg) !important;
+    background-repeat: no-repeat !important;
+    }
+
+    /* Justin */
+    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="100201484"] .p-comment-statitem.forum-title {
+        justify-content: center;
+    }
+    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="100201484"] .p-comment-statitem.forum-title:before, div.j-comment[data-author-id="100201484"] .p-comment-statitem.forum-title:after {
+        transform: skewX(-10deg);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200%;
+        background-image: linear-gradient(10deg, red, orange, cyan, blue, violet, purple);
+    }
+    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="100201484"] .p-comment-statitem.forum-title:before {
+        content: 'CSS';
+    }
+    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="100201484"] .p-comment-statitem.forum-title:after {
+        content: 'Wizard';
+        background-position: 100%;
+    }
+
+    /* Lauren */
+    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="100030730"] .p-comment-user-background {
+      background-image: url(https://media-waterdeep.cursecdn.com/attachments/6/601/phoenix-concept-art.jpg) !important;
+      background-repeat: no-repeat !important;
+      background-position: bottom left !important;
+      background-size: contain !important;
+      opacity: 0.5;
+    }
+
+    /* Pat */
+    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="100053269"] .p-comment-user-background {
+      background-image: url(https://media-waterdeep.cursecdn.com/attachments/6/602/acererak.png) !important;
+      background-repeat: no-repeat !important;
+      background-position: top left !important;
+      background-size: 100% auto !important;
+      opacity: 0.5;
+    }
+
+    /* Stormknight / Faith */
+    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="100023662"] .p-comment-user-background {
+      background-image: url(https://media-waterdeep.cursecdn.com/attachments/8/436/sk-forum-profile-bg2.png) !important;
+      background-repeat: no-repeat !important;
+      background-position: top left !important;
+      background-size: 100% auto !important;
+      opacity: 0.4;
+    }
+    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="100023662"] .p-comment-statitem.forum-title {
+      text-shadow:0px 0px 10px #fff;
+      color:#E40812;
+      letter-spacing:2px;
+      word-spacing:2pt;
+      font-size:14px;
+      line-height:1;
+      margin-bottom:4px;
+    }
+    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="100023662"] .p-comment-username {
+      text-shadow:0px 0px 12px #fff;
+    }
+
+    /* Timer / Adam Walton */
+    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="100046438"] .p-comment-user-background {
+        background-image: url(https://media-waterdeep.cursecdn.com/attachments/8/497/timer-forum-profile2.png) !important;
+        background-repeat: no-repeat !important;
+        background-position: top left !important;
+        background-size: 100% auto !important;
+        opacity: 0.3;
+    }
+    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="100046438"] .p-comment-statitem.forum-title {
+        text-shadow: 0px 0px 10px #fff;
+        color: #E40812;
+        padding-left: 1em;
+        /*letter-spacing: 2px;*/
+        word-spacing: 2pt;
+        font-size: 12px;
+        line-height: 1;
+        /*margin-bottom: 4px;*/
+    }
+
+    /* GPyromania/Jay Jani */
+    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="100005559"] .p-comment-user-background {
+        background-image: url(https://media-waterdeep.cursecdn.com/attachments/8/996/gp-forum-profile.png) !important;
+        background-repeat: no-repeat !important;
+        background-position: top left !important;
+        background-size: 100% auto !important;
+        opacity: 0.6;
+    }
+    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="100005559"] .p-comment-username {
+      text-shadow: 0px 0px 4px #fff;
+    }
+        
+
+    
    .ddbc-svg path[d="M1 0.832519C1 0.556377 1.22386 0.33252 1.5 0.33252H22.5C22.7761 0.33252 23 0.556377 23 0.83252V23.7334C23 24.0454 22.7175 24.2812 22.4106 24.2253L12.0894 22.3488C12.0303 22.338 11.9697 22.338 11.9106 22.3488L1.58944 24.2253C1.28252 24.2812 1 24.0454 1 23.7334V0.832519Z"],
     [id="Ability Score Increases, Languages, and Alignment-header"]:hover .ddbc-svg path[d="M1 0.832519C1 0.556377 1.22386 0.33252 1.5 0.33252H22.5C22.7761 0.33252 23 0.556377 23 0.83252V23.7334C23 24.0454 22.7175 24.2812 22.4106 24.2253L12.0894 22.3488C12.0303 22.338 11.9697 22.338 11.9106 22.3488L1.58944 24.2253C1.28252 24.2812 1 24.0454 1 23.7334V0.832519Z"]
     {
@@ -1229,7 +1421,9 @@ div#site{
 	footer#footer {
 		margin: 0px;
 	}
-    input.es-form-field-query.ui-autocomplete-input[placeholder="Search Everything..."]{
+    input.es-form-field-query.ui-autocomplete-input[placeholder="Search Everything..."],
+    .p-comments-b .p-comment-user .p-comment-stats .p-comment-statitem .postbit-item,
+    body.body-forum .single-column #content .p-forum-a .p-comment-post .u-dropDown span.user.user-role-registered-users  {
         background: none !important;
     }
     .body-page .p-article-a .p-article-content h2::after, 
