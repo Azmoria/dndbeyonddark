@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.45
+@version      1.2.46
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -1200,6 +1200,11 @@ div#site{
     g.beholder-dm-screen__screen path {
         fill: #201911;
         stroke: #0c0a08;
+    }
+    
+     body.body-forum .single-column #content .p-forum-a .p-comment-post .u-dropDown span.user-role-d-d-beyond-staff{
+        color: #E40712 !important;
+        background: url(https://media-waterdeep.cursecdn.com/attachments/0/12/ddbstaff.png) no-repeat left center !important;
     }
     
 
