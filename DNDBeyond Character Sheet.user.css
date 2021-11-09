@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.42
+@version      1.3.43
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -515,7 +515,9 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-sidebar .compendium-left-aligned-table td,
     .ct-sidebar .summoning-creatures-table td,
     .ct-container-pane .ddbc-collapsible__content,
-    .ct-decorate-pane__current-selections{
+    .ct-decorate-pane__current-selections,
+    .ct-sidebar .ddbc-collapsible__header,
+    .ct-character-manage-pane__intro{
        background: /*[[sidebarColor]]*/ !important;   
     }
     
@@ -973,7 +975,11 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-description-pane__entry input.ct-description-pane__editor-input,
     .ct-health-manage-pane input.character-input.ct-health-manager__input,
     .ct-spells-spell__scaled-level,
-    .ct-slot-manager__slot.ct-slot-manager__slot--used 
+    .ct-slot-manager__slot.ct-slot-manager__slot--used,
+    .ct-decorate-pane__current-selections,
+    .ct-decorate-pane__preferences-content,
+    .ct-decorate-pane__preferences,
+    .ct-equipment-manage-pane__custom
     {
         border-color: /*[[highlightColor]]*/ !important;
     }
@@ -1613,27 +1619,37 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ddbc-truncated-content--is-hidden .ddbc-truncated-content__content:after{
         background: linear-gradient(0deg, /*[[sheetColor]]*/ 6%,hsla(0,0%,100%,0))   
     }
- 
-    
+     
     .ct-decorate-pane__current-selections{
-        position: relative;   
+        position: relative;         
     }
     
-    .ct-decorate-pane__shop .ddbc-collapsible--opened .ddbc-collapsible__header {
-    
-        top: 10px;
+    .ct-decorate-pane__shop .ddbc-collapsible--opened .ddbc-collapsible__header,
+    .ct-container-manager .ddbc-collapsible--opened > .ddbc-collapsible__header,
+    .ct-equipment-manage-pane .ddbc-collapsible--opened > .ddbc-collapsible__header{    
+        top: 0px;
         background: /*[[sidebarColor]]*/ !important;
         border-right: 1px solid /*[[highlightColor]]*/;
         border-top: 1px solid /*[[highlightColor]]*/;
         border-bottom: 1px solid /*[[highlightColor]]*/;
+        z-index: 9;
+        box-shadow: 0px 0px 15px 9px /*[[sidebarColor]]*/;
 
     }
-    
 
+    .ct-equipment-manage-pane__inventory,
+    .ct-container-manager__inventory{
+        position: relative;
+        z-index: 1;   
+    }
     
     
-
-
+    .ct-decorate-pane__shop .ddbc-collapsible--opened > .ct-equipment-shop,
+    .ct-container-manager .ddbc-collapsible--opened > .ddbc-collapsible__header,
+    .ct-equipment-manage-pane .ddbc-collapsible--opened > .ddbc-collapsible__header{
+        position: sticky;
+    }
+   
     
     @media (min-width: 768px){
         .ct-character-sheet:before {       
