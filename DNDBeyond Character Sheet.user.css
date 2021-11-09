@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.44
+@version      1.3.45
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -249,6 +249,65 @@ EOT;
 @var range frameRgbFrom "Custom Frame RGB Starting Hue Rotation" [100, 0, 360, 1]
 @var range frameRgbTo "Custom Frame RGB Ending Hue Rotation" [200, 0, 360, 1]
 
+
+@advanced dropdown rgbBorder "RGB Borders/Theme"{
+
+    off "OFF"<<<EOT
+        EOT;
+    Rainbow "Rainbow"<<<EOT
+        .ddbc-box-background path,
+        .ddbc-saving-throws-summary path
+        {
+        -webkit-animation: rainbowBorder var(--rgb-border-speed) steps(360) infinite;
+        }
+        @-webkit-keyframes rainbowBorder {
+            from { 
+                -webkit-filter: hue-rotate(1deg); 
+            }
+            to { 
+                -webkit-filter: hue-rotate(360deg); 
+            }
+        }
+        @keyframes rainbowBorder {
+            from {
+                -webkit-filter: hue-rotate(1deg);
+                filter: hue-rotate(1deg);
+            }
+            to {
+                -webkit-filter: hue-rotate(360deg);
+                filter: hue-rotate(360deg);
+            }
+        }
+    EOT;
+    Custom "Custom RGB"<<<EOT
+        .ddbc-box-background path,
+        .ddbc-saving-throws-summary path{
+                -webkit-animation: rgbBorder var(--rgb-border-speed) steps(360) infinite;
+                }
+            @-webkit-keyframes rgbBorder {
+                    0%, 100% { 
+                        -webkit-filter: var(--rgb-border-from); 
+                    }
+                    50% { 
+                        -webkit-filter: var(--rgb-border-to); 
+                    }
+                }
+            @keyframes rgbBorder {
+                    0%, 100% {
+                        -webkit-filter: var(--rgb-border-from);
+                        filter: var(--rgb-border-from);
+                    }
+                  50% {
+                        -webkit-filter: var(--rgb-border-to);
+                        filter: var(--rgb-border-to);
+                    }
+                }
+    EOT;
+}
+
+@var range borderRgbSpeed "Border RGB Speed; Second(s) per Cycle" [6, 1, 8, 1]
+@var range borderRgbFrom "Custom Border RGB Starting Hue Rotation" [100, 0, 360, 1]
+@var range borderRgbTo "Custom Border RGB Ending Hue Rotation" [200, 0, 360, 1]
 
 @advanced dropdown diceTray "Dice tray; Here's a custom background to simulate a dice tray https://i.imgur.com/W5cLzvI.jpeg"{
     off "Default Character Sheet"<<<EOT
@@ -1616,6 +1675,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         filter: /*[[frameTint]]*/;   
     }
     
+    /*[[rgbBorder]]*/
+    
     .ddbc-truncated-content--is-hidden .ddbc-truncated-content__content:after{
         background: linear-gradient(0deg, /*[[sheetColor]]*/ 6%,hsla(0,0%,100%,0))   
     }
@@ -1757,6 +1818,10 @@ regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond
         --rgb-frame-speed: /*[[frameRgbSpeed]]*/s;
         --rgb-frame-from: hue-rotate(/*[[frameRgbFrom]]*/deg);
         --rgb-frame-to: hue-rotate(/*[[frameRgbTo]]*/deg);
+        --rgb-border-speed: /*[[borderRgbSpeed]]*/s;
+        --rgb-border-from: hue-rotate(/*[[borderRgbFrom]]*/deg);
+        --rgb-border-to: hue-rotate(/*[[borderRgbTo]]*/deg);
+
 
     }
 
