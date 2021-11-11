@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.48
+@version      1.2.49
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -453,7 +453,8 @@ div#site{
     .section-posts .p-article-a .p-article-content table tbody tr:nth-child(odd),
     .ac_results,
     .ac_odd,
-    .ac_even
+    .ac_even,
+    .p-article-a .p-article-interact
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
@@ -855,8 +856,13 @@ div#site{
     .body-forum li.b-pagination-item .s-active,
     .body-forum li.b-pagination-item a[rel="prev"]:hover, 
     .body-forum li.b-pagination-item a[rel="next"]:hover, 
-    .body-forum li.b-pagination-item .b-pagination-item:hover{
+    .body-forum li.b-pagination-item .b-pagination-item:hover
+    {
         border-color: /*[[linkColor]]*/ !important;
+    }
+    
+    .p-article-a .p-article-interact .p-article-comments a:first-of-type:after{
+         border-color: /*[[linkColor]]*/ transparent !important;  
     }
     
     
@@ -1111,7 +1117,7 @@ div#site{
     li.b-pagination-item a[rel="prev"]:not(.s-active), 
     li.b-pagination-item a[rel="next"]:not(.s-active), 
     li.b-pagination-item .b-pagination-item:not(.s-active){
-    border-color: /*[[fontColor]]*/;            
+        border-color: /*[[fontColor]]*/;            
     }
         
         
@@ -1123,7 +1129,7 @@ div#site{
 		border: none !important;
 	}
     .p-comments .p-comment-actions .p-comment-actionsAdmin>.label:after{
-    border-top-color: /*[[fontColor]]*/
+        border-top-color: /*[[fontColor]]*/
     }
     .fullscreen-modal-footer{
         border-top-color: /*[[linkColor]]*/
@@ -1140,6 +1146,16 @@ div#site{
     .mce-btn i{
         text-shadow: none !important
     }
+    
+    .p-article-a .p-article-interact .p-article-comments a:first-of-type{	
+   		text-shadow:
+      	 2px 2px #000,
+     	-1px -1px 0 #000,  
+     	 1px -1px 0 #000,
+     	 -1px 1px 0 #000,
+      	 1px 1px 0 #000 !important;
+		
+	}
     .hit-point-adjuster__heal{
         background-color: #00c79266 !important;
     }
@@ -1462,7 +1478,8 @@ div#site{
     body.user.responsive-enabled .p-user-a .p-user-interaction .profile-nav-container nav .p-nav .b-list-item.selected a::after,
     body.responsive-enabled .scroll-container .scrolled-content ul.tabbed-tabs .b-tab-item:hover a::after, 
     body.responsive-enabled .scroll-container .scrolled-content ul.tabbed-tabs .b-tab-item.selected a::after,
-    body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions>li.b-userAction-item>a::before{
+    body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions>li.b-userAction-item>a::before,
+    .p-article-a .p-article-interact .p-article-comments a:first-of-type{
         background-color: /*[[linkColor]]*/ !important;
     }
         
@@ -2072,13 +2089,13 @@ div#site{
 	}
 
 	.post-excerpt__description,
-	.post-excerpt__content {	
+	.post-excerpt__content{	
    		text-shadow:
       	 2px 2px #000,
      	-1px -1px 0 #000,  
      	 1px -1px 0 #000,
      	 -1px 1px 0 #000,
-      	 1px 1px 0 #000;
+      	 1px 1px 0 #000 !important;
 		
 	}
 	.post-excerpt__description{
