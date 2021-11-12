@@ -669,6 +669,8 @@ div#site{
 		color: /*[[fontColor]]*/
 		!important;
 	}
+    
+   
 
 
 	.thread-prefix span.thread-prefix {
@@ -1904,6 +1906,12 @@ div#site{
     
     input.encounter-builder-header__encounter-name{
         background: transparent !important;  
+    }
+    
+    /*fix for unable to change race if currently selected one doesn't have traits set.*/
+     .race-detail-aside {
+        z-index: 10;
+        position: relative;
     }
     
 
