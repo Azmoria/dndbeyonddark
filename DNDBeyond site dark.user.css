@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.52
+@version      1.2.53
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -1928,7 +1928,8 @@ div#site{
         box-shadow: none !important;
     }
     
-    .ct-beyond20-roll-button:enabled{
+    .ct-beyond20-roll-button:enabled,
+    .ct-beyond20-display-button:enabled{
         box-shadow: none !important;
     }
     
