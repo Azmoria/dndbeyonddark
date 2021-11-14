@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.53
+@version      1.2.54
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -1034,7 +1034,6 @@ div#site{
 	.collapsible-header,
 	.select2-container .select2-choice,
 	.select2-results,
-    .ddbc-truncated-content--is-hidden .ddbc-truncated-content__content:after,
     body.body-forum .single-column #content .p-forum-a .p-comment-post .u-dropDown span,
     .Basic-Text-Frame.stat-block-finder,
     .stat-block-background,
@@ -1636,7 +1635,7 @@ div#site{
     body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions li:hover a,
     .body-rpgmagicitem .listing-filters .form-field-text-field>div:not(:first-child).grissel-pete-who-even-is-this-guy,
     .ac_results li:hover,
-    .character-button:enabled
+    .spell-manager-group-filter-level .character-button:enabled
     {
         background-color: /*[[backgroundColor]]*/ !important;
         box-shadow: inset 0px 0px 30px 0px /*[[linkColor]]*/ !important;
@@ -1920,17 +1919,21 @@ div#site{
     
 
        
-    .character-button-outline:enabled:hover,
-    .character-button-outline:enabled
+    .spell-manager-group-filter-level .character-button-outline:enabled:hover,
+    .spell-manager-group-filter-level .character-button-outline:enabled
     {
         background: /*[[backgroundColor]]*/ !important;
         border-color: /*[[linkColor]]*/ !important;
         box-shadow: none !important;
     }
+    .p-article-a button.ct-beyond20-roll-button.ct-theme-button.ct-theme-button--filled.ct-theme-button--interactive.ct-button.character-button.character-button-small{
+        background-color: /*[[backgroundColor]]*/ !important;   
+    }
     
-    .ct-beyond20-roll-button:enabled,
-    .ct-beyond20-display-button:enabled{
-        box-shadow: none !important;
+
+    
+    .ddbc-truncated-content--is-hidden .ddbc-truncated-content__content:after {
+        background: linear-gradient(0deg, /*[[backgroundColor]]*/ 6%,hsla(0,0%,100%,0));
     }
     
     
