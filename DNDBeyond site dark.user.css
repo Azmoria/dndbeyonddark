@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.50
+@version      1.2.51
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -1503,7 +1503,7 @@ div#site{
     top: 0px;
     }
         
-   .ddbc-toggle-field--is-enabled .ddbc-toggle-field__nub{
+    .ddbc-toggle-field--is-enabled .ddbc-toggle-field__nub{
         background-color: /*[[linkColor]]*/;
         box-shadow: -12px 0px 20px 1px /*[[backgroundColor]]*/;      
     }
@@ -1592,7 +1592,9 @@ div#site{
     .ac_results li.ac_over>div{
         background: none !important;        
     }
-        
+    
+    
+   
     button.ct-button.character-button.ddbc-button.character-button-block,
     button.ct-button.character-button.ddbc-button.character-button-block:hover,
     .ddbc-dice-roll__dice-value,
@@ -1633,10 +1635,12 @@ div#site{
     body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions li.selected a,
     body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions li:hover a,
     .body-rpgmagicitem .listing-filters .form-field-text-field>div:not(:first-child).grissel-pete-who-even-is-this-guy,
-    .ac_results li:hover
+    .ac_results li:hover,
+    .character-button:enabled
     {
         background-color: /*[[backgroundColor]]*/ !important;
-        box-shadow: inset 0px 0px 25px 0px /*[[linkColor]]*/ !important;
+        box-shadow: inset 0px 0px 30px 0px /*[[linkColor]]*/ !important;
+        border-color: /*[[linkColor]]*/ !important;
     }
     
     li.b-pagination-item a[rel="prev"]:not(.s-active), 
@@ -1915,6 +1919,15 @@ div#site{
     }
     
 
+       
+    .character-button-outline:enabled:hover,
+    .character-button-outline:enabled
+    {
+        background: /*[[backgroundColor]]*/ !important;
+        border-color: /*[[linkColor]]*/ !important;
+        box-shadow: none !important;
+    }
+     
    
     
     
