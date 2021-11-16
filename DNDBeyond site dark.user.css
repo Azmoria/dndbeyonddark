@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.54
+@version      1.2.55
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -1549,7 +1549,7 @@ div#site{
     .site .character-button-medium:hover, 
     .site .character-button-modal-cancel:hover, 
     .site .character-button-modal:hover, 
-    .site .character-button-outline:hover, 
+    .site .character-button-outline:hover,  
     .site .character-button-oversized:hover, 
     .site .character-button-small:hover, 
     .site .character-button:hover,
@@ -1569,7 +1569,6 @@ div#site{
     .site .character-button-oversized:disabled, 
     .site .character-button-small:disabled, 
     .site .character-button:disabled,
-    .site .ct-button.ct-theme-button--filled:focus,
     .site .character-button-block-large:disabled:hover, 
     .site .character-button-block-oversized:disabled:hover,
     .site .character-button-block-small:disabled:hover,
@@ -1622,7 +1621,6 @@ div#site{
     .site .character-button-small:enabled:hover, 
     .site .character-button:enabled:hover,
     span.notification-dismiss,
-    .site .ct-button.ct-theme-button--filled:enabled:focus,
     .add-combatant-modal__controls-button+.add-combatant-modal__controls-button:enabled,
     .b-pagination-b li.b-pagination-item>a:hover, 
     .b-pagination-b li.b-pagination-item a:visited:hover,
