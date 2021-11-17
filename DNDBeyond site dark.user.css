@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.56
+@version      1.2.57
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -1917,14 +1917,23 @@ div#site{
         background: transparent !important;  
     }
     
+     div.t-submit-hb-content-modal .ddb-modal-header:after {
+        content: '\A\26A0  Warning once you submit this homebrew: \26A0\A\A• No further edits will be possible\A• You cannot unpublish it\A• You can create new versions but all prior versions remain published';
+        white-space: pre-wrap;  
+        position: relative;
+        display: block;
+        font-size: 11pt;
+        text-align:center;
+        color: #F00;
+        max-width: 500px;
+    }
+    
     /*fix for unable to change race if currently selected one doesn't have traits set.*/
      .race-detail-aside {
         z-index: 10;
         position: relative;
     }
-    
-
-       
+          
     .spell-manager-group-filter-level .character-button-outline:enabled:hover,
     .spell-manager-group-filter-level .character-button-outline:enabled
     {
@@ -1941,7 +1950,7 @@ div#site{
     .ddbc-truncated-content--is-hidden .ddbc-truncated-content__content:after {
         background: linear-gradient(0deg, /*[[backgroundColor]]*/ 6%,hsla(0,0%,100%,0));
     }
-    
+      
     
     @media screen and (max-width: 767px){
         body.body-forum.responsive-enabled .container .p-forum-a li.forum-announcement .col-status {
