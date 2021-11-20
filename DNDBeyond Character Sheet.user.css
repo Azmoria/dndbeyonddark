@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.48
+@version      1.3.49
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -1101,9 +1101,15 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-editor-box input,
     .ct-editor-box div.ddbc-checkbox__input,
     .ct-editor-box .ddbc-select,
-    .ddbc-number-bar__option
+    .ddbc-number-bar__option    
     {
         border: solid 1px /*[[highlightColor]]*/ !important;
+    }
+    
+    .ddbc-combat-attack--crit .ddbc-combat-attack__damage .integrated-dice__container,
+    .ct-spells-spell--crit .ct-spells-spell__damage .integrated-dice__container{
+        font-weight: bold;
+        border-color: /*[[highlightColor]]*/
     }
 
     /*Fills and Strokes*/
