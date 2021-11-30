@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.58
+@version      1.2.59
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -455,7 +455,8 @@ div#site{
     .ac_odd,
     .ac_even,
     .p-article-a .p-article-interact,
-    .ddb-campaigns-simple-list-item
+    .ddb-campaigns-simple-list-item,
+    .p-forum-a.forum-thread-edit div.forum-selection
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
@@ -670,7 +671,8 @@ div#site{
     .ddb-campaigns-header-secondary-text,
     .ddb-campaigns-body-text, 
     .ddb-campaigns-body-text+.empty,
-    .ddb-campaigns-simple-list-item-content-primary
+    .ddb-campaigns-simple-list-item-content-primary,
+    body .ui-dialog .ui-dialog-content .ajax-jump .form-controls label
     {
 		color: /*[[fontColor]]*/
 		!important;
