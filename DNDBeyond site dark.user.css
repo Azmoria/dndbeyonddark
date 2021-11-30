@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.59
+@version      1.2.60
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -1779,6 +1779,19 @@ div#site{
         margin-right: 4px;
         margin-left:10px;
        
+    }
+    
+    .ddb-collapsible__icon{
+        mask-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 1792 1792"%3E%3Cpath d="M1683 808l-742 741q-19 19-45 19t-45-19l-742-741q-19-19-19-45.5t19-45.5l166-165q19-19 45-19t45 19l531 531 531-531q19-19 45-19t45 19l166 165q19 19 19 45.5t-19 45.5z" fill="%23000"/%3E%3C/svg%3E');
+        -webkit-mask-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 1792 1792"%3E%3Cpath d="M1683 808l-742 741q-19 19-45 19t-45-19l-742-741q-19-19-19-45.5t19-45.5l166-165q19-19 45-19t45 19l531 531 531-531q19-19 45-19t45 19l166 165q19 19 19 45.5t-19 45.5z" fill="%23000"/%3E%3C/svg%3E');
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        background: /*[[linkColor]]*/;
+        content: '';
+        padding: 3px 10px;
+        margin-right: 4px;
+        margin-left:10px;
+  
     }
 
     .top-table-page a,
