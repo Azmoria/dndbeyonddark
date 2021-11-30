@@ -10,7 +10,7 @@ You can get Stylus here:
 <a href="https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?hl=en">For Chrome</a><br>
 <a href="https://addons.mozilla.org/en-CA/firefox/addon/styl-us/">For Firefox</a>  <i>**Note I do not play using firefox - testing will be slow. Please report any issues you find and I will attempt to fix them.</i>
 
-I recommend setting the popup width for stylus to at least 500 pixels. You can find this under options when clicking on the stylus extension.
+<i>I recommend setting the popup width for stylus to at least 500 pixels. You can find this under options when clicking on the stylus extension.</i>
 
 Once you have Stylus installed click the links below to install the themes. I suggest opening them in a new tab clicking install then closing the tab.
 
