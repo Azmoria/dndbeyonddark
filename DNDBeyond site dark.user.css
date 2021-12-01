@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.62
+@version      1.2.63
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -458,7 +458,8 @@ div#site{
     .ddb-campaigns-simple-list-item,
     .p-forum-a.forum-thread-edit div.forum-selection,
     .comment .p-comment-content table tbody tr:nth-child(odd),
-    .comment .p-comment-content table tbody tr:nth-child(even)
+    .comment .p-comment-content table tbody tr:nth-child(even),
+    .p-forum-a .multi-quote-container
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
@@ -809,7 +810,8 @@ div#site{
     .currency-list-item-row,
     .ddbeb-button,
     .post-highlighted-articles-item,
-    body.body-forum .single-column #content .p-forum-a table:not(.mceLayout):not(.mceToolbar):not(.mceListBox):not(.mceSplitButton):not(.listing) tr td
+    body.body-forum .single-column #content .p-forum-a table:not(.mceLayout):not(.mceToolbar):not(.mceListBox):not(.mceSplitButton):not(.listing) tr td,
+    .p-forum-a .multi-quote-container
     {
 		border-width: /*[[borderWidth]]*/
 		!important;
