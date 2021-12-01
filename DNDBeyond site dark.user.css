@@ -2,11 +2,13 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.65
+@version      1.2.66
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
-@var color backgroundColor "Background Color" #000
+@var color backgroundColor "Background Color" #161616
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
+@var color forumSecondaryColor "Forum Secondary Color" #2f2f2f
+@var color forumTertiaryColor "Forum Tertiary Color" #4f4f4f
 @var color fontColor "Font Color" #c0c0c0
 @var color linkColor "Link Color" #88bcd6
 @var color borderColor "Border Color" #fff
@@ -49,7 +51,7 @@ none EOT;
 custom "Custom iFrame filter" <<<EOT
 var(--custom-frame-filter) EOT;
 }
-@var text customFrameFilter "Custom Frame Filter" "invert(75%) sepia(100%) hue-rotate(160deg) saturate(150%)"
+@var text customFrameFilter "Custom Frame Filter" "invert(90%) sepia(0%) hue-rotate(180deg) saturate(150%)"
 ==/UserStyle==*/
 /* Alternative Color for font to match DND Beyond Green #47D18C */
 @-moz-document url-prefix("https://www.dndbeyond.com/sources"),
@@ -117,26 +119,14 @@ div#site{
 	.sidenav-next-nav,
 	.sidenav-prev-page,
 	.quick-menu-tier-1,
-	#site .forum-row td,
-	#site .forum-thread-row td,
-	#site .forum-row .status-icon,
-	.p-forum-a .announcements .forum-thread-row,
-	#site .forum-row .status-icon,
-	#site .forum-thread-row .status-icon,
 	.p-comments-b .p-comment-wrapper,
 	.body-forum .comment-preview li .p-comment-wrapper,
 	.body-forum-search .p-comments-a .p-comment-wrapper,
-	body.body-forum .single-column #content .p-forum-a .p-comment-post p,
 	body.body-user .single-column #content .p-forum-a .p-comment-post p,
 	body.body-devtracker .single-column #content .p-forum-a .p-comment-post p,
 	.comment .p-comment-notes .p-comment-edit-notes,
 	.comment .p-comment-notes .p-comment-edited,
-	.comment .p-comment-user-background,
-	.comment .source-quote .quote-source,
 	.comment .source-quote,
-	body.body-forum .single-column #content .p-forum-a table:not(.mceLayout):not(.mceToolbar):not(.mceListBox):not(.mceSplitButton) tr td,
-	body.body-user .single-column #content .p-forum-a table:not(.mceLayout):not(.mceToolbar):not(.mceListBox):not(.mceSplitButton) tr td,
-	body.body-devtracker .single-column #content .p-forum-a table:not(.mceLayout):not(.mceToolbar):not(.mceListBox):not(.mceSplitButton) tr td,
 	.p-comments-b .p-comment-user .p-comment-stats .p-comment-statitem .postbit-item,
 	.body-forum .comment-preview li .p-comment-user .p-comment-stats .p-comment-statitem .postbit-item,
 	.body-forum-search .p-comments-a .p-comment-user .p-comment-stats .p-comment-statitem .postbit-item,
@@ -282,12 +272,6 @@ div#site{
     .p-forum-a .statistics .statistics-body,
     .listing-forum-search .statistics .statistics-body,
     body.hide-ads footer#footer, body.disable-ads footer#footer,
-    .u-dropDown .u-dropDownMenu li>a:hover,
-    .u-dropDown .u-dropDownMenu li>a,
-    .u-dropDown .u-dropDownMenu li>a span,
-    .u-dropDown .u-dropDownMenu li,
-    .u-dropDown .u-dropDownMenu,
-    body.body-forum .single-column #content .p-forum-a .p-comment-post .u-dropDown span,
     .ct-spell-detail__tag,
     .class-spell-list-header,
     .p-forum-poll .b-poll-a,
@@ -306,7 +290,10 @@ div#site{
     .custom-background-editor,
     .notification.notification-success.notification-visible,
     .ddbeb-modal__content,
-    .mce-container, .mce-container *, .mce-widget, .mce-widget *, .mce-reset,
+    .mce-container, 
+    .mce-widget, 
+    .mce-widget *, 
+    .mce-reset,
     .encounter-builder-sidebar,
     .encounter-builder-sidebar__header,
     .encounter-builder-sidebar__summary,
@@ -459,13 +446,53 @@ div#site{
     .p-forum-a.forum-thread-edit div.forum-selection,
     .comment .p-comment-content table tbody tr:nth-child(odd),
     .comment .p-comment-content table tbody tr:nth-child(even),
-    .p-forum-a .multi-quote-container
+    .p-forum-a .multi-quote-container,
+    .listing-filters .special-select-item
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
 		color: /*[[fontColor]]*/
 		!important;
 	}
+    
+    
+    #site .forum-row td,
+	#site .forum-thread-row td,
+    .comment .p-comment-user-background,
+    body.body-forum .single-column #content .u-dropDown .u-dropDownMenu li>a,
+    body.body-forum .single-column #content .u-dropDown .u-dropDownMenu,
+    .comment .s ource-quote,
+    body.body-forum .single-column #content .p-forum-a table:not(.mceLayout):not(.mceToolbar):not(.mceListBox):not(.mceSplitButton) tr td:not(.col-status),
+    #site .forum-row .status-icon,
+	#site .forum-thread-row  .status-icon,
+    .p-forum-a .announcements .forum-thread-row,
+    .comment .source-quote,
+    .mce-panel,
+    body.body-privatemessage .single-column #content .u-dropDown .u-dropDownMenu li>a,
+    body.body-privatemessage .single-column #content .u-dropDown .u-dropDownMenu{
+        background-color: /*[[forumSecondaryColor]]*/ !important;
+    } 
+    
+    .b-table-a td.col-status{
+        box-shadow: none;   
+    }
+    
+    .p-comments-b .p-comment-user,
+    .p-comments-b .p-comment-user span,
+    .p-comment-statitem.forum-title{
+        text-shadow:
+      	 0px 0px  /*[[forumSecondaryColor]]*/,
+     	-1px -1px 0  /*[[forumSecondaryColor]]*/,  
+     	 1px -1px 0  /*[[forumSecondaryColor]]*/,
+     	 -1px 1px 0  /*[[forumSecondaryColor]]*/,
+      	 1px 1px 0  /*[[forumSecondaryColor]]*/ !important;
+    }
+    
+    .comment .source-quote .quote-source,
+    .comment .forum-post-header,
+    .body-privatemessage-details .p-comment-index{
+        background-color: /*[[forumTertiaryColor]]*/ !important;
+    }
     
 	.listing-card__body,
 	.ddb-top-result-footer .button-rule,
@@ -489,7 +516,8 @@ div#site{
     .site .character-button-oversized, 
     .site .character-button-small,
     .character-card__overlay,
-    .character-card__overlay-message{
+    .character-card__overlay-message,
+    .character-builder-step_by_step:before{
 		background-color: /*[[transparencyBackgroundColor]]*/ !important;
 	}
 
@@ -609,7 +637,7 @@ div#site{
 	.ddb-top-result-header-secondary-text,
 	.ddb-statblock-ability-scores .score,
 	.ddbc-item-name--rarity-common,
-	.p-comments span,
+	.p-comments span:not([style^="color:"]),
     body.body-forum .single-column #content .p-forum-a footer.statistics .statistics-body .info .item, 
     body.body-forum .single-column #content .p-forum-a footer.statistics .statistics-body .count .item,
     .RPGMonster-listing .more-info,
@@ -675,13 +703,50 @@ div#site{
     .ddb-campaigns-body-text, 
     .ddb-campaigns-body-text+.empty,
     .ddb-campaigns-simple-list-item-content-primary,
-    body .ui-dialog .ui-dialog-content .ajax-jump .form-controls label
+    body .ui-dialog .ui-dialog-content .ajax-jump .form-controls label,
+    body.body-forum .single-column #content .p-forum-a .p-comment-post p:not([style^="color"]),
+    .comment .source-quote .quote-source,
+   .forum-row .col-count,
+    .mce-menu-item .mce-ico, 
+    .mce-menu-item .mce-text,
+    .mce-container, 
+    .mce-container *, 
+    .mce-widget, 
+    .mce-widget *, 
+    .mce-reset,
+    .p-comments span[style^="color: rgba(0, 0, 0, 1)"],
+    body.body-forum .single-column #content .p-forum-a .p-comment-post p[style^="color: rgba(0, 0, 0, 1)"],
+    .p-comments span[style^="color: rgba(51, 51, 51, 1)"],
+    body.body-forum .single-column #content .p-forum-a .p-comment-post p[style^="color: rgba(51, 51, 51, 1)"],
+    .p-comments span[style^="color: rgba(128, 128, 128, 1)"],
+    body.body-forum .single-column #content .p-forum-a .p-comment-post p[style^="color: rgba(128, 128, 128, 1)"]
     {
-		color: /*[[fontColor]]*/
-		!important;
+		color: /*[[fontColor]]*/ !important;
 	}
     
-   
+    .p-comments span[style^="color: rgba(51, 51, 0, 1)"],
+    body.body-forum .single-column #content .p-forum-a .p-comment-post p[style^="color: rgba(51, 51, 0, 1)"]
+    {
+        color: rgba(100, 100, 0, 1) !important;
+        
+    }
+    
+    .p-comments span[style^="color: rgba(0, 51, 0, 1)"],
+    body.body-forum .single-column #content .p-forum-a .p-comment-post p[style^="color: color: rgba(0, 51, 0, 1)"]
+    {
+        color: rgba(0, 100, 0, 1) !important;
+        
+    }
+    
+    .p-comments span[style^="color: rgba(0, 51, 102, 1)"],
+    body.body-forum .single-column #content .p-forum-a .p-comment-post p[style^="color: rgba(0, 51, 102, 1)"]
+    {
+        color: rgba(0, 101, 152, 1) !important;
+        
+    }
+    
+    
+    
 
 
 	.thread-prefix span.thread-prefix {
@@ -691,7 +756,7 @@ div#site{
 		padding: 0px;
 	}
 
-	a,
+	a:not([style^=color]),
 	a:visited,
 	a > span,
 	span[role=button],
@@ -812,7 +877,8 @@ div#site{
     .post-highlighted-articles-item,
     .post-content tr td,
     .forum-post-body tr td,
-    .p-forum-a .multi-quote-container
+    .p-forum-a .multi-quote-container,
+    .p-forum-a .announcements .forum-thread-row, .listing-forum-search .announcements .forum-thread-row
     {
 		border-width: /*[[borderWidth]]*/
 		!important;
@@ -1016,6 +1082,8 @@ div#site{
     .mce-edit-area iframe{
         filter: /*[[iFrameFilter]]*/
     }
+    
+    
 	.p-article-a .compendium-toc-blockquote > a,
 	.p-article-a .compendium-toc-blockquote > a:hover,
 	.ddb-campaigns-list-item-body-sharing-box,
@@ -1143,15 +1211,20 @@ div#site{
 	.collapsible-body {
 		border: none !important;
 	}
-    .p-comments .p-comment-actions .p-comment-actionsAdmin>.label:after{
-        border-top-color: /*[[fontColor]]*/
+    .p-comments .p-comment-actions .p-comment-actionsAdmin>.label:after,
+    .u-dropDown>a>span:after,
+    .mce-caret{
+        border-top-color: /*[[fontColor]]*/ !important;
     }
     .fullscreen-modal-footer{
-        border-top-color: /*[[linkColor]]*/
+        border-top-color: /*[[linkColor]]*/;
     }
     .class-manager-tabs .ddbc-tab-list__nav-item--is-active,
     .manage-race-tabs .ddbc-tab-list__nav-item--is-active{
         border-bottom-color: /*[[linkColor]]*/
+    }
+    .u-dropDown .u-dropDownMenu:before{
+        border-bottom: 6px solid /*[[forumSecondaryColor]]*/ !important;   
     }
     
     .character-screen-details{
@@ -1624,7 +1697,10 @@ div#site{
     body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions li:hover a,
     .body-rpgmagicitem .listing-filters .form-field-text-field>div:not(:first-child).grissel-pete-who-even-is-this-guy,
     .ac_results li:hover,
-    .spell-manager-group-filter-level .character-button:enabled
+    .spell-manager-group-filter-level .character-button:enabled,
+    body.body-forum .single-column #content .u-dropDown .u-dropDownMenu li>a:hover,
+    .mce-menu-item-normal.mce-active,
+    body.body-privatemessage .single-column #content .u-dropDown .u-dropDownMenu li>a:hover   
     {
         background-color: /*[[backgroundColor]]*/ !important;
         box-shadow: inset 0px 0px 30px 0px /*[[linkColor]]*/ !important;
@@ -1901,7 +1977,9 @@ div#site{
     
     
     
-    .encounter-row__name.is-missing-name{
+    .encounter-row__name.is-missing-name,
+    .listing-filters .special-select-item.t::after,
+    .listing-filters .special-select-item.f::after{
         opacity: 1;   
     }
     
@@ -2005,7 +2083,7 @@ div#site{
         body.body-forum.responsive-enabled .container .comment-preview .p-comment-user ul.p-comment-stats li:last-of-type::before, 
         body.body-devtracker.responsive-enabled .container .listing-container .p-comment-user ul.p-comment-stats li:last-of-type::before, 
         body.body-devtracker.responsive-enabled .container .comment-preview .p-comment-user ul.p-comment-stats li:last-of-type::before{
-            border-top-color: /*[[borderColor]]*/;
+            border-top-color: /*[[borderColor]]*/ !important;
         }
         
         body.body-forum.responsive-enabled .container .listing-container .p-comment-user ul.p-comment-stats.open li:last-of-type::after, 
@@ -2136,7 +2214,7 @@ div#site{
       	 1px 1px 0 #000 !important;
 		
 	}
-	.post-excerpt__description{
+	li:first-of-type .post-excerpt__description{
 		background-color: /*[[transparencyBackgroundColor]]*/ !important;
 		border-radius: 5px;
 		padding: 5px
