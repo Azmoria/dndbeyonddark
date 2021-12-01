@@ -2,12 +2,13 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.66
+@version      1.2.67
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #161616
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
-@var color forumSecondaryColor "Forum Secondary Color" #2f2f2f
+@var color forumPostColor "Forum Post Color" #333333aa
+@var color forumSecondaryColor "Forum Secondary Color" #222
 @var color forumTertiaryColor "Forum Tertiary Color" #4f4f4f
 @var color fontColor "Font Color" #c0c0c0
 @var color linkColor "Link Color" #88bcd6
@@ -44,15 +45,17 @@ var(--custom-icon-filter) EOT;
 }
 @var text iconFilter "Custom Icon css filter" "invert(75%) sepia(100%) hue-rotate(160deg) saturate(150%)"
 @advanced dropdown iFrameFilter "iFrame filters"{
-    dark "Dark iFrames" <<<EOT
+custom "Custom iFrame filter" <<<EOT
+var(--custom-frame-filter) EOT;
+dark "Dark iFrames" <<<EOT
 invert(100%)  EOT;
 light "Light iFrames" <<<EOT
 none EOT;
-custom "Custom iFrame filter" <<<EOT
-var(--custom-frame-filter) EOT;
+
 }
 @var text customFrameFilter "Custom Frame Filter" "invert(90%) sepia(0%) hue-rotate(180deg) saturate(150%)"
 ==/UserStyle==*/
+/*Thanks to Hyrkali for the example code and push to work on the forums themeing*/
 /* Alternative Color for font to match DND Beyond Green #47D18C */
 @-moz-document url-prefix("https://www.dndbeyond.com/sources"),
 url-prefix("https://www.dndbeyond.com/forums"),
@@ -119,13 +122,11 @@ div#site{
 	.sidenav-next-nav,
 	.sidenav-prev-page,
 	.quick-menu-tier-1,
-	.p-comments-b .p-comment-wrapper,
 	.body-forum .comment-preview li .p-comment-wrapper,
 	.body-forum-search .p-comments-a .p-comment-wrapper,
 	body.body-user .single-column #content .p-forum-a .p-comment-post p,
 	body.body-devtracker .single-column #content .p-forum-a .p-comment-post p,
 	.comment .p-comment-notes .p-comment-edit-notes,
-	.comment .p-comment-notes .p-comment-edited,
 	.comment .source-quote,
 	.p-comments-b .p-comment-user .p-comment-stats .p-comment-statitem .postbit-item,
 	.body-forum .comment-preview li .p-comment-user .p-comment-stats .p-comment-statitem .postbit-item,
@@ -290,10 +291,6 @@ div#site{
     .custom-background-editor,
     .notification.notification-success.notification-visible,
     .ddbeb-modal__content,
-    .mce-container, 
-    .mce-widget, 
-    .mce-widget *, 
-    .mce-reset,
     .encounter-builder-sidebar,
     .encounter-builder-sidebar__header,
     .encounter-builder-sidebar__summary,
@@ -401,7 +398,6 @@ div#site{
     .profile-field-group,
     .ddb-account-tab-body .listing-container-table table thead th,
     .ddb-account-tab-body .listing-container-table table tbody tr td,
-    .b-pagination-b li.b-pagination-item>a, 
     .b-pagination-b li.b-pagination-item a:visited,
     .p-notifications-a .listing-container .listing-body .user-notification-listing>.b-list-item .notification-content-container,
     .p-notifications-a .listing-container .listing-body .user-notification-listing>.b-list-item .notification-content-container a,
@@ -454,7 +450,7 @@ div#site{
 		color: /*[[fontColor]]*/
 		!important;
 	}
-    
+   
     
     #site .forum-row td,
 	#site .forum-thread-row td,
@@ -463,13 +459,15 @@ div#site{
     body.body-forum .single-column #content .u-dropDown .u-dropDownMenu,
     .comment .s ource-quote,
     body.body-forum .single-column #content .p-forum-a table:not(.mceLayout):not(.mceToolbar):not(.mceListBox):not(.mceSplitButton) tr td:not(.col-status),
-    #site .forum-row .status-icon,
-	#site .forum-thread-row  .status-icon,
     .p-forum-a .announcements .forum-thread-row,
     .comment .source-quote,
     .mce-panel,
     body.body-privatemessage .single-column #content .u-dropDown .u-dropDownMenu li>a,
-    body.body-privatemessage .single-column #content .u-dropDown .u-dropDownMenu{
+    body.body-privatemessage .single-column #content .u-dropDown .u-dropDownMenu,
+    .mce-container, 
+    .mce-widget, 
+    .mce-widget *, 
+    .mce-reset{
         background-color: /*[[forumSecondaryColor]]*/ !important;
     } 
     
@@ -490,10 +488,14 @@ div#site{
     
     .comment .source-quote .quote-source,
     .comment .forum-post-header,
-    .body-privatemessage-details .p-comment-index{
+    .body-privatemessage-details .p-comment-index,
+    .body-rpgrace-details .p-comment-index{
         background-color: /*[[forumTertiaryColor]]*/ !important;
     }
     
+    .p-comments-b .p-comment-wrapper {
+       background: /*[[forumPostColor]]*/ !important;
+    }
 	.listing-card__body,
 	.ddb-top-result-footer .button-rule,
 	.ddb-top-result-footer .button-wprop,
@@ -534,7 +536,10 @@ div#site{
 	}
     
     a.character-button-block.builder-button,
-    .whats-new-button{
+    .whats-new-button,
+    #site .forum-row .status-icon,
+	#site .forum-thread-row  .status-icon,
+    .b-pagination-b li.b-pagination-item a{
         background: none !important;
     }
 
@@ -706,7 +711,9 @@ div#site{
     body .ui-dialog .ui-dialog-content .ajax-jump .form-controls label,
     body.body-forum .single-column #content .p-forum-a .p-comment-post p:not([style^="color"]),
     .comment .source-quote .quote-source,
-   .forum-row .col-count,
+    .forum-row .col-count,
+    .forum-thread-row .col-count,
+    .forum-thread-row .col-count a,
     .mce-menu-item .mce-ico, 
     .mce-menu-item .mce-text,
     .mce-container, 
@@ -719,7 +726,10 @@ div#site{
     .p-comments span[style^="color: rgba(51, 51, 51, 1)"],
     body.body-forum .single-column #content .p-forum-a .p-comment-post p[style^="color: rgba(51, 51, 51, 1)"],
     .p-comments span[style^="color: rgba(128, 128, 128, 1)"],
-    body.body-forum .single-column #content .p-forum-a .p-comment-post p[style^="color: rgba(128, 128, 128, 1)"]
+    body.body-forum .single-column #content .p-forum-a .p-comment-post p[style^="color: rgba(128, 128, 128, 1)"],
+    .b-pagination-b li.b-pagination-item>a,
+    .comment .p-comment-notes .p-comment-edited,
+    .homebrew-comments #reply .h2 h2
     {
 		color: /*[[fontColor]]*/ !important;
 	}
@@ -744,7 +754,12 @@ div#site{
         color: rgba(0, 101, 152, 1) !important;
         
     }
-    
+    .p-comments span[style^="color: rgba(0, 0, 255, 1)"],
+    body.body-forum .single-column #content .p-forum-a .p-comment-post p[style^="color: rgba(0, 0, 255, 1)"],
+    .p-comments span[style^="color:blue"],
+    body.body-forum .single-column #content .p-forum-a .p-comment-post p[style^="color:blue)"]{
+        color: rgba(50, 80, 255, 1) !important;
+    }
     
     
 
@@ -878,7 +893,8 @@ div#site{
     .post-content tr td,
     .forum-post-body tr td,
     .p-forum-a .multi-quote-container,
-    .p-forum-a .announcements .forum-thread-row, .listing-forum-search .announcements .forum-thread-row
+    .p-forum-a .announcements .forum-thread-row, .listing-forum-search .announcements .forum-thread-row,
+    .Flowchart-Block-Linked::before
     {
 		border-width: /*[[borderWidth]]*/
 		!important;
@@ -889,6 +905,11 @@ div#site{
         outline: none !important;
 	}
 
+    .Flowchart-Block-Linked::before{
+        height:50px   ;
+        margin-top: -60px;
+    }
+    
     .dice-set__info__title{
         font-size: 12pt;
     }
@@ -1077,6 +1098,16 @@ div#site{
 		filter: /*[[filter]]*/;
 	}
     
+    .input-checkbox__icon:not(:checked)
+    {
+        fill: /*[[borderColor]]*/ !important;
+    }
+    
+    .input-checkbox__input:checked~.input-checkbox__icon .svg-border,
+    .input-checkbox__input:hover:checked~.input-checkbox__icon .svg-border,
+    .input-checkbox__input:hover~.input-checkbox__icon .svg-border{
+        fill: /*[[linkColor]]*/ !important;
+    }
     
 	#field-body-wysiwyg_ifr,
     .mce-edit-area iframe{
@@ -1089,7 +1120,7 @@ div#site{
 	.ddb-campaigns-list-item-body-sharing-box,
 	#content-management-link {
 
-		background-color: /*[[backgroundColor]]*/;
+		background-color: /*[[backgroundColor]]*/; 
 	}
 
 	.listing .info:nth-of-type(8n+1),
