@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.64
+@version      1.2.65
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #000
@@ -1245,41 +1245,10 @@ div#site{
 
     
     /* =========================== */
-/*            Vanity User Titles                     */
+/*            Vanity User Titles       (Dndbeyond staff - I'll try to update this once in awhile to capture any of their changes)              */
 /* =========================== */
 
-    
-    /*Azmoria*/
-    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="100666635"] .p-comment-user-background {
-    background-image: url(https://github.com/Azmoria/dndbeyonddark/blob/master/Images/DNDBeyond%20Dark/azmoria-forum-profile-bg.png?raw=true) !important;
-    background-repeat: no-repeat !important;
-    background-position: top left !important;
-    background-size: 100% auto !important;
-    opacity: 0.4;
-    }
-    
-     body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="100666635"] li.forum-title:after {
-        content: '\1F432';
-        font-weight: normal;
-        filter: hue-rotate(195deg) saturate(1.2);
-        font-size: 20pt;
-        line-height: 9pt;
-       /* background-image: url(https://media.dndbeyond.com/mega-menu/5188e9cd133362e349708cd3c859a6d2.gif);
-        clear:both;
-        height:20px;
-        width:20px;
-        display:inline-block;
-        background-size: 100%;*/
-        
-    }
-    
    
-    
-    
-    
-    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="100666635"] li.forum-title {
-    display: block;      
-    }
     
     
     
