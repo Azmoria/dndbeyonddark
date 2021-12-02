@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.70
+@version      1.2.71
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -502,8 +502,15 @@ div#site{
     .p-comments-b .p-comment-wrapper,
     body.body-forum .single-column #content .p-forum-a .p-comment-post .p-comment-user-background,
     body.body-forum .single-column #content .p-forum-a .p-comment-sig,
-    body.body-forum .single-column #content .p-forum-a .listing-container .p-comment-wrapper .p-comment-footer{
-        border-color: /*[[borderColor]]*/;   
+    body.body-forum .single-column #content .p-forum-a .listing-container .p-comment-wrapper .p-comment-footer,
+    #site .forum-row td, 
+    #site .forum-thread-row td,
+    #site .forum-row td:first-of-type, 
+    #site .forum-thread-row td:first-of-type,
+    #site .forum-row td:last-of-type,
+    #site .forum-thread-row td:last-of-type,
+    .p-forum-a .announcements .col-status{
+        border-color: /*[[borderColor]]*/ !important;   
     }
     
     .p-comments-b .p-comment-user-background{
@@ -756,7 +763,8 @@ div#site{
     .b-pagination-b li.b-pagination-item>a,
     .comment .p-comment-notes .p-comment-edited,
     .homebrew-comments #reply .h2 h2,
-    .option-count
+    .option-count,
+    .thread-author
     {
 		color: /*[[fontColor]]*/ !important;
 	}
