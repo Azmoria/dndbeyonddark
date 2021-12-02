@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.74
+@version      1.2.75
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -1819,6 +1819,15 @@ div#site{
     {
         background-color: /*[[backgroundColor]]*/ !important;
         box-shadow: none !important;
+    }
+    
+    .b-breadcrumb-a{
+        box-shadow: none;
+    }
+    
+    .body-forum .b-breadcrumb-a{
+        background: /*[[forumSecondaryColor]]*/ !important;
+        box-shadow: 0 0 2px /*[[fontColor]]*/;
     }
     
     
