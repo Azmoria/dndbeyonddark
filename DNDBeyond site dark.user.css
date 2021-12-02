@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.75
+@version      1.2.76
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -762,8 +762,7 @@ div#site{
      body.body-forum .single-column #content .p-forum-a .p-comment-post p a[style^="color: rgba(128, 128, 128, 1)"],
     .b-pagination-b li.b-pagination-item>a,
     .comment .p-comment-notes .p-comment-edited,
-    .homebrew-comments #reply .h2 h2,
-    .option-count,
+    .homebrew-comments #reply .h2 h2
     .thread-author,
     body.body-forum .single-column #content .p-forum-a table:not(.mceLayout):not(.mceToolbar):not(.mceListBox):not(.mceSplitButton) tr th, 
     body.body-user .single-column #content .p-forum-a table:not(.mceLayout):not(.mceToolbar):not(.mceListBox):not(.mceSplitButton) tr th, 
@@ -1347,6 +1346,10 @@ div#site{
     #notifications li{
         background-color: #222 !important;
 
+    }
+    
+    .option-count{
+        color: #fff !important;
     }
 
 
@@ -2349,7 +2352,10 @@ div#site{
         background-image: url(https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Dark%20Images/strip-subscription-benefits.png?raw=true);
     }
     
- 
+    .user-interactions .option-count{
+        background-color: #820D0D;   
+        color: #fff !important;
+    }
 
       @media screen and (max-width: 767px){
  
