@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.77
+@version      1.2.78
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -468,7 +468,9 @@ div#site{
     .comment .source-quote,
     body.body-privatemessage .single-column #content .u-dropDown .u-dropDownMenu li>a,
     body.body-privatemessage .single-column #content .u-dropDown .u-dropDownMenu,
-    .comment .forum-post-body-content .spoiler{
+    .comment .forum-post-body-content .spoiler,
+    body.body-forum blockquote
+    {
         background-color: /*[[forumSecondaryColor]]*/ !important;
     } 
     
@@ -509,7 +511,8 @@ div#site{
     #site .forum-thread-row td:first-of-type,
     #site .forum-row td:last-of-type,
     #site .forum-thread-row td:last-of-type,
-    .p-forum-a .announcements .col-status{
+    .p-forum-a .announcements .col-status,
+    body.body-forum .comment .p-comment-content blockquote{
         border-color: /*[[borderColor]]*/ !important;   
     }
     
