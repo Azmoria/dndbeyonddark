@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.80
+@version      1.2.81
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -589,7 +589,8 @@ div#site{
     }
 
     
-    .user-interactions .option-count{
+    .user-interactions .option-count,
+    .dice-roll-tampered{
         background-color: #820D0D;   
     }
 
@@ -781,10 +782,9 @@ div#site{
         
     }
     
-    body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color: color: rgba(0, 51, 0, 1)"]
+    body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(0, 51, 0, 1)"]
     {
-        color: rgba(0, 100, 0, 1) !important;
-        
+        color: rgb(24, 80, 24) !important;         
     }
     
     body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(0, 51, 102, 1)"]
@@ -799,19 +799,32 @@ div#site{
     }
     
     body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(255, 0, 255, 1)"]
-
     {
         color: rgba(255, 0, 255, .66) !important;  
     }
-    
-    
+      
     body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(16, 16, 255, 1)"]
     {
         color: rgba(73, 73, 255, 1) !important;  
     }
+     body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(0, 0, 128, 1)"]
+    {
+        color: rgb(43, 43, 248) !important;  
+    }
+     body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(255, 0, 0, 1)"]
+    {
+        color: rgb(162, 28, 28) !important;  
+    }
+     body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(128, 0, 0, 1)"]
+    {
+        color: rgb(138, 29, 29) !important;  
+    }
+    body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(51, 51, 153, 1)"]
+    {
+        color: rgb(89, 89, 227) !important;  
+    } 
     
-
-	.thread-prefix span.thread-prefix {
+    .thread-prefix span.thread-prefix {
 		background-color: #333;
 	}
 	.select2-container-multi .select2-choices {
@@ -820,7 +833,7 @@ div#site{
 
 	a:not([style^=color]),
 	a:not([style^=color]):visited,
-	a > span,
+	a:not([style^=color]) > span,
 	span[role=button],
 	.forum-row .col-forum .title a:hover,
 	.content-container h3 a,
