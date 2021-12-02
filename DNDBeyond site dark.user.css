@@ -2,15 +2,15 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.67
+@version      1.2.68
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
-@var color backgroundColor "Background Color" #161616
+@var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
-@var color forumPostColor "Forum Post Color" #333333aa
-@var color forumSecondaryColor "Forum Secondary Color" #222
-@var color forumTertiaryColor "Forum Tertiary Color" #4f4f4f
-@var color fontColor "Font Color" #c0c0c0
+@var color forumPostColor "Forum Post Color" #0f0f0fdd
+@var color forumSecondaryColor "Forum Secondary Color" #111d
+@var color forumTertiaryColor "Forum Tertiary Color" #1e1e1edd
+@var color fontColor "Font Color" #ddd
 @var color linkColor "Link Color" #88bcd6
 @var color borderColor "Border Color" #fff
 @advanced dropdown borderStyle "Border Style" {
@@ -281,7 +281,6 @@ div#site{
     .starting-equipment-rule-slots,
     .starting-equipment-rule-slot+.starting-equipment-rule-slot:before,
     .Basic-Text-Frame-2, .Basic-Text-Frame-3,
-    .comment .forum-post-body-content .spoiler,
     .iDQHiI .listing,
     blockquote.paper-background,
     .tooltip,
@@ -443,7 +442,13 @@ div#site{
     .comment .p-comment-content table tbody tr:nth-child(odd),
     .comment .p-comment-content table tbody tr:nth-child(even),
     .p-forum-a .multi-quote-container,
-    .listing-filters .special-select-item
+    .listing-filters .special-select-item,
+     .mce-panel,
+    .mce-container, 
+    .mce-widget, 
+    .mce-widget *, 
+    .mce-reset,
+    .view-cover-art
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
@@ -457,17 +462,13 @@ div#site{
     .comment .p-comment-user-background,
     body.body-forum .single-column #content .u-dropDown .u-dropDownMenu li>a,
     body.body-forum .single-column #content .u-dropDown .u-dropDownMenu,
-    .comment .s ource-quote,
+    .comment .source-quote,
     body.body-forum .single-column #content .p-forum-a table:not(.mceLayout):not(.mceToolbar):not(.mceListBox):not(.mceSplitButton) tr td:not(.col-status),
     .p-forum-a .announcements .forum-thread-row,
     .comment .source-quote,
-    .mce-panel,
     body.body-privatemessage .single-column #content .u-dropDown .u-dropDownMenu li>a,
     body.body-privatemessage .single-column #content .u-dropDown .u-dropDownMenu,
-    .mce-container, 
-    .mce-widget, 
-    .mce-widget *, 
-    .mce-reset{
+    .comment .forum-post-body-content .spoiler{
         background-color: /*[[forumSecondaryColor]]*/ !important;
     } 
     
@@ -491,6 +492,22 @@ div#site{
     .body-privatemessage-details .p-comment-index,
     .body-rpgrace-details .p-comment-index{
         background-color: /*[[forumTertiaryColor]]*/ !important;
+    }
+    
+    body.body-forum .single-column #content .p-forum-a .p-comment-post .p-comment-container{
+        box-shadow: inset 0px 0px 1px /*[[borderColor]]*/ !important;
+    }
+    
+    body.body-forum .single-column #content .p-forum-a .p-comment-post .p-comment-container,
+    .p-comments-b .p-comment-wrapper,
+    body.body-forum .single-column #content .p-forum-a .p-comment-post .p-comment-user-background,
+    body.body-forum .single-column #content .p-forum-a .p-comment-sig,
+    body.body-forum .single-column #content .p-forum-a .listing-container .p-comment-wrapper .p-comment-footer{
+        border-color: /*[[borderColor]]*/;   
+    }
+    
+    .p-comments-b .p-comment-user-background{
+        box-shadow: none;   
     }
     
     .p-comments-b .p-comment-wrapper {
@@ -561,6 +578,10 @@ div#site{
         background: /*[[backgroundColor]]*/
     }
 
+    
+    .user-interactions .option-count{
+        background-color: #820D0D;   
+    }
 
 	.extra-forum-header,
 	.p-forum-a .col-forum .active-viewers,
@@ -723,43 +744,67 @@ div#site{
     .mce-reset,
     .p-comments span[style^="color: rgba(0, 0, 0, 1)"],
     body.body-forum .single-column #content .p-forum-a .p-comment-post p[style^="color: rgba(0, 0, 0, 1)"],
+    body.body-forum .single-column #content .p-forum-a .p-comment-post p b[style^="color: rgba(0, 0, 0, 1)"],
+    body.body-forum .single-column #content .p-forum-a .p-comment-post p a[style^="color: rgba(0, 0, 0, 1)"],
     .p-comments span[style^="color: rgba(51, 51, 51, 1)"],
     body.body-forum .single-column #content .p-forum-a .p-comment-post p[style^="color: rgba(51, 51, 51, 1)"],
+     body.body-forum .single-column #content .p-forum-a .p-comment-post p b[style^="color: rgba(51, 51, 51, 1)"],
+     body.body-forum .single-column #content .p-forum-a .p-comment-post p a[style^="color: rgba(51, 51, 51, 1)"],
     .p-comments span[style^="color: rgba(128, 128, 128, 1)"],
-    body.body-forum .single-column #content .p-forum-a .p-comment-post p[style^="color: rgba(128, 128, 128, 1)"],
+    body.body-forum .single-column #content .p-forum-a .p-comment-post p b[style^="color: rgba(128, 128, 128, 1)"],
+     body.body-forum .single-column #content .p-forum-a .p-comment-post p a[style^="color: rgba(128, 128, 128, 1)"],
     .b-pagination-b li.b-pagination-item>a,
     .comment .p-comment-notes .p-comment-edited,
-    .homebrew-comments #reply .h2 h2
+    .homebrew-comments #reply .h2 h2,
+    .option-count
     {
 		color: /*[[fontColor]]*/ !important;
 	}
     
     .p-comments span[style^="color: rgba(51, 51, 0, 1)"],
-    body.body-forum .single-column #content .p-forum-a .p-comment-post p[style^="color: rgba(51, 51, 0, 1)"]
+    body.body-forum .single-column #content .p-forum-a .p-comment-post p[style^="color: rgba(51, 51, 0, 1)"],
+    body.body-forum .single-column #content .p-forum-a .p-comment-post p b[style^="color: rgba(51, 51, 0, 1)"],
+    body.body-forum .single-column #content .p-forum-a .p-comment-post p a[style^="color: rgba(51, 51, 0, 1)"]
     {
         color: rgba(100, 100, 0, 1) !important;
         
     }
     
     .p-comments span[style^="color: rgba(0, 51, 0, 1)"],
-    body.body-forum .single-column #content .p-forum-a .p-comment-post p[style^="color: color: rgba(0, 51, 0, 1)"]
+    body.body-forum .single-column #content .p-forum-a .p-comment-post p[style^="color: color: rgba(0, 51, 0, 1)"],
+    body.body-forum .single-column #content .p-forum-a .p-comment-post p b[style^="color: color: rgba(0, 51, 0, 1)"],
+    body.body-forum .single-column #content .p-forum-a .p-comment-post p a[style^="color: color: rgba(0, 51, 0, 1)"]
     {
         color: rgba(0, 100, 0, 1) !important;
         
     }
     
     .p-comments span[style^="color: rgba(0, 51, 102, 1)"],
-    body.body-forum .single-column #content .p-forum-a .p-comment-post p[style^="color: rgba(0, 51, 102, 1)"]
+    body.body-forum .single-column #content .p-forum-a .p-comment-post p[style^="color: rgba(0, 51, 102, 1)"],
+    body.body-forum .single-column #content .p-forum-a .p-comment-post p b[style^="color: rgba(0, 51, 102, 1)"],
+     body.body-forum .single-column #content .p-forum-a .p-comment-post p a[style^="color: rgba(0, 51, 102, 1)"]
     {
         color: rgba(0, 101, 152, 1) !important;
         
     }
     .p-comments span[style^="color: rgba(0, 0, 255, 1)"],
     body.body-forum .single-column #content .p-forum-a .p-comment-post p[style^="color: rgba(0, 0, 255, 1)"],
+    body.body-forum .single-column #content .p-forum-a .p-comment-post p b[style^="color: rgba(0, 0, 255, 1)"],
+    body.body-forum .single-column #content .p-forum-a .p-comment-post p a[style^="color: rgba(0, 0, 255, 1)"],
     .p-comments span[style^="color:blue"],
-    body.body-forum .single-column #content .p-forum-a .p-comment-post p[style^="color:blue)"]{
+    body.body-forum .single-column #content .p-forum-a .p-comment-post p[style^="color:blue)"],
+    body.body-forum .single-column #content .p-forum-a .p-comment-post p b[style^="color:blue)"],
+    body.body-forum .single-column #content .p-forum-a .p-comment-post p a[style^="color:blue)"]{
         color: rgba(50, 80, 255, 1) !important;
     }
+    
+    .p-comments span[style^="color: rgba(255, 0, 255, 1)"],
+    body.body-forum .single-column #content .p-forum-a .p-comment-post p[style^="color: rgba(255, 0, 255, 1)"],
+    body.body-forum .single-column #content .p-forum-a .p-comment-post p b[style^="color: rgba(255, 0, 255, 1)"],
+    body.body-forum .single-column #content .p-forum-a .p-comment-post p a[style^="color: rgba(255, 0, 255, 1)"]{
+        color: rgba(255, 0, 255, .66) !important;  
+    }
+    
     
     
 
