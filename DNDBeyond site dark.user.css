@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.81
+@version      1.2.82
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -108,7 +108,7 @@ div#site{
     outline: none !important;
     }
     
-   
+ 
     
 	body.responsive-enabled #site #site-main .container #content,
 	body.responsive-enabled #site #site-main.fixed .container #content,
@@ -823,6 +823,15 @@ div#site{
     {
         color: rgb(89, 89, 227) !important;  
     } 
+    
+    .tooltip-hover.monster-tooltip, 
+    .tooltip-hover.monster-tooltip:hover, 
+    .tooltip-hover.monster-tooltip:focus, 
+    .tooltip-hover.monster-tooltip:active, 
+    .tooltip-hover.monster-tooltip:visited,
+    .plural-monster-tooltip{
+        color: #a02b2b!important;
+    }
     
     .thread-prefix span.thread-prefix {
 		background-color: #333;
