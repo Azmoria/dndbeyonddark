@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.82
+@version      1.2.83
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -448,7 +448,9 @@ div#site{
     .mce-widget, 
     .mce-widget *, 
     .mce-reset,
-    .view-cover-art
+    .view-cover-art,
+    table.listing-warning-record td,
+    table.listing-warning-record th
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
@@ -966,7 +968,9 @@ div#site{
     body.body-forum .single-column #content .p-forum-a table:not(.mceLayout):not(.mceToolbar):not(.mceListBox):not(.mceSplitButton):not(.forum-listing):not(.forum-thread-listing) tr th, 
     body.body-user .single-column #content .p-forum-a table:not(.mceLayout):not(.mceToolbar):not(.mceListBox):not(.mceSplitButton):not(.forum-listing):not(.forum-thread-listing) tr th, 
     body.body-devtracker .single-column #content .p-forum-a table:not(.mceLayout):not(.mceToolbar):not(.mceListBox):not(.mceSplitButton):not(.forum-listing):not(.forum-thread-listing) tr th,
-   .section-changelog .p-article-a
+   .section-changelog .p-article-a,
+    table.listing-warning-record th,
+    table.listing-warning-record td
     {
 		border-width: /*[[borderWidth]]*/
 		!important;
@@ -1236,7 +1240,8 @@ div#site{
     .p-user-a.s_newContent .p-user-stats,
     .currency-list-item-row,
     .p-comments .p-comment-actions .p-comment-actionsAdmin>.label,
-    .Newspaper-Clipping{
+    .Newspaper-Clipping,
+    table.listing-warning-record th{
 		background-image: none !important;
 	}
     
