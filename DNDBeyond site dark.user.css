@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.86
+@version      1.2.87
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -124,13 +124,15 @@ dark "Dark Mode" <<<EOT
 
     a span.user-role-d-d-beyond-staff,
     a span.user-role-d-d-beyond-staff:hover,
-    .thread-author a span.user-role-d-d-beyond-staff{
+    .thread-author a span.user-role-d-d-beyond-staff,
+    .p-comment-edited span.user-role-d-d-beyond-staff{
         color: #c02323 !important; 
     }
     
     a span.user-role-moderator,
     a span.user-role-moderator:hover,
-    .thread-author a span.user-role-moderator {
+    .thread-author a span.user-role-moderator,
+    .p-comment-edited span.user-role-moderator{
         color: #ff8502 !important;
     }
 
@@ -148,13 +150,15 @@ EOT;
 light "Light Mode" <<<EOT
     a span.user-role-d-d-beyond-staff,
     a span.user-role-d-d-beyond-staff:hover,
-    .thread-author a span.user-role-d-d-beyond-staff{
+    .thread-author a span.user-role-d-d-beyond-staff,
+    .p-comment-edited span.user-role-d-d-beyond-staff{
         color: #E40712 !important; 
     }
     
     a span.user-role-moderator,
     a span.user-role-moderator:hover,
-    .thread-author a span.user-role-moderator {
+    .thread-author a span.user-role-moderator,
+    .p-comment-edited span.user-role-moderator {
         color: #ff8502 !important;
     }
     .mon-stat-block .tooltip-hover.spell-tooltip, 
