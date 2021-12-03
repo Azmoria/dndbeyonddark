@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.88
+@version      1.2.89
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -171,7 +171,7 @@ light "Light Mode" <<<EOT
 EOT;
 }
 @var color linkColor "Link Color" #88bcd6
-@var color borderColor "Border Color" #fff
+@var color borderColor "Border Color" #c8c8c8
 @advanced dropdown borderStyle "Border Style" {
 solid "Solid" <<<EOT
 solid EOT;
@@ -834,7 +834,7 @@ div#site{
 	.ddb-top-result-header-secondary-text,
 	.ddb-statblock-ability-scores .score,
 	.ddbc-item-name--rarity-common,
-	.p-comments span:not([style^="color:"]),
+	.p-comments span:not([style^="color:"]):not([style^="text-decoration-line: underline; color:"]),
     body.body-forum .single-column #content .p-forum-a footer.statistics .statistics-body .info .item, 
     body.body-forum .single-column #content .p-forum-a footer.statistics .statistics-body .count .item,
     .RPGMonster-listing .more-info,
@@ -1007,7 +1007,8 @@ div#site{
 	.quick-menu-item-label,
     a.character-button-block,
     #encounter-builder-root .input-select__dropdown-wrapper,
-    .portrait-name-avatar-none{
+    .portrait-name-avatar-none,
+    .adventure-chapter-header{
 		border: none;
 	}
 	.quick-menu-item-active > .quick-menu-item-label {
@@ -1030,11 +1031,7 @@ div#site{
 	li:nth-of-type(even) .list-row,
 	.compendium-toc-full-text,
 	blockquote.adventure-read-aloud-text,
-	.body-category-details .section-compendium-content .page-heading,
 	aside.rules-text,
-	.compendium-toc-full-header h2,
-	.compendium-toc-block-header h2,
-	.compendium-toc-block-text,
 	aside,
 	body:not(.body-forum):not(.section-posts):not(.section-changelog):not(.body-privatemessage-details) blockquote,
 	.post-excerpt,
@@ -1089,7 +1086,8 @@ div#site{
     body.body-devtracker .single-column #content .p-forum-a table:not(.mceLayout):not(.mceToolbar):not(.mceListBox):not(.mceSplitButton):not(.forum-listing):not(.forum-thread-listing) tr th,
    .section-changelog .p-article-a,
     table.listing-warning-record th,
-    table.listing-warning-record td
+    table.listing-warning-record td,
+    .compendium-toc-block-text
     {
 		border-width: /*[[borderWidth]]*/
 		!important;
@@ -1373,9 +1371,60 @@ div#site{
     table.listing-warning-record th,
     .compendium-toc-block-header,
     .compendium-toc-full-header,
-    .body-category-details .section-compendium-content .page-heading{
+    .body-category-details .section-compendium-content .page-heading
+    {
 		background-image: none !important;
 	}
+   
+     .compendium-toc-block-header,
+    .compendium-toc-full-header,
+    body.body-category-details .page-header__primary{
+        box-shadow: inset 0px 2px 4px 0px /*[[linkColor]]*/ !important; 
+    }
+    
+    .compendium-toc-block-header,
+    .compendium-toc-full-header,
+    .compendium-toc-block-header h2,
+    .compendium-toc-full-header h2{
+        z-index:1;
+    }
+ 
+    
+    .compendium-toc-block-header:before,
+    .compendium-toc-full-header:before,
+    .body-category-details .section-compendium-content .page-header__primary:before,
+    .compendium-toc-block-header h2:before{
+
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: -2px;
+        top: 0;
+        width: calc(100% + 2px);
+        height: 100%;
+        opacity: 1;
+        background-color: /*[[backgroundColor]]*/ !important;       
+        background-size: 102% 100%;
+        z-index: -1;
+    }
+    
+    .compendium-toc-block-header:after,
+    .compendium-toc-full-header:after,
+    .body-category-details .section-compendium-content .page-header__primary:after,
+    .compendium-toc-block-header h2:after{
+
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: -1px;
+        top: 0;
+        width: calc(100% + 2px);
+        height: 100%;
+        opacity: 0.4;
+        background-image: url('https://media-waterdeep.cursecdn.com/attachments/0/507/1180darkbar.png');
+        background-size: 102% 100%;
+        z-index: -1;
+    }
     
 	aside,
 	.more-info::after,
@@ -1965,11 +2014,7 @@ div#site{
     }
 
 
-    .compendium-toc-block-header,
-    .compendium-toc-full-header,
-    body.body-category-details .page-header__primary{
-        box-shadow: inset 0px 2px 4px 0px /*[[linkColor]]*/ !important; 
-    }
+   
     
     .body-forum li.b-pagination-item .s-active,
     .body-forum li.b-pagination-item a[rel="prev"]:hover, 
