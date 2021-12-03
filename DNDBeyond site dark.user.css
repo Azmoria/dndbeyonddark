@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.85
+@version      1.2.86
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -72,7 +72,15 @@ dark "Dark Mode" <<<EOT
     .tooltip-hover.monster-tooltip:active, 
     .tooltip-hover.monster-tooltip:visited,
     .plural-monster-tooltip,
-    body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color:red"]{
+    .body-page .p-article-a .p-article-content a.monster-tooltip,
+    .body-forum .p-article-a .p-article-content a.monster-tooltip,
+    body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color:red"],
+    body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(255, 0, 0, 1)"],
+    .mon-stat-block__name .mon-stat-block__name-link, 
+    .mon-stat-block__name .mon-stat-block__name-link:active, 
+    .mon-stat-block__name .mon-stat-block__name-link:hover, 
+    .mon-stat-block__name .mon-stat-block__name-link:visited
+    {
         color: #D35050 !important;
     }
 
@@ -80,14 +88,21 @@ dark "Dark Mode" <<<EOT
     .tooltip-hover.spell-tooltip:hover,
     .tooltip-hover.spell-tooltip:focus,
     .tooltip-hover.spell-tooltip:active,
-    .tooltip-hover.spell-tooltip:visited{
+    .tooltip-hover.spell-tooltip:visited,
+    .body-page .p-article-a .p-article-content a.spell-tooltip,
+    .mon-stat-block .tooltip-hover.spell-tooltip, 
+    .mon-stat-block .tooltip-hover.spell-tooltip:hover, 
+    .mon-stat-block .tooltip-hover.spell-tooltip:focus, 
+    .mon-stat-block .tooltip-hover.spell-tooltip:active,
+    .mon-stat-block .tooltip-hover.spell-tooltip:visited{
         color: #896CE0 !important;
     }
     .tooltip-hover.magic-item-tooltip, 
     .tooltip-hover.magic-item-tooltip:hover,
     .tooltip-hover.magic-item-tooltip:focus, 
     .tooltip-hover.magic-item-tooltip:active, 
-    .tooltip-hover.magic-item-tooltip:visited{
+    .tooltip-hover.magic-item-tooltip:visited,
+    .body-page .p-article-a .p-article-content a.magic-item-tooltip{
         color: #1877EC !important;
     }
 
@@ -104,7 +119,7 @@ dark "Dark Mode" <<<EOT
     }
 
     .thread-prefix span.request{
-     background-color: #B52172 !important;
+        background-color: #B52172 !important;
     }
 
     a span.user-role-d-d-beyond-staff,
@@ -119,9 +134,19 @@ dark "Dark Mode" <<<EOT
         color: #ff8502 !important;
     }
 
+    body.body-forum .single-column #content [style^="color: rgba(0, 0, 0, 1)"], 
+    body.body-forum .single-column #content [style^="color: rgba(51, 51, 51, 1)"],
+    body.body-forum .single-column #content [style^="color: rgba(128, 128, 128, 1)"],
+    body.body-privatemessage .single-column #content [style^="color: rgba(0, 0, 0, 1)"], 
+    body.body-privatemessage .single-column #content [style^="color: rgba(51, 51, 51, 1)"],
+    body.body-privatemessage .single-column #content [style^="color: rgba(128, 128, 128, 1)"]
+    {
+        color: var(--font-color) !important;
+    }
+
 EOT;
 light "Light Mode" <<<EOT
- a span.user-role-d-d-beyond-staff,
+    a span.user-role-d-d-beyond-staff,
     a span.user-role-d-d-beyond-staff:hover,
     .thread-author a span.user-role-d-d-beyond-staff{
         color: #E40712 !important; 
@@ -131,6 +156,13 @@ light "Light Mode" <<<EOT
     a span.user-role-moderator:hover,
     .thread-author a span.user-role-moderator {
         color: #ff8502 !important;
+    }
+    .mon-stat-block .tooltip-hover.spell-tooltip, 
+    .mon-stat-block .tooltip-hover.spell-tooltip:hover, 
+    .mon-stat-block .tooltip-hover.spell-tooltip:focus, 
+    .mon-stat-block .tooltip-hover.spell-tooltip:active,
+    .mon-stat-block .tooltip-hover.spell-tooltip:visited{
+        color: #896CE0 !important;
     }
 EOT;
 }
@@ -207,6 +239,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     :root{
     --custom-icon-filter: /*[[iconFilter]]*/;
     --custom-frame-filter: /*[[customFrameFilter]]*/;
+    --font-color: /*[[fontColor]]*/;
     }
         
 div#site{
@@ -237,11 +270,9 @@ div#site{
 	body.responsive-enabled #site #site-main.fixed .container #content,
 	#site-main,
 	.compendium-hr,
-	.sidebar-menu,
 	.secondary-content,
 	.top-next-nav,
 	.b-breadcrumb,
-	.sidebar-menu-top,
 	.sidenav-next-nav,
 	.sidenav-prev-page,
 	.quick-menu-tier-1,
@@ -291,7 +322,6 @@ div#site{
 	.static-container-details .content-container table thead th,
 	.static-container-details .content-container table tbody tr:nth-child(odd),
 	.static-container-details .content-container table tbody tr,
-	.sidebar-menu-top-link,
 	.comment .p-comment-container,
 	.p-comments-a .p-comment-wrapper,
 	.ddb-collapsible-filter__box,
@@ -637,7 +667,8 @@ div#site{
     #site .forum-row td:last-of-type,
     #site .forum-thread-row td:last-of-type,
     .p-forum-a .announcements .col-status,
-    body.body-forum .comment .p-comment-content blockquote{
+    body.body-forum .comment .p-comment-content blockquote,
+    .p-forum-poll .b-poll-a .b-poll-voting .form-field-string-choice-field{
         border-color: /*[[borderColor]]*/ !important;   
     }
     
@@ -828,7 +859,7 @@ div#site{
     .user,
     .p-forum-a .col-forum .forum-subs a,
     .p-comment-actions .user-actions .user-action .u-icon::after,
-    .forum-thread-row .col-thread .title,
+    .forum-thread-row .col-thread .title a,
     .ddb-characters-listing-count-active, 
     .ddb-characters-listing-count-max,
     .p-comments .p-comment-actions .user-actions>li a,
@@ -878,12 +909,6 @@ div#site{
     .mce-widget, 
     .mce-widget *, 
     .mce-reset,
-    .p-comments [style^="color: rgba(0, 0, 0, 1)"],
-    body.body-forum .single-column #content .p-forum-a .p-comment-post [style^="color: rgba(0, 0, 0, 1)"],
-    .p-comments [style^="color: rgba(51, 51, 51, 1)"],
-    body.body-forum .single-column #content .p-forum-a .p-comment-post [style^="color: rgba(51, 51, 51, 1)"],
-    .p-comments [style^="color: rgba(128, 128, 128, 1)"],
-    body.body-forum .single-column #content .p-forum-a .p-comment-post [style^="color: rgba(128, 128, 128, 1)"],
     .b-pagination-b li.b-pagination-item>a,
     .comment .p-comment-notes .p-comment-edited,
     .homebrew-comments #reply .h2 h2,
@@ -891,10 +916,15 @@ div#site{
     body.body-forum .single-column #content .p-forum-a table:not(.mceLayout):not(.mceToolbar):not(.mceListBox):not(.mceSplitButton) tr th, 
     body.body-user .single-column #content .p-forum-a table:not(.mceLayout):not(.mceToolbar):not(.mceListBox):not(.mceSplitButton) tr th, 
     body.body-devtracker .single-column #content .p-forum-a table:not(.mceLayout):not(.mceToolbar):not(.mceListBox):not(.mceSplitButton) tr th,
-    .thread-prefix a > span.thread-prefix,
-    .thread-author .user,
-    .post-author .user-role-registered-users,
-    .forum-row .col-last-post .post-title a
+    .forum-thread-row .col-thread .title,
+    .b-list-label,
+    body.body-user #content .thread-title a,
+    .body-user #content .asc,
+    .body-user #content .b-tab-nav a span,
+    .monster-row__subtext,
+    .forum-row .col-last-post .post-title a, 
+    .forum-thread-row .col-last-post .post-title a,
+    .static-container-details .content-container .compendium-header-subtitle
     {
 		color: /*[[fontColor]]*/ !important;
 	}
@@ -906,10 +936,20 @@ div#site{
 		padding: 0px;
 	}
 
-	a:not([style^=color]),
-	a:not([style^=color]):visited,
-	a:not([style^=color]) > span,
-	span[role=button],
+    .article-main a,
+    .sidebar-menu a,
+    .compendium-toc-block-header h2 a,
+    body:not(.body-forum) .primary-content a:not(.spell-tooltip):not(.magic-item-tooltip):not(.monster-tooltip):not(.b-pagination-item a):not(.button-material-ui),
+    body.body-forum .single-column #content [style^="color: rgba(0, 0, 0, 1)"] a, 
+    body.body-forum .single-column #content [style^="color: rgba(51, 51, 51, 1)"] a,
+    body.body-forum .single-column #content [style^="color: rgba(128, 128, 128, 1)"] a,
+    body.body-forum .p-comment-sig a:not([style^="color:"]),
+    .help-block a,
+    .monster-row__name,
+    .article-main h2 a:hover,
+    .encounter-row__cell--campaign a,
+    .compendium-toc-full a,
+    .container span[role=button],
 	.forum-row .col-forum .title a:hover,
 	.content-container h3 a,
 	.tooltip-hover,
@@ -947,16 +987,23 @@ div#site{
      .post-highlighted-articles-item-title a:visited,
     .b-breadcrumb-a .b-breadcrumb-item a:hover,
     .b-breadcrumb-a .b-breadcrumb-item span:hover,
-    .forum-row .col-last-post .post-title a:hover{
-		color: /*[[linkColor]]*/
-		!important
+    .forum-row .col-last-post .post-title a:hover,
+     body.body-user #content .thread-title a:hover,
+    .col-status .status-icon,
+    body.body-forum ul.forum-listing a,
+    body.body-forum #forum-thread-announcements a,
+    .quote-author{
+		color: /*[[linkColor]]*/ !important
 	}
+    
+
     
        /*[[fontContrast]]*/
     
 	.quick-menu-item-label,
     a.character-button-block,
-    #encounter-builder-root .input-select__dropdown-wrapper{
+    #encounter-builder-root .input-select__dropdown-wrapper,
+    .portrait-name-avatar-none{
 		border: none;
 	}
 	.quick-menu-item-active > .quick-menu-item-label {
@@ -1049,6 +1096,11 @@ div#site{
         outline: none !important;
 	}
     
+    .compendium-toc-block-text,
+    .compendium-toc-full-text{
+       border-top: none !important; 
+    }
+    
     body.body-forum .single-column #content .p-forum-a .p-comment-sig table:not(.mceLayout):not(.mceToolbar):not(.mceListBox):not(.mceSplitButton):not(.forum-listing):not(.forum-thread-listing) tr th{
         border: none !important;   
     }
@@ -1107,7 +1159,11 @@ div#site{
     .body-forum li.b-pagination-item .s-active,
     .body-forum li.b-pagination-item a[rel="prev"]:hover, 
     .body-forum li.b-pagination-item a[rel="next"]:hover, 
-    .body-forum li.b-pagination-item .b-pagination-item:hover
+    .body-forum li.b-pagination-item .b-pagination-item:hover,
+    .section-compendium .site-bar, 
+    .section-adventures .site-bar, 
+    .section-rules .site-bar, 
+    .site-bar.section-compendium
     {
         border-color: /*[[linkColor]]*/ !important;
     }
@@ -1310,7 +1366,10 @@ div#site{
     .currency-list-item-row,
     .p-comments .p-comment-actions .p-comment-actionsAdmin>.label,
     .Newspaper-Clipping,
-    table.listing-warning-record th{
+    table.listing-warning-record th,
+    .compendium-toc-block-header,
+    .compendium-toc-full-header,
+    .body-category-details .section-compendium-content .page-heading{
 		background-image: none !important;
 	}
     
@@ -1710,7 +1769,8 @@ div#site{
 	}
     input.es-form-field-query.ui-autocomplete-input[placeholder="Search Everything..."],
     .p-comments-b .p-comment-user .p-comment-stats .p-comment-statitem .postbit-item,
-    body.body-forum .single-column #content .p-forum-a .p-comment-post .u-dropDown span.user.user-role-registered-users  {
+    body.body-forum .single-column #content .p-forum-a .p-comment-post .u-dropDown span.user.user-role-registered-users,
+    .mon-stat-block button.integrated-dice__container{
         background: none !important;
     }
     .body-page .p-article-a .p-article-content h2::after, 
@@ -1885,7 +1945,7 @@ div#site{
     .spell-manager-group-filter-level .character-button:enabled,
     body.body-forum .single-column #content .u-dropDown .u-dropDownMenu li>a:hover,
     .mce-menu-item-normal.mce-active,
-    body.body-privatemessage .single-column #content .u-dropDown .u-dropDownMenu li>a:hover   
+    body.body-privatemessage .single-column #content .u-dropDown .u-dropDownMenu li>a:hover
     {
         background-color: /*[[backgroundColor]]*/ !important;
         box-shadow: inset 0px 0px 30px 0px /*[[linkColor]]*/ !important;
@@ -1894,9 +1954,17 @@ div#site{
     
     li.b-pagination-item a[rel="prev"]:not(.s-active), 
     li.b-pagination-item a[rel="next"]:not(.s-active), 
-    li.b-pagination-item .b-pagination-item:not(.s-active){
+    li.b-pagination-item .b-pagination-item:not(.s-active),
+    .sidebar-menu-top,
+    .sidebar-menu-top-link{
         background-color: /*[[backgroundColor]]*/ !important;
-        box-shadow: inset 0px 0px 4px 0px /*[[fontColor]]*/ !important;
+    }
+
+
+    .compendium-toc-block-header,
+    .compendium-toc-full-header,
+    body:not(.body-rpgspell):not(.body-rpgrace):not(.body-rpgclass):not(.body-rpgmonster):not(.body-rpgfeat):not(.body-rpgbackground):not(.body-rpgigear):not(.body-rpgmagicitem):not(.body-rpgvehicle) .page-header__primary{
+        box-shadow: inset 0px 2px 4px 0px /*[[linkColor]]*/ !important; 
     }
     
     .body-forum li.b-pagination-item .s-active,
@@ -1976,7 +2044,7 @@ div#site{
     .combatant-card.is-turn .combatant-card__mid-bit,
     .combatant-card.is-turn .combatant-card__right-bit,
     .combatant-card.is-turn .combatant-card__left-bit,
-    .p-article-a .p-article-top-tags .p-article-tags .tag:hover{
+    .p-article-a .p-article-tags .tag:hover{
         border-color: /*[[linkColor]]*/ !important;
         box-shadow: 0px 0px 5px 1px /*[[linkColor]]*/;
     }
@@ -2152,6 +2220,9 @@ div#site{
     .forum-thread-row.has-dev-comments .col-thread::before{
         opacity: .5 !important;   
     }
+    .static-container-details .content-container .compendium-header-subtitle{
+        opacity: .8 !important;   
+    }
     
     .forum-thread-row.has-dev-comments .col-thread,
     .dice-set-current{
@@ -2219,6 +2290,10 @@ div#site{
     
     .ddbc-truncated-content--is-hidden .ddbc-truncated-content__content:after {
         background: linear-gradient(0deg, /*[[backgroundColor]]*/ 6%,hsla(0,0%,100%,0));
+    }
+    
+    .mon-stat-block a{
+        text-decoration: none !important;   
     }
       
     
@@ -2379,11 +2454,15 @@ div#site{
 		background: none !important;
 		border: none !important;
 	}
-	a,
-	a:visited,
-	a > span,
-	span[role=button],
-	.forum-row .col-forum .title a {
+    
+    
+    .body-home-index .post-listing>li:first-child .post-excerpt__title a:active, 
+    .body-home-index .post-listing>li:first-child .post-excerpt__title a:visited, 
+    .body-home-index .post-listing>li:first-child .post-excerpt__title a:hover,
+    .body-home-index .post-listing>li:first-child .post-excerpt__title a,
+    .content-container a:hover,
+    .content-container a
+    {
 		color: /*[[linkColor]]*/
 		!important
 	}
