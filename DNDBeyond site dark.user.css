@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.83
+@version      1.2.85
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -11,6 +11,129 @@
 @var color forumSecondaryColor "Forum Secondary Color" #111d
 @var color forumTertiaryColor "Forum Tertiary Color" #1e1e1edd
 @var color fontColor "Font Color" #ddd
+@advanced dropdown fontContrast "Font Contrast Colors" {
+dark "Dark Mode" <<<EOT
+ body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(51, 51, 0, 1)"]
+    {
+        color: rgba(100, 100, 0, 1) !important;
+        
+    }
+    
+    body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(0, 51, 0, 1)"]
+    {
+        color: rgb(24, 80, 24) !important;         
+    }
+    
+    body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(0, 51, 102, 1)"]
+    {
+        color: rgba(0, 101, 152, 1) !important;
+        
+    }
+
+    body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(0, 0, 255, 1)"],
+    body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color:blue"]{
+        color: rgb(70, 100, 255) !important;
+    }
+    
+    body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(255, 0, 255, 1)"]
+    {
+        color: rgba(255, 0, 255, .66) !important;  
+    }
+      
+    body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(16, 16, 255, 1)"]
+    {
+        color: rgba(73, 73, 255, 1) !important;  
+    }
+     body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(0, 0, 128, 1)"]
+    {
+        color: rgb(43, 43, 248) !important;  
+    }
+     body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(255, 0, 0, 1)"]
+    {
+        color: rgb(162, 28, 28) !important;  
+    }
+     body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(128, 0, 0, 1)"]
+    {
+        color: rgb(138, 29, 29) !important;  
+    }
+    body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(51, 51, 153, 1)"]
+    {
+        color: rgb(89, 89, 227) !important;  
+    } 
+    body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color:purple"]
+    {
+        color: #d465d4 !important;  
+    } 
+
+    
+    .tooltip-hover.monster-tooltip, 
+    .tooltip-hover.monster-tooltip:hover, 
+    .tooltip-hover.monster-tooltip:focus, 
+    .tooltip-hover.monster-tooltip:active, 
+    .tooltip-hover.monster-tooltip:visited,
+    .plural-monster-tooltip,
+    body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color:red"]{
+        color: #D35050 !important;
+    }
+
+    .tooltip-hover.spell-tooltip,
+    .tooltip-hover.spell-tooltip:hover,
+    .tooltip-hover.spell-tooltip:focus,
+    .tooltip-hover.spell-tooltip:active,
+    .tooltip-hover.spell-tooltip:visited{
+        color: #896CE0 !important;
+    }
+    .tooltip-hover.magic-item-tooltip, 
+    .tooltip-hover.magic-item-tooltip:hover,
+    .tooltip-hover.magic-item-tooltip:focus, 
+    .tooltip-hover.magic-item-tooltip:active, 
+    .tooltip-hover.magic-item-tooltip:visited{
+        color: #1877EC !important;
+    }
+
+    .thread-prefix span.thread-prefix{
+        background-color: #7D5A0C !important;
+    }
+
+    .thread-prefix span.bug{
+        background-color: #B9222A !important;
+    }
+
+    .thread-prefix span.resolved{
+        background-color: #3D6B3D !important;
+    }
+
+    .thread-prefix span.request{
+     background-color: #B52172 !important;
+    }
+
+    a span.user-role-d-d-beyond-staff,
+    a span.user-role-d-d-beyond-staff:hover,
+    .thread-author a span.user-role-d-d-beyond-staff{
+        color: #c02323 !important; 
+    }
+    
+    a span.user-role-moderator,
+    a span.user-role-moderator:hover,
+    .thread-author a span.user-role-moderator {
+        color: #ff8502 !important;
+    }
+
+EOT;
+light "Light Mode" <<<EOT
+ a span.user-role-d-d-beyond-staff,
+    a span.user-role-d-d-beyond-staff:hover,
+    .thread-author a span.user-role-d-d-beyond-staff{
+        color: #E40712 !important; 
+    }
+    
+    a span.user-role-moderator,
+    a span.user-role-moderator:hover,
+    .thread-author a span.user-role-moderator {
+        color: #ff8502 !important;
+    }
+EOT;
+}
 @var color linkColor "Link Color" #88bcd6
 @var color borderColor "Border Color" #fff
 @advanced dropdown borderStyle "Border Style" {
@@ -35,7 +158,7 @@ none EOT;
 }
 @var range borderWidth "Border Width" [1, 1, 10, 1, 'px']
 @var color scrollbarColor "Scrollbar Color" #88bcd6
-@advanced dropdown filter "Icon Color Use light icons on a dark background" {
+@advanced dropdown filter "Icon Color - Use light icons on a dark background" {
     light "Light icons" <<<EOT
 invert(100%) hue-rotate(180deg) EOT;
 dark "Dark icons" <<<EOT
@@ -755,89 +878,30 @@ div#site{
     .mce-widget, 
     .mce-widget *, 
     .mce-reset,
-    .p-comments span[style^="color: rgba(0, 0, 0, 1)"],
-    body.body-forum .single-column #content .p-forum-a .p-comment-post p[style^="color: rgba(0, 0, 0, 1)"],
-    body.body-forum .single-column #content .p-forum-a .p-comment-post p b[style^="color: rgba(0, 0, 0, 1)"],
-    body.body-forum .single-column #content .p-forum-a .p-comment-post p a[style^="color: rgba(0, 0, 0, 1)"],
-    .p-comments span[style^="color: rgba(51, 51, 51, 1)"],
-    body.body-forum .single-column #content .p-forum-a .p-comment-post p[style^="color: rgba(51, 51, 51, 1)"],
-     body.body-forum .single-column #content .p-forum-a .p-comment-post p b[style^="color: rgba(51, 51, 51, 1)"],
-     body.body-forum .single-column #content .p-forum-a .p-comment-post p a[style^="color: rgba(51, 51, 51, 1)"],
-    .p-comments span[style^="color: rgba(128, 128, 128, 1)"],
-    body.body-forum .single-column #content .p-forum-a .p-comment-post p b[style^="color: rgba(128, 128, 128, 1)"],
-     body.body-forum .single-column #content .p-forum-a .p-comment-post p a[style^="color: rgba(128, 128, 128, 1)"],
+    .p-comments [style^="color: rgba(0, 0, 0, 1)"],
+    body.body-forum .single-column #content .p-forum-a .p-comment-post [style^="color: rgba(0, 0, 0, 1)"],
+    .p-comments [style^="color: rgba(51, 51, 51, 1)"],
+    body.body-forum .single-column #content .p-forum-a .p-comment-post [style^="color: rgba(51, 51, 51, 1)"],
+    .p-comments [style^="color: rgba(128, 128, 128, 1)"],
+    body.body-forum .single-column #content .p-forum-a .p-comment-post [style^="color: rgba(128, 128, 128, 1)"],
     .b-pagination-b li.b-pagination-item>a,
     .comment .p-comment-notes .p-comment-edited,
     .homebrew-comments #reply .h2 h2,
     .thread-author,
     body.body-forum .single-column #content .p-forum-a table:not(.mceLayout):not(.mceToolbar):not(.mceListBox):not(.mceSplitButton) tr th, 
     body.body-user .single-column #content .p-forum-a table:not(.mceLayout):not(.mceToolbar):not(.mceListBox):not(.mceSplitButton) tr th, 
-    body.body-devtracker .single-column #content .p-forum-a table:not(.mceLayout):not(.mceToolbar):not(.mceListBox):not(.mceSplitButton) tr th
+    body.body-devtracker .single-column #content .p-forum-a table:not(.mceLayout):not(.mceToolbar):not(.mceListBox):not(.mceSplitButton) tr th,
+    .thread-prefix a > span.thread-prefix,
+    .thread-author .user,
+    .post-author .user-role-registered-users,
+    .forum-row .col-last-post .post-title a
     {
 		color: /*[[fontColor]]*/ !important;
 	}
     
 
-    body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(51, 51, 0, 1)"]
-    {
-        color: rgba(100, 100, 0, 1) !important;
-        
-    }
-    
-    body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(0, 51, 0, 1)"]
-    {
-        color: rgb(24, 80, 24) !important;         
-    }
-    
-    body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(0, 51, 102, 1)"]
-    {
-        color: rgba(0, 101, 152, 1) !important;
-        
-    }
-
-    body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(0, 0, 255, 1)"],
-    body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color:blue"]{
-        color: rgb(70, 100, 255) !important;
-    }
-    
-    body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(255, 0, 255, 1)"]
-    {
-        color: rgba(255, 0, 255, .66) !important;  
-    }
-      
-    body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(16, 16, 255, 1)"]
-    {
-        color: rgba(73, 73, 255, 1) !important;  
-    }
-     body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(0, 0, 128, 1)"]
-    {
-        color: rgb(43, 43, 248) !important;  
-    }
-     body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(255, 0, 0, 1)"]
-    {
-        color: rgb(162, 28, 28) !important;  
-    }
-     body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(128, 0, 0, 1)"]
-    {
-        color: rgb(138, 29, 29) !important;  
-    }
-    body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(51, 51, 153, 1)"]
-    {
-        color: rgb(89, 89, 227) !important;  
-    } 
-    
-    .tooltip-hover.monster-tooltip, 
-    .tooltip-hover.monster-tooltip:hover, 
-    .tooltip-hover.monster-tooltip:focus, 
-    .tooltip-hover.monster-tooltip:active, 
-    .tooltip-hover.monster-tooltip:visited,
-    .plural-monster-tooltip{
-        color: #a02b2b!important;
-    }
-    
-    .thread-prefix span.thread-prefix {
-		background-color: #333;
-	}
+   
+   
 	.select2-container-multi .select2-choices {
 		padding: 0px;
 	}
@@ -882,10 +946,14 @@ div#site{
     .post-highlighted-articles-item-title a,
      .post-highlighted-articles-item-title a:visited,
     .b-breadcrumb-a .b-breadcrumb-item a:hover,
-    .b-breadcrumb-a .b-breadcrumb-item span:hover{
+    .b-breadcrumb-a .b-breadcrumb-item span:hover,
+    .forum-row .col-last-post .post-title a:hover{
 		color: /*[[linkColor]]*/
 		!important
 	}
+    
+       /*[[fontContrast]]*/
+    
 	.quick-menu-item-label,
     a.character-button-block,
     #encounter-builder-root .input-select__dropdown-wrapper{
@@ -1195,6 +1263,7 @@ div#site{
     }
     
     
+    
 	.p-article-a .compendium-toc-blockquote > a,
 	.p-article-a .compendium-toc-blockquote > a:hover,
 	.ddb-campaigns-list-item-body-sharing-box,
@@ -1368,7 +1437,7 @@ div#site{
 
     }
     
-    .option-count{
+    a.user-interactions-quick-link .option-count{
         color: #fff !important;
     }
 
