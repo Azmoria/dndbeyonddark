@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.90
+@version      1.2.91
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -934,7 +934,8 @@ div#site{
     .p-forum-a .statistics .statistics-body a:active, 
     .listing-forum-search .statistics .statistics-body a, 
     .listing-forum-search .statistics .statistics-body a:visited, 
-    .listing-forum-search .statistics .statistics-body a:active
+    .listing-forum-search .statistics .statistics-body a:active,
+    .ui-widget-content a
     {
 		color: /*[[fontColor]]*/ !important;
 	}
@@ -2010,7 +2011,8 @@ div#site{
     .spell-manager-group-filter-level .character-button:enabled,
     body.body-forum .single-column #content .u-dropDown .u-dropDownMenu li>a:hover,
     .mce-menu-item-normal.mce-active,
-    body.body-privatemessage .single-column #content .u-dropDown .u-dropDownMenu li>a:hover
+    body.body-privatemessage .single-column #content .u-dropDown .u-dropDownMenu li>a:hover,
+    .ui-widget-content a:hover
     {
         background-color: /*[[backgroundColor]]*/ !important;
         box-shadow: inset 0px 0px 30px 0px /*[[linkColor]]*/ !important;
