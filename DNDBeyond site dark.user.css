@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.93
+@version      1.2.94
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -13,54 +13,54 @@
 @var color fontColor "Font Color" #ddd
 @advanced dropdown fontContrast "Font Contrast Colors" {
 dark "Dark Mode" <<<EOT
- body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(51, 51, 0, 1)"]
+    .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(51, 51, 0, 1)"]
     {
         color: rgba(100, 100, 0, 1) !important;
         
     }
     
-    body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(0, 51, 0, 1)"]
+    .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(0, 51, 0, 1)"]
     {
         color: rgb(24, 80, 24) !important;         
     }
     
-    body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(0, 51, 102, 1)"]
+     .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(0, 51, 102, 1)"]
     {
         color: rgba(0, 101, 152, 1) !important;
         
     }
 
-    body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(0, 0, 255, 1)"],
-    body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color:blue"]{
+    .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(0, 0, 255, 1)"],
+    .single-column #content .p-forum-a .p-comment-wrapper [style^="color:blue"]{
         color: rgb(70, 100, 255) !important;
     }
     
-    body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(255, 0, 255, 1)"]
+   .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(255, 0, 255, 1)"]
     {
         color: rgba(255, 0, 255, .66) !important;  
     }
       
-    body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(16, 16, 255, 1)"]
+    .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(16, 16, 255, 1)"]
     {
         color: rgba(73, 73, 255, 1) !important;  
     }
-     body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(0, 0, 128, 1)"]
+     .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(0, 0, 128, 1)"]
     {
         color: rgb(43, 43, 248) !important;  
     }
-     body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(255, 0, 0, 1)"]
+    .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(255, 0, 0, 1)"]
     {
         color: rgb(162, 28, 28) !important;  
     }
-     body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(128, 0, 0, 1)"]
+    .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(128, 0, 0, 1)"]
     {
         color: rgb(138, 29, 29) !important;  
     }
-    body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(51, 51, 153, 1)"]
+    .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(51, 51, 153, 1)"]
     {
         color: rgb(89, 89, 227) !important;  
     } 
-    body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color:purple"]
+    .single-column #content .p-forum-a .p-comment-wrapper [style^="color:purple"]
     {
         color: #d465d4 !important;  
     } 
@@ -74,8 +74,8 @@ dark "Dark Mode" <<<EOT
     .plural-monster-tooltip,
     .body-page .p-article-a .p-article-content a.monster-tooltip,
     .body-forum .p-article-a .p-article-content a.monster-tooltip,
-    body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color:red"],
-    body.body-forum .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(255, 0, 0, 1)"],
+    .single-column #content .p-forum-a .p-comment-wrapper [style^="color:red"],
+    .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(255, 0, 0, 1)"],
     .mon-stat-block__name .mon-stat-block__name-link, 
     .mon-stat-block__name .mon-stat-block__name-link:active, 
     .mon-stat-block__name .mon-stat-block__name-link:hover, 
@@ -136,12 +136,11 @@ dark "Dark Mode" <<<EOT
         color: #ff8502 !important;
     }
 
-    body.body-forum .single-column #content [style^="color: rgba(0, 0, 0, 1)"], 
-    body.body-forum .single-column #content [style^="color: rgba(51, 51, 51, 1)"],
-    body.body-forum .single-column #content [style^="color: rgba(128, 128, 128, 1)"],
-    body.body-privatemessage .single-column #content [style^="color: rgba(0, 0, 0, 1)"], 
-    body.body-privatemessage .single-column #content [style^="color: rgba(51, 51, 51, 1)"],
-    body.body-privatemessage .single-column #content [style^="color: rgba(128, 128, 128, 1)"]
+    .single-column #content [style^="color: rgba(0, 0, 0, 1)"], 
+    .single-column #content [style^="color: rgba(51, 51, 51, 1)"],
+    .single-column #content [style^="color: rgba(128, 128, 128, 1)"],
+    .single-column #content [style^="color: rgba(36, 37, 39, 1)"]
+
     {
         color: var(--font-color) !important;
     }
@@ -892,7 +891,7 @@ div#site{
     .encounter-row__name,
     .encounter-row__name:visited,
     .encounter-details-summary__monsters-title,
-    .p-user-content .p-comment-wrapper span,
+    .p-user-content .p-comment-wrapper span:not([style^="color:"]),
     body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions>li.b-userAction-item>a span,
     .post-highlighted-articles-item-author-by,
     .post-highlighted-articles-item-author-name,
