@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.92
+@version      1.2.93
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -939,7 +939,10 @@ div#site{
     .listing-forum-search .statistics .statistics-body a:visited, 
     .listing-forum-search .statistics .statistics-body a:active,
     .ui-widget-content a,
-    .p-forum-a .b-table td:nth-child(odd)
+    .p-forum-a .b-table td:nth-child(odd),
+    .beyond20-header a,
+    #content a.ajax-post.label.no-refresh,
+    #content a.button
     {
 		color: /*[[fontColor]]*/ !important;
 	}
@@ -2016,7 +2019,8 @@ div#site{
     body.body-forum .single-column #content .u-dropDown .u-dropDownMenu li>a:hover,
     .mce-menu-item-normal.mce-active,
     body.body-privatemessage .single-column #content .u-dropDown .u-dropDownMenu li>a:hover,
-    .ui-widget-content a:hover
+    .ui-widget-content a:hover,
+    .toggle-button .toggle-in-collection
     {
         background-color: /*[[backgroundColor]]*/ !important;
         box-shadow: inset 0px 0px 30px 0px /*[[linkColor]]*/ !important;
