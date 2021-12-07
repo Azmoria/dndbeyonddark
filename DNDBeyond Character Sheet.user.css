@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.56
+@version      1.3.57
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -738,8 +738,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-defenses-summary__default,
     .ct-conditions-summary__default,
     .ct-proficiency-groups__group-label,
-    p,
-    span:not(.mm-nav-item__label),
+    .container p,
+    .container span,
     .ddbc-armor-class-box div,
     .ct-saving-throws-details__empty,
     .ct-saving-throws-box__modifiers.ct-saving-throws-box__modifiers--empty,
@@ -825,7 +825,12 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-character-sheet-MuiButtonBase-root,
     .ct-equipment__container-name,
     .ct-sidebar thead td, 
-    .ct-sidebar thead th
+    .ct-sidebar thead th,
+    .site .ct-button.ct-theme-button--outline,
+    .site .ct-button.ct-theme-button--outline:active, 
+    .site .ct-button.ct-theme-button--outline:focus, 
+    .site .ct-button.ct-theme-button--outline:hover,
+    .ddbc-collapsible__header-meta
     {
         color: /*[[fontColor]]*/ !important;
     }
@@ -846,11 +851,10 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ddbc-creature-block__name,
     .ddbc-creature-block__abilities,
     .ddbc-creature-block__description-block-heading,
-    [class^="ct-vehicle-block__section-header"],
-    a:not(.mm-nav-item__label):visited,
-    a:not(.mm-nav-item__label):hover,
-    a:not(.mm-nav-item__label),
-    [role=button]:not(.mm-nav-item__label),
+    .primary-content [class^="ct-vehicle-block__section-header"],
+    .primary-content a:visited,
+    .primary-content a:hover,
+    .primary-content a,
     .beyond20-message details summary,
     .beyond20-title,
     .ct-spells-filter__clear,
@@ -1163,7 +1167,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ddbc-svg.ct-sidebar__pane-control-icon path,
     .ct-content-group__header-extra a.ct-equipment__builder-link svg path,
     [d="M17.7 2c.3-.2.5-.4.8-.7.3-.3.3-.8 0-1.1-.3-.3-.8-.3-1.1 0-1.8 2-3.5 1.6-5.3 1.1-1.3-.3-2.6-.6-3.7.2C6.7 2.6 6.7 5 6.9 6.6L3.3 4.3l1.6-1.1L0 2.7l2.7 4.9.2-2.4 3.4 2.2c-1.5.4-3.7 1.4-4.2 3.4-.3 1.3.5 2.4 1.3 3.5 1.1 1.5 2.2 2.9 1 5.3-.2.4 0 .8.4 1 .1 0 .2.1.3.1.3 0 .6-.2.7-.4.2-.4.3-.7.4-1.1l5.5-8.2 4.9 3.2.5-.8-4.9-3.1L17.7 2zm-8.5.7c.5-.4 1.3-.2 2.4.1 1.4.4 3.1.8 4.9-.1l-4.8 7.1-3.1-2.1v-.1c-.3-1-.7-4 .6-4.9zM6.4 17.9c.1-2-1-3.4-1.8-4.6-.7-1-1.2-1.6-1-2.2.4-1.6 3.1-2.3 4.2-2.5H8.1l3.2 2.1-4.9 7.2z"],
-    [d="M14.7 15.5l-.8-1.5c-.3-.9-.3-1.6-.3-1.6h-1c0 .1.1 3.2 2.5 4.8l.5-.8-.9-.9zM14.9 9.8l.1 1s1.7-.2 3.5.8l.5-.9c-2.1-1.1-4.1-.9-4.1-.9z"]{
+    [d="M14.7 15.5l-.8-1.5c-.3-.9-.3-1.6-.3-1.6h-1c0 .1.1 3.2 2.5 4.8l.5-.8-.9-.9zM14.9 9.8l.1 1s1.7-.2 3.5.8l.5-.9c-2.1-1.1-4.1-.9-4.1-.9z"],
+    .ddbc-pencil-svg path{
         fill: /*[[highlightColor]]*/ !important;
         opacity: 1 !important;
     }
@@ -1452,41 +1457,41 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     button.ct-theme-button.ct-health-summary__adjuster-button.ct-health-summary__adjuster-button--damage.ct-theme-button--outline.ct-theme-button--interactive.ct-button.character-button.character-button-block-small:hover {
         background: #400 !important;
     }
-    .ddbc-item-name--rarity-very-rare,
-    .very-rare {
+    .container .ddbc-item-name--rarity-very-rare,
+    .container .very-rare {
         color: #9810E0 !important;
     }
-    .ddbc-item-name--rarity-rare,
-    .rare {
+    .container .ddbc-item-name--rarity-rare,
+    .container .rare {
         color: #4990E2 !important;
     }
-    .ddbc-item-name--rarity-uncommon,
-    .uncommon {
+    .container .ddbc-item-name--rarity-uncommon,
+    .container .uncommon {
         color: #1FC219 !important;
     }
-    .ddbc-item-name--rarity-legendary,
-    .legendary {
+    .container .ddbc-item-name--rarity-legendary,
+    .container .legendary {
         color: #FEA227 !important;
     }
     
-    .ddbc-item-name--rarity-artifact,
-    .artifact{
+    .container .ddbc-item-name--rarity-artifact,
+    .container .artifact{
         color: #be8972 !important;
     }
     
-    .ct-health-manager__adjuster-healing-label {
+    .container .ct-health-manager__adjuster-healing-label {
         color: #40d250 !important;
         
     }
-    .ct-health-manager__adjuster-healing {
+    .container .ct-health-manager__adjuster-healing {
         border: 1px solid #40d250 !important;
     }
     
-    .ct-health-manager__adjuster-damage {
+    .container .ct-health-manager__adjuster-damage {
         border-color: #c53131 !important;
     }
-    .ct-health-manager__adjuster-damage-label,
-    .ct-health-manager__status--negative{
+    .container .ct-health-manager__adjuster-damage-label,
+    .container .ct-health-manager__status--negative{
          color: #c53131 !important;
     }
     
@@ -1496,10 +1501,10 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         box-shadow: none;
     }
 
-    .ct-equipment-overview__weight-speed--encumbered,
-    .ct-equipment-overview__weight-speed--heavily-encumbered,
-    .ct-equipment-overview__weight-speed--over-carrying-capacity,
-    .ct-equipment-overview__weight-speed--push-drag-lift {
+    .container .ct-equipment-overview__weight-speed--encumbered,
+    .container .ct-equipment-overview__weight-speed--heavily-encumbered,
+    .container .ct-equipment-overview__weight-speed--over-carrying-capacity,
+    .container .ct-equipment-overview__weight-speed--push-drag-lift {
         color: #d24040;
     }
     
@@ -1666,6 +1671,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         background-image: none;
         -webkit-mask-composite: xor;
     }
+    
+   
    
     
     .ct-sidebar .ddbc-collapsible__header svg.ddbc-svg {
@@ -1701,6 +1708,10 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         z-index: 9;
         box-shadow: 0px 0px 15px 9px /*[[sidebarColor]]*/;
 
+    }
+    
+    .ddbc-collapsible--opened>.ddbc-collapsible__header{
+        border-left-color: /*[[highlightColor]]*/;   
     }
 
     .ct-equipment-manage-pane__inventory,
@@ -1760,6 +1771,94 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         border: none;
     }
     
+    [data-original-title="Platinum (10 GP)"] svg path[fill="#b5b5b5"],
+    [data-original-title="Platinum (10 GP)"] svg circle[fill="#b5b5b5"]{
+       fill: #b5b5b5 !important;
+       
+    }
+   [data-original-title="Platinum (10 GP)"] svg path[fill="#a3a3a3"]{
+       fill: #a3a3a3 !important;
+       
+    }
+     [data-original-title="Platinum (10 GP)"] svg path[fill="#949494"]{
+       fill: #949494 !important;
+       
+    }
+     [data-original-title="Platinum (10 GP)"] svg path[fill="#dcdcdc"]{
+       fill:  #dcdcdc !important;
+       
+    }
+     [data-original-title="Platinum (10 GP)"] svg path[fill="#ccc"]{
+       fill:  #ccc !important;
+       
+    }
+     [data-original-title="Gold (10 SP)"] svg path[fill="#eca825"],
+     [data-original-title="Gold (10 SP)"] svg circle[fill="#eca825"]
+    {
+            fill: #eca825 !important;
+    }
+     [data-original-title="Gold (10 SP)"] svg path[fill="#dd970e"]{
+            fill: #dd970e !important;
+    }
+    [data-original-title="Gold (10 SP)"] svg path[fill="#ffb72c"]{
+            fill: #ffb72c !important;
+    }
+    [data-original-title="Gold (10 SP)"] svg path[fill="#c78727"]{
+            fill: #c78727 !important;
+    }
+   
+    [data-original-title="Electrum (5 SP)"] svg path[fill="#8a9eac"]{
+            fill:  #8a9eac !important;    
+    }
+     [data-original-title="Electrum (5 SP)"] svg path[fill="#6d7f8c"]{
+            fill:  #6d7f8c !important;    
+    }
+     [data-original-title="Electrum (5 SP)"] svg path[fill="#7c8d99"]{
+            fill:  #7c8d99 !important;    
+    }
+    [data-original-title="Electrum (5 SP)"] svg circle[fill="#8697a3"]{
+            fill:  #8697a3 !important;    
+    }
+    [data-original-title="Electrum (5 SP)"] svg path[fill="#9fb3c0"]{
+            fill:  #9fb3c0 !important;    
+    }
+    [data-original-title="Silver (10 CP)"] svg path[fill="#a59e98"],
+    [data-original-title="Silver (10 CP)"] svg circle[fill="#a59e98"]{
+            fill:  #a59e98 !important;    
+    }
+    [data-original-title="Silver (10 CP)"] svg path[fill="#99938d"]{
+            fill:  #99938d !important;    
+    }
+    [data-original-title="Silver (10 CP)"] svg path[fill="#857d76"]{
+            fill:  #857d76 !important;    
+    }
+    [data-original-title="Silver (10 CP)"] svg path[fill="#b5ada7"]{
+            fill:  #b5ada7 !important;    
+    }
+    [data-original-title="Silver (10 CP)"] svg path[fill="#cec6bf"]{
+            fill:  #cec6bf !important;    
+    }
+    [data-original-title^="Copper"] svg path[fill="#ab6e57"]{
+            fill:  #ab6e57 !important;    
+    }
+    [data-original-title^="Copper"] svg path[fill="#c2866f"]{
+            fill:  #c2866f !important;    
+    }
+    [data-original-title^="Copper"] svg path[fill="#9f6854"]{
+            fill:  #9f6854 !important;    
+    }
+    [data-original-title^="Copper"] svg g[fill="#c2866f"] path,
+    [data-original-title^="Copper"] svg g[fill="#c2866f"] circle{
+            fill:  #c2866f !important;    
+    }
+    [data-original-title^="Copper"] svg path[fill="#e6a58c"]{
+       fill: #e6a58c !important;
+    }
+    
+    .ddbc-collapsible__header-meta{
+        opacity: 0.8;   
+    }
+    
     @media (min-width: 768px){
         .ct-character-sheet:before {       
             height: 78px;
@@ -1817,7 +1916,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         {
             box-shadow: inset 0 0 0 1px /*[[highlightColor]]*/;
         }
-       
+        
+        
         
     }
 
