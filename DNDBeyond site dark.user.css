@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.99
+@version      1.2.100
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -79,7 +79,9 @@ dark "Dark Mode" <<<EOT
     .mon-stat-block__name .mon-stat-block__name-link, 
     .mon-stat-block__name .mon-stat-block__name-link:active, 
     .mon-stat-block__name .mon-stat-block__name-link:hover, 
-    .mon-stat-block__name .mon-stat-block__name-link:visited
+    .mon-stat-block__name .mon-stat-block__name-link:visited,
+    .listing .info .row.monster-name .link:hover,
+    .listing .info .row.monster-name .link
     {
         color: #D35050 !important;
     }
@@ -94,7 +96,9 @@ dark "Dark Mode" <<<EOT
     .mon-stat-block .tooltip-hover.spell-tooltip:hover, 
     .mon-stat-block .tooltip-hover.spell-tooltip:focus, 
     .mon-stat-block .tooltip-hover.spell-tooltip:active,
-    .mon-stat-block .tooltip-hover.spell-tooltip:visited{
+    .mon-stat-block .tooltip-hover.spell-tooltip:visited,
+    .listing .info .row.spell-name .link:hover,
+    .listing .info .row.spell-name .link{
         color: #896CE0 !important;
     }
     .tooltip-hover.magic-item-tooltip, 
@@ -149,6 +153,10 @@ dark "Dark Mode" <<<EOT
     {
         color: var(--font-color) !important;
     }
+    .list-row-name-primary-text .link:hover,
+    .list-row-name-primary-text .link{
+        color: #ee8600 !important;
+    }
 
 EOT;
 light "Light Mode" <<<EOT
@@ -169,8 +177,19 @@ light "Light Mode" <<<EOT
     .mon-stat-block .tooltip-hover.spell-tooltip:hover, 
     .mon-stat-block .tooltip-hover.spell-tooltip:focus, 
     .mon-stat-block .tooltip-hover.spell-tooltip:active,
-    .mon-stat-block .tooltip-hover.spell-tooltip:visited{
-        color: #896CE0 !important;
+    .mon-stat-block .tooltip-hover.spell-tooltip:visited,
+    .listing .info .row.spell-name .link:hover,
+    .listing .info .row.spell-name .link{
+        color: #704cd9 !important;
+    }
+    .list-row-name-primary-text .link:hover,
+    .list-row-name-primary-text .link{
+        color: #ee8600 !important;
+    }
+    
+    .listing .info .row.monster-name .link:hover,
+    .listing .info .row.monster-name .link{
+        color: #bc0f0f !important;
     }
 EOT;
 }
@@ -947,7 +966,9 @@ div#site{
     .p-forum-a .b-table td:nth-child(odd),
     .beyond20-header a,
     #content a.ajax-post.label.no-refresh,
-    #content a.button
+    #content a.button,
+    .listing .info .row.item-name .name .link,
+    .vehicle-stat-block__name-link
     {
 		color: /*[[fontColor]]*/ !important;
 	}
@@ -1026,7 +1047,9 @@ div#site{
     .forum-post-body a:hover,
     .forum-post-body a:visited,
     body.body-page .container a,
-    body.body-search .container a{
+    body.body-search .container a,
+    body.body-rpgigear .container a,
+    body.body-rpgrace .container a{
 		color: /*[[linkColor]]*/ !important
 	}
     
