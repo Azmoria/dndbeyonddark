@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.57
+@version      1.3.58
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -830,7 +830,9 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .site .ct-button.ct-theme-button--outline:active, 
     .site .ct-button.ct-theme-button--outline:focus, 
     .site .ct-button.ct-theme-button--outline:hover,
-    .ddbc-collapsible__header-meta
+    .ddbc-collapsible__header-meta,
+    .ct-currency-pane__adjuster-type-name,
+    .ct-button__content
     {
         color: /*[[fontColor]]*/ !important;
     }
@@ -867,7 +869,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     li.ct-character-sheet-MuiListItem-button:hover,
     .ct-inventory__action:hover,
     .ct-sidebar__pane-content .ddbc-collapsible__header:hover,
-    .ct-sidebar__pane-content .ddbc-collapsible__header:hover .ddbc-item-name{
+    .ct-sidebar__pane-content .ddbc-collapsible__header:hover .ddbc-item-name,
+    span.ct-currency-pane__lifestyle-detail-header{
         color: /*[[highlightColor]]*/ !important;
     }
 
