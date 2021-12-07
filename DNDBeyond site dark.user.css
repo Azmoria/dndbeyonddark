@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.97
+@version      1.2.98
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -1401,7 +1401,9 @@ div#site{
     table.listing-warning-record th,
     .compendium-toc-block-header,
     .compendium-toc-full-header,
-    .body-category-details .section-compendium-content .page-heading
+    .body-category-details .section-compendium-content .page-heading,
+    body:not(.body-forum):not(.section-posts):not(.section-changelog):not(.body-privatemessage-details) blockquote::before, 
+    body:not(.body-forum):not(.section-posts):not(.section-changelog):not(.body-privatemessage-details) blockquote::after
     {
 		background-image: none !important;
 	}
