@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.101
+@version      1.2.102
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -81,8 +81,8 @@ dark "Dark Mode" <<<EOT
     .mon-stat-block__name .mon-stat-block__name-link:hover, 
     .mon-stat-block__name .mon-stat-block__name-link:visited,
     .listing .info .row.monster-name .link:hover,
-    .listing .info .row.monster-name .link
-    {
+    .listing .info .row.monster-name .link,
+    #site .ddb-campaigns-list-item-footer-buttons-item-delete{
         color: #D35050 !important;
     }
 
@@ -968,7 +968,11 @@ div#site{
     #content a.ajax-post.label.no-refresh,
     #content a.button,
     .listing .info .row.item-name .name .link,
-    .vehicle-stat-block__name-link
+    .vehicle-stat-block__name-link,
+    body.body-privatemessage .container .conversation-row a,
+    .encounter-row__subtext,
+    .loading-status-indicator__subtext,
+    .encounter-monster__subtext
     {
 		color: /*[[fontColor]]*/ !important;
 	}
@@ -1046,11 +1050,18 @@ div#site{
     .forum-post-body a,
     .forum-post-body a:hover,
     .forum-post-body a:visited,
-    body.body-page .container a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip),
-    body.body-search .container a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip),
-    body.body-rpgigear .container a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip),
-    body.body-rpgrace .container a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip),
-    body.body-rpgclass .container a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip){
+    body.body-page .container a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip):not(.b-pagination-item):not([style^="color"]),
+    body.body-search .container a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip):not(.b-pagination-item):not([style^="color"]),
+    body.body-rpgigear .container a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip):not(.b-pagination-item):not([style^="color"]),
+    body.body-rpgrace .container a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip):not(.b-pagination-item):not([style^="color"]),
+    body.body-rpgclass .container a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip):not(.b-pagination-item):not([style^="color"]),
+    body.body-user .container a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip):not(.b-pagination-item):not([rel^="prev"]):not([rel^="next"]):not([style^="color"]),
+    .b-pagination-a .b-pagination-list>.b-pagination-item>a:hover,
+    .body-privatemessage .container .p-comment-wrapper a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip):not(.b-pagination-item):not([rel^="prev"]):not([rel^="next"]):not([style^="color"]),
+    .body-privatemessage .container .conversation-row a:hover,
+    .encounter-monster__details a,
+    #site .ddb-campaigns-list-item-footer-buttons-item,
+    .ddb-campaigns-list-item-body-sharing-box{
 		color: /*[[linkColor]]*/ !important
 	}
     
@@ -1142,7 +1153,8 @@ div#site{
     table.listing-warning-record th,
     table.listing-warning-record td,
     .compendium-toc-block-text,
-    .compendium-image>figcaption a.ddb-lightbox-outer
+    .compendium-image>figcaption a.ddb-lightbox-outer,
+    .ddb-campaigns-list-item-body-sharing-box
     {
 		border-width: /*[[borderWidth]]*/
 		!important;
@@ -1213,10 +1225,11 @@ div#site{
     
     .input-select__clear-button,
     .equipment-manager-attuned-add,
-    .body-forum li.b-pagination-item .s-active,
-    .body-forum li.b-pagination-item a[rel="prev"]:hover, 
-    .body-forum li.b-pagination-item a[rel="next"]:hover, 
-    .body-forum li.b-pagination-item .b-pagination-item:hover,
+    li.b-pagination-item .s-active,
+    li.b-pagination-item a[rel="prev"]:hover, 
+    li.b-pagination-item a[rel="next"]:hover, 
+    li.b-pagination-item .b-pagination-item:hover,
+    .b-pagination-a .b-pagination-list>.b-pagination-item>a:hover,
     .section-compendium .site-bar, 
     .section-adventures .site-bar, 
     .section-rules .site-bar, 
@@ -2079,7 +2092,12 @@ div#site{
     .body-forum li.b-pagination-item .s-active,
     .body-forum li.b-pagination-item a[rel="prev"]:hover, 
     .body-forum li.b-pagination-item a[rel="next"]:hover, 
-    .body-forum li.b-pagination-item .b-pagination-item:hover{
+    .body-forum li.b-pagination-item .b-pagination-item:hover,
+    .body-user li.b-pagination-item .s-active,
+    .body-user li.b-pagination-item a[rel="prev"]:hover, 
+    .body-user li.b-pagination-item a[rel="next"]:hover, 
+    .body-user li.b-pagination-item .b-pagination-item:hover,
+    .b-pagination-a .b-pagination-list>.b-pagination-item>a:hover{
         background-color: /*[[backgroundColor]]*/ !important;
          box-shadow: inset 0px 0px 4px 0px /*[[linkColor]]*/ !important;
     }
@@ -2329,7 +2347,10 @@ div#site{
     .forum-thread-row.has-dev-comments .col-thread::before{
         opacity: .5 !important;   
     }
-    .static-container-details .content-container .compendium-header-subtitle{
+    .static-container-details .content-container .compendium-header-subtitle,
+    .encounter-row__subtext,
+    .loading-status-indicator__subtext,
+    .encounter-monster__subtext{
         opacity: .8 !important;   
     }
     
