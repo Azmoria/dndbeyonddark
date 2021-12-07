@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.102
+@version      1.2.103
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -82,7 +82,10 @@ dark "Dark Mode" <<<EOT
     .mon-stat-block__name .mon-stat-block__name-link:visited,
     .listing .info .row.monster-name .link:hover,
     .listing .info .row.monster-name .link,
-    #site .ddb-campaigns-list-item-footer-buttons-item-delete{
+    #site .ddb-campaigns-list-item-footer-buttons-item-delete,
+    #site .ddb-campaigns-character-card-footer-links-item-remove,
+    #site .ddb-campaigns-character-card-footer-links-item-remove,
+    #site .ddb-campaigns-character-card-footer-links-item-delete{
         color: #D35050 !important;
     }
 
@@ -98,7 +101,8 @@ dark "Dark Mode" <<<EOT
     .mon-stat-block .tooltip-hover.spell-tooltip:active,
     .mon-stat-block .tooltip-hover.spell-tooltip:visited,
     .listing .info .row.spell-name .link:hover,
-    .listing .info .row.spell-name .link{
+    .listing .info .row.spell-name .link,
+    a[style^="color: #704cd9;"]{
         color: #896CE0 !important;
     }
     .tooltip-hover.magic-item-tooltip, 
@@ -190,6 +194,11 @@ light "Light Mode" <<<EOT
     .listing .info .row.monster-name .link:hover,
     .listing .info .row.monster-name .link{
         color: #bc0f0f !important;
+    }
+
+    #site .ddb-campaigns-character-card-footer-links-item-remove,
+    #site .ddb-campaigns-character-card-footer-links-item-delete{
+        color: #C65854 !important;
     }
 EOT;
 }
@@ -1061,7 +1070,10 @@ div#site{
     .body-privatemessage .container .conversation-row a:hover,
     .encounter-monster__details a,
     #site .ddb-campaigns-list-item-footer-buttons-item,
-    .ddb-campaigns-list-item-body-sharing-box{
+    .ddb-campaigns-list-item-body-sharing-box,
+    #site .ddb-campaigns-character-card-footer-links-item,
+    #site .ddb-campaigns-character-card-campaign-links-campaign-link,
+    body.body-rpgclass .static-container-details .content-container .table-overflow-wrapper a[style^="color: rgba(238, 134, 0, 1)"]{
 		color: /*[[linkColor]]*/ !important
 	}
     
@@ -2284,10 +2296,7 @@ div#site{
         -webkit-mask-repeat: no-repeat;
         mask-repeat: no-repeat;
         background: /*[[linkColor]]*/;
-        content: '';
-    
-    
-        
+        content: '';     
     }
         
    
@@ -2333,6 +2342,29 @@ div#site{
         content: '';    
         -webkit-mask-size: contain;
     }
+    
+    #site .ddb-campaigns-character-card-footer-links-item-view::before{
+        background-image: none !important;
+        -webkit-mask-image: url("https://media.dndbeyond.com/app-portal/ddb-character-listing-client/sheet-icon-dark.d0d3ef48.svg");
+        mask-image: url("https://media.dndbeyond.com/app-portal/ddb-character-listing-client/sheet-icon-dark.d0d3ef48.svg");
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        background: /*[[linkColor]]*/;
+        content: '';    
+        -webkit-mask-size: cover;
+    }
+    
+    #site .ddb-campaigns-character-card-footer-links-item-edit::before{
+        background-image: none !important;
+        -webkit-mask-image: url(https://media.dndbeyond.com/app-portal/ddb-character-listing-client/builders.06283a4b.svg);
+        mask-image: url(https://media.dndbeyond.com/app-portal/ddb-character-listing-client/builders.06283a4b.svg);
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        background: /*[[linkColor]]*/;
+        content: '';    
+        -webkit-mask-size: cover;
+    }
+    
     
     .site-search__form input{
         background: none !important;   
