@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.96
+@version      1.2.97
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -614,7 +614,8 @@ div#site{
     table.listing-warning-record th,
     .error-page-title,
     .error-page-body-text, 
-    .error-page-body-text-byline
+    .error-page-body-text-byline,
+    .container .compendium-image>figcaption a.ddb-lightbox-outer
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
@@ -961,7 +962,7 @@ div#site{
     .article-main a,
     .sidebar-menu a,
     .compendium-toc-block-header h2 a,
-    body:not(.body-forum) .primary-content a:not(.spell-tooltip):not(.magic-item-tooltip):not(.monster-tooltip):not(.b-pagination-item a):not(.button-material-ui),
+    body.body-category .primary-content a:not(.spell-tooltip):not(.magic-item-tooltip):not(.monster-tooltip):not(.b-pagination-item a):not(.button-material-ui),
     body.body-forum .single-column #content [style^="color: rgba(0, 0, 0, 1)"] a, 
     body.body-forum .single-column #content [style^="color: rgba(51, 51, 51, 1)"] a,
     body.body-forum .single-column #content [style^="color: rgba(128, 128, 128, 1)"] a,
@@ -1023,7 +1024,8 @@ div#site{
     .listing-forum-search .statistics .statistics-body a:active:hover,
     .forum-post-body a,
     .forum-post-body a:hover,
-    .forum-post-body a:visited{
+    .forum-post-body a:visited,
+    body.body-page .container a{
 		color: /*[[linkColor]]*/ !important
 	}
     
@@ -1114,7 +1116,8 @@ div#site{
    .section-changelog .p-article-a,
     table.listing-warning-record th,
     table.listing-warning-record td,
-    .compendium-toc-block-text
+    .compendium-toc-block-text,
+    .compendium-image>figcaption a.ddb-lightbox-outer
     {
 		border-width: /*[[borderWidth]]*/
 		!important;
@@ -1478,8 +1481,8 @@ div#site{
 	.RPGFeat-listing .more-info::after,
 	.RPGBackground-listing .more-info::after,
 	.RPGSubclass-listing .more-info::after,
-	body:not(.body-forum):not(.section-posts):not(.section-changelog):not(.body-privatemessage-details) blockquote::before,
-	body:not(.body-forum):not(.section-posts):not(.section-changelog):not(.body-privatemessage-details) blockquote::after,
+	body.body-category blockquote::before,
+	body.body-category blockquote::after,
 	.compendium-toc-full::after,
 	.section-posts .p-article-a::after,
 	.section-changelog .p-article-a::after,
@@ -1499,7 +1502,7 @@ div#site{
 	.RPGFeat-listing .more-info,
 	.RPGBackground-listing .more-info,
 	.RPGSubclass-listing .more-info,
-	body:not(.body-forum):not(.section-posts):not(.section-changelog):not(.body-privatemessage-details) blockquote,
+	body.body-category blockquote,
 	.section-posts .p-article-a,
 	.more-info,
 	.details-container,
@@ -2027,7 +2030,8 @@ div#site{
     .mce-menu-item-normal.mce-active,
     body.body-privatemessage .single-column #content .u-dropDown .u-dropDownMenu li>a:hover,
     .ui-widget-content a:hover,
-    .toggle-button .toggle-in-collection
+    .toggle-button .toggle-in-collection,
+    .compendium-image>figcaption a.ddb-lightbox-outer:hover
     {
         background-color: /*[[backgroundColor]]*/ !important;
         box-shadow: inset 0px 0px 30px 0px /*[[linkColor]]*/ !important;
