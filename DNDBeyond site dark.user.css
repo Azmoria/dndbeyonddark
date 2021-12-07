@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.100
+@version      1.2.101
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -1046,10 +1046,11 @@ div#site{
     .forum-post-body a,
     .forum-post-body a:hover,
     .forum-post-body a:visited,
-    body.body-page .container a,
-    body.body-search .container a,
-    body.body-rpgigear .container a,
-    body.body-rpgrace .container a{
+    body.body-page .container a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip),
+    body.body-search .container a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip),
+    body.body-rpgigear .container a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip),
+    body.body-rpgrace .container a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip),
+    body.body-rpgclass .container a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip){
 		color: /*[[linkColor]]*/ !important
 	}
     
