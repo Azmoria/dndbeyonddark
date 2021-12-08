@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.109
+@version      1.2.110
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -154,7 +154,8 @@ dark "Dark Mode" <<<EOT
     #site .ddb-campaigns-list-item-footer-buttons-item-delete,
     #site .ddb-campaigns-character-card-footer-links-item-remove,
     #site .ddb-campaigns-character-card-footer-links-item-remove,
-    #site .ddb-campaigns-character-card-footer-links-item-delete{
+    #site .ddb-campaigns-character-card-footer-links-item-delete,
+    .list-row-primary-text-monster{
         color: #D35050 !important;
     }
 
@@ -171,7 +172,8 @@ dark "Dark Mode" <<<EOT
     .mon-stat-block .tooltip-hover.spell-tooltip:visited,
     .listing .info .row.spell-name .link:hover,
     .listing .info .row.spell-name .link,
-    a[style*="color: #704cd9;"]{
+    a[style*="color: #704cd9;"],
+    .list-row-primary-text-spell{
         color: #896CE0 !important;
     }
     .tooltip-hover.magic-item-tooltip, 
@@ -184,7 +186,8 @@ dark "Dark Mode" <<<EOT
     .mon-stat-block .tooltip-hover.magic-item-tooltip:focus, 
     .mon-stat-block .tooltip-hover.magic-item-tooltip:active, 
     .mon-stat-block .tooltip-hover.magic-item-tooltip:visited,
-    .body-page .p-article-a .p-article-content a.magic-item-tooltip{
+    .body-page .p-article-a .p-article-content a.magic-item-tooltip,
+    .list-row-primary-text-item{
         color: #1877EC !important;
     }
 
@@ -252,7 +255,8 @@ light "Light Mode" <<<EOT
     .mon-stat-block .tooltip-hover.spell-tooltip:active,
     .mon-stat-block .tooltip-hover.spell-tooltip:visited,
     .listing .info .row.spell-name .link:hover,
-    .listing .info .row.spell-name .link{
+    .listing .info .row.spell-name .link,
+    .list-row-primary-text-spell{
         color: #704cd9 !important;
     }
     .list-row-name-primary-text .link:hover,
@@ -261,13 +265,18 @@ light "Light Mode" <<<EOT
     }
     
     .listing .info .row.monster-name .link:hover,
-    .listing .info .row.monster-name .link{
+    .listing .info .row.monster-name .link,
+    .list-row-primary-text-monster{
         color: #bc0f0f !important;
     }
 
     #site .ddb-campaigns-character-card-footer-links-item-remove,
     #site .ddb-campaigns-character-card-footer-links-item-delete{
         color: #C65854 !important;
+    }
+
+    .list-row-primary-text-item{
+        color: #0f5cbc !important;
     }
 EOT;
 }
@@ -1146,7 +1155,8 @@ div#site{
     .ddb-campaigns-list-item-body-sharing-box,
     #site .ddb-campaigns-character-card-footer-links-item,
     #site .ddb-campaigns-character-card-campaign-links-campaign-link,
-    body.body-rpgclass .static-container-details .content-container .table-overflow-wrapper a[style*="color: rgba(238, 134, 0, 1)"]{
+    body.body-rpgclass .static-container-details .content-container .table-overflow-wrapper a[style*="color: rgba(238, 134, 0, 1)"],
+    .list-row-homebrew-creation .list-row-name-primary-text a.link{
 		color: /*[[linkColor]]*/ !important
 	}
     
