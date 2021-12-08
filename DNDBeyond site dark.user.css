@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.108
+@version      1.2.109
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -308,12 +308,12 @@ var(--custom-icon-filter) EOT;
 custom "Custom iFrame filter" <<<EOT
 var(--custom-frame-filter) EOT;
 dark "Dark iFrames" <<<EOT
-invert(100%)  EOT;
-light "Light iFrames" <<<EOT
+invert(100%) hue-rotate(180deg) saturate(150%) EOT;
+light "Light iFrames (Dndbeyond default - no filter)" <<<EOT
 none EOT;
 
 }
-@var text customFrameFilter "Custom Frame Filter" "invert(90%) sepia(0%) hue-rotate(180deg) saturate(150%)"
+@var text customFrameFilter "Custom Frame Filter" "invert(90%) sepia(0%) hue-rotate(180deg) saturate(180%)"
 ==/UserStyle==*/
 /*Thanks to Hyrkali for the example code and push to work on the forums themeing*/
 /* Alternative Color for font to match DND Beyond Green #47D18C */
@@ -597,7 +597,6 @@ div#site{
     .add-combatant-modal__controls,
     .listing .no-results,
     .starting-equipment-rule-slot-inactive,
-    .spoiler,
     .p-forum-poll .b-poll-a .b-poll-voting .form-field-string-choice-field>label:first-child,
     .gamelog-button,
     .dice-set__info__desc,
@@ -733,6 +732,7 @@ div#site{
     body.body-privatemessage .single-column #content .u-dropDown .u-dropDownMenu li>a,
     body.body-privatemessage .single-column #content .u-dropDown .u-dropDownMenu,
     .comment .forum-post-body-content .spoiler,
+    .p-comment-content .spoiler,
     body.body-forum blockquote
     {
         background-color: /*[[forumSecondaryColor]]*/ !important;
@@ -1051,7 +1051,10 @@ div#site{
     .encounter-row__subtext,
     .loading-status-indicator__subtext,
     .encounter-monster__subtext,
-    .list-row-name-secondary-text
+    .list-row-name-secondary-text,
+    .comment .forum-post-body-content .spoiler,
+    .p-comment-content .spoiler,
+    #tinymce>.spoiler
     {
 		color: /*[[fontColor]]*/ !important;
 	}
@@ -2472,9 +2475,6 @@ div#site{
     }
     
 
-    
-    
-    
     .encounter-row__name.is-missing-name,
     .listing-filters .special-select-item.t::after,
     .listing-filters .special-select-item.f::after{
@@ -2520,7 +2520,6 @@ div#site{
     }
     
 
-    
     .ddbc-truncated-content--is-hidden .ddbc-truncated-content__content:after {
         background: linear-gradient(0deg, /*[[backgroundColor]]*/ 6%,hsla(0,0%,100%,0));
     }
@@ -2528,6 +2527,31 @@ div#site{
     .mon-stat-block a{
         text-decoration: none !important;   
     }
+    
+    /*Firefox/other broswers where iframe contents are targetable*/
+        html>#tinymce>table tr,
+        html>#tinymce>blockquote{
+            background: none !important;
+         }
+    
+    
+        html>#tinymce table, 
+        html>#tinymce table th, 
+        html>#tinymce table td {
+            border: 1px solid /*[[borderColor]]*/ !important;
+        }
+    
+        html>#tinymce>span,
+        html>#tinymce>p,
+        html>#tinymce>div>p,
+        html>#tinymce>div>span,
+        html>#tinymce>table,
+        html>#tinymce>blockquote,
+        html>#tinymce>div.spoiler:before
+        {
+            filter: /*[[iFrameFilter]]*/ !important;         
+        }
+    /* end frame fixes */
       
     
     @media screen and (max-width: 767px){
@@ -2637,49 +2661,10 @@ div#site{
             color: /*[[linkColor]]*/ !important;    
         }
     }
-    @supports (-moz-appearance:none) {
-        #field-body-wysiwyg_ifr,
-        .mce-edit-area iframe {
-            filter: none !important;
-        }
-        
-        iFrame#field-body-wysiwyg_ifr html{
-            background: /*[[forumPostColor]]*/ !important;
-        }
-        html>#tinymce.mce-content-body{
-            background-color: /*[[forumPostColor]]*/ !important; 
-        }
-        .source-quote {
-            background: inherit !important
-        }
-        
-        #tinymce .source-quote,
-        #tinymce table:not(.mceLayout):not(.mceToolbar):not(.mceListBox):not(.mceSplitButton) tr td:not(.col-status),
-        #tinymce .spoiler,
-        #tinymce blockquote,
-        #tinymce table, 
-        #tinymce table th, 
-        #tinymce table td
-        {
-            background-color: /*[[forumSecondaryColor]]*/ !important;
-        } 
-        
-        #tinymce table, 
-        #tinymce table th, 
-        #tinymce table td,
-        #tinymce .source-quote .quote-source{
-            color: /*[[fontColor]]*/ !important;       
-        }
-        
-        #tinymce table tr{
-            background: transparent !important;       
-        }
-        
-        #tinymce .source-quote .quote-source{
-            background-color: /*[[forumTertiaryColor]]*/ !important;           
-        }
-        
-    }
+
+    
+      
+      
     
 }
 
@@ -2690,7 +2675,7 @@ div#site{
     --semi: /*[[backgroundColor]]*/aa;
     --opaque: /*[[backgroundColor]]*/ff;
     --custom-icon-filter: /*[[iconFilter]]*/;
-    --custom-iFrame-filter: /*[[customFrameFilter]]*/;
+    --custom-iFrame-filter: /*[[customFrameFilter]]*/; 
     }
 	::-webkit-scrollbar {
 		width: 3px;
