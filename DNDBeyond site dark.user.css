@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.107
+@version      1.2.108
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -18,7 +18,8 @@ dark "Dark Mode" <<<EOT
         html>#tinymce [style*="color: rgb(0, 0, 0"],
         html>#tinymce [style*="color: rgb(51, 51, 51"],
         html>#tinymce [style*="color: rgb(128, 128, 128"],
-        html>#tinymce [style*="color: rgb(36, 37, 39)"]
+        html>#tinymce [style*="color: rgb(36, 37, 39)"],
+        html>#tinymce [style*="color: #000000"]
         {
             color: var(--font-color) !important;
         }
@@ -2652,20 +2653,30 @@ div#site{
             background: inherit !important
         }
         
-        #tinymce  td,
-        #tinymce .forum-thread-row td,
         #tinymce .source-quote,
         #tinymce table:not(.mceLayout):not(.mceToolbar):not(.mceListBox):not(.mceSplitButton) tr td:not(.col-status),
         #tinymce .spoiler,
-        #tinymce blockquote
+        #tinymce blockquote,
+        #tinymce table, 
+        #tinymce table th, 
+        #tinymce table td
         {
             background-color: /*[[forumSecondaryColor]]*/ !important;
         } 
-
-
+        
+        #tinymce table, 
+        #tinymce table th, 
+        #tinymce table td,
         #tinymce .source-quote .quote-source{
-            background-color: /*[[forumTertiaryColor]]*/ !important;
-            color: /*[[fontColor]]*/ !important;
+            color: /*[[fontColor]]*/ !important;       
+        }
+        
+        #tinymce table tr{
+            background: transparent !important;       
+        }
+        
+        #tinymce .source-quote .quote-source{
+            background-color: /*[[forumTertiaryColor]]*/ !important;           
         }
         
     }
