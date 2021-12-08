@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.104
+@version      1.2.105
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -13,6 +13,74 @@
 @var color fontColor "Font Color" #ddd
 @advanced dropdown fontContrast "Font Contrast Colors" {
 dark "Dark Mode" <<<EOT
+
+    @supports (-moz-appearance:none){
+        html>#tinymce [style^="color: rgb(0, 0, 0"],
+        html>#tinymce [style^="color: rgb(51, 51, 51"],
+        html>#tinymce [style^="color: rgb(128, 128, 128"],
+        html>#tinymce [style^="color: rgb(36, 37, 39)"]
+        {
+            color: var(--font-color) !important;
+        }
+        html>#tinymce [style^="color: rgb(51, 51, 0)"]
+        {
+            color: rgba(100, 100, 0, 1) !important;
+
+        }
+
+        html>#tinymce [style^="color: rgb(0, 51, 0)"]
+        {
+            color: rgb(24, 80, 24) !important;         
+        }
+
+         html>#tinymce [style^="color: rgb(0, 51, 102)"]
+        {
+            color: rgba(0, 101, 152, 1) !important;
+
+        }
+
+        html>#tinymce [style^="color: rgb(0, 0, 255"]{
+            color: rgb(70, 100, 255) !important;
+        }
+
+        html>#tinymce [style^="color: rgb(255, 0, 255"]
+        {
+            color: rgba(255, 0, 255, .66) !important;  
+        }
+
+        html>#tinymce [style^="color: rgb(16, 16, 255"]
+        {
+            color: rgba(73, 73, 255, 1) !important;  
+        }
+        html>#tinymce [style^="color: rgb(0, 0, 128"]
+        {
+            color: rgb(43, 43, 248) !important;  
+        }
+        html>#tinymce [style^="color: rgb(255, 0, 0"]
+        {
+            color: rgb(162, 28, 28) !important;  
+        }
+        html>#tinymce [style^="color: rgb(128, 0, 0"]
+        {
+            color: rgb(138, 29, 29) !important;  
+        }
+        html>#tinymce [style^="color: rgb(51, 51, 153"]
+        {
+            color: rgb(89, 89, 227) !important;  
+        } 
+        html>#tinymce [style^="color:purple"]
+        {
+            color: #d465d4 !important;  
+        } 
+
+        html>#tinymce [style^="color: rgb(255, 0, 0"]
+        {
+            color: #D35050 !important;
+        }
+
+
+    }
+    
     .single-column #content .p-forum-a .p-comment-wrapper [style^="color: rgba(51, 51, 0, 1)"]
     {
         color: rgba(100, 100, 0, 1) !important;
@@ -2568,7 +2636,20 @@ div#site{
             color: /*[[linkColor]]*/ !important;    
         }
     }
-    
+    @supports (-moz-appearance:none) {
+        #field-body-wysiwyg_ifr,
+        .mce-edit-area iframe {
+            filter: none !important;
+        }
+        
+        iFrame#field-body-wysiwyg_ifr html{
+            background: /*[[forumPostColor]]*/ !important;
+        }
+        html>#tinymce.mce-content-body{
+            background-color: transparent !important; 
+        }
+        
+    }
     
 }
 
