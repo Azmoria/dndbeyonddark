@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.111
+@version      1.2.112
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -2575,15 +2575,21 @@ div#site{
         background: transparent !important;  
     }
     
-     div.t-submit-hb-content-modal .ddb-modal-header:after {
-        content: '\A\26A0  Warning once you submit this homebrew: \26A0\A\A• No further edits will be possible\A• You cannot unpublish it\A• You can create new versions but all prior versions remain published';
+     a.ajax-post.button[href*="/homebrew/creations/submit"]:after {
+        content: '\26A0  Warning once you submit this homebrew: \26A0\A\A• No further edits will be possible\A• You cannot unpublish it\A• You can create new versions but all prior versions remain published';
         white-space: pre-wrap;  
-        position: relative;
+        position: absolute;
+        top: 290px;
         display: block;
-        font-size: 11pt;
+        font-size: 8pt;
         text-align:center;
-        color: #F00;
+        color: #e34444;
         max-width: 500px;
+        background: /*[[backgroundColor]]*/;
+        border-width: /*[[borderWidth]]*/;
+        border-color: /*[[borderColor]]*/;
+        border-style: /*[[borderStyle]]*/;
+        
     }
     
     /*fix for unable to change race if currently selected one doesn't have traits set.*/
