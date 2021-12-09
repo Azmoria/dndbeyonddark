@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.112
+@version      1.2.113
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -145,6 +145,7 @@ dark "Dark Mode" <<<EOT
     .body-forum .p-article-a .p-article-content a.monster-tooltip,
     .single-column #content .p-forum-a .p-comment-wrapper [style*="color:red"],
     .single-column #content .p-forum-a .p-comment-wrapper [style*="color: rgba(255, 0, 0, 1)"],
+    [style*="color: rgba(255, 0, 0, 1)"],
     .mon-stat-block__name .mon-stat-block__name-link, 
     .mon-stat-block__name .mon-stat-block__name-link:active, 
     .mon-stat-block__name .mon-stat-block__name-link:hover, 
@@ -155,7 +156,10 @@ dark "Dark Mode" <<<EOT
     #site .ddb-campaigns-character-card-footer-links-item-remove,
     #site .ddb-campaigns-character-card-footer-links-item-remove,
     #site .ddb-campaigns-character-card-footer-links-item-delete,
-    .list-row-primary-text-monster{
+    .list-row-primary-text-monster,
+    .homebrew-creation-actions-item-delete,
+    .homebrew-creation-actions-item-delete:hover,
+    .ddb-homebrew-rejection-label{
         color: #D35050 !important;
     }
 
@@ -1227,7 +1231,9 @@ div#site{
     #site .ddb-campaigns-character-card-footer-links-item,
     #site .ddb-campaigns-character-card-campaign-links-campaign-link,
     body.body-rpgclass .static-container-details .content-container .table-overflow-wrapper a[style*="color: rgba(238, 134, 0, 1)"],
-    .list-row-homebrew-creation .list-row-name-primary-text a.link{
+    .list-row-homebrew-creation .list-row-name-primary-text a.link,
+    .more-info a:not(.homebrew-creation-actions-item-delete):not(.tooltip-hover),
+    .party-selectors__stats a{
 		color: /*[[linkColor]]*/ !important
 	}
     
@@ -2618,7 +2624,8 @@ div#site{
     
      /*[[iFrameFilter]]*/ 
     
-    .mon-stat-block a{
+    .mon-stat-block a,
+    .more-info a{
         text-decoration: none !important;   
     }
 
