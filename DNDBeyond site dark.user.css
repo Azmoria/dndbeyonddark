@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.110
+@version      1.2.111
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -315,11 +315,80 @@ var(--custom-icon-filter) EOT;
 @var text iconFilter "Custom Icon css filter" "invert(75%) sepia(100%) hue-rotate(160deg) saturate(150%)"
 @advanced dropdown iFrameFilter "iFrame filters"{
 custom "Custom iFrame filter" <<<EOT
-var(--custom-frame-filter) EOT;
+    
+
+    #field-body-wysiwyg_ifr,
+    .mce-edit-area iframe{
+         filter: var(--custom-frame-filter) !important; 
+    }
+    html>#tinymce>div.spoiler{
+        background-color: var(--forum-secondary-color);
+    }
+    html>#tinymce *:not([style*="color"]):not(a){
+        color: var(--font-color) !important;
+    }
+    html>#tinymce>table tr,
+    html>#tinymce>blockquote,
+    html>#tinymce>table th,
+    html>#tinymce>div.spoiler>table th,
+    html>#tinymce>div.spoiler>table tr,
+    html>#tinymce>div.spoiler>blockquote{
+        background: none !important;
+    }
+    html>#tinymce table, 
+    html>#tinymce table th, 
+    html>#tinymce table td {
+        border: 1px solid var(--border-color) !important;
+    }
+    html>#tinymce>*
+    {
+       filter: invert(100%) hue-rotate(180deg) contrast(120%) !important;        
+    }
+   
+EOT;
 dark "Dark iFrames" <<<EOT
-invert(100%) hue-rotate(180deg) saturate(150%) EOT;
+    
+
+    
+    #field-body-wysiwyg_ifr,
+    .mce-edit-area iframe{
+         filter: invert(100%) hue-rotate(180deg) saturate(150%) !important; 
+    }
+    html>#tinymce div.spoiler{
+        background-color: var(--forum-secondary-color);
+    }
+    html>#tinymce *:not([style*="color"]):not(a){
+        color: var(--font-color) !important;
+    }
+    html>#tinymce>table tr,
+    html>#tinymce>blockquote,
+    html>#tinymce>table th,
+    html>#tinymce>div.spoiler table th,
+    html>#tinymce>div.spoiler table tr,
+    html>#tinymce>div.spoiler blockquote{
+        background: none !important;
+    }
+    html>#tinymce table, 
+    html>#tinymce table th, 
+    html>#tinymce table td {
+        border: 1px solid var(--border-color) !important;
+    }
+    html>#tinymce>*
+    {
+       filter: invert(100%) hue-rotate(180deg) !important;        
+    }
+}
+
+EOT;
 light "Light iFrames (Dndbeyond default - no filter)" <<<EOT
-none EOT;
+    html>#tinymce *:not([style*="color"]):not(a){
+        color: #000 !important;
+    }
+    html>#tinymce blockquote{
+        background-color: #fff !important;
+    }
+
+EOT;
 
 }
 @var text customFrameFilter "Custom Frame Filter" "invert(90%) sepia(0%) hue-rotate(180deg) saturate(180%)"
@@ -354,6 +423,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     --custom-icon-filter: /*[[iconFilter]]*/;
     --custom-frame-filter: /*[[customFrameFilter]]*/;
     --font-color: /*[[fontColor]]*/;
+    --border-color: /*[[borderColor]]*/;
+    --forum-secondary-color: /*[[forumSecondaryColor]]*/;
     }
         
 div#site{
@@ -720,7 +791,8 @@ div#site{
     .error-page-title,
     .error-page-body-text, 
     .error-page-body-text-byline,
-    .container .compendium-image>figcaption a.ddb-lightbox-outer
+    .container .compendium-image>figcaption a.ddb-lightbox-outer,
+    .ddb-homebrew-portal .builder-type-choice-item
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
@@ -1062,8 +1134,7 @@ div#site{
     .encounter-monster__subtext,
     .list-row-name-secondary-text,
     .comment .forum-post-body-content .spoiler,
-    .p-comment-content .spoiler,
-    #tinymce>.spoiler
+    .p-comment-content .spoiler
     {
 		color: /*[[fontColor]]*/ !important;
 	}
@@ -1164,13 +1235,7 @@ div#site{
     
        /*[[fontContrast]]*/
     
-	.quick-menu-item-label,
-    a.character-button-block,
-    #encounter-builder-root .input-select__dropdown-wrapper,
-    .portrait-name-avatar-none,
-    .adventure-chapter-header{
-		border: none;
-	}
+	
 	.quick-menu-item-active > .quick-menu-item-label {
 		border-left-color: /*[[linkColor]]*/
 		!important;
@@ -1249,7 +1314,8 @@ div#site{
     table.listing-warning-record td,
     .compendium-toc-block-text,
     .compendium-image>figcaption a.ddb-lightbox-outer,
-    .ddb-campaigns-list-item-body-sharing-box
+    .ddb-campaigns-list-item-body-sharing-box,
+    .body-rpghomebrew .builder-type-choice-item
     {
 		border-width: /*[[borderWidth]]*/
 		!important;
@@ -1258,6 +1324,14 @@ div#site{
 		border-color: /*[[borderColor]]*/
 		!important;
         outline: none !important;
+	}
+    
+    .quick-menu-item-label,
+    .body-rpghomebrew a.character-button-block,
+    #encounter-builder-root .input-select__dropdown-wrapper,
+    .portrait-name-avatar-none,
+    .adventure-chapter-header{
+		border: none !important;
 	}
     
     .compendium-toc-block-text,
@@ -1478,10 +1552,7 @@ div#site{
         fill: /*[[linkColor]]*/ !important;
     }
     
-	#field-body-wysiwyg_ifr,
-    .mce-edit-area iframe{
-        filter: /*[[iFrameFilter]]*/
-    }
+	
     
     
     
@@ -2113,6 +2184,11 @@ div#site{
         background-color: /*[[transparencyBackgroundColor]]*/ !important;
         box-shadow: inset 0 0 25px 0px #eaeaea;
     }
+    
+    .body-rpghomebrew a.character-button-block:hover{
+        box-shadow: none !important;
+        background: none !important;
+    }
     .ac_results li.ac_over a, 
     .ac_results li.ac_over>div{
         background: none !important;        
@@ -2534,35 +2610,13 @@ div#site{
         background: linear-gradient(0deg, /*[[backgroundColor]]*/ 6%,hsla(0,0%,100%,0));
     }
     
+     /*[[iFrameFilter]]*/ 
+    
     .mon-stat-block a{
         text-decoration: none !important;   
     }
-    
-    /*Firefox/other broswers where iframe contents are targetable*/
-        html>#tinymce>table tr,
-        html>#tinymce>blockquote{
-            background: none !important;
-         }
-    
-    
-        html>#tinymce table, 
-        html>#tinymce table th, 
-        html>#tinymce table td {
-            border: 1px solid /*[[borderColor]]*/ !important;
-        }
-    
-        html>#tinymce>span,
-        html>#tinymce>p,
-        html>#tinymce>div>p,
-        html>#tinymce>div>span,
-        html>#tinymce>table,
-        html>#tinymce>blockquote,
-        html>#tinymce>div.spoiler:before
-        {
-            filter: /*[[iFrameFilter]]*/ !important;         
-        }
-    /* end frame fixes */
-      
+
+   
     
     @media screen and (max-width: 767px){
         body.body-forum.responsive-enabled .container .p-forum-a li.forum-announcement .col-status {
@@ -2680,13 +2734,7 @@ div#site{
 
 
 @-moz-document url("https://www.dndbeyond.com/") {
-  :root{
-    --custom-transparency: /*[[backgroundColor]]*//*[[customTransparency]]*/;
-    --semi: /*[[backgroundColor]]*/aa;
-    --opaque: /*[[backgroundColor]]*/ff;
-    --custom-icon-filter: /*[[iconFilter]]*/;
-    --custom-iFrame-filter: /*[[customFrameFilter]]*/; 
-    }
+
 	::-webkit-scrollbar {
 		width: 3px;
 	}
