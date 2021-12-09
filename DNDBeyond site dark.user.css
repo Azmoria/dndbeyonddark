@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.113
+@version      1.2.114
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -805,15 +805,12 @@ div#site{
 	}
    
     
-    #site .forum-row td,
-	#site .forum-thread-row td,
+
     .comment .p-comment-user-background,
     body.body-forum .single-column #content .u-dropDown .u-dropDownMenu li>a,
     body.body-forum .single-column #content .u-dropDown .u-dropDownMenu,
     .comment .source-quote,
-    body.body-forum .single-column #content .p-forum-a table:not(.mceLayout):not(.mceToolbar):not(.mceListBox):not(.mceSplitButton) tr td:not(.col-status),
-    .p-forum-a .announcements .forum-thread-row,
-    .comment .source-quote,
+    body.body-forum .single-column #content .p-forum-a .p-comment-wrapper table:not(.mceLayout):not(.mceToolbar):not(.mceListBox):not(.mceSplitButton) tr td:not(.col-status),
     body.body-privatemessage .single-column #content .u-dropDown .u-dropDownMenu li>a,
     body.body-privatemessage .single-column #content .u-dropDown .u-dropDownMenu,
     .comment .forum-post-body-content .spoiler,
@@ -870,7 +867,10 @@ div#site{
         box-shadow: none;   
     }
     
-    .p-comments-b .p-comment-wrapper {
+    .p-comments-b .p-comment-wrapper,
+    #site .forum-row td,
+	#site .forum-thread-row td,
+    .p-forum-a .announcements .forum-thread-row{
        background: /*[[forumPostColor]]*/ !important;
     }
 	.listing-card__body,
@@ -2200,8 +2200,7 @@ div#site{
         background: none !important;        
     }
     
-    
-   
+
     button.ct-button.character-button.ddbc-button.character-button-block,
     button.ct-button.character-button.ddbc-button.character-button-block:hover,
     .ddbc-dice-roll__dice-value,
@@ -2262,9 +2261,6 @@ div#site{
     .sidebar-menu-top-link{
         background-color: /*[[backgroundColor]]*/ !important;
     }
-
-
-   
     
     .body-forum li.b-pagination-item .s-active,
     .body-forum li.b-pagination-item a[rel="prev"]:hover, 
@@ -2290,7 +2286,7 @@ div#site{
     }
     
     .body-forum .b-breadcrumb-a{
-        background: /*[[forumSecondaryColor]]*/ !important;
+        background: /*[[forumPostColor]]*/ !important;
         box-shadow: 0 0 2px /*[[fontColor]]*/;
     }
     
