@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.115
+@version      1.2.116
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -1138,7 +1138,10 @@ div#site{
     .encounter-monster__subtext,
     .list-row-name-secondary-text,
     .comment .forum-post-body-content .spoiler,
-    .p-comment-content .spoiler
+    .p-comment-content .spoiler,
+    .ddb-homebrew-create-special .listing-body .b-table-a th .asc,
+    .ddb-homebrew-create-special .listing-body .b-table-a th a.selected.desc,
+    .ddb-search-filter-item-label-text
     {
 		color: /*[[fontColor]]*/ !important;
 	}
@@ -1233,7 +1236,8 @@ div#site{
     body.body-rpgclass .static-container-details .content-container .table-overflow-wrapper a[style*="color: rgba(238, 134, 0, 1)"],
     .list-row-homebrew-creation .list-row-name-primary-text a.link,
     .more-info a:not(.homebrew-creation-actions-item-delete):not(.tooltip-hover),
-    .party-selectors__stats a{
+    .party-selectors__stats a,
+    .ddbc-html-content a{
 		color: /*[[linkColor]]*/ !important
 	}
     
@@ -1727,8 +1731,8 @@ div#site{
 		border-color: /*[[borderColor]]*/;
 	}
     
-     .section-posts .p-article-a blockquote{
-        border-top-width: /*[[borderWidth]]*/;
+     .section-posts .p-article-a blockquote{	
+        border-top-width: /*[[borderWidth]]*/;	
     }
         
     .p-user-a .listing .latest-post-item, 
@@ -2541,7 +2545,8 @@ div#site{
      background: #000 !important;   
     }
     
-    .forum-thread-row.has-dev-comments .col-thread::before{
+    .forum-thread-row.has-dev-comments .col-thread::before,
+    div.ddb-search-filter-item:not(.selected)>div>div.ddb-search-filter-item-label-text{
         opacity: .5 !important;   
     }
     .static-container-details .content-container .compendium-header-subtitle,
