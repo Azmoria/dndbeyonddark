@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.116
+@version      1.2.117
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -1237,7 +1237,8 @@ div#site{
     .list-row-homebrew-creation .list-row-name-primary-text a.link,
     .more-info a:not(.homebrew-creation-actions-item-delete):not(.tooltip-hover),
     .party-selectors__stats a,
-    .ddbc-html-content a{
+    .ddbc-html-content a,
+    body[class*="rpg"] .listing-container .listing.b-table-a td a{
 		color: /*[[linkColor]]*/ !important
 	}
     
@@ -2633,6 +2634,40 @@ div#site{
     .more-info a{
         text-decoration: none !important;   
     }
+    
+     /* homebrew sortable table header fix*/
+    .b-table-a th .asc:before, 
+    .b-shoutbox-a .shoutbox-messages>table.listing th .asc:before, 
+    .b-table-a th .desc:before, 
+    .b-shoutbox-a .shoutbox-messages>table.listing th .desc:before {
+    border-top: 4px solid /*[[fontColor]]*/ !important;
+    opacity: 0.3 !important;
+    }
+    
+    .b-table-a th .asc:after, 
+    .b-shoutbox-a .shoutbox-messages>table.listing th .asc:after, 
+    .b-table-a th .desc:after, 
+    .b-shoutbox-a .shoutbox-messages>table.listing th .desc:after{
+    border-bottom: 4px solid /*[[fontColor]]*/ !important;  
+    opacity: 0.3 !important;
+    }
+    
+    .b-table-a th .desc.selected:before, 
+    .b-shoutbox-a .shoutbox-messages>table.listing th .desc.selected:before {
+    border-top-color: /*[[fontColor]]*/ !important;
+    opacity: 1 !important;
+    }
+    
+    .b-table-a th .asc.selected:after, 
+    .b-shoutbox-a .shoutbox-messages>table.listing th .asc.selected:after {
+    border-bottom-color: /*[[fontColor]]*/!important;
+    opacity: 1 !important;
+    }
+    
+    body[class*="rpg"] .listing-container .b-table-a th .asc{
+        padding-right: 12px !important;   
+    }
+   /*end homebrew sortable fix*/
 
    
     
