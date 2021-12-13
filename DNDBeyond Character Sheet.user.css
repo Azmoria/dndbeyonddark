@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.61
+@version      1.3.62
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -78,13 +78,13 @@
 @var color scrollbarColor "Scrollbar Color" #5dbbf7
 @var color rollColor "Rollable Items Color" #5dbbf7
 @advanced dropdown titleToggle "Character Title Background" {
+    off "OFF"<<<EOT
+        background: none !important; 
+    EOT;
     on "Default"<<<EOT
     EOT;
     sheetColor "Sheet Color"<<<EOT
         background: var(--sheet-color);
-    EOT;
-    off "OFF"<<<EOT
-        background: none !important; 
     EOT;
 }
 @var color rollCalcColor "Roll Results Background Color" #030f1acc
@@ -589,7 +589,6 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .site .ct-button.ct-theme-button--outline,
     .ct-character-header-desktop__button,
     .site .ct-button.ct-theme-button--filled:disabled,
-    .site .ct-button.ct-theme-button--filled,
     .site .ct-theme-button--outline.ct-button:hover,
     .site .ct-theme-button--outline.ct-button:active,
     .ct-character-manage-pane__intro,
@@ -600,7 +599,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-combat-mobile,
     .ct-character-sheet-mobile__header .ct-character-header-mobile,
     .ct-section-placeholder__icon,
-    .currency-list-item-row{
+    .currency-list-item-row,
+    .ct-character-sheet__inner .ct-theme-button--filled{
         background: /*[[sheetColor]]*/ !important;
     }
     
@@ -612,8 +612,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ddbc-toggle-field--is-enabled .ddbc-toggle-field__nub,
     .ddbc-toggle-field--is-enabled,
     .ct-spells-filter__active,
-    button.ct-theme-button.ct-remove-button.ct-theme-button--filled.ct-theme-button--interactive.ct-button.character-button.character-button-small,
-    button.ct-theme-button.ct-theme-button--filled.ct-theme-button--interactive.ct-button.character-button.character-button-small,
+    .ct-character-sheet__inner button.ct-theme-button.ct-remove-button.ct-theme-button--filled.ct-theme-button--interactive.ct-button.character-button.character-button-small,
+    .ct-character-sheet__inner button.ct-theme-button.ct-theme-button--filled.ct-theme-button--interactive.ct-button.character-button.character-button-small,
     .ct-dice-preference-manager__primary-info-version,
     .starting-equipment button.ct-button.character-button.character-button,
     .ct-spells-filter__advanced-callout,
@@ -629,7 +629,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-status-summary-mobile__button--active,
     .ct-spell-caster__casting-action-count,
     .ct-reset-pane__action .ct-theme-button--interactive:hover,
-     .ct-reset-pane__hitdie-manager-dice .integrated-dice__container:hover{
+    .ct-reset-pane__hitdie-manager-dice .integrated-dice__container:hover,
+    .ct-sidebar .ct-theme-button--filled{
         box-shadow: 0 0 20px 1px /*[[highlightColor]]*/ inset !important;
         background-color: /*[[sheetColor]]*/ !important;
     }
@@ -673,7 +674,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-equipment-shop__levels button.ct-theme-button.ct-theme-button--filled,
     button.ct-theme-button.ct-theme-button--filled:disabled:hover,
     button.ct-theme-button.ct-theme-button--outline:hover, 
-    button.ct-theme-button.ct-theme-button--outline:active
+    button.ct-theme-button.ct-theme-button--outline:active,
+    .site .ct-theme-button--filled.ct-button:hover
     {
         box-shadow: 0 0 15px 1px /*[[highlightColor]]*/ inset !important;
     }
@@ -683,7 +685,10 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .site .ct-button.ct-theme-button--outline:disabled,
     .site .ct-button.ct-theme-button--outline:disabled:hover,
     .ct-sidebar__pane-control--disabled,
-    .site button.ct-theme-button.ct-theme-button--filled.ct-theme-button--interactive.ct-button.character-button.character-button-small:disabled
+    .site button.ct-theme-button.ct-theme-button--filled.ct-theme-button--interactive.ct-button.character-button.character-button-small:disabled,
+    .site .ct-theme-button--filled.ct-button:disabled,
+    .site button.ct-theme-button.ct-theme-button--filled.ct-theme-button--interactive.ct-button.character-button.character-button-small:disabled:hover,
+    .site .ct-theme-button--filled.ct-button:disabled:hover
     {
         border-color: /*[[fontColor]]*/ !important;
         box-shadow: none !important;
@@ -875,6 +880,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         color: /*[[highlightColor]]*/ !important;
     }
 
+
     /*If you hit the beautify button add a space between each 0 and / */
     .ct-combat__summary-label--outline,
     .ct-inspiration__label,
@@ -890,7 +896,6 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-health-summary__adjuster-field-input,
     .ct-character-header-desktop__button,
     .site .ct-button.ct-theme-button--outline,
-    .site .ct-button.ct-theme-button--filled:disabled,
     .site .ct-button.ct-theme-button--filled,
     .ddbc-campaign-summary,
     .ct-sidebar__pane-gap,
@@ -1063,7 +1068,9 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-decorate-pane__preferences,
     .ct-equipment-manage-pane__custom,
     .dice_result--crit,
-    .ct-character-manage-pane__class-list-item-level
+    .ct-character-manage-pane__class-list-item-level,
+    .ct-inventory__actions--collapsed,
+    .ct-item-detail__infusion
     {
         border-color: /*[[highlightColor]]*/ !important;
     }
@@ -1230,7 +1237,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-character-sheet__inner .ddbc-svg--themed path,
     .ct-character-sheet__inner.ddbc-saving-throws-summary__ability-modifier path,
     .ddbc-chat-bubble-svg path,
-    .ddbc-paint-brush-svg path{
+    .ddbc-paint-brush-svg path,
+    .ct-sidebar .ddbc-svg--themed path{
         fill: /*[[borderColor]]*/ !important;
     }
     
@@ -1775,87 +1783,87 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         border: none;
     }
     
-    [data-original-title="Platinum (10 GP)"] svg path[fill="#b5b5b5"],
-    [data-original-title="Platinum (10 GP)"] svg circle[fill="#b5b5b5"]{
+    [data-original-title*="Platinum"] svg path[fill="#b5b5b5"],
+    [data-original-title*="Platinum"] svg circle[fill="#b5b5b5"]{
        fill: #b5b5b5 !important;
        
     }
-   [data-original-title="Platinum (10 GP)"] svg path[fill="#a3a3a3"]{
+   [data-original-title*="Platinum"] svg path[fill="#a3a3a3"]{
        fill: #a3a3a3 !important;
        
     }
-     [data-original-title="Platinum (10 GP)"] svg path[fill="#949494"]{
+     [data-original-title*="Platinum"] svg path[fill="#949494"]{
        fill: #949494 !important;
        
     }
-     [data-original-title="Platinum (10 GP)"] svg path[fill="#dcdcdc"]{
+     [data-original-title*="Platinum"] svg path[fill="#dcdcdc"]{
        fill:  #dcdcdc !important;
        
     }
-     [data-original-title="Platinum (10 GP)"] svg path[fill="#ccc"]{
+     [data-original-title*="Platinum"] svg path[fill="#ccc"]{
        fill:  #ccc !important;
        
     }
-     [data-original-title="Gold (10 SP)"] svg path[fill="#eca825"],
-     [data-original-title="Gold (10 SP)"] svg circle[fill="#eca825"]
+     [data-original-title*="Gold"] svg path[fill="#eca825"],
+     [data-original-title*="Gold"] svg circle[fill="#eca825"]
     {
             fill: #eca825 !important;
     }
-     [data-original-title="Gold (10 SP)"] svg path[fill="#dd970e"]{
+     [data-original-title*="Gold"] svg path[fill="#dd970e"]{
             fill: #dd970e !important;
     }
-    [data-original-title="Gold (10 SP)"] svg path[fill="#ffb72c"]{
+    [data-original-title*="Gold"] svg path[fill="#ffb72c"]{
             fill: #ffb72c !important;
     }
-    [data-original-title="Gold (10 SP)"] svg path[fill="#c78727"]{
+    [data-original-title*="Gold"] svg path[fill="#c78727"]{
             fill: #c78727 !important;
     }
    
-    [data-original-title="Electrum (5 SP)"] svg path[fill="#8a9eac"]{
+    [data-original-title*="Electrum"] svg path[fill="#8a9eac"]{
             fill:  #8a9eac !important;    
     }
-     [data-original-title="Electrum (5 SP)"] svg path[fill="#6d7f8c"]{
+     [data-original-title*="Electrum"] svg path[fill="#6d7f8c"]{
             fill:  #6d7f8c !important;    
     }
-     [data-original-title="Electrum (5 SP)"] svg path[fill="#7c8d99"]{
+     [data-original-title*="Electrum"] svg path[fill="#7c8d99"]{
             fill:  #7c8d99 !important;    
     }
-    [data-original-title="Electrum (5 SP)"] svg circle[fill="#8697a3"]{
+    [data-original-title*="Electrum"] svg circle[fill="#8697a3"]{
             fill:  #8697a3 !important;    
     }
-    [data-original-title="Electrum (5 SP)"] svg path[fill="#9fb3c0"]{
+    [data-original-title*="Electrum"] svg path[fill="#9fb3c0"]{
             fill:  #9fb3c0 !important;    
     }
-    [data-original-title="Silver (10 CP)"] svg path[fill="#a59e98"],
-    [data-original-title="Silver (10 CP)"] svg circle[fill="#a59e98"]{
+    [data-original-title*="Silver"] svg path[fill="#a59e98"],
+    [data-original-title*="Silver"] svg circle[fill="#a59e98"]{
             fill:  #a59e98 !important;    
     }
-    [data-original-title="Silver (10 CP)"] svg path[fill="#99938d"]{
+    [data-original-title*="Silver"] svg path[fill="#99938d"]{
             fill:  #99938d !important;    
     }
-    [data-original-title="Silver (10 CP)"] svg path[fill="#857d76"]{
+    [data-original-title*="Silver"] svg path[fill="#857d76"]{
             fill:  #857d76 !important;    
     }
-    [data-original-title="Silver (10 CP)"] svg path[fill="#b5ada7"]{
+    [data-original-title*="Silver"] svg path[fill="#b5ada7"]{
             fill:  #b5ada7 !important;    
     }
-    [data-original-title="Silver (10 CP)"] svg path[fill="#cec6bf"]{
+    [data-original-title*="Silver"] svg path[fill="#cec6bf"]{
             fill:  #cec6bf !important;    
     }
-    [data-original-title^="Copper"] svg path[fill="#ab6e57"]{
+    [data-original-title*="Copper"] svg path[fill="#ab6e57"]{
             fill:  #ab6e57 !important;    
     }
-    [data-original-title^="Copper"] svg path[fill="#c2866f"]{
+    [data-original-title*="Copper"] svg path[fill="#c2866f"]{
             fill:  #c2866f !important;    
     }
-    [data-original-title^="Copper"] svg path[fill="#9f6854"]{
+    [data-original-title*="Copper"] svg path[fill="#9f6854"]{
             fill:  #9f6854 !important;    
     }
-    [data-original-title^="Copper"] svg g[fill="#c2866f"] path,
-    [data-original-title^="Copper"] svg g[fill="#c2866f"] circle{
+    [data-original-title*="Copper"] svg g[fill="#c2866f"] path,
+    [data-original-title*="Copper"] svg g[fill="#c2866f"] circle{
             fill:  #c2866f !important;    
     }
-    [data-original-title^="Copper"] svg path[fill="#e6a58c"]{
+    [data-original-title*="Copper"] svg path[fill="#e6a58c"]{
        fill: #e6a58c !important;
     }
     
