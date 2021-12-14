@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.121
+@version      1.2.122
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -807,7 +807,9 @@ div#site{
     .error-page-body-text, 
     .error-page-body-text-byline,
     .container .compendium-image>figcaption a.ddb-lightbox-outer,
-    .ddb-homebrew-portal .builder-type-choice-item
+    .ddb-homebrew-portal .builder-type-choice-item,
+    .ui-datepicker-header,
+    .ui-state-default
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
@@ -878,10 +880,11 @@ div#site{
         box-shadow: none;   
     }
     
-    .p-comments-b .p-comment-wrapper,
+  
     #site .forum-row td,
 	#site .forum-thread-row td,
-    .p-forum-a .announcements .forum-thread-row{
+    .p-forum-a .announcements .forum-thread-row,
+    .forum-post-content.p-comment-container .p-comment-wrapper {
        background: /*[[forumPostColor]]*/ !important;
     }
 	.listing-card__body,
@@ -1153,7 +1156,8 @@ div#site{
     .p-comment-content .spoiler,
     .ddb-homebrew-create-special .listing-body .b-table-a th .asc,
     .ddb-homebrew-create-special .listing-body .b-table-a th a.selected.desc,
-    .ddb-search-filter-item-label-text
+    .ddb-search-filter-item-label-text,
+    .p-comments-b .p-comment-header .p-comment-thread-title a
     {
 		color: /*[[fontColor]]*/ !important;
 	}
@@ -2280,7 +2284,8 @@ div#site{
     body.body-privatemessage .single-column #content .u-dropDown .u-dropDownMenu li>a:hover,
     .ui-widget-content a:hover,
     .toggle-button .toggle-in-collection,
-    .compendium-image>figcaption a.ddb-lightbox-outer:hover
+    .compendium-image>figcaption a.ddb-lightbox-outer:hover,
+    .ui-state-highlight
     {
         background-color: /*[[backgroundColor]]*/ !important;
         box-shadow: inset 0px 0px 30px 0px /*[[linkColor]]*/ !important;
