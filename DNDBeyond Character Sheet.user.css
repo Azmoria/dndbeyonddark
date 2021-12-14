@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.62
+@version      1.3.63
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -2213,6 +2213,9 @@ regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond
     }
     
     
+    .beyond20-roll-detail-normal {
+        color: /*[[fontColor]]*/;
+    }
 
 
     .dice-die-button:hover .dice-icon-die,
@@ -2339,8 +2342,7 @@ regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond
     .beyond20-roll-die-result,
     .ajs-dialog,
     .ajs-header,
-    .ajs-primary.ajs-buttons,
-    .beyond20-roll-detail-normal {
+    .ajs-primary.ajs-buttons{
         background-color: /*[[background]]*/ !important;
         color: /*[[fontColor]]*/ !important;
     }
