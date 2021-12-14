@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.119
+@version      1.2.120
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -2818,17 +2818,19 @@ div#site{
 	::-webkit-scrollbar-track {
 		background: /*[[backgroundColor]]*/;
 	}
+    
 	::-webkit-scrollbar-thumb {
 		background-color: /*[[scrollbarColor]]*/;
 		border-radius: 6px;
 		border: none;
 	}
+    
 	#site-main,
-	.post-excerpt__content{
-		background-color: /*[[backgroundColor]]*/
-		!important;
-		color: /*[[fontColor]]*/
-		!important;
+	.post-excerpt__content,
+    .ddb-search-autocomplete .ui-menu-item a,
+    .ddb-search-autocomplete{
+		background-color: /*[[backgroundColor]]*/ !important;
+		color: /*[[fontColor]]*/ !important;
 	}
 
 	.post-excerpt{
@@ -2840,11 +2842,8 @@ div#site{
 		!important;
 	}
 
-
-
 	.body-home-index .post-listing > li:first-child .post-excerpt__content,
-	.body-home-index .post-listing > li:first-child .post-excerpt
-    {
+	.body-home-index .post-listing > li:first-child .post-excerpt{
 		background: none !important;
 		border: none !important;
 	}
@@ -2883,13 +2882,15 @@ div#site{
       	 1px 1px 0 #000 !important;
 		
 	}
+       
 	li:first-of-type .post-excerpt__description{
 		background-color: /*[[transparencyBackgroundColor]]*/ !important;
 		border-radius: 5px;
 		padding: 5px
 		
 	}
-     .ddb-strip-aligned-item-create-a-character,
+    
+    .ddb-strip-aligned-item-create-a-character,
     .ddb-strip-item-create-a-character{
         background-image: url("https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Dark%20Images/strip-create-a-character.png?raw=true") !important;   
     }
