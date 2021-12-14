@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.118
+@version      1.2.119
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -238,6 +238,11 @@ dark "Dark Mode" <<<EOT
         color: #ee8600 !important;
     }
 
+    .section-changelog #content a span.user-role-d-d-beyond-staff,
+    .section-posts #content a span.user-role-d-d-beyond-staff{
+        color: #ddd !important;
+    }
+
 EOT;
 light "Light Mode" <<<EOT
     #content a span.user-role-d-d-beyond-staff,
@@ -281,6 +286,11 @@ light "Light Mode" <<<EOT
 
     .list-row-primary-text-item{
         color: #0f5cbc !important;
+    }
+
+    .section-changelog #content a span.user-role-d-d-beyond-staff,
+    .section-posts #content a span.user-role-d-d-beyond-staff{
+        color: #ddd !important;
     }
 EOT;
 }
@@ -783,6 +793,7 @@ div#site{
     .comment .p-comment-content table tbody tr:nth-child(odd),
     .comment .p-comment-content table tbody tr:nth-child(even),
     .p-forum-a .multi-quote-container,
+    .section-changelog .multi-quote-container,
     .listing-filters .special-select-item,
      .mce-panel,
     .mce-container, 
