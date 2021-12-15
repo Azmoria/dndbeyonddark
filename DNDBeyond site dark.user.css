@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.123
+@version      1.2.124
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -159,7 +159,8 @@ dark "Dark Mode" <<<EOT
     .list-row-primary-text-monster,
     .homebrew-creation-actions-item-delete,
     .homebrew-creation-actions-item-delete:hover,
-    .ddb-homebrew-rejection-label{
+    .ddb-homebrew-rejection-label,
+    .combatant-card--monster .combatant-summary__name{
         color: #D35050 !important;
     }
 
@@ -275,7 +276,8 @@ light "Light Mode" <<<EOT
     
     .listing .info .row.monster-name .link:hover,
     .listing .info .row.monster-name .link,
-    .list-row-primary-text-monster{
+    .list-row-primary-text-monster,
+    .combatant-card--monster .combatant-summary__name{{
         color: #bc0f0f !important;
     }
 
@@ -318,6 +320,18 @@ none EOT;
 }
 @var range borderWidth "Border Width" [1, 1, 10, 1, 'px']
 @var color scrollbarColor "Scrollbar Color" #88bcd6
+@advanced dropdown combatTracker "Combat Tracker Style"{
+equal "Equal Sizing" <<<EOT
+    .combatant-summary__avatar{
+        min-width: 58px;
+    }
+    .combatant-card__hp{
+        min-width: 132px;   
+    }
+EOT;
+default "Dndbeyond Default" <<<EOT
+EOT;
+}
 @advanced dropdown filter "Icon Color - Use light icons on a dark background" {
     light "Light icons" <<<EOT
 invert(100%) hue-rotate(180deg) EOT;
@@ -1355,7 +1369,8 @@ div#site{
     .p-article-a .section-changelog .p-article-content table tbody td,
     .body-page .p-article-a .p-article-content table thead, 
     .section-posts .p-article-a .p-article-content table thead, 
-    .p-article-a .section-changelog .p-article-content table thead
+    .p-article-a .section-changelog .p-article-content table thead,
+    .combatant-card.is-turn .combatant-card__mid-bit
     {
 		border-width: /*[[borderWidth]]*/
 		!important;
@@ -2378,18 +2393,24 @@ div#site{
 		!important;
     
     }
-    
-    
-    .combatant-card.is-turn .combatant-card__mid-bit,
-    .combatant-card.is-turn .combatant-card__right-bit,
-    .combatant-card.is-turn .combatant-card__left-bit,
+    .combatant-card.is-turn,
     .p-article-a .p-article-tags .tag:hover{
         border-color: /*[[linkColor]]*/ !important;
-        box-shadow: 0px 0px 5px 1px /*[[linkColor]]*/;
+        box-shadow: 0px 0px 5px 0px /*[[linkColor]]*/;      
     }
+    .combatant-card.is-turn .combatant-card__mid-bit,
+    .combatant-card.is-turn .combatant-card__left-bit,
+    .combatant-card.is-turn .combatant-card__right-bit{
+        border-color: /*[[linkColor]]*/ !important;
+    }
+    
     .is-turn .combatant-summary__avatar{
         border-color: /*[[linkColor]]*/ !important;
         box-shadow: 0px 2px 5px 1px /*[[linkColor]]*/;
+    }
+    
+       .combatant-card.is-turn .combatant-card__mid-bit{
+       box-shadow: none;
     }
     
 
@@ -2577,14 +2598,17 @@ div#site{
     }
     
     .forum-thread-row.has-dev-comments .col-thread::before,
-    div.ddb-search-filter-item:not(.selected)>div>div.ddb-search-filter-item-label-text{
+    div.ddb-search-filter-item:not(.selected)>div>div.ddb-search-filter-item-label-text,
+    .combatant-card--character .combatant-card__right-bit span{
         opacity: .5 !important;   
     }
     .static-container-details .content-container .compendium-header-subtitle,
     .encounter-row__subtext,
     .loading-status-indicator__subtext,
     .encounter-monster__subtext,
-    .list-row-name-secondary-text{
+    .list-row-name-secondary-text,
+    .hit-point-adjuster__damage.ddbeb-button[disabled],
+    .hit-point-adjuster__heal.ddbeb-button[disabled]{
         opacity: .8 !important;   
     }
     
