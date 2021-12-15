@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.127
+@version      1.2.128
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -215,7 +215,9 @@ dark "Dark Mode" <<<EOT
     #content a span.user-role-d-d-beyond-staff,
     #content a span.user-role-d-d-beyond-staff:hover,
     #content .thread-author a span.user-role-d-d-beyond-staff,
-    #content .p-comment-edited span.user-role-d-d-beyond-staff{
+    #content .p-comment-edited span.user-role-d-d-beyond-staff,
+    .section-changelog #content a span.user-role-d-d-beyond-staff,
+    .section-posts #content a span.user-role-d-d-beyond-staff{
         color: #c02323 !important; 
     }
     
@@ -238,10 +240,9 @@ dark "Dark Mode" <<<EOT
     .list-row-name-primary-text .link{
         color: #ee8600 !important;
     }
-
-    .section-changelog #content a span.user-role-d-d-beyond-staff,
-    .section-posts #content a span.user-role-d-d-beyond-staff{
-        color: #ddd !important;
+    .section-changelog #content .p-comment-username a span.user-role-d-d-beyond-staff,
+    .section-posts #content .p-comment-username a span.user-role-d-d-beyond-staff {
+        color:  var(--font-color) !important;
     }
 
 EOT;
@@ -249,7 +250,9 @@ light "Light Mode" <<<EOT
     #content a span.user-role-d-d-beyond-staff,
     #content a span.user-role-d-d-beyond-staff:hover,
     #content .thread-author a span.user-role-d-d-beyond-staff,
-    #content .p-comment-edited span.user-role-d-d-beyond-staff{
+    #content .p-comment-edited span.user-role-d-d-beyond-staff,
+    .section-changelog #content a span.user-role-d-d-beyond-staff,
+    .section-posts #content a span.user-role-d-d-beyond-staff{
         color: #E40712 !important; 
     }
     
@@ -277,7 +280,7 @@ light "Light Mode" <<<EOT
     .listing .info .row.monster-name .link:hover,
     .listing .info .row.monster-name .link,
     .list-row-primary-text-monster,
-    .combatant-card--monster .combatant-summary__name{{
+    .combatant-card--monster .combatant-summary__name{
         color: #bc0f0f !important;
     }
 
@@ -289,11 +292,11 @@ light "Light Mode" <<<EOT
     .list-row-primary-text-item{
         color: #0f5cbc !important;
     }
-
-    .section-changelog #content a span.user-role-d-d-beyond-staff,
-    .section-posts #content a span.user-role-d-d-beyond-staff{
-        color: #ddd !important;
+    .section-changelog #content .p-comment-username a span.user-role-d-d-beyond-staff,
+    .section-posts #content .p-comment-username a span.user-role-d-d-beyond-staff {
+        color:  var(--font-color) !important;
     }
+    
 EOT;
 }
 @var color linkColor "Link Color" #88bcd6
@@ -2347,11 +2350,17 @@ div#site{
     .ui-widget-content a:hover,
     .toggle-button .toggle-in-collection,
     .compendium-image>figcaption a.ddb-lightbox-outer:hover,
-    .ui-state-highlight
+    .ui-state-highlight,
+    .p-article-a .p-article-interact .p-article-comments a:first-of-type:hover
     {
         background-color: /*[[backgroundColor]]*/ !important;
         box-shadow: inset 0px 0px 30px 0px /*[[linkColor]]*/ !important;
         border-color: /*[[linkColor]]*/ !important;
+    }
+    
+    .p-article-a .p-article-interact .p-article-comments a:first-of-type:hover:after{
+        border-color: /*[[linkColor]]*/ transparent !important;
+        opacity: 0.6;
     }
     
     li.b-pagination-item a[rel="prev"]:not(.s-active), 
