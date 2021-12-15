@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.125
+@version      1.2.126
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -297,7 +297,7 @@ light "Light Mode" <<<EOT
 EOT;
 }
 @var color linkColor "Link Color" #88bcd6
-@var color borderColor "Border Color" #c8c8c8
+@var color borderColor "Border Color" #999
 @advanced dropdown borderStyle "Border Style" {
 solid "Solid" <<<EOT
 solid EOT;
@@ -477,7 +477,11 @@ div#site{
     outline: none !important;
     }
     
- 
+    .p-comments-b .p-comment-post, 
+    .body-forum .comment-preview li .p-comment-post, 
+    .body-forum-search .p-comments-a .p-comment-post{
+        background: none;
+    }
     
 	body.responsive-enabled #site #site-main .container #content,
 	body.responsive-enabled #site #site-main.fixed .container #content,
@@ -831,8 +835,6 @@ div#site{
 		!important;
 	}
    
-    
-
     .comment .p-comment-user-background,
     body.body-forum .single-column #content .u-dropDown .u-dropDownMenu li>a,
     body.body-forum .single-column #content .u-dropDown .u-dropDownMenu,
@@ -846,10 +848,6 @@ div#site{
     {
         background-color: /*[[forumSecondaryColor]]*/ !important;
     } 
-    
-    .b-table-a td.col-status{
-        box-shadow: none;   
-    }
     
     .p-comments-b .p-comment-user,
     .p-comments-b .p-comment-user span,
@@ -865,14 +863,11 @@ div#site{
     .comment .source-quote .quote-source,
     .comment .forum-post-header,
     .body-privatemessage-details .p-comment-index,
-    .body-rpgrace-details .p-comment-index{
+    .body-rpgrace-details .p-comment-index,
+    body.section-posts .u-dropDown .u-dropDownMenu{
         background-color: /*[[forumTertiaryColor]]*/ !important;
     }
-    
-    body.body-forum .single-column #content .p-forum-a .p-comment-post .p-comment-container{
-        box-shadow: inset 0px 0px 1px /*[[borderColor]]*/ !important;
-    }
-    
+       
     body.body-forum .single-column #content .p-forum-a .p-comment-post .p-comment-container,
     .p-comments-b .p-comment-wrapper,
     body.body-forum .single-column #content .p-forum-a .p-comment-post .p-comment-user-background,
@@ -886,19 +881,28 @@ div#site{
     #site .forum-thread-row td:last-of-type,
     .p-forum-a .announcements .col-status,
     body.body-forum .comment .p-comment-content blockquote,
-    .p-forum-poll .b-poll-a .b-poll-voting .form-field-string-choice-field{
+    .p-forum-poll .b-poll-a .b-poll-voting .form-field-string-choice-field,
+    .p-comments-b .p-comment-container, 
+    .body-forum .comment-preview li .p-comment-container, 
+    .body-forum-search .p-comments-a .p-comment-container,
+    .p-comment-sig{
         border-color: /*[[borderColor]]*/ !important;   
     }
     
-    .p-comments-b .p-comment-user-background{
-        box-shadow: none;   
+      body.body-forum .single-column #content .p-forum-a .p-comment-post .p-comment-container{
+        box-shadow: inset 0px 1px 1px /*[[borderColor]]*/ !important;
     }
     
-  
+    .p-comments-b .p-comment-user-background{
+        box-shadow: inset 0px 0px 1px /*[[borderColor]]*/;
+    }
+
+
+    
     #site .forum-row td,
 	#site .forum-thread-row td,
     .p-forum-a .announcements .forum-thread-row,
-    .forum-post-content.p-comment-container .p-comment-wrapper {
+    .forum-post-content.p-comment-container .p-comment-wrapper{
        background: /*[[forumPostColor]]*/ !important;
     }
 	.listing-card__body,
@@ -944,7 +948,12 @@ div#site{
     .whats-new-button,
     #site .forum-row .status-icon,
 	#site .forum-thread-row  .status-icon,
-    .b-pagination-b li.b-pagination-item a{
+    .b-pagination-b li.b-pagination-item a,
+    blockquote .details-container-content-description-text,
+    blockquote .ddb-statblock-item-value,
+    blockquote .ddb-statblock-item-label,
+    body.section-posts .comment .p-comment-content table thead th,
+    body.section-posts .comment .p-comment-content table tbody tr{
         background: none !important;
     }
 
@@ -1171,7 +1180,11 @@ div#site{
     .ddb-homebrew-create-special .listing-body .b-table-a th .asc,
     .ddb-homebrew-create-special .listing-body .b-table-a th a.selected.desc,
     .ddb-search-filter-item-label-text,
-    .p-comments-b .p-comment-header .p-comment-thread-title a
+    .p-comments-b .p-comment-header .p-comment-thread-title a,
+    .b-search-advanced,
+    body.section-posts .comment .p-comment-content table thead th,
+    .p-article-tags .b-tag-a a,
+    .article-author-name
     {
 		color: /*[[fontColor]]*/ !important;
 	}
@@ -1186,7 +1199,7 @@ div#site{
     .article-main a,
     .sidebar-menu a,
     .compendium-toc-block-header h2 a,
-    body.body-category .primary-content a:not(.spell-tooltip):not(.magic-item-tooltip):not(.monster-tooltip):not(.b-pagination-item a):not(.button-material-ui),
+    body.body-category .primary-content a:not(.spell-tooltip):not(.magic-item-tooltip):not(.monster-tooltip):not(.b-pagination-item a):not(.button-material-ui):not(.tag):not(.article-author-name),
     body.body-forum .single-column #content [style*="color: rgba(0, 0, 0, 1)"] a, 
     body.body-forum .single-column #content [style*="color: rgba(51, 51, 51, 1)"] a,
     body.body-forum .single-column #content [style*="color: rgba(128, 128, 128, 1)"] a,
@@ -1269,7 +1282,10 @@ div#site{
     .party-selectors__stats a,
     .ddbc-html-content a,
     body[class*="rpg"] .listing-container .listing.b-table-a td a,
-    a[style*="color: rgba(71, 209, 140, 1)"]{
+    a[style*="color: rgba(71, 209, 140, 1)"],
+    .article-author-name:hover,
+    .article-author-name:hover span,
+    .p-article-a .p-article-footer .p-article-tags .tag:hover{
 		color: /*[[linkColor]]*/ !important
 	}
     
@@ -1370,7 +1386,8 @@ div#site{
     .body-page .p-article-a .p-article-content table thead, 
     .section-posts .p-article-a .p-article-content table thead, 
     .p-article-a .section-changelog .p-article-content table thead,
-    .combatant-card.is-turn .combatant-card__mid-bit
+    .combatant-card.is-turn .combatant-card__mid-bit,
+    body.section-posts blockquote
     {
 		border-width: /*[[borderWidth]]*/
 		!important;
@@ -1463,7 +1480,11 @@ div#site{
     }
     
     .p-article-a .p-article-interact .p-article-comments a:first-of-type:after{
-         border-color: /*[[linkColor]]*/ transparent !important;  
+         border-color: /*[[transparencyBackgroundColor]]*/ transparent !important;  
+    }
+    
+    .p-article-a .p-article-interact .p-article-comments a:first-of-type{
+        background: /*[[transparencyBackgroundColor]]*/
     }
     
     
@@ -1667,12 +1688,7 @@ div#site{
 		background-image: none !important;
 	}
    
-     .compendium-toc-block-header,
-    .compendium-toc-full-header,
-    body.body-category-details .page-header__primary{
-        box-shadow: inset 0px 2px 4px 0px /*[[linkColor]]*/ !important; 
-    }
-    
+   
     .compendium-toc-block-header,
     .compendium-toc-full-header,
     .compendium-toc-block-header h2,
@@ -1825,7 +1841,7 @@ div#site{
     
     .p-article-a .p-article-interact .p-article-comments a:first-of-type{	
    		text-shadow:
-      	 2px 2px #000,
+      	 1px 1px #000,
      	-1px -1px 0 #000,  
      	 1px -1px 0 #000,
      	 -1px 1px 0 #000,
@@ -1923,11 +1939,13 @@ div#site{
         text-decoration: overline;
         font-size: 14px;
         text-shadow: 0 0 3px #536A9C;
+        
     }
 
     body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="23611187"] .p-comment-user-background {
     background-image: url(https://media-waterdeep.cursecdn.com/attachments/0/79/bebackground.jpg) !important;
     background-repeat: no-repeat !important;
+        box-shadow: inset 0 1px 0 #fff !important;
     }
 
     /* Bullethawk */
@@ -2025,11 +2043,13 @@ div#site{
 
     /* Lauren */
     body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="100030730"] .p-comment-user-background {
-      background-image: url(https://media-waterdeep.cursecdn.com/attachments/6/601/phoenix-concept-art.jpg) !important;
-      background-repeat: no-repeat !important;
-      background-position: bottom left !important;
-      background-size: contain !important;
-      opacity: 0.5;
+        background-image: url(https://media-waterdeep.cursecdn.com/attachments/6/601/phoenix-concept-art.jpg) !important;
+        background-repeat: no-repeat !important;
+        background-position: bottom left !important;
+        background-size: contain !important;
+        opacity: 0.5;
+        background-color: #fff !important;
+        box-shadow: inset 0 1px 0 #fff !important;
     }
 
     /* Pat */
@@ -2136,8 +2156,7 @@ div#site{
     body.user.responsive-enabled .p-user-a .p-user-interaction .profile-nav-container nav .p-nav .b-list-item.selected a::after,
     body.responsive-enabled .scroll-container .scrolled-content ul.tabbed-tabs .b-tab-item:hover a::after, 
     body.responsive-enabled .scroll-container .scrolled-content ul.tabbed-tabs .b-tab-item.selected a::after,
-    body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions>li.b-userAction-item>a::before,
-    .p-article-a .p-article-interact .p-article-comments a:first-of-type{
+    body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions>li.b-userAction-item>a::before{
         background-color: /*[[linkColor]]*/ !important;
     }
         
@@ -2298,6 +2317,7 @@ div#site{
     body.body-forum .single-column #content .u-dropDown .u-dropDownMenu li>a:hover,
     .mce-menu-item-normal.mce-active,
     body.body-privatemessage .single-column #content .u-dropDown .u-dropDownMenu li>a:hover,
+    body.section-posts .single-column #content .u-dropDown .u-dropDownMenu li>a:hover,
     .ui-widget-content a:hover,
     .toggle-button .toggle-in-collection,
     .compendium-image>figcaption a.ddb-lightbox-outer:hover,
