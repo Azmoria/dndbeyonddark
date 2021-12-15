@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.128
+@version      1.2.129
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -224,9 +224,21 @@ dark "Dark Mode" <<<EOT
     #content a span.user-role-moderator,
     #content a span.user-role-moderator:hover,
     #content .thread-author a span.user-role-moderator,
-    #content .p-comment-edited span.user-role-moderator{
+    #content .p-comment-edited span.user-role-moderator,
+    .section-changelog #content a span.user-role-moderator,
+    .section-posts #content a span.user-role-moderator{
         color: #ff8502 !important;
     }
+
+    #content a span.user-role-insider,
+    #content a span.user-role-insider:hover,
+    #content .thread-author a span.user-role-insider,
+    #content .p-comment-edited span.user-role-insider,
+    .section-changelog #content a span.user-role-insider,
+    .section-posts #content a span.user-role-insider{
+        color: #07aaff !important;
+    }
+
 
     .single-column #content [style*="color: rgba(0, 0, 0, 1)"], 
     .single-column #content [style*="color: rgba(51, 51, 51, 1)"],
@@ -259,9 +271,21 @@ light "Light Mode" <<<EOT
     #content a span.user-role-moderator,
     #content a span.user-role-moderator:hover,
     #content .thread-author a span.user-role-moderator,
-    #content .p-comment-edited span.user-role-moderator {
+    #content .p-comment-edited span.user-role-moderator,
+    .section-changelog #content a span.user-role-moderator,
+    .section-posts #content a span.user-role-moderator{
         color: #ff8502 !important;
     }
+
+    #content a span.user-role-insider,
+    #content a span.user-role-insider:hover,
+    #content .thread-author a span.user-role-insider,
+    #content .p-comment-edited span.user-role-insider,
+    .section-changelog #content a span.user-role-insider,
+    .section-posts #content a span.user-role-insider{
+        color: #07aaff !important;
+    }
+
     .mon-stat-block .tooltip-hover.spell-tooltip, 
     .mon-stat-block .tooltip-hover.spell-tooltip:hover, 
     .mon-stat-block .tooltip-hover.spell-tooltip:focus, 
@@ -1989,7 +2013,7 @@ div#site{
     body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="4371937"] .p-comment-statitem.forum-title {
     font-size: 16px;
         color: #5d3b13;
-        text-shadow: 0 0 7px #f89910;
+        text-shadow: 0 0 7px #f89910 !important;
     }
 
     body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="4371937"] .p-comment-user-background {
@@ -2142,7 +2166,9 @@ div#site{
       text-shadow: 0px 0px 4px #fff;
     }
         
-
+    body.body-forum .single-column #content .p-forum-a .p-comment-post .u-dropDown span.user-role-insider {
+    background-image: url(https://media-waterdeep.cursecdn.com/attachments/0/11/ddbinsider.png) !important;
+    }
     
    .ddbc-svg path[d="M1 0.832519C1 0.556377 1.22386 0.33252 1.5 0.33252H22.5C22.7761 0.33252 23 0.556377 23 0.83252V23.7334C23 24.0454 22.7175 24.2812 22.4106 24.2253L12.0894 22.3488C12.0303 22.338 11.9697 22.338 11.9106 22.3488L1.58944 24.2253C1.28252 24.2812 1 24.0454 1 23.7334V0.832519Z"],
     [id="Ability Score Increases, Languages, and Alignment-header"]:hover .ddbc-svg path[d="M1 0.832519C1 0.556377 1.22386 0.33252 1.5 0.33252H22.5C22.7761 0.33252 23 0.556377 23 0.83252V23.7334C23 24.0454 22.7175 24.2812 22.4106 24.2253L12.0894 22.3488C12.0303 22.338 11.9697 22.338 11.9106 22.3488L1.58944 24.2253C1.28252 24.2812 1 24.0454 1 23.7334V0.832519Z"]
