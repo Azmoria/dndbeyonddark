@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.131
+@version      1.2.132
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -432,7 +432,7 @@ dark "Dark iFrames" <<<EOT
     {
        filter: invert(100%) hue-rotate(180deg) !important;        
     }
-}
+
 
 EOT;
 light "Light iFrames (Dndbeyond default - no filter)" <<<EOT
