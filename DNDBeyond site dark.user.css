@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.130
+@version      1.2.131
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -448,9 +448,9 @@ EOT;
 }
 @var text customFrameFilter "Custom Frame Filter" "invert(90%) sepia(0%) hue-rotate(180deg) saturate(180%)"
 @advanced dropdown specialThanks "Special Thanks; Forum Vanity Images/Titles"{
-off "DNDBeyond Vanity Only" <<<EOT
+off "DNDBeyond Default" <<<EOT
 EOT;
-on "Add Contributors and Special Thanks Vanity" <<<EOT
+on "Add Special Thanks Vanity" <<<EOT
     body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="100666635"] .p-comment-user-background {
         background-image: url(https://github.com/Azmoria/dndbeyonddark/blob/master/Images/DNDBeyond%20Dark/azmoria-forum-profile-bg.png?raw=true) !important;
         background-repeat: no-repeat !important;
