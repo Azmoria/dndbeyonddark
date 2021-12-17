@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.136
+@version      1.2.137
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -878,7 +878,8 @@ div#site{
     .container .compendium-image>figcaption a.ddb-lightbox-outer,
     .ddb-homebrew-portal .builder-type-choice-item,
     .ui-datepicker-header,
-    .ui-state-default
+    .ui-state-default,
+    .p-forum .alert
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
@@ -1444,7 +1445,8 @@ div#site{
     .p-article-a .section-changelog .p-article-content table thead,
     .combatant-card.is-turn .combatant-card__mid-bit,
     body.section-posts blockquote,
-   .combat-tracker-page__combat-tracker
+   .combat-tracker-page__combat-tracker,
+    .p-forum .alert
     {
 		border-width: /*[[borderWidth]]*/
 		!important;
