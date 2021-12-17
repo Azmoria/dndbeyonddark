@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.137
+@version      1.2.138
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -879,6 +879,7 @@ div#site{
     .ddb-homebrew-portal .builder-type-choice-item,
     .ui-datepicker-header,
     .ui-state-default,
+    .ddb-notification-toast-homebrew,
     .p-forum .alert
     {
 		background-color: /*[[backgroundColor]]*/
@@ -1236,7 +1237,9 @@ div#site{
     .b-search-advanced,
     body.section-posts .comment .p-comment-content table thead th,
     .p-article-tags .b-tag-a a,
-    .article-author-name
+    .article-author-name,
+    .ddb-notification-toast-homebrew p,
+    .ddb-notification-toast-homebrew div.ddb-notification-toast-header-text
     {
 		color: /*[[fontColor]]*/ !important;
 	}
@@ -1316,10 +1319,11 @@ div#site{
     .forum-post-body a:visited,
     body.body-page .container a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip):not(.b-pagination-item):not([style*="color"]),
     body.body-search .container a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip):not(.b-pagination-item):not([style*="color"]),
-    body.body-rpgigear .container a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip):not(.b-pagination-item):not([style*="color"]),
-    body.body-rpgrace .container a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip):not(.b-pagination-item):not([style*="color"]),
-    body.body-rpgclass .container a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip):not(.b-pagination-item):not([style*="color"]),
-    body.body-user .container a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip):not(.b-pagination-item):not([rel^="prev"]):not([rel^="next"]):not([style*="color"]),
+    body.body-rpgigear .container a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip):not(.b-pagination-item):not([style*="color"]):not(.homebrew-creation-actions-item-delete),
+    body.body-rpgrace .container a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip):not(.b-pagination-item):not([style*="color"]):not(.homebrew-creation-actions-item-delete),
+    body.body-rpgclass .container a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip):not(.b-pagination-item):not([style*="color"]):not(.homebrew-creation-actions-item-delete),
+    body.body-user .container a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip):not(.b-pagination-item):not([rel^="prev"]):not([rel^="next"]):not([style*="color"]):not(.homebrew-creation-actions-item-delete),
+    body[class*="body-rpgrace"] .container a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip):not(.b-pagination-item):not([rel^="prev"]):not([rel^="next"]):not([style*="color"]):not(.homebrew-creation-actions-item-delete),
     .b-pagination-a .b-pagination-list>.b-pagination-item>a:hover,
     .body-privatemessage .container .p-comment-wrapper a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip):not(.b-pagination-item):not([rel^="prev"]):not([rel^="next"]):not([style*="color"]),
     .body-privatemessage .container .conversation-row a:hover,
@@ -1445,7 +1449,7 @@ div#site{
     .p-article-a .section-changelog .p-article-content table thead,
     .combatant-card.is-turn .combatant-card__mid-bit,
     body.section-posts blockquote,
-   .combat-tracker-page__combat-tracker,
+    .combat-tracker-page__combat-tracker,
     .p-forum .alert
     {
 		border-width: /*[[borderWidth]]*/
