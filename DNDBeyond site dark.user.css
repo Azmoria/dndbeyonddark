@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.135
+@version      1.2.136
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -160,7 +160,8 @@ dark "Dark Mode" <<<EOT
     .homebrew-creation-actions-item-delete,
     .homebrew-creation-actions-item-delete:hover,
     .ddb-homebrew-rejection-label,
-    .combatant-card--monster .combatant-summary__name{
+    .combatant-card--monster .combatant-summary__name,
+    .body-rpgmonster .listing-filters .advanced-filter a span{
         color: #D35050 !important;
     }
 
@@ -1336,11 +1337,10 @@ div#site{
     .article-author-name:hover,
     .article-author-name:hover span,
     .p-article-a .p-article-footer .p-article-tags .tag:hover,
-    body.body-rpgbackground-index .list-row-name-primary-text a,
-    body.body-rpgbackground-index .list-row-name-primary-text a:hover,
-    body.body-rpgfeat-index  .list-row-name-primary-text a,
-    body.body-rpgfeat-index  .list-row-name-primary-text a:hover
-    
+    body.body-rpgbackground-index .list-row-background .list-row-name-primary-text a,
+    body.body-rpgbackground-index .list-row-background .list-row-name-primary-text a:hover,
+    body.body-rpgfeat-index .list-row-feat .list-row-name-primary-text a,
+    body.body-rpgfeat-index .list-row-feat .list-row-name-primary-text a:hover
     {
 		color: /*[[linkColor]]*/ !important
 	}
