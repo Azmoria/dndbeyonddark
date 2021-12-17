@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.133
+@version      1.2.134
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -248,10 +248,7 @@ dark "Dark Mode" <<<EOT
     {
         color: var(--font-color) !important;
     }
-    .list-row-name-primary-text .link:hover,
-    .list-row-name-primary-text .link{
-        color: #ee8600 !important;
-    }
+
     .section-changelog #content .p-comment-username a span.user-role-d-d-beyond-staff,
     .section-posts #content .p-comment-username a span.user-role-d-d-beyond-staff {
         color:  var(--font-color) !important;
@@ -2807,6 +2804,12 @@ div#site{
    /*end homebrew sortable fix*/
 
    
+    /*Beyond 20 fix*/
+    body.body-rpgmagicitem-index .ct-beyond20-roll{
+        display: none !important;
+        
+    }
+    
     
     @media screen and (max-width: 767px){
         body.body-forum.responsive-enabled .container .p-forum-a li.forum-announcement .col-status {
