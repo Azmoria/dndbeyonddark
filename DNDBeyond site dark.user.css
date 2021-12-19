@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.140
+@version      1.2.141
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -447,9 +447,7 @@ off "DNDBeyond Default" <<<EOT
 EOT;
 on "Add Special Thanks Vanity" <<<EOT
     body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="100666635"] .p-comment-user-background {
-        background-image: url(https://github.com/Azmoria/dndbeyonddark/blob/master/Images/DNDBeyond%20Dark/azmoria-forum-profile-bg.png?raw=true) !important;
-        background-repeat: no-repeat !important;
-        background-position: top left !important;
+        background: var(--forum-secondary-color) url(https://github.com/Azmoria/dndbeyonddark/blob/master/Images/DNDBeyond%20Dark/azmoria-forum-profile-bg.png?raw=true) 0 0 no-repeat !important;
         background-size: 100% auto !important;
         opacity: 0.4;
     }
@@ -458,13 +456,40 @@ on "Add Special Thanks Vanity" <<<EOT
         content: '\1F432';
         font-weight: normal;
         filter: hue-rotate(195deg) saturate(1.2);
-        font-size: 20pt;
+        font-size: 15pt;
         line-height: 9pt;       
     }
-    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="100666635"] li.forum-title {
-    display: block;      
+
+    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="110555412"] li.forum-title:after,
+    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="100666635"] li.forum-title:after
+    {
+        text-shadow:none !important;
     }
-EOT;
+
+    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="110555412"] .p-comment-user-background {
+        background: var(--forum-secondary-color) url(https://github.com/Azmoria/dndbeyonddark/blob/master/Images/DNDBeyond%20Dark/Hyrkali%20Special%20Thanks.png?raw=true) 0 0 no-repeat !important;
+        background-size: auto !important;
+        opacity: 0.6;
+    }
+
+    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="110555412"] li.forum-title:after {
+        content: '\1F408';
+        font-weight: normal;
+        filter: hue-rotate(175deg) saturate(0.5) brightness(0.3);
+        font-size: 15pt;
+        line-height: 9pt;    
+    }
+   @media screen and (min-width: 767px){
+    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="100666635"] li.forum-title {
+        display: block;      
+    }
+    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="110555412"] li.forum-title {
+        display: block;      
+    }
+    
+   
+}
+    EOT;
 }
 
 
@@ -3002,7 +3027,9 @@ div#site{
 	}
 
 	.post-excerpt__description,
-	.post-excerpt__content{	
+	.post-excerpt__content,
+    .p-comments-b .p-comment-user, 
+    .p-comments-b .p-comment-user span, .p-comment-statitem.forum-title{	
    		text-shadow:
       	 2px 2px #000,
      	-1px -1px 0 #000,  
@@ -3011,6 +3038,7 @@ div#site{
       	 1px 1px 0 #000 !important;
 		
 	}
+
        
 	li:first-of-type .post-excerpt__description{
 		background-color: /*[[transparencyBackgroundColor]]*/ !important;
