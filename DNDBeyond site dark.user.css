@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.141
+@version      1.2.142
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -377,13 +377,13 @@ custom "Custom iFrame filter" <<<EOT
     html>#tinymce *:not([style*="color"]):not(a){
         color: var(--font-color) !important;
     }
-    html>#tinymce>table tr,
-    html>#tinymce>blockquote,
-    html>#tinymce>table th,
-    html>#tinymce>div.spoiler>table th,
-    html>#tinymce>div.spoiler>table tr,
-    html>#tinymce>div.spoiler>blockquote{
-        background: none !important;
+    html>#tinymce table tr,
+    html>#tinymce table tr,
+    html>#tinymce blockquote,
+    html>#tinymce table th,
+    html>#tinymce table tr:nth-child(2n+1),
+    html>#tinymce div{
+        background: none;
     }
     html>#tinymce table, 
     html>#tinymce table th, 
@@ -410,13 +410,13 @@ dark "Dark iFrames" <<<EOT
     html>#tinymce *:not([style*="color"]):not(a){
         color: var(--font-color) !important;
     }
-    html>#tinymce>table tr,
-    html>#tinymce>blockquote,
-    html>#tinymce>table th,
-    html>#tinymce>div.spoiler table th,
-    html>#tinymce>div.spoiler table tr,
-    html>#tinymce>div.spoiler blockquote{
-        background: none !important;
+    html>#tinymce table tr,
+    html>#tinymce table tr,
+    html>#tinymce blockquote,
+    html>#tinymce table th,
+    html>#tinymce table tr:nth-child(2n+1),
+    html>#tinymce div{
+        background: none;
     }
     html>#tinymce table, 
     html>#tinymce table th, 
@@ -886,7 +886,7 @@ div#site{
     .p-forum-a .multi-quote-container,
     .section-changelog .multi-quote-container,
     .listing-filters .special-select-item,
-     .mce-panel,
+    .mce-panel,
     .mce-container, 
     .mce-widget, 
     .mce-widget *, 
