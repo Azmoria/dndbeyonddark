@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.63
+@version      1.3.64
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -428,9 +428,41 @@ EOT;
         } 
          body{
             overflow: hidden;
+        }       
+EOT;
+
+
+    chromaKeyDiceTray "Chorma Key Dice Tray" <<<EOT
+
+        .ct-character-sheet__inner div.ct-character-header-desktop>div,
+        .ct-quick-info,
+        .ct-subsections,
+        .ct-character-header-mobile,
+        .ct-combat-mobile,
+        .ct-main-mobile__abilities,
+        .ct-subsection-mobile>div>div,
+        .ct-quick-nav__toggle,
+        #noty_layout__bottomRight,
+        .ct-quick-nav__footer-sidebar,
+        .ct-sidebar,
+        .ct-character-header-tablet,
+        .ct-combat-tablet__extras,
+        .ct-main-tablet__abilities,
+        .ct-main-tablet__large-boxes,
+        .ct-main-tablet__campaign,
+        .site-bar,
+        .mm-mega-menu
+        {
+            display: none;
+        } 
+         body{
+            overflow: hidden;
         }   
+
+EOT;
+    }
   
-    EOT;
+
 
    
 }
