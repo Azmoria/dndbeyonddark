@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.66
+@version      1.3.67
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -432,36 +432,21 @@ EOT;
 EOT;
 
 
-    chromaKeyDiceTray "Dice Tray no popup/log/menu" <<<EOT
+    }
 
-        .ct-character-sheet__inner div.ct-character-header-desktop>div,
-        .ct-quick-info,
-        .ct-subsections,
-        .ct-character-header-mobile,
-        .ct-combat-mobile,
-        .ct-main-mobile__abilities,
-        .ct-subsection-mobile>div>div,
-        .ct-quick-nav__toggle,
-        #noty_layout__bottomRight,
-        .ct-quick-nav__footer-sidebar,
-        .ct-sidebar,
-        .ct-character-header-tablet,
-        .ct-combat-tablet__extras,
-        .ct-main-tablet__abilities,
-        .ct-main-tablet__large-boxes,
-        .ct-main-tablet__campaign,
+@advanced dropdown menuDisplay "Display Menus"{
+Default "Yes" <<<EOT
+EOT;
+chromaKeyDiceTray "No" <<<EOT
+
         .site-bar,
         .mm-mega-menu
         {
             display: none;
         } 
-         body{
-            overflow: hidden;
-        }   
 
 EOT;
-    }
-  
+}  
 
 
    
@@ -494,12 +479,16 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         scrollbar-color: /*[[scrollbarColor]]*/ /*[[sheetColor]]*/;
     }
        
+    
+    
     /*Background colors, images and styles */
     body {
         overflow: overlay;
     }
     
      /*[[diceTray]]*/
+    
+    /*[[menuDisplay]]*/
     
     .ct-character-sheet:before {
         /*[[titleToggle]]*/
