@@ -2,7 +2,7 @@
 @name         Combat Tracker Chroma Key
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.0.5
+@version      1.0.6
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/combatTrackerChroma.user.css
 @var color backgroundColor "Chroma Background Color" "#080"
 @var color chromaHighlight "Chroma Highlight Color" "#0F0"
@@ -36,8 +36,11 @@ EOT;
             border: none;
 	    }
     
-        *{
-            outline: none !important;   
+        *:focus,
+        .ddbeb-button:focus{
+            outline-color: var(--chroma-highlight) !important;   
+            outline-width: 1px !important;
+            outline-style: solid !important;
         }
         
     
@@ -55,7 +58,9 @@ EOT;
         .hit-point-adjuster__damage.ddbeb-button[disabled], 
         .hit-point-adjuster__heal.ddbeb-button[disabled],
         input.flyout-input-number__input,
-        #site-main .integrated-dice__container
+        #site-main .integrated-dice__container,
+        .ddbeb-modal *,
+        .ddbeb-button[disabled]
         {
             background: transparent !important;
             border: none !important;
@@ -67,6 +72,16 @@ EOT;
             stroke: transparent !important;  
             text-shadow: none;
         }
+    
+        .ddbeb-modal ::placeholder{
+            color: var(--chroma-highlight) !important;
+        }
+    
+        body#site .ddbeb-modal .ddbeb-modal__content{
+            background: var(--background-color) !important;
+            border: 1px solid var(--chroma-highlight)
+        }
+    
        
     
         #site ::selection{
