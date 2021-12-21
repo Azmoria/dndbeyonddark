@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.73
+@version      1.3.74
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -456,7 +456,12 @@ chromaKeyDiceTray "ON with dice popup" <<<EOT
 
         #content *:not(.dice-icon-die),
         #content *:not(.dice-icon-die):hover,
-        #content *::placeholder
+        #content *::placeholder,
+        .ct-feature-snippet__meta-item::before,
+        .MuiButton-label,
+        .MuiButtonBase-root:hover span,
+        .MuiButtonBase-root span,
+        .jss2 .MuiListItem-root:hover span
         {
             background: transparent !important;
             border: none !important;
@@ -515,10 +520,6 @@ chromaKeyDiceTray "ON with dice popup" <<<EOT
         .jss2 .MuiDivider-root,
         .jss2 .MuiListSubheader-root,
         .jss2 .MuiListItem-root:hover,
-        .MuiButtonBase-root span,
-        .jss2 .MuiListItem-root:hover span,
-        .jss2 .MuiListItem-root span,
-        .MuiButtonBase-root:hover span,
         .ct-quick-nav__toggle, 
         .ct-quick-nav__edge-toggle, 
         .ct-character-sheet-MuiPaper-root, 
@@ -548,20 +549,27 @@ chromaKeyDiceTray "ON with dice popup" <<<EOT
     .ct-quick-nav__footer-sidebar svg polygon{
         fill: var(--chroma-highlight) !important;
     }
-
-     .ct-slot-manager--size-small .ct-slot-manager__slot--used:before{
-        box-shadow: 0 0 20px 1px var(--chroma-highlight) inset !important
+    .ct-slot-manager--size-small .ct-slot-manager__slot--used:before{
+        box-shadow: 0 0 20px 1px var(--chroma-highlight) inset !important;
     }
     #content .ct-slot-manager__slot{
         border: 1px solid var(--chroma-highlight) !important;
-    }
+    }   
+
+
+    
 EOT;
 
 chromaKeyDiceTrayNoPopUp "ON without dice popup" <<<EOT
 
         #content *:not(.dice-icon-die),
         #content *:not(.dice-icon-die):hover,
-        #content *::placeholder
+        #content *::placeholder,
+        .ct-feature-snippet__meta-item::before,
+        .MuiButton-label,
+        .MuiButtonBase-root:hover span,
+        .MuiButtonBase-root span,
+        .jss2 .MuiListItem-root:hover span
         {
             background: transparent !important;
             border: none !important;
@@ -621,10 +629,6 @@ chromaKeyDiceTrayNoPopUp "ON without dice popup" <<<EOT
         .jss2 .MuiDivider-root,
         .jss2 .MuiListSubheader-root,
         .jss2 .MuiListItem-root:hover,
-        .MuiButtonBase-root span,
-        .jss2 .MuiListItem-root:hover span,
-        .jss2 .MuiListItem-root span,
-        .MuiButtonBase-root:hover span,
         .ct-quick-nav__toggle, 
         .ct-quick-nav__edge-toggle, 
         .ct-character-sheet-MuiPaper-root, 
@@ -659,7 +663,9 @@ chromaKeyDiceTrayNoPopUp "ON without dice popup" <<<EOT
     }
     #content .ct-slot-manager__slot{
         border: 1px solid var(--chroma-highlight) !important;
-    }
+    }   
+
+
     
 EOT;
 }  
