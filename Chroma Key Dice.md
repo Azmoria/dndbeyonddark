@@ -11,6 +11,7 @@ Settings:
 
 
 <hr>
+
 **The second is for rolling with a specific character sheet:**
 
 Make a copy of your character and follow <a href="https://github.com/Azmoria/dndbeyonddark/blob/master/Character%20Specific%20Themes.md">How to create character specific themes</a>. You can see an example of this in the video at the bottom of this page.
