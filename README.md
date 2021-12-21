@@ -18,7 +18,7 @@ Once you have Stylus installed click the links below to install the themes. I su
 <br>
 <a href="https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css">The rest of DNDBeyond site</a>
 <br><br>
-<a href="https://github.com/Azmoria/dndbeyonddark/blob/master/combatTrackerChroma.user.css">Theme for chroma capture of dice while in combat tracker.
+Theme for chroma capture of dice while in combat tracker: <a href="https://github.com/Azmoria/dndbeyonddark/blob/master/combatTrackerChroma.user.css">here</a>
 <br><br><br>
 For android devices (mobile/tablet) <a href="https://kiwibrowser.com/">Kiwi Browser</a> allows the installation of desktop Chrome extentions. There may be alternatives that work for iOS. However I only own android devices so I am unaware of which ones would work or exist.
 
