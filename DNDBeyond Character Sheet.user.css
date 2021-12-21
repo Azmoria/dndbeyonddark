@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.76
+@version      1.3.77
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -473,11 +473,14 @@ chromaKeyDiceTray "ON with dice popup" <<<EOT
             stroke: transparent !important;  
             text-shadow: none;
         }
-
+        #site ::selection{
+            background: var(--chroma-highlight) !important;
+            opacity:0.4 !important;;
+            color: var(--background-color) !important;
+        }
 
         .ddbc-character-tidbits__avatar,
         [class^="ct-beyond20"],
-        ::-webkit-scrollbar-thumb,
         .beyond20-quick-roll-icon,
         .alertify,
         .dice-toolbar__dropdown .dice-toolbar__target-menu-button:after,
@@ -490,7 +493,9 @@ chromaKeyDiceTray "ON with dice popup" <<<EOT
         .dice-toolbar__dropdown-die:hover .dice-icon-die{
             background: var(--chroma-highlight) !important;
         }
-
+        ::-webkit-scrollbar-thumb {
+            background-color: var(--chroma-highlight);
+        }
 
         svg.ddbc-svg.ct-sidebar__control-icon polygon,
         svg.ddbc-svg.ct-sidebar__control-icon path,
@@ -600,11 +605,15 @@ chromaKeyDiceTrayNoPopUp "ON without dice popup" <<<EOT
             stroke: transparent !important;  
             text-shadow: none;
         }
+         #site ::selection{
+            background: var(--chroma-highlight) !important;
+            opacity:0.4 !important;;
+            color: var(--background-color) !important;
+        }
 
 
         .ddbc-character-tidbits__avatar,
         [class^="ct-beyond20"],
-        ::-webkit-scrollbar-thumb,
         .beyond20-quick-roll-icon,
         .alertify,
         #noty_layout__bottomRight,
@@ -617,6 +626,9 @@ chromaKeyDiceTrayNoPopUp "ON without dice popup" <<<EOT
         .dice-die-button:hover .dice-icon-die,
         .dice-toolbar__dropdown-die:hover .dice-icon-die{
             background: var(--chroma-highlight) !important;
+        }
+          ::-webkit-scrollbar-thumb {
+            background-color: var(--chroma-highlight);
         }
 
 
@@ -745,11 +757,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         overflow: overlay;
     }
     
-    /*[[diceTray]]*/
-    
-    /*[[menuDisplay]]*/       
-        
-    /*[[chromaKey]]*/
+
     
     .ct-character-sheet:before {
         /*[[titleToggle]]*/
@@ -1743,6 +1751,11 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         color: /*[[fontColor]]*/ !important;
     }
     
+    /*[[diceTray]]*/
+    
+    /*[[menuDisplay]]*/       
+        
+    /*[[chromaKey]]*/
 
     /*Fixed settings*/
     button.ct-theme-button.ct-health-summary__adjuster-button.ct-health-summary__adjuster-button--heal.ct-theme-button--outline.ct-theme-button--interactive.ct-button.character-button.character-button-block-small:hover {
