@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.78
+@version      1.3.79
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -580,7 +580,13 @@ chromaKeyDiceTray "ON with dice popup" <<<EOT
         -webkit-mask-repeat: no-repeat;
         background: var(--chroma-highlight);
     }
-    
+     @supports (-moz-appearance:none) {
+
+    *{
+        scrollbar-width: 1px;
+        scrollbar-color: var(--chroma-highlight) transparent;
+    }
+}
     
 EOT;
 
@@ -715,7 +721,13 @@ chromaKeyDiceTrayNoPopUp "ON without dice popup" <<<EOT
         -webkit-mask-repeat: no-repeat;
         background: var(--chroma-highlight);
     }
-    
+ @supports (-moz-appearance:none) {
+
+    *{
+        scrollbar-width: 1px;
+        scrollbar-color: var(--chroma-highlight) transparent;
+    }
+} 
 EOT;
 }  
 
