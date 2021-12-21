@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.142
+@version      1.2.143
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -902,7 +902,8 @@ div#site{
     .ui-datepicker-header,
     .ui-state-default,
     .ddb-notification-toast-homebrew,
-    .p-forum .alert
+    .p-forum .alert,
+    .mce-floatpanel.mce-window .mce-tab.mce-active
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
@@ -939,7 +940,9 @@ div#site{
     .comment .forum-post-header,
     .body-privatemessage-details .p-comment-index,
     .body-rpgrace-details .p-comment-index,
-    body.section-posts .u-dropDown .u-dropDownMenu{
+    body.section-posts .u-dropDown .u-dropDownMenu,
+    .mce-floatpanel.mce-window .mce-tab
+    {
         background-color: /*[[forumTertiaryColor]]*/ !important;
     }
        
@@ -1475,7 +1478,8 @@ div#site{
     .combatant-card.is-turn .combatant-card__mid-bit,
     body.section-posts blockquote,
     .combat-tracker-page__combat-tracker,
-    .p-forum .alert
+    .p-forum .alert,
+    .mce-floatpanel.mce-window .mce-textbox
     {
 		border-width: /*[[borderWidth]]*/
 		!important;
@@ -1485,6 +1489,7 @@ div#site{
 		!important;
         outline: none !important;
 	}
+
     
     .quick-menu-item-label,
     .body-rpghomebrew a.character-button-block,
@@ -2845,6 +2850,10 @@ div#site{
     body.body-rpgmagicitem-index .ct-beyond20-roll{
         display: none !important;
         
+    }
+    /*Dice Roller text box size/border fix*/
+    .mce-floatpanel.mce-window .mce-textbox{
+        height: 28px !important;   
     }
     
     
