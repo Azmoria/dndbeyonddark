@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.72
+@version      1.3.73
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -454,8 +454,9 @@ Default "OFF" <<<EOT
 EOT;
 chromaKeyDiceTray "ON with dice popup" <<<EOT
 
-       #content *:not(.dice-icon-die),
-        #content *:not(.dice-icon-die):hover
+        #content *:not(.dice-icon-die),
+        #content *:not(.dice-icon-die):hover,
+        #content *::placeholder
         {
             background: transparent !important;
             border: none !important;
@@ -547,12 +548,20 @@ chromaKeyDiceTray "ON with dice popup" <<<EOT
     .ct-quick-nav__footer-sidebar svg polygon{
         fill: var(--chroma-highlight) !important;
     }
+
+     .ct-slot-manager--size-small .ct-slot-manager__slot--used:before{
+        box-shadow: 0 0 20px 1px var(--chroma-highlight) inset !important
+    }
+    #content .ct-slot-manager__slot{
+        border: 1px solid var(--chroma-highlight) !important;
+    }
 EOT;
 
 chromaKeyDiceTrayNoPopUp "ON without dice popup" <<<EOT
 
         #content *:not(.dice-icon-die),
-        #content *:not(.dice-icon-die):hover
+        #content *:not(.dice-icon-die):hover,
+        #content *::placeholder
         {
             background: transparent !important;
             border: none !important;
@@ -645,6 +654,13 @@ chromaKeyDiceTrayNoPopUp "ON without dice popup" <<<EOT
     .ct-quick-nav__footer-sidebar svg polygon{
         fill: var(--chroma-highlight) !important;
     }
+    .ct-slot-manager--size-small .ct-slot-manager__slot--used:before{
+        box-shadow: 0 0 20px 1px var(--chroma-highlight) inset !important;
+    }
+    #content .ct-slot-manager__slot{
+        border: 1px solid var(--chroma-highlight) !important;
+    }
+    
 EOT;
 }  
 
