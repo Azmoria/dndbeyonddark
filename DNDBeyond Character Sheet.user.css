@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.67
+@version      1.3.68
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -448,9 +448,185 @@ chromaKeyDiceTray "No" <<<EOT
 EOT;
 }  
 
+@advanced dropdown chromaKey "Chroma Key Colors"{
+Default "OFF" <<<EOT
+EOT;
+chromaKeyDiceTray "ON with dice popup" <<<EOT
 
+        #content *:not(.dice-icon-die),
+        #content *:not(.dice-icon-die):hover
+        {
+            background: transparent !important;
+            border: none !important;
+            fill: var(--background-color) !important;
+            color: var(--background-color) !important;
+            border-color: var(--background-color) !important;
+            filter: none !important;
+            box-shadow: none !important;
+            stroke: transparent !important;  
+            text-shadow: 1px 0px 0
+              var(--chroma-highlight),
+            1px 1px 0
+              var(--chroma-highlight),
+            1px 1px 0
+              var(--chroma-highlight);
+        }
+
+
+        .ddbc-character-tidbits__avatar,
+        [class^="ct-beyond20"],
+        ::-webkit-scrollbar-thumb,
+        .beyond20-quick-roll-icon,
+        .alertify,
+        .dice-toolbar__dropdown .dice-toolbar__target-menu-button:after,
+        .tippy-popper{
+            display: none !important;
+        }
+
+        .dice-icon-die,
+        .dice-die-button:hover .dice-icon-die,
+        .dice-toolbar__dropdown-die:hover .dice-icon-die{
+            background: var(--chroma-highlight) !important;
+        }
+
+
+        svg.ddbc-svg.ct-sidebar__control-icon polygon,
+        svg.ddbc-svg.ct-sidebar__control-icon path,
+        #content .ddbc-chat-bubble-svg path,
+        #content .ddbc-chat-bubble-svg:hover path,
+        #content .dice-toolbar__target .MuiSvgIcon-root path,
+        .MuiList-root svg *,
+        .MuiButtonBase-root path, 
+        .MuiButtonBase-root:hover polygon:nth-of-type(2), 
+        .MuiButtonBase-root:hover path,
+        .MuiButtonBase-root .MuiSvgIcon-root polygon{
+            fill: var(--chroma-highlight) !important;
+          
+        }
+        svg.ddbc-svg.ct-sidebar__control-icon,
+        .ct-sidebar{
+            filter: none !important;
+        }
+
+        .ct-sidebar__control{
+            opacity: 1 !important;
+        }
+
+        .MuiPopover-root .MuiPaper-root,
+        .MuiList-root,
+        div#options-menu button.MuiButtonBase-root,
+        .jss2 .MuiDivider-root,
+        .jss2 .MuiListSubheader-root,
+        .jss2 .MuiListItem-root:hover,
+        .MuiButtonBase-root span,
+        .jss2 .MuiListItem-root:hover span,
+        .jss2 .MuiListItem-root span,
+        .MuiButtonBase-root:hover span
+        {
+            background-color: var(--background-color) !important;
+            filter: none !important;
+            color: var(--chroma-highlight) !important;
+            box-shadow: none !important;
+        }
+
+    
+        #content .ct-character-sheet--dice-enabled .integrated-dice__container:hover{
+            border: 1px solid var(--chroma-highlight) !important;
+        }
+
+    
    
-}
+
+EOT;
+
+chromaKeyDiceTrayNoPopUp "ON without dice popup" <<<EOT
+
+        #content *:not(.dice-icon-die),
+        #content *:not(.dice-icon-die):hover
+        {
+            background: transparent !important;
+            border: none !important;
+            fill: var(--background-color) !important;
+            color: var(--chroma-highlight) !important;
+            border-color: var(--background-color) !important;
+            filter: none !important;
+            box-shadow: none !important;
+            stroke: transparent !important;  
+            text-shadow: none;
+        }
+
+
+        .ddbc-character-tidbits__avatar,
+        .site-bar,
+        .mm-mega-menu,
+        [class^="ct-beyond20"],
+        ::-webkit-scrollbar-thumb,
+        .beyond20-quick-roll-icon,
+        .alertify,
+        #noty_layout__bottomRight,
+        .dice-toolbar__dropdown .dice-toolbar__target-menu-button:after,
+        .tippy-popper{
+            display: none !important;
+        }
+
+        .dice-icon-die,
+        .dice-die-button:hover .dice-icon-die,
+        .dice-toolbar__dropdown-die:hover .dice-icon-die{
+            background: var(--chroma-highlight) !important;
+        }
+
+
+        svg.ddbc-svg.ct-sidebar__control-icon polygon,
+        svg.ddbc-svg.ct-sidebar__control-icon path,
+        #content .ddbc-chat-bubble-svg path,
+        #content .ddbc-chat-bubble-svg:hover path,
+        #content .dice-toolbar__target .MuiSvgIcon-root path,
+        .MuiList-root svg *,
+        .MuiButtonBase-root path, 
+        .MuiButtonBase-root:hover polygon:nth-of-type(2), 
+        .MuiButtonBase-root:hover path,
+        .MuiButtonBase-root .MuiSvgIcon-root polygon{
+            fill: var(--chroma-highlight) !important;
+          
+        }
+        svg.ddbc-svg.ct-sidebar__control-icon,
+        .ct-sidebar{
+            filter: none !important;
+        }
+
+        .ct-sidebar__control{
+            opacity: 1 !important;
+        }
+
+        .MuiPopover-root .MuiPaper-root,
+        .MuiList-root,
+        div#options-menu button.MuiButtonBase-root,
+        .jss2 .MuiDivider-root,
+        .jss2 .MuiListSubheader-root,
+        .jss2 .MuiListItem-root:hover,
+        .MuiButtonBase-root span,
+        .jss2 .MuiListItem-root:hover span,
+        .jss2 .MuiListItem-root span,
+        .MuiButtonBase-root:hover span
+        {
+            background-color: var(--background-color) !important;
+            filter: none !important;
+            color: var(--chroma-highlight) !important;
+            box-shadow: none !important;
+        }
+
+    
+        #content .ct-character-sheet--dice-enabled .integrated-dice__container:hover{
+            border: 1px solid var(--chroma-highlight) !important;
+        }
+   
+
+EOT;
+}  
+
+@var color chromaHighlight "Chroma Highlight Color" "#0F0"
+
+
 
 
 ==/UserStyle== */
@@ -486,7 +662,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         overflow: overlay;
     }
     
-     /*[[diceTray]]*/
+    /*[[diceTray]]*/
     
     /*[[menuDisplay]]*/
     
@@ -2005,6 +2181,8 @@ regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond
         --outline-color: /*[[outlineColor]]*/;
         --sheet-color: /*[[sheetColor]]*/;
         --dice-color: sepia(/*[[diceSepia]]*/%) hue-rotate(/*[[hueRotation]]*/deg) brightness(/*[[diceBrightness]]*/%) saturate(/*[[diceSaturation]]*/%) contrast(/*[[diceContrast]]*/%) invert(/*[[diceInvert]]*/);
+        --background-color: /*[[background]]*/;
+        --chroma-highlight: /*[[chromaHighlight]]*/;
         --rgb-speed: /*[[rgbSpeed]]*/s;
         --rgb-from: hue-rotate(/*[[rgbFrom]]*/deg);
         --rgb-to: hue-rotate(/*[[rgbTo]]*/deg);
@@ -2350,6 +2528,8 @@ regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond
     canvas.dice-rolling-panel__container{
         filter: /*[[diceTint]]*/
     }
+    
+    /*[[chromaKey]]*/
 
 /*Beyond 20 + Talespire rolls settings*/
   
