@@ -2,7 +2,7 @@
 @name         Combat Tracker Chroma Key
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.0.4
+@version      1.0.5
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/combatTrackerChroma.user.css
 @var color backgroundColor "Chroma Background Color" "#080"
 @var color chromaHighlight "Chroma Highlight Color" "#0F0"
@@ -22,7 +22,24 @@ EOT;
             --background-color: /*[[backgroundColor]]*/;
             --chroma-highlight: /*[[chromaHighlight]]*/;
         }
+    	::-webkit-scrollbar {
+		width: 3px;
+	    }
+
+	    ::-webkit-scrollbar-track {
+		    background: /*[[backgroundColor]]*/;
+	    }
     
+	    ::-webkit-scrollbar-thumb {
+            background-color: /*[[chromaHighlight]]*/;
+            border-radius: 6px;
+            border: none;
+	    }
+    
+        *{
+            outline: none !important;   
+        }
+        
     
     
         body #site-main *:not(.dice-icon-die):not(.integrated-dice__container),
@@ -50,6 +67,7 @@ EOT;
             stroke: transparent !important;  
             text-shadow: none;
         }
+       
     
         #site ::selection{
             background: var(--chroma-highlight) !important;
@@ -110,7 +128,7 @@ EOT;
         }
         
 
-        #site-main .combatant-card.is-turn {
+        body#site #site-main .combatant-card.is-turn {
             border-color: var(--chroma-highlight) !important;
             box-shadow: 0px 0px 5px 0px var(--chroma-highlight) !important;
         }
