@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.2.143
+@version      1.2.144
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -1928,7 +1928,9 @@ div#site{
         border: none;
     }
 
-    .mce-btn i{
+    .mce-btn i,
+    .mce-floatpanel.mce-window .mce-tab,
+    .mce-floatpanel.mce-window .mce-label{
         text-shadow: none !important
     }
     
