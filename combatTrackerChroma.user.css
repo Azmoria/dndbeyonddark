@@ -2,7 +2,7 @@
 @name         Combat Tracker Chroma Key
 @preprocessor uso
 @namespace    Azmoria (Jay_Lane)
-@version      1.0.2
+@version      1.0.3
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/combatTrackerChroma.user.css
 @var color backgroundColor "Chroma Background Color" "#080"
 @var color chromaHighlight "Chroma Highlight Color" "#0F0"
@@ -55,17 +55,23 @@ EOT;
         html body.encounter-builder-app,
         #site-main,
         .ddbeb-flyout,
-        .ddbeb-button:hover:not([disabled]) {
+        .ddbeb-button:hover:not([disabled]),
+        body#site  #site-main .actions__tooltip>ul{
             background: var(--background-color) !important;
         }
         
-       
+        #site .ddb-page-header__controls .actions-container svg rect,
+        #site .ddb-page-header__controls .actions-container svg rect:hover{
+            fill: none !important;  
+        }
     
         .ddbeb-flyout,
         .ddbeb-button:hover:not([disabled]){
             box-shadow: none !important;   
         }
-
+        .actions-container .actions__tooltip>ul:after{
+            border-bottom-color: var(--chroma-highlight);
+        }
         .ddbc-character-tidbits__avatar,
         [class^="ct-beyond20"],    
         .beyond20-quick-roll-icon,
@@ -82,7 +88,11 @@ EOT;
         .combatant-summary__avatar{
             display: none !important;
         }
+        
     
+        .integrated-dice__container .ct-beyond20-custom-roll{
+            display: inline-block !important;    
+        }
         /*[[disableDicePopup]]*/
     
         .dice-icon-die,
@@ -90,6 +100,7 @@ EOT;
         .dice-toolbar__dropdown-die:hover .dice-icon-die{
             background: var(--chroma-highlight) !important;
         }
+        
 
         #site-main .combatant-card.is-turn {
             border-color: var(--chroma-highlight) !important;
@@ -206,4 +217,5 @@ EOT;
         -webkit-mask-repeat: no-repeat;
         background: var(--chroma-highlight);
     }
+ 
 }
