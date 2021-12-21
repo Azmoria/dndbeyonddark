@@ -1,0 +1,205 @@
+/* ==UserStyle==
+@name         Combat Tracker Chroma Key
+@preprocessor uso
+@namespace    Azmoria (Jay_Lane)
+@version      1.0.0
+@var color backgroundColor "Chroma Background Color" "#080"
+@var color chromaHighlight "Chroma Highlight Color" "#0F0"
+@advanced dropdown disableDicePopup "Dice Popup"{
+ON "ON" <<<EOT
+EOT;
+OFF "OFF" <<<EOT
+        #noty_layout__bottomRight{
+            display: none !important;
+        }
+EOT;
+}
+==/UserStyle== */
+
+@-moz-document url-prefix("https://www.dndbeyond.com/combat-tracker") {
+        :root{
+            --background-color: /*[[backgroundColor]]*/;
+            --chroma-highlight: /*[[chromaHighlight]]*/;
+        }
+    
+    
+    
+        body #site-main *:not(.dice-icon-die):not(.integrated-dice__container),
+        body #site-main *:not(.dice-icon-die):not(.integrated-dice__container):hover,
+        body #site-main *::placeholder,
+        .ct-feature-snippet__meta-item::before,
+        .MuiButton-label,
+        .MuiButtonBase-root:hover span,
+        .MuiButtonBase-root span,
+        .jss2 .MuiListItem-root:hover span,
+        .triggered-flyout-root *,
+        #site-main .ddbeb-button,
+        .hit-point-adjuster__damage.ddbeb-button[disabled], 
+        .hit-point-adjuster__heal.ddbeb-button[disabled],
+        input.flyout-input-number__input,
+        ::selection,
+        #site-main .integrated-dice__container
+        {
+            background: transparent !important;
+            border: none !important;
+            fill: var(--background-color) !important;
+            color: var(--chroma-highlight) !important;
+            border-color: var(--background-color) !important;
+            filter: none !important;
+            box-shadow: none !important;
+            stroke: transparent !important;  
+            text-shadow: none;
+        }
+    
+        html body.encounter-builder-app,
+        #site-main,
+        .ddbeb-flyout,
+        .ddbeb-button:hover:not([disabled]) {
+            background: var(--background-color) !important;
+        }
+        
+       
+    
+        .ddbeb-flyout,
+        .ddbeb-button:hover:not([disabled]){
+            box-shadow: none !important;   
+        }
+
+        .ddbc-character-tidbits__avatar,
+        [class^="ct-beyond20"],    
+        .beyond20-quick-roll-icon,
+        .alertify,
+        .dice-toolbar__dropdown .dice-toolbar__target-menu-button:after,
+        .tippy-popper,
+        .b-breadcrumb-item,
+        .combatant-card--is-bloodied .combatant-summary__avatar:after, 
+        .combatant-card--is-critical .combatant-summary__avatar:after,
+        .ddb-footer,
+        .mm-mega-menu,
+        .site-bar,
+        .release-indicator,
+        .combatant-summary__avatar{
+            display: none !important;
+        }
+    
+        /*[[disableDicePopup]]*/
+    
+        .dice-icon-die,
+        .dice-die-button:hover .dice-icon-die,
+        .dice-toolbar__dropdown-die:hover .dice-icon-die{
+            background: var(--chroma-highlight) !important;
+        }
+
+        #site-main .combatant-card.is-turn {
+            border-color: var(--chroma-highlight) !important;
+            box-shadow: 0px 0px 5px 0px var(--chroma-highlight) !important;
+        }
+        
+        svg.ddbc-svg.ct-sidebar__control-icon polygon,
+        svg.ddbc-svg.ct-sidebar__control-icon path,
+        #content .ddbc-chat-bubble-svg path,
+        #content .ddbc-chat-bubble-svg:hover path,
+        #content .dice-toolbar__target .MuiSvgIcon-root path,
+        .MuiList-root svg *,
+        .MuiButtonBase-root path, 
+        .MuiButtonBase-root:hover polygon:nth-of-type(2), 
+        .MuiButtonBase-root:hover path,
+        .MuiButtonBase-root .MuiSvgIcon-root polygon{
+            fill: var(--chroma-highlight) !important;
+          
+        }
+        svg.ddbc-svg.ct-sidebar__control-icon,
+        .ct-sidebar{
+            filter: none !important;
+        }
+
+        .ct-sidebar__control{
+            opacity: 1 !important;
+        }
+
+        .MuiPopover-root .MuiPaper-root,
+        .MuiList-root,
+        div#options-menu button.MuiButtonBase-root,
+        .jss2 .MuiDivider-root,
+        .jss2 .MuiListSubheader-root,
+        .jss2 .MuiListItem-root:hover,
+        .ct-quick-nav__toggle, 
+        .ct-quick-nav__edge-toggle, 
+        .ct-character-sheet-MuiPaper-root, 
+        .ct-character-sheet-MuiListItem-button:hover,
+         ::-webkit-scrollbar-track
+        {
+            background-color: var(--background-color) !important;
+            filter: none !important;
+            color: var(--chroma-highlight) !important;
+            box-shadow: none !important;
+        }
+
+    
+        #content .ct-character-sheet--dice-enabled .integrated-dice__container:hover,
+        #site-main .integrated-dice__container:hover{
+            border: 1px solid var(--chroma-highlight) !important;
+        }
+    
+    
+        .combatant-card__hp-current:after,
+        .ddbeb-flyout{
+            border-color: var(--chroma-highlight);
+        }
+    
+        .flyout-input-number__input-wrapper:after{
+            border-top: 1px solid var(--chroma-highlight) !important;
+        }
+
+    .ct-quick-nav__toggle{
+        -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 21 21'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:var(--chroma-highlight);%7D%3C/style%3E%3C/defs%3E%3Ctitle%3EAsset 2%3C/title%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Crect class='cls-1' width='5' height='5'/%3E%3Crect class='cls-1' y='8' width='5' height='5'/%3E%3Crect class='cls-1' y='16' width='5' height='5'/%3E%3Crect class='cls-1' x='8' width='5' height='5'/%3E%3Crect class='cls-1' x='8' y='8' width='5' height='5'/%3E%3Crect class='cls-1' x='8' y='16' width='5' height='5'/%3E%3Crect class='cls-1' x='16' width='5' height='5'/%3E%3Crect class='cls-1' x='16' y='8' width='5' height='5'/%3E%3Crect class='cls-1' x='16' y='16' width='5' height='5'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        background: var(--chroma-highlight) !important;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-size: 20px;
+        -webkit-mask-position: 12px;
+    }
+
+    .ct-quick-nav__footer-sidebar svg path,
+    .ct-quick-nav__footer-sidebar svg polygon,
+    svg.sidebar__control--expand path,
+    svg.sidebar__control--expand polygon{
+        fill: var(--chroma-highlight) !important;
+    }
+    .ct-slot-manager--size-small .ct-slot-manager__slot--used:before{
+        box-shadow: 0 0 20px 1px var(--chroma-highlight) inset !important;
+    }
+    #content .ct-slot-manager__slot{
+        border: 1px solid var(--chroma-highlight) !important;
+    }   
+    #content .ct-extra-row__img,
+    .mon-stat-block__separator-img,
+    .mon-stat-block:before,
+    .mon-stat-block:after,
+    ::-webkit-scrollbar-thumb{
+        background: var(--chroma-highlight) !important;
+        mix-blend-mode: color-dodge;
+    }
+    
+     body #site-main .combatant-summary__avatar img:after{
+        background: var(--chroma-highlight) !important;
+        mix-blend-mode: color-dodge;
+        position: absolute;
+        display: block;
+    }
+
+    .site .button-action-decrease--small:before{
+        -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 16'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill-rule:evenodd; fill: white;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3EAsset 54%3C/title%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cpolygon class='cls-1' points='6 0 6 6 0 6 0 10 6 10 6 16 10 16 10 10 16 10 16 6 10 6 10 0 6 0'/%3E%3Crect class='cls-1' x='18' y='6' width='16' height='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        -webkit-mask-position: -13px 1px;
+        -webkit-mask-size: 30px 10px;
+        -webkit-mask-repeat: no-repeat;
+        background: var(--chroma-highlight);
+    }
+    
+    .site .button-action-increase--small:before{
+-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 16'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill-rule:evenodd; fill: white;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3EAsset 54%3C/title%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cpolygon class='cls-1' points='6 0 6 6 0 6 0 10 6 10 6 16 10 16 10 10 16 10 16 6 10 6 10 0 6 0'/%3E%3Crect class='cls-1' x='18' y='6' width='16' height='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        -webkit-mask-position: -2px 0;
+        -webkit-mask-size: 30px 12px;
+        -webkit-mask-repeat: no-repeat;
+        background: var(--chroma-highlight);
+    }
+}
