@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.77
+@version      1.3.78
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -488,9 +488,9 @@ chromaKeyDiceTray "ON with dice popup" <<<EOT
             display: none !important;
         }
 
-        .dice-icon-die,
-        .dice-die-button:hover .dice-icon-die,
-        .dice-toolbar__dropdown-die:hover .dice-icon-die{
+        #site .dice-icon-die,
+        #site .dice-die-button:hover .dice-icon-die,
+        #site .dice-toolbar__dropdown-die:hover .dice-icon-die{
             background: var(--chroma-highlight) !important;
         }
         ::-webkit-scrollbar-thumb {
@@ -622,9 +622,9 @@ chromaKeyDiceTrayNoPopUp "ON without dice popup" <<<EOT
             display: none !important;
         }
 
-        .dice-icon-die,
-        .dice-die-button:hover .dice-icon-die,
-        .dice-toolbar__dropdown-die:hover .dice-icon-die{
+        #site .dice-icon-die,
+        #site .dice-die-button:hover .dice-icon-die,
+        #site .dice-toolbar__dropdown-die:hover .dice-icon-die{
             background: var(--chroma-highlight) !important;
         }
           ::-webkit-scrollbar-thumb {
