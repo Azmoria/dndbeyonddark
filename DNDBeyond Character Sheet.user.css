@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.70
+@version      1.3.71
 @namespace    Azmoria (Jay_Lane)
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -454,23 +454,18 @@ Default "OFF" <<<EOT
 EOT;
 chromaKeyDiceTray "ON with dice popup" <<<EOT
 
-        #content *:not(.dice-icon-die),
+       #content *:not(.dice-icon-die),
         #content *:not(.dice-icon-die):hover
         {
             background: transparent !important;
             border: none !important;
             fill: var(--background-color) !important;
-            color: var(--background-color) !important;
+            color: var(--chroma-highlight) !important;
             border-color: var(--background-color) !important;
             filter: none !important;
             box-shadow: none !important;
             stroke: transparent !important;  
-            text-shadow: 1px 0px 0
-              var(--chroma-highlight),
-            1px 1px 0
-              var(--chroma-highlight),
-            1px 1px 0
-              var(--chroma-highlight);
+            text-shadow: none;
         }
 
 
@@ -522,7 +517,11 @@ chromaKeyDiceTray "ON with dice popup" <<<EOT
         .MuiButtonBase-root span,
         .jss2 .MuiListItem-root:hover span,
         .jss2 .MuiListItem-root span,
-        .MuiButtonBase-root:hover span
+        .MuiButtonBase-root:hover span,
+        .ct-quick-nav__toggle, 
+        .ct-quick-nav__edge-toggle, 
+        .ct-character-sheet-MuiPaper-root, 
+        .ct-character-sheet-MuiListItem-button:hover
         {
             background-color: var(--background-color) !important;
             filter: none !important;
@@ -534,20 +533,20 @@ chromaKeyDiceTray "ON with dice popup" <<<EOT
         #content .ct-character-sheet--dice-enabled .integrated-dice__container:hover{
             border: 1px solid var(--chroma-highlight) !important;
         }
-        .ct-quick-nav__toggle{
-             -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 21 21'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:var(--chroma-highlight);%7D%3C/style%3E%3C/defs%3E%3Ctitle%3EAsset 2%3C/title%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Crect class='cls-1' width='5' height='5'/%3E%3Crect class='cls-1' y='8' width='5' height='5'/%3E%3Crect class='cls-1' y='16' width='5' height='5'/%3E%3Crect class='cls-1' x='8' width='5' height='5'/%3E%3Crect class='cls-1' x='8' y='8' width='5' height='5'/%3E%3Crect class='cls-1' x='8' y='16' width='5' height='5'/%3E%3Crect class='cls-1' x='16' width='5' height='5'/%3E%3Crect class='cls-1' x='16' y='8' width='5' height='5'/%3E%3Crect class='cls-1' x='16' y='16' width='5' height='5'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-            background: var(--chroma-highlight) !important;
-            -webkit-mask-repeat: no-repeat;
-            -webkit-mask-size: 20px;
-            -webkit-mask-position: 12px;
+
+    .ct-quick-nav__toggle{
+        -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 21 21'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:var(--chroma-highlight);%7D%3C/style%3E%3C/defs%3E%3Ctitle%3EAsset 2%3C/title%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Crect class='cls-1' width='5' height='5'/%3E%3Crect class='cls-1' y='8' width='5' height='5'/%3E%3Crect class='cls-1' y='16' width='5' height='5'/%3E%3Crect class='cls-1' x='8' width='5' height='5'/%3E%3Crect class='cls-1' x='8' y='8' width='5' height='5'/%3E%3Crect class='cls-1' x='8' y='16' width='5' height='5'/%3E%3Crect class='cls-1' x='16' width='5' height='5'/%3E%3Crect class='cls-1' x='16' y='8' width='5' height='5'/%3E%3Crect class='cls-1' x='16' y='16' width='5' height='5'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        background: var(--chroma-highlight) !important;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-size: 20px;
+        -webkit-mask-position: 12px;
 
     }
+
     .ct-quick-nav__footer-sidebar svg path,
     .ct-quick-nav__footer-sidebar svg polygon{
         fill: var(--chroma-highlight) !important;
     }
-   
-
 EOT;
 
 chromaKeyDiceTrayNoPopUp "ON without dice popup" <<<EOT
