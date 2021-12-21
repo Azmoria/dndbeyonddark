@@ -27,7 +27,7 @@ For android devices (mobile/tablet) <a href="https://kiwibrowser.com/">Kiwi Brow
 
 <a href="https://github.com/Azmoria/dndbeyonddark/blob/master/Character%20Specific%20Themes.md">How to create character specific themes</a>
 
-<a href="https://github.com/Azmoria/dndbeyonddark/blob/master/combatTrackerChroma.user.css">How to capture just the dice for your stream</a>
+<a href="https://github.com/Azmoria/dndbeyonddark/blob/master/Chroma%20Key%20Dice.md">How to capture just the dice for your stream</a>
 
 <br>
 
