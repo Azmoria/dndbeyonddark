@@ -1,8 +1,9 @@
     /* ==UserStyle==
 @name         Combat Tracker Chroma Key
 @preprocessor uso
-@namespace    Azmoria (Jay_Lane)
-@version      1.0.9
+@namespace    Combat Tracker Chroma Key
+@author       Azmoria (Jay_Lane)
+@version      1.0.10
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/combatTrackerChroma.user.css
 @var color backgroundColor "Chroma Background Color" "#080"
 @var color chromaHighlight "Chroma Highlight Color" "#0F0"
@@ -17,7 +18,7 @@ EOT;
 }
 ==/UserStyle== */
 
-@-moz-document url-prefix("https://www.dndbeyond.com/combat-tracker") {
+@-moz-document regexp("https://www.dndbeyond.com/combat-tracker/.*") {
         :root{
             --background-color: /*[[backgroundColor]]*/;
             --chroma-highlight: /*[[chromaHighlight]]*/;
@@ -67,7 +68,11 @@ EOT;
         #site-main .integrated-dice__container,
         .ddbeb-modal *,
         .ddbeb-button[disabled],
-        body [class*="GameLogNotification"]
+        body [class*="GameLogNotification"],
+        .alertify *,
+        .alertify .ajs-header,
+        .alertify .beyond20-title,
+        .alertify .ajs-body
         {
             background: transparent !important;
             border: none !important;
@@ -78,6 +83,13 @@ EOT;
             box-shadow: none !important;
             stroke: transparent !important;  
             text-shadow: none;
+        }
+    
+        .ajs-close{
+            -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABZ0RVh0Q3JlYXRpb24gVGltZQAwNy8xMy8xNOrZqugAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzbovLKMAAAAh0lEQVQYlY2QsQ0EIQwEB9cBAR1CJUaI/gigDnwR6NBL/7/xWLNrZ2b8EwGotVpr7eOitWa1VjugiNB7R1UPrKrWe0dEAHBbXUqxMQbeewDmnHjvyTm7C3zDwAUd9c63YQdUVdu6EAJzzquz7HXvTiklt+H9DQFYaxFjvDqllFyMkbXWvfpXHjJrWFgdBq/hAAAAAElFTkSuQmCC) !important;
+            background-color: var(--chroma-highlight) !important;
+            -webkit-mask-repeat: no-repeat !important;
+            -webkit-mask-position: center center !important;
         }
     
         .ddbeb-modal ::placeholder{
@@ -123,7 +135,6 @@ EOT;
         .ddbc-character-tidbits__avatar,
         [class^="ct-beyond20"],    
         .beyond20-quick-roll-icon,
-        .alertify,
         .dice-toolbar__dropdown .dice-toolbar__target-menu-button:after,
         .tippy-popper,
         .b-breadcrumb-item,
@@ -188,7 +199,9 @@ EOT;
         .ct-quick-nav__edge-toggle, 
         .ct-character-sheet-MuiPaper-root, 
         .ct-character-sheet-MuiListItem-button:hover,
-         ::-webkit-scrollbar-track
+         ::-webkit-scrollbar-track,
+        .alertify .ajs-dialog,
+        .alertify .ajs-primary 
         {
             background-color: var(--background-color) !important;
             filter: none !important;
@@ -268,8 +281,10 @@ EOT;
    @supports (-moz-appearance:none) {
 
         *{
-          scrollbar-width: thin;
-          scrollbar-color: var(--chroma-highlight) transparent;
+      scrollbar-width: thin;
+      scrollbar-color: var(--chroma-highlight) transparent;
         }
     }
 }
+ 
+
