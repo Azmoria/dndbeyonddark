@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.80
-@namespace    Azmoria (Jay_Lane)
+@version      1.3.81
+@namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20Character%20Sheet.user.css
@@ -459,12 +459,20 @@ chromaKeyDiceTray "ON with dice popup" <<<EOT
         #content *::placeholder,
         .ct-feature-snippet__meta-item::before,
         .MuiButton-label,
+        [class^="ct-beyond20"],
         .MuiButtonBase-root:hover span,
         .MuiButtonBase-root span,
         .jss2 .MuiListItem-root:hover span,
-        body.body-rpgcharacter-sheet>div:last-of-type:not(.ct-sidebar__portal) *,
-        body.body-rpgcharacter-sheet>div:last-of-type:not(.ct-sidebar__portal)>div[class^="_"]>div span:last-of-type
-        {
+        body.body-rpgcharacter-sheet>div:last-of-type:not(.ct-sidebar__portal):not(.alertify):not(#noty_layout__bottomRight) *,
+        body.body-rpgcharacter-sheet>div:last-of-type:not(.ct-sidebar__portal):not(.alertify):not(#noty_layout__bottomRight)>div[class^="_"]>div span:last-of-type,
+        .alertify *,
+        .alertify .ajs-header,
+        .alertify .beyond20-title,
+        .alertify .ajs-body,
+        body>.alertify .dice-formula.beyond20-roll-formula,
+        ::marker,
+        .alertify .beyond20-header .beyond20-description
+            {
             background: transparent !important;
             border: none !important;
             fill: var(--background-color) !important;
@@ -475,6 +483,14 @@ chromaKeyDiceTray "ON with dice popup" <<<EOT
             stroke: transparent !important;  
             text-shadow: none;
         }
+
+        .ajs-close{
+            -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABZ0RVh0Q3JlYXRpb24gVGltZQAwNy8xMy8xNOrZqugAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzbovLKMAAAAh0lEQVQYlY2QsQ0EIQwEB9cBAR1CJUaI/gigDnwR6NBL/7/xWLNrZ2b8EwGotVpr7eOitWa1VjugiNB7R1UPrKrWe0dEAHBbXUqxMQbeewDmnHjvyTm7C3zDwAUd9c63YQdUVdu6EAJzzquz7HXvTiklt+H9DQFYaxFjvDqllFyMkbXWvfpXHjJrWFgdBq/hAAAAAElFTkSuQmCC) !important;
+        background-color: var(--chroma-highlight) !important;
+        -webkit-mask-repeat: no-repeat !important;
+        -webkit-mask-position: center center !important;
+        }
+
         #site ::selection{
             background: var(--chroma-highlight) !important;
             opacity:0.4 !important;;
@@ -482,11 +498,11 @@ chromaKeyDiceTray "ON with dice popup" <<<EOT
         }
 
         .ddbc-character-tidbits__avatar,
-        [class^="ct-beyond20"],
+        img[class^="ct-beyond20"],
         .beyond20-quick-roll-icon,
-        .alertify,
         .dice-toolbar__dropdown .dice-toolbar__target-menu-button:after,
-        .tippy-popper{
+        .tippy-popper,
+        .beyond20-character-avatar{
             display: none !important;
         }
 
@@ -599,11 +615,19 @@ chromaKeyDiceTrayNoPopUp "ON without dice popup" <<<EOT
         #content *::placeholder,
         .ct-feature-snippet__meta-item::before,
         .MuiButton-label,
+        [class^="ct-beyond20"],
         .MuiButtonBase-root:hover span,
         .MuiButtonBase-root span,
         .jss2 .MuiListItem-root:hover span,
-        body.body-rpgcharacter-sheet>div:last-of-type:not(.ct-sidebar__portal) *,
-        body.body-rpgcharacter-sheet>div:last-of-type:not(.ct-sidebar__portal)>div[class^="_"]>div span:last-of-type
+        body.body-rpgcharacter-sheet>div:last-of-type:not(.ct-sidebar__portal):not(.alertify):not(#noty_layout__bottomRight) *,
+        body.body-rpgcharacter-sheet>div:last-of-type:not(.ct-sidebar__portal):not(.alertify):not(#noty_layout__bottomRight)>div[class^="_"]>div span:last-of-type,
+        .alertify *,
+        .alertify .ajs-header,
+        .alertify .beyond20-title,
+        .alertify .ajs-body,
+        body>.alertify .dice-formula.beyond20-roll-formula,
+        ::marker,
+        .alertify .beyond20-header .beyond20-description
         {
             background: transparent !important;
             border: none !important;
@@ -615,6 +639,13 @@ chromaKeyDiceTrayNoPopUp "ON without dice popup" <<<EOT
             stroke: transparent !important;  
             text-shadow: none;
         }
+
+        .ajs-close{
+            -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABZ0RVh0Q3JlYXRpb24gVGltZQAwNy8xMy8xNOrZqugAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzbovLKMAAAAh0lEQVQYlY2QsQ0EIQwEB9cBAR1CJUaI/gigDnwR6NBL/7/xWLNrZ2b8EwGotVpr7eOitWa1VjugiNB7R1UPrKrWe0dEAHBbXUqxMQbeewDmnHjvyTm7C3zDwAUd9c63YQdUVdu6EAJzzquz7HXvTiklt+H9DQFYaxFjvDqllFyMkbXWvfpXHjJrWFgdBq/hAAAAAElFTkSuQmCC) !important;
+            background-color: var(--chroma-highlight) !important;
+            -webkit-mask-repeat: no-repeat !important;
+            -webkit-mask-position: center center !important;
+        }
          #site ::selection{
             background: var(--chroma-highlight) !important;
             opacity:0.4 !important;;
@@ -623,12 +654,12 @@ chromaKeyDiceTrayNoPopUp "ON without dice popup" <<<EOT
 
 
         .ddbc-character-tidbits__avatar,
-        [class^="ct-beyond20"],
-        .beyond20-quick-roll-icon,
-        .alertify,
+        .beyond20-quick-roll-icon,       
         #noty_layout__bottomRight,
         .dice-toolbar__dropdown .dice-toolbar__target-menu-button:after,
-        .tippy-popper{
+        .tippy-popper,
+        .beyond20-character-avatar,
+        img[class^="ct-beyond20"] {
             display: none !important;
         }
 
@@ -709,6 +740,7 @@ chromaKeyDiceTrayNoPopUp "ON without dice popup" <<<EOT
         background: var(--chroma-highlight) !important;
         mix-blend-mode: color-dodge;
     }
+
 
     .site .button-action-decrease--small:before{
         -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 16'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill-rule:evenodd; fill: white;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3EAsset 54%3C/title%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cpolygon class='cls-1' points='6 0 6 6 0 6 0 10 6 10 6 16 10 16 10 10 16 10 16 6 10 6 10 0 6 0'/%3E%3Crect class='cls-1' x='18' y='6' width='16' height='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
@@ -792,7 +824,6 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         -o-background-size: cover !important;
         background-size: cover !important;
     }
-    
     
     .ct-decorate-pane__backdrop{
         /*[[backgroundImg]]*/
@@ -1772,6 +1803,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     /*[[menuDisplay]]*/       
         
     /*[[chromaKey]]*/
+
 
     /*Fixed settings*/
     button.ct-theme-button.ct-health-summary__adjuster-button.ct-health-summary__adjuster-button--heal.ct-theme-button--outline.ct-theme-button--interactive.ct-button.character-button.character-button-block-small:hover {
