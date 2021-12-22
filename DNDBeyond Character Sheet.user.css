@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.81
+@version      1.3.82
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -471,7 +471,9 @@ chromaKeyDiceTray "ON with dice popup" <<<EOT
         .alertify .ajs-body,
         body>.alertify .dice-formula.beyond20-roll-formula,
         ::marker,
-        .alertify .beyond20-header .beyond20-description
+        .alertify .beyond20-header .beyond20-description,
+        .alertify .beyond20-roll-detail-crit,
+        .alertify .beyond20-roll-detail-fail
             {
             background: transparent !important;
             border: none !important;
@@ -627,7 +629,9 @@ chromaKeyDiceTrayNoPopUp "ON without dice popup" <<<EOT
         .alertify .ajs-body,
         body>.alertify .dice-formula.beyond20-roll-formula,
         ::marker,
-        .alertify .beyond20-header .beyond20-description
+        .alertify .beyond20-header .beyond20-description,
+        .alertify .beyond20-roll-detail-crit,
+        .alertify .beyond20-roll-detail-fail
         {
             background: transparent !important;
             border: none !important;
