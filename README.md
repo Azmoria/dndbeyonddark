@@ -1,36 +1,7 @@
 # dndbeyonddark
 Themes for DNDBeyond allowing for custom colors. It's set to a dark mode by default.
 
-Now includes customizing Dice Tint. See Images below for examples.
-
-You will need Stylus or another User CSS extension to apply these themes. 
-
-You can get Stylus here:
-
-<a href="https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?hl=en">For Chrome</a><br>
-<a href="https://addons.mozilla.org/en-CA/firefox/addon/styl-us/">For Firefox</a>  <i>**Note I do not play using firefox - testing will be slow. Please report any issues you find and I will attempt to fix them.</i>
-
-<i>I recommend setting the popup width for stylus to at least 500 pixels. You can find this under options when clicking on the stylus extension.</i>
-
-Once you have Stylus installed click the links below to install the themes. I suggest opening them in a new tab clicking install then closing the tab.
-
-<a href="https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20Character%20Sheet.user.css">Character Sheet Theme</a>
-<br>
-<a href="https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css">The rest of DNDBeyond site</a>
-<br><br>
-Theme for chroma capture of dice while using combat tracker: <a href="https://github.com/Azmoria/dndbeyonddark/raw/master/combatTrackerChroma.user.css">here</a>
-<br><br>
-For android devices (mobile/tablet) <a href="https://kiwibrowser.com/">Kiwi Browser</a> allows the installation of desktop Chrome extentions. There may be alternatives that work for iOS. However I only own android devices so I am unaware of which ones would work or exist.
-
-<i>**Note: Mobile/tablet testing will be slow as I primarily play on desktop - please add issues for problems you find, either desktop or other devices, as your help finding problems is appreciated. If you have requests you can also add them to issues and I will attempt to add what I can.</i>
-
-<br>
-
-<a href="https://github.com/Azmoria/dndbeyonddark/blob/master/Character%20Specific%20Themes.md">How to create character specific themes</a>
-
-<a href="https://github.com/Azmoria/dndbeyonddark/blob/master/Chroma%20Key%20Dice.md">How to capture just the dice for your stream</a>
-
-<br>
+Now includes customizing Dice Tint. See dropdowns below for examples.
 
 <details>
   <summary> Character Sheet examples:</summary> 
@@ -78,6 +49,37 @@ For android devices (mobile/tablet) <a href="https://kiwibrowser.com/">Kiwi Brow
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/DNDBeyond%20Dark/players-hand.PNG?raw=true"/>
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/DNDBeyond%20Dark/spells.PNG"/>
 </details>
+
+You will need Stylus or another User CSS extension to apply these themes. 
+
+You can get Stylus here:
+
+<a href="https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?hl=en">For Chrome</a><br>
+<a href="https://addons.mozilla.org/en-CA/firefox/addon/styl-us/">For Firefox</a>  <i>**Note I do not play using firefox - testing will be slow. Please report any issues you find and I will attempt to fix them.</i>
+
+<i>I recommend setting the popup width for stylus to at least 500 pixels. You can find this under options when clicking on the stylus extension.</i>
+
+Once you have Stylus installed click the links below to install the themes. I suggest opening them in a new tab clicking install then closing the tab.
+
+<a href="https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20Character%20Sheet.user.css">Character Sheet Theme</a>
+<br>
+<a href="https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css">The rest of DNDBeyond site</a>
+<br><br>
+Theme for chroma capture of dice while using combat tracker: <a href="https://github.com/Azmoria/dndbeyonddark/raw/master/combatTrackerChroma.user.css">here</a>
+<br><br>
+For android devices (mobile/tablet) <a href="https://kiwibrowser.com/">Kiwi Browser</a> allows the installation of desktop Chrome extentions. There may be alternatives that work for iOS. However I only own android devices so I am unaware of which ones would work or exist.
+
+<i>**Note: Mobile/tablet testing will be slow as I primarily play on desktop - please add issues for problems you find, either desktop or other devices, as your help finding problems is appreciated. If you have requests you can also add them to issues and I will attempt to add what I can.</i>
+
+<br>
+
+<a href="https://github.com/Azmoria/dndbeyonddark/blob/master/Character%20Specific%20Themes.md">How to create character specific themes</a>
+
+<a href="https://github.com/Azmoria/dndbeyonddark/blob/master/Chroma%20Key%20Dice.md">How to capture just the dice for your stream</a>
+
+<br>
+
+
 
 <s>With the exception of the dice roller most of the alpha or beta content has not been themed as I am waiting for finalized versions and they either have their own dark mode available (such as the encounter builder) or are darker than the original site design.</s>
 
