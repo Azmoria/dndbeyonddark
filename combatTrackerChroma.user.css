@@ -3,7 +3,7 @@
 @preprocessor uso
 @namespace    Combat Tracker Chroma Key
 @author       Azmoria (Jay_Lane)
-@version      1.0.10
+@version      1.0.11
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/combatTrackerChroma.user.css
 @var color backgroundColor "Chroma Background Color" "#080"
 @var color chromaHighlight "Chroma Highlight Color" "#0F0"
@@ -201,7 +201,9 @@ EOT;
         .ct-character-sheet-MuiListItem-button:hover,
          ::-webkit-scrollbar-track,
         .alertify .ajs-dialog,
-        .alertify .ajs-primary 
+        .alertify .ajs-primary,
+        .beyond20-tooltip .beyond20-tooltip-content,
+        .beyond20-tooltip .beyond20-roll-formula
         {
             background-color: var(--background-color) !important;
             filter: none !important;
@@ -281,8 +283,8 @@ EOT;
    @supports (-moz-appearance:none) {
 
         *{
-      scrollbar-width: thin;
-      scrollbar-color: var(--chroma-highlight) transparent;
+          scrollbar-width: thin;
+          scrollbar-color: var(--chroma-highlight) transparent;
         }
     }
 }
