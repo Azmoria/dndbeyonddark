@@ -1,8 +1,8 @@
  /* ==UserStyle==
 @name         DNDBeyond Dark Theme
 @preprocessor uso
-@namespace    Azmoria (Jay_Lane)
-@version      1.2.144
+@namespace    DNDBeyond Dark Theme
+@version      1.2.145
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -382,8 +382,9 @@ custom "Custom iFrame filter" <<<EOT
     html>#tinymce blockquote,
     html>#tinymce table th,
     html>#tinymce table tr:nth-child(2n+1),
-    html>#tinymce div{
-        background: none;
+    html>#tinymce div,
+    html>#tinymce .source-quote{
+        background: none !important;
     }
     html>#tinymce table, 
     html>#tinymce table th, 
@@ -415,8 +416,9 @@ dark "Dark iFrames" <<<EOT
     html>#tinymce blockquote,
     html>#tinymce table th,
     html>#tinymce table tr:nth-child(2n+1),
-    html>#tinymce div{
-        background: none;
+    html>#tinymce div,
+    html>#tinymce .source-quote{
+        background: none !important;
     }
     html>#tinymce table, 
     html>#tinymce table th, 
@@ -2854,7 +2856,7 @@ div#site{
         
     }
     /*Dice Roller text box size/border fix*/
-    .mce-floatpanel.mce-window .mce-textbox{
+    .mce-floatpanel.mce-window .mce-textbox:not(.mce-multiline){
         height: 28px !important;   
     }
     
