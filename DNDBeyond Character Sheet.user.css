@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.82
+@version      1.3.83
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -708,7 +708,8 @@ chromaKeyDiceTrayNoPopUp "ON without dice popup" <<<EOT
         .ct-quick-nav__toggle, 
         .ct-quick-nav__edge-toggle, 
         .ct-character-sheet-MuiPaper-root, 
-        .ct-character-sheet-MuiListItem-button:hover
+        .ct-character-sheet-MuiListItem-button:hover,
+        .beyond20-roll-die-result
         {
             background-color: var(--background-color) !important;
             filter: none !important;
@@ -2698,7 +2699,23 @@ regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond
     .ajs-header,
     .ajs-primary.ajs-buttons{
         background-color: /*[[background]]*/ !important;
-        color: /*[[fontColor]]*/ !important;
+        color: /*[[fontColor]]*/;
+    }
+    
+    .beyond20-dice-roller a,
+    .beyond20-button-roll-damages{
+        color: /*[[fontColor]]*/;
+    }
+    
+    .beyond20-message details summary,
+    .beyond20-title,
+    .beyond20-dice-roller a:hover{
+        color: /*[[highlightColor]]*/;
+    }
+    
+    
+    .beyond20-button-roll-damages{
+        color: /*[[rollColor]]*/;
     }
     
     .beyond20-roll-cell,
@@ -2707,22 +2724,27 @@ regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond
     .beyond20-dice-roller-content,
     .beyond20-tooltip .beyond20-tooltip-content,
     .beyond20-roll-cell,
-    .beyond20-roll-die-result {
-        border-color: /*[[highlightColor]]*/ !important;
+    .beyond20-roll-die-result,
+    .beyond20-button-roll-damages,
+    .dice-formula.beyond20-roll-formula{
+        border-color: /*[[highlightColor]]*/;
+    }
+    
+    .dice-formula.beyond20-roll-formula,
+    .beyond20-roll-die-result,
+    .beyond20-roll-cell{
+        box-shadow: none;
     }
 
-    .beyond20-message details summary,
-    .beyond20-title {
-        color: /*[[highlightColor]]*/ !important;
-    }
+    
 
     .beyond20-roll-detail-crit-fail,
     .beyond20-roll-detail-fail {
-        color: #F00 !important;
+        color: #F00;
     }
 
     .beyond20-roll-detail-crit {
-        color: #0F0 !important;
+        color: #0F0;
     }
     .talespireLink {
         background: /*[[sheetColor]]*/ !important;
