@@ -32,7 +32,8 @@ For android devices (mobile/tablet) <a href="https://kiwibrowser.com/">Kiwi Brow
 
 <br>
 
-Character Sheet examples:
+<details>
+  <summary> Character Sheet examples:</summary> 
 
 [![DNDBeyond Dark Mode and Dice Coloration](https://user-images.githubusercontent.com/65363489/121787540-988e6800-cb94-11eb-9ca0-695b3a45caa6.png)](https://www.youtube.com/watch?v=DbYnbr3esnI "DNDBeyond Dark Mode and Dice Coloration")
 
@@ -47,8 +48,9 @@ Character Sheet examples:
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Character%20Sheet/Color%20Adjustments.PNG?raw=true"/>
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Character%20Sheet/DNDbeyond%20Char%20dark.PNG?raw=true"/>
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Character%20Sheet/DNDbeyond%20color%20example.PNG?raw=true"/>
-
-Dice customization examples:
+</details>
+<details>
+  <summary> Dice customization examples:</summary> 
 
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Dice%20Examples/rgb-rainbow.gif?raw=true"/>
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Dice%20Examples/Prestige.PNG?raw=true"/>
@@ -58,20 +60,24 @@ Dice customization examples:
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Dice%20Examples/dark%20side.PNG?raw=true"/>
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Dice%20Examples/Diamond.PNG?raw=true"/>
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Dice%20Examples/Necrotic.PNG?raw=true"/>
+</details>
 
-
-Mobile character sheet examples:
+<details>
+  <summary> Mobile character sheet examples:</summary> 
 
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Character%20Sheet/Mobile%20Char%20Sheet%20Color.jpg?raw=true" width="320px" />
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Character%20Sheet/Mobile%20Char%20Sheet.jpg?raw=true" width="320px" />
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Character%20Sheet/Mobile%20Char%20Sheet%20Swipe.jpg?raw=true" width="320px" />
+</details>
+<details>
+  <summary> Rest of the site examples:</summary> 
 
-Rest of the site examples:
-
+<img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/DNDBeyond%20Dark/DndSiteExampleSplit.png?raw=true"/>
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/DNDBeyond%20Dark/DNDbeyond%20main%20page.PNG?raw=true"/>
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/DNDBeyond%20Dark/basic.PNG?raw=true"/>
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/DNDBeyond%20Dark/players-hand.PNG?raw=true"/>
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/DNDBeyond%20Dark/spells.PNG"/>
+</details>
 
 <s>With the exception of the dice roller most of the alpha or beta content has not been themed as I am waiting for finalized versions and they either have their own dark mode available (such as the encounter builder) or are darker than the original site design.</s>
 
