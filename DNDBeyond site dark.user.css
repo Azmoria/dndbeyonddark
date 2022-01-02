@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.146
+@version      1.2.147
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -1266,7 +1266,9 @@ div#site{
     .p-article-tags .b-tag-a a,
     .article-author-name,
     .ddb-notification-toast-homebrew p,
-    .ddb-notification-toast-homebrew div.ddb-notification-toast-header-text
+    .ddb-notification-toast-homebrew div.ddb-notification-toast-header-text,
+    body.body-privatemessage .single-column #content .u-dropDown .u-dropDownMenu li>a,
+    body.body-privatemessage .single-column #content .u-dropDown .u-dropDownMenu
     {
 		color: /*[[fontColor]]*/ !important;
 	}
