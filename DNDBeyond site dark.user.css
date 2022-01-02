@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.145
+@version      1.2.146
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -449,7 +449,7 @@ off "DNDBeyond Default" <<<EOT
 EOT;
 on "Add Special Thanks Vanity" <<<EOT
     body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="100666635"] .p-comment-user-background {
-        background: var(--forum-secondary-color) url(https://github.com/Azmoria/dndbeyonddark/blob/master/Images/DNDBeyond%20Dark/azmoria-forum-profile-bg.png?raw=true) 0 0 no-repeat !important;
+        background: var(--forum-secondary-color) url(https://raw.githubusercontent.com/Azmoria/dndbeyonddark/master/Images/DNDBeyond%20Dark/azmoria-forum-profile-bg.webp) 0 0 no-repeat !important;
         background-size: 100% auto !important;
         opacity: 0.4;
     }
@@ -469,7 +469,7 @@ on "Add Special Thanks Vanity" <<<EOT
     }
 
     body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="110555412"] .p-comment-user-background {
-        background: var(--forum-secondary-color) url(https://github.com/Azmoria/dndbeyonddark/blob/master/Images/DNDBeyond%20Dark/Hyrkali%20Special%20Thanks.png?raw=true) 0 0 no-repeat !important;
+        background: var(--forum-secondary-color) url(https://raw.githubusercontent.com/Azmoria/dndbeyonddark/master/Images/DNDBeyond%20Dark/banner-hyrkali.webp) 0 0 no-repeat !important;
         background-size: auto !important;
         opacity: 0.6;
     }
