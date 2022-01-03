@@ -10,7 +10,7 @@ Now includes customizing Dice Tint. See dropdowns below for examples.
 
 
 [![Chroma Key mode to capture Dice for DNDBeyond](https://user-images.githubusercontent.com/65363489/146850358-ae12abc7-469b-4df4-b95c-51574c995ea6.png)
-](https://www.youtube.com/watch?v=CJMwF1VRt34 "DNDBeyond Dark Mode and Dice Coloration")
+](https://www.youtube.com/watch?v=CJMwF1VRt34 "Chroma Key mode to capture Dice for DNDBeyond")
 
 
 
@@ -42,8 +42,9 @@ Now includes customizing Dice Tint. See dropdowns below for examples.
 </details>
 <details>
   <summary> Rest of the site examples:</summary> 
+  
+[![DNDBeyond Dark Theme Example](https://github.com/Azmoria/dndbeyonddark/blob/master/Images/DNDBeyond%20Dark/YTDarkModeExample.png?raw=true)](https://www.youtube.com/watch?v=kPbt_Lr0UdQ "DNDBeyond Dark Theme Example")
 
-<img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/DNDBeyond%20Dark/DndSiteExampleSplit.png?raw=true"/>
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/DNDBeyond%20Dark/DNDbeyond%20main%20page.PNG?raw=true"/>
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/DNDBeyond%20Dark/basic.PNG?raw=true"/>
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/DNDBeyond%20Dark/players-hand.PNG?raw=true"/>
