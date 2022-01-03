@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.147
+@version      1.2.148
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -452,8 +452,23 @@ on "Add Special Thanks Vanity" <<<EOT
         background: var(--forum-secondary-color) url(https://raw.githubusercontent.com/Azmoria/dndbeyonddark/master/Images/DNDBeyond%20Dark/azmoria-forum-profile-bg.webp) 0 0 no-repeat !important;
         background-size: 100% auto !important;
         opacity: 0.4;
+        
     }
-    
+    body.body-forum.party-time-enabled .single-column #content .p-forum-a div.j-comment[data-author-id="100666635"] div.p-comment-user-background:hover {
+          -webkit-animation: linear forumBackground 2.2s infinite;
+      }
+
+    @-webkit-keyframes forumBackground {
+                0%, 100% {
+                    filter: hue-rotate(0deg);
+                    -webkit-filter: hue-rotate(0deg);
+     
+                }
+              50% {                 
+                    filter: hue-rotate(360deg);
+                     -webkit-filter: hue-rotate(360deg);
+                }
+            }
      body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="100666635"] li.forum-title:after {
         content: '\1F432';
         font-weight: normal;
@@ -461,6 +476,9 @@ on "Add Special Thanks Vanity" <<<EOT
         font-size: 15pt;
         line-height: 9pt;       
     }
+    body.body-forum.party-time-enabled .single-column #content .p-forum-a div.j-comment[data-author-id="100666635"] li.forum-title:after{
+        -webkit-animation: linear party-time-image 1s infinite;
+    }   
 
     body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="110555412"] li.forum-title:after,
     body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="100666635"] li.forum-title:after
