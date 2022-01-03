@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.85
+@version      1.3.86
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -535,9 +535,14 @@ chromaKeyDiceTray "ON with dice popup" <<<EOT
         svg.MuiSvgIcon-root path,
         svg.MuiSvgIcon-root polygon:nth-of-type(2),
         .MuiButtonBase-root:hover svg.MuiSvgIcon-root path,
-        .MuiButtonBase-root:hover svg.MuiSvgIcon-root polygon:nth-of-type(2){
+        .MuiButtonBase-root:hover svg.MuiSvgIcon-root polygon:nth-of-type(2),
+        svg.ddbc-svg.ct-sidebar__control-icon [fill*=fff]{
             fill: var(--chroma-highlight) !important;
           
+        }
+        
+        svg.ddbc-svg.ct-sidebar__control-icon [stroke*=fff]{
+            stroke: var(--chroma-highlight) !important;
         }
         svg.ddbc-svg.ct-sidebar__control-icon,
         .ct-sidebar{
@@ -705,9 +710,14 @@ chromaKeyDiceTrayNoPopUp "ON without dice popup" <<<EOT
         svg.MuiSvgIcon-root path,
         svg.MuiSvgIcon-root polygon:nth-of-type(2),
         .MuiButtonBase-root:hover svg.MuiSvgIcon-root path,
-        .MuiButtonBase-root:hover svg.MuiSvgIcon-root polygon:nth-of-type(2){
+        .MuiButtonBase-root:hover svg.MuiSvgIcon-root polygon:nth-of-type(2),
+        svg.ddbc-svg.ct-sidebar__control-icon [fill*=fff]{
             fill: var(--chroma-highlight) !important;
           
+        }
+        
+        svg.ddbc-svg.ct-sidebar__control-icon [stroke*=fff]{
+            stroke: var(--chroma-highlight) !important;
         }
         svg.ddbc-svg.ct-sidebar__control-icon,
         .ct-sidebar{
