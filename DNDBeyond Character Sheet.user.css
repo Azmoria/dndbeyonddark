@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.86
+@version      1.3.87
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -458,7 +458,7 @@ Default "OFF" <<<EOT
 EOT;
 chromaKeyDiceTray "ON with dice popup" <<<EOT
 
-        #content *:not(.dice-icon-die),
+        #content *:not(.dice-icon-die):not(.dice-rolling-panel__container),
         #content *:not(.dice-icon-die):hover,
         #content *::placeholder,
         .ct-feature-snippet__meta-item::before,
@@ -632,7 +632,7 @@ EOT;
 
 chromaKeyDiceTrayNoPopUp "ON without dice popup" <<<EOT
 
-        #content *:not(.dice-icon-die),
+        #content *:not(.dice-icon-die):not(.dice-rolling-panel__container),
         #content *:not(.dice-icon-die):hover,
         #content *::placeholder,
         .ct-feature-snippet__meta-item::before,
