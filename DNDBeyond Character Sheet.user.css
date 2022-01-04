@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.88
+@version      1.3.89
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -819,6 +819,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     /*Scrollbar style */
     ::-webkit-scrollbar {
         width: 10px;
+        height: 10px;
     }
 
     ::-webkit-scrollbar-track {
