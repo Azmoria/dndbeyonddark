@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.148
+@version      1.2.149
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -554,6 +554,7 @@ div#site{
 
 	::-webkit-scrollbar {
 		width: 3px;
+        height: 3px;
 	}
 
 	::-webkit-scrollbar-track {
@@ -564,6 +565,8 @@ div#site{
 		border-radius: 6px;
 		border: none;
 	}
+    
+
     
     :focus,
     .ddbeb-button:focus{
