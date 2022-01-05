@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.157
+@version      1.2.158
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -1375,9 +1375,9 @@ div#site{
     .listing-forum-search .statistics .statistics-body a:hover,
     .listing-forum-search .statistics .statistics-body a:visited:hover, 
     .listing-forum-search .statistics .statistics-body a:active:hover,
-    .forum-post-body a,
-    .forum-post-body a:hover,
-    .forum-post-body a:visited,
+    .forum-post-body a:not([style*="color"]),
+    .forum-post-body a:hover:not([style*="color"]),
+    .forum-post-body a:visited:not([style*="color"]),
     body.body-page .container a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip):not(.b-pagination-item):not([style*="color"]),
     body.body-search .container a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip):not(.b-pagination-item):not([style*="color"]),
     body.body-rpgigear .container a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip):not(.b-pagination-item):not([style*="color"]):not(.homebrew-creation-actions-item-delete),
