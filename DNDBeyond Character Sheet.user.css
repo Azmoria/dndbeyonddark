@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.89
+@version      1.3.90
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -2457,6 +2457,9 @@ regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond
     {
         background-color: /*[[rollCalcColor]]*/ !important;
     }
+   
+        
+    
 
     [class^="DiceMessage_Number"],
     [class^="DiceMessage_Total"],
@@ -2480,7 +2483,8 @@ regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond
     .MuiButton-label,
     body.body-rpgcharacter-sheet>div:last-of-type:not(.ct-sidebar__portal)>div[class^="_"] span:last-of-type,
     body.body-rpgcharacter-sheet>div.ct-sidebar__portal .glc-game-log span:first-of-type,
-    [class^="GameLog_ZeroState"]
+    [class^="GameLog_ZeroState"],
+    .glc-game-log button
     { 
         color: /*[[fontColor]]*/ !important;
     }
