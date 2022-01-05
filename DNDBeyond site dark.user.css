@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.154
+@version      1.2.155
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -161,7 +161,8 @@ dark "Dark Mode" <<<EOT
     .homebrew-creation-actions-item-delete:hover,
     .ddb-homebrew-rejection-label,
     .combatant-card--monster .combatant-summary__name,
-    .body-rpgmonster .listing-filters .advanced-filter a span{
+    .body-rpgmonster .listing-filters .advanced-filter a span,
+    .add-monster-modal__header-text--name{
         color: #D35050 !important;
     }
 
@@ -2905,7 +2906,12 @@ div#site{
     .top_menu,
     .sidebar__pane-content,
     .soundpad-section-title,
-    .sidebar__pane-content button
+    .sidebar__pane-content button,
+    .token-image-modal,
+    .token-image-modal-content,
+    .token-image-modal-content p,
+    .token-image-modal-content div,
+    .hpbar
     {
         background: /*[[backgroundColor]]*/!important;
         color: /*[[fontColor]]*/!important;
