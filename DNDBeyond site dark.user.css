@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.151
+@version      1.2.152
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -2924,15 +2924,20 @@ div#site{
     .player-card,
     .ability_score,
     .sidebar-panel-body p,
-    .sidebar-panel-body div{
+    .sidebar-panel-body div,
+    #tokens-panel-header,
+    #tokens-panel-footer{
         background: /*[[backgroundColor]]*/!important;
         color: /*[[fontColor]]*/!important;
     }
    
     
     .help-tabs li a,
-    .token-image-modal-footer-title{
-        color: /*[[fontColor]]*/!important;
+    .token-image-modal-footer-title,
+    .material-icons.button-icon,
+    .sidepanel-content,
+    .sidepanel-content button{
+        color: /*[[fontColor]]*/ !important;
     }
     
     img[src*="assets/logo.png"],
@@ -2942,9 +2947,7 @@ div#site{
         /*[[aboveFilter]]*/
     }
 
-    .material-icons.button-icon{
-        color: /*[[fontColor]]*/
-    }
+  
     
     .aoeshape:focus, 
     .drawbutton.button-enabled,
