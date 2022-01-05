@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.155
+@version      1.2.156
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -3295,4 +3295,19 @@ div#site{
             border-color: /*[[borderColor]]*/ !important;
         }
     }	
+}
+
+@-moz-document url-prefix("https://www.dndbeyond.com/") {
+    
+  /*404 Targeting*/ 
+       
+    body.body-error{
+        color: /*[[fontColor]]*/;
+        background: /*[[backgroundColor]]*/;
+    }
+    
+    
+    body.body-error div{
+        color: /*[[fontColor]]*/;
+    }
 }
