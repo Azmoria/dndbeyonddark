@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.149
+@version      1.2.150
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -512,6 +512,14 @@ on "Add Special Thanks Vanity" <<<EOT
     EOT;
 }
 
+@advanced dropdown aboveFilter "AboveVTT Filter" {
+Dark "Dark Mode"<<<EOT
+filter: invert(1) hue-rotate(180deg) saturate(6) contrast(2);
+EOT;
+Light "Light Mode"<<<EOT
+EOT;
+}
+
 
 ==/UserStyle==*/
 /*Thanks to Hyrkali for the example code and push to work on the forums themeing*/
@@ -926,7 +934,9 @@ div#site{
     .ui-state-default,
     .ddb-notification-toast-homebrew,
     .p-forum .alert,
-    .mce-floatpanel.mce-window .mce-tab.mce-active
+    .mce-floatpanel.mce-window .mce-tab.mce-active,
+    #splash,
+    .mce-container-body
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
@@ -1398,7 +1408,8 @@ div#site{
     body.body-rpgfeat-index .list-row-feat .list-row-name-primary-text a,
     body.body-rpgfeat-index .list-row-feat .list-row-name-primary-text a:hover,
     body.body-mycontent .list-row-name-primary-text a,
-    body.body-mycontent .list-row-name-primary-text a:hover
+    body.body-mycontent .list-row-name-primary-text a:hover,
+    #splash a
     {
 		color: /*[[linkColor]]*/ !important
 	}
@@ -1801,7 +1812,8 @@ div#site{
     .compendium-toc-full-header,
     .body-category-details .section-compendium-content .page-heading,
     body:not(.body-forum):not(.section-posts):not(.section-changelog):not(.body-privatemessage-details) blockquote::before, 
-    body:not(.body-forum):not(.section-posts):not(.section-changelog):not(.body-privatemessage-details) blockquote::after
+    body:not(.body-forum):not(.section-posts):not(.section-changelog):not(.body-privatemessage-details) blockquote::after,
+    #splash
     {
 		background-image: none !important;
 	}
@@ -2883,6 +2895,153 @@ div#site{
         height: 28px !important;   
     }
     
+    /*AboveVTT Changes*/
+    div#scene_selector, 
+    #combat_tracker_inside, 
+    #edit_dialog, 
+    #mega_importer, 
+    #prewiz, 
+    #wizard_popup, 
+    .top_menu
+    {
+        background: /*[[backgroundColor]]*/!important;
+        color: /*[[fontColor]]*/!important;
+        border-color: /*[[borderColor]]*/ !important;
+    }
+    
+    .scene,
+    #help-menu,
+    .help-tabs,
+    .sidebar-panel-body,
+    .sidebar-panel-header,
+    .sidebar-panel-footer,
+    .custom-token-list,
+    .context-menu-item,
+    .context-menu-list,
+    .custom-token-image-row,
+    [class*="custom-token-image-row"],
+    .sidebar-panel-body button,
+    .player-card,
+    .ability_score,
+    .sidebar-panel-body p,
+    .sidebar-panel-body div{
+        background: /*[[backgroundColor]]*/!important;
+        color: /*[[fontColor]]*/!important;
+    }
+   
+    
+    .help-tabs li a,
+    .token-image-modal-footer-title{
+        color: /*[[fontColor]]*/!important;
+    }
+    
+    img[src="chrome-extension://mheeigdhfkhmlccfedmhdhkiekilnpdm/assets/logo.png"],
+    .sidebar__controls img[src*="chrome-extension://"],
+    .player-attribute img[src*="chrome-extension://"],
+    .sidebar-panel-body button img[src*="chrome-extension://"]{
+        /*[[aboveFilter]]*/
+    }
+
+    .material-icons.button-icon{
+        color: /*[[fontColor]]*/
+    }
+    
+    .aoeshape:focus, 
+    .drawbutton.button-enabled,
+    button[id$='-button'].button-enabled:hover,
+    .aoeshape:focus:hover, 
+    .drawbutton.button-enabled:hover,
+    [data-name*="SHARE/SEE"][style*="background: red"],
+    .help-tabs li.active,
+    button.drawTypeSelected{
+        background: /*[[backgroundColor]]*/ !important;
+        box-shadow: inset 0 0 20px 1px /*[[linkColor]]*/ !important;;
+        border: 1px solid /*[[linkColor]]*/;
+        color: /*[[linkColor]]*/;
+    }
+    
+    
+        
+   
+    button[id$='-button']:hover, 
+    button[id$='_button']:hover, 
+    button[id^=jitsi_]:hover, 
+    #combat_tracker > button:hover,
+    #scene_selector_toggle:hover, 
+    body > button:hover,
+    #addscene:hover, 
+    .scene button:hover, 
+    #combat_tracker_inside button:hover, 
+    #edit_dialog button:hover, 
+    #mega_importer button:hover, 
+    #prewiz td button:hover, 
+    #wizard_popup button:hover, 
+    .top_menu button:hover, 
+    .monster_frame > button:hover, 
+    .stp-btn:hover, 
+    #hide_rightpanel:hover, 
+    .player-actions button:hover, 
+    #add-party:hover, 
+    .importer_toggle:hover, 
+    #zoom_buttons button:hover, 
+    .GameLogEntry_Message__1GoY3 button:hover{
+        background: /*[[backgroundColor]]*/;
+        color: /*[[linkColor]]*/;
+        border-color: /*[[linkColor]]*/;
+        transition: none;
+    }
+    
+    button[id$='-button'], 
+    button[id$='_button'], 
+    button[id^=jitsi_], 
+    #combat_tracker > button, 
+    #scene_selector_toggle, 
+    body > button, 
+    #addscene, 
+    .scene button, 
+    #combat_tracker_inside button, 
+    #edit_dialog button, 
+    #mega_importer button, 
+    #prewiz td button, 
+    #wizard_popup button, 
+    #aoe_feet, 
+    .top_menu button, 
+    .monster_frame > button, 
+    .stp-btn, 
+    .player-actions button,
+    #add-party, 
+    #reset_round_number, 
+    #hide_rightpanel, 
+    #zoom_buttons button, 
+    .stream_button, 
+    .GameLogEntry_Message__1GoY3 button,
+    .sidebar__controls button{
+        background: /*[[backgroundColor]]*/ !important;
+        color: /*[[fontColor]]*/;
+        height: 22px;
+        margin: 0 2px;
+        border-radius: 7px;
+        box-shadow: inset 0 1px 0 rgb(255 255 255 / 20%), 0 1px 2px rgb(0 0 0 / 5%);
+        padding: 2px 8px;
+        transition: none;
+        border: 1px solid lightgray;
+    }
+    
+    .scene button,
+    .top_menu button,
+    .top_menu button.button-enabled{
+        border: none;
+        box-shadow: none;
+        padding: 2px 8px;
+        margin: 0px;
+    }
+    
+    
+    .top_menu button{
+        margin: 0px;
+        border-radius: 0px;
+    }
+    
     
     @media screen and (max-width: 767px){
         body.body-forum.responsive-enabled .container .p-forum-a li.forum-announcement .col-status {
@@ -2994,9 +3153,9 @@ div#site{
 
     
       
-      
+}  
     
-}
+
 
 
 @-moz-document url("https://www.dndbeyond.com/") {
@@ -3122,8 +3281,5 @@ div#site{
             border-style: /*[[borderStyle]]*/ !important;
             border-color: /*[[borderColor]]*/ !important;
         }
-    }
-    
-	
+    }	
 }
-
