@@ -1,13 +1,13 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.90
+@version      1.3.91
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20Character%20Sheet.user.css
 @advanced dropdown backgroundImg "Background" {
     color "Color" <<<EOT
-    background-image: none !important;; 
+    background-image: none !important;
     EOT;
     dnd "DnDBeyond Set" <<<EOT 
     EOT;
@@ -2789,7 +2789,13 @@ regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond
         color: /*[[highlightColor]]*/ !important;
     }
 
+    /*AboveVtt*/
     
+    #castbutton{
+        text-shadow: none !important;   
+        background: /*[[sidebarColor]]*/;
+        color: /*[[fontColor]]*/;
+    }
     
 /*Mobile and Tablet*/
 
