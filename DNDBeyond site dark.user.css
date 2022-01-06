@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.158
+@version      1.2.159
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -245,7 +245,8 @@ dark "Dark Mode" <<<EOT
     .single-column #content [style*="color: rgba(0, 0, 0, 1)"], 
     .single-column #content [style*="color: rgba(51, 51, 51, 1)"],
     .single-column #content [style*="color: rgba(128, 128, 128, 1)"],
-    .single-column #content [style*="color: rgba(36, 37, 39, 1)"]
+    .single-column #content [style*="color: rgba(36, 37, 39, 1)"],
+    .single-column #content [style*="color: rgba(43, 46, 47, 1)"]
 
     {
         color: var(--font-color) !important;
