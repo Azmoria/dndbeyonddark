@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.92
+@version      1.3.93
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -1586,7 +1586,9 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     #InspirationBoxSvg-Fill-1,
     .ddbc-svg.ddbc-ability-score-box-svg > path:nth-child(2),
     .ct-proficiency-groups-box polygon,
-    svg.ddbc-svg.ddbc-manage-level-svg.ddbc-svg--themed path
+    svg.ddbc-svg.ddbc-manage-level-svg.ddbc-svg--themed path,
+    .ct-sidebar .ddbc-box-background svg path[d^="M77.56,53.81a4.55"],
+    .ct-sidebar .ddbc-box-background svg path[d^="M40.5,66C50.7,66"]
     {
         fill: /*[[sheetColor]]*/ !important;
     }
