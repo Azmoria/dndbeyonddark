@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.98
+@version      1.3.99
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -1276,7 +1276,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-inventory__action:hover,
     .ct-sidebar__pane-content .ddbc-collapsible__header:hover,
     .ct-sidebar__pane-content .ddbc-collapsible__header:hover .ddbc-item-name,
-    span.ct-currency-pane__lifestyle-detail-header{
+    span.ct-currency-pane__lifestyle-detail-header,
+    .ct-campaign-pane__character-name-text{
         color: /*[[highlightColor]]*/ !important;
     }
 
@@ -1519,7 +1520,11 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .dice_result--crit,
     .ct-character-manage-pane__class-list-item-level,
     .ct-inventory__actions--collapsed,
-    .ct-item-detail__infusion
+    .ct-item-detail__infusion,
+    .ct-campaign-pane__character-preview,
+    .ct-campaign-pane__character,
+    .ct-campaign-pane__header,
+    .ct-campaign-pane__characters
     {
         border-color: /*[[highlightColor]]*/ !important;
     }
@@ -1630,7 +1635,9 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ddbc-pencil-svg path,
     .ddbc-chat-bubble-svg path,
     .ddbc-paint-brush-svg path,
-    .ct-sidebar .ddbc-svg--themed path{
+    .ct-sidebar .ddbc-svg--themed path,
+    .ddbc-attack-type-icon--2-1 path[d^="M8.17 16.03L.63 17l5.12-3.33-5.54-3.64h5.71L0"],
+    .ddbc-attack-type-icon--2-1 path[d^="M13.15 16.53c-1.62 0-3.15-.61-3.57-1.42A6"]{
         fill: /*[[highlightColor]]*/ !important;
         opacity: 1 !important;
     }
@@ -1663,7 +1670,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-proficiency-groups-box polygon,
     svg.ddbc-svg.ddbc-manage-level-svg.ddbc-svg--themed path,
     .ct-sidebar .ddbc-box-background svg path[d^="M77.56,53.81a4.55"],
-    .ct-sidebar .ddbc-box-background svg path[d^="M40.5,66C50.7,66"]
+    .ct-sidebar .ddbc-box-background svg path[d^="M40.5,66C50.7,66"],
+    .ddbc-attack-type-icon--2-1 path[d^="M11.46 4c.64 0 1.39 5 1.69 5 .29"]
     {
         fill: /*[[sheetColor]]*/ !important;
     }
