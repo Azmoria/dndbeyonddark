@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.93
+@version      1.3.94
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -126,7 +126,7 @@ EOT;
     EOT;
     Rainbow "Rainbow"<<<EOT
     canvas.dice-rolling-panel__container{
-    -webkit-animation: rainbow var(--rgb-speed) steps(360) infinite;
+    -webkit-animation: rainbow var(--rgb-speed) linear infinite;
     }
     @-webkit-keyframes rainbow {
         from { 
@@ -149,7 +149,7 @@ EOT;
     EOT;
     Custom "Custom RGB"<<<EOT
         canvas.dice-rolling-panel__container{
-            -webkit-animation: rgb var(--rgb-speed) steps(360) infinite;
+            -webkit-animation: rgb var(--rgb-speed) linear infinite;
             }
         @-webkit-keyframes rgb {
                 0%, 100% { 
@@ -199,7 +199,7 @@ EOT;
     EOT;
     Rainbow "Rainbow"<<<EOT
     .ddbc-character-avatar>[class^="ddbc-character-avatar__frame"]{
-    -webkit-animation: rainbowFrame var(--rgb-frame-speed) steps(360) infinite;
+    -webkit-animation: rainbowFrame var(--rgb-frame-speed) linear infinite;
     }
     @-webkit-keyframes rainbowFrame {
         from { 
@@ -222,7 +222,7 @@ EOT;
     EOT;
     Custom "Custom RGB"<<<EOT
         .ddbc-character-avatar>[class^="ddbc-character-avatar__frame"]{
-            -webkit-animation: rgbFrame var(--rgb-frame-speed) steps(360) infinite;
+            -webkit-animation: rgbFrame var(--rgb-frame-speed) linear infinite;
             }
         @-webkit-keyframes rgbFrame {
                 0%, 100% { 
@@ -258,7 +258,7 @@ EOT;
         .ddbc-box-background path,
         .ddbc-saving-throws-summary path
         {
-        -webkit-animation: rainbowBorder var(--rgb-border-speed) steps(360) infinite;
+        -webkit-animation: rainbowBorder var(--rgb-border-speed) linear infinite;
         }
         @-webkit-keyframes rainbowBorder {
             from { 
@@ -282,7 +282,7 @@ EOT;
     Custom "Custom RGB"<<<EOT
         .ddbc-box-background path,
         .ddbc-saving-throws-summary path{
-                -webkit-animation: rgbBorder var(--rgb-border-speed) steps(360) infinite;
+                -webkit-animation: rgbBorder var(--rgb-border-speed) linear infinite;
                 }
             @-webkit-keyframes rgbBorder {
                     0%, 100% { 
