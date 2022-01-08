@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.96
+@version      1.3.97
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -2349,7 +2349,16 @@ regexp("https://www.dndbeyond.com/characters/.*") {
             height: 17.8px;
         }
     }
+    
+    @media (max-width: 1200px){
+        .ct-sidebar__pane-content:before{       
+            position:fixed;
+        }
+
+    }
   
+    
+    
     
     @media (max-width: 1023px) {
         .ct-character-header-tablet__button,
