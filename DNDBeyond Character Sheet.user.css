@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.97
+@version      1.3.98
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -1627,7 +1627,10 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-content-group__header-extra a.ct-equipment__builder-link svg path,
     [d="M17.7 2c.3-.2.5-.4.8-.7.3-.3.3-.8 0-1.1-.3-.3-.8-.3-1.1 0-1.8 2-3.5 1.6-5.3 1.1-1.3-.3-2.6-.6-3.7.2C6.7 2.6 6.7 5 6.9 6.6L3.3 4.3l1.6-1.1L0 2.7l2.7 4.9.2-2.4 3.4 2.2c-1.5.4-3.7 1.4-4.2 3.4-.3 1.3.5 2.4 1.3 3.5 1.1 1.5 2.2 2.9 1 5.3-.2.4 0 .8.4 1 .1 0 .2.1.3.1.3 0 .6-.2.7-.4.2-.4.3-.7.4-1.1l5.5-8.2 4.9 3.2.5-.8-4.9-3.1L17.7 2zm-8.5.7c.5-.4 1.3-.2 2.4.1 1.4.4 3.1.8 4.9-.1l-4.8 7.1-3.1-2.1v-.1c-.3-1-.7-4 .6-4.9zM6.4 17.9c.1-2-1-3.4-1.8-4.6-.7-1-1.2-1.6-1-2.2.4-1.6 3.1-2.3 4.2-2.5H8.1l3.2 2.1-4.9 7.2z"],
     [d="M14.7 15.5l-.8-1.5c-.3-.9-.3-1.6-.3-1.6h-1c0 .1.1 3.2 2.5 4.8l.5-.8-.9-.9zM14.9 9.8l.1 1s1.7-.2 3.5.8l.5-.9c-2.1-1.1-4.1-.9-4.1-.9z"],
-    .ddbc-pencil-svg path{
+    .ddbc-pencil-svg path,
+    .ddbc-chat-bubble-svg path,
+    .ddbc-paint-brush-svg path,
+    .ct-sidebar .ddbc-svg--themed path{
         fill: /*[[highlightColor]]*/ !important;
         opacity: 1 !important;
     }
@@ -1684,10 +1687,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-character-sheet__inner .ct-quick-info svg > path + path,
     .ct-character-sheet__inner .ct-mobile-divider__repeat svg > path,
     .ct-character-sheet__inner .ddbc-svg--themed path,
-    .ct-character-sheet__inner.ddbc-saving-throws-summary__ability-modifier path,
-    .ddbc-chat-bubble-svg path,
-    .ddbc-paint-brush-svg path,
-    .ct-sidebar .ddbc-svg--themed path{
+    .ct-character-sheet__inner.ddbc-saving-throws-summary__ability-modifier path{
         fill: /*[[borderColor]]*/ !important;
     }
     
