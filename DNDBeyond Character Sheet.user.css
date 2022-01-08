@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.94
+@version      1.3.95
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -256,7 +256,18 @@ EOT;
         EOT;
     Rainbow "Rainbow"<<<EOT
         .ddbc-box-background path,
-        .ddbc-saving-throws-summary path
+        .ddbc-saving-throws-summary path,
+        .ct-sidebar__pane-content:after,
+        .ct-sidebar__pane-top svg,
+        .ct-sidebar__pane-bottom svg,
+        .ct-mobile-divider__divider svg,
+        .ct-sidebar__pane-gap:after,         
+        .ct-character-header-desktop__button:after, 
+        .site .ct-button.ct-theme-button--outline:after, 
+        .site .ct-button.ct-theme-button--filled:after,
+        .ct-health-summary__adjuster-field:after,
+        .ddbc-campaign-summary:after,
+        .ct-character-header__group--game-log:after
         {
         -webkit-animation: rainbowBorder var(--rgb-border-speed) linear infinite;
         }
@@ -281,7 +292,18 @@ EOT;
     EOT;
     Custom "Custom RGB"<<<EOT
         .ddbc-box-background path,
-        .ddbc-saving-throws-summary path{
+        .ddbc-saving-throws-summary path,
+        .ct-sidebar__pane-content:after,
+        .ct-sidebar__pane-top svg,
+        .ct-sidebar__pane-bottom svg,
+        .ct-mobile-divider__divider svg,
+        .ct-sidebar__pane-gap:after,
+        .ct-health-summary__adjuster-field:before, 
+        .ct-character-header-desktop__button:before, 
+        .site .ct-button.ct-theme-button--outline:before, 
+        .site .ct-button.ct-theme-button--filled:before,
+        .ddbc-campaign-summary:before,
+        .ct-character-header__group--game-log:before{
                 -webkit-animation: rgbBorder var(--rgb-border-speed) linear infinite;
                 }
             @-webkit-keyframes rgbBorder {
@@ -1290,6 +1312,55 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-reset-pane__hitdie-manager-dice .integrated-dice__container{
         border-color: /*[[borderColor]]*/ !important;
     }
+    .ct-sidebar__pane-content,
+    .ct-sidebar__pane-gap{
+        border: none;  
+    }
+    .ct-sidebar__pane-content,
+    .ct-sidebar__pane-gap{
+        position: relative;   
+    }
+    .ct-sidebar__pane-content:before,
+    .ct-sidebar__pane-gap:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right:0;
+        bottom: 0;
+        height: 100%;
+        border-left: 3px solid /*[[borderColor]]*/;
+        border-right: 3px solid /*[[borderColor]]*/;
+        min-width: 340px;
+        pointer-events: none;
+    }
+    
+    .ct-health-summary__adjuster-field, 
+    .ct-character-header-desktop__button, 
+    .site .ct-button.ct-theme-button--outline, 
+    .site .ct-button.ct-theme-button--filled,
+    .ddbc-campaign-summary,
+    .ct-character-header__group--game-log{
+        border: none !important;
+        position: relative;
+    }
+    
+    .ct-health-summary__adjuster-field:before, 
+    .ct-character-header-desktop__button:before, 
+    .site .ct-button.ct-theme-button--outline:before, 
+    .site .ct-button.ct-theme-button--filled:before,
+    .ddbc-campaign-summary:before,
+    .ct-character-header__group--game-log:before{
+        content:'';
+        border: 1px solid /*[[borderColor]]*/;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right:0;
+        bottom: 0;
+        border-radius: 3px;
+        pointer-events: none;
+    }
     .integrated-dice-menu-carrot {
         border-top-color: /*[[borderColor]]*/
     }
@@ -1489,7 +1560,6 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-inventory-filter__adv-filter-button,
     .ct-extras-filter__adv-filter-button,
     .ct-spells-filter__adv-filter-button,
-    .site .ct-button.ct-theme-button--filled,
     .ct-section-placeholder__icon,
     .ct-editor-box, 
     .ct-note-manage-pane__content,
@@ -2277,7 +2347,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
             height: 17.8px;
         }
     }
-    
+  
     
     @media (max-width: 1023px) {
         .ct-character-header-tablet__button,
