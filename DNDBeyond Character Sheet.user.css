@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.95
+@version      1.3.96
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -257,7 +257,8 @@ EOT;
     Rainbow "Rainbow"<<<EOT
         .ddbc-box-background path,
         .ddbc-saving-throws-summary path,
-        .ct-sidebar__pane-content:after,
+        .ct-sidebar__pane-content:before,
+        .ct-sidebar__pane-gap:before,
         .ct-sidebar__pane-top svg,
         .ct-sidebar__pane-bottom svg,
         .ct-mobile-divider__divider svg,
@@ -293,7 +294,8 @@ EOT;
     Custom "Custom RGB"<<<EOT
         .ddbc-box-background path,
         .ddbc-saving-throws-summary path,
-        .ct-sidebar__pane-content:after,
+        .ct-sidebar__pane-content:before,
+        .ct-sidebar__pane-gap:before,
         .ct-sidebar__pane-top svg,
         .ct-sidebar__pane-bottom svg,
         .ct-mobile-divider__divider svg,
