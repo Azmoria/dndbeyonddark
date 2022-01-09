@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.101
+@version      1.3.102
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -126,7 +126,7 @@ EOT;
     EOT;
     Rainbow "Rainbow"<<<EOT
     canvas.dice-rolling-panel__container{
-    -webkit-animation: rainbow var(--rgb-speed) linear infinite;
+    -webkit-animation: rainbow var(--rgb-speed) steps(180) infinite;
     }
     @-webkit-keyframes rainbow {
         from { 
@@ -149,7 +149,7 @@ EOT;
     EOT;
     Custom "Custom RGB"<<<EOT
         canvas.dice-rolling-panel__container{
-            -webkit-animation: rgb var(--rgb-speed) linear infinite;
+            -webkit-animation: rgb var(--rgb-speed) steps(180) infinite;
             }
         @-webkit-keyframes rgb {
                 0%, 100% { 
@@ -199,7 +199,7 @@ EOT;
     EOT;
     Rainbow "Rainbow"<<<EOT
     .ddbc-character-avatar>[class^="ddbc-character-avatar__frame"]{
-    -webkit-animation: rainbowFrame var(--rgb-frame-speed) linear infinite;
+    -webkit-animation: rainbowFrame var(--rgb-frame-speed) steps(180) infinite;
     }
     @-webkit-keyframes rainbowFrame {
         from { 
@@ -222,7 +222,7 @@ EOT;
     EOT;
     Custom "Custom RGB"<<<EOT
         .ddbc-character-avatar>[class^="ddbc-character-avatar__frame"]{
-            -webkit-animation: rgbFrame var(--rgb-frame-speed) linear infinite;
+            -webkit-animation: rgbFrame var(--rgb-frame-speed) steps(180) infinite;
             }
         @-webkit-keyframes rgbFrame {
                 0%, 100% { 
@@ -270,7 +270,7 @@ EOT;
         .ddbc-campaign-summary:after,
         .ct-character-header__group--game-log:after
         {
-        -webkit-animation: rainbowBorder var(--rgb-border-speed) linear infinite;
+        -webkit-animation: rainbowBorder var(--rgb-border-speed) steps(180) infinite;
         }
         @-webkit-keyframes rainbowBorder {
             from { 
@@ -306,7 +306,7 @@ EOT;
         .site .ct-button.ct-theme-button--filled:before,
         .ddbc-campaign-summary:before,
         .ct-character-header__group--game-log:before{
-                -webkit-animation: rgbBorder var(--rgb-border-speed) linear infinite;
+                -webkit-animation: rgbBorder var(--rgb-border-speed) steps(180) infinite;
                 }
             @-webkit-keyframes rgbBorder {
                     0%, 100% { 
@@ -482,7 +482,7 @@ Default "OFF" <<<EOT
 EOT;
 chromaKeyDiceTray "ON with dice popup" <<<EOT
 
-        #content *:not(.dice-icon-die):not(.dice-rolling-panel__container),
+        #content *:not(.dice-icon-die):not(.dice-rolling-panel__container):not(circle):not([d^="M8.5,0A8.5,8.5,0,1,0,17,8.5,8.49382,"]):not([d^="M6.90936,9.61388a4.92424,4.92424"]),
         #content *:not(.dice-icon-die):hover,
         #content *::placeholder,
         .ct-feature-snippet__meta-item::before,
@@ -502,17 +502,25 @@ chromaKeyDiceTray "ON with dice popup" <<<EOT
         .alertify .beyond20-header .beyond20-description,
         .alertify .beyond20-roll-detail-crit,
         .alertify .beyond20-roll-detail-fail,
-        .MuiPaper-root .jss2 .MuiListSubheader-root
+        .MuiPaper-root .jss2 .MuiListSubheader-root,
+        .ct-health-summary__adjuster-field:before,
+        .ct-health-summary__adjuster-field:before
             {
             background: transparent !important;
-            border: none !important;
             fill: var(--background-color) !important;
             color: var(--chroma-highlight) !important;
-            border-color: var(--background-color) !important;
+            border-color: var(--chroma-highlight) !important;
             filter: none !important;
             box-shadow: none !important;
             stroke: transparent !important;  
             text-shadow: none;
+        }
+        .ct-character-header-desktop__button:before, 
+        .site .ct-button.ct-theme-button--outline:before, 
+        .site .ct-button.ct-theme-button--filled:before, 
+        .ddbc-campaign-summary:before, 
+        .ct-character-header__group--game-log:before{
+            border-color: var(--chroma-highlight);
         }
 
         .ajs-close{
@@ -533,7 +541,8 @@ chromaKeyDiceTray "ON with dice popup" <<<EOT
         .beyond20-quick-roll-icon,
         .dice-toolbar__dropdown .dice-toolbar__target-menu-button:after,
         .tippy-popper,
-        .beyond20-character-avatar{
+        .beyond20-character-avatar,
+        #content .ct-extra-row__img{
             display: none !important;
         }
 
@@ -560,7 +569,14 @@ chromaKeyDiceTray "ON with dice popup" <<<EOT
         svg.MuiSvgIcon-root polygon:nth-of-type(2),
         .MuiButtonBase-root:hover svg.MuiSvgIcon-root path,
         .MuiButtonBase-root:hover svg.MuiSvgIcon-root polygon:nth-of-type(2),
-        svg.ddbc-svg.ct-sidebar__control-icon [fill*=fff]{
+        svg.ddbc-svg.ct-sidebar__control-icon [fill*=fff],
+        [d^="M17.5 11.6666C17.5 12.3095 16.9761"],
+        .ddbc-svg.ddbc-proficiency-svg.ddbc-proficiency-icon.ddbc-proficiency-level-icon circle,
+        .ddbc-svg.ddbc-proficiency-half-svg.ddbc-half-proficiency-icon.ddbc-proficiency-level-icon path, 
+        [d^="M6.90936,9.61388a4.92424,4.92424"], 
+        [d^="M17.5 11.6666C17.5 12.3095 16.9761"],
+        .ddbc-svg.ddbc-proficiency-half-svg.ddbc-twice-proficiency-icon__inner circle,
+        .ddbc-svg.ddbc-proficiency-half-svg.ddbc-twice-proficiency-icon__inner path{
             fill: var(--chroma-highlight) !important;
           
         }
@@ -592,7 +608,56 @@ chromaKeyDiceTray "ON with dice popup" <<<EOT
         .site MuiButtonBase-root:hover span, 
         .site .MuiList-root li ul li:hover div, 
         .site li.MuiButtonBase-root:hover div, 
-        .site .MuiButtonBase-root:hover span
+        .site .MuiButtonBase-root:hover span,
+        [class*="ct-sidebar"] svg path,
+        .ddbc-svg.ddbc-chevron-svg path,
+        .ddbc-collapsible__header:hover .ddbc-svg.ddbc-chevron-svg path,
+        .ddbc-checkbox--is-enabled .ddbc-checkbox__input .ddbc-check-svg path, 
+        .ct-skills__col--proficiency circle, .ct-skills__col--proficiency path, 
+        .ddbc-saving-throws-summary__ability-proficiency circle, 
+        .ddbc-svg.ddbc-builder-svg.ddbc-svg--light path, 
+        .ddbc-svg.ddbc-long-rest-svg.ddbc-svg--themed path, 
+        .ddbc-svg.ddbc-short-rest-svg.ddbc-svg--themed path, 
+        .ddbc-svg.ddbc-share-svg.ddbc-svg--themed path, 
+        svg.ddbc-svg.ct-sidebar__control-icon path, 
+        svg.ddbc-svg.ct-sidebar__control-icon polygon, 
+        svg.ddbc-svg.ct-sidebar__control-icon rect, 
+        .ct-value-editor__property-value path, 
+        .ddbc-collapsible__header-status path, 
+        .ddbc-popout-menu__item path, 
+        .ddbc-popout-menu__item circle, 
+        .ct-inspiration__status.ct-inspiration__status--active g:first-child path, 
+        .ct-spells-filter__advanced path, 
+        .ddbc-checkbox--is-enabled .ddbc-checkbox__input .ddbc-check-svg path, 
+        .ddbc-attunement-slot.ddbc-attunement-slot--filled path, 
+        .ddbc-svg.ddbc-proficiency-svg.ddbc-proficiency-icon.ddbc-proficiency-level-icon circle, 
+        .ddbc-svg.ddbc-proficiency-half-svg.ddbc-half-proficiency-icon.ddbc-proficiency-level-icon path, 
+        .ddbc-svg.ddbc-proficiency-half-svg.ddbc-twice-proficiency-icon__inner circle, 
+        .ddbc-svg.ddbc-proficiency-half-svg.ddbc-twice-proficiency-icon__inner path, 
+        .ddbc-svg.ddbc-dice-svg.ddbc-svg--themed path, 
+        .ddbc-svg.ddbc-link-out-svg.ddbc-svg--light path,
+        svg.ddbc-svg.ddbc-builder-svg.ddbc-svg--themed path, 
+        svg.ddbc-svg.ddbc-manage-level-svg.ddbc-svg--themed circle, 
+        svg.ddbc-svg.ddbc-backdrop-svg.ddbc-svg--themed path, 
+        svg.ddbc-svg.ddbc-theme-icon-svg.ddbc-svg--themed path, 
+        svg.ddbc-svg.ddbc-portrait-svg.ddbc-svg--themed path, 
+        svg.ddbc-svg.ddbc-preferences-svg.ddbc-svg--themed path, 
+        svg.ddbc-svg.ddbc-export-svg.ddbc-svg--themed path, 
+        .ddbc-collapsible__header:hover .ddbc-svg.ddbc-chevron-svg.ddbc-chevron-right-svg.ddbc-svg--builder path, 
+        .ddbc-collapsible__header:hover .ddbc-svg.ddbc-chevron-svg path, 
+        .ct-extras-filter__advanced svg path, 
+        .ct-inventory-filter__advanced svg path, 
+        .ct-character-header-desktop__group--game-log path, 
+        .ct-section-placeholder__icon path, 
+        .ct-section-placeholder__icon polygon, 
+        .ct-section-placeholder__icon circle, 
+        .ct-quick-nav__button path, 
+        .ct-quick-nav__button polygon, 
+        .ct-quick-nav__button circle, 
+        .ddbc-collapsible__header:hover div .ddbc-chevron-svg svg path, 
+        .ddbc-svg.ct-sidebar__pane-control-icon path, 
+        .ct-content-group__header-extra a.ct-equipment__builder-link svg path, 
+        [d="M17.7 2c.3-.2.5-.4.8-.7.3-.3.3-.8 0-1.1-.3-.3-.8-.3-1.1 0-1.8 2-3.5 1.6-5.3 1.1-1.3-.3-2.6-.6-3.7.2C6.7 2.6 6.7 5 6.9 6.6L3.3 4.3l1.6-1.1L0 2.7l2.7 4.9.2-2.4 3.4 2.2c-1.5.4-3.7 1.4-4.2 3.4-.3 1.3.5 2.4 1.3 3.5 1.1 1.5 2.2 2.9 1 5.3-.2.4 0 .8.4 1 .1 0 .2.1.3.1.3 0 .6-.2.7-.4.2-.4.3-.7.4-1.1l5.5-8.2 4.9 3.2.5-.8-4.9-3.1L17.7 2zm-8.5.7c.5-.4 1.3-.2 2.4.1 1.4.4 3.1.8 4.9-.1l-4.8 7.1-3.1-2.1v-.1c-.3-1-.7-4 .6-4.9zM6.4 17.9c.1-2-1-3.4-1.8-4.6-.7-1-1.2-1.6-1-2.2.4-1.6 3.1-2.3 4.2-2.5H8.1l3.2 2.1-4.9 7.2z"], [d="M14.7 15.5l-.8-1.5c-.3-.9-.3-1.6-.3-1.6h-1c0 .1.1 3.2 2.5 4.8l.5-.8-.9-.9zM14.9 9.8l.1 1s1.7-.2 3.5.8l.5-.9c-2.1-1.1-4.1-.9-4.1-.9z"], .ddbc-pencil-svg path, .ddbc-chat-bubble-svg path, .ddbc-paint-brush-svg path, .ct-sidebar .ddbc-svg--themed path, .ddbc-attack-type-icon--2-1 path[d^="M8.17 16.03L.63 17l5.12-3.33-5.54-3.64h5.71L0"], .ddbc-attack-type-icon--2-1 path[d^="M13.15 16.53c-1.62 0-3.15-.61-3.57-1.42A6"], [d^="M8.5,0A8.5,8.5,0,1,0,17,8.5,8.49382,"],[d^="M6.90936,9.61388a4.92424,4.92424"]
         {
             background-color: var(--background-color) !important;
             filter: none !important;
@@ -624,10 +689,175 @@ chromaKeyDiceTray "ON with dice popup" <<<EOT
     #content .ct-slot-manager__slot{
         border: 1px solid var(--chroma-highlight) !important;
     }   
-    #content .ct-extra-row__img{
-        background: var(--chroma-highlight) !important;
-        mix-blend-mode: color-dodge;
-    }
+
+    .ct-character-header-desktop__button:before, 
+        .site .ct-button.ct-theme-button--outline:before, 
+        .site .ct-button.ct-theme-button--filled:before, 
+        .ddbc-campaign-summary:before, 
+        .ct-character-header__group--game-log:before,
+        .ct-sidebar__inner div,
+        .ct-sidebar__pane-content:before, 
+        .ct-sidebar__pane-gap:before,
+        .ct-editor-box div.ddbc-checkbox__input,
+        .ct-editor-box .ct-value-editor__property-input,
+        .ct-spell-caster__casting-action-count.ct-spell-caster__casting-action-count--spellcasting,
+        .ct-quick-nav__button,
+        .ct-quick-nav__button:hover,
+        .ct-character-sheet--dice-enabled .ddbc-combat-attack--crit .ddbc-combat-attack__damage .integrated-dice__container:hover,
+        .ct-character-sheet--dice-enabled .ddbc-combat-attack--crit .ddbc-combat-attack__damage .integrated-dice__container,
+        .beyond20-roll-cell,
+        .ct-skills__col--adjustments,
+        .ddbc-attack-table .ddbc-combat-attack+.ddbc-combat-attack,
+        .ct-actions-list__basic-list,
+        .ct-actions-list__spells-list,
+        .ct-combat__statuses-group.ct-combat__statuses-group--conditions,
+        .ct-proficiency-groups__group,
+        .ct-slot-manager__slot--used,
+        .ct-sidebar--is-dark-mode .ct-slot-manager__slot--used,
+        .ct-actions-list__heading,
+        .ddbc-tab-list__nav-item--is-active,
+        .ct-content-group__header,
+        .ct-description__traits,
+        .ct-spells-level-casting,
+        .ct-features__management-link,
+        .ct-spells-spell + .ct-spells-spell,
+        .ct-inventory-item + .ct-inventory-item,
+        .ct-attunement__item + .ct-attunement__item,
+        .ct-feats-manage-pane__feat,
+        .ct-equipment__overview,
+        .ct-saving-throws-pane__details,
+        .ct-saving-throws-pane__description,
+        .ct-sense-manage-pane__customize,
+        .ct-sense-manage-pane__description,
+        .ct-proficiencies-pane__proficiency + .ct-proficiencies-pane__proficiency,
+        .ct-proficiency-groups__group + .ct-proficiency-groups__group,
+        .ct-proficiencies-pane__groups,
+        .ct-skill-pane__customize,
+        .ct-skill-pane__description,
+        .ct-skills__col--skill,
+        .ct-skills__col--modifier,
+        .ct-ability-pane__description,
+        .ct-speed-manage-pane__customize,
+        .ct-speed-manage-pane__description,
+        .ct-armor-manage-pane__items,
+        .ct-armor-manage-pane__customize,
+        .ct-armor-manage-pane__description,
+        .ct-health-manager__deathsaves,
+        .ct-health-manager__restore-life,
+        .ct-health-manager__health,
+        .ct-health-manager__overrides,
+        .ct-defense-manage-pane__custom,
+        .ct-condition-manage-pane__condition--special,
+        .ct-currency-pane__currency + .ct-currency-pane__currency,
+        .ct-currency-pane__adjuster,
+        .ct-currency-pane__lifestyle,
+        .ct-extra-manage-pane__group-heading,
+        .ct-extra-manage-pane__extra,
+        .ct-extra-manage-pane__extras,
+        .ct-item-detail__customize,
+        .ct-item-detail__customize,
+        .ct-item-detail__description,
+        .ct-item-detail__actions,
+        .ct-spell-caster,
+        .ct-spell-detail__customize,
+        .ct-spell-detail__properties,
+        .ct-spell-detail__description,
+        .ct-spell-detail__tags,
+        .ct-action-detail__customize,
+        .ct-action-detail__properties,
+        .ct-action-detail__description,
+        .ct-action-detail__limited-uses,
+        .ct-background-pane__data,
+        .line,
+        .ct-feat-pane__prerequisite,
+        .ct-infusions__infusion + .ct-infusions__infusion,
+        .ct-infusions__infusion-item + .ct-infusions__infusion-item,
+        .ct-infusion-choice-pane__step,
+        .ct-infusion-choice-pane__actions,
+        .ct-infusion-choice-pane__description,
+        .ct-infusion-choice-pane__ui-group,
+        .ct-spells-level-casting,
+        .ct-features__management-link,
+        .ct-spells-spell + .ct-spells-spell,
+        .ct-inventory-item + .ct-inventory-item,
+        .ct-attunement__item + .ct-attunement__item,
+        .ct-feats-manage-pane__feat,
+        .ct-equipment__overview,
+        .ct-saving-throws-pane__details,
+        .ct-saving-throws-pane__description,
+        .ct-sense-manage-pane__customize,
+        .ct-sense-manage-pane__description,
+        .ct-proficiencies-pane__proficiency + .ct-proficiencies-pane__proficiency,
+        .ct-proficiency-groups__group + .ct-proficiency-groups__group,
+        .ct-proficiencies-pane__groups,
+        .ct-skill-pane__customize,
+        .ct-skill-pane__description,
+        .ct-skills__col--skill,
+        .ct-skills__col--modifier,
+        .ct-ability-pane__description,
+        .ct-speed-manage-pane__customize,
+        .ct-speed-manage-pane__description,
+        .ct-armor-manage-pane__items,
+        .ct-armor-manage-pane__customize,
+        .ct-armor-manage-pane__description,
+        .ct-health-manager__deathsaves,
+        .ct-health-manager__restore-life,
+        .ct-health-manager__health,
+        .ct-health-manager__overrides,
+        .ct-defense-manage-pane__custom,
+        .ct-condition-manage-pane__condition--special,
+        .ct-currency-pane__currency + .ct-currency-pane__currency,
+        .ct-currency-pane__adjuster,
+        .ct-currency-pane__lifestyle,
+        .ct-extra-manage-pane__group-heading,
+        .ct-extra-manage-pane__extra,
+        .ct-extra-manage-pane__extras,
+        .ct-item-detail__customize,
+        .ct-item-detail__customize,
+        .ct-item-detail__description,
+        .ct-item-detail__actions,
+        .ct-spell-caster,
+        .ct-spell-detail__customize,
+        .ct-spell-detail__properties,
+        .ct-spell-detail__description,
+        .ct-spell-detail__tags,
+        .ct-action-detail__customize,
+        .ct-action-detail__properties,
+        .ct-action-detail__description,
+        .ct-action-detail__limited-uses,
+        .ct-background-pane__data,
+        .line,
+        .ct-feat-pane__prerequisite,
+        .ct-infusions__infusion + .ct-infusions__infusion,
+        .ct-infusions__infusion-item + .ct-infusions__infusion-item,
+        .ct-infusion-choice-pane__step,
+        .ct-infusion-choice-pane__actions,
+        .ct-infusion-choice-pane__description,
+        .ct-infusion-choice-pane__ui-group,
+        .ct-feature-snippet__extra,
+        .ct-trait-pane__content,
+        .ct-character-sheet .ct-slot-manager__slot--used,
+        .ct-description-pane__entry select.ddbc-select.ct-description-pane__editor-input,
+        .ct-description-pane__entry input.ct-description-pane__editor-input,
+        .ct-health-manage-pane input.character-input.ct-health-manager__input,
+        .ct-spells-spell__scaled-level,
+        .ct-slot-manager__slot.ct-slot-manager__slot--used,
+        .ct-decorate-pane__current-selections,
+        .ct-decorate-pane__preferences-content,
+        .ct-decorate-pane__preferences,
+        .ct-equipment-manage-pane__custom,
+        .dice_result--crit,
+        .ct-character-manage-pane__class-list-item-level,
+        .ct-inventory__actions--collapsed,
+        .ct-item-detail__infusion,
+        .ct-campaign-pane__character-preview,
+        .ct-campaign-pane__character,
+
+        {
+            border-color: var(--chroma-highlight) !important;
+        }
+
+
 
     .site .button-action-decrease--small:before{
         -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 16'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill-rule:evenodd; fill: white;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3EAsset 54%3C/title%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cpolygon class='cls-1' points='6 0 6 6 0 6 0 10 6 10 6 16 10 16 10 10 16 10 16 6 10 6 10 0 6 0'/%3E%3Crect class='cls-1' x='18' y='6' width='16' height='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
@@ -656,7 +886,7 @@ EOT;
 
 chromaKeyDiceTrayNoPopUp "ON without dice popup" <<<EOT
 
-        #content *:not(.dice-icon-die):not(.dice-rolling-panel__container),
+        #content *:not(.dice-icon-die):not(.dice-rolling-panel__container):not(circle):not([d^="M8.5,0A8.5,8.5,0,1,0,17,8.5,8.49382,"]):not([d^="M6.90936,9.61388a4.92424,4.92424"]):not([d^="M17.5 11.6666C17.5 12.3095 16.9761"]),
         #content *:not(.dice-icon-die):hover,
         #content *::placeholder,
         .ct-feature-snippet__meta-item::before,
@@ -676,16 +906,24 @@ chromaKeyDiceTrayNoPopUp "ON without dice popup" <<<EOT
         .alertify .beyond20-header .beyond20-description,
         .alertify .beyond20-roll-detail-crit,
         .alertify .beyond20-roll-detail-fail,
-        .MuiPaper-root .jss2 .MuiListSubheader-root{
+        .MuiPaper-root .jss2 .MuiListSubheader-root,
+        .ct-health-summary__adjuster-field:before{
             background: transparent !important;
-            border: none !important;
             fill: var(--background-color) !important;
             color: var(--chroma-highlight) !important;
-            border-color: var(--background-color) !important;
+            border-color: var(--chroma-highligh) !important;
             filter: none !important;
             box-shadow: none !important;
             stroke: transparent !important;  
             text-shadow: none;
+        }
+
+        .ct-character-header-desktop__button:before, 
+        .site .ct-button.ct-theme-button--outline:before, 
+        .site .ct-button.ct-theme-button--filled:before, 
+        .ddbc-campaign-summary:before, 
+        .ct-character-header__group--game-log:before{
+            border-color: var(--chroma-highlight);
         }
 
         .ajs-close{
@@ -708,7 +946,8 @@ chromaKeyDiceTrayNoPopUp "ON without dice popup" <<<EOT
         .dice-toolbar__dropdown .dice-toolbar__target-menu-button:after,
         .tippy-popper,
         .beyond20-character-avatar,
-        img[class^="ct-beyond20"] {
+        img[class^="ct-beyond20"],
+        #content .ct-extra-row__img{
             display: none !important;
         }
 
@@ -735,7 +974,20 @@ chromaKeyDiceTrayNoPopUp "ON without dice popup" <<<EOT
         svg.MuiSvgIcon-root polygon:nth-of-type(2),
         .MuiButtonBase-root:hover svg.MuiSvgIcon-root path,
         .MuiButtonBase-root:hover svg.MuiSvgIcon-root polygon:nth-of-type(2),
-        svg.ddbc-svg.ct-sidebar__control-icon [fill*=fff]{
+        svg.ddbc-svg.ct-sidebar__control-icon [fill*=fff],
+        #content .ddbc-attack-table__content svg path,
+        #content svg path[d^="M8.5,0A8.5,8.5,0,1,0,17,8.5,8.49382,"],
+        [d^="M17.5 11.6666C17.5 12.3095 16.9761"],
+        .ct-quick-nav__footer-sidebar svg path,
+        .ct-quick-nav__footer-sidebar svg polygon,
+        .ddbc-svg.ddbc-proficiency-svg.ddbc-proficiency-icon.ddbc-proficiency-level-icon circle,
+        [d^="M8.5,0A8.5,8.5,0,1,0,17,8.5,8.49382,"], 
+        [d^="M6.90936,9.61388a4.92424,4.92424"], 
+        [d^="M17.5 11.6666C17.5 12.3095 16.9761"],
+        .ddbc-svg.ddbc-proficiency-half-svg.ddbc-twice-proficiency-icon__inner circle,
+        .ddbc-svg.ddbc-proficiency-half-svg.ddbc-twice-proficiency-icon__inner path,
+        .ddbc-svg.ddbc-proficiency-half-svg.ddbc-half-proficiency-icon.ddbc-proficiency-level-icon path
+        {
             fill: var(--chroma-highlight) !important;
           
         }
@@ -767,7 +1019,56 @@ chromaKeyDiceTrayNoPopUp "ON without dice popup" <<<EOT
         .site MuiButtonBase-root:hover span, 
         .site .MuiList-root li ul li:hover div, 
         .site li.MuiButtonBase-root:hover div, 
-        .site .MuiButtonBase-root:hover span
+        .site .MuiButtonBase-root:hover span,
+        [class*="ct-sidebar"] svg path,
+        .ddbc-svg.ddbc-chevron-svg path,
+        .ddbc-collapsible__header:hover .ddbc-svg.ddbc-chevron-svg path,
+        .ddbc-checkbox--is-enabled .ddbc-checkbox__input .ddbc-check-svg path, 
+        .ct-skills__col--proficiency circle, .ct-skills__col--proficiency path, 
+        .ddbc-saving-throws-summary__ability-proficiency circle, 
+        .ddbc-svg.ddbc-builder-svg.ddbc-svg--light path, 
+        .ddbc-svg.ddbc-long-rest-svg.ddbc-svg--themed path, 
+        .ddbc-svg.ddbc-short-rest-svg.ddbc-svg--themed path, 
+        .ddbc-svg.ddbc-share-svg.ddbc-svg--themed path, 
+        svg.ddbc-svg.ct-sidebar__control-icon path, 
+        svg.ddbc-svg.ct-sidebar__control-icon polygon, 
+        svg.ddbc-svg.ct-sidebar__control-icon rect, 
+        .ct-value-editor__property-value path, 
+        .ddbc-collapsible__header-status path, 
+        .ddbc-popout-menu__item path, 
+        .ddbc-popout-menu__item circle, 
+        .ct-inspiration__status.ct-inspiration__status--active g:first-child path, 
+        .ct-spells-filter__advanced path, 
+        .ddbc-checkbox--is-enabled .ddbc-checkbox__input .ddbc-check-svg path, 
+        .ddbc-attunement-slot.ddbc-attunement-slot--filled path, 
+        .ddbc-svg.ddbc-proficiency-svg.ddbc-proficiency-icon.ddbc-proficiency-level-icon circle, 
+        .ddbc-svg.ddbc-proficiency-half-svg.ddbc-half-proficiency-icon.ddbc-proficiency-level-icon path, 
+        .ddbc-svg.ddbc-proficiency-half-svg.ddbc-twice-proficiency-icon__inner circle, 
+        .ddbc-svg.ddbc-proficiency-half-svg.ddbc-twice-proficiency-icon__inner path, 
+        .ddbc-svg.ddbc-dice-svg.ddbc-svg--themed path, 
+        .ddbc-svg.ddbc-link-out-svg.ddbc-svg--light path,
+        svg.ddbc-svg.ddbc-builder-svg.ddbc-svg--themed path, 
+        svg.ddbc-svg.ddbc-manage-level-svg.ddbc-svg--themed circle, 
+        svg.ddbc-svg.ddbc-backdrop-svg.ddbc-svg--themed path, 
+        svg.ddbc-svg.ddbc-theme-icon-svg.ddbc-svg--themed path, 
+        svg.ddbc-svg.ddbc-portrait-svg.ddbc-svg--themed path, 
+        svg.ddbc-svg.ddbc-preferences-svg.ddbc-svg--themed path, 
+        svg.ddbc-svg.ddbc-export-svg.ddbc-svg--themed path, 
+        .ddbc-collapsible__header:hover .ddbc-svg.ddbc-chevron-svg.ddbc-chevron-right-svg.ddbc-svg--builder path, 
+        .ddbc-collapsible__header:hover .ddbc-svg.ddbc-chevron-svg path, 
+        .ct-extras-filter__advanced svg path, 
+        .ct-inventory-filter__advanced svg path, 
+        .ct-character-header-desktop__group--game-log path, 
+        .ct-section-placeholder__icon path, 
+        .ct-section-placeholder__icon polygon, 
+        .ct-section-placeholder__icon circle, 
+        .ct-quick-nav__button path, 
+        .ct-quick-nav__button polygon, 
+        .ct-quick-nav__button circle, 
+        .ddbc-collapsible__header:hover div .ddbc-chevron-svg svg path, 
+        .ddbc-svg.ct-sidebar__pane-control-icon path, 
+        .ct-content-group__header-extra a.ct-equipment__builder-link svg path, 
+        [d="M17.7 2c.3-.2.5-.4.8-.7.3-.3.3-.8 0-1.1-.3-.3-.8-.3-1.1 0-1.8 2-3.5 1.6-5.3 1.1-1.3-.3-2.6-.6-3.7.2C6.7 2.6 6.7 5 6.9 6.6L3.3 4.3l1.6-1.1L0 2.7l2.7 4.9.2-2.4 3.4 2.2c-1.5.4-3.7 1.4-4.2 3.4-.3 1.3.5 2.4 1.3 3.5 1.1 1.5 2.2 2.9 1 5.3-.2.4 0 .8.4 1 .1 0 .2.1.3.1.3 0 .6-.2.7-.4.2-.4.3-.7.4-1.1l5.5-8.2 4.9 3.2.5-.8-4.9-3.1L17.7 2zm-8.5.7c.5-.4 1.3-.2 2.4.1 1.4.4 3.1.8 4.9-.1l-4.8 7.1-3.1-2.1v-.1c-.3-1-.7-4 .6-4.9zM6.4 17.9c.1-2-1-3.4-1.8-4.6-.7-1-1.2-1.6-1-2.2.4-1.6 3.1-2.3 4.2-2.5H8.1l3.2 2.1-4.9 7.2z"], [d="M14.7 15.5l-.8-1.5c-.3-.9-.3-1.6-.3-1.6h-1c0 .1.1 3.2 2.5 4.8l.5-.8-.9-.9zM14.9 9.8l.1 1s1.7-.2 3.5.8l.5-.9c-2.1-1.1-4.1-.9-4.1-.9z"], .ddbc-pencil-svg path, .ddbc-chat-bubble-svg path, .ddbc-paint-brush-svg path, .ct-sidebar .ddbc-svg--themed path, .ddbc-attack-type-icon--2-1 path[d^="M8.17 16.03L.63 17l5.12-3.33-5.54-3.64h5.71L0"], .ddbc-attack-type-icon--2-1 path[d^="M13.15 16.53c-1.62 0-3.15-.61-3.57-1.42A6"], [d^="M8.5,0A8.5,8.5,0,1,0,17,8.5,8.49382,"],[d^="M6.90936,9.61388a4.92424,4.92424"]
         {
             background-color: var(--background-color) !important;
             filter: none !important;
@@ -776,7 +1077,8 @@ chromaKeyDiceTrayNoPopUp "ON without dice popup" <<<EOT
         }
 
     
-        #content .ct-character-sheet--dice-enabled .integrated-dice__container:hover{
+        #content .ct-character-sheet--dice-enabled .integrated-dice__container:hover,
+        #content .ct-slot-manager__slot{
             border: 1px solid var(--chroma-highlight) !important;
         }
 
@@ -788,21 +1090,180 @@ chromaKeyDiceTrayNoPopUp "ON without dice popup" <<<EOT
         -webkit-mask-position: 12px;
 
     }
+    
 
-    .ct-quick-nav__footer-sidebar svg path,
-    .ct-quick-nav__footer-sidebar svg polygon{
-        fill: var(--chroma-highlight) !important;
-    }
     .ct-slot-manager--size-small .ct-slot-manager__slot--used:before{
         box-shadow: 0 0 20px 1px var(--chroma-highlight) inset !important;
     }
-    #content .ct-slot-manager__slot{
-        border: 1px solid var(--chroma-highlight) !important;
-    }   
-    #content .ct-extra-row__img{
-        background: var(--chroma-highlight) !important;
-        mix-blend-mode: color-dodge;
-    }
+
+       .ct-character-header-desktop__button:before, 
+        .site .ct-button.ct-theme-button--outline:before, 
+        .site .ct-button.ct-theme-button--filled:before, 
+        .ddbc-campaign-summary:before, 
+        .ct-character-header__group--game-log:before,
+        .ct-sidebar__inner div,
+        .ct-sidebar__pane-content:before, 
+        .ct-sidebar__pane-gap:before,
+        .ct-editor-box div.ddbc-checkbox__input,
+        .ct-editor-box .ct-value-editor__property-input,
+        .ct-spell-caster__casting-action-count.ct-spell-caster__casting-action-count--spellcasting,
+        .ct-quick-nav__button,
+        .ct-quick-nav__button:hover,
+        .ct-character-sheet--dice-enabled .ddbc-combat-attack--crit .ddbc-combat-attack__damage .integrated-dice__container:hover,
+        .ct-character-sheet--dice-enabled .ddbc-combat-attack--crit .ddbc-combat-attack__damage .integrated-dice__container,
+        .beyond20-roll-cell,
+        .ct-skills__col--adjustments,
+        .ddbc-attack-table .ddbc-combat-attack+.ddbc-combat-attack,
+        .ct-actions-list__basic-list,
+        .ct-actions-list__spells-list,
+        .ct-combat__statuses-group.ct-combat__statuses-group--conditions,
+        .ct-proficiency-groups__group,
+        .ct-slot-manager__slot--used,
+        .ct-sidebar--is-dark-mode .ct-slot-manager__slot--used,
+        .ct-actions-list__heading,
+        .ddbc-tab-list__nav-item--is-active,
+        .ct-content-group__header,
+        .ct-description__traits,
+        .ct-spells-level-casting,
+        .ct-features__management-link,
+        .ct-spells-spell + .ct-spells-spell,
+        .ct-inventory-item + .ct-inventory-item,
+        .ct-attunement__item + .ct-attunement__item,
+        .ct-feats-manage-pane__feat,
+        .ct-equipment__overview,
+        .ct-saving-throws-pane__details,
+        .ct-saving-throws-pane__description,
+        .ct-sense-manage-pane__customize,
+        .ct-sense-manage-pane__description,
+        .ct-proficiencies-pane__proficiency + .ct-proficiencies-pane__proficiency,
+        .ct-proficiency-groups__group + .ct-proficiency-groups__group,
+        .ct-proficiencies-pane__groups,
+        .ct-skill-pane__customize,
+        .ct-skill-pane__description,
+        .ct-skills__col--skill,
+        .ct-skills__col--modifier,
+        .ct-ability-pane__description,
+        .ct-speed-manage-pane__customize,
+        .ct-speed-manage-pane__description,
+        .ct-armor-manage-pane__items,
+        .ct-armor-manage-pane__customize,
+        .ct-armor-manage-pane__description,
+        .ct-health-manager__deathsaves,
+        .ct-health-manager__restore-life,
+        .ct-health-manager__health,
+        .ct-health-manager__overrides,
+        .ct-defense-manage-pane__custom,
+        .ct-condition-manage-pane__condition--special,
+        .ct-currency-pane__currency + .ct-currency-pane__currency,
+        .ct-currency-pane__adjuster,
+        .ct-currency-pane__lifestyle,
+        .ct-extra-manage-pane__group-heading,
+        .ct-extra-manage-pane__extra,
+        .ct-extra-manage-pane__extras,
+        .ct-item-detail__customize,
+        .ct-item-detail__customize,
+        .ct-item-detail__description,
+        .ct-item-detail__actions,
+        .ct-spell-caster,
+        .ct-spell-detail__customize,
+        .ct-spell-detail__properties,
+        .ct-spell-detail__description,
+        .ct-spell-detail__tags,
+        .ct-action-detail__customize,
+        .ct-action-detail__properties,
+        .ct-action-detail__description,
+        .ct-action-detail__limited-uses,
+        .ct-background-pane__data,
+        .line,
+        .ct-feat-pane__prerequisite,
+        .ct-infusions__infusion + .ct-infusions__infusion,
+        .ct-infusions__infusion-item + .ct-infusions__infusion-item,
+        .ct-infusion-choice-pane__step,
+        .ct-infusion-choice-pane__actions,
+        .ct-infusion-choice-pane__description,
+        .ct-infusion-choice-pane__ui-group,
+        .ct-spells-level-casting,
+        .ct-features__management-link,
+        .ct-spells-spell + .ct-spells-spell,
+        .ct-inventory-item + .ct-inventory-item,
+        .ct-attunement__item + .ct-attunement__item,
+        .ct-feats-manage-pane__feat,
+        .ct-equipment__overview,
+        .ct-saving-throws-pane__details,
+        .ct-saving-throws-pane__description,
+        .ct-sense-manage-pane__customize,
+        .ct-sense-manage-pane__description,
+        .ct-proficiencies-pane__proficiency + .ct-proficiencies-pane__proficiency,
+        .ct-proficiency-groups__group + .ct-proficiency-groups__group,
+        .ct-proficiencies-pane__groups,
+        .ct-skill-pane__customize,
+        .ct-skill-pane__description,
+        .ct-skills__col--skill,
+        .ct-skills__col--modifier,
+        .ct-ability-pane__description,
+        .ct-speed-manage-pane__customize,
+        .ct-speed-manage-pane__description,
+        .ct-armor-manage-pane__items,
+        .ct-armor-manage-pane__customize,
+        .ct-armor-manage-pane__description,
+        .ct-health-manager__deathsaves,
+        .ct-health-manager__restore-life,
+        .ct-health-manager__health,
+        .ct-health-manager__overrides,
+        .ct-defense-manage-pane__custom,
+        .ct-condition-manage-pane__condition--special,
+        .ct-currency-pane__currency + .ct-currency-pane__currency,
+        .ct-currency-pane__adjuster,
+        .ct-currency-pane__lifestyle,
+        .ct-extra-manage-pane__group-heading,
+        .ct-extra-manage-pane__extra,
+        .ct-extra-manage-pane__extras,
+        .ct-item-detail__customize,
+        .ct-item-detail__customize,
+        .ct-item-detail__description,
+        .ct-item-detail__actions,
+        .ct-spell-caster,
+        .ct-spell-detail__customize,
+        .ct-spell-detail__properties,
+        .ct-spell-detail__description,
+        .ct-spell-detail__tags,
+        .ct-action-detail__customize,
+        .ct-action-detail__properties,
+        .ct-action-detail__description,
+        .ct-action-detail__limited-uses,
+        .ct-background-pane__data,
+        .line,
+        .ct-feat-pane__prerequisite,
+        .ct-infusions__infusion + .ct-infusions__infusion,
+        .ct-infusions__infusion-item + .ct-infusions__infusion-item,
+        .ct-infusion-choice-pane__step,
+        .ct-infusion-choice-pane__actions,
+        .ct-infusion-choice-pane__description,
+        .ct-infusion-choice-pane__ui-group,
+        .ct-feature-snippet__extra,
+        .ct-trait-pane__content,
+        .ct-character-sheet .ct-slot-manager__slot--used,
+        .ct-description-pane__entry select.ddbc-select.ct-description-pane__editor-input,
+        .ct-description-pane__entry input.ct-description-pane__editor-input,
+        .ct-health-manage-pane input.character-input.ct-health-manager__input,
+        .ct-spells-spell__scaled-level,
+        .ct-slot-manager__slot.ct-slot-manager__slot--used,
+        .ct-decorate-pane__current-selections,
+        .ct-decorate-pane__preferences-content,
+        .ct-decorate-pane__preferences,
+        .ct-equipment-manage-pane__custom,
+        .dice_result--crit,
+        .ct-character-manage-pane__class-list-item-level,
+        .ct-inventory__actions--collapsed,
+        .ct-item-detail__infusion,
+        .ct-campaign-pane__character-preview,
+        .ct-campaign-pane__character,
+        .ct-campaign-pane__header,
+        .ct-campaign-pane__characters
+        {
+            border-color: var(--chroma-highlight) !important;
+        }
+
 
     .site .button-action-decrease--small:before{
         -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 16'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill-rule:evenodd; fill: white;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3EAsset 54%3C/title%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cpolygon class='cls-1' points='6 0 6 6 0 6 0 10 6 10 6 16 10 16 10 10 16 10 16 6 10 6 10 0 6 0'/%3E%3Crect class='cls-1' x='18' y='6' width='16' height='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
@@ -821,11 +1282,456 @@ chromaKeyDiceTrayNoPopUp "ON without dice popup" <<<EOT
     }
      @supports (-moz-appearance:none) {
 
-    *{
-        scrollbar-width: 1px;
-        scrollbar-color: var(--chroma-highlight) transparent;
-    }
+        *{
+            scrollbar-width: 1px;
+            scrollbar-color: var(--chroma-highlight) transparent;
+        }
 } 
+EOT;
+
+chromaKeyDiceTraySide "ON sidebar chroma with popup" <<<EOT
+
+        #content *:not(.dice-icon-die):not(.dice-rolling-panel__container):not(circle):not([d^="M8.5,0A8.5,8.5,0,1,0,17,8.5,8.49382,"]):not([d^="M6.90936,9.61388a4.92424,4.92424"]):not([d^="M17.5 11.6666C17.5 12.3095 16.9761"]),
+        #content *:not(.dice-icon-die):hover,
+        #content *::placeholder,
+        .ct-feature-snippet__meta-item::before,
+        .MuiButton-label,
+        [class^="ct-beyond20"],
+        .MuiButtonBase-root:hover span,
+        .MuiButtonBase-root span,
+        .jss2 .MuiListItem-root:hover span,
+        body.body-rpgcharacter-sheet>div:last-of-type:not(.ct-sidebar__portal):not(.alertify):not(#noty_layout__bottomRight):not(.MuiPopover-root) *,
+        body.body-rpgcharacter-sheet>div:last-of-type:not(.ct-sidebar__portal):not(.alertify):not(#noty_layout__bottomRight)>div[class^="_"]>div span:last-of-type,
+        .alertify *,
+        .alertify .ajs-header,
+        .alertify .beyond20-title,
+        .alertify .ajs-body,
+        body>.alertify .dice-formula.beyond20-roll-formula,
+        ::marker,
+        .alertify .beyond20-header .beyond20-description,
+        .alertify .beyond20-roll-detail-crit,
+        .alertify .beyond20-roll-detail-fail,
+        .MuiPaper-root .jss2 .MuiListSubheader-root,
+        .ct-health-summary__adjuster-field:before,
+        .ct-sidebar .ddbc-collapsible__header,
+        .div.ct-sidebar__pane-content *,
+        div.ct-sidebar__pane-content *,
+        .ct-sidebar .ct-theme-button--filled,
+        .site .ct-theme-button--filled.ct-button:hover,
+        .ct-sidebar thead th,
+        #site .glc-game-log > div > ol > li > div > div:nth-of-type(2),
+        body:not(.body-forum):not(.section-posts):not(.section-changelog):not(.body-privatemessage-details) blockquote,
+        .ddbc-toggle-field--is-disabled .ddbc-toggle-field__nub:after,
+        .ct-sidebar .compendium-left-aligned-table td
+            {
+            background: transparent !important;
+            fill: var(--background-color) !important;
+            color: var(--chroma-highlight) !important;
+            border-color: var(--chroma-highligh) !important;
+            filter: none !important;
+            box-shadow: none !important;
+            stroke: transparent !important;  
+            text-shadow: none;
+        }
+
+        
+        .site *[class*="ct-sidebar"]
+        {
+            background: var(--background-color) !important;
+        }
+        
+        ::-webkit-scrollbar-thumb{
+            background-color: var(--chroma-highlight) !important;
+        }
+
+
+        .ct-sidebar__pane-bottom path, 
+        .ct-sidebar__pane-top path, 
+        .ddbc-saving-throw-selection-box-svg path, 
+        .ddbc-saving-throw-selection-small-box-svg path{
+            stroke: var(--chroma-highlight) !important;
+        }
+
+        
+        .ct-character-header-desktop__button:before, 
+        .site .ct-button.ct-theme-button--outline:before, 
+        .site .ct-button.ct-theme-button--filled:before, 
+        .ddbc-campaign-summary:before, 
+        .ct-character-header__group--game-log:before,
+        .ct-sidebar__inner div,
+        .ct-sidebar__pane-content:before, 
+        .ct-sidebar__pane-gap:before,
+        .ct-editor-box div.ddbc-checkbox__input,
+        .ct-editor-box .ct-value-editor__property-input,
+        .ct-spell-caster__casting-action-count.ct-spell-caster__casting-action-count--spellcasting,
+        .ct-quick-nav__button,
+        .ct-quick-nav__button:hover,
+        .ct-character-sheet--dice-enabled .ddbc-combat-attack--crit .ddbc-combat-attack__damage .integrated-dice__container:hover,
+        .ct-character-sheet--dice-enabled .ddbc-combat-attack--crit .ddbc-combat-attack__damage .integrated-dice__container,
+        .beyond20-roll-cell,
+        .ct-skills__col--adjustments,
+        .ddbc-attack-table .ddbc-combat-attack+.ddbc-combat-attack,
+        .ct-actions-list__basic-list,
+        .ct-actions-list__spells-list,
+        .ct-combat__statuses-group.ct-combat__statuses-group--conditions,
+        .ct-proficiency-groups__group,
+        .ct-slot-manager__slot--used,
+        .ct-sidebar--is-dark-mode .ct-slot-manager__slot--used,
+        .ct-actions-list__heading,
+        .ddbc-tab-list__nav-item--is-active,
+        .ct-content-group__header,
+        .ct-description__traits,
+        .ct-spells-level-casting,
+        .ct-features__management-link,
+        .ct-spells-spell + .ct-spells-spell,
+        .ct-inventory-item + .ct-inventory-item,
+        .ct-attunement__item + .ct-attunement__item,
+        .ct-feats-manage-pane__feat,
+        .ct-equipment__overview,
+        .ct-saving-throws-pane__details,
+        .ct-saving-throws-pane__description,
+        .ct-sense-manage-pane__customize,
+        .ct-sense-manage-pane__description,
+        .ct-proficiencies-pane__proficiency + .ct-proficiencies-pane__proficiency,
+        .ct-proficiency-groups__group + .ct-proficiency-groups__group,
+        .ct-proficiencies-pane__groups,
+        .ct-skill-pane__customize,
+        .ct-skill-pane__description,
+        .ct-skills__col--skill,
+        .ct-skills__col--modifier,
+        .ct-ability-pane__description,
+        .ct-speed-manage-pane__customize,
+        .ct-speed-manage-pane__description,
+        .ct-armor-manage-pane__items,
+        .ct-armor-manage-pane__customize,
+        .ct-armor-manage-pane__description,
+        .ct-health-manager__deathsaves,
+        .ct-health-manager__restore-life,
+        .ct-health-manager__health,
+        .ct-health-manager__overrides,
+        .ct-defense-manage-pane__custom,
+        .ct-condition-manage-pane__condition--special,
+        .ct-currency-pane__currency + .ct-currency-pane__currency,
+        .ct-currency-pane__adjuster,
+        .ct-currency-pane__lifestyle,
+        .ct-extra-manage-pane__group-heading,
+        .ct-extra-manage-pane__extra,
+        .ct-extra-manage-pane__extras,
+        .ct-item-detail__customize,
+        .ct-item-detail__customize,
+        .ct-item-detail__description,
+        .ct-item-detail__actions,
+        .ct-spell-caster,
+        .ct-spell-detail__customize,
+        .ct-spell-detail__properties,
+        .ct-spell-detail__description,
+        .ct-spell-detail__tags,
+        .ct-action-detail__customize,
+        .ct-action-detail__properties,
+        .ct-action-detail__description,
+        .ct-action-detail__limited-uses,
+        .ct-background-pane__data,
+        .line,
+        .ct-feat-pane__prerequisite,
+        .ct-infusions__infusion + .ct-infusions__infusion,
+        .ct-infusions__infusion-item + .ct-infusions__infusion-item,
+        .ct-infusion-choice-pane__step,
+        .ct-infusion-choice-pane__actions,
+        .ct-infusion-choice-pane__description,
+        .ct-infusion-choice-pane__ui-group,
+        .ct-spells-level-casting,
+        .ct-features__management-link,
+        .ct-spells-spell + .ct-spells-spell,
+        .ct-inventory-item + .ct-inventory-item,
+        .ct-attunement__item + .ct-attunement__item,
+        .ct-feats-manage-pane__feat,
+        .ct-equipment__overview,
+        .ct-saving-throws-pane__details,
+        .ct-saving-throws-pane__description,
+        .ct-sense-manage-pane__customize,
+        .ct-sense-manage-pane__description,
+        .ct-proficiencies-pane__proficiency + .ct-proficiencies-pane__proficiency,
+        .ct-proficiency-groups__group + .ct-proficiency-groups__group,
+        .ct-proficiencies-pane__groups,
+        .ct-skill-pane__customize,
+        .ct-skill-pane__description,
+        .ct-skills__col--skill,
+        .ct-skills__col--modifier,
+        .ct-ability-pane__description,
+        .ct-speed-manage-pane__customize,
+        .ct-speed-manage-pane__description,
+        .ct-armor-manage-pane__items,
+        .ct-armor-manage-pane__customize,
+        .ct-armor-manage-pane__description,
+        .ct-health-manager__deathsaves,
+        .ct-health-manager__restore-life,
+        .ct-health-manager__health,
+        .ct-health-manager__overrides,
+        .ct-defense-manage-pane__custom,
+        .ct-condition-manage-pane__condition--special,
+        .ct-currency-pane__currency + .ct-currency-pane__currency,
+        .ct-currency-pane__adjuster,
+        .ct-currency-pane__lifestyle,
+        .ct-extra-manage-pane__group-heading,
+        .ct-extra-manage-pane__extra,
+        .ct-extra-manage-pane__extras,
+        .ct-item-detail__customize,
+        .ct-item-detail__customize,
+        .ct-item-detail__description,
+        .ct-item-detail__actions,
+        .ct-spell-caster,
+        .ct-spell-detail__customize,
+        .ct-spell-detail__properties,
+        .ct-spell-detail__description,
+        .ct-spell-detail__tags,
+        .ct-action-detail__customize,
+        .ct-action-detail__properties,
+        .ct-action-detail__description,
+        .ct-action-detail__limited-uses,
+        .ct-background-pane__data,
+        .line,
+        .ct-feat-pane__prerequisite,
+        .ct-infusions__infusion + .ct-infusions__infusion,
+        .ct-infusions__infusion-item + .ct-infusions__infusion-item,
+        .ct-infusion-choice-pane__step,
+        .ct-infusion-choice-pane__actions,
+        .ct-infusion-choice-pane__description,
+        .ct-infusion-choice-pane__ui-group,
+        .ct-feature-snippet__extra,
+        .ct-trait-pane__content,
+        .ct-character-sheet .ct-slot-manager__slot--used,
+        .ct-description-pane__entry select.ddbc-select.ct-description-pane__editor-input,
+        .ct-description-pane__entry input.ct-description-pane__editor-input,
+        .ct-health-manage-pane input.character-input.ct-health-manager__input,
+        .ct-spells-spell__scaled-level,
+        .ct-slot-manager__slot.ct-slot-manager__slot--used,
+        .ct-decorate-pane__current-selections,
+        .ct-decorate-pane__preferences-content,
+        .ct-decorate-pane__preferences,
+        .ct-equipment-manage-pane__custom,
+        .dice_result--crit,
+        .ct-character-manage-pane__class-list-item-level,
+        .ct-inventory__actions--collapsed,
+        .ct-item-detail__infusion,
+        .ct-campaign-pane__character-preview,
+        .ct-campaign-pane__character,
+        .ct-campaign-pane__header,
+        .ct-campaign-pane__characters
+        {
+            border-color: var(--chroma-highlight) !important;
+        }
+
+        
+        .ct-editor-box .ct-value-editor__property-input,
+        .ddbc-checkbox--is-enabled .ddbc-checkbox__input,
+        .ct-slot-manager__slot.ct-slot-manager__slot{
+            border: 1px solid var(--chroma-highlight) !important;
+        }
+
+        .ajs-close{
+            -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABZ0RVh0Q3JlYXRpb24gVGltZQAwNy8xMy8xNOrZqugAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzbovLKMAAAAh0lEQVQYlY2QsQ0EIQwEB9cBAR1CJUaI/gigDnwR6NBL/7/xWLNrZ2b8EwGotVpr7eOitWa1VjugiNB7R1UPrKrWe0dEAHBbXUqxMQbeewDmnHjvyTm7C3zDwAUd9c63YQdUVdu6EAJzzquz7HXvTiklt+H9DQFYaxFjvDqllFyMkbXWvfpXHjJrWFgdBq/hAAAAAElFTkSuQmCC) !important;
+        background-color: var(--chroma-highlight) !important;
+        -webkit-mask-repeat: no-repeat !important;
+        -webkit-mask-position: center center !important;
+        }
+
+        #site ::selection{
+            background: var(--chroma-highlight) !important;
+            opacity:0.4 !important;;
+            color: var(--background-color) !important;
+        }
+
+        .ddbc-character-tidbits__avatar,
+        img[class^="ct-beyond20"],
+        .beyond20-quick-roll-icon,
+        .dice-toolbar__dropdown .dice-toolbar__target-menu-button:after,
+        .tippy-popper,
+        .beyond20-character-avatar,
+        #content .ct-extra-row__img,
+        .ddbc-creature-block__separator{
+            display: none !important;
+        }
+
+        #site .dice-icon-die,
+        #site .dice-die-button:hover .dice-icon-die,
+        #site .dice-toolbar__dropdown-die:hover .dice-icon-die{
+            background: var(--chroma-highlight) !important;
+        }
+        
+     
+  
+        
+        .ct-health-manager__adjuster-buttons .action-decrease:before, 
+        .ct-health-manager__adjuster-buttons .action-increase:before, 
+        .ct-health-adjuster__buttons .action-decrease:before, 
+        .ct-health-adjuster__buttons .action-increase:before,
+        div.ct-sidebar__pane-content .ddbc-toggle-field__nub {
+            background: var(--chroma-highlight);
+        }
+
+        svg.ddbc-svg.ct-sidebar__control-icon polygon,
+        svg.ddbc-svg.ct-sidebar__control-icon path,
+        #content .ddbc-chat-bubble-svg path,
+        #content .ddbc-chat-bubble-svg:hover path,
+        #content .dice-toolbar__target .MuiSvgIcon-root path,
+        .MuiList-root svg *,
+        .MuiButtonBase-root path, 
+        .MuiButtonBase-root:hover polygon:nth-of-type(2), 
+        .MuiButtonBase-root:hover path,
+        .MuiButtonBase-root .MuiSvgIcon-root polygon,
+        svg.MuiSvgIcon-root path,
+        svg.MuiSvgIcon-root polygon:nth-of-type(2),
+        .MuiButtonBase-root:hover svg.MuiSvgIcon-root path,
+        .MuiButtonBase-root:hover svg.MuiSvgIcon-root polygon:nth-of-type(2),
+        svg.ddbc-svg.ct-sidebar__control-icon [fill*=fff],
+        #site #content .ddbc-tab-list svg path,
+        [class*="ct-sidebar"] svg path,
+        .ddbc-svg.ddbc-chevron-svg path,
+        .ddbc-collapsible__header:hover .ddbc-svg.ddbc-chevron-svg path,
+        .ddbc-checkbox--is-enabled .ddbc-checkbox__input .ddbc-check-svg path, 
+        .ct-skills__col--proficiency circle, .ct-skills__col--proficiency path, 
+        .ddbc-saving-throws-summary__ability-proficiency circle, 
+        .ddbc-svg.ddbc-builder-svg.ddbc-svg--light path, 
+        .ddbc-svg.ddbc-long-rest-svg.ddbc-svg--themed path, 
+        .ddbc-svg.ddbc-short-rest-svg.ddbc-svg--themed path, 
+        .ddbc-svg.ddbc-share-svg.ddbc-svg--themed path, 
+        svg.ddbc-svg.ct-sidebar__control-icon path, 
+        svg.ddbc-svg.ct-sidebar__control-icon polygon, 
+        svg.ddbc-svg.ct-sidebar__control-icon rect, 
+        .ct-value-editor__property-value path, 
+        .ddbc-collapsible__header-status path, 
+        .ddbc-popout-menu__item path, 
+        .ddbc-popout-menu__item circle, 
+        .ct-inspiration__status.ct-inspiration__status--active g:first-child path, 
+        .ct-spells-filter__advanced path, 
+        .ddbc-checkbox--is-enabled .ddbc-checkbox__input .ddbc-check-svg path, 
+        .ddbc-attunement-slot.ddbc-attunement-slot--filled path, 
+        .ddbc-svg.ddbc-proficiency-svg.ddbc-proficiency-icon.ddbc-proficiency-level-icon circle, 
+        .ddbc-svg.ddbc-proficiency-half-svg.ddbc-half-proficiency-icon.ddbc-proficiency-level-icon path, 
+        .ddbc-svg.ddbc-proficiency-half-svg.ddbc-twice-proficiency-icon__inner circle, 
+        .ddbc-svg.ddbc-proficiency-half-svg.ddbc-twice-proficiency-icon__inner path, 
+        .ddbc-svg.ddbc-dice-svg.ddbc-svg--themed path, 
+        .ddbc-svg.ddbc-link-out-svg.ddbc-svg--light path,
+        svg.ddbc-svg.ddbc-builder-svg.ddbc-svg--themed path, 
+        svg.ddbc-svg.ddbc-manage-level-svg.ddbc-svg--themed circle, 
+        svg.ddbc-svg.ddbc-backdrop-svg.ddbc-svg--themed path, 
+        svg.ddbc-svg.ddbc-theme-icon-svg.ddbc-svg--themed path, 
+        svg.ddbc-svg.ddbc-portrait-svg.ddbc-svg--themed path, 
+        svg.ddbc-svg.ddbc-preferences-svg.ddbc-svg--themed path, 
+        svg.ddbc-svg.ddbc-export-svg.ddbc-svg--themed path, 
+        .ddbc-collapsible__header:hover .ddbc-svg.ddbc-chevron-svg.ddbc-chevron-right-svg.ddbc-svg--builder path, 
+        .ddbc-collapsible__header:hover .ddbc-svg.ddbc-chevron-svg path, 
+        .ct-extras-filter__advanced svg path, 
+        .ct-inventory-filter__advanced svg path, 
+        .ct-character-header-desktop__group--game-log path, 
+        .ct-section-placeholder__icon path, 
+        .ct-section-placeholder__icon polygon, 
+        .ct-section-placeholder__icon circle, 
+        .ct-quick-nav__button path, 
+        .ct-quick-nav__button polygon, 
+        .ct-quick-nav__button circle, 
+        .ddbc-collapsible__header:hover div .ddbc-chevron-svg svg path, 
+        .ddbc-svg.ct-sidebar__pane-control-icon path, 
+        .ct-content-group__header-extra a.ct-equipment__builder-link svg path, 
+        [d="M17.7 2c.3-.2.5-.4.8-.7.3-.3.3-.8 0-1.1-.3-.3-.8-.3-1.1 0-1.8 2-3.5 1.6-5.3 1.1-1.3-.3-2.6-.6-3.7.2C6.7 2.6 6.7 5 6.9 6.6L3.3 4.3l1.6-1.1L0 2.7l2.7 4.9.2-2.4 3.4 2.2c-1.5.4-3.7 1.4-4.2 3.4-.3 1.3.5 2.4 1.3 3.5 1.1 1.5 2.2 2.9 1 5.3-.2.4 0 .8.4 1 .1 0 .2.1.3.1.3 0 .6-.2.7-.4.2-.4.3-.7.4-1.1l5.5-8.2 4.9 3.2.5-.8-4.9-3.1L17.7 2zm-8.5.7c.5-.4 1.3-.2 2.4.1 1.4.4 3.1.8 4.9-.1l-4.8 7.1-3.1-2.1v-.1c-.3-1-.7-4 .6-4.9zM6.4 17.9c.1-2-1-3.4-1.8-4.6-.7-1-1.2-1.6-1-2.2.4-1.6 3.1-2.3 4.2-2.5H8.1l3.2 2.1-4.9 7.2z"], [d="M14.7 15.5l-.8-1.5c-.3-.9-.3-1.6-.3-1.6h-1c0 .1.1 3.2 2.5 4.8l.5-.8-.9-.9zM14.9 9.8l.1 1s1.7-.2 3.5.8l.5-.9c-2.1-1.1-4.1-.9-4.1-.9z"], .ddbc-pencil-svg path, .ddbc-chat-bubble-svg path, .ddbc-paint-brush-svg path, .ct-sidebar .ddbc-svg--themed path, .ddbc-attack-type-icon--2-1 path[d^="M8.17 16.03L.63 17l5.12-3.33-5.54-3.64h5.71L0"], .ddbc-attack-type-icon--2-1 path[d^="M13.15 16.53c-1.62 0-3.15-.61-3.57-1.42A6"], [d^="M8.5,0A8.5,8.5,0,1,0,17,8.5,8.49382,"],[d^="M6.90936,9.61388a4.92424,4.92424"],
+        [d^="M17.5 11.6666C17.5 12.3095 16.9761"],
+        .ct-quick-nav__footer-sidebar svg path,
+        .ct-quick-nav__footer-sidebar svg polygon{
+            fill: var(--chroma-highlight) !important;
+          
+        }
+        
+        svg.ddbc-svg.ct-sidebar__control-icon [stroke*=fff]{
+            stroke: var(--chroma-highlight) !important;
+        }
+
+        svg.ddbc-svg.ct-sidebar__control-icon,
+        .ct-sidebar{
+            filter: none !important;
+        }
+
+        .ct-sidebar__control{
+            opacity: 1 !important;
+        }
+
+        body.body-rpgcharacter-sheet>div.MuiPopover-root:last-of-type .MuiPaper-root,
+        .MuiList-root,
+        div#options-menu button.MuiButtonBase-root,
+        .jss2 .MuiDivider-root,
+        .jss2 .MuiListSubheader-root,
+        .jss2 .MuiListItem-root:hover,
+        .ct-quick-nav__toggle, 
+        .ct-quick-nav__edge-toggle, 
+        .ct-character-sheet-MuiPaper-root, 
+        .ct-character-sheet-MuiListItem-button:hover,
+        .beyond20-roll-die-result,
+        .site .jss2 .MuiListItem-root:hover span, 
+        .site MuiButtonBase-root:hover span, 
+        .site .MuiList-root li ul li:hover div, 
+        .site li.MuiButtonBase-root:hover div, 
+        .site .MuiButtonBase-root:hover span,
+        .site .ct-theme-button--outline.ct-button:hover,
+        .site .ct-theme-button--outline.ct-button
+        {
+            background-color: var(--background-color) !important;
+            filter: none !important;
+            color: var(--chroma-highlight) !important;
+            box-shadow: none !important;
+        }
+
+    
+        #content .ct-character-sheet--dice-enabled .integrated-dice__container:hover,
+        .site .ct-theme-button--outline.ct-button:hover,
+        .site .ct-theme-button--outline.ct-button{
+            border: 1px solid var(--chroma-highlight) !important;
+        }
+
+    .ct-quick-nav__toggle{
+        -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 21 21'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:var(--chroma-highlight);%7D%3C/style%3E%3C/defs%3E%3Ctitle%3EAsset 2%3C/title%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Crect class='cls-1' width='5' height='5'/%3E%3Crect class='cls-1' y='8' width='5' height='5'/%3E%3Crect class='cls-1' y='16' width='5' height='5'/%3E%3Crect class='cls-1' x='8' width='5' height='5'/%3E%3Crect class='cls-1' x='8' y='8' width='5' height='5'/%3E%3Crect class='cls-1' x='8' y='16' width='5' height='5'/%3E%3Crect class='cls-1' x='16' width='5' height='5'/%3E%3Crect class='cls-1' x='16' y='8' width='5' height='5'/%3E%3Crect class='cls-1' x='16' y='16' width='5' height='5'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        background: var(--chroma-highlight) !important;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-size: 20px;
+        -webkit-mask-position: 12px;
+
+    }
+
+    .ct-class-spell-manager__portrait-img{
+        display: none !important;
+    }
+
+
+
+    .ct-slot-manager--size-small .ct-slot-manager__slot--used:before{
+        box-shadow: 0 0 20px 1px var(--chroma-highlight) inset !important;
+    }
+    #content .ct-slot-manager__slot{
+        border: 1px solid var(--chroma-highlight) !important;
+    }   
+
+
+    .site .button-action-decrease--small:before{
+        -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 16'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill-rule:evenodd; fill: white;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3EAsset 54%3C/title%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cpolygon class='cls-1' points='6 0 6 6 0 6 0 10 6 10 6 16 10 16 10 10 16 10 16 6 10 6 10 0 6 0'/%3E%3Crect class='cls-1' x='18' y='6' width='16' height='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        -webkit-mask-position: -13px 1px;
+        -webkit-mask-size: 30px 10px;
+        -webkit-mask-repeat: no-repeat;
+        background: var(--chroma-highlight);
+    }
+    
+    .site .button-action-increase--small:before{
+-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 16'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill-rule:evenodd; fill: white;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3EAsset 54%3C/title%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cpolygon class='cls-1' points='6 0 6 6 0 6 0 10 6 10 6 16 10 16 10 10 16 10 16 6 10 6 10 0 6 0'/%3E%3Crect class='cls-1' x='18' y='6' width='16' height='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        -webkit-mask-position: -2px 0;
+        -webkit-mask-size: 30px 12px;
+        -webkit-mask-repeat: no-repeat;
+        background: var(--chroma-highlight);
+    }
+     @supports (-moz-appearance:none) {
+
+        *{
+            scrollbar-width: 1px;
+            scrollbar-color: var(--chroma-highlight) transparent;
+        }
+    }
+    
 EOT;
 }  
 
@@ -1916,11 +2822,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         color: /*[[fontColor]]*/ !important;
     }
     
-    /*[[diceTray]]*/
-    
-    /*[[menuDisplay]]*/       
-        
-    /*[[chromaKey]]*/
+
 
 
     /*Fixed settings*/
@@ -2336,11 +3238,17 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         opacity: 0.8;   
     }
     
+     /*[[diceTray]]*/
+    
+    /*[[menuDisplay]]*/       
+        
+    /*[[chromaKey]]*/
+    
     /*D100 Fix*/   
     .dice-icon-die--d100{
         -webkit-mask-repeat: repeat-x; 
     }
-    
+   
 
     @media (min-width: 768px){
         .ct-character-sheet:before {       
