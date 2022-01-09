@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.161
+@version      1.2.162
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -3029,8 +3029,7 @@ div#site{
     #hide_rightpanel, 
     #zoom_buttons button, 
     .stream_button, 
-    .GameLogEntry_Message__1GoY3 button,
-    .sidebar__controls button:not(.sidebar__control){
+    .GameLogEntry_Message__1GoY3 button{
         background: /*[[backgroundColor]]*/ !important;
         color: /*[[fontColor]]*/;
         height: 22px;
@@ -3040,6 +3039,12 @@ div#site{
         padding: 2px 8px;
         transition: none;
         border: 1px solid lightgray;
+    }
+    
+    
+    .sidebar__controls button.hasTooltip{
+        background: /*[[backgroundColor]]*/ !important;
+        color: /*[[fontColor]]*/;
     }
     
     .scene button,
