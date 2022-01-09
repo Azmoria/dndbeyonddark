@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.102
+@version      1.3.103
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -555,7 +555,7 @@ chromaKeyDiceTray "ON with dice popup" <<<EOT
             background-color: var(--chroma-highlight);
         }
 
-        svg.ddbc-svg.ct-sidebar__control-icon polygon,
+         svg.ddbc-svg.ct-sidebar__control-icon polygon,
         svg.ddbc-svg.ct-sidebar__control-icon path,
         #content .ddbc-chat-bubble-svg path,
         #content .ddbc-chat-bubble-svg:hover path,
@@ -570,13 +570,59 @@ chromaKeyDiceTray "ON with dice popup" <<<EOT
         .MuiButtonBase-root:hover svg.MuiSvgIcon-root path,
         .MuiButtonBase-root:hover svg.MuiSvgIcon-root polygon:nth-of-type(2),
         svg.ddbc-svg.ct-sidebar__control-icon [fill*=fff],
-        [d^="M17.5 11.6666C17.5 12.3095 16.9761"],
-        .ddbc-svg.ddbc-proficiency-svg.ddbc-proficiency-icon.ddbc-proficiency-level-icon circle,
+        #site #content .ddbc-tab-list svg path,
+        [class*="ct-sidebar"] svg path,
+        .ddbc-svg.ddbc-chevron-svg path,
+        .ddbc-collapsible__header:hover .ddbc-svg.ddbc-chevron-svg path,
+        .ddbc-checkbox--is-enabled .ddbc-checkbox__input .ddbc-check-svg path, 
+        .ct-skills__col--proficiency circle, .ct-skills__col--proficiency path, 
+        .ddbc-saving-throws-summary__ability-proficiency circle, 
+        .ddbc-svg.ddbc-builder-svg.ddbc-svg--light path, 
+        .ddbc-svg.ddbc-long-rest-svg.ddbc-svg--themed path, 
+        .ddbc-svg.ddbc-short-rest-svg.ddbc-svg--themed path, 
+        .ddbc-svg.ddbc-share-svg.ddbc-svg--themed path, 
+        svg.ddbc-svg.ct-sidebar__control-icon path, 
+        svg.ddbc-svg.ct-sidebar__control-icon polygon, 
+        svg.ddbc-svg.ct-sidebar__control-icon rect, 
+        .ct-value-editor__property-value path, 
+        .ddbc-collapsible__header-status path, 
+        .ddbc-popout-menu__item path, 
+        .ddbc-popout-menu__item circle, 
+        .ct-inspiration__status.ct-inspiration__status--active g:first-child path, 
+        .ct-spells-filter__advanced path, 
+        .ddbc-checkbox--is-enabled .ddbc-checkbox__input .ddbc-check-svg path, 
+        .ddbc-attunement-slot.ddbc-attunement-slot--filled path, 
+        .ddbc-svg.ddbc-proficiency-svg.ddbc-proficiency-icon.ddbc-proficiency-level-icon circle, 
         .ddbc-svg.ddbc-proficiency-half-svg.ddbc-half-proficiency-icon.ddbc-proficiency-level-icon path, 
-        [d^="M6.90936,9.61388a4.92424,4.92424"], 
+        .ddbc-svg.ddbc-proficiency-half-svg.ddbc-twice-proficiency-icon__inner circle, 
+        .ddbc-svg.ddbc-proficiency-half-svg.ddbc-twice-proficiency-icon__inner path, 
+        .ddbc-svg.ddbc-dice-svg.ddbc-svg--themed path, 
+        .ddbc-svg.ddbc-link-out-svg.ddbc-svg--light path,
+        svg.ddbc-svg.ddbc-builder-svg.ddbc-svg--themed path, 
+        svg.ddbc-svg.ddbc-manage-level-svg.ddbc-svg--themed circle, 
+        svg.ddbc-svg.ddbc-backdrop-svg.ddbc-svg--themed path, 
+        svg.ddbc-svg.ddbc-theme-icon-svg.ddbc-svg--themed path, 
+        svg.ddbc-svg.ddbc-portrait-svg.ddbc-svg--themed path, 
+        svg.ddbc-svg.ddbc-preferences-svg.ddbc-svg--themed path, 
+        svg.ddbc-svg.ddbc-export-svg.ddbc-svg--themed path, 
+        .ddbc-collapsible__header:hover .ddbc-svg.ddbc-chevron-svg.ddbc-chevron-right-svg.ddbc-svg--builder path, 
+        .ddbc-collapsible__header:hover .ddbc-svg.ddbc-chevron-svg path, 
+        .ct-extras-filter__advanced svg path, 
+        .ct-inventory-filter__advanced svg path, 
+        .ct-character-header-desktop__group--game-log path, 
+        .ct-section-placeholder__icon path, 
+        .ct-section-placeholder__icon polygon, 
+        .ct-section-placeholder__icon circle, 
+        .ct-quick-nav__button path, 
+        .ct-quick-nav__button polygon, 
+        .ct-quick-nav__button circle, 
+        .ddbc-collapsible__header:hover div .ddbc-chevron-svg svg path, 
+        .ddbc-svg.ct-sidebar__pane-control-icon path, 
+        .ct-content-group__header-extra a.ct-equipment__builder-link svg path, 
+        [d="M17.7 2c.3-.2.5-.4.8-.7.3-.3.3-.8 0-1.1-.3-.3-.8-.3-1.1 0-1.8 2-3.5 1.6-5.3 1.1-1.3-.3-2.6-.6-3.7.2C6.7 2.6 6.7 5 6.9 6.6L3.3 4.3l1.6-1.1L0 2.7l2.7 4.9.2-2.4 3.4 2.2c-1.5.4-3.7 1.4-4.2 3.4-.3 1.3.5 2.4 1.3 3.5 1.1 1.5 2.2 2.9 1 5.3-.2.4 0 .8.4 1 .1 0 .2.1.3.1.3 0 .6-.2.7-.4.2-.4.3-.7.4-1.1l5.5-8.2 4.9 3.2.5-.8-4.9-3.1L17.7 2zm-8.5.7c.5-.4 1.3-.2 2.4.1 1.4.4 3.1.8 4.9-.1l-4.8 7.1-3.1-2.1v-.1c-.3-1-.7-4 .6-4.9zM6.4 17.9c.1-2-1-3.4-1.8-4.6-.7-1-1.2-1.6-1-2.2.4-1.6 3.1-2.3 4.2-2.5H8.1l3.2 2.1-4.9 7.2z"], [d="M14.7 15.5l-.8-1.5c-.3-.9-.3-1.6-.3-1.6h-1c0 .1.1 3.2 2.5 4.8l.5-.8-.9-.9zM14.9 9.8l.1 1s1.7-.2 3.5.8l.5-.9c-2.1-1.1-4.1-.9-4.1-.9z"], .ddbc-pencil-svg path, .ddbc-chat-bubble-svg path, .ddbc-paint-brush-svg path, .ct-sidebar .ddbc-svg--themed path, .ddbc-attack-type-icon--2-1 path[d^="M8.17 16.03L.63 17l5.12-3.33-5.54-3.64h5.71L0"], .ddbc-attack-type-icon--2-1 path[d^="M13.15 16.53c-1.62 0-3.15-.61-3.57-1.42A6"], [d^="M8.5,0A8.5,8.5,0,1,0,17,8.5,8.49382,"],[d^="M6.90936,9.61388a4.92424,4.92424"],
         [d^="M17.5 11.6666C17.5 12.3095 16.9761"],
-        .ddbc-svg.ddbc-proficiency-half-svg.ddbc-twice-proficiency-icon__inner circle,
-        .ddbc-svg.ddbc-proficiency-half-svg.ddbc-twice-proficiency-icon__inner path{
+        .ct-quick-nav__footer-sidebar svg path,
+        .ct-quick-nav__footer-sidebar svg polygon{
             fill: var(--chroma-highlight) !important;
           
         }
@@ -960,7 +1006,7 @@ chromaKeyDiceTrayNoPopUp "ON without dice popup" <<<EOT
             background-color: var(--chroma-highlight);
         }
 
-        svg.ddbc-svg.ct-sidebar__control-icon polygon,
+         svg.ddbc-svg.ct-sidebar__control-icon polygon,
         svg.ddbc-svg.ct-sidebar__control-icon path,
         #content .ddbc-chat-bubble-svg path,
         #content .ddbc-chat-bubble-svg:hover path,
@@ -975,19 +1021,59 @@ chromaKeyDiceTrayNoPopUp "ON without dice popup" <<<EOT
         .MuiButtonBase-root:hover svg.MuiSvgIcon-root path,
         .MuiButtonBase-root:hover svg.MuiSvgIcon-root polygon:nth-of-type(2),
         svg.ddbc-svg.ct-sidebar__control-icon [fill*=fff],
-        #content .ddbc-attack-table__content svg path,
-        #content svg path[d^="M8.5,0A8.5,8.5,0,1,0,17,8.5,8.49382,"],
+        #site #content .ddbc-tab-list svg path,
+        [class*="ct-sidebar"] svg path,
+        .ddbc-svg.ddbc-chevron-svg path,
+        .ddbc-collapsible__header:hover .ddbc-svg.ddbc-chevron-svg path,
+        .ddbc-checkbox--is-enabled .ddbc-checkbox__input .ddbc-check-svg path, 
+        .ct-skills__col--proficiency circle, .ct-skills__col--proficiency path, 
+        .ddbc-saving-throws-summary__ability-proficiency circle, 
+        .ddbc-svg.ddbc-builder-svg.ddbc-svg--light path, 
+        .ddbc-svg.ddbc-long-rest-svg.ddbc-svg--themed path, 
+        .ddbc-svg.ddbc-short-rest-svg.ddbc-svg--themed path, 
+        .ddbc-svg.ddbc-share-svg.ddbc-svg--themed path, 
+        svg.ddbc-svg.ct-sidebar__control-icon path, 
+        svg.ddbc-svg.ct-sidebar__control-icon polygon, 
+        svg.ddbc-svg.ct-sidebar__control-icon rect, 
+        .ct-value-editor__property-value path, 
+        .ddbc-collapsible__header-status path, 
+        .ddbc-popout-menu__item path, 
+        .ddbc-popout-menu__item circle, 
+        .ct-inspiration__status.ct-inspiration__status--active g:first-child path, 
+        .ct-spells-filter__advanced path, 
+        .ddbc-checkbox--is-enabled .ddbc-checkbox__input .ddbc-check-svg path, 
+        .ddbc-attunement-slot.ddbc-attunement-slot--filled path, 
+        .ddbc-svg.ddbc-proficiency-svg.ddbc-proficiency-icon.ddbc-proficiency-level-icon circle, 
+        .ddbc-svg.ddbc-proficiency-half-svg.ddbc-half-proficiency-icon.ddbc-proficiency-level-icon path, 
+        .ddbc-svg.ddbc-proficiency-half-svg.ddbc-twice-proficiency-icon__inner circle, 
+        .ddbc-svg.ddbc-proficiency-half-svg.ddbc-twice-proficiency-icon__inner path, 
+        .ddbc-svg.ddbc-dice-svg.ddbc-svg--themed path, 
+        .ddbc-svg.ddbc-link-out-svg.ddbc-svg--light path,
+        svg.ddbc-svg.ddbc-builder-svg.ddbc-svg--themed path, 
+        svg.ddbc-svg.ddbc-manage-level-svg.ddbc-svg--themed circle, 
+        svg.ddbc-svg.ddbc-backdrop-svg.ddbc-svg--themed path, 
+        svg.ddbc-svg.ddbc-theme-icon-svg.ddbc-svg--themed path, 
+        svg.ddbc-svg.ddbc-portrait-svg.ddbc-svg--themed path, 
+        svg.ddbc-svg.ddbc-preferences-svg.ddbc-svg--themed path, 
+        svg.ddbc-svg.ddbc-export-svg.ddbc-svg--themed path, 
+        .ddbc-collapsible__header:hover .ddbc-svg.ddbc-chevron-svg.ddbc-chevron-right-svg.ddbc-svg--builder path, 
+        .ddbc-collapsible__header:hover .ddbc-svg.ddbc-chevron-svg path, 
+        .ct-extras-filter__advanced svg path, 
+        .ct-inventory-filter__advanced svg path, 
+        .ct-character-header-desktop__group--game-log path, 
+        .ct-section-placeholder__icon path, 
+        .ct-section-placeholder__icon polygon, 
+        .ct-section-placeholder__icon circle, 
+        .ct-quick-nav__button path, 
+        .ct-quick-nav__button polygon, 
+        .ct-quick-nav__button circle, 
+        .ddbc-collapsible__header:hover div .ddbc-chevron-svg svg path, 
+        .ddbc-svg.ct-sidebar__pane-control-icon path, 
+        .ct-content-group__header-extra a.ct-equipment__builder-link svg path, 
+        [d="M17.7 2c.3-.2.5-.4.8-.7.3-.3.3-.8 0-1.1-.3-.3-.8-.3-1.1 0-1.8 2-3.5 1.6-5.3 1.1-1.3-.3-2.6-.6-3.7.2C6.7 2.6 6.7 5 6.9 6.6L3.3 4.3l1.6-1.1L0 2.7l2.7 4.9.2-2.4 3.4 2.2c-1.5.4-3.7 1.4-4.2 3.4-.3 1.3.5 2.4 1.3 3.5 1.1 1.5 2.2 2.9 1 5.3-.2.4 0 .8.4 1 .1 0 .2.1.3.1.3 0 .6-.2.7-.4.2-.4.3-.7.4-1.1l5.5-8.2 4.9 3.2.5-.8-4.9-3.1L17.7 2zm-8.5.7c.5-.4 1.3-.2 2.4.1 1.4.4 3.1.8 4.9-.1l-4.8 7.1-3.1-2.1v-.1c-.3-1-.7-4 .6-4.9zM6.4 17.9c.1-2-1-3.4-1.8-4.6-.7-1-1.2-1.6-1-2.2.4-1.6 3.1-2.3 4.2-2.5H8.1l3.2 2.1-4.9 7.2z"], [d="M14.7 15.5l-.8-1.5c-.3-.9-.3-1.6-.3-1.6h-1c0 .1.1 3.2 2.5 4.8l.5-.8-.9-.9zM14.9 9.8l.1 1s1.7-.2 3.5.8l.5-.9c-2.1-1.1-4.1-.9-4.1-.9z"], .ddbc-pencil-svg path, .ddbc-chat-bubble-svg path, .ddbc-paint-brush-svg path, .ct-sidebar .ddbc-svg--themed path, .ddbc-attack-type-icon--2-1 path[d^="M8.17 16.03L.63 17l5.12-3.33-5.54-3.64h5.71L0"], .ddbc-attack-type-icon--2-1 path[d^="M13.15 16.53c-1.62 0-3.15-.61-3.57-1.42A6"], [d^="M8.5,0A8.5,8.5,0,1,0,17,8.5,8.49382,"],[d^="M6.90936,9.61388a4.92424,4.92424"],
         [d^="M17.5 11.6666C17.5 12.3095 16.9761"],
         .ct-quick-nav__footer-sidebar svg path,
-        .ct-quick-nav__footer-sidebar svg polygon,
-        .ddbc-svg.ddbc-proficiency-svg.ddbc-proficiency-icon.ddbc-proficiency-level-icon circle,
-        [d^="M8.5,0A8.5,8.5,0,1,0,17,8.5,8.49382,"], 
-        [d^="M6.90936,9.61388a4.92424,4.92424"], 
-        [d^="M17.5 11.6666C17.5 12.3095 16.9761"],
-        .ddbc-svg.ddbc-proficiency-half-svg.ddbc-twice-proficiency-icon__inner circle,
-        .ddbc-svg.ddbc-proficiency-half-svg.ddbc-twice-proficiency-icon__inner path,
-        .ddbc-svg.ddbc-proficiency-half-svg.ddbc-half-proficiency-icon.ddbc-proficiency-level-icon path
-        {
+        .ct-quick-nav__footer-sidebar svg polygon{
             fill: var(--chroma-highlight) !important;
           
         }
@@ -1636,7 +1722,9 @@ chromaKeyDiceTraySide "ON sidebar chroma with popup" <<<EOT
         [d="M17.7 2c.3-.2.5-.4.8-.7.3-.3.3-.8 0-1.1-.3-.3-.8-.3-1.1 0-1.8 2-3.5 1.6-5.3 1.1-1.3-.3-2.6-.6-3.7.2C6.7 2.6 6.7 5 6.9 6.6L3.3 4.3l1.6-1.1L0 2.7l2.7 4.9.2-2.4 3.4 2.2c-1.5.4-3.7 1.4-4.2 3.4-.3 1.3.5 2.4 1.3 3.5 1.1 1.5 2.2 2.9 1 5.3-.2.4 0 .8.4 1 .1 0 .2.1.3.1.3 0 .6-.2.7-.4.2-.4.3-.7.4-1.1l5.5-8.2 4.9 3.2.5-.8-4.9-3.1L17.7 2zm-8.5.7c.5-.4 1.3-.2 2.4.1 1.4.4 3.1.8 4.9-.1l-4.8 7.1-3.1-2.1v-.1c-.3-1-.7-4 .6-4.9zM6.4 17.9c.1-2-1-3.4-1.8-4.6-.7-1-1.2-1.6-1-2.2.4-1.6 3.1-2.3 4.2-2.5H8.1l3.2 2.1-4.9 7.2z"], [d="M14.7 15.5l-.8-1.5c-.3-.9-.3-1.6-.3-1.6h-1c0 .1.1 3.2 2.5 4.8l.5-.8-.9-.9zM14.9 9.8l.1 1s1.7-.2 3.5.8l.5-.9c-2.1-1.1-4.1-.9-4.1-.9z"], .ddbc-pencil-svg path, .ddbc-chat-bubble-svg path, .ddbc-paint-brush-svg path, .ct-sidebar .ddbc-svg--themed path, .ddbc-attack-type-icon--2-1 path[d^="M8.17 16.03L.63 17l5.12-3.33-5.54-3.64h5.71L0"], .ddbc-attack-type-icon--2-1 path[d^="M13.15 16.53c-1.62 0-3.15-.61-3.57-1.42A6"], [d^="M8.5,0A8.5,8.5,0,1,0,17,8.5,8.49382,"],[d^="M6.90936,9.61388a4.92424,4.92424"],
         [d^="M17.5 11.6666C17.5 12.3095 16.9761"],
         .ct-quick-nav__footer-sidebar svg path,
-        .ct-quick-nav__footer-sidebar svg polygon{
+        .ct-quick-nav__footer-sidebar svg polygon,
+        .ct-sidebar__pane-content .ddbc-damage-type-icon__img--piercing>path:first-of-type,
+        .ct-sidebar__pane-content .ddbc-damage-type-icon__img--piercing>path:nth-of-type(2){
             fill: var(--chroma-highlight) !important;
           
         }
