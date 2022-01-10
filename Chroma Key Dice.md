@@ -1,6 +1,6 @@
 If you are looking to capture the dice of DNDBeyond for your stream there are a few ways you can do so which are as follows.
 <details>
-  **<summary>The first is for manual dice rolling:</summary>**
+  <summary>The first is for manual dice rolling:</summary>
 
 With the <a href="https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20Character%20Sheet.user.css">Character Sheet Theme</a> - in conjunction with <a href="https://github.com/Azmoria/dndbeyonddark/blob/master/Character%20Specific%20Themes.md">How to create character specific themes</a>.
 
@@ -13,10 +13,8 @@ Example:
 
 ![image](https://user-images.githubusercontent.com/65363489/146976772-df2431e8-3e3e-4da0-8fbe-31adffec28f3.png)
 </details>
-
-<hr>
 <details>
-  <summary> **The second is for rolling with a specific character sheet:**</summary>
+  <summary> The second is for rolling with a specific character sheet:</summary>
 
 Make a copy of your character and follow <a href="https://github.com/Azmoria/dndbeyonddark/blob/master/Character%20Specific%20Themes.md">How to create character specific themes</a>. 
 
@@ -30,7 +28,7 @@ You can see an example of this in the video at the bottom of this page.
 <hr>
 
 <details>
-  <summary> **Lastly is for the combat tracker:**</summary>
+  <summary> Lastly is for the combat tracker:</summary>
 
 <a href="https://github.com/Azmoria/dndbeyonddark/raw/master/combatTrackerChroma.user.css">Combat Tracker Chroma CSS Theme</a>
 
@@ -45,7 +43,7 @@ Example:
 ![image](https://user-images.githubusercontent.com/65363489/146974845-a10753bc-bf13-4acf-9012-0c03cc4cdcd6.png)
 
 </details>
-<hr>
+
 
 For most all of the above options I suggest setting the dice to be over the results/dice toolbar:
 
