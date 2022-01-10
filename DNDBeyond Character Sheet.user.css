@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.110
+@version      1.3.111
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -481,7 +481,7 @@ EOT;
 Default "OFF" <<<EOT
 EOT;
 chromaKeyDiceTray "ON with dice popup" <<<EOT
-        #content *:not(.dice-icon-die):not(.dice-rolling-panel__container):not(circle):not([d^="M8.5,0A8.5,8.5,0,1,0,17,8.5,8.49382,"]):not([d^="M6.90936,9.61388a4.92424,4.92424"]):not([d^="M17.5 11.6666C17.5 12.3095 16.9761"]):not(.dice-die-button__count):not(.dice-toolbar):not([d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"]):not(.ct-spells-spell__scaled-level),
+        #content *:not(.dice-icon-die):not(.dice-rolling-panel__container):not(circle):not([d^="M8.5,0A8.5,8.5,0,1,0,17,8.5,8.49382,"]):not([d^="M6.90936,9.61388a4.92424,4.92424"]):not([d^="M17.5 11.6666C17.5 12.3095 16.9761"]):not(.dice-die-button__count):not(.dice-toolbar):not([d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"]):not(.ct-spells-spell__scaled-level):not(.dice-die-button),
         #content *:not(.dice-icon-die):hover,
         #content *::placeholder,
         .ct-feature-snippet__meta-item::before,
@@ -505,7 +505,8 @@ chromaKeyDiceTray "ON with dice popup" <<<EOT
         .ct-health-summary__adjuster-field:before,
         .ct-health-summary__adjuster-field:before,
         #content .dice-die-button__count,
-        #content .dice-toolbar
+        #content .dice-toolbar,
+        #content .dice-die-button
         {
             background: transparent !important;
             fill: var(--background-color) !important;
@@ -523,7 +524,8 @@ chromaKeyDiceTray "ON with dice popup" <<<EOT
         .jss2 .MuiListItem-root:hover,
         .MuiPaper-root .jss2 .MuiListSubheader-root,
         #content .dice-toolbar,
-        #content .dice-toolbar:hover
+        #content .dice-toolbar:hover,
+        #content .dice-die-button
         {
             background: var(--background-color) !important;
         }
@@ -775,7 +777,7 @@ EOT;
 
 chromaKeyDiceTrayNoPopUp "ON without dice popup" <<<EOT
 
-        #content *:not(.dice-icon-die):not(.dice-rolling-panel__container):not(circle):not([d^="M8.5,0A8.5,8.5,0,1,0,17,8.5,8.49382,"]):not([d^="M6.90936,9.61388a4.92424,4.92424"]):not([d^="M17.5 11.6666C17.5 12.3095 16.9761"]):not(.dice-die-button__count):not(.dice-toolbar):not([d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"]):not(.ct-spells-spell__scaled-level),
+        #content *:not(.dice-icon-die):not(.dice-rolling-panel__container):not(circle):not([d^="M8.5,0A8.5,8.5,0,1,0,17,8.5,8.49382,"]):not([d^="M6.90936,9.61388a4.92424,4.92424"]):not([d^="M17.5 11.6666C17.5 12.3095 16.9761"]):not(.dice-die-button__count):not(.dice-toolbar):not([d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"]):not(.ct-spells-spell__scaled-level):not(.dice-die-button),
         #content *:not(.dice-icon-die):hover,
         #content *::placeholder,
         .ct-feature-snippet__meta-item::before,
@@ -817,7 +819,8 @@ chromaKeyDiceTrayNoPopUp "ON without dice popup" <<<EOT
         .jss2 .MuiListItem-root:hover,
         .MuiPaper-root .jss2 .MuiListSubheader-root,
         #content .dice-toolbar,
-        #content .dice-toolbar:hover
+        #content .dice-toolbar:hover,
+        #content .dice-die-button
         {
             background: var(--background-color) !important;
         }
@@ -1068,7 +1071,7 @@ chromaKeyDiceTrayNoPopUp "ON without dice popup" <<<EOT
 EOT;
 
 chromaKeyDiceTraySide "ON sidebar chroma with popup" <<<EOT
-  #content *:not(.dice-icon-die):not(.dice-rolling-panel__container):not(circle):not([d^="M8.5,0A8.5,8.5,0,1,0,17,8.5,8.49382,"]):not([d^="M6.90936,9.61388a4.92424,4.92424"]):not([d^="M17.5 11.6666C17.5 12.3095 16.9761"]):not(.dice-die-button__count):not(.dice-toolbar):not([d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"]):not(.ct-spells-spell__scaled-level),
+  #content *:not(.dice-icon-die):not(.dice-rolling-panel__container):not(circle):not([d^="M8.5,0A8.5,8.5,0,1,0,17,8.5,8.49382,"]):not([d^="M6.90936,9.61388a4.92424,4.92424"]):not([d^="M17.5 11.6666C17.5 12.3095 16.9761"]):not(.dice-die-button__count):not(.dice-toolbar):not([d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"]):not(.ct-spells-spell__scaled-level):not(.dice-die-button),
         #content *:not(.dice-icon-die):hover,
         #content *::placeholder,
         .ct-feature-snippet__meta-item::before,
@@ -1130,7 +1133,8 @@ chromaKeyDiceTraySide "ON sidebar chroma with popup" <<<EOT
         .site .ct-game-log-pane>div>div:first-of-type,
         .site .glc-game-log > div > ol > li > div > div:nth-of-type(2),
         .site .glc-game-log button,
-        #content .dice-toolbar:hover
+        #content .dice-toolbar:hover,
+        #content .dice-die-button
         {
             background: var(--background-color) !important;
         }
@@ -1374,7 +1378,7 @@ EOT;
 
 chromaKeyDiceTraySideNo "ON sidebar chroma no popup" <<<EOT
 
-         #content *:not(.dice-icon-die):not(.dice-rolling-panel__container):not(circle):not([d^="M8.5,0A8.5,8.5,0,1,0,17,8.5,8.49382,"]):not([d^="M6.90936,9.61388a4.92424,4.92424"]):not([d^="M17.5 11.6666C17.5 12.3095 16.9761"]):not(.dice-die-button__count):not(.dice-toolbar):not([d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"]):not(.ct-spells-spell__scaled-level),
+         #content *:not(.dice-icon-die):not(.dice-rolling-panel__container):not(circle):not([d^="M8.5,0A8.5,8.5,0,1,0,17,8.5,8.49382,"]):not([d^="M6.90936,9.61388a4.92424,4.92424"]):not([d^="M17.5 11.6666C17.5 12.3095 16.9761"]):not(.dice-die-button__count):not(.dice-toolbar):not([d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"]):not(.ct-spells-spell__scaled-level):not(.dice-die-button),
         #content *:not(.dice-icon-die):hover,
         #content *::placeholder,
         .ct-feature-snippet__meta-item::before,
@@ -1442,7 +1446,8 @@ chromaKeyDiceTraySideNo "ON sidebar chroma no popup" <<<EOT
         .site .ct-game-log-pane>div>div:first-of-type,
         .site .glc-game-log > div > ol > li > div > div:nth-of-type(2),
         .site .glc-game-log button,
-        #content .dice-toolbar:hover
+        #content .dice-toolbar:hover,
+        #content .dice-die-button
         {
             background: var(--background-color) !important;
         }
@@ -1689,7 +1694,7 @@ chromaKeyDiceTraySideNo "ON sidebar chroma no popup" <<<EOT
 EOT;
 chromaKeyDiceTraySidePop "ON sidebar and popup chroma" <<<EOT
 
-        #content *:not(.dice-icon-die):not(.dice-rolling-panel__container):not(circle):not([d^="M8.5,0A8.5,8.5,0,1,0,17,8.5,8.49382,"]):not([d^="M6.90936,9.61388a4.92424,4.92424"]):not([d^="M17.5 11.6666C17.5 12.3095 16.9761"]):not(.dice-die-button__count):not(.dice-toolbar):not([d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"]):not(.ct-spells-spell__scaled-level),
+        #content *:not(.dice-icon-die):not(.dice-rolling-panel__container):not(circle):not([d^="M8.5,0A8.5,8.5,0,1,0,17,8.5,8.49382,"]):not([d^="M6.90936,9.61388a4.92424,4.92424"]):not([d^="M17.5 11.6666C17.5 12.3095 16.9761"]):not(.dice-die-button__count):not(.dice-toolbar):not([d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"]):not(.ct-spells-spell__scaled-level):not(.dice-die-button),
         #content *:not(.dice-icon-die):hover,
         #content *::placeholder,
         .ct-feature-snippet__meta-item::before,
@@ -1757,7 +1762,8 @@ chromaKeyDiceTraySidePop "ON sidebar and popup chroma" <<<EOT
         .site .ct-game-log-pane>div>div:first-of-type,
         .site .glc-game-log > div > ol > li > div > div:nth-of-type(2),
         .site .glc-game-log button,
-        #content .dice-toolbar:hover
+        #content .dice-toolbar:hover,
+        #content .dice-die-button
         {
             background: var(--background-color) !important;
         }
@@ -3919,7 +3925,8 @@ regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond
     }
 
     
-    canvas.dice-rolling-panel__container{
+    canvas.dice-rolling-panel__container,
+    .dice-rolling-panel{
         z-index: /*[[zindex]]*/ !important;
     }
 
@@ -3929,7 +3936,7 @@ regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond
     }
 
     .dice-toolbar{
-        z-index: 60001 !important;   
+         z-index: 60001 !important;   
     }
 
     .ct-character-sheet--dice-enabled .integrated-dice__container:hover ~ .ddbc-saving-throw-selection-box-svg path,
