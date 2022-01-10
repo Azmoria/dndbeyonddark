@@ -47,7 +47,8 @@ Example:
 </details>
 <hr>
 
-For most all of the above options I suggest setting the dice to be over the results/dice toolbar. 
+For most all of the above options I suggest setting the dice to be over the results/dice toolbar:
+
 ![image](https://user-images.githubusercontent.com/65363489/148734959-6ef90a19-bf64-4771-9e73-393f5a02d4f9.png)
 
 
