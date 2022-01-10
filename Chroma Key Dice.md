@@ -1,6 +1,6 @@
 If you are looking to capture the dice of DNDBeyond for your stream there are a few ways you can do so which are as follows.
 <details>
-  <summary> **The first is for manual dice rolling:**</summary>
+  **<summary>The first is for manual dice rolling:</summary>**
 
 With the <a href="https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20Character%20Sheet.user.css">Character Sheet Theme</a> - in conjunction with <a href="https://github.com/Azmoria/dndbeyonddark/blob/master/Character%20Specific%20Themes.md">How to create character specific themes</a>.
 
