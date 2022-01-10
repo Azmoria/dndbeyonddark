@@ -52,10 +52,15 @@ Example:
 ![image](https://user-images.githubusercontent.com/65363489/146974845-a10753bc-bf13-4acf-9012-0c03cc4cdcd6.png)
   
 </details>
-<br><br>
+<hr>
 For most all of the above options I suggest setting the dice to be over the results/dice toolbar:
-<br>
-![image](https://user-images.githubusercontent.com/65363489/148734959-6ef90a19-bf64-4771-9e73-393f5a02d4f9.png)
 <br><br>
+
+![image](https://user-images.githubusercontent.com/65363489/148734959-6ef90a19-bf64-4771-9e73-393f5a02d4f9.png)
+
+<hr>
+Click image below to watch video on youtube
+<br><br>
+
 [![Chroma Key mode to capture Dice for DNDBeyond](https://user-images.githubusercontent.com/65363489/146850358-ae12abc7-469b-4df4-b95c-51574c995ea6.png)
 ](https://www.youtube.com/watch?v=CJMwF1VRt34 "DNDBeyond Dark Mode and Dice Coloration")
