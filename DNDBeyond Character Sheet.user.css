@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.111
+@version      1.3.112
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -801,7 +801,8 @@ chromaKeyDiceTrayNoPopUp "ON without dice popup" <<<EOT
         .ct-health-summary__adjuster-field:before,
         .ct-health-summary__adjuster-field:before,
         #content .dice-die-button__count,
-        #content .dice-toolbar
+        #content .dice-toolbar,
+        #content .dice-die-button
         {
             background: transparent !important;
             fill: var(--background-color) !important;
@@ -1110,7 +1111,8 @@ chromaKeyDiceTraySide "ON sidebar chroma with popup" <<<EOT
         html body.body-rpgcharacter-sheet>div.ct-sidebar__portal .glc-game-log span:first-of-type,
         .site .MuiList-root div,
         .site .MuiList-root,
-        .site .MuiPaper-root
+        .site .MuiPaper-root,
+        #content .dice-die-button
         {
             background: transparent !important;
             fill: var(--background-color) !important;
@@ -1421,7 +1423,8 @@ chromaKeyDiceTraySideNo "ON sidebar chroma no popup" <<<EOT
         html body.body-rpgcharacter-sheet>div.ct-sidebar__portal .glc-game-log span:first-of-type,
         .site .MuiList-root div,
         .site .MuiList-root,
-        .site .MuiPaper-root
+        .site .MuiPaper-root,
+        #content .dice-die-button
         {
             background: transparent !important;
             fill: var(--background-color) !important;
@@ -1737,7 +1740,8 @@ chromaKeyDiceTraySidePop "ON sidebar and popup chroma" <<<EOT
         html body.body-rpgcharacter-sheet>div.ct-sidebar__portal .glc-game-log span:first-of-type,
         .site .MuiList-root div,
         .site .MuiList-root,
-        .site .MuiPaper-root
+        .site .MuiPaper-root,
+        #content .dice-die-button
         {
             background: transparent !important;
             fill: var(--background-color) !important;
