@@ -25,8 +25,6 @@ Settings:
 
 You can see an example of this in the video at the bottom of this page.
 </details>
-<hr>
-
 <details>
   <summary> Lastly is for the combat tracker:</summary>
 
