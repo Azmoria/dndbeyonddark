@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.109
+@version      1.3.110
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -522,7 +522,8 @@ chromaKeyDiceTray "ON with dice popup" <<<EOT
         .jss2 .MuiListItem-root,
         .jss2 .MuiListItem-root:hover,
         .MuiPaper-root .jss2 .MuiListSubheader-root,
-        #content .dice-toolbar
+        #content .dice-toolbar,
+        #content .dice-toolbar:hover
         {
             background: var(--background-color) !important;
         }
@@ -815,7 +816,8 @@ chromaKeyDiceTrayNoPopUp "ON without dice popup" <<<EOT
         .jss2 .MuiListItem-root,
         .jss2 .MuiListItem-root:hover,
         .MuiPaper-root .jss2 .MuiListSubheader-root,
-        #content .dice-toolbar
+        #content .dice-toolbar,
+        #content .dice-toolbar:hover
         {
             background: var(--background-color) !important;
         }
@@ -1127,7 +1129,8 @@ chromaKeyDiceTraySide "ON sidebar chroma with popup" <<<EOT
         #content .dice-toolbar,
         .site .ct-game-log-pane>div>div:first-of-type,
         .site .glc-game-log > div > ol > li > div > div:nth-of-type(2),
-        .site .glc-game-log button
+        .site .glc-game-log button,
+        #content .dice-toolbar:hover
         {
             background: var(--background-color) !important;
         }
@@ -1438,7 +1441,8 @@ chromaKeyDiceTraySideNo "ON sidebar chroma no popup" <<<EOT
         #noty_layout__bottomRight .dice_notification_controls .dice_notification_control,
         .site .ct-game-log-pane>div>div:first-of-type,
         .site .glc-game-log > div > ol > li > div > div:nth-of-type(2),
-        .site .glc-game-log button
+        .site .glc-game-log button,
+        #content .dice-toolbar:hover
         {
             background: var(--background-color) !important;
         }
@@ -1752,7 +1756,8 @@ chromaKeyDiceTraySidePop "ON sidebar and popup chroma" <<<EOT
         #noty_layout__bottomRight .dice_notification_controls .dice_notification_control,
         .site .ct-game-log-pane>div>div:first-of-type,
         .site .glc-game-log > div > ol > li > div > div:nth-of-type(2),
-        .site .glc-game-log button
+        .site .glc-game-log button,
+        #content .dice-toolbar:hover
         {
             background: var(--background-color) !important;
         }
@@ -3913,10 +3918,19 @@ regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond
         background-image: none
     }
 
-    .dice-rolling-panel {
+    
+    canvas.dice-rolling-panel__container{
         z-index: /*[[zindex]]*/ !important;
     }
 
+    canvas.dice-rolling-panel__container,
+    .dice-toolbar{
+        position: fixed;
+    }
+
+    .dice-toolbar{
+        z-index: 60001 !important;   
+    }
 
     .ct-character-sheet--dice-enabled .integrated-dice__container:hover ~ .ddbc-saving-throw-selection-box-svg path,
     .ct-character-sheet--dice-enabled .integrated-dice__container:hover ~ .ddbc-saving-throw-selection-small-box-svg path,
