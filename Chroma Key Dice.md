@@ -16,8 +16,10 @@ Example:
 <details>
   <summary> The second is for rolling with a specific character sheet:</summary>
 
-Make a copy of your character and follow <a href="https://github.com/Azmoria/dndbeyonddark/blob/master/Character%20Specific%20Themes.md">How to create character specific themes</a>. 
 
+Optional: Make a copy of your character and follow <a href="https://github.com/Azmoria/dndbeyonddark/blob/master/Character%20Specific%20Themes.md">How to create character specific themes</a>. 
+
+  
 Settings:
 
 ![image](https://user-images.githubusercontent.com/65363489/146975840-822a9613-c387-407b-945e-8e1a4dc48deb.png)
