@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.163
+@version      1.2.164
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -524,7 +524,7 @@ EOT;
 
 
 ==/UserStyle==*/
-/*Thanks to Hyrkali for the example code and push to work on the forums themeing*/
+/*Thanks to Hyrkali for the push to update the forums themeing to more closely resemble the original theme, providing an example and indentifying issues.*/
 /* Alternative Color for font to match DND Beyond Green #47D18C */
 @-moz-document url-prefix("https://www.dndbeyond.com/sources"),
 url-prefix("https://www.dndbeyond.com/forums"),
@@ -1377,9 +1377,9 @@ div#site{
     .listing-forum-search .statistics .statistics-body a:hover,
     .listing-forum-search .statistics .statistics-body a:visited:hover, 
     .listing-forum-search .statistics .statistics-body a:active:hover,
-    .forum-post-body a:not([style*="color"]),
-    .forum-post-body a:hover:not([style*="color"]),
-    .forum-post-body a:visited:not([style*="color"]),
+    .forum-post-body a:not([style*="color"]):not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip)
+    .forum-post-body a:hover:not([style*="color"]):not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip),
+    .forum-post-body a:visited:not([style*="color"]):not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip),
     body.body-page .container a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip):not(.b-pagination-item):not([style*="color"]),
     body.body-search .container a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip):not(.b-pagination-item):not([style*="color"]),
     body.body-rpgigear .container a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip):not(.b-pagination-item):not([style*="color"]):not(.homebrew-creation-actions-item-delete),
@@ -3062,51 +3062,54 @@ div#site{
         border-radius: 0px;
     }
     
-    @media screen and (max-width: 800px){
-        
-        .top-next-page{
-            position: relative;   
-        }
-        .top-next-page:after{
-        mask-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 1035 1612" style="enable-background:new 0 0 1035 1612;" xml:space="preserve" wtx-context="0A2667C0-9357-44B7-8EC9-C1554ABAC9E7"%3E%3Cstyle type="text/css"%3E .st0%7Bfill:%23000;%7D%0A%3C/style%3E%3Ctitle%3Echevron-left-white%3C/title%3E%3Cpath class="st0" d="M275,19l741,742c12.7,12.7,19,27.7,19,45s-6.3,32.3-19,45l-741,742c-12.7,12.7-27.8,19-45.5,19 s-32.8-6.3-45.5-19L19,1427c-12.7-12.7-19-27.7-19-45s6.3-32.3,19-45l531-531L19,275C6.3,262.3,0,247.3,0,230c0-17.3,6.3-32.3,19-45 L184,19c12.7-12.7,27.8-19,45.5-19S262.3,6.3,275,19z"/%3E%3C/svg%3E');
-        -webkit-mask-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 1035 1612" style="enable-background:new 0 0 1035 1612;" xml:space="preserve" wtx-context="0A2667C0-9357-44B7-8EC9-C1554ABAC9E7"%3E%3Cstyle type="text/css"%3E .st0%7Bfill:%23000;%7D%0A%3C/style%3E%3Ctitle%3Echevron-left-white%3C/title%3E%3Cpath class="st0" d="M275,19l741,742c12.7,12.7,19,27.7,19,45s-6.3,32.3-19,45l-741,742c-12.7,12.7-27.8,19-45.5,19 s-32.8-6.3-45.5-19L19,1427c-12.7-12.7-19-27.7-19-45s6.3-32.3,19-45l531-531L19,275C6.3,262.3,0,247.3,0,230c0-17.3,6.3-32.3,19-45 L184,19c12.7-12.7,27.8-19,45.5-19S262.3,6.3,275,19z"/%3E%3C/svg%3E');
-        -webkit-mask-repeat: no-repeat;
-        -webkit-mask-size: contain;
-        mask-repeat: no-repeat;
-        background: /*[[linkColor]]*/;
-        content: '';
-        padding: 3px 10px;
-        margin-left: 10px;  
-        position: absolute;
-        right: 0px;
-        bottom: 4px;
-        top: 4px;
-        }
-        .top-next-page a{
-            position: relative;
-            right: 20px;   
-        }
-        
-        .top-next-page a:after{
-            display:none;
+      @media screen and (max-width: 800px){	
 
-        }
-        
-        .top-table-page a{
-            position: relative;   
-        }
-      
-        .top-table-page a:before{
-            -webkit-mask-size: contain;
-             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;   
-        }
-            
+         .top-table-page{ 
+            flex: 0 1 !important;
+            min-width: 40px !important;
+         }
+          
+        .top-next-page{	
+            position: relative; 
+            margin-right: 17px;
+        }	
+        .top-next-page:after{	
+        mask-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 1035 1612" style="enable-background:new 0 0 1035 1612;" xml:space="preserve" wtx-context="0A2667C0-9357-44B7-8EC9-C1554ABAC9E7"%3E%3Cstyle type="text/css"%3E .st0%7Bfill:%23000;%7D%0A%3C/style%3E%3Ctitle%3Echevron-left-white%3C/title%3E%3Cpath class="st0" d="M275,19l741,742c12.7,12.7,19,27.7,19,45s-6.3,32.3-19,45l-741,742c-12.7,12.7-27.8,19-45.5,19 s-32.8-6.3-45.5-19L19,1427c-12.7-12.7-19-27.7-19-45s6.3-32.3,19-45l531-531L19,275C6.3,262.3,0,247.3,0,230c0-17.3,6.3-32.3,19-45 L184,19c12.7-12.7,27.8-19,45.5-19S262.3,6.3,275,19z"/%3E%3C/svg%3E');	
+        -webkit-mask-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 1035 1612" style="enable-background:new 0 0 1035 1612;" xml:space="preserve" wtx-context="0A2667C0-9357-44B7-8EC9-C1554ABAC9E7"%3E%3Cstyle type="text/css"%3E .st0%7Bfill:%23000;%7D%0A%3C/style%3E%3Ctitle%3Echevron-left-white%3C/title%3E%3Cpath class="st0" d="M275,19l741,742c12.7,12.7,19,27.7,19,45s-6.3,32.3-19,45l-741,742c-12.7,12.7-27.8,19-45.5,19 s-32.8-6.3-45.5-19L19,1427c-12.7-12.7-19-27.7-19-45s6.3-32.3,19-45l531-531L19,275C6.3,262.3,0,247.3,0,230c0-17.3,6.3-32.3,19-45 L184,19c12.7-12.7,27.8-19,45.5-19S262.3,6.3,275,19z"/%3E%3C/svg%3E');	
+        -webkit-mask-repeat: no-repeat;	
+        -webkit-mask-size: contain;	
+        mask-repeat: no-repeat;	
+        background: /*[[linkColor]]*/;	
+        content: '';	
+        padding: 0 10px;		
+        position: absolute;	
+        right: 0px;	
+        bottom: 4px;	
+        top: 4px;	
+        pointer-events: none !important;
+        }	
+        .top-next-page a{	
+            position: relative;
+        }	
+
+        .top-next-page a:after{	
+          visibility: hidden;
+        }	
+
+        .top-table-page a{	
+            position: relative;   	
+        }	
+
+        .top-table-page a:before{	
+            -webkit-mask-size: contain;	
+             position: absolute;	
+            top: 0;	
+            left: 0;	
+            right: 0;	
+            bottom: 0;   	
+        }	
+
     }
-    
     
     @media screen and (max-width: 767px){
         body.body-forum.responsive-enabled .container .p-forum-a li.forum-announcement .col-status {
