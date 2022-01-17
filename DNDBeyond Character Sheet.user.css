@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.112
+@version      1.3.113
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -540,7 +540,7 @@ chromaKeyDiceTray "ON with dice popup" <<<EOT
 
         #site ::selection{
             background: var(--chroma-highlight) !important;
-            opacity:0.4 !important;;
+            opacity:0.4 !important;
             color: var(--background-color) !important;
         }
 
@@ -764,6 +764,9 @@ chromaKeyDiceTray "ON with dice popup" <<<EOT
         -webkit-mask-size: 30px 12px;
         -webkit-mask-repeat: no-repeat;
         background: var(--chroma-highlight);
+    }
+    .ct-sidebar__inner li::marker{
+        color: var(--font-color) !important;
     }
      @supports (-moz-appearance:none) {
 
@@ -1061,6 +1064,9 @@ chromaKeyDiceTrayNoPopUp "ON without dice popup" <<<EOT
         -webkit-mask-size: 30px 12px;
         -webkit-mask-repeat: no-repeat;
         background: var(--chroma-highlight);
+    }
+    .ct-sidebar__inner li::marker{
+        color: var(--font-color) !important;
     }
      @supports (-moz-appearance:none) {
 
@@ -3519,6 +3525,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .dice-icon-die--d100{
         -webkit-mask-repeat: repeat-x; 
     }
+    
+
    
 
     @media (min-width: 768px){
