@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.164
+@version      1.2.165
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -1412,7 +1412,8 @@ div#site{
     body.body-rpgfeat-index .list-row-feat .list-row-name-primary-text a:hover,
     body.body-mycontent .list-row-name-primary-text a,
     body.body-mycontent .list-row-name-primary-text a:hover,
-    #splash a
+    #splash a,
+    body[class*="homebrewindex"]:not(.body-rpgmagicitem) .content-container a.link
     {
 		color: /*[[linkColor]]*/ !important
 	}
