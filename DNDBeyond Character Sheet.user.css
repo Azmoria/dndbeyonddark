@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.115
+@version      1.3.116
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -756,6 +756,7 @@ chromaKeyDiceTray "ON with dice popup" <<<EOT
         -webkit-mask-size: 30px 10px;
         -webkit-mask-repeat: no-repeat;
         background: var(--chroma-highlight);
+        top: 4px;
     }
     
     .site .ct-character-sheet__inner  .button-action-increase--small:before{
@@ -764,6 +765,7 @@ chromaKeyDiceTray "ON with dice popup" <<<EOT
         -webkit-mask-size: 30px 12px;
         -webkit-mask-repeat: no-repeat;
         background: var(--chroma-highlight);
+        top: 4px;
     }
     .ct-sidebar__inner li::marker{
         color: var(--font-color) !important;
@@ -1056,6 +1058,8 @@ chromaKeyDiceTrayNoPopUp "ON without dice popup" <<<EOT
         -webkit-mask-size: 30px 10px;
         -webkit-mask-repeat: no-repeat;
         background: var(--chroma-highlight);
+        top: 4px;
+
     }
     
     .site .ct-character-sheet__inner .button-action-increase--small:before{
@@ -1064,6 +1068,8 @@ chromaKeyDiceTrayNoPopUp "ON without dice popup" <<<EOT
         -webkit-mask-size: 30px 12px;
         -webkit-mask-repeat: no-repeat;
         background: var(--chroma-highlight);
+        top: 4px;
+
     }
     .ct-sidebar__inner li::marker{
         color: var(--font-color) !important;
@@ -1365,6 +1371,7 @@ chromaKeyDiceTraySide "ON sidebar chroma with popup" <<<EOT
         -webkit-mask-size: 30px 10px;
         -webkit-mask-repeat: no-repeat;
         background: var(--chroma-highlight);
+        top: 4px;
     }
     
     .site .button-action-increase--small:before{
@@ -1373,6 +1380,7 @@ chromaKeyDiceTraySide "ON sidebar chroma with popup" <<<EOT
         -webkit-mask-size: 30px 12px;
         -webkit-mask-repeat: no-repeat;
         background: var(--chroma-highlight);
+        top: 4px;
     }
 
      @supports (-moz-appearance:none) {
@@ -1684,6 +1692,7 @@ chromaKeyDiceTraySideNo "ON sidebar chroma no popup" <<<EOT
         -webkit-mask-size: 30px 10px;
         -webkit-mask-repeat: no-repeat;
         background: var(--chroma-highlight);
+        top: 4px;
     }
     
     .site .button-action-increase--small:before{
@@ -1692,6 +1701,7 @@ chromaKeyDiceTraySideNo "ON sidebar chroma no popup" <<<EOT
         -webkit-mask-size: 30px 12px;
         -webkit-mask-repeat: no-repeat;
         background: var(--chroma-highlight);
+        top: 4px;
     }
      @supports (-moz-appearance:none) {
 
@@ -1997,6 +2007,7 @@ chromaKeyDiceTraySidePop "ON sidebar and popup chroma" <<<EOT
         -webkit-mask-size: 30px 10px;
         -webkit-mask-repeat: no-repeat;
         background: var(--chroma-highlight);
+        top: 4px;
     }
     
     .site .button-action-increase--small:before{
@@ -2005,6 +2016,7 @@ chromaKeyDiceTraySidePop "ON sidebar and popup chroma" <<<EOT
         -webkit-mask-size: 30px 12px;
         -webkit-mask-repeat: no-repeat;
         background: var(--chroma-highlight);
+        top: 4px;
     }
      @supports (-moz-appearance:none) {
 
@@ -2560,6 +2572,10 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         bottom: 0;
         border-radius: 3px;
         pointer-events: none;
+    }
+    .site button.ct-theme-button.button-action-decrease.button-action-decrease--small.ct-theme-button--filled.ct-theme-button--interactive.ct-button.character-button.ddbc-button.character-button-small:before,
+    .site button.ct-theme-button.button-action-increase.button-action-increase--small.ct-theme-button--filled.ct-theme-button--interactive.ct-button.character-button.ddbc-button.character-button-small:before{
+        top:4px;
     }
     .integrated-dice-menu-carrot {
         border-top-color: /*[[borderColor]]*/
@@ -3541,6 +3557,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ddbc-exclusive-checkbox__slot--selected::before {
         font-weight: normal;
     }
+ 
     
      /*[[diceTray]]*/
     
