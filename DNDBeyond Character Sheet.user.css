@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.114
+@version      1.3.115
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -750,15 +750,15 @@ chromaKeyDiceTray "ON with dice popup" <<<EOT
 
 
 
-    .site .button-action-decrease--small:before{
+    .site .ct-character-sheet__inner  .button-action-decrease--small:before{
         -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 16'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill-rule:evenodd; fill: white;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3EAsset 54%3C/title%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cpolygon class='cls-1' points='6 0 6 6 0 6 0 10 6 10 6 16 10 16 10 10 16 10 16 6 10 6 10 0 6 0'/%3E%3Crect class='cls-1' x='18' y='6' width='16' height='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        -webkit-mask-position: -13px 1px;
+        -webkit-mask-position: -15px 1px;
         -webkit-mask-size: 30px 10px;
         -webkit-mask-repeat: no-repeat;
         background: var(--chroma-highlight);
     }
     
-    .site .button-action-increase--small:before{
+    .site .ct-character-sheet__inner  .button-action-increase--small:before{
 -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 16'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill-rule:evenodd; fill: white;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3EAsset 54%3C/title%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cpolygon class='cls-1' points='6 0 6 6 0 6 0 10 6 10 6 16 10 16 10 10 16 10 16 6 10 6 10 0 6 0'/%3E%3Crect class='cls-1' x='18' y='6' width='16' height='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         -webkit-mask-position: -2px 0;
         -webkit-mask-size: 30px 12px;
@@ -1050,15 +1050,15 @@ chromaKeyDiceTrayNoPopUp "ON without dice popup" <<<EOT
 
 
 
-    .site .button-action-decrease--small:before{
+    .site .ct-character-sheet__inner  .button-action-decrease--small:before{
         -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 16'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill-rule:evenodd; fill: white;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3EAsset 54%3C/title%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cpolygon class='cls-1' points='6 0 6 6 0 6 0 10 6 10 6 16 10 16 10 10 16 10 16 6 10 6 10 0 6 0'/%3E%3Crect class='cls-1' x='18' y='6' width='16' height='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        -webkit-mask-position: -13px 1px;
+        -webkit-mask-position: -15px 1px;
         -webkit-mask-size: 30px 10px;
         -webkit-mask-repeat: no-repeat;
         background: var(--chroma-highlight);
     }
     
-    .site .button-action-increase--small:before{
+    .site .ct-character-sheet__inner .button-action-increase--small:before{
 -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 16'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill-rule:evenodd; fill: white;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3EAsset 54%3C/title%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cpolygon class='cls-1' points='6 0 6 6 0 6 0 10 6 10 6 16 10 16 10 10 16 10 16 6 10 6 10 0 6 0'/%3E%3Crect class='cls-1' x='18' y='6' width='16' height='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         -webkit-mask-position: -2px 0;
         -webkit-mask-size: 30px 12px;
@@ -1361,7 +1361,7 @@ chromaKeyDiceTraySide "ON sidebar chroma with popup" <<<EOT
 
     .site .button-action-decrease--small:before{
         -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 16'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill-rule:evenodd; fill: white;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3EAsset 54%3C/title%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cpolygon class='cls-1' points='6 0 6 6 0 6 0 10 6 10 6 16 10 16 10 10 16 10 16 6 10 6 10 0 6 0'/%3E%3Crect class='cls-1' x='18' y='6' width='16' height='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        -webkit-mask-position: -13px 1px;
+        -webkit-mask-position: -15px 1px;
         -webkit-mask-size: 30px 10px;
         -webkit-mask-repeat: no-repeat;
         background: var(--chroma-highlight);
@@ -1374,6 +1374,7 @@ chromaKeyDiceTraySide "ON sidebar chroma with popup" <<<EOT
         -webkit-mask-repeat: no-repeat;
         background: var(--chroma-highlight);
     }
+
      @supports (-moz-appearance:none) {
 
         *{
@@ -1992,7 +1993,7 @@ chromaKeyDiceTraySidePop "ON sidebar and popup chroma" <<<EOT
 
     .site .button-action-decrease--small:before{
         -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 16'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill-rule:evenodd; fill: white;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3EAsset 54%3C/title%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cpolygon class='cls-1' points='6 0 6 6 0 6 0 10 6 10 6 16 10 16 10 10 16 10 16 6 10 6 10 0 6 0'/%3E%3Crect class='cls-1' x='18' y='6' width='16' height='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        -webkit-mask-position: -13px 1px;
+        -webkit-mask-position: -15px 1px;
         -webkit-mask-size: 30px 10px;
         -webkit-mask-repeat: no-repeat;
         background: var(--chroma-highlight);
@@ -3160,8 +3161,19 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     
     
     .ct-slot-manager__slot,
-    .site .ct-theme-button--filled.ct-button:hover {
-        box-shadow: none;
+    .site .ct-theme-button--filled.ct-button:hover,
+    button.ct-theme-button.button-action-decrease.button-action-decrease--small.ct-theme-button--filled.ct-theme-button--interactive.ct-button.character-button.ddbc-button.character-button-small,
+    button.ct-theme-button.button-action-increase.button-action-increase--small.ct-theme-button--filled.ct-theme-button--interactive.ct-button.character-button.ddbc-button.character-button-small{
+        box-shadow: none !important;
+    }
+    button.ct-theme-button.button-action-decrease.button-action-decrease--small.ct-theme-button--filled.ct-theme-button--interactive.ct-button.character-button.ddbc-button.character-button-small,
+    button.ct-theme-button.button-action-increase.button-action-increase--small.ct-theme-button--filled.ct-theme-button--interactive.ct-button.character-button.ddbc-button.character-button-small{
+    background: none !important;
+    }
+      button.ct-theme-button.button-action-decrease.button-action-decrease--small.ct-theme-button--filled.ct-theme-button--interactive.ct-button.character-button.ddbc-button.character-button-small:before,
+    button.ct-theme-button.button-action-increase.button-action-increase--small.ct-theme-button--filled.ct-theme-button--interactive.ct-button.character-button.ddbc-button.character-button-small:before{
+        border: none !important;    
+        
     }
 
     .container .ct-equipment-overview__weight-speed--encumbered,
