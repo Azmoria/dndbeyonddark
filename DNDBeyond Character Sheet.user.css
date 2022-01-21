@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.116
+@version      1.3.117
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -2121,7 +2121,6 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-spell-manager__spell > .ddbc-collapsible__content,
     .site .ct-button.ct-theme-button--outline:disabled,
     .ct-feats-manage-pane__feat-content,
-    .ct-spell-caster__casting-action-count.ct-spell-caster__casting-action-count--spellcasting,
     .ddbc-ability-score-manager__component-value,
     .ct-mobile-divider__label,
     .ct-main-mobile__saving-throws,
@@ -2178,7 +2177,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-sidebar .ddbc-collapsible__header,
     .ct-character-manage-pane__intro,
     .ct-restore-life,
-    .ddbc-exclusive-checkbox .ddbc-exclusive-checkbox__slot--inactive{
+    .ddbc-exclusive-checkbox .ddbc-exclusive-checkbox__slot--inactive,
+    .ct-spell-caster__casting-action-count{
        background: /*[[sidebarColor]]*/ !important;   
     }
     
@@ -2229,7 +2229,6 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-extras-filter__advanced-callout,
     .ct-spells__tab-level-callout,   
     .ct-status-summary-mobile__button--active,
-    .ct-spell-caster__casting-action-count,
     .ct-reset-pane__action .ct-theme-button--interactive:hover,
     .ct-reset-pane__hitdie-manager-dice .integrated-dice__container:hover,
     .ct-sidebar .ct-theme-button--filled{
@@ -2447,7 +2446,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-button__content,
     .ddbc-exclusive-checkbox .ddbc-exclusive-checkbox__slot + .ddbc-exclusive-checkbox__slot::before,
     .ddbc-exclusive-checkbox__slot--inactive,
-    .ct-restore-life
+    .ct-restore-life,
+    .ct-spell-caster__casting-action-count
     {
         color: /*[[fontColor]]*/ !important;
     }
@@ -2522,7 +2522,9 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-section-placeholder,
     .ct-reset-pane__hitdie-manager-dice .integrated-dice__container,
     .ddbc-exclusive-checkbox,
-    .ddbc-exclusive-checkbox .ddbc-exclusive-checkbox__slot + .ddbc-exclusive-checkbox__slot{
+    .ddbc-exclusive-checkbox .ddbc-exclusive-checkbox__slot + .ddbc-exclusive-checkbox__slot,
+    .ct-sidebar .ct-item-detail-abilities__limited-uses,
+    .ct-sidebar .ct-item-detail-abilities__spells{
         border-color: /*[[borderColor]]*/ !important;
     }
     .ct-sidebar__pane-content,
@@ -2573,10 +2575,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         border-radius: 3px;
         pointer-events: none;
     }
-    .site button.ct-theme-button.button-action-decrease.button-action-decrease--small.ct-theme-button--filled.ct-theme-button--interactive.ct-button.character-button.ddbc-button.character-button-small:before,
-    .site button.ct-theme-button.button-action-increase.button-action-increase--small.ct-theme-button--filled.ct-theme-button--interactive.ct-button.character-button.ddbc-button.character-button-small:before{
-        top:4px;
-    }
+  
     .integrated-dice-menu-carrot {
         border-top-color: /*[[borderColor]]*/
     }
@@ -3554,10 +3553,60 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         opacity: 0.8;   
     }
     
-    .ddbc-exclusive-checkbox__slot--selected::before {
+    .ddbc-exclusive-checkbox__slot--selected::before{
         font-weight: normal;
     }
- 
+
+    button.ct-theme-button.ct-button--increase.ct-theme-button--filled.ct-theme-button--interactive.ct-button.character-button.ddbc-button.character-button,
+    button.ct-theme-button.ct-button--decrease.ct-theme-button--filled.ct-theme-button--interactive.ct-button.character-button.ddbc-button.character-button{
+        width: 12px !important;
+        height: 12px !important;
+        top: -1px;       
+        box-shadow: none !important;
+    }
+    
+    .ct-spell-caster__casting-level .ct-button--decrease:before,
+    .ct-spell-caster__casting-level .ct-theme-button:before{
+        background-position: center;
+        background-size: cover;
+        border: none !important;
+    }
+    .ct-spell-caster__casting-level button.ct-theme-button.ct-button--increase.ct-theme-button--filled.ct-theme-button--interactive.ct-button.character-button.ddbc-button.character-button:before
+    {
+        background-position: 0px 50%;
+    }
+    
+    .ct-spell-caster__casting-level  button.ct-theme-button.ct-button--decrease.ct-theme-button--filled.ct-theme-button--interactive.ct-button.character-button.ddbc-button.character-button:before
+    {
+        background-position: -13px 50%;
+    }
+      .site button.ct-theme-button.button-action-decrease.button-action-decrease--small.ct-theme-button--filled.ct-theme-button--interactive.ct-button.character-button.ddbc-button.character-button-small,
+    .site button.ct-theme-button.button-action-increase.button-action-increase--small.ct-theme-button--filled.ct-theme-button--interactive.ct-button.character-button.ddbc-button.character-button-small{
+        width: 15px !important;
+        height: 15px !important; 
+        min-height: auto;
+        top: -1px;
+    }
+    .site button.ct-theme-button.button-action-decrease.button-action-decrease--small.ct-theme-button--filled.ct-theme-button--interactive.ct-button.character-button.ddbc-button.character-button-small:before,
+    .site button.ct-theme-button.button-action-increase.button-action-increase--small.ct-theme-button--filled.ct-theme-button--interactive.ct-button.character-button.ddbc-button.character-button-small:before{
+        background-size: cover;      
+        width: auto;
+        height: auto;
+    }  
+    
+    .site button.ct-theme-button.button-action-increase.button-action-increase--small.ct-theme-button--filled.ct-theme-button--interactive.ct-button.character-button.ddbc-button.character-button-small:before{
+       
+        background-position: 0px 50%;     
+    }
+      .site button.ct-theme-button.button-action-decrease.button-action-decrease--small.ct-theme-button--filled.ct-theme-button--interactive.ct-button.character-button.ddbc-button.character-button-small:before{
+          background-position: -16px 50%;     
+    }
+    
+    .ct-spell-caster__casting-action-count{
+        border: 1px solid /*[[borderColor]]*/;
+    }
+    
+
     
      /*[[diceTray]]*/
     
