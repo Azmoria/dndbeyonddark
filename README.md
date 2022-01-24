@@ -9,7 +9,7 @@ Now includes customizing Dice Tint. See dropdowns below for examples.
 [![DNDBeyond Dark Mode and Dice Coloration](https://user-images.githubusercontent.com/65363489/121787540-988e6800-cb94-11eb-9ca0-695b3a45caa6.png)](https://www.youtube.com/watch?v=DbYnbr3esnI "DNDBeyond Dark Mode and Dice Coloration")
 
 
-[![Chroma Key mode to capture Dice for DNDBeyond](https://user-images.githubusercontent.com/65363489/146850358-ae12abc7-469b-4df4-b95c-51574c995ea6.png)
+[![Chroma Key mode to capture Dice for DNDBeyond](https://user-images.githubusercontent.com/65363489/150846793-df300465-d8ac-400d-8c8b-cfeeb863c07a.jpg)
 ](https://www.youtube.com/watch?v=CJMwF1VRt34 "Chroma Key mode to capture Dice for DNDBeyond")
 
 
