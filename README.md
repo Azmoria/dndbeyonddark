@@ -13,7 +13,7 @@ Now includes customizing Dice Tint. See dropdowns below for examples.
 ](https://www.youtube.com/watch?v=CJMwF1VRt34 "Chroma Key mode to capture Dice for DNDBeyond")
 
 
-
+<img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Character%20Sheet/CharactersheetExampleSplit2.jpg?raw=true"/>
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Character%20Sheet/Character%20Sheet%20Example%20Ice.JPG?raw=true"/>
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Character%20Sheet/CharSheetExampleV2.gif"/>
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Character%20Sheet/Color%20Adjustments.PNG?raw=true"/>
