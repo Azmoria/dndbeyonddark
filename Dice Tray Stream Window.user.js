@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Dice Tray Stream Window
 // @namespace    Azmoria
-// @version      0.3
+// @version      0.4
 // @description  Stream your Dice to another window
 // @author       Azmoria
 // @include      https://www.dndbeyond.com/profile/*/characters/*
@@ -14,9 +14,9 @@
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=dndbeyond.com
 // ==/UserScript==
 
-window.onload = function(){
+setTimeout(function () {
 
-const childWindow = window.open('DiceTray')
+const childWindow = window.open(window.location.href + 'DiceTray')
 childWindow.document.write('<video id="video"></video>')
 const canvas = document.querySelector('canvas');
 const video = childWindow.document.querySelector('video');
@@ -28,7 +28,7 @@ childWindow.document.title = "Dice Tray - " + document.title;
 video.srcObject = stream;
 
 
-}
+ }, 1000);
 
 
 
