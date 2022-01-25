@@ -1,66 +1,38 @@
-If you are looking to capture the dice of DNDBeyond for your stream there are a few ways you can do so which are as follows.
+This requires the character sheet theme to work. Follow instructions in <a href="https://github.com/Azmoria/dndbeyonddark/blob/master/README.md">README.md</a> to install that first. The background color is set in this theme at the bottom of the options.
 
-The first two are with the <a href="https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20Character%20Sheet.user.css">Character Sheet Theme</a> - and optionally in conjunction with <a href="https://github.com/Azmoria/dndbeyonddark/blob/master/Character%20Specific%20Themes.md">How to create character specific themes</a>.
+![image](https://user-images.githubusercontent.com/65363489/150918348-713503d7-0871-4e3a-a22c-5a7cdf6c475f.png)
 
-<details>
-  <summary>The first is for manual dice rolling:</summary>
-<br>
 
-<br>
-Settings:
-<br>
-  
-![image](https://user-images.githubusercontent.com/65363489/146975840-822a9613-c387-407b-945e-8e1a4dc48deb.png)
-![image](https://user-images.githubusercontent.com/65363489/146976533-2c71d92f-5727-4250-903e-e81cb2aa7b1d.png)
-  
-<br>
-Example:
-<br>
-  
-![image](https://user-images.githubusercontent.com/65363489/146976772-df2431e8-3e3e-4da0-8fbe-31adffec28f3.png)
-  
-</details>
-<details>
-  <summary> The second is for rolling with a character sheet:</summary>
-<br>
-  
-Settings:
-<br>
-  
-![image](https://user-images.githubusercontent.com/65363489/146975840-822a9613-c387-407b-945e-8e1a4dc48deb.png)
-![image](https://user-images.githubusercontent.com/65363489/146975954-2cdb7fa0-b688-47cf-9119-d6b53dbbc7ed.png)
-  
-<br>
-You can see an example of this in the video at the bottom of this page.
-</details>
-<details>
-  <summary> Lastly is for the combat tracker:</summary>
-<br>
-<a href="https://github.com/Azmoria/dndbeyonddark/raw/master/combatTrackerChroma.user.css">Combat Tracker Chroma CSS Theme</a>
-<br>
-Settings: 
-<br>
-For this there are only 3 settings - choose colors that won't conflict with your chosen dice.
-<br>
-  
-![image](https://user-images.githubusercontent.com/65363489/146975558-414814e0-b76f-4f93-931f-9e7b954192ba.png)
-  
-<br>
-Example:
-<br>
-  
-![image](https://user-images.githubusercontent.com/65363489/146974845-a10753bc-bf13-4acf-9012-0c03cc4cdcd6.png)
-  
-</details>
-<hr>
-For most all of the above options I suggest setting the dice to be over the results/dice toolbar:
-<br><br>
+Then you will need an extention that allows you to install user.js.
 
-![image](https://user-images.githubusercontent.com/65363489/148734959-6ef90a19-bf64-4771-9e73-393f5a02d4f9.png)
+ I recommend Tampermonkey. You can get it for <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en">Chrome</a> or <a href="https://addons.mozilla.org/en-CA/firefox/addon/tampermonkey/">Firefox</a>
 
-<hr>
-Click image below to watch video on youtube
-<br><br>
+*Note I haven't tested firefox yet.
 
-[![Chroma Key mode to capture Dice for DNDBeyond](https://user-images.githubusercontent.com/65363489/146850358-ae12abc7-469b-4df4-b95c-51574c995ea6.png)
-](https://www.youtube.com/watch?v=CJMwF1VRt34 "DNDBeyond Dark Mode and Dice Coloration")
+Then install the js by going <a href="https://github.com/Azmoria/dndbeyonddark/raw/master/Dice%20Tray%20Stream%20Window.user.js">here</a>
+
+It will popup with the below. Click install.
+
+![image](https://user-images.githubusercontent.com/65363489/150918125-1e9cd2a0-b1ae-4ec5-acd1-1bbc727c04f9.png)
+
+Once installed when you load into various parts of the site where dice are enabled it will pop up another window. If it doesn't make sure you are allowing popups on dndbeyond. You can change the background in the character sheet theme as above. If you do change the background you will have to refresh the original page which will open a new popup. 
+
+The video in the window will initially be paused. Press play. 
+
+![image](https://user-images.githubusercontent.com/65363489/150918909-b0a61d31-bf51-44f2-8952-6bf7c22e63fe.png)
+
+
+Pull the dice tray tab into a seperate window. You can put it behind the main window but it will not work in full screen.
+
+After you have pressed play, roll dice in the oringal window and the video will resize to the original windows size. You may have to adjust your dice tray window to fit. 
+
+![image](https://user-images.githubusercontent.com/65363489/150919806-f34d6935-2fd9-46a3-a255-ed7001ea2802.png)
+
+Once you have this set up add the window that starts with "Dice Tray - ..." to your OBS or software of choice.
+
+
+
+If you find any issues please let me know either by posting here on github or messaging me directly on discord Azmoria#7532.
+
+
+
