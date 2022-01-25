@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.123
+@version      1.3.124
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -2564,6 +2564,8 @@ regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond
         position: absolute;
         top: 0;
         left: 0;   
+        height: 100%;
+        width: 100%;
     }
      body#diceTrayBody{
         background: /*[[CaptureBackground]]*/ !important;
