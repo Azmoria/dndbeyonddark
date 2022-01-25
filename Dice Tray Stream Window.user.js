@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Dice Tray Stream Window
 // @namespace    Azmoria
-// @version      0.1
+// @version      0.2
 // @description  Stream your Dice to another window
 // @author       Azmoria
 // @include      https://www.dndbeyond.com/profile/*/characters/*
