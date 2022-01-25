@@ -1,4 +1,4 @@
-Example on Youtube: <a href="https://www.youtube.com/watch?v=bXUyyVFY_Mk">here</a>
+[![Capture Dice from DNDBeyond for Streaming/OBS](https://user-images.githubusercontent.com/65363489/150996224-001f9634-2a69-435b-8a70-a2190cb8d500.png)](https://www.youtube.com/watch?v=bXUyyVFY_Mk "Capture Dice from DNDBeyond for Streaming/OBS")
 
 
 
