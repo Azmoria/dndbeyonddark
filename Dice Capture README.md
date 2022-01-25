@@ -21,7 +21,9 @@ It will popup with the below. Click install.
 
 ![image](https://user-images.githubusercontent.com/65363489/150918125-1e9cd2a0-b1ae-4ec5-acd1-1bbc727c04f9.png)
 
-Once installed when you load into various parts of the site where dice are enabled it will pop up another window. If it doesn't make sure you are allowing popups on dndbeyond. You can change the background in the character sheet theme as above. If you do change the background you will have to refresh the original page which will open a new popup. 
+Once installed when you load into various parts of the site where dice are enabled it will pop up another window.
+
+If it doesn't make sure you are allowing popups on dndbeyond. You can change the background in the character sheet theme as above. If you do change the background you will have to refresh the original page which will open a new popup. 
 
 The video in the window will initially be paused. Press play. 
 
