@@ -1,9 +1,10 @@
 // ==UserScript==
 // @name         Dice Tray Stream Window
 // @namespace    Azmoria
-// @version      0.6
+// @version      0.7
 // @description  Stream your Dice to another window
 // @author       Azmoria
+// @downloadURL  https://github.com/Azmoria/dndbeyonddark/raw/master/Dice%20Tray%20Stream%20Window.user.js
 // @updateURL    https://github.com/Azmoria/dndbeyonddark/raw/master/Dice%20Tray%20Stream%20Window.user.js
 // @include      https://www.dndbeyond.com/profile/*/characters/*
 // @include      https://www.dndbeyond.com/characters/*
@@ -17,16 +18,15 @@
 
 setTimeout(function () {
 
-const childWindow = window.open(window.location.href + 'DiceTray')
-childWindow.document.write('<video id="video" muted autoplay></video>')
-const canvas = document.querySelector('canvas');
-const video = childWindow.document.querySelector('video');
-const body = childWindow.document.querySelector('body');
-body.setAttribute("id", 'diceTrayBody');
-const stream = canvas.captureStream();
-childWindow.document.title = "Dice Tray - " + document.title;
-video.srcObject = stream;
-
+    const childWindow = window.open(window.location.href + 'DiceTray')
+    childWindow.document.write('<video id="video" muted autoplay></video>')
+    const canvas = document.querySelector('canvas');
+    const video = childWindow.document.querySelector('video');
+    const body = childWindow.document.querySelector('body');
+    body.setAttribute("id", 'diceTrayBody');
+    const stream = canvas.captureStream();
+    childWindow.document.title = "Dice Tray - " + document.title;
+    video.srcObject = stream;
 
  }, 1000);
 
