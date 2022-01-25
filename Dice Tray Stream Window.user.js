@@ -8,7 +8,6 @@
 // @include      https://www.dndbeyond.com/characters/*
 // @include      https://www.dndbeyond.com/encounter-builder
 // @include      https://www.dndbeyond.com/combat-tracker*
-// @include      https://www.dndbeyond.com/monsters/*
 // @include      https://www.dndbeyond.com/campaigns/*
 // @include      https://www.dndbeyond.com/encounters/*
 // @include      https://www.dndbeyond.com/my-encounters
