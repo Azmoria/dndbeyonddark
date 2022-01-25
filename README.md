@@ -6,11 +6,11 @@ Now includes customizing Dice Tint. See dropdowns below for examples.
 <details>
   <summary> Character Sheet examples:</summary> 
 
-[![DNDBeyond Dark Mode and Dice Coloration](https://user-images.githubusercontent.com/65363489/121787540-988e6800-cb94-11eb-9ca0-695b3a45caa6.png)](https://www.youtube.com/watch?v=DbYnbr3esnI "DNDBeyond Dark Mode and Dice Coloration")
+[![Capture Dice from DNDBeyond for Streaming/OBS](https://user-images.githubusercontent.com/65363489/121787540-988e6800-cb94-11eb-9ca0-695b3a45caa6.png)](https://www.youtube.com/watch?v=DbYnbr3esnI "Capture Dice from DNDBeyond for Streaming/OBS")
 
 
 [![Chroma Key mode to capture Dice for DNDBeyond](https://user-images.githubusercontent.com/65363489/150846793-df300465-d8ac-400d-8c8b-cfeeb863c07a.jpg)
-](https://www.youtube.com/watch?v=CJMwF1VRt34 "Chroma Key mode to capture Dice for DNDBeyond")
+](https://www.youtube.com/watch?v=bXUyyVFY_Mk "Chroma Key mode to capture Dice for DNDBeyond")
 
 
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Character%20Sheet/CharactersheetExampleSplit2.jpg?raw=true"/>
@@ -65,8 +65,6 @@ Once you have Stylus installed click the links below to install the themes. I su
 <a href="https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20Character%20Sheet.user.css">Character Sheet Theme</a>
 <br>
 <a href="https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css">The rest of DNDBeyond site</a>
-<br><br>
-Theme for chroma capture of dice while using combat tracker: <a href="https://github.com/Azmoria/dndbeyonddark/raw/master/combatTrackerChroma.user.css">here</a>
 <br><br>
 For android devices (mobile/tablet) <a href="https://kiwibrowser.com/">Kiwi Browser</a> allows the installation of desktop Chrome extentions. There may be alternatives that work for iOS. However I only own android devices so I am unaware of which ones would work or exist.
 
