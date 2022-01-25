@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.121
+@version      1.3.122
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -2194,7 +2194,6 @@ regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond
         --sheet-color: /*[[sheetColor]]*/;
         --dice-color: sepia(/*[[diceSepia]]*/%) hue-rotate(/*[[hueRotation]]*/deg) brightness(/*[[diceBrightness]]*/%) saturate(/*[[diceSaturation]]*/%) contrast(/*[[diceContrast]]*/%) invert(/*[[diceInvert]]*/);
         --background-color: /*[[background]]*/;
-        --chroma-highlight: /*[[chromaHighlight]]*/;
         --rgb-speed: /*[[rgbSpeed]]*/s;
         --rgb-from: hue-rotate(/*[[rgbFrom]]*/deg);
         --rgb-to: hue-rotate(/*[[rgbTo]]*/deg);
@@ -2564,7 +2563,7 @@ regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond
         top: 0;
         left: 0;   
     }
-     body{
+     body#diceTrayBody{
         background: /*[[CaptureBackground]]*/ !important;
     }
     
