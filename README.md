@@ -6,11 +6,10 @@ Now includes customizing Dice Tint. See dropdowns below for examples.
 <details>
   <summary> Character Sheet examples:</summary> 
 
-[![Capture Dice from DNDBeyond for Streaming/OBS](https://user-images.githubusercontent.com/65363489/121787540-988e6800-cb94-11eb-9ca0-695b3a45caa6.png)](https://www.youtube.com/watch?v=DbYnbr3esnI "Capture Dice from DNDBeyond for Streaming/OBS")
+[![DNDBeyond Dark Mode and Dice Coloration](https://user-images.githubusercontent.com/65363489/121787540-988e6800-cb94-11eb-9ca0-695b3a45caa6.png)](https://www.youtube.com/watch?v=DbYnbr3esnI "DNDBeyond Dark Mode and Dice Coloration")
 
 
-[![Chroma Key mode to capture Dice for DNDBeyond](https://user-images.githubusercontent.com/65363489/150846793-df300465-d8ac-400d-8c8b-cfeeb863c07a.jpg)
-](https://www.youtube.com/watch?v=bXUyyVFY_Mk "Chroma Key mode to capture Dice for DNDBeyond")
+[![Capture Dice from DNDBeyond for Streaming/OBS](https://user-images.githubusercontent.com/65363489/150996224-001f9634-2a69-435b-8a70-a2190cb8d500.png)](https://www.youtube.com/watch?v=bXUyyVFY_Mk "Capture Dice from DNDBeyond for Streaming/OBS")
 
 
 <img src="https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Character%20Sheet/CharactersheetExampleSplit2.jpg?raw=true"/>
