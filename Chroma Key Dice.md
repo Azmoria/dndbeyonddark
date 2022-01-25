@@ -1,4 +1,4 @@
-This requires the character sheet theme to work. Follow instructions in <a href="https://github.com/Azmoria/dndbeyonddark/blob/master/README.md">README.md</a> to install that first. The background color is set in this theme at the bottom of the options.
+This requires the character sheet theme to work. Follow instructions in <a href="https://github.com/Azmoria/dndbeyonddark/blob/master/README.md">README.md</a> to install that first. The background color is set in this theme at the bottom of the options. For how to set up character specific themes <a href="https://github.com/Azmoria/dndbeyonddark/blob/master/Character%20Specific%20Themes.md">click here</a>
 
 ![image](https://user-images.githubusercontent.com/65363489/150918348-713503d7-0871-4e3a-a22c-5a7cdf6c475f.png)
 
