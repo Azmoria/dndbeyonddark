@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.165
+@version      1.2.166
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -349,7 +349,8 @@ equal "Equal Sizing" <<<EOT
     .combatant-summary__avatar{
         min-width: 58px;
     }
-    .combatant-card__hp{
+    
+    .combatant-card__right-bit{
         min-width: 132px;   
     }
 EOT;
@@ -938,7 +939,9 @@ div#site{
     .p-forum .alert,
     .mce-floatpanel.mce-window .mce-tab.mce-active,
     #splash,
-    .mce-container-body
+    .mce-container-body,
+    .combatant-card--character.in-combat .combatant-card__right-bit,
+    .combatant-card--monster.in-combat .combatant-card__right-bit
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
@@ -2763,7 +2766,9 @@ div#site{
     
     .forum-thread-row.has-dev-comments .col-thread::before,
     div.ddb-search-filter-item:not(.selected)>div>div.ddb-search-filter-item-label-text,
-    .combatant-card--character .combatant-card__right-bit span{
+    .combatant-card--character .combatant-card__right-bit span.combatant-card__hp-current, 
+    .combatant-card--character .combatant-card__right-bit span.combatant-card__hp-separator,
+    .combatant-card--character .combatant-card__right-bit span.combatant-card__hp-max{
         opacity: .5 !important;   
     }
     .static-container-details .content-container .compendium-header-subtitle,
@@ -3365,4 +3370,6 @@ div#site{
     body.body-error div{
         color: /*[[fontColor]]*/;
     }
+  
+    
 }
