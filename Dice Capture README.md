@@ -19,7 +19,7 @@ It will popup with the below. Click install.
 
 Once installed when you load into various parts of the site where dice are enabled it will pop up another window. If it doesn't make sure you are **allowing popups on dndbeyond.** 
 
-You can change the background in the character sheet theme as above. If you do change the background you will have to refresh the original page which will open a new popup (chrome, I believe firefox can still style the sheet but chrome loads it as one that can't). 
+You can change the background in the character sheet theme as above.
 
 **Pull the dice tray tab into a seperate window.** You can put it behind the main window but it will not work with the main window in fullscreen or in a different tab in the same window.  
 
