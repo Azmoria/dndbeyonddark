@@ -23,7 +23,7 @@ You can change the background in the character sheet theme options. The options 
  ![image](https://user-images.githubusercontent.com/65363489/151418937-3e1a7e51-1ed7-49f6-ad6e-166acff479cd.png)
 
 
-**Pull the dice tray tab into a seperate window.** You can put it behind the main window but it will not work in chrome with the main window in fullscreen or in a different tab in the same window. Chrome blocks rendering when a window is fully hidden.
+**Pull the dice tray tab into a seperate window.** You can put it behind the main window as long as a sliver of it is showing. However it will render in chrome if the whole dice tray is hidden behind another window. Chrome does this to save computer resources. Firefox will be implementing this feature as well at some point. 
 
 If you need to be able to be able to fully hide the dice tray behind the main window you can launch chrome with the --disable-backgrounding-occluded-windows flag in the shortcut target.
 
