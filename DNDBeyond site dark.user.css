@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.168
+@version      1.2.169
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -1426,13 +1426,7 @@ div#site{
     
        /*[[fontContrast]]*/
     
-	
-	.quick-menu-item-active > .quick-menu-item-label {
-		border-left-color: /*[[linkColor]]*/
-		!important;
-		border-left-width: 3px;
-		border-left-style: solid;
-	}
+
 	.quick-menu-item-closed > .quick .sidenav-next-nav,
 	.sidebar-menu.se-fixed,
 	.listing .info:nth-of-type(8n+1),
@@ -1542,6 +1536,12 @@ div#site{
     .adventure-chapter-header{
 		border: none !important;
 	}
+    	
+	.quick-menu-item-active > .quick-menu-item-label{
+		border-left-color: /*[[linkColor]]*/ !important;
+		border-left-width: 3px !important;
+		border-left-style: solid !important;
+	}
     
     .compendium-toc-block-text,
     .compendium-toc-full-text{
@@ -1553,7 +1553,7 @@ div#site{
     }
 
     .Flowchart-Block-Linked::before{
-        height:50px   ;
+        height:50px;
         margin-top: -60px;
     }
     
@@ -3068,10 +3068,27 @@ div#site{
         margin: 0px;
         border-radius: 0px;
     }
+       
+    /*Fix for side menus*/
     
-      @media screen and (max-width: 800px){	
+    .sidebar-menu.se-fixed .quick-menu-tier-1::-webkit-scrollbar {
+      display: none;
+    }
 
-         .top-table-page{ 
+    .sidebar-menu.se-fixed .quick-menu-tier-1 {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
+    
+    .sidebar-menu.se-fixed .quick-menu-tier-1{
+    max-height: calc(100vh - 70px);
+    overflow-x: clip;
+    overflow-y: scroll;
+    }
+    
+    @media screen and (max-width: 800px){	
+
+        .top-table-page{ 
             flex: 0 1 !important;
             min-width: 40px !important;
          }
@@ -3125,9 +3142,7 @@ div#site{
         }
         
     }
-        
-
-    
+         
     @media screen and (max-width: 640px){
         
         .encounter-builder__header, .encounter-builder__header.ddb-page-header{
@@ -3224,10 +3239,7 @@ div#site{
          ul.p-comment-stats:hover li:last-of-type{
             color: /*[[linkColor]]*/ !important;    
         }
-    }
-
-    
-      
+    }    
 }  
     
 
