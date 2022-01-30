@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Dice Tray Stream Window
 // @namespace    Azmoria
-// @version      1.0.006
+// @version      1.0.007
 // @description  Stream your Dice to another window
 // @author       Azmoria
 // @downloadURL  https://github.com/Azmoria/dndbeyonddark/raw/master/Dice%20Tray%20Stream%20Window.user.js
@@ -12,51 +12,24 @@
 // @include      https://www.dndbeyond.com/encounters/*
 // @include      https://www.dndbeyond.com/my-encounters
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=dndbeyond.com
+// @run-at      document-end
 // ==/UserScript==
-var childWindow;
+var childWindow = null;
 
-function OpenWindow()
-{
+async function diceTray() {
+    childWindow = await window.open('', 'Dice Tray', 'toolbar=0,location=0,menubar=0');
+    await childWindow.document.write('<video id="video" muted autoplay></video>');
+    await childWindow.history.pushState({}, "Dice Tray - " + document.title, "/DiceTray");
+    childWindow.document.title = "Dice Tray - " + await document.title;
+    const body = await childWindow.document.querySelector('body');
+    const canvas = await document.querySelector('canvas');
+    const video = await childWindow.document.querySelector('video');
+    await body.setAttribute("id", 'diceTrayBody');
+    var stream = await canvas.captureStream(30);
+    video.srcObject = await stream;
 
-  if(typeof(childWindow) == 'undefined' || childWindow.closed)
-  {
-    //create new
-    var url = "https://www.dndbeyond.com/DiceTray";
-    childWindow = window.open('', 'Dice Tray');
-    var childUrl = childWindow.document.location.href;
-    var subChildStr = childUrl.substring(childUrl.length - 9)
-    console.log("Dice Tray window ends in " + subChildStr);
-    if(childWindow == null || subChildStr != "/DiceTray")
-    {
-      childWindow = window.open(url, 'Dice Tray');
-    }
-  }
-  else
-  {
-
-  }
 }
 
 setTimeout(function() {
-
-    OpenWindow();
-    if(childWindow.document.querySelector('video')==null){
-        childWindow.document.write('<video id="video" muted autoplay></video>');
-    }
-    const video = childWindow.document.querySelector('video');
-    const body = childWindow.document.querySelector('body');
-    const canvas = document.querySelector('canvas');
-    var stream = canvas.captureStream(30);
-    body.setAttribute("id", 'diceTrayBody');
-    childWindow.history.pushState({}, "Dice Tray - " + document.title, "/DiceTray");
-    childWindow.document.title = "Dice Tray - " + document.title;
-    video.srcObject = stream;
+    diceTray();
 }, 1000);
-
-
-
-
-
-
-
-
