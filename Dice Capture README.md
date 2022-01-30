@@ -1,4 +1,4 @@
-_Note:_ If you are having problems with dice not rendering behind the window see <a href="https://github.com/Azmoria/dndbeyonddark/blob/master/Dice%20Capture%20README.md#:~:text=You%20can%20put,field%20as%20below.">This section</a> for a work around.
+_Note:_ If you are having problems with dice not rendering behind the window see <a href="https://github.com/Azmoria/dndbeyonddark/blob/master/Dice%20Capture%20README.md#:~:text=You%20can%20put,hidden%20behind%20others.">This section</a> for a work around.
 
 [![Capture Dice from DNDBeyond for Streaming/OBS](https://user-images.githubusercontent.com/65363489/150996224-001f9634-2a69-435b-8a70-a2190cb8d500.png)](https://youtu.be/mpB4d-lpnRU")
 
@@ -31,7 +31,7 @@ You can put it behind the main window as long as a sliver of it is showing. Howe
 
 If you need to be able to be able to fully hide the dice tray behind the main window you can launch chrome with the --disable-backgrounding-occluded-windows flag in the shortcut target.
 
-To do this create a chrome shortcut. Right click it and go to properties. Add the flag at the end of the target field as below. Once you do this close all instances of chrome before launching with the newly created shortcut. This flag allows chrome to render windows fully hidden behind other.
+To do this create a chrome shortcut. Right click it and go to properties. Add the flag at the end of the target field as below. Once you do this close all instances of chrome before launching with the newly created shortcut. This flag allows chrome to render windows fully hidden behind others.
 
 ![image](https://user-images.githubusercontent.com/65363489/151623771-bab3c82e-e209-4af5-ace3-7fe890261a23.png)
 
