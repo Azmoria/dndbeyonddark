@@ -28,7 +28,9 @@ Replace the first line with the specific url for your character as so:
 
 and again further down as so:
 
-![image](https://user-images.githubusercontent.com/65363489/121752983-59eaa600-cadf-11eb-8840-3e65ba83e56b.png)
+![image](https://user-images.githubusercontent.com/65363489/151717813-2cd447d4-f264-4035-86f7-c29461459d3f.png)
+
+The second line is used for the dice tray popup compainion Javascript. You can find more info here: <a href="https://github.com/Azmoria/dndbeyonddark/blob/master/Dice%20Capture%20README.md">Dice Capture README.md</a>
 
 again you can remove the other lines if you wish they are for dice outside the character sheet.
 
@@ -41,7 +43,7 @@ I change this to my character name but you can name it whatever you would like. 
 Click save on the left.
 
 
-Go to the character sheet you made the theme for. Click on stylus again. Click the three dots beside the original theme and check Exclude the current URL.
+Go to the character sheet you made the theme for. Click on stylus again. Click the three dots beside the original theme and check Exclude the current URL. This will also exclude the dice tray if you have it installed. 
 
 ![image](https://user-images.githubusercontent.com/65363489/121786601-d8525100-cb8e-11eb-8505-c6d6c95489d0.png)
 
