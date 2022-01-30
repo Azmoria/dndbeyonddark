@@ -14,7 +14,7 @@ Next click "Write new style" on the left but make sure "as Usercss" is checked b
 
 Select all again and paste the original copied theme (CTRL+V)
 
-Scroll down to where it says https://www.dndbeyond.com/profile/.*/characters/\\d* 
+Scroll down to where it says https[]()://www[]().dndbeyond.com/profile/.*/characters/\\d* 
 
 ![image](https://user-images.githubusercontent.com/65363489/151717940-3edc60e0-3687-4c12-adc3-351cef938d71.png)
 
