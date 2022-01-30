@@ -1,3 +1,5 @@
+_Note:_ If you are having problems with dice not rendering behind the window see <a href="https://github.com/Azmoria/dndbeyonddark/blob/master/Dice%20Capture%20README.md#:~:text=You%20can%20put,field%20as%20below.">This section</a> for a work around.
+
 [![Capture Dice from DNDBeyond for Streaming/OBS](https://user-images.githubusercontent.com/65363489/150996224-001f9634-2a69-435b-8a70-a2190cb8d500.png)](https://youtu.be/mpB4d-lpnRU")
 
 
