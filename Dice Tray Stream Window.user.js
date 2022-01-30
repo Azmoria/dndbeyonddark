@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Dice Tray Stream Window
 // @namespace    Azmoria
-// @version      1.0.007
+// @version      1.0.008
 // @description  Stream your Dice to another window
 // @author       Azmoria
 // @downloadURL  https://github.com/Azmoria/dndbeyonddark/raw/master/Dice%20Tray%20Stream%20Window.user.js
@@ -21,15 +21,23 @@ async function diceTray() {
     await childWindow.document.write('<video id="video" muted autoplay></video>');
     await childWindow.history.pushState({}, "Dice Tray - " + document.title, "/DiceTray");
     childWindow.document.title = "Dice Tray - " + await document.title;
+    childWindow.resizeTo(window.innerWidth+20, window.innerHeight+70);
     const body = await childWindow.document.querySelector('body');
     const canvas = await document.querySelector('canvas');
     const video = await childWindow.document.querySelector('video');
     await body.setAttribute("id", 'diceTrayBody');
     var stream = await canvas.captureStream(30);
     video.srcObject = await stream;
-
+    await window.addEventListener('resize', function(event){
+        childWindow.resizeTo(window.innerWidth+20, window.innerHeight+70);
+    });
+    return childWindow;
 }
 
-setTimeout(function() {
-    diceTray();
+setTimeout(async function() {
+    childWindow = await diceTray();
 }, 1000);
+
+
+
+
