@@ -12,7 +12,7 @@ Then you will need an extention that allows you to install user.js.
  I recommend Tampermonkey. You can get it for <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en">Chrome</a> or <a href="https://addons.mozilla.org/en-CA/firefox/addon/tampermonkey/">Firefox</a>
 
 
-Then install the javascript by going <a href="https://github.com/Azmoria/dndbeyonddark/raw/master/Dice%20Tray%20Stream%20Window.user.js">here</a>
+Then install the javascript by going here: <a href="https://github.com/Azmoria/dndbeyonddark/raw/master/Dice%20Tray%20Stream%20Window.user.js">Dice Tray Stream Window.user.js</a>
 
 It will popup with the below. Click install.
 
