@@ -16,14 +16,14 @@ Select all again and paste the original copied theme (CTRL+V)
 
 Scroll down to where it says https://www.dndbeyond.com/profile/.*/characters/\\d* 
 
-![image](https://user-images.githubusercontent.com/65363489/121752766-df218b00-cade-11eb-95ef-a4e9e91b47e3.png)
+![image](https://user-images.githubusercontent.com/65363489/151717940-3edc60e0-3687-4c12-adc3-351cef938d71.png)
 
 
 You can delete the other line below by hitting the minus sign.
 
 Replace the first line with the specific url for your character as so:
 
-![image](https://user-images.githubusercontent.com/65363489/121752934-40495e80-cadf-11eb-853a-c8f69447c142.png)
+![image](https://user-images.githubusercontent.com/65363489/151717988-858ac274-35a8-4714-9b77-4ee0e819a096.png)
 
 
 and again further down as so:
