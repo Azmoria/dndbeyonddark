@@ -31,7 +31,7 @@ You can put it behind the main window as long as a sliver of it is showing. Howe
 
 If you need to be able to be able to fully hide the dice tray behind the main window you can launch chrome with the --disable-backgrounding-occluded-windows flag in the shortcut target.
 
-To do this create a chrome shortcut. Right click it and go to properties. Add the flag at the end of the target field as below.
+To do this create a chrome shortcut. Right click it and go to properties. Add the flag at the end of the target field as below. Once you do this close all instances of chrome before launching with the newly created shortcut. This flag allows chrome to render windows fully hidden behind other.
 
 ![image](https://user-images.githubusercontent.com/65363489/151623771-bab3c82e-e209-4af5-ace3-7fe890261a23.png)
 
