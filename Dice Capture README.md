@@ -25,17 +25,18 @@ You can change the background in the character sheet theme options. The options 
  ![image](https://user-images.githubusercontent.com/65363489/151418937-3e1a7e51-1ed7-49f6-ad6e-166acff479cd.png)
 
 
-**Pull the dice tray tab into a seperate window.** You can put it behind the main window as long as a sliver of it is showing. However it will **not** render in chrome if the whole dice tray is hidden behind another window. Chrome does this to save computer resources. Firefox will be implementing this feature as well at some point. 
+You can put it behind the main window as long as a sliver of it is showing. However it will **not** render in chrome if the whole dice tray is hidden behind another window. Chrome does this to save computer resources. Firefox will be implementing this feature as well at some point. 
 
 If you need to be able to be able to fully hide the dice tray behind the main window you can launch chrome with the --disable-backgrounding-occluded-windows flag in the shortcut target.
 
+To do this create a chrome shortcut. Right click it and go to properties. Add the flag at the end of the target field as below.
+
 ![image](https://user-images.githubusercontent.com/65363489/151623771-bab3c82e-e209-4af5-ace3-7fe890261a23.png)
 
-To do this create a chrome shortcut. Right click it and go to properties. Add the flag at the end of the target field as above.
 
 
 
-Roll dice in the oringal window.
+You should now be able to see the dice in the dice tray when you roll dice in the oringal window.
 
 ![image](https://user-images.githubusercontent.com/65363489/150919806-f34d6935-2fd9-46a3-a255-ed7001ea2802.png)
 
