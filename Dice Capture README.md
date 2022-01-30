@@ -33,7 +33,7 @@ To do this create a chrome shortcut. Right click it and go to properties. Add th
 
 
 
-Roll dice in the oringal window. You may have to adjust your dice tray window to fit the rolling area - especially if you change the size of your main window afterwards. 
+Roll dice in the oringal window.
 
 ![image](https://user-images.githubusercontent.com/65363489/150919806-f34d6935-2fd9-46a3-a255-ed7001ea2802.png)
 
