@@ -32,7 +32,7 @@ and again further down as so:
 
 The second line is used for the dice tray popup compainion Javascript. You can find more info here: <a href="https://github.com/Azmoria/dndbeyonddark/blob/master/Dice%20Capture%20README.md">Dice Capture README.md</a>
 
-again you can remove the other lines if you wish they are for dice outside the character sheet.
+again you can remove the other lines they are for dice outside the character sheet.
 
 You will also have to change the name of the file at the very top beside @name before it will let you save it. 
 I change this to my character name but you can name it whatever you would like. I also remove the update url to make sure it does not automatically update although I don't think this is required. I do it anyway as I've had them accidently update and have to redo these steps.
