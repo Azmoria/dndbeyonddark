@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.131
+@version      1.3.132
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -486,7 +486,7 @@ EOT;
        background-image: var(--custom-capture-background) !important;
     EOT;
 }
-@var color captureBackground "JS Dice Tray Background Color" #090
+@var color captureBackground "JS Dice Tray Background Color - Default #009933 for websafe green screen" #009933
 @var text customCaptureBackground "Custom Background url for JS Dice Tray; Include url() eg. url(http://imgur.com/img.jpg)" "url()"
 
 
