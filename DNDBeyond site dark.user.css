@@ -2006,6 +2006,14 @@ div#site{
     }
 
 
+	.listing .info .row.item-name .name .varies,
+	.varies {
+		color: #AAAAAA !important;
+	}
+	.listing .info .row.item-name .name .unknown-rarity,
+	.unknown-rarity {
+		color: #666666 !important;
+	}
 	.listing .info .row.item-name .name .very-rare,
 	.very-rare {
 		color: #9810E0 !important;
