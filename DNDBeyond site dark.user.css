@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.171
+@version      1.2.172
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -2005,43 +2005,51 @@ div#site{
         color: #fff !important;
     }
     .listing .info .row.item-name .name .varies,
-	.varies {
+	.varies,
+    .content-container .varies{
         color: transparent;
         background-image: linear-gradient(to right, #1fc219, #4990e2, #9810e0, #fea227);
         -webkit-background-clip: text;
 	}
 	.listing .info .row.item-name .name .unknown-rarity,
-	.unknown-rarity {
+	.unknown-rarity,
+    .content-container .unknown-rarity{
 		color: transparent;
         background-image: linear-gradient(to top, /*[[fontColor]]*/ 0%, #8693ab 74%);
         -webkit-background-clip: text;
 	}
 
 	.listing .info .row.item-name .name .very-rare,
-	.very-rare {
+	.very-rare,
+    .content-container .very-rare {
 		color: #9810E0 !important;
 	}
 	.listing .info .row.item-name .name .rare,
-	.rare {
+	.rare,
+    .content-container .rare {
             color: #4990E2 !important;
 	}
 	.listing .info .row.item-name .name .uncommon,
-	.uncommon {
+	.uncommon,
+    .content-container .uncommon {
 		color: #1FC219 !important;
 	}
 	.listing .info .row.item-name .name .legendary,
-	.legendary {
+	.legendary,
+    .content-container .legendary {
 		color: #FEA227 !important;
 	}
 	.listing .info .row.item-name .name .common,
 	.common,
 	a.button,
-	a.u-button {
+	a.u-button,
+    .content-container .common {
 		color: /*[[fontColor]]*/
 		!important;
 	}
 	.listing .info .row.item-name .name .artifact,
-	.artifact {
+	.artifact,
+    .content-container .artifact {
 		color: #BE8972 !important;
 	}
       body.body-forum .single-column #content .p-forum-a .p-comment-post .u-dropDown span.user-role-moderator{
