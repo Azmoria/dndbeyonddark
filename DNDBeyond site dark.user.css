@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.172
+@version      1.2.173
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -941,7 +941,8 @@ div#site{
     #splash,
     .mce-container-body,
     .combatant-card--character.in-combat .combatant-card__right-bit,
-    .combatant-card--monster.in-combat .combatant-card__right-bit
+    .combatant-card--monster.in-combat .combatant-card__right-bit,
+    .compendium-disclaimer
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
@@ -1001,7 +1002,8 @@ div#site{
     .p-comments-b .p-comment-container, 
     .body-forum .comment-preview li .p-comment-container, 
     .body-forum-search .p-comments-a .p-comment-container,
-    .p-comment-sig{
+    .p-comment-sig,
+    .compendium-disclaimer{
         border-color: /*[[borderColor]]*/ !important;   
     }
     
