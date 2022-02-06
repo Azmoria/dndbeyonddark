@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.170
+@version      1.2.171
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -2004,7 +2004,18 @@ div#site{
     a.user-interactions-quick-link .option-count{
         color: #fff !important;
     }
-
+    .listing .info .row.item-name .name .varies,
+	.varies {
+        color: transparent;
+        background-image: linear-gradient(to right, #1fc219, #4990e2, #9810e0, #fea227);
+        -webkit-background-clip: text;
+	}
+	.listing .info .row.item-name .name .unknown-rarity,
+	.unknown-rarity {
+		color: transparent;
+        background-image: linear-gradient(to top, /*[[fontColor]]*/ 0%, #8693ab 74%);
+        -webkit-background-clip: text;
+	}
 
 	.listing .info .row.item-name .name .very-rare,
 	.very-rare {
@@ -2012,7 +2023,7 @@ div#site{
 	}
 	.listing .info .row.item-name .name .rare,
 	.rare {
-		color: #4990E2 !important;
+            color: #4990E2 !important;
 	}
 	.listing .info .row.item-name .name .uncommon,
 	.uncommon {
