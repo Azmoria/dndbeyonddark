@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.173
+@version      1.2.174
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -3406,5 +3406,40 @@ div#site{
         color: /*[[fontColor]]*/;
     }
   
+    
+}
+@-moz-document regexp("https://www.dndbeyond.com/sources/moot/.*"), regexp("https://www.dndbeyond.com/sources/sacoc/.*"), regexp("https://www.dndbeyond.com/sources/dmg/.*"), regexp("https://www.dndbeyond.com/sources/phb/.*"), regexp("https://www.dndbeyond.com/sources/ftod/.*"), regexp("https://www.dndbeyond.com/sources/vrgtr/.*"), regexp("https://www.dndbeyond.com/sources/twbtw/.*"), regexp("https://www.dndbeyond.com/sources/cm/.*") {
+
+    
+    #site-main,
+    body.responsive-enabled #site #site-main .container #content,
+    .secondary-content,
+    .compendium-hr{
+        background: none !important;   
+    }
+       	.p-article-content h1:first-of-type,
+        .p-article-content p:first-of-type{	text-shadow:
+      	 1px 1px /*[[backgroundColor]]*/,
+     	-1px -1px 0 /*[[backgroundColor]]*/,  
+     	 1px -1px 0 /*[[backgroundColor]]*/,
+     	 -1px 1px 0 /*[[backgroundColor]]*/,
+      	 1px 1px 0 /*[[backgroundColor]]*/ !important;
+    }
+   @media(min-width:1024px){
+    body{
+        background:var(--theme-page-bg-image-1024) no-repeat center 114px, /*[[backgroundColor]]*/ !important;
+    }
+}
+@media(min-width:1921px){
+    body{
+        background:var(--theme-page-bg-image-1921) no-repeat center 114px, /*[[backgroundColor]]*/ !important;
+    }
+}
+@media(min-width:2561px){
+    body{
+        background:var(--theme-page-bg-image-2561) no-repeat center 114px, /*[[backgroundColor]]*/ !important;
+    }
+}
+    
     
 }
