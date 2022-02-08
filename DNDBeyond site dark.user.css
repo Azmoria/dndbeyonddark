@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.177
+@version      1.2.178
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -3408,7 +3408,7 @@ div#site{
   
     
 }
-@-moz-document regexp("https://www.dndbeyond.com/sources/moot/.*"), regexp("https://www.dndbeyond.com/sources/sacoc/.*"), regexp("https://www.dndbeyond.com/sources/ftod/.*"), regexp("https://www.dndbeyond.com/sources/vrgtr/.*"), regexp("https://www.dndbeyond.com/sources/twbtw/.*"), regexp("https://www.dndbeyond.com/sources/cm/.*"), regexp("https://www.dndbeyond.com/sources/tcoe/.*") {
+@-moz-document regexp("https://www.dndbeyond.com/sources/moot/.*"), regexp("https://www.dndbeyond.com/sources/sacoc/.*"), regexp("https://www.dndbeyond.com/sources/ftod/.*"), regexp("https://www.dndbeyond.com/sources/vrgtr/.*"), regexp("https://www.dndbeyond.com/sources/twbtw/.*"), regexp("https://www.dndbeyond.com/sources/cm/.*"), regexp("https://www.dndbeyond.com/sources/egtw/.*") {
 
     
     #site-main,
@@ -3428,17 +3428,17 @@ div#site{
     
 @media(min-width:1024px){
     body{
-        background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), var(--theme-page-bg-image-1024) no-repeat center 114px, /*[[backgroundColor]]*/ !important;        
+        background: var(--theme-page-bg-image-1024) no-repeat center 114px, /*[[backgroundColor]]*/ !important;        
     }
 }
 @media(min-width:1921px){
     body{
-        background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), var(--theme-page-bg-image-1921) no-repeat center 114px, /*[[backgroundColor]]*/ !important;
+        background: var(--theme-page-bg-image-1921) no-repeat center 114px, /*[[backgroundColor]]*/ !important;
     }
 }
 @media(min-width:2561px){
     body{
-        background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), var(--theme-page-bg-image-2561) no-repeat center 114px, /*[[backgroundColor]]*/ !important;
+        background: var(--theme-page-bg-image-2561) no-repeat center 114px, /*[[backgroundColor]]*/ !important;
     }
 }
   body{
