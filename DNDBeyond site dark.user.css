@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.179
+@version      1.2.180
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -3448,7 +3448,7 @@ div#site{
   
     
 }
-@-moz-document regexp("https://www.dndbeyond.com/sources/moot/.*"), regexp("https://www.dndbeyond.com/sources/sacoc/.*"), regexp("https://www.dndbeyond.com/sources/ftod/.*"), regexp("https://www.dndbeyond.com/sources/vrgtr/.*"), regexp("https://www.dndbeyond.com/sources/twbtw/.*"), regexp("https://www.dndbeyond.com/sources/cm/.*"), regexp("https://www.dndbeyond.com/sources/egtw/.*") {
+@-moz-document regexp("https://www.dndbeyond.com/sources/moot/.*"), regexp("https://www.dndbeyond.com/sources/sacoc/.*"), regexp("https://www.dndbeyond.com/sources/ftod/.*"), regexp("https://www.dndbeyond.com/sources/vrgtr/.*"), regexp("https://www.dndbeyond.com/sources/twbtw/.*"), regexp("https://www.dndbeyond.com/sources/cm/.*"), regexp("https://www.dndbeyond.com/sources/egtw/.*"), regexp("https://www.dndbeyond.com/sources/idrotf/.*") {
 
     
 /*[[compendiumBackgrounds]]*/
