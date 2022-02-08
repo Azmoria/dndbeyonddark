@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.178
+@version      1.2.179
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -344,6 +344,45 @@ none EOT;
 }
 @var range borderWidth "Border Width" [1, 1, 10, 1, 'px']
 @var color scrollbarColor "Scrollbar Color" #88bcd6
+@advanced dropdown compendiumBackgrounds "Compendium Backgrounds where compatiable"{
+on "ON" <<<EOT
+    #site-main,
+    body.responsive-enabled #site #site-main .container #content,
+    .secondary-content,
+    .compendium-hr{
+        background: none !important;   
+    }
+       	.p-article-content h1:first-of-type,
+        .p-article-content p:first-of-type{	text-shadow:
+      	 1px 1px var(--background-color),
+     	-1px -1px 0 var(--background-color),  
+     	 1px -1px 0 var(--background-color),
+     	 -1px 1px 0 var(--background-color),
+      	 1px 1px 0 var(--background-color) !important;
+    }
+    
+@media(min-width:1024px){
+    body{
+        background: var(--theme-page-bg-image-1024) no-repeat center 114px, var(--background-color) !important;        
+    }
+}
+@media(min-width:1921px){
+    body{
+        background: var(--theme-page-bg-image-1921) no-repeat center 114px, var(--background-color) !important;
+    }
+}
+@media(min-width:2561px){
+    body{
+        background: var(--theme-page-bg-image-2561) no-repeat center 114px, var(--background-color) !important;
+    }
+}
+  body{
+        background-color: var(--background-color) !important;
+    }  
+EOT;
+off "OFF" <<<EOT
+EOT;
+}
 @advanced dropdown combatTracker "Combat Tracker Style"{
 equal "Equal Sizing" <<<EOT
     .combatant-summary__avatar{
@@ -557,6 +596,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     --font-color: /*[[fontColor]]*/;
     --border-color: /*[[borderColor]]*/;
     --forum-secondary-color: /*[[forumSecondaryColor]]*/;
+    --background-color: /*[[backgroundColor]]*/;
     }
         
 div#site{
@@ -3411,38 +3451,6 @@ div#site{
 @-moz-document regexp("https://www.dndbeyond.com/sources/moot/.*"), regexp("https://www.dndbeyond.com/sources/sacoc/.*"), regexp("https://www.dndbeyond.com/sources/ftod/.*"), regexp("https://www.dndbeyond.com/sources/vrgtr/.*"), regexp("https://www.dndbeyond.com/sources/twbtw/.*"), regexp("https://www.dndbeyond.com/sources/cm/.*"), regexp("https://www.dndbeyond.com/sources/egtw/.*") {
 
     
-    #site-main,
-    body.responsive-enabled #site #site-main .container #content,
-    .secondary-content,
-    .compendium-hr{
-        background: none !important;   
-    }
-       	.p-article-content h1:first-of-type,
-        .p-article-content p:first-of-type{	text-shadow:
-      	 1px 1px /*[[backgroundColor]]*/,
-     	-1px -1px 0 /*[[backgroundColor]]*/,  
-     	 1px -1px 0 /*[[backgroundColor]]*/,
-     	 -1px 1px 0 /*[[backgroundColor]]*/,
-      	 1px 1px 0 /*[[backgroundColor]]*/ !important;
-    }
-    
-@media(min-width:1024px){
-    body{
-        background: var(--theme-page-bg-image-1024) no-repeat center 114px, /*[[backgroundColor]]*/ !important;        
-    }
-}
-@media(min-width:1921px){
-    body{
-        background: var(--theme-page-bg-image-1921) no-repeat center 114px, /*[[backgroundColor]]*/ !important;
-    }
-}
-@media(min-width:2561px){
-    body{
-        background: var(--theme-page-bg-image-2561) no-repeat center 114px, /*[[backgroundColor]]*/ !important;
-    }
-}
-  body{
-        background-color: /*[[backgroundColor]]*/ !important;
-    }  
+/*[[compendiumBackgrounds]]*/
     
 }
