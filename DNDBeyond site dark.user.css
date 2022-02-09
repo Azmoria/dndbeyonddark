@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.181
+@version      1.2.182
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -1144,7 +1144,7 @@ div#site{
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     }
 
-    .static-container-details .content-container table tbody tr:nth-child(odd) td td,
+    .static-container-details .content-container table tbody tr:nth-child(odd) td,
     table.table-compendium>tbody>tr:nth-child(odd) td,
     .body-page .p-article-a .p-article-content table tbody tr:nth-child(odd) td,
     .more-info-content table tbody tr:nth-child(odd) td,
