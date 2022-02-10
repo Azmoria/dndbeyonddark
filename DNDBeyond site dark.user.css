@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.182
+@version      1.2.183
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -348,6 +348,8 @@ none EOT;
 @var color scrollbarColor "Scrollbar Color" #88bcd6
 @advanced dropdown compendiumBackgrounds "Compendium Backgrounds where compatiable"{
 on "ON" <<<EOT
+@-moz-document regexp("https://www.dndbeyond.com/sources/moot/.*"), regexp("https://www.dndbeyond.com/sources/sacoc/.*"), regexp("https://www.dndbeyond.com/sources/ftod/.*"), regexp("https://www.dndbeyond.com/sources/vrgtr/.*"), regexp("https://www.dndbeyond.com/sources/twbtw/.*"), regexp("https://www.dndbeyond.com/sources/cm/.*"), regexp("https://www.dndbeyond.com/sources/egtw/.*"), regexp("https://www.dndbeyond.com/sources/idrotf/.*") {
+
     #site-main,
     body.responsive-enabled #site #site-main .container #content,
     .secondary-content,
@@ -362,25 +364,99 @@ on "ON" <<<EOT
      	 -1px 1px 0 var(--background-color),
       	 1px 1px 0 var(--background-color) !important;
     }
-    
-@media(min-width:1024px){
-    body{
-        background: var(--theme-page-bg-image-1024) no-repeat center 114px, var(--background-color) !important;        
+
+    @media(min-width:1024px){
+        body{
+            background: var(--theme-page-bg-image-1024) no-repeat center 114px, var(--background-color) !important;        
+        }
     }
-}
-@media(min-width:1921px){
-    body{
-        background: var(--theme-page-bg-image-1921) no-repeat center 114px, var(--background-color) !important;
+    @media(min-width:1921px){
+        body{
+            background: var(--theme-page-bg-image-1921) no-repeat center 114px, var(--background-color) !important;
+        }
     }
-}
-@media(min-width:2561px){
-    body{
-        background: var(--theme-page-bg-image-2561) no-repeat center 114px, var(--background-color) !important;
+    @media(min-width:2561px){
+        body{
+            background: var(--theme-page-bg-image-2561) no-repeat center 114px, var(--background-color) !important;
+        }
     }
-}
   body{
         background-color: var(--background-color) !important;
-    }  
+    } 
+}
+@-moz-document regexp("https://www.dndbeyond.com/sources/moot"), regexp("https://www.dndbeyond.com/sources/twbtw"), regexp("https://www.dndbeyond.com/sources/tcoe") {
+    #site-main,
+    body.responsive-enabled #site #site-main .container #content,
+    .secondary-content,
+    .compendium-hr,
+    html body.hide-ads #site-main #footer-push{
+        background: none !important;   
+    }
+
+ .compendium-toc-block-header:before, 
+    .compendium-toc-full-header:before, 
+    .body-category-details .section-compendium-content 
+    .page-header__primary:before, 
+    .compendium-toc-block-header h2:before{
+        display: none !important; 
+    }
+    .compendium-toc-block-header:after, 
+    .compendium-toc-full-header:after, 
+    .body-category-details .section-compendium-content .page-header__primary:after, 
+    .compendium-toc-block-header h2:after{
+        left: 0px; 
+        width: 100%;
+        background-size: 100% 100% !important;
+        opacity: 1;
+    }
+
+    .compendium-toc-full-text,
+    .compendium-toc-blockquote{
+        background-color: transparent !important;
+    }
+
+    #site .compendium-toc-full-text:before,
+    #site .compendium-toc-blockquote:before{
+        content: '';
+        display: block;
+        position: absolute;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        height: calc(100% - 11px);
+        opacity:0.8;
+        background: var(--background-color);
+        z-index: -1;
+    }
+    #site .compendium-toc-blockquote:before{
+        height: 100%
+    }
+
+
+}
+@-moz-document regexp("https://www.dndbeyond.com/sources/moot") {
+    body{
+        background: url(https://media.dndbeyond.com/compendium-images/moot/ds6d2NLXmv1wnY8q/MOoT-ToC-1080p.png) no-repeat center 114px, var(--background-color) !important;
+        background-size: cover !important;
+    }
+
+}
+
+@-moz-document regexp("https://www.dndbeyond.com/sources/twbtw") {
+    body{
+        background: url(https://media.dndbeyond.com/compendium-images/twbtw/JtUXxjur9QWtb7E3/TWBtW-ToC-2k.png) no-repeat center 114px, var(--background-color) !important;
+        background-size: cover !important;
+    }
+}
+
+@-moz-document regexp("https://www.dndbeyond.com/sources/tcoe") {
+    body{
+         background: url(https://media.dndbeyond.com/compendium-images/tcoe/0gqawlEa2tjXGxpc/toc2-tcoe-2k.png) no-repeat center 114px, var(--background-color) !important;
+        background-size: cover !important;
+    }
+}
+
 EOT;
 off "OFF" <<<EOT
 EOT;
@@ -3484,11 +3560,10 @@ div#site{
         color: /*[[fontColor]]*/;
     }
   
-    
-}
-@-moz-document regexp("https://www.dndbeyond.com/sources/moot/.*"), regexp("https://www.dndbeyond.com/sources/sacoc/.*"), regexp("https://www.dndbeyond.com/sources/ftod/.*"), regexp("https://www.dndbeyond.com/sources/vrgtr/.*"), regexp("https://www.dndbeyond.com/sources/twbtw/.*"), regexp("https://www.dndbeyond.com/sources/cm/.*"), regexp("https://www.dndbeyond.com/sources/egtw/.*"), regexp("https://www.dndbeyond.com/sources/idrotf/.*") {
+        
 
-    
-/*[[compendiumBackgrounds]]*/
-    
 }
+
+
+    /*[[compendiumBackgrounds]]*/
+
