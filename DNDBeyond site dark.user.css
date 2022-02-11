@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.185
+@version      1.2.186
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -1167,7 +1167,8 @@ div#site{
     body.body-privatemessage .single-column #content .u-dropDown .u-dropDownMenu,
     .comment .forum-post-body-content .spoiler,
     .p-comment-content .spoiler,
-    body.body-forum blockquote
+    body.body-forum blockquote,
+    #site .forum-post-content
     {
         background-color: /*[[forumSecondaryColor]]*/ !important;
     } 
