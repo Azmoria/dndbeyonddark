@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.187
+@version      1.2.188
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -1663,7 +1663,8 @@ div#site{
     .encounter-builder-page em a,
     .post-excerpt__title a,
     .ddb-campaigns-character-card-footer-links a,
-    .ddb-campaigns-character-card-footer-links div:not(:last-of-type)>button
+    .ddb-campaigns-character-card-footer-links div:not(:last-of-type)>button,
+    .monster-row__stat-block a
     {
 		color: /*[[linkColor]]*/ !important
 	}
