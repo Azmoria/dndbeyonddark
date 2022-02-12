@@ -347,7 +347,7 @@ none EOT;
 }
 @var range borderWidth "Border Width" [1, 1, 10, 1, 'px']
 @var color scrollbarColor "Scrollbar Color" #88bcd6
-@advanced dropdown compendiumBackgrounds "Compendium Backgrounds where compatiable"{
+@advanced dropdown compendiumBackgrounds "Compendium Backgrounds where compatible"{
 on "ON" <<<EOT
 @-moz-document regexp("https://www.dndbeyond.com/sources/moot/.*"), regexp("https://www.dndbeyond.com/sources/sacoc/.*"), regexp("https://www.dndbeyond.com/sources/ftod/.*"), regexp("https://www.dndbeyond.com/sources/vrgtr/.*"), regexp("https://www.dndbeyond.com/sources/twbtw/.*"), regexp("https://www.dndbeyond.com/sources/cm/.*"), regexp("https://www.dndbeyond.com/sources/egtw/.*"), regexp("https://www.dndbeyond.com/sources/idrotf/.*"), regexp("https://www.dndbeyond.com/sources/dmg/.*"), regexp("https://www.dndbeyond.com/sources/phb/.*"), regexp("https://www.dndbeyond.com/sources/erftlw/.*") {
 
@@ -762,6 +762,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     --border-color: /*[[borderColor]]*/;
     --forum-secondary-color: /*[[forumSecondaryColor]]*/;
     --background-color: /*[[backgroundColor]]*/;
+    --transparency-color: /*[[transparencyBackgroundColor]]*/;
     }
         
 div#site{
@@ -1312,8 +1313,9 @@ div#site{
     table.table-compendium>tbody>tr:nth-child(odd) td,
     .body-page .p-article-a .p-article-content table tbody tr:nth-child(odd) td,
     .more-info-content table tbody tr:nth-child(odd) td,
-    .more-info-body-description table tbody tr:nth-child(odd) td{ 
-        background: none;
+    .more-info-body-description table tbody tr:nth-child(odd) td,
+    #site .p-article-content table tbody tr:nth-child(odd) td { 
+        background: none !important;
         backdrop-filter: brightness(0.8);      
     }
     
