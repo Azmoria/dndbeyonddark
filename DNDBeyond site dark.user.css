@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.192
+@version      1.2.194
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -455,12 +455,14 @@ on "ON" <<<EOT
     }
 
     .compendium-toc-full-text,
-    .compendium-toc-blockquote{
+    .compendium-toc-blockquote,
+    .compendium-toc-block-text{
         background-color: transparent !important;
     }
 
     #site .compendium-toc-full-text:before,
-    #site .compendium-toc-blockquote:before{
+    #site .compendium-toc-blockquote:before,
+    #site .compendium-toc-block-text:before{
         content: '';
         display: block;
         position: absolute;
@@ -472,6 +474,10 @@ on "ON" <<<EOT
         opacity:0.8;
         background: var(--background-color);
         z-index: -1;
+    }
+
+    #site .compendium-toc-block-text:before{
+        margin: 0px 10px;
     }
     #site .compendium-toc-blockquote:before{
         height: 100%
@@ -2111,7 +2117,9 @@ div#site{
     body.body-forum .single-column #content .p-forum-a .p-comment-sig table:not(.mceLayout):not(.mceToolbar):not(.mceListBox):not(.mceSplitButton):not(.forum-listing):not(.forum-thread-listing) tr th{
         border: none !important;   
     }
-
+    .compendium-toc-block-text{
+        height: 100%;   
+    }
     .Flowchart-Block-Linked::before{
         height:50px;
         margin-top: -60px;
