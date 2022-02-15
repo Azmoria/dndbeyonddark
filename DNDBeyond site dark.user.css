@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.201
+@version      1.2.202
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -913,7 +913,7 @@ on "ON" <<<EOT
         content: '';
         position: fixed;
         top: 0;
-        bottom: 0px;
+        bottom: -65px;
         left:0;
         right:0; 
         z-index: -1;
