@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.197
+@version      1.2.198
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -573,7 +573,7 @@ on "ON" <<<EOT
     }
 }
 
-@-moz-document regexp("https://www.dndbeyond.com/sources/ggtr/.*"), regexp("https://www.dndbeyond.com/sources/scag/.*"), regexp("https://www.dndbeyond.com/sources/mtof/.*"), regexp("https://www.dndbeyond.com/sources/ttp/.*"), regexp("https://www.dndbeyond.com/sources/vgtm/.*"), regexp("https://www.dndbeyond.com/sources/wgte/.*"), regexp("https://www.dndbeyond.com/sources/xgte/.*"), regexp("https://www.dndbeyond.com/sources/bgdia/.*"), regexp("https://www.dndbeyond.com/sources/cos/.*"), regexp("https://www.dndbeyond.com/sources/dc/.*"), regexp("https://www.dndbeyond.com/sources/wa/.*"), regexp("https://www.dndbeyond.com/sources/gos/.*"), regexp("https://www.dndbeyond.com/sources/hotdq/.*"), regexp("https://www.dndbeyond.com/sources/rot/.*"), regexp("https://www.dndbeyond.com/sources/hftt/.*"), regexp("https://www.dndbeyond.com/sources/lr/.*"), regexp("https://www.dndbeyond.com/sources/llok/.*"), regexp("https://www.dndbeyond.com/sources/lmop/.*"), regexp("https://www.dndbeyond.com/sources/skt/.*"), regexp("https://www.dndbeyond.com/sources/pota/.*"), regexp("https://www.dndbeyond.com/sources/ddia-mord/.*"), regexp("https://www.dndbeyond.com/sources/toa/.*"), regexp("https://www.dndbeyond.com/sources/wdh/.*"), regexp("https://www.dndbeyond.com/sources/wdotmm/.*"), regexp("https://www.dndbeyond.com/sources/tftyp/.*") {
+@-moz-document regexp("https://www.dndbeyond.com/sources/ggtr/.*"), regexp("https://www.dndbeyond.com/sources/scag/.*"), regexp("https://www.dndbeyond.com/sources/mtof/.*"), regexp("https://www.dndbeyond.com/sources/ttp/.*"), regexp("https://www.dndbeyond.com/sources/vgtm/.*"), regexp("https://www.dndbeyond.com/sources/wgte/.*"), regexp("https://www.dndbeyond.com/sources/xgte/.*"), regexp("https://www.dndbeyond.com/sources/bgdia/.*"), regexp("https://www.dndbeyond.com/sources/cos/.*"), regexp("https://www.dndbeyond.com/sources/dc/.*"), regexp("https://www.dndbeyond.com/sources/wa/.*"), regexp("https://www.dndbeyond.com/sources/gos/.*"), regexp("https://www.dndbeyond.com/sources/hotdq/.*"), regexp("https://www.dndbeyond.com/sources/rot/.*"), regexp("https://www.dndbeyond.com/sources/hftt/.*"), regexp("https://www.dndbeyond.com/sources/lr/.*"), regexp("https://www.dndbeyond.com/sources/llok/.*"), regexp("https://www.dndbeyond.com/sources/lmop/.*"), regexp("https://www.dndbeyond.com/sources/skt/.*"), regexp("https://www.dndbeyond.com/sources/pota/.*"), regexp("https://www.dndbeyond.com/sources/ddia-mord/.*"), regexp("https://www.dndbeyond.com/sources/toa/.*"), regexp("https://www.dndbeyond.com/sources/wdh/.*"), regexp("https://www.dndbeyond.com/sources/wdotmm/.*"), regexp("https://www.dndbeyond.com/sources/tftyp/.*"), regexp("https://www.dndbeyond.com/sources/mm/.*") {
 
     #site-main,
     body.responsive-enabled #site #site-main .container #content,
@@ -605,7 +605,15 @@ on "ON" <<<EOT
     }
 }
 
-
+@-moz-document regexp("https://www.dndbeyond.com/sources/mm/.*"){
+  body:before{
+        -webkit-mask-image: url(https://raw.githubusercontent.com/Azmoria/dndbeyonddark/master/Images/Dark%20Images/mm-background-mask.png);
+        background: url("https://media-waterdeep.cursecdn.com/attachments/0/517/mmintro4k.jpg") no-repeat 0 0px, var(--background-color) !important;
+        background-size: cover !important;
+        -webkit-mask-size: cover;
+        -webkit-mask-position: 0px 0px;
+    }
+}
 @-moz-document regexp("https://www.dndbeyond.com/sources/imr/.*"), regexp("https://www.dndbeyond.com/sources/mffv1/.*"), regexp("https://www.dndbeyond.com/sources/oga/.*") {
     #site-main,
     body.responsive-enabled #site #site-main .container #content,
@@ -628,12 +636,12 @@ on "ON" <<<EOT
         background-size: cover !important;
     }
     body.body-page.section-mordenkainens-fiendish-folio-volume-1 {
-        background: url("https://media-waterdeep.cursecdn.com/attachments/7/603/mff1_source-detail-page-background-xl.png") no-repeat center 114px, var(--background-color) important;      
+        background: url("https://media-waterdeep.cursecdn.com/attachments/7/603/mff1_source-detail-page-background-xl.png") no-repeat center 114px, var(--background-color) important;   
         background-size: cover !important;
     }
 
     body.body-page.section-one-grung-above {
-        background: url("https://media-waterdeep.cursecdn.com/attachments/7/750/oga-source-detail-page-background2-large.png") no-repeat center 114px, var(--background-color) !important; 
+        background: url("https://media-waterdeep.cursecdn.com/attachments/7/750/oga-source-detail-page-background2-large.png") no-repeat center 114px, var(--background-color) !important;
         background-size: cover !important;
     }
 }
