@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.195
+@version      1.2.196
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -349,7 +349,7 @@ none EOT;
 @var color scrollbarColor "Scrollbar Color" #88bcd6
 @advanced dropdown compendiumBackgrounds "Compendium Backgrounds where compatible"{
 on "ON" <<<EOT
-@-moz-document regexp("https://www.dndbeyond.com/sources/moot/.*"), regexp("https://www.dndbeyond.com/sources/sacoc/.*"), regexp("https://www.dndbeyond.com/sources/ftod/.*"), regexp("https://www.dndbeyond.com/sources/vrgtr/.*"), regexp("https://www.dndbeyond.com/sources/twbtw/.*"), regexp("https://www.dndbeyond.com/sources/cm/.*"), regexp("https://www.dndbeyond.com/sources/egtw/.*"), regexp("https://www.dndbeyond.com/sources/idrotf/.*"), regexp("https://www.dndbeyond.com/sources/dmg/.*"), regexp("https://www.dndbeyond.com/sources/phb/.*"), regexp("https://www.dndbeyond.com/sources/erftlw/.*"), regexp("https://www.dndbeyond.com/sources/ddvram/.*"), regexp("https://www.dndbeyond.com/classes/.*") {
+@-moz-document regexp("https://www.dndbeyond.com/sources/moot/.*"), regexp("https://www.dndbeyond.com/sources/sacoc/.*"), regexp("https://www.dndbeyond.com/sources/ftod/.*"), regexp("https://www.dndbeyond.com/sources/vrgtr/.*"), regexp("https://www.dndbeyond.com/sources/twbtw/.*"), regexp("https://www.dndbeyond.com/sources/cm/.*"), regexp("https://www.dndbeyond.com/sources/egtw/.*"), regexp("https://www.dndbeyond.com/sources/idrotf/.*"), regexp("https://www.dndbeyond.com/sources/dmg/.*"), regexp("https://www.dndbeyond.com/sources/phb/.*"), regexp("https://www.dndbeyond.com/sources/erftlw/.*"), regexp("https://www.dndbeyond.com/sources/ddvram/.*"), regexp("https://www.dndbeyond.com/classes/.*"), regexp("https://www.dndbeyond.com/races/.*") {
 
     #site-main,
     body.responsive-enabled #site #site-main .container #content,
@@ -498,6 +498,78 @@ on "ON" <<<EOT
         background-size: cover !important;      
     }
 }
+
+
+@-moz-document regexp("https://www.dndbeyond.com/races/.*"){
+
+    body:before{
+        content:'';
+        top:0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        position:absolute;
+        display: block;
+        -webkit-mask-image: url(https://raw.githubusercontent.com/Azmoria/dndbeyonddark/master/Images/Dark%20Images/race-background-mask.png);
+        -webkit-mask-repeat: no-repeat !important;
+        -webkit-mask-size: cover;
+        -webkit-mask-position: center 114px;
+    }
+    .body-rpgrace-details-human:before{
+        background:url("https://media-waterdeep.cursecdn.com/attachments/0/321/human4k.jpg") no-repeat center 114px, var(--background-color) !important;
+        background-size: cover !important;      
+    }
+    .body-rpgrace-details-dragonborn:before{
+        background: url("https://media-waterdeep.cursecdn.com/attachments/0/290/dragonborn4k.jpg") no-repeat center 114px, var(--background-color) !important;
+        background-size: cover !important;      
+    }
+    .body-rpgrace-details-half-elf:before{
+        background:url("https://media-waterdeep.cursecdn.com/attachments/0/312/half-elf4k.jpg") no-repeat center 114px, var(--background-color) !important;
+        background-size: cover !important;      
+    }
+    .body-rpgrace-details-half-orc:before{
+        background:url("https://media-waterdeep.cursecdn.com/attachments/0/318/half-orc4k.jpg") no-repeat center 114px, var(--background-color) !important;
+        background-size: cover !important;      
+    }
+    .body-rpgrace-details-elf:before{
+        background:url("https://media-waterdeep.cursecdn.com/attachments/0/296/elf4k.jpg") no-repeat center 114px, var(--background-color) !important;
+        background-size: cover !important;      
+    }
+    .body-rpgrace-details-halfling:before{
+        background:url("https://media-waterdeep.cursecdn.com/attachments/0/315/halfling4k.jpg") no-repeat center 114px, var(--background-color) !important;
+        background-size: cover !important;      
+    }
+    .body-rpgrace-details-dwarf:before{
+        background:url("https://media-waterdeep.cursecdn.com/attachments/0/272/dwarf4k.jpg") no-repeat center 114px, var(--background-color) !important;
+        background-size: cover !important;      
+    }
+    .body-rpgrace-details-gnome:before{
+        background:url("https://media-waterdeep.cursecdn.com/attachments/0/305/gnome4k.jpg") no-repeat center 114px, var(--background-color) !important;
+        background-size: cover !important;      
+    }
+    .body-rpgrace-details-tiefling:before{
+        background:url("https://media-waterdeep.cursecdn.com/attachments/0/339/tiefling4k.jpg") no-repeat center 114px, var(--background-color) !important;
+        background-size: cover !important;      
+    }
+    .body-rpgrace-details-aarakocra:before{
+        background:url("https://media-waterdeep.cursecdn.com/attachments/0/275/aarakocra4k.jpg") no-repeat center 114px, var(--background-color) !important;
+        background-size: cover !important;      
+    }
+    .body-rpgrace-details-genasi:before{
+        background:url("https://media-waterdeep.cursecdn.com/attachments/0/771/genasi4k.jpg") no-repeat center 114px, var(--background-color) !important;
+        background-size: cover !important;      
+    }
+    .body-rpgrace-details-goliath:before{
+        background:url("https://media-waterdeep.cursecdn.com/attachments/0/309/goliath4k.jpg") no-repeat center 114px, var(--background-color) !important;
+        background-size: cover !important;      
+    }
+    .body-rpgrace-details-firbolg:before{
+        background:url("https://media-waterdeep.cursecdn.com/attachments/0/774/firbolg4k.jpg") no-repeat center 114px, var(--background-color) !important;
+        background-size: cover !important;      
+    }
+}
+
 @-moz-document regexp("https://www.dndbeyond.com/sources/moot"), regexp("https://www.dndbeyond.com/sources/twbtw"), regexp("https://www.dndbeyond.com/sources/tcoe"), regexp("https://www.dndbeyond.com/sources/erftlw"), regexp("https://www.dndbeyond.com/sources/egtw"), regexp("https://www.dndbeyond.com/sources/idrotf"), regexp("https://www.dndbeyond.com/sources/ftod"),regexp("https://www.dndbeyond.com/sources/vrgtr"), regexp("https://www.dndbeyond.com/sources/sacoc"), regexp("https://www.dndbeyond.com/sources/cm"), regexp("https://www.dndbeyond.com/sources/ai"), regexp("https://www.dndbeyond.com/sources/phb"), regexp("https://www.dndbeyond.com/sources/dmg"), regexp("https://www.dndbeyond.com/sources/it/phb"), regexp("https://www.dndbeyond.com/sources/mm"), regexp("https://www.dndbeyond.com/sources/ggtr"), regexp("https://www.dndbeyond.com/sources/mtof"), regexp("https://www.dndbeyond.com/sources/scag"), regexp("https://www.dndbeyond.com/sources/vgtm"), regexp("https://www.dndbeyond.com/sources/wgte"), regexp("https://www.dndbeyond.com/sources/xgte"), regexp("https://www.dndbeyond.com/sources/bgdia"), regexp("https://www.dndbeyond.com/sources/cos"), regexp("https://www.dndbeyond.com/sources/dc"), regexp("https://www.dndbeyond.com/sources/doip"), regexp("https://www.dndbeyond.com/sources/sdw"), regexp("https://www.dndbeyond.com/sources/slw"), regexp("https://www.dndbeyond.com/sources/ddvram"), regexp("https://www.dndbeyond.com/sources/gos"), regexp("https://www.dndbeyond.com/sources/hotdq"),  regexp("https://www.dndbeyond.com/sources/imr"), regexp("https://www.dndbeyond.com/sources/lr"), regexp("https://www.dndbeyond.com/sources/llok"),  regexp("https://www.dndbeyond.com/sources/lmop"), regexp("https://www.dndbeyond.com/sources/oota"), regexp("https://www.dndbeyond.com/sources/pota"),  regexp("https://www.dndbeyond.com/sources/rot"), regexp("https://www.dndbeyond.com/sources/ddia-mord"), regexp("https://www.dndbeyond.com/sources/skt"), regexp("https://www.dndbeyond.com/sources/tftyp"), regexp("https://www.dndbeyond.com/sources/toa"), regexp("https://www.dndbeyond.com/sources/wdh"), regexp("https://www.dndbeyond.com/sources/wdotmm") {
    
     #site-main,
