@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.196
+@version      1.2.197
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -384,7 +384,262 @@ on "ON" <<<EOT
   body{
         background-color: var(--background-color) !important;
     } 
+
 }
+
+
+@-moz-document regexp("https://www.dndbeyond.com/sources/ggtr/.*"), regexp("https://www.dndbeyond.com/sources/mtof/.*"), regexp("https://www.dndbeyond.com/sources/ttp/.*"), regexp("https://www.dndbeyond.com/sources/wgte/.*"), regexp("https://www.dndbeyond.com/sources/bgdia/.*"), regexp("https://www.dndbeyond.com/sources/dc/.*"), regexp("https://www.dndbeyond.com/sources/gos/.*"), regexp("https://www.dndbeyond.com/sources/hotdq/.*"), regexp("https://www.dndbeyond.com/sources/rot/.*"), regexp("https://www.dndbeyond.com/sources/hftt/.*"), regexp("https://www.dndbeyond.com/sources/lr/.*"), regexp("https://www.dndbeyond.com/sources/llok/.*"), regexp("https://www.dndbeyond.com/sources/oota/.*"), regexp("https://www.dndbeyond.com/sources/pota/.*"), regexp("https://www.dndbeyond.com/sources/ddia-mord/.*"), regexp("https://www.dndbeyond.com/sources/skt/.*"), regexp("https://www.dndbeyond.com/sources/toa/.*"), regexp("https://www.dndbeyond.com/sources/wdh/.*"), regexp("https://www.dndbeyond.com/sources/wdotmm/.*") {
+
+     body.body-page.section-guildmasters-guide-to-ravnica:before{
+        background: url("https://media-waterdeep.cursecdn.com/attachments/4/478/ggtr4k.jpg") no-repeat 0px 114px, var(--background-color) !important;         
+        background-size: contain !important;
+    }
+
+    body.body-page.section-mordenkainens-tome-of-foes:before{
+        background: url("https://media-waterdeep.cursecdn.com/attachments/3/743/mtof4k.jpg") no-repeat 0px 114px, var(--background-color) !important; 
+        background-size: contain !important;
+    }
+    body.body-page.section-tomb-of-annihilation-supplement:before{
+        background: url("https://media-waterdeep.cursecdn.com/attachments/3/77/int4k.jpg") no-repeat 0px 114px, var(--background-color) !important; 
+        background-size: contain !important;
+    }
+    body.body-page.section-wayfinders-guide-to-eberron:before{
+        background: url("https://media-waterdeep.cursecdn.com/attachments/4/25/wgte4k.jpg") no-repeat 0px 114px, var(--background-color) !important; 
+        background-size: contain !important;
+    }
+    body.body-page.section-baldurs-gate-descent-into-avernus:before{
+        background: url("https://media-waterdeep.cursecdn.com/attachments/6/479/mbupz-diaint4k.jpg") no-repeat 0px 114px, var(--background-color) !important; 
+        background-size: contain !important;
+    }
+    body.body-page.section-divine-contention:before, body.body-page.section-dragon-of-icespire-peak:before, body.body-page.section-sleeping-dragons-wake:before, body.body-page.section-storm-lords-wrath:before {
+        background: url("https://media-waterdeep.cursecdn.com/attachments/5/739/int4k.jpg") no-repeat 0px 114px, var(--background-color) !important; 
+        background-size: contain !important;
+    }
+    body.body-page.section-ghosts-of-saltmarsh:before {
+        background: url("https://media-waterdeep.cursecdn.com/attachments/5/353/gosm_corner4k.jpg") no-repeat 0px 114px, var(--background-color) !important; 
+        background-size: contain !important;
+    }
+    body.body-page.section-hoard-of-the-dragon-queen:before, body.body-page.section-rise-of-tiamat:before {
+        background: url("https://media-waterdeep.cursecdn.com/attachments/6/722/int4k.jpg") no-repeat 0px 114px, var(--background-color) !important; 
+        background-size: contain !important;
+    }
+
+    body.body-page.section-stranger-things:before {
+        background: url("https://media-waterdeep.cursecdn.com/attachments/5/495/st4k.jpg") no-repeat 0px 114px, var(--background-color) !important; 
+        background-size: contain !important;
+    }
+    body.body-page.section-locathah-rising:before {
+        background: url("https://media-waterdeep.cursecdn.com/attachments/6/643/ksgs6-lr_source_detail_page_background_large.jpg") no-repeat 0px 114px, var(--background-color) !important; 
+        background-size: contain !important;
+    }
+    body.body-page.section-lost-laboratory-of-kwalish:before {
+        background: url("https://media-waterdeep.cursecdn.com/attachments/4/818/llok4k.jpg") no-repeat 0px 114px, var(--background-color) !important; 
+        background-size: contain !important;
+    }
+    body.body-page.section-out-of-the-abyss:before {
+        background: url("https://media-waterdeep.cursecdn.com/attachments/2/251/oota4k.jpg") no-repeat 0px 114px, var(--background-color) !important; 
+        background-size: contain !important;
+    }
+    body.body-page.section-princes-of-the-apocalypse:before {
+        background: url("https://media-waterdeep.cursecdn.com/attachments/2/255/int4k.jpg") no-repeat 0px 114px, var(--background-color) !important; 
+        background-size: contain !important;
+    }
+    body.body-page.section-rrakkma:before {
+        background: url("https://media-waterdeep.cursecdn.com/attachments/2/836/int4k.jpg") no-repeat 0px 114px, var(--background-color) !important; 
+        background-size: contain !important;
+    }
+    body.body-page.section-storm-kings-thunder:before {
+        background: url("https://media-waterdeep.cursecdn.com/attachments/1/923/int4k.jpg") no-repeat 0px 114px, var(--background-color) !important; 
+        background-size: contain !important;
+    }
+    body.body-page.section-tomb-of-annihilation:before {
+        background: url("https://media-waterdeep.cursecdn.com/attachments/2/836/int4k.jpg") no-repeat 0px 114px, var(--background-color) !important; 
+        background-size: contain !important;
+    }
+    body.body-page.section-waterdeep-dragon-heist:before {
+        background: url("https://media-waterdeep.cursecdn.com/attachments/4/244/wdh4k.jpg") no-repeat 0px 114px, var(--background-color) !important; 
+        background-size: contain !important;
+    }
+    body.body-page.section-waterdeep-dungeon-of-the-mad-mage:before {
+        background: url("https://media-waterdeep.cursecdn.com/attachments/4/664/wdotmm4k.jpg") no-repeat 0px 114px, var(--background-color) !important; 
+        background-size: contain !important;
+    }
+}
+
+
+
+@-moz-document regexp("https://www.dndbeyond.com/sources/scag/welcome-to-the-realms.*"){
+    body:before{
+        background: url("https://media-waterdeep.cursecdn.com/attachments/1/445/scagc14k.jpg") no-repeat 0px 114px, var(--background-color) !important;         
+        background-size: contain !important;
+    }        
+}
+@-moz-document regexp("https://www.dndbeyond.com/sources/scag/the-sword-coast-and-the-north.*"){
+    body:before{
+        background: url("https://media-waterdeep.cursecdn.com/attachments/1/448/scagc24k.jpg") no-repeat 0px 114px, var(--background-color) !important;         
+        background-size: contain !important;
+    }       
+}
+@-moz-document regexp("https://www.dndbeyond.com/sources/scag/races-of-the-realms.*"){
+    body:before{
+        background: url("https://media-waterdeep.cursecdn.com/attachments/1/451/scagc34k.jpg") no-repeat 0px 114px, var(--background-color) !important;         
+        background-size: contain !important;
+    }       
+}
+@-moz-document regexp("https://www.dndbeyond.com/sources/scag/classes.*"){
+    body:before{
+        background: url("https://media-waterdeep.cursecdn.com/attachments/1/454/scagc44k.jpg") no-repeat 0px 114px, var(--background-color) !important;         
+        background-size: contain !important;
+    }       
+}
+@-moz-document regexp("https://www.dndbeyond.com/sources/scag/backgrounds.*"){
+    body:before{
+        background: url("https://media-waterdeep.cursecdn.com/attachments/1/457/scagc54k.jpg") no-repeat 0px 114px, var(--background-color) !important;         
+        background-size: contain !important;
+    }       
+}
+@-moz-document regexp("https://www.dndbeyond.com/sources/scag/class-options-in-other-worlds.*"){
+    body:before{
+        background: url("https://media-waterdeep.cursecdn.com/attachments/1/460/scagpre4k.jpg") no-repeat 0px 114px, var(--background-color) !important;         
+        background-size: contain !important;
+    }       
+}
+
+
+@-moz-document regexp("https://www.dndbeyond.com/sources/vgtm/monster-lore.*"){
+    body:before{
+        background: url("https://media-waterdeep.cursecdn.com/attachments/1/632/c14k.jpg") no-repeat 0px 114px, var(--background-color) !important;         
+        background-size: contain !important;
+    }       
+}
+@-moz-document regexp("https://www.dndbeyond.com/sources/vgtm/character-races.*"){
+    body:before{
+        background: url("https://media-waterdeep.cursecdn.com/attachments/1/635/c24k.jpg") no-repeat 0px 114px, var(--background-color) !important;         
+        background-size: contain !important;
+    }       
+}
+@-moz-document regexp("https://www.dndbeyond.com/sources/vgtm/bestiary.*"){
+    body:before{
+        background: url("https://media-waterdeep.cursecdn.com/attachments/1/638/c34k.jpg") no-repeat 0px 114px, var(--background-color) !important;         
+        background-size: contain !important;
+    }       
+}
+@-moz-document regexp("https://www.dndbeyond.com/sources/vgtm/appendix-.*"){
+    body:before{
+        background: url("https://media-waterdeep.cursecdn.com/attachments/1/629/app4k.jpg") no-repeat 0px 114px, var(--background-color) !important;         
+        background-size: contain !important;
+    }       
+}
+@-moz-document regexp("https://www.dndbeyond.com/sources/xgte/subclasses.*"), regexp("https://www.dndbeyond.com/sources/xgte/character-options-.*"){
+    body:before{
+        background: url("https://media-waterdeep.cursecdn.com/attachments/3/114/c14k.jpg") no-repeat 0px 114px, var(--background-color) !important;         
+        background-size: contain !important;
+    }       
+}
+@-moz-document regexp("https://www.dndbeyond.com/sources/xgte/dungeon-masters-tools.*"), regexp("https://www.dndbeyond.com/sources/xgte/random-encounters.*"), regexp("https://www.dndbeyond.com/sources/xgte/traps-revisited.*"), regexp("https://www.dndbeyond.com/sources/xgte/downtime-revisited.*"), regexp("https://www.dndbeyond.com/sources/xgte/awarding-magic-items.*"), regexp("https://www.dndbeyond.com/sources/xgte/common-magic-items.*"), regexp("https://www.dndbeyond.com/sources/xgte/magic-item-tables.*"){
+    body:before{
+        background: url("https://media-waterdeep.cursecdn.com/attachments/3/111/c24k.jpg") no-repeat 0px 114px, var(--background-color) !important;         
+        background-size: contain !important;
+    }       
+}
+@-moz-document regexp("https://www.dndbeyond.com/sources/xgte/spells.*"){
+    body:before{
+        background: url("https://media-waterdeep.cursecdn.com/attachments/3/108/c34k.jpg") no-repeat 0px 114px, var(--background-color) !important;         
+        background-size: contain !important;
+    }       
+}
+@-moz-document regexp("https://www.dndbeyond.com/sources/xgte/shared-campaigns.*"), regexp("https://www.dndbeyond.com/sources/xgte/character-names.*"){
+    body:before{
+        background: url("https://media-waterdeep.cursecdn.com/attachments/3/93/int4k.jpg") no-repeat 0px 114px, var(--background-color) !important;         
+        background-size: contain !important;
+    }       
+}
+
+@-moz-document regexp("https://www.dndbeyond.com/sources/cos/.*"), regexp("https://www.dndbeyond.com/sources/wa/.*"), regexp("https://www.dndbeyond.com/sources/lmop/.*"), regexp("https://www.dndbeyond.com/sources/tftyp/.*"){
+    @media(min-width:1024px){
+        body:before{
+            background: var(--theme-page-bg-image-1024) no-repeat center 114px, var(--background-color) !important;        
+        }
+    }
+    @media(min-width:1921px){
+        body:before{
+            background: var(--theme-page-bg-image-1921) no-repeat center 114px, var(--background-color) !important;
+        }
+    }
+    @media(min-width:2561px){
+        body:before{
+            background: var(--theme-page-bg-image-2561) no-repeat center 114px, var(--background-color) !important;
+        }
+    }
+}
+
+@-moz-document regexp("https://www.dndbeyond.com/sources/ggtr/.*"), regexp("https://www.dndbeyond.com/sources/scag/.*"), regexp("https://www.dndbeyond.com/sources/mtof/.*"), regexp("https://www.dndbeyond.com/sources/ttp/.*"), regexp("https://www.dndbeyond.com/sources/vgtm/.*"), regexp("https://www.dndbeyond.com/sources/wgte/.*"), regexp("https://www.dndbeyond.com/sources/xgte/.*"), regexp("https://www.dndbeyond.com/sources/bgdia/.*"), regexp("https://www.dndbeyond.com/sources/cos/.*"), regexp("https://www.dndbeyond.com/sources/dc/.*"), regexp("https://www.dndbeyond.com/sources/wa/.*"), regexp("https://www.dndbeyond.com/sources/gos/.*"), regexp("https://www.dndbeyond.com/sources/hotdq/.*"), regexp("https://www.dndbeyond.com/sources/rot/.*"), regexp("https://www.dndbeyond.com/sources/hftt/.*"), regexp("https://www.dndbeyond.com/sources/lr/.*"), regexp("https://www.dndbeyond.com/sources/llok/.*"), regexp("https://www.dndbeyond.com/sources/lmop/.*"), regexp("https://www.dndbeyond.com/sources/skt/.*"), regexp("https://www.dndbeyond.com/sources/pota/.*"), regexp("https://www.dndbeyond.com/sources/ddia-mord/.*"), regexp("https://www.dndbeyond.com/sources/toa/.*"), regexp("https://www.dndbeyond.com/sources/wdh/.*"), regexp("https://www.dndbeyond.com/sources/wdotmm/.*"), regexp("https://www.dndbeyond.com/sources/tftyp/.*") {
+
+    #site-main,
+    body.responsive-enabled #site #site-main .container #content,
+    .secondary-content,
+    .compendium-hr{
+        background: none !important;   
+    }
+
+    body:before{
+        content:'';
+        top:0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        position:absolute;
+        display: block;
+        -webkit-mask-image: url(https://raw.githubusercontent.com/Azmoria/dndbeyonddark/master/Images/Dark%20Images/corner-source-background-mask.png);
+        -webkit-mask-repeat: no-repeat !important;
+        -webkit-mask-size: contain;
+        -webkit-mask-position: 0px 114px;
+    }
+
+
+    @media(max-width:1024px){
+        body.site.body-page:before{
+            background: none !important;
+        }
+    }
+}
+
+
+@-moz-document regexp("https://www.dndbeyond.com/sources/imr/.*"), regexp("https://www.dndbeyond.com/sources/mffv1/.*"), regexp("https://www.dndbeyond.com/sources/oga/.*") {
+    #site-main,
+    body.responsive-enabled #site #site-main .container #content,
+    .secondary-content,
+    .compendium-hr{
+        background: none !important;   
+    }
+    body:before{
+        content:'';
+        top:0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        position:absolute;
+        display: block;   
+    }
+    body.body-page.section-infernal-machine-rebuild{
+        background: url("https://media-waterdeep.cursecdn.com/attachments/7/553/imr_source-detail-page-backgound-large.png") no-repeat center 114px, var(--background-color) !important;         
+        background-size: cover !important;
+    }
+    body.body-page.section-mordenkainens-fiendish-folio-volume-1 {
+        background: url("https://media-waterdeep.cursecdn.com/attachments/7/603/mff1_source-detail-page-background-xl.png") no-repeat center 114px, var(--background-color) important;      
+        background-size: cover !important;
+    }
+
+    body.body-page.section-one-grung-above {
+        background: url("https://media-waterdeep.cursecdn.com/attachments/7/750/oga-source-detail-page-background2-large.png") no-repeat center 114px, var(--background-color) !important; 
+        background-size: cover !important;
+    }
+}
+
+
+
 @-moz-document regexp("https://www.dndbeyond.com/sources/tcoe/.*") {
   #site-main,
     body.responsive-enabled #site #site-main .container #content,
@@ -419,13 +674,11 @@ on "ON" <<<EOT
   body:before{
         background-color: var(--background-color) !important;
         content:'';
-        top:0;
+        top: 0;
         left: 0;
         right: 0;
         bottom: 0;
         position:absolute;
-
-
     } 
 }
 
@@ -2566,11 +2819,10 @@ div#site{
     }
     
     .compendium-toc-block-header:after,
-    .compendium-toc-full-header:after,
+    .body-category .compendium-toc-full-header:after,
     .body-category-details .section-compendium-content .page-header__primary:after,
     .compendium-toc-block-header h2:after{
-
-        content: ' ';
+        content: '';
         display: block;
         position: absolute;
         left: -1px;
