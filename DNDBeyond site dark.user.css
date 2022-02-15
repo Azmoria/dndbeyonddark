@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.199
+@version      1.2.200
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -848,10 +848,10 @@ on "ON" <<<EOT
     .compendium-toc-block-header h2:before{
         display: none !important; 
     }
-    .compendium-toc-block-header:after, 
-    .compendium-toc-full-header:after, 
+    .body-category-details .compendium-toc-block-header:after, 
+    .body-category-details .compendium-toc-full-header:after, 
     .body-category-details .section-compendium-content .page-header__primary:after, 
-    .compendium-toc-block-header h2:after{
+    .body-category-details .compendium-toc-block-header h2:after{
         left: 0px; 
         width: 100%;
         background-size: 100% 100% !important;
@@ -894,7 +894,6 @@ on "ON" <<<EOT
     body{
         background: url(https://media.dndbeyond.com/compendium-images/moot/ds6d2NLXmv1wnY8q/MOoT-ToC-1080p.png) no-repeat center 0px, var(--background-color) !important;
         background-size: cover !important;
-        background-attachment: fixed !important;
     }
 
 }
@@ -903,243 +902,219 @@ on "ON" <<<EOT
     body{
         background: url(https://media.dndbeyond.com/compendium-images/twbtw/JtUXxjur9QWtb7E3/TWBtW-ToC-2k.png) no-repeat center 0px, var(--background-color) !important;
         background-size: cover !important;
-        background-attachment: fixed !important;
     }
 }
 
 @-moz-document regexp("https://www.dndbeyond.com/sources/phb"), regexp("https://www.dndbeyond.com/sources/ai"), regexp("https://www.dndbeyond.com/sources/dmg"), regexp("https://www.dndbeyond.com/sources/it/phb"), regexp("https://www.dndbeyond.com/sources/mm"), regexp("https://www.dndbeyond.com/sources/ggtr"), regexp("https://www.dndbeyond.com/sources/mtof"), regexp("https://www.dndbeyond.com/sources/scag"), regexp("https://www.dndbeyond.com/sources/vgtm"), regexp("https://www.dndbeyond.com/sources/wgte"), regexp("https://www.dndbeyond.com/sources/xgte"), regexp("https://www.dndbeyond.com/sources/bgdia"), regexp("https://www.dndbeyond.com/sources/cm"), regexp("https://www.dndbeyond.com/sources/cos"), regexp("https://www.dndbeyond.com/sources/dc"), regexp("https://www.dndbeyond.com/sources/doip"), regexp("https://www.dndbeyond.com/sources/sdw"), regexp("https://www.dndbeyond.com/sources/slw"), regexp("https://www.dndbeyond.com/sources/ddvram"), regexp("https://www.dndbeyond.com/sources/gos"), regexp("https://www.dndbeyond.com/sources/hotdq"),  regexp("https://www.dndbeyond.com/sources/imr"), regexp("https://www.dndbeyond.com/sources/lr"), regexp("https://www.dndbeyond.com/sources/llok"),  regexp("https://www.dndbeyond.com/sources/lmop"), regexp("https://www.dndbeyond.com/sources/oota"), regexp("https://www.dndbeyond.com/sources/pota"),  regexp("https://www.dndbeyond.com/sources/rot"), regexp("https://www.dndbeyond.com/sources/ddia-mord"), regexp("https://www.dndbeyond.com/sources/skt"),  regexp("https://www.dndbeyond.com/sources/tftyp"), regexp("https://www.dndbeyond.com/sources/toa"), regexp("https://www.dndbeyond.com/sources/wdh"), regexp("https://www.dndbeyond.com/sources/wdotmm") {
-
+   #site-main{
+        min-height: 1200px !important;
+    }
     body:before{
         content: '';
-        position: fixed;
+        position: absolute;
         top: 0;
-        bottom: 0;
+        bottom: -319px;
         left:0;
         right:0; 
         z-index: -1;
         -webkit-mask-image: url(https://raw.githubusercontent.com/Azmoria/dndbeyonddark/master/Images/Dark%20Images/book-cover-mask.png);
         -webkit-mask-repeat: no-repeat;
         -webkit-mask-size: cover;
-        -webkit-mask-position: center;
+        -webkit-mask-position: center 114px;
     }
 }
 
 @-moz-document regexp("https://www.dndbeyond.com/sources/ai") {
 
     body:before{
-        background: url(https://media-waterdeep.cursecdn.com/attachments/5/571/toc1k.jpg) no-repeat center 0px, var(--background-color) !important;
-        background-size: cover !important;   
-        background-attachment: fixed !important;
+        background: url(https://media-waterdeep.cursecdn.com/attachments/5/571/toc1k.jpg) no-repeat center 114px, var(--background-color) !important;
+        background-size: cover !important; 
     }
 }
 @-moz-document regexp("https://www.dndbeyond.com/sources/mm") {
 
     body:before{
-        background: url(https://media-waterdeep.cursecdn.com/attachments/0/401/mm1k-1.jpg) no-repeat center 0px, var(--background-color) !important;
+        background: url(https://media-waterdeep.cursecdn.com/attachments/0/401/mm1k-1.jpg) no-repeat center 114px, var(--background-color) !important;
         background-size: cover !important;   
-        background-attachment: fixed !important;
     }
 }
 @-moz-document regexp("https://www.dndbeyond.com/sources/ggtr") {
 
     body:before{
-        background: url(https://media-waterdeep.cursecdn.com/attachments/4/503/ggtr1k.jpg) no-repeat center 0px, var(--background-color) !important;
+        background: url(https://media-waterdeep.cursecdn.com/attachments/4/503/ggtr1k.jpg) no-repeat center 114px, var(--background-color) !important;
         background-size: cover !important;   
-        background-attachment: fixed !important;
     }
 }
 @-moz-document regexp("https://www.dndbeyond.com/sources/mtof") {
 
     body:before{
-        background: url(https://media-waterdeep.cursecdn.com/attachments/3/820/mtof1k.jpg) no-repeat center 0px, var(--background-color) !important;
+        background: url(https://media-waterdeep.cursecdn.com/attachments/3/820/mtof1k.jpg) no-repeat center 114px, var(--background-color) !important;
         background-size: cover !important;   
-        background-attachment: fixed !important;
     }
 }
 @-moz-document regexp("https://www.dndbeyond.com/sources/scag") {
 
     body:before{
-        background: url(https://media-waterdeep.cursecdn.com/attachments/1/603/scag1k.jpg) no-repeat center 0px, var(--background-color) !important;
+        background: url(https://media-waterdeep.cursecdn.com/attachments/1/603/scag1k.jpg) no-repeat center 114px, var(--background-color) !important;
         background-size: cover !important;   
-        background-attachment: fixed !important;
     }
 }
 
 @-moz-document regexp("https://www.dndbeyond.com/sources/vgtm") {
 
     body:before{
-        background: url(https://media-waterdeep.cursecdn.com/attachments/1/692/cover1k.jpg) no-repeat center 0px, var(--background-color) !important;
+        background: url(https://media-waterdeep.cursecdn.com/attachments/1/692/cover1k.jpg) no-repeat center 114px, var(--background-color) !important;
         background-size: cover !important;   
-        background-attachment: fixed !important;
     }
 }
 @-moz-document regexp("https://www.dndbeyond.com/sources/wgte") {
 
     body:before{
-        background: url(https://media-waterdeep.cursecdn.com/attachments/4/153/dmg-secondarybackgrounds1k.jpg) no-repeat center 0px, var(--background-color) !important;
+        background: url(https://media-waterdeep.cursecdn.com/attachments/4/153/dmg-secondarybackgrounds1k.jpg) no-repeat center 114px, var(--background-color) !important;
         background-size: cover !important;   
-        background-attachment: fixed !important;
     }
 }
 @-moz-document regexp("https://www.dndbeyond.com/sources/xgte") {
 
     body:before{
-        background: url(https://media-waterdeep.cursecdn.com/attachments/3/102/cover1k.jpg) no-repeat center 0px, var(--background-color) !important;
+        background: url(https://media-waterdeep.cursecdn.com/attachments/3/102/cover1k.jpg) no-repeat center 114px, var(--background-color) !important;
         background-size: cover !important;   
-        background-attachment: fixed !important;
     }
 }
 @-moz-document regexp("https://www.dndbeyond.com/sources/bgdia") {
 
     body:before{
-        background: url(https://media-waterdeep.cursecdn.com/attachments/6/478/nzdhs-dia1k.jpg) no-repeat center 0px, var(--background-color) !important;
+        background: url(https://media-waterdeep.cursecdn.com/attachments/6/478/nzdhs-dia1k.jpg) no-repeat center 114px, var(--background-color) !important;
         background-size: cover !important;   
-        background-attachment: fixed !important;
     }
 }
 @-moz-document regexp("https://www.dndbeyond.com/sources/cm") {
 
     body:before{
-        background: url(https://media.dndbeyond.com/compendium-images/cm/c43LH2y2Gcaxb3V2/CM-ToC-1k.jpg) no-repeat center 0px, var(--background-color) !important;
+        background: url(https://media.dndbeyond.com/compendium-images/cm/c43LH2y2Gcaxb3V2/CM-ToC-1k.jpg) no-repeat center 114px, var(--background-color) !important;
         background-size: cover !important;   
-        background-attachment: fixed !important;
     }
 }
 @-moz-document regexp("https://www.dndbeyond.com/sources/cos") {
 
     body:before{
-        background: url(https://media-waterdeep.cursecdn.com/attachments/1/915/cover1k.jpg) no-repeat center 0px, var(--background-color) !important;
+        background: url(https://media-waterdeep.cursecdn.com/attachments/1/915/cover1k.jpg) no-repeat center 114px, var(--background-color) !important;
         background-size: cover !important;   
-        background-attachment: fixed !important;
     }
 }
 @-moz-document regexp("https://www.dndbeyond.com/sources/dc"), regexp("https://www.dndbeyond.com/sources/doip"), regexp("https://www.dndbeyond.com/sources/sdw"), regexp("https://www.dndbeyond.com/sources/slw") {
 
     body:before{
-        background: url(https://media-waterdeep.cursecdn.com/attachments/5/734/doipcover1k.jpg) no-repeat center 0px, var(--background-color) !important;
+        background: url(https://media-waterdeep.cursecdn.com/attachments/5/734/doipcover1k.jpg) no-repeat center 114px, var(--background-color) !important;
         background-size: cover !important;   
-        background-attachment: fixed !important;
     }
 }
 
 @-moz-document regexp("https://www.dndbeyond.com/sources/gos") {
     body:before{
-        background: url(https://media-waterdeep.cursecdn.com/attachments/5/348/gosm_background1k.jpg) no-repeat center 0px, var(--background-color) !important;
+        background: url(https://media-waterdeep.cursecdn.com/attachments/5/348/gosm_background1k.jpg) no-repeat center 114px, var(--background-color) !important;
         background-size: cover !important;   
-        background-attachment: fixed !important;
     }
 
 }
 @-moz-document regexp("https://www.dndbeyond.com/sources/hotdq") {
     body:before{
-        background: url(https://media-waterdeep.cursecdn.com/attachments/2/576/cover4k.jpg) no-repeat center 0px, var(--background-color) !important;
+        background: url(https://media-waterdeep.cursecdn.com/attachments/2/576/cover4k.jpg) no-repeat center 114px, var(--background-color) !important;
         background-size: cover !important;   
-        background-attachment: fixed !important;
     }
 
 }
 @-moz-document regexp("https://www.dndbeyond.com/sources/imr") {
     body:before{
-        background: url(https://media-waterdeep.cursecdn.com/attachments/7/556/imr_source-page-toc-background_large.png) no-repeat center 0px, var(--background-color) !important;
+        background: url(https://media-waterdeep.cursecdn.com/attachments/7/556/imr_source-page-toc-background_large.png) no-repeat center 114px, var(--background-color) !important;
         background-size: cover !important;   
-        background-attachment: fixed !important;
     }
 
 }
 @-moz-document regexp("https://www.dndbeyond.com/sources/lr") {
     body:before{
-        background: url(https://media-waterdeep.cursecdn.com/attachments/6/637/vurba-lr_source_toc_page_background.jpg) no-repeat center 0px, var(--background-color) !important;
+        background: url(https://media-waterdeep.cursecdn.com/attachments/6/637/vurba-lr_source_toc_page_background.jpg) no-repeat center 114px, var(--background-color) !important;
         background-size: cover !important;   
-        background-attachment: fixed !important;
     }
 
 }
 @-moz-document regexp("https://www.dndbeyond.com/sources/llok") {
     body:before{
-        background: url(https://media-waterdeep.cursecdn.com/attachments/4/821/llok4k.jpg) no-repeat center 0px, var(--background-color) !important;
+        background: url(https://media-waterdeep.cursecdn.com/attachments/4/821/llok4k.jpg) no-repeat center 114px, var(--background-color) !important;
         background-size: cover !important;   
-        background-attachment: fixed !important;
+
     }
 
 }
 @-moz-document regexp("https://www.dndbeyond.com/sources/lmop") {
     body:before{
-        background: url(https://media-waterdeep.cursecdn.com/attachments/2/245/cover4k.jpg) no-repeat center 0px, var(--background-color) !important;
+        background: url(https://media-waterdeep.cursecdn.com/attachments/2/245/cover4k.jpg) no-repeat center 114px, var(--background-color) !important;
         background-size: cover !important;   
-        background-attachment: fixed !important;
+
     }
 
 }
 @-moz-document regexp("https://www.dndbeyond.com/sources/oota") {
     body:before{
-        background: url(https://media-waterdeep.cursecdn.com/attachments/2/399/cover4k.jpg) no-repeat center 0px, var(--background-color) !important;
+        background: url(https://media-waterdeep.cursecdn.com/attachments/2/399/cover4k.jpg) no-repeat center 114px, var(--background-color) !important;
         background-size: cover !important;   
-        background-attachment: fixed !important;
     }
 
 }
 @-moz-document regexp("https://www.dndbeyond.com/sources/pota") {
     body:before{
-        background: url(https://media-waterdeep.cursecdn.com/attachments/2/534/cover4k.jpg) no-repeat center 0px, var(--background-color) !important;
+        background: url(https://media-waterdeep.cursecdn.com/attachments/2/534/cover4k.jpg) no-repeat center 114px, var(--background-color) !important;
         background-size: cover !important;   
-        background-attachment: fixed !important;
     }
 
 }
 @-moz-document regexp("https://www.dndbeyond.com/sources/rot") {
     body:before{
-        background: url(https://media-waterdeep.cursecdn.com/attachments/2/611/cover4k.jpg) no-repeat center 0px, var(--background-color) !important;
+        background: url(https://media-waterdeep.cursecdn.com/attachments/2/611/cover4k.jpg) no-repeat center 114px, var(--background-color) !important;
         background-size: cover !important;   
-        background-attachment: fixed !important;
     }
 
 }
 @-moz-document regexp("https://www.dndbeyond.com/sources/ddia-mord") {
     body:before{
-        background: url(https://media-waterdeep.cursecdn.com/attachments/3/821/mtof4k.jpg) no-repeat center 0px, var(--background-color) !important;
+        background: url(https://media-waterdeep.cursecdn.com/attachments/3/821/mtof4k.jpg) no-repeat center 114px, var(--background-color) !important;
         background-size: cover !important;   
-        background-attachment: fixed !important;
     }
 
 }
 @-moz-document regexp("https://www.dndbeyond.com/sources/skt") {
     body:before{
-        background: url(https://media-waterdeep.cursecdn.com/attachments/2/47/sktcover4k.jpg) no-repeat center 0px, var(--background-color) !important;
+        background: url(https://media-waterdeep.cursecdn.com/attachments/2/47/sktcover4k.jpg) no-repeat center 114px, var(--background-color) !important;
         background-size: cover !important;   
-        background-attachment: fixed !important;
     }
 
 }
 @-moz-document regexp("https://www.dndbeyond.com/sources/tftyp") {
     body:before{
-        background: url(https://media-waterdeep.cursecdn.com/attachments/2/194/cover4k.jpg) no-repeat center 0px, var(--background-color) !important;
+        background: url(https://media-waterdeep.cursecdn.com/attachments/2/194/cover4k.jpg) no-repeat center 114px, var(--background-color) !important;
         background-size: cover !important;   
-        background-attachment: fixed !important;
     }
 
 }
 
 @-moz-document regexp("https://www.dndbeyond.com/sources/toa") {
     body:before{
-        background: url(https://media-waterdeep.cursecdn.com/attachments/2/979/cover4k.jpg) no-repeat center 0px, var(--background-color) !important;
+        background: url(https://media-waterdeep.cursecdn.com/attachments/2/979/cover4k.jpg) no-repeat center 114px, var(--background-color) !important;
         background-size: cover !important;   
-        background-attachment: fixed !important;
     }
 
 }
 @-moz-document regexp("https://www.dndbeyond.com/sources/wdh") {
     body:before{
-        background: url(https://media-waterdeep.cursecdn.com/attachments/4/373/wdh4k.jpg) no-repeat center 0px, var(--background-color) !important;
+        background: url(https://media-waterdeep.cursecdn.com/attachments/4/373/wdh4k.jpg) no-repeat center 114px, var(--background-color) !important;
         background-size: cover !important;   
-        background-attachment: fixed !important;
     }
 
 }
 @-moz-document regexp("https://www.dndbeyond.com/sources/wdotmm") {
     body:before{
-        background: url(https://media-waterdeep.cursecdn.com/attachments/4/679/wdotmmc4k.jpg) no-repeat center 0px, var(--background-color) !important;
+        background: url(https://media-waterdeep.cursecdn.com/attachments/4/679/wdotmmc4k.jpg) no-repeat center 114px, var(--background-color) !important;
         background-size: cover !important;   
-        background-attachment: fixed !important;
     }
 
 }
@@ -1147,82 +1122,71 @@ on "ON" <<<EOT
 @-moz-document regexp("https://www.dndbeyond.com/sources/phb"), regexp("https://www.dndbeyond.com/sources/it/phb")  {
 
     body:before{
-        background: url(https://media-waterdeep.cursecdn.com/attachments/0/264/phb1k.jpg) no-repeat center 0px, var(--background-color) !important;
+        background: url(https://media-waterdeep.cursecdn.com/attachments/0/264/phb1k.jpg) no-repeat center 114px, var(--background-color) !important;
         background-size: cover !important;   
-        background-attachment: fixed !important;
     }
 }
 @-moz-document regexp("https://www.dndbeyond.com/sources/dmg") {
 
     body:before{
-        background: url(https://media-waterdeep.cursecdn.com/attachments/0/267/dmg1k.jpg) no-repeat center 0px, var(--background-color) !important;
+        background: url(https://media-waterdeep.cursecdn.com/attachments/0/267/dmg1k.jpg) no-repeat center 114px, var(--background-color) !important;
         background-size: cover !important;  
-        background-attachment: fixed !important;
     }
 }
 
 @-moz-document regexp("https://www.dndbeyond.com/sources/tcoe") {
     body{
-        background: url(https://media.dndbeyond.com/compendium-images/tcoe/0gqawlEa2tjXGxpc/toc2-tcoe-2k.png) no-repeat center 0px, var(--background-color) !important;
+        background: url(https://media.dndbeyond.com/compendium-images/tcoe/0gqawlEa2tjXGxpc/toc2-tcoe-2k.png) no-repeat center 114px, var(--background-color) !important;
         background-size: cover !important;
-        background-attachment: fixed !important;
     }
 }
 @-moz-document regexp("https://www.dndbeyond.com/sources/ddvram") {
     body{
-        background: url(https://media-waterdeep.cursecdn.com/attachments/7/422/ram-toc-small.png) no-repeat center 0px, var(--background-color) !important;
+        background: url(https://media-waterdeep.cursecdn.com/attachments/7/422/ram-toc-small.png) no-repeat center 114px, var(--background-color) !important;
         background-size: cover !important;   
-        background-attachment: fixed !important;
     }
 
 }
 @-moz-document regexp("https://www.dndbeyond.com/sources/erftlw") {
     body{
-        background: url(https://media-waterdeep.cursecdn.com/attachments/7/444/erftlw-background-small.png) no-repeat center 0px, var(--background-color) !important;
+        background: url(https://media-waterdeep.cursecdn.com/attachments/7/444/erftlw-background-small.png) no-repeat center 114px, var(--background-color) !important;
         background-size: cover !important;
-        background-attachment: fixed !important;
     }
 }
 @-moz-document regexp("https://www.dndbeyond.com/sources/egtw") {
     body{
-         background: url(https://media-stg.dndbeyond.com/compendium-images/egtw/yDOyqyOocErRgYJK/EGtW_Source-Page-ToC-Background-small.png) no-repeat center 0px, var(--background-color) !important;
+         background: url(https://media-stg.dndbeyond.com/compendium-images/egtw/yDOyqyOocErRgYJK/EGtW_Source-Page-ToC-Background-small.png) no-repeat center 114px, var(--background-color) !important;
         background-size: cover !important;
-        background-attachment: fixed !important;
     }
 }
 @-moz-document regexp("https://www.dndbeyond.com/sources/idrotf") {
     body{
-         background: url(https://media.dndbeyond.com/compendium-images/idrotf/7Av7Gi2DxDtdzZPt/idrotf-cover-1k.png) no-repeat center 0px, var(--background-color) !important;
+         background: url(https://media.dndbeyond.com/compendium-images/idrotf/7Av7Gi2DxDtdzZPt/idrotf-cover-1k.png) no-repeat center 114px, var(--background-color) !important;
         background-size: cover !important;
-        background-attachment: fixed !important;
     }
 }
 @-moz-document regexp("https://www.dndbeyond.com/sources/ftod") {
     body{
-         background:url(https://media.dndbeyond.com/compendium-images/ftod/drRfJbPh5T7LsYy4/FToD-toc-background-1k.png) no-repeat center 0px, var(--background-color) !important;
+         background:url(https://media.dndbeyond.com/compendium-images/ftod/drRfJbPh5T7LsYy4/FToD-toc-background-1k.png) no-repeat center 114px, var(--background-color) !important;
         background-size: cover !important;
-        background-attachment: fixed !important;
     }
 }
 @-moz-document regexp("https://www.dndbeyond.com/sources/vrgtr") {
     body{
-         background: url(https://media.dndbeyond.com/compendium-images/vrgtr/U9mBj5XfiTD1mHie/vrgtr-tocb-1k.png) no-repeat center 0px, var(--background-color) !important;
+         background: url(https://media.dndbeyond.com/compendium-images/vrgtr/U9mBj5XfiTD1mHie/vrgtr-tocb-1k.png) no-repeat center 114px, var(--background-color) !important;
         background-size: cover !important;
-        background-attachment: fixed !important;
     }
 }
 @-moz-document regexp("https://www.dndbeyond.com/sources/sacoc") {
     body{
-        background: url(https://media.dndbeyond.com/compendium-images/sacoc/zBbqVwSoOPBn2DCM/SACoC-ToC_1k.png) no-repeat center 0px, var(--background-color) !important;
+        background: url(https://media.dndbeyond.com/compendium-images/sacoc/zBbqVwSoOPBn2DCM/SACoC-ToC_1k.png) no-repeat center 114px, var(--background-color) !important;
         background-size: cover !important;
-        background-attachment: fixed !important;
     }
 }
 @-moz-document regexp("https://www.dndbeyond.com/sources/erftlw") {
     body{
-        background: url(https://media-waterdeep.cursecdn.com/attachments/7/435/toc-small.png) no-repeat center 0px, var(--background-color) !important;
+        background: url(https://media-waterdeep.cursecdn.com/attachments/7/435/toc-small.png) no-repeat center 114px, var(--background-color) !important;
         background-size: cover !important;
-        background-attachment: fixed !important;
     }
 }
 
