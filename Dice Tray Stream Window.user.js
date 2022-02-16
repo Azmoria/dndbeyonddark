@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Dice Tray Stream Window
 // @namespace    Azmoria
-// @version      1.0.012
+// @version      1.0.013
 // @description  Stream your Dice to another window
 // @author       Azmoria
 // @downloadURL  https://github.com/Azmoria/dndbeyonddark/raw/master/Dice%20Tray%20Stream%20Window.user.js
@@ -17,18 +17,22 @@
 var childWindow = null;
 
 async function resizeChild(child){
-    var winHeight = window.innerHeight;
-    var winwidth = window.innerWidth;
-    if(winwidth<1900){
-        child.resizeTo(winwidth+16, winHeight+71);
+    var winHeight = await window.innerHeight;
+    var winWidth = await window.innerWidth;
+    var childHTML = await child.document.documentElement;
+    if(winHeight == screen.height && winWidth == screen.width) {
+       await childHTML.requestFullscreen();
+    }
+   else if(winWidth<1900){
+        await child.resizeTo(winWidth+16, winHeight+71);
     }
     else{
-        child.resizeTo(winwidth-1, winHeight+60);
+        await child.resizeTo(winWidth-1, winHeight+60);
     }
 }
 
 async function diceTray() {
-    childWindow = await window.open('', 'Dice Tray', 'toolbar=0,location=0,menubar=0');
+    childWindow = await window.open('', 'Dice Tray', 'toolbar=0,location=0,menubar=0,width="'+window.innerWidth+'",height="'+window.innerHeight+'"');
     if(childWindow.document.querySelector('video') == undefined || childWindow.document.querySelector('video') == null){
         await childWindow.document.write('<video id="video" muted autoplay></video>');
     }
@@ -42,7 +46,9 @@ async function diceTray() {
     var stream = await canvas.captureStream(30);
     video.srcObject = await stream;
     await window.addEventListener('resize', function(event){
-        resizeChild(childWindow);
+        if(childWindow.innerHeight != screen.height) {
+            resizeChild(childWindow);
+        }
     });
     return childWindow;
 }
