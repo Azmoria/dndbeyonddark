@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.134
+@version      1.3.135
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -852,7 +852,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-quick-nav__toggle,
     .ct-quick-nav__edge-toggle,
     .ct-character-sheet-MuiPaper-root,
-    .ct-character-sheet-MuiListItem-button:hover{
+    .ct-character-sheet-MuiListItem-button:hover,
+    li[class*="-gutters"]{
         background-color: /*[[rollCalcColor]]*/;
     }
 
@@ -987,7 +988,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-spell-caster__casting-action-count,
     .ct-campaign-pane__character-name-link,
     .ct-campaign-pane__name-link,
-    .ct-campaign-pane__character-user
+    .ct-campaign-pane__character-user,
+    li[class*="-gutters"]
     {
         color: /*[[fontColor]]*/ !important;
     }
@@ -1025,7 +1027,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-inventory__action:hover,
     .ct-sidebar__pane-content .ddbc-collapsible__header:hover,
     span.ct-currency-pane__lifestyle-detail-header,
-    .ct-campaign-pane__character-name-text{
+    .ct-campaign-pane__character-name-text,
+    li[class*="-gutters"][role="menuitem"]:hover{
         color: /*[[highlightColor]]*/ !important;
     }
 
