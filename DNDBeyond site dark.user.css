@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.210
+@version      1.2.211
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -2907,7 +2907,8 @@ div#site{
 	.i-legendary-monster,
 	.i-checkmark,
 	.ddb-statblock.ddb-statblock-monster.ddb-statblock-ability-scores div::before,
-	.es-form-icon{
+	.es-form-icon,
+    .player-see-more img[src="chrome-extension://ipcjcbhpofedihcloggaichibomadlei/assets/arrows_down.png"]{
 		filter: /*[[filter]]*/;
 	}
     
