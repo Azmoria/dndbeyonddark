@@ -3,7 +3,7 @@ _Note:_ If you are having problems with dice not rendering behind the window see
 [![Capture Dice from DNDBeyond for Streaming/OBS](https://user-images.githubusercontent.com/65363489/150996224-001f9634-2a69-435b-8a70-a2190cb8d500.png)](https://youtu.be/mpB4d-lpnRU")
 
 
-This requires the character sheet theme to work. Follow instructions in <a href="https://github.com/Azmoria/dndbeyonddark/blob/master/README.md">README.md</a> to install that first. The background color is set in this theme at the bottom of the options. 
+This requires the character sheet theme to work on character sheets. To work else where the dark mode theme for the rest of the site is required. Follow instructions in <a href="https://github.com/Azmoria/dndbeyonddark/blob/master/README.md">README.md</a> to install the ones you require first. The background color for the dice tray/green screen window is set in these themes at the bottom of the options. 
 
 For how to set up character specific themes and apply your dice customization per character see: <a href="https://github.com/Azmoria/dndbeyonddark/blob/master/Character%20Specific%20Themes.md">Character Specific Themes.md</a>
 
