@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.204
+@version      1.2.205
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -1451,6 +1451,186 @@ EOT;
 Light "Light Mode"<<<EOT
 EOT;
 }
+@advanced dropdown rollableAreas "Rollable Area's Button Style" {
+    small "Smaller Buttons" <<<EOT
+        .ct-character-sheet--dice-enabled .integrated-dice__container{
+      
+            border-width: 0px !important;
+        }
+        .ct-character-sheet--dice-enabled .ct-skills__item .integrated-dice__container,
+        .ct-character-sheet--dice-enabled .ct-spells-spell__tohit .integrated-dice__container,
+        .ct-character-sheet--dice-enabled .ddbc-combat-attack__tohit .integrated-dice__container {
+           
+            height: auto;
+            font-size: 15px;
+            width: auto;
+            margin-bottom: 0px;
+        }
+        .ct-character-sheet--dice-enabled .ddbc-combat-attack__tohit .integrated-dice__container,
+        .ct-character-sheet--dice-enabled .ddbc-combat-attack__damage .integrated-dice__container,
+        .ct-character-sheet--dice-enabled .ddbc-combat-item-attack__damage .integrated-dice__container,
+        .ct-character-sheet--dice-enabled .ddbc-spell-damage-effect__damages .integrated-dice__container,
+        .ct-character-sheet--dice-enabled .ddbc-spell-damage-effect__healing .integrated-dice__container,
+        .ct-character-sheet--dice-enabled .ct-skills__col--modifier .integrated-dice__container,
+        .ct-character-sheet--dice-enabled .ddbc-combat-attack__tohit .integrated-dice__container,
+        .ct-character-sheet--dice-enabled .ddbc-ability-summary__primary .integrated-dice__container,
+        .ct-character-sheet--dice-enabled .ct-initiative-box__value .integrated-dice__container,
+        .ct-character-sheet--dice-enabled .ddbc-combat-attack__tohit .integrated-dice__container:hover,
+        .ct-character-sheet--dice-enabled .ddbc-combat-attack__damage .integrated-dice__container:hover,
+        .ct-character-sheet--dice-enabled .ddbc-combat-item-attack__damage .integrated-dice__container:hover,
+        .ct-character-sheet--dice-enabled .ddbc-spell-damage-effect__damages .integrated-dice__container:hover,
+        .ct-character-sheet--dice-enabled .ddbc-spell-damage-effect__healing .integrated-dice__container:hover,
+        .ct-character-sheet--dice-enabled .ct-skills__col--modifier .integrated-dice__container:hover,
+        .ct-character-sheet--dice-enabled .ddbc-combat-attack__tohit .integrated-dice__container:hover,
+        .ct-character-sheet--dice-enabled .ddbc-ability-summary__primary .integrated-dice__container:hover,
+        .ct-character-sheet--dice-enabled .ct-initiative-box__value .integrated-dice__container:hover,
+        .encounter-builder-app [aria-haspopup=menu].integrated-dice__container,
+        .encounter-builder-app [aria-haspopup=menu].integrated-dice__container:hover {
+            border-color: var(--character-sheet-border);
+            padding: 0px 1px;
+            height: auto;
+        }
+        .ct-character-sheet--dice-enabled .ct-skills__item .ct-skills__col--skill {
+            padding: 2px 0px !important;
+        }
+        .ddbc-tab-list .integrated-dice__container span {
+            font-size: 14px;
+        }  
+        .ct-skills__item .ct-skills__col--modifier,
+        .ct-skills__item .ct-skills__col--adjustments {
+            padding: 0px !important;
+            line-height: 16px;
+        }
+
+    EOT;
+    default "DNDBeyond Default" <<<EOT
+        .ct-character-sheet--dice-enabled .ddbc-combat-attack__tohit .integrated-dice__container,
+        .ct-character-sheet--dice-enabled .ddbc-combat-attack__damage .integrated-dice__container,
+        .ct-character-sheet--dice-enabled .ddbc-combat-item-attack__damage .integrated-dice__container,
+        .ct-character-sheet--dice-enabled .ddbc-spell-damage-effect__damages .integrated-dice__container,
+        .ct-character-sheet--dice-enabled .ddbc-spell-damage-effect__healing .integrated-dice__container,
+        .ct-character-sheet--dice-enabled .ct-skills__col--modifier .integrated-dice__container,
+        .ct-character-sheet--dice-enabled .ddbc-combat-attack__tohit .integrated-dice__container,
+        .ct-character-sheet--dice-enabled .ddbc-ability-summary__primary .integrated-dice__container,
+        .ct-character-sheet--dice-enabled .ct-initiative-box__value .integrated-dice__container,
+        .ct-character-sheet--dice-enabled .ddbc-combat-attack__tohit .integrated-dice__container:hover,
+        .ct-character-sheet--dice-enabled .ddbc-combat-attack__damage .integrated-dice__container:hover,
+        .ct-character-sheet--dice-enabled .ddbc-combat-item-attack__damage .integrated-dice__container:hover,
+        .ct-character-sheet--dice-enabled .ddbc-spell-damage-effect__damages .integrated-dice__container:hover,
+        .ct-character-sheet--dice-enabled .ddbc-spell-damage-effect__healing .integrated-dice__container:hover,
+        .ct-character-sheet--dice-enabled .ct-skills__col--modifier .integrated-dice__container:hover,
+        .ct-character-sheet--dice-enabled .ddbc-combat-attack__tohit .integrated-dice__container:hover,
+        .ct-character-sheet--dice-enabled .ddbc-ability-summary__primary .integrated-dice__container:hover,
+        .ct-character-sheet--dice-enabled .ct-initiative-box__value .integrated-dice__container:hover,
+        .encounter-builder-app [aria-haspopup=menu].integrated-dice__container,
+        .encounter-builder-app [aria-haspopup=menu].integrated-dice__container:hover 
+        {
+            border-color: var(--character-sheet-border);
+        }
+    EOT;
+}
+@var color sidebarColor "Sidebar Color" #000000ff
+@var color rollColor "Rollable Items Color" #5dbbf7
+@var color rollCalcColor "Roll Results Background Color" #030f1acc
+@advanced dropdown beyond20Invert "Invert Beyond20 Menu"{
+yes "Yes" <<<EOT
+.ajs-dialog iframe
+    {
+        filter: invert(1)   
+    }
+EOT;
+no "No" <<<EOT
+EOT;
+}
+@var select zindex "Dice Over/Under the Results Popup" {
+ "Under": "60000",
+ "Over": "60002"
+}
+@var range diceOpacity "Dice Opacity" [1, 0.01, 1, 0.01]
+
+@advanced dropdown diceTint "Dice Tint" {
+    on "Default"<<<EOT
+    EOT;
+    Custom "Custom Dice Sliders"<<<EOT
+        var(--dice-color);
+    EOT;
+}
+@var range diceSepia "Custom Dice Sepia %" [0, 0, 100, 1]
+@var range hueRotation "Custom Dice Hue Rotation" [0, 0, 360, 1]
+@var range diceBrightness "Custom Dice Brightness %" [100, 1, 500, 1]
+@var range diceSaturation "Custom Dice Saturation %" [100, 1, 500, 1]
+@var range diceContrast "Custom Dice Contrast %" [100, 1, 500, 1]
+@var select diceInvert "Invert Dice Color" {
+ "No": "0",
+ "Yes": "1"
+}
+@advanced dropdown rgbDice "RGB Dice"{
+
+    off "OFF"<<<EOT
+    EOT;
+    Rainbow "Rainbow"<<<EOT
+    canvas.dice-rolling-panel__container,
+    video{
+    -webkit-animation: rainbow var(--rgb-speed) linear infinite;
+    }
+    @-webkit-keyframes rainbow {
+        from { 
+            -webkit-filter: var(--rgb-sliders-check) hue-rotate(1deg); 
+        }
+        to { 
+            -webkit-filter: var(--rgb-sliders-check) hue-rotate(360deg); 
+        }
+    }
+    @keyframes rainbow {
+        from {
+            -webkit-filter: var(--rgb-sliders-check) hue-rotate(1deg);
+            filter: var(--rgb-sliders-check) hue-rotate(1deg);
+        }
+        to {
+            -webkit-filter: var(--rgb-sliders-check) hue-rotate(360deg);
+            filter: var(--rgb-sliders-check) hue-rotate(360deg);
+        }
+    }
+    EOT;
+    Custom "Custom RGB"<<<EOT
+        canvas.dice-rolling-panel__container,
+        video{
+            -webkit-animation: rgb var(--rgb-speed) linear infinite;
+            }
+        @-webkit-keyframes rgb {
+                0%, 100% { 
+                    -webkit-filter: var(--rgb-sliders-check) var(--rgb-from); 
+                }
+                50% { 
+                    -webkit-filter: var(--rgb-sliders-check) var(--rgb-to); 
+                }
+            }
+        @keyframes rgb {
+                0%, 100% {
+                    -webkit-filter: var(--rgb-sliders-check) var(--rgb-from);
+                    filter: var(--rgb-sliders-check) var(--rgb-from);
+                }
+              50% {
+                    -webkit-filter: var(--rgb-sliders-check) var(--rgb-to);
+                    filter: var(--rgb-sliders-check) var(--rgb-to);
+                }
+            }
+    EOT;
+}
+@var range rgbSpeed "Dice RGB Speed; Second(s) per Cycle" [6, 1, 8, 1]
+@var range rgbFrom "Custom Dice RGB Starting Hue Rotation" [100, 0, 360, 1]
+@var range rgbTo "Custom Dice RGB Ending Hue Rotation" [200, 0, 360, 1]
+
+
+@advanced dropdown jsPopupBackground "Javascript Popup Dice Tray Background Type"{
+    color "Color"<<<EOT
+    EOT;
+    custom "Custom Image"<<<EOT
+       background-image: var(--custom-capture-background) !important;
+    EOT;
+}
+@var color captureBackground "JS Dice Tray Background Color - Default #009933 for websafe green screen" #009933
+@var text customCaptureBackground "Custom Background url for JS Dice Tray; Include url() eg. url(http://imgur.com/img.jpg)" "url()"
 
 
 ==/UserStyle==*/
@@ -4043,7 +4223,8 @@ div#site{
     
     
     .sidebar__controls button.hasTooltip,
-    #combat_tracker_inside button{
+    #combat_tracker_inside button,
+    .sidebar-modal{
         background: /*[[backgroundColor]]*/ !important;
         color: /*[[fontColor]]*/;
     }
@@ -4378,10 +4559,446 @@ div#site{
         color: /*[[fontColor]]*/;
     }
   
-        
+}
+@-moz-document regexp("https://www.dndbeyond.com/encounter-builder"),
+regexp("https://www.dndbeyond.com/combat-tracker.*"), regexp("https://www.dndbeyond.com/campaigns/.*"),
+regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond.com/my-encounters"), regexp("https://www.dndbeyond.com/.*#DiceTray") {
+    :root {
 
+        --custom-capture-background: /*[[customCaptureBackground]]*/;
+        --sheet-color: /*[[sheetColor]]*/;
+        --dice-color: sepia(/*[[diceSepia]]*/%) hue-rotate(/*[[hueRotation]]*/deg) brightness(/*[[diceBrightness]]*/%) saturate(/*[[diceSaturation]]*/%) contrast(/*[[diceContrast]]*/%) invert(/*[[diceInvert]]*/);
+        --background-color: /*[[background]]*/;
+        --rgb-speed: /*[[rgbSpeed]]*/s;
+        --rgb-from: hue-rotate(/*[[rgbFrom]]*/deg);
+        --rgb-to: hue-rotate(/*[[rgbTo]]*/deg);
+        --rgb-sliders-check: /*[[diceTint]]*/;
+        --character-sheet-border: /*[[borderColor]]*/;
+    }
+
+    /*Dice Alpha Size and position changes for full site*/
+    /*[[rollableAreas]]*/
+
+
+    .tippy-popper {
+        z-index: 60000 !important;
+    }
+
+
+
+    .dice_result__divider {
+        -webkit-mask: url("data:image/svg+xml;charset=utf-8,%3Csvg width='19' height='80' viewBox='0 0 19 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23FFFFFF' d='M10 0v35H9V0z'/%3E%3Cpath fill='%23FFFFFF' d='M10 70v105H9V70Z'/%3E%3Cpath fill='%23FFFFFF00' d='M19 68H0V33h19z'/%3E%3Cpath fill='%23FFFFFF' d='M19 57H0v-3h19zM19 47H0v-3h19z'/%3E%3C/svg%3E") no-repeat 100% 100%;
+        background-color: /*[[fontColor]]*/;
+        -webkit-mask-size: cover;
+        mask-size: cover;
+        background-image: none
+    }
+
+
+    .sidebar__pane-content {
+        border: 1px solid /*[[borderColor]]*/;
+        box-shadow: none;
+    }
+    
+    .sidebar__pane-content button,
+    div#options-menu button.MuiButtonBase-root,
+    .glc-game-log button,
+    .MuiPopover-root .MuiPaper-root,
+    .mon-stat-block button.integrated-dice__container:hover
+    {
+        background-color: /*[[rollCalcColor]]*/ !important;
+    }
+   
+        
+    
+
+    [class^="DiceMessage_Number"],
+    [class^="DiceMessage_Total"],
+    [class^="DiceMessage_Line"],
+    [class^="GameLogEntry_"],
+    [class^="GameLogHeader_Container"],
+    [class^="GameLogHeader_Container"] span,
+    ._1_4XN--HbdIB3j-9HVLY3F,
+    ._31r1gjOw0T79LKVLAldcq0,
+    .glc-game-log > div > ol > li > div > div:nth-of-type(2) > div > div > div > div:nth-of-type(2) > span,
+    div[class^="_1I"] > span > span:last-of-type,
+    .dice_result__total-result,
+    .dice_result__info__breakdown,
+    .MuiBox-root,
+    .jss2 .MuiListSubheader-root,
+    .MuiButtonBase-root,
+    .MuiList-root div,
+    .dice-toolbar__target-user,
+    .ct-game-log-pane>div>div:first-of-type>span,
+    .ct-game-log-pane>div>div:first-of-type>div>span,
+    .MuiButton-label,
+    body.body-rpgcharacter-sheet>div:last-of-type:not(.ct-sidebar__portal)>div[class^="_"] span:last-of-type,
+    body.body-rpgcharacter-sheet>div.ct-sidebar__portal .glc-game-log span:first-of-type,
+    [class^="GameLog_ZeroState"],
+    .glc-game-log button
+    { 
+        color: /*[[fontColor]]*/ !important;
+    }
+    
+    body.body-rpgcharacter-sheet>div:last-of-type:not(.ct-sidebar__portal)>div[class^="_"]>div [style^="background: rgb(197, 49, 49)"],
+    body.body-rpgcharacter-sheet>div:last-of-type>:not(.ct-sidebar__portal)>div[class^="_"]>div
+    {
+        background: /*[[rollCalcColor]]*/ !important;
+    }
+    
+    body.body-rpgcharacter-sheet>div:last-of-type:not(.ct-sidebar__portal)>div:first-of-type[style^="top"]
+    {          
+        border-top: 10px solid /*[[rollColor]]*/;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+    }
+    body.body-rpgcharacter-sheet>div:last-of-type:not(.ct-sidebar__portal)>div[class^="_"]>div>div{
+        border-color: /*[[rollColor]]*/;   
+    }
+    
+        
+    .sidebar__control svg path,
+    .sidebar__control svg polygon,
+    .sidebar__control svg rect
+    {
+        fill: /*[[rollColor]]*/ !important;
+        opacity: 1 !important;
+    }
+    
+    .jss2 .MuiListItem-root:hover span,
+    .MuiButtonBase-root:hover span,
+    .MuiList-root li ul li:hover div,
+    li.MuiButtonBase-root:hover div,
+    .MuiButtonBase-root:hover span
+    {
+        color: /*[[rollColor]]*/ !important;   
+    }
+
+ 
+    .dice_notification_controls .dice_notification_control,
+    .dice-toolbar,
+    .dice-toolbar:hover,
+    .dice-toolbar__dropdown-selected .dice-toolbar__dropdown-die,
+    .dice-die-button,
+    .ct-character-sheet--dice-enabled .ddbc-combat-attack__damage .integrated-dice__container:hover,
+    .ct-character-sheet--dice-enabled .ddbc-combat-item-attack__damage .integrated-dice__container:hover,
+    .ct-character-sheet--dice-enabled .ddbc-spell-damage-effect__damages .integrated-dice__container:hover,
+    .ct-character-sheet--dice-enabled .ddbc-spell-damage-effect__healing .integrated-dice__container:hover,
+    .ct-character-sheet--dice-enabled .ct-skills__col--modifier .integrated-dice__container:hover,
+    .ct-character-sheet--dice-enabled .ddbc-combat-attack__tohit .integrated-dice__container:hover,
+    .ct-character-sheet--dice-enabled .ddbc-ability-summary__primary .integrated-dice__container:hover,
+    .ct-character-sheet--dice-enabled .ct-initiative-box__value .integrated-dice__container:hover,
+    .ct-character-sheet--dice-enabled .ct-skills__item .integrated-dice__container:hover,
+    .ct-character-sheet--dice-enabled .ct-spells-spell__tohit .integrated-dice__container:hover,
+    .ct-character-sheet--dice-enabled .ddbc-combat-attack--crit .ddbc-combat-attack__damage .integrated-dice__container:hover,
+    [class^="GameLogEntry_Message_"],
+    ._1_4XN--HbdIB3j-9HVLY3F,
+    ._1KM4FtjuhNomsZCIfBsJQ1,
+    .dice-die-button__tooltip,
+    .dice-die-button__tooltip__pip,
+    .dice-die-button__count,
+    .glc-game-log > div > ol > li > div > div:nth-of-type(2),
+    div[class^="_1I"],
+    .encounter-builder-sidebar__open-button,
+    .dice-toolbar__dropdown-die:hover,
+    .jss2 .MuiListItem-root:hover,
+    .MuiList-root,
+    .dice-toolbar__dropdown-die
+    {
+        background: /*[[rollCalcColor]]*/ !important;
+    }
+    
+    
+    .dice-toolbar__dropdown .dice-toolbar__target-menu-button{
+        background: none !important;     
+    }
+    
+    .dice_result,
+    .dice_notification_controls .dice_notification_control{
+        background: /*[[rollCalcColor]]*/ !important;
+    }
+ 
+    
+    .GameLogEntry_Message__LMnm6,
+    ._1_4XN--HbdIB3j-9HVLY3F,
+    .dice-die-button__tooltip{
+        border: 1px solid /*[[rollColor]]*/ !important;
+    }
+
+    .dice-toolbar{
+        height: auto !important;   
+    }
+    
+    .dice-die-button__tooltip__pip {
+        border-left-color: /*[[rollColor]]*/;
+        border-bottom-color: /*[[rollColor]]*/;
+    }
+
+    .dice-toolbar__dropdown-selected .dice-toolbar__dropdown-die,
+    .dice-toolbar__dropdown-selected .dice-toolbar__dropdown-die:hover,
+    .GameLogEntry_Message__1GoY3.GameLogEntry_Other__2PSbv,
+    .dice-icon-die:hover,
+    .glc-game-log ol div,
+    div[class^="_1I"],
+    .MuiPaper-root
+    {
+        border-color: /*[[rollColor]]*/ !important;
+    }
+    
+    [class^="GameLogHeader_Container"],
+    .ct-game-log-pane>div>div:first-of-type{
+        box-shadow: 1px 1px 30px 5px /*[[sidebarColor]]*/;   
+        z-index: 1;
+    }
+    .ct-sidebar__pane-content:before{
+        z-index: 2;   
+    }
+    
+    
+    .MuiButtonBase-root{
+        border:none !important;   
+    }
+    
+    
+    .beyond20-roll-detail-normal {
+        color: /*[[fontColor]]*/;
+    }
+
+
+    .dice-die-button:hover .dice-icon-die,
+    .dice-toolbar__dropdown-die:hover .dice-icon-die{
+        background-color: /*[[rollColor]]*/ !important;
+    }
+    .dice_result__info .dice-icon-die,
+    .dice-icon-die{
+        background-color: /*[[fontColor]]*/ !important;
+    }
+
+    .dice_notification_controls__clear i {
+        -webkit-mask: url("data:image/svg+xml;charset=utf-8,%3Csvg width='18' height='18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 8h-6V2a1 1 0 10-2 0v6H2a1 1 0 100 2h6v6a1 1 0 102 0v-6h6a1 1 0 100-2z' fill='%23FFFFFF'/%3E%3C/svg%3E") no-repeat 100% 100%;
+        background-color: /*[[fontColor]]*/;
+        -webkit-mask-size: cover;
+        mask-size: cover;
+        background-image: none
+    }
+
+    .dice_notification_controls__uncollapse i {
+        -webkit-mask: url("data:image/svg+xml;charset=utf-8,%3Csvg width='18' height='18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M17.707 4.293a.999.999 0 00-1.414 0L9 11.586 1.707 4.293A.999.999 0 10.293 5.707l8 8a.997.997 0 001.414 0l8-8a.999.999 0 000-1.414z' fill='%23FFFFFF'/%3E%3C/svg%3E") no-repeat 100% 100%;
+        background-color: /*[[fontColor]]*/;
+        -webkit-mask-size: cover;
+        mask-size: cover;
+        background-image: none
+    }
+
+    .dice_notification_controls__collapse i {
+        -webkit-mask: url("data:image/svg+xml;charset=utf-8,%3Csvg width='18' height='18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M17.707 4.293a.999.999 0 00-1.414 0L9 11.586 1.707 4.293A.999.999 0 10.293 5.707l8 8a.997.997 0 001.414 0l8-8a.999.999 0 000-1.414z' fill='%23FFFFFF'/%3E%3C/svg%3E")no-repeat 100% 100%;
+        background-color: /*[[fontColor]]*/;
+        -webkit-mask-size: cover;
+        mask-size: cover;
+        background-image: none
+    }
+
+    
+    canvas.dice-rolling-panel__container,
+    .dice-rolling-panel{
+        z-index: /*[[zindex]]*/ !important;
+    }
+
+    canvas.dice-rolling-panel__container,
+    .dice-toolbar{
+        position: fixed;
+    }
+
+    .dice-toolbar{
+         z-index: 60001 !important;   
+    }
+
+    .ct-character-sheet--dice-enabled .integrated-dice__container:hover ~ .ddbc-saving-throw-selection-box-svg path,
+    .ct-character-sheet--dice-enabled .integrated-dice__container:hover ~ .ddbc-saving-throw-selection-small-box-svg path,
+    .MuiSvgIcon-root polygon:first-of-type{
+        fill: /*[[rollCalcColor]]*/ !important;
+        opacity: 1 !important;
+    }
+
+    ._1_4XN--HbdIB3j-9HVLY3F path,
+    .glc-game-log ol div path,
+    .MuiSvgIcon-root path,
+    .MuiSvgIcon-root polygon:nth-of-type(2),
+    .MuiButtonBase-root path{
+        fill: /*[[fontColor]]*/ !important;
+        opacity: 1 !important;
+    }
+    
+    .MuiButtonBase-root:hover path,
+    .MuiButtonBase-root:hover polygon:nth-of-type(2),
+    .MuiButtonBase-root:hover path
+    {
+        fill: /*[[rollColor]]*/ !important;   
+        opacity: 1 !important;
+    }
+    .dice-die-button__count,
+    .dice-die-button__tooltip {
+        color: /*[[rollColor]]*/
+    }
+
+    .sidebar__pane-content,
+    .ct-game-log-pane>div>div:first-of-type,
+    [class^="GameLogHeader_Container"]
+    {
+        background-color: /*[[sidebarColor]]*/ !important;
+    }
+
+    .encounter-builder-app .integrated-dice__container {
+        color: /*[[rollColor]]*/;
+        background: /*[[backgroundColor]]*/;
+        border: none;
+    }
+    .encounter-builder-app .integrated-dice__container:hover {
+        border: 1px /*[[rollColor]]*/ solid !important;
+    }
+
+
+    .encounter-builder-app .integrated-dice__container:focus {
+        outline: none !important;
+    }
+
+    
+    .dice-toolbar:hover .dice-toolbar__dropdown-die{
+        border: 1px /*[[rollColor]]*/ solid !important;
+    }
+    
+    .dice-toolbar__dropdown-selected .dice-toolbar__dropdown-die,
+    .dice-toolbar:hover .dice-toolbar__dropdown-selected .dice-toolbar__dropdown-die
+    {
+        border: 3px /*[[rollColor]]*/ solid !important;
+    }
+    
+    canvas.dice-rolling-panel__container{
+        opacity: /*[[diceOpacity]]*/;  
+    }
+    
+    /*[[rgbDice]]*/
+      
+    
+/*dice Cusomtization and JS compainion script css*/   
+    canvas.dice-rolling-panel__container,
+    video{
+        filter: /*[[diceTint]]*/
+    }
+    video{
+        position: absolute;
+        top: 0;
+        left: 0;   
+        height: calc(100% + 1px);
+        width: calc(100% + 1px);
+        
+    }
+     body#diceTrayBody{
+        /*[[jsPopupBackground]]*/
+        background-color: /*[[captureBackground]]*/ !important;
+       
+        background-repeat: no-repeat !important;
+        background-position: top center !important;
+        background-attachment: fixed !important;
+        background-origin: content-box !important;
+        -webkit-background-size: cover !important;
+        -moz-background-size: cover !important;
+        -o-background-size: cover !important;
+        background-size: cover !important;
+        overflow: hidden;
+        margin: 0px !important;
+    }
+    
+
+
+/*Beyond 20 + Talespire rolls settings*/
+  
+    /*[[beyond20Invert]]*/
+
+    .beyond20-roll-cell,
+    .beyond20-description,
+    .beyond20-dice-roller-content,
+    .ajs-footer,
+    .beyond20-message .beyond20-description,
+    .beyond20-message details table,
+    .beyond20-tooltip .beyond20-tooltip-content,
+    .dice-formula.beyond20-roll-formula,
+    .beyond20-roll-cell,
+    .beyond20-roll-die-result,
+    .ajs-dialog,
+    .ajs-header,
+    .ajs-primary.ajs-buttons{
+        background-color: /*[[backgroundColor]]*/ !important;
+        color: /*[[fontColor]]*/;
+    }
+    
+    .beyond20-dice-roller a,
+    .beyond20-button-roll-damages{
+        color: /*[[fontColor]]*/;
+    }
+    
+    .beyond20-message details summary,
+    .beyond20-title,
+    .beyond20-dice-roller a:hover{
+        color: /*[[rollColor]]*/;
+    }
+    
+    
+    .beyond20-button-roll-damages{
+        color: /*[[rollColor]]*/;
+    }
+    
+    .beyond20-roll-cell,
+    .beyond20-message details summary,
+    .beyond20-title,
+    .beyond20-dice-roller-content,
+    .beyond20-tooltip .beyond20-tooltip-content,
+    .beyond20-roll-cell,
+    .beyond20-roll-die-result,
+    .beyond20-button-roll-damages,
+    .dice-formula.beyond20-roll-formula{
+        border-color: /*[[rollColor]]*/;
+    }
+    
+    .dice-formula.beyond20-roll-formula,
+    .beyond20-roll-die-result,
+    .beyond20-roll-cell{
+        box-shadow: none;
+    }
+
+    
+
+    .beyond20-roll-detail-crit-fail,
+    .beyond20-roll-detail-fail {
+        color: #F00;
+    }
+
+    .beyond20-roll-detail-crit {
+        color: #0F0;
+    }
+    .talespireLink {
+        background: /*[[backgroundColor]]*/ !important;
+        color: /*[[rollColor]]*/ !important;
+    }
+
+    /*AboveVtt*/
+    
+    #castbutton{
+        text-shadow: none !important;   
+        background: /*[[sidebarColor]]*/;
+        color: /*[[fontColor]]*/;
+    }
+    
+/*Mobile and Tablet*/
+
+
+    @media screen and (max-width: 767px) {
+    .talespireLink{
+            background: /*[[backgroundColor]]*/ !important;
+        }
+    }
 }
 
-
     /*[[compendiumBackgrounds]]*/
+
 
