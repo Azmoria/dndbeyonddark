@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.135
+@version      1.3.136
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -2277,10 +2277,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
 
 }
 @-moz-document regexp("https://www.dndbeyond.com/profile/.*/characters/\\d.*"),
-regexp("https://www.dndbeyond.com/characters/.*"),
-regexp("https://www.dndbeyond.com/encounter-builder"),
-regexp("https://www.dndbeyond.com/combat-tracker.*"), regexp("https://www.dndbeyond.com/campaigns/.*"),
-regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond.com/my-encounters"), regexp("https://www.dndbeyond.com/.*#DiceTray") {
+regexp("https://www.dndbeyond.com/characters/.*") {
     :root {
         --custom-background: /*[[customBackground]]*/;
         --custom-capture-background: /*[[customCaptureBackground]]*/;
