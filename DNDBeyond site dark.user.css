@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.205
+@version      1.2.206
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -11,6 +11,9 @@
 @var color forumSecondaryColor "Forum Secondary Color" #111d
 @var color forumTertiaryColor "Forum Tertiary Color" #1e1e1edd
 @var color fontColor "Font Color" #ddd
+@var color sidebarColor "Sidebar Color" #000000ff
+@var color rollColor "Rollable Items Color" #5dbbf7
+@var color rollCalcColor "Roll Results Background Color" #030f1acc
 @advanced dropdown fontContrast "Font Contrast Colors" {
 dark "Dark Mode" <<<EOT
 
@@ -1376,73 +1379,7 @@ EOT;
 
 }
 @var text customFrameFilter "Custom Frame Filter" "invert(90%) sepia(0%) hue-rotate(180deg) saturate(180%)"
-@advanced dropdown specialThanks "Special Thanks; Forum Vanity Images/Titles"{
-off "DNDBeyond Default" <<<EOT
-EOT;
-on "Add Special Thanks Vanity" <<<EOT
-    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="100666635"] .p-comment-user-background {
-        background: var(--forum-secondary-color) url(https://raw.githubusercontent.com/Azmoria/dndbeyonddark/master/Images/DNDBeyond%20Dark/azmoria-forum-profile-bg.webp) 0 0 no-repeat !important;
-        background-size: 100% auto !important;
-        opacity: 0.4;
-        
-    }
-    body.body-forum.party-time-enabled .single-column #content .p-forum-a div.j-comment[data-author-id="100666635"] div.p-comment-user-background:hover {
-          -webkit-animation: linear forumBackground 2.2s infinite;
-      }
 
-    @-webkit-keyframes forumBackground {
-                0%, 100% {
-                    filter: hue-rotate(0deg);
-                    -webkit-filter: hue-rotate(0deg);
-     
-                }
-              50% {                 
-                    filter: hue-rotate(360deg);
-                     -webkit-filter: hue-rotate(360deg);
-                }
-            }
-     body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="100666635"] li.forum-title:after {
-        content: '\1F432';
-        font-weight: normal;
-        filter: hue-rotate(195deg) saturate(1.2);
-        font-size: 15pt;
-        line-height: 9pt;       
-    }
-    body.body-forum.party-time-enabled .single-column #content .p-forum-a div.j-comment[data-author-id="100666635"] li.forum-title:after{
-        -webkit-animation: linear party-time-image 1s infinite;
-    }   
-
-    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="110555412"] li.forum-title:after,
-    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="100666635"] li.forum-title:after
-    {
-        text-shadow:none !important;
-    }
-
-    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="110555412"] .p-comment-user-background {
-        background: var(--forum-secondary-color) url(https://raw.githubusercontent.com/Azmoria/dndbeyonddark/master/Images/DNDBeyond%20Dark/banner-hyrkali.webp) 0 0 no-repeat !important;
-        background-size: auto !important;
-        opacity: 0.6;
-    }
-
-    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="110555412"] li.forum-title:after {
-        content: '\1F408';
-        font-weight: normal;
-        filter: hue-rotate(175deg) saturate(0.5) brightness(0.3);
-        font-size: 15pt;
-        line-height: 9pt;    
-    }
-   @media screen and (min-width: 767px){
-    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="100666635"] li.forum-title {
-        display: block;      
-    }
-    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="110555412"] li.forum-title {
-        display: block;      
-    }
-    
-   
-}
-    EOT;
-}
 
 @advanced dropdown aboveFilter "AboveVTT Filter" {
 Dark "Dark Mode"<<<EOT
@@ -1529,9 +1466,7 @@ EOT;
         }
     EOT;
 }
-@var color sidebarColor "Sidebar Color" #000000ff
-@var color rollColor "Rollable Items Color" #5dbbf7
-@var color rollCalcColor "Roll Results Background Color" #030f1acc
+
 @advanced dropdown beyond20Invert "Invert Beyond20 Menu"{
 yes "Yes" <<<EOT
 .ajs-dialog iframe
@@ -1631,7 +1566,73 @@ EOT;
 }
 @var color captureBackground "JS Dice Tray Background Color - Default #009933 for websafe green screen" #009933
 @var text customCaptureBackground "Custom Background url for JS Dice Tray; Include url() eg. url(http://imgur.com/img.jpg)" "url()"
+@advanced dropdown specialThanks "Special Thanks; Forum Vanity Images/Titles"{
+off "DNDBeyond Default" <<<EOT
+EOT;
+on "Add Special Thanks Vanity" <<<EOT
+    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="100666635"] .p-comment-user-background {
+        background: var(--forum-secondary-color) url(https://raw.githubusercontent.com/Azmoria/dndbeyonddark/master/Images/DNDBeyond%20Dark/azmoria-forum-profile-bg.webp) 0 0 no-repeat !important;
+        background-size: 100% auto !important;
+        opacity: 0.4;
+        
+    }
+    body.body-forum.party-time-enabled .single-column #content .p-forum-a div.j-comment[data-author-id="100666635"] div.p-comment-user-background:hover {
+          -webkit-animation: linear forumBackground 2.2s infinite;
+      }
 
+    @-webkit-keyframes forumBackground {
+                0%, 100% {
+                    filter: hue-rotate(0deg);
+                    -webkit-filter: hue-rotate(0deg);
+     
+                }
+              50% {                 
+                    filter: hue-rotate(360deg);
+                     -webkit-filter: hue-rotate(360deg);
+                }
+            }
+     body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="100666635"] li.forum-title:after {
+        content: '\1F432';
+        font-weight: normal;
+        filter: hue-rotate(195deg) saturate(1.2);
+        font-size: 15pt;
+        line-height: 9pt;       
+    }
+    body.body-forum.party-time-enabled .single-column #content .p-forum-a div.j-comment[data-author-id="100666635"] li.forum-title:after{
+        -webkit-animation: linear party-time-image 1s infinite;
+    }   
+
+    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="110555412"] li.forum-title:after,
+    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="100666635"] li.forum-title:after
+    {
+        text-shadow:none !important;
+    }
+
+    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="110555412"] .p-comment-user-background {
+        background: var(--forum-secondary-color) url(https://raw.githubusercontent.com/Azmoria/dndbeyonddark/master/Images/DNDBeyond%20Dark/banner-hyrkali.webp) 0 0 no-repeat !important;
+        background-size: auto !important;
+        opacity: 0.6;
+    }
+
+    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="110555412"] li.forum-title:after {
+        content: '\1F408';
+        font-weight: normal;
+        filter: hue-rotate(175deg) saturate(0.5) brightness(0.3);
+        font-size: 15pt;
+        line-height: 9pt;    
+    }
+   @media screen and (min-width: 767px){
+    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="100666635"] li.forum-title {
+        display: block;      
+    }
+    body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="110555412"] li.forum-title {
+        display: block;      
+    }
+    
+   
+}
+    EOT;
+}
 
 ==/UserStyle==*/
 /*Thanks to Hyrkali for the push to update the forums themeing to more closely resemble the original theme, providing an example and indentifying issues.*/
@@ -4261,6 +4262,93 @@ div#site{
     overflow-y: scroll;
     }
     
+    /*Beyond 20 + Talespire rolls settings*/
+  
+    /*[[beyond20Invert]]*/
+
+    .beyond20-roll-cell,
+    .beyond20-description,
+    .beyond20-dice-roller-content,
+    .ajs-footer,
+    .beyond20-message .beyond20-description,
+    .beyond20-message details table,
+    .beyond20-tooltip .beyond20-tooltip-content,
+    .dice-formula.beyond20-roll-formula,
+    .beyond20-roll-cell,
+    .beyond20-roll-die-result,
+    .ajs-dialog,
+    .ajs-header,
+    .ajs-primary.ajs-buttons{
+        background-color: /*[[backgroundColor]]*/ !important;
+        color: /*[[fontColor]]*/;
+    }
+    
+    .beyond20-dice-roller a,
+    .beyond20-button-roll-damages{
+        color: /*[[fontColor]]*/;
+    }
+    
+    .beyond20-message details summary,
+    .beyond20-title,
+    .beyond20-dice-roller a:hover{
+        color: /*[[rollColor]]*/;
+    }
+    
+    
+    .beyond20-button-roll-damages{
+        color: /*[[rollColor]]*/;
+    }
+    
+    .beyond20-roll-cell,
+    .beyond20-message details summary,
+    .beyond20-title,
+    .beyond20-dice-roller-content,
+    .beyond20-tooltip .beyond20-tooltip-content,
+    .beyond20-roll-cell,
+    .beyond20-roll-die-result,
+    .beyond20-button-roll-damages,
+    .dice-formula.beyond20-roll-formula{
+        border-color: /*[[rollColor]]*/;
+    }
+    
+    .dice-formula.beyond20-roll-formula,
+    .beyond20-roll-die-result,
+    .beyond20-roll-cell{
+        box-shadow: none;
+    }
+
+    
+
+    .beyond20-roll-detail-crit-fail,
+    .beyond20-roll-detail-fail {
+        color: #F00;
+    }
+
+    .beyond20-roll-detail-crit {
+        color: #0F0;
+    }
+    .talespireLink {
+        background: /*[[backgroundColor]]*/ !important;
+        color: /*[[rollColor]]*/ !important;
+    }
+
+    /*AboveVtt*/
+    
+    #castbutton{
+        text-shadow: none !important;   
+        background: /*[[sidebarColor]]*/;
+        color: /*[[fontColor]]*/;
+    }
+    
+/*Mobile and Tablet*/
+
+
+    @media screen and (max-width: 767px) {
+    .talespireLink{
+            background: /*[[backgroundColor]]*/ !important;
+        }
+    }
+    
     @media screen and (max-width: 800px){	
 
         .top-table-page{ 
@@ -4562,7 +4650,9 @@ div#site{
 }
 @-moz-document regexp("https://www.dndbeyond.com/encounter-builder"),
 regexp("https://www.dndbeyond.com/combat-tracker.*"), regexp("https://www.dndbeyond.com/campaigns/.*"),
-regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond.com/my-encounters"), regexp("https://www.dndbeyond.com/.*#DiceTray") {
+regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond.com/my-encounters"), regexp("https://www.dndbeyond.com/encounter-builder.*#DiceTray"),
+regexp("https://www.dndbeyond.com/combat-tracker.*#DiceTray"), regexp("https://www.dndbeyond.com/campaigns.*#DiceTray"),
+regexp("https://www.dndbeyond.com/encounters.*#DiceTray"), regexp("https://www.dndbeyond.com/my-encounters.*#DiceTray"){
     :root {
 
         --custom-capture-background: /*[[customCaptureBackground]]*/;
@@ -4608,8 +4698,6 @@ regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond
     {
         background-color: /*[[rollCalcColor]]*/ !important;
     }
-   
-        
     
 
     [class^="DiceMessage_Number"],
@@ -4632,30 +4720,13 @@ regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond
     .ct-game-log-pane>div>div:first-of-type>span,
     .ct-game-log-pane>div>div:first-of-type>div>span,
     .MuiButton-label,
-    body.body-rpgcharacter-sheet>div:last-of-type:not(.ct-sidebar__portal)>div[class^="_"] span:last-of-type,
-    body.body-rpgcharacter-sheet>div.ct-sidebar__portal .glc-game-log span:first-of-type,
     [class^="GameLog_ZeroState"],
     .glc-game-log button
     { 
         color: /*[[fontColor]]*/ !important;
     }
     
-    body.body-rpgcharacter-sheet>div:last-of-type:not(.ct-sidebar__portal)>div[class^="_"]>div [style^="background: rgb(197, 49, 49)"],
-    body.body-rpgcharacter-sheet>div:last-of-type>:not(.ct-sidebar__portal)>div[class^="_"]>div
-    {
-        background: /*[[rollCalcColor]]*/ !important;
-    }
-    
-    body.body-rpgcharacter-sheet>div:last-of-type:not(.ct-sidebar__portal)>div:first-of-type[style^="top"]
-    {          
-        border-top: 10px solid /*[[rollColor]]*/;
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
-    }
-    body.body-rpgcharacter-sheet>div:last-of-type:not(.ct-sidebar__portal)>div[class^="_"]>div>div{
-        border-color: /*[[rollColor]]*/;   
-    }
-    
+
         
     .sidebar__control svg path,
     .sidebar__control svg polygon,
@@ -4680,17 +4751,6 @@ regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond
     .dice-toolbar:hover,
     .dice-toolbar__dropdown-selected .dice-toolbar__dropdown-die,
     .dice-die-button,
-    .ct-character-sheet--dice-enabled .ddbc-combat-attack__damage .integrated-dice__container:hover,
-    .ct-character-sheet--dice-enabled .ddbc-combat-item-attack__damage .integrated-dice__container:hover,
-    .ct-character-sheet--dice-enabled .ddbc-spell-damage-effect__damages .integrated-dice__container:hover,
-    .ct-character-sheet--dice-enabled .ddbc-spell-damage-effect__healing .integrated-dice__container:hover,
-    .ct-character-sheet--dice-enabled .ct-skills__col--modifier .integrated-dice__container:hover,
-    .ct-character-sheet--dice-enabled .ddbc-combat-attack__tohit .integrated-dice__container:hover,
-    .ct-character-sheet--dice-enabled .ddbc-ability-summary__primary .integrated-dice__container:hover,
-    .ct-character-sheet--dice-enabled .ct-initiative-box__value .integrated-dice__container:hover,
-    .ct-character-sheet--dice-enabled .ct-skills__item .integrated-dice__container:hover,
-    .ct-character-sheet--dice-enabled .ct-spells-spell__tohit .integrated-dice__container:hover,
-    .ct-character-sheet--dice-enabled .ddbc-combat-attack--crit .ddbc-combat-attack__damage .integrated-dice__container:hover,
     [class^="GameLogEntry_Message_"],
     ._1_4XN--HbdIB3j-9HVLY3F,
     ._1KM4FtjuhNomsZCIfBsJQ1,
@@ -4910,93 +4970,6 @@ regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond
     }
     
 
-
-/*Beyond 20 + Talespire rolls settings*/
-  
-    /*[[beyond20Invert]]*/
-
-    .beyond20-roll-cell,
-    .beyond20-description,
-    .beyond20-dice-roller-content,
-    .ajs-footer,
-    .beyond20-message .beyond20-description,
-    .beyond20-message details table,
-    .beyond20-tooltip .beyond20-tooltip-content,
-    .dice-formula.beyond20-roll-formula,
-    .beyond20-roll-cell,
-    .beyond20-roll-die-result,
-    .ajs-dialog,
-    .ajs-header,
-    .ajs-primary.ajs-buttons{
-        background-color: /*[[backgroundColor]]*/ !important;
-        color: /*[[fontColor]]*/;
-    }
-    
-    .beyond20-dice-roller a,
-    .beyond20-button-roll-damages{
-        color: /*[[fontColor]]*/;
-    }
-    
-    .beyond20-message details summary,
-    .beyond20-title,
-    .beyond20-dice-roller a:hover{
-        color: /*[[rollColor]]*/;
-    }
-    
-    
-    .beyond20-button-roll-damages{
-        color: /*[[rollColor]]*/;
-    }
-    
-    .beyond20-roll-cell,
-    .beyond20-message details summary,
-    .beyond20-title,
-    .beyond20-dice-roller-content,
-    .beyond20-tooltip .beyond20-tooltip-content,
-    .beyond20-roll-cell,
-    .beyond20-roll-die-result,
-    .beyond20-button-roll-damages,
-    .dice-formula.beyond20-roll-formula{
-        border-color: /*[[rollColor]]*/;
-    }
-    
-    .dice-formula.beyond20-roll-formula,
-    .beyond20-roll-die-result,
-    .beyond20-roll-cell{
-        box-shadow: none;
-    }
-
-    
-
-    .beyond20-roll-detail-crit-fail,
-    .beyond20-roll-detail-fail {
-        color: #F00;
-    }
-
-    .beyond20-roll-detail-crit {
-        color: #0F0;
-    }
-    .talespireLink {
-        background: /*[[backgroundColor]]*/ !important;
-        color: /*[[rollColor]]*/ !important;
-    }
-
-    /*AboveVtt*/
-    
-    #castbutton{
-        text-shadow: none !important;   
-        background: /*[[sidebarColor]]*/;
-        color: /*[[fontColor]]*/;
-    }
-    
-/*Mobile and Tablet*/
-
-
-    @media screen and (max-width: 767px) {
-    .talespireLink{
-            background: /*[[backgroundColor]]*/ !important;
-        }
-    }
 }
 
     /*[[compendiumBackgrounds]]*/
