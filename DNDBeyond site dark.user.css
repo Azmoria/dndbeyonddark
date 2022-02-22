@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.207
+@version      1.2.208
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -4131,7 +4131,8 @@ div#site{
     .token-image-modal-footer-title,
     .material-icons.button-icon,
     .sidepanel-content,
-    .sidepanel-content button{
+    .sidepanel-content button,
+    .scene_selector button{
         color: /*[[fontColor]]*/ !important;
     }
     
@@ -4142,8 +4143,35 @@ div#site{
     #soundpad img[src*="chrome-extension://"]{
         /*[[aboveFilter]]*/
     }
+    
+    .scene div button:nth-of-type(3) img,
+    .scene div button:nth-of-type(4) img{
+       display: none;
+    }
+    .scene div button:nth-of-type(3) {    
+   -webkit-mask-image: url(chrome-extension://ipcjcbhpofedihcloggaichibomadlei/assets/icons/edit.svg);
+    -webkit-mask-size: 13px;
+    -webkit-mask-repeat:  no-repeat;
+    -webkit-mask-position: center center;
+    background: /*[[fontColor]]*/ !important;
+    }
 
-  
+    .scene div button:nth-of-type(4) {    
+   -webkit-mask-image: url(chrome-extension://ipcjcbhpofedihcloggaichibomadlei/assets/icons/delete.svg);
+    -webkit-mask-size: 13px;
+    -webkit-mask-repeat:  no-repeat;
+    -webkit-mask-position: center center;
+    background: /*[[fontColor]]*/ !important;
+    }
+     .scene div button:nth-of-type(3),
+    .scene div button:nth-of-type(4){
+        margin: 0px 5px;
+    }
+    
+    .scene div button:nth-of-type(3):hover,
+    .scene div button:nth-of-type(4):hover{
+        background: /*[[linkColor]]*/ !important;;
+    }
     
     .aoeshape:focus, 
     .drawbutton.button-enabled,
@@ -4223,7 +4251,8 @@ div#site{
     #hide_rightpanel, 
     #zoom_buttons button, 
     .stream_button, 
-    .GameLogEntry_Message__1GoY3 button{
+    .GameLogEntry_Message__1GoY3 button
+    {
         background: /*[[backgroundColor]]*/ !important;
         color: /*[[fontColor]]*/;
         height: 22px;
