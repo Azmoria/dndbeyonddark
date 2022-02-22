@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.206
+@version      1.2.207
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -4119,7 +4119,9 @@ div#site{
     .sidebar-panel-body p,
     .sidebar-panel-body div,
     #tokens-panel-header,
-    #tokens-panel-footer{
+    #tokens-panel-footer,
+    .container,
+    button.above-roll20{
         background: /*[[backgroundColor]]*/!important;
         color: /*[[fontColor]]*/!important;
     }
@@ -4150,7 +4152,8 @@ div#site{
     .drawbutton.button-enabled:hover,
     [data-name*="SHARE/SEE"][style*="background: red"],
     .help-tabs li.active,
-    button.drawTypeSelected{
+    button.drawTypeSelected,
+    button.above-roll20:hover{
         background: /*[[backgroundColor]]*/ !important;
         box-shadow: inset 0 0 20px 1px /*[[linkColor]]*/ !important;;
         border: 1px solid /*[[linkColor]]*/;
@@ -4158,6 +4161,16 @@ div#site{
     }
     
     
+    #combat_area tr[data-current]{
+        background: /*[[backgroundColor]]*/ !important;
+        box-shadow: inset 0 0 20px 1px /*[[linkColor]]*/ !important;;
+        border: 1px solid /*[[linkColor]]*/;
+    }
+    button.above-roll20{
+        border: 1px solid /*[[borderColor]]*/;
+        margin: 1px;
+        border-radius: 2px;
+    }
         
    
     button[id$='-button']:hover, 
