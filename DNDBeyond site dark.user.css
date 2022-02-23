@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.215
+@version      1.2.216
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -1506,7 +1506,7 @@ EOT;
     EOT;
     Rainbow "Rainbow"<<<EOT
     canvas.dice-rolling-panel__container,
-    video{
+    body#diceTrayBody video{
     -webkit-animation: rainbow var(--rgb-speed) linear infinite;
     }
     @-webkit-keyframes rainbow {
@@ -1530,7 +1530,7 @@ EOT;
     EOT;
     Custom "Custom RGB"<<<EOT
         canvas.dice-rolling-panel__container,
-        video{
+        body#diceTrayBody video{
             -webkit-animation: rgb var(--rgb-speed) linear infinite;
             }
         @-webkit-keyframes rgb {
@@ -4721,6 +4721,21 @@ div#site{
     }
   
 }
+@-moz-document regexp("https://docs.google.com/document/d/e/2PACX-1vRSJ6Izvldq5c9z_d-9-Maa8ng1SUK2mGSQWkPjtJip0cy9dxAwAug58AmT9zRtJmiUx5Vhkp7hATSt/.*embedded=true"), regexp("https://docs.google.com/document/d/e/2PACX-1vRSJ6Izvldq5c9z_d-9-Maa8ng1SUK2mGSQWkPjtJip0cy9dxAwAug58AmT9zRtJmiUx5Vhkp7hATSt/.*embedded=true#.*") {
+    /*AboveVTT FAQ*/
+    div.c18,
+    .c11{
+        background: /*[[backgroundColor]]*/;
+    }    
+    [class^="c"]{        
+        color: /*[[fontColor]]*/;   
+    }    
+    .c1,
+    .c7{
+        color: /*[[linkColor]]*/;   
+    }    
+}
+
 @-moz-document regexp("https://www.dndbeyond.com/encounter-builder"),
 regexp("https://www.dndbeyond.com/combat-tracker.*"), regexp("https://www.dndbeyond.com/campaigns/.*"),
 regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond.com/my-encounters"), regexp("https://www.dndbeyond.com/encounter-builder.*#DiceTray"),
@@ -4729,9 +4744,7 @@ regexp("https://www.dndbeyond.com/encounters.*#DiceTray"), regexp("https://www.d
     :root {
 
         --custom-capture-background: /*[[customCaptureBackground]]*/;
-        --sheet-color: /*[[sheetColor]]*/;
         --dice-color: sepia(/*[[diceSepia]]*/%) hue-rotate(/*[[hueRotation]]*/deg) brightness(/*[[diceBrightness]]*/%) saturate(/*[[diceSaturation]]*/%) contrast(/*[[diceContrast]]*/%) invert(/*[[diceInvert]]*/);
-        --background-color: /*[[background]]*/;
         --rgb-speed: /*[[rgbSpeed]]*/s;
         --rgb-from: hue-rotate(/*[[rgbFrom]]*/deg);
         --rgb-to: hue-rotate(/*[[rgbTo]]*/deg);
@@ -5015,10 +5028,10 @@ regexp("https://www.dndbeyond.com/encounters.*#DiceTray"), regexp("https://www.d
     
 /*dice Cusomtization and JS compainion script css*/   
     canvas.dice-rolling-panel__container,
-    video{
+    body#diceTrayBody video{
         filter: /*[[diceTint]]*/
     }
-    video{
+    body#diceTrayBody video{
         position: absolute;
         top: 0;
         left: 0;   
@@ -5044,6 +5057,8 @@ regexp("https://www.dndbeyond.com/encounters.*#DiceTray"), regexp("https://www.d
     
 
 }
+
+
 
     /*[[compendiumBackgrounds]]*/
 
