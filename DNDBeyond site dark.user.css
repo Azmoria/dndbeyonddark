@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.219
+@version      1.2.220
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -4268,6 +4268,9 @@ div#site{
         z-index: 100;
         pointer-events: none !important;
     }    
+     .sidebar__controls{
+        z-index: 105 !important;
+    }
   
     .sidepanel-content.glc-game-log:before,
     #monster-panel:before {
