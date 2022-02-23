@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Dice Tray Stream Window
 // @namespace    Azmoria
-// @version      1.0.013
+// @version      1.0.014
 // @description  Stream your Dice to another window
 // @author       Azmoria
 // @downloadURL  https://github.com/Azmoria/dndbeyonddark/raw/master/Dice%20Tray%20Stream%20Window.user.js
@@ -46,7 +46,7 @@ async function diceTray() {
     var stream = await canvas.captureStream(30);
     video.srcObject = await stream;
     await window.addEventListener('resize', function(event){
-        if(childWindow.innerHeight != screen.height) {
+        if(childWindow.innerHeight < (screen.height-1) && childWindow.innerwidth != screen.width) {
             resizeChild(childWindow);
         }
     });
