@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.216
+@version      1.2.217
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -4082,7 +4082,24 @@ div#site{
         height: 28px !important;   
     }
     
+    
     /*AboveVTT Changes*/
+    
+    #castbutton,
+    .sidebar__pane-content .rc-switch,
+    .sidebar-panel-header,
+    .player-token-hp
+    {
+        text-shadow: none !important;   
+        background: /*[[backgroundColor]]*/ !important;
+        color: /*[[fontColor]]*/;
+    }
+    
+    
+    .sidebar__pane-content .rc-switch.rc-switch-checked{
+        background: /*[[rollCalcColor]]*/ !important;      
+    }
+ 
     div#scene_selector, 
     #combat_tracker_inside, 
     #edit_dialog, 
@@ -4103,6 +4120,16 @@ div#site{
         color: /*[[fontColor]]*/!important;
         border-color: /*[[borderColor]]*/ !important;
     }
+    .sidebar__controls .tab-btn{ 
+        border: none;
+    }
+    .sidebar__controls .tab-btn.selected-tab {    
+        height: 23px;
+        border-top: 1px solid /*[[borderColor]]*/;
+        border-left: 1px solid /*[[borderColor]]*/;
+        border-right: 1px solid /*[[borderColor]]*/;
+    }
+
     div#splash {
         height: fit-content;
     }
@@ -4110,13 +4137,12 @@ div#site{
         background: /*[[backgroundColor]]*/!important;
     }
     div.above-vtt-warning-secondary-div ~ a.ddb-campaigns-warning-div{
-        color: /*[[fontColor]]*/!important;
+        color: /*[[fontColor]]*/ !important;
     }
     .scene,
     #help-menu,
     .help-tabs,
     .sidebar-panel-body,
-    .sidebar-panel-header,
     .sidebar-panel-footer,
     .custom-token-list,
     .context-menu-item,
@@ -4124,17 +4150,130 @@ div#site{
     .custom-token-image-row,
     [class*="custom-token-image-row"],
     .sidebar-panel-body button,
-    .player-card,
     .ability_score,
     .sidebar-panel-body p,
-    .sidebar-panel-body div,
     #tokens-panel-header,
     #tokens-panel-footer,
     button.above-roll20{
-        background: /*[[backgroundColor]]*/!important;
+        background: /*[[backgroundColor]]*/ !important;
         color: /*[[fontColor]]*/!important;
     }
-   
+    
+    .player-token-ac {
+        border-radius: 0px;
+        background-color: /*[[backgroundColor]]*/;
+        width: 25px;
+        height: 25px;
+         -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' id='ac_shield' x='0px' y='0px' viewBox='6.991001129150391 0 45.999996185302734 59.981998443603516' xml:space='preserve' height='21px' width='21px'%3E%3Cg xmlns='http://www.w3.org/2000/svg' transform='translate(6 0)'%3E%3Cpath d='M51.991,7.982c-14.628,0-21.169-7.566-21.232-7.64c-0.38-0.456-1.156-0.456-1.536,0c-0.064,0.076-6.537,7.64-21.232,7.64 c-0.552,0-1,0.448-1,1v19.085c0,10.433,4.69,20.348,12.546,26.521c3.167,2.489,6.588,4.29,10.169,5.352 c0.093,0.028,0.189,0.042,0.285,0.042s0.191-0.014,0.285-0.042c3.581-1.063,7.002-2.863,10.169-5.352 c7.856-6.174,12.546-16.088,12.546-26.521V8.982C52.991,8.43,52.544,7.982,51.991,7.982z ' %3E%3C/path%3E%3Cpath d='M50.991,28.067 c0,9.824-4.404,19.151-11.782,24.949c-2.883,2.266-5.983,3.92-9.218,4.921c-3.235-1-6.335-2.655-9.218-4.921 C13.395,47.219,8.991,37.891,8.991,28.067V9.971c12.242-0.272,18.865-5.497,21-7.545c2.135,2.049,8.758,7.273,21,7.545V28.067z' %3E%3C/path%3E%3C/g%3E%3C/svg%3E") -1px 0px / 24px 24px no-repeat;
+        mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' id='ac_shield' x='0px' y='0px' viewBox='6.991001129150391 0 45.999996185302734 59.981998443603516' xml:space='preserve' height='21px' width='21px'%3E%3Cg xmlns='http://www.w3.org/2000/svg' transform='translate(6 0)'%3E%3Cpath d='M51.991,7.982c-14.628,0-21.169-7.566-21.232-7.64c-0.38-0.456-1.156-0.456-1.536,0c-0.064,0.076-6.537,7.64-21.232,7.64 c-0.552,0-1,0.448-1,1v19.085c0,10.433,4.69,20.348,12.546,26.521c3.167,2.489,6.588,4.29,10.169,5.352 c0.093,0.028,0.189,0.042,0.285,0.042s0.191-0.014,0.285-0.042c3.581-1.063,7.002-2.863,10.169-5.352 c7.856-6.174,12.546-16.088,12.546-26.521V8.982C52.991,8.43,52.544,7.982,51.991,7.982z ' %3E%3C/path%3E%3Cpath d='M50.991,28.067 c0,9.824-4.404,19.151-11.782,24.949c-2.883,2.266-5.983,3.92-9.218,4.921c-3.235-1-6.335-2.655-9.218-4.921 C13.395,47.219,8.991,37.891,8.991,28.067V9.971c12.242-0.272,18.865-5.497,21-7.545c2.135,2.049,8.758,7.273,21,7.545V28.067z' %3E%3C/path%3E%3C/g%3E%3C/svg%3E") -1px 0px / 24px 24px no-repeat;
+        background-image: linear-gradient(135deg, /*[[backgroundColor]]*/ 30%, /*[[fontColor]]*/ 150%);
+        display: flex;  
+        padding: 4px 7px;
+    }
+    
+    .ac svg{
+        border-radius: 0px;
+        background-color: /*[[backgroundColor]]*/;
+         -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' id='ac_shield' x='0px' y='0px' viewBox='6.991001129150391 0 45.999996185302734 59.981998443603516' xml:space='preserve' height='21px' width='21px'%3E%3Cg xmlns='http://www.w3.org/2000/svg' transform='translate(6 0)'%3E%3Cpath d='M51.991,7.982c-14.628,0-21.169-7.566-21.232-7.64c-0.38-0.456-1.156-0.456-1.536,0c-0.064,0.076-6.537,7.64-21.232,7.64 c-0.552,0-1,0.448-1,1v19.085c0,10.433,4.69,20.348,12.546,26.521c3.167,2.489,6.588,4.29,10.169,5.352 c0.093,0.028,0.189,0.042,0.285,0.042s0.191-0.014,0.285-0.042c3.581-1.063,7.002-2.863,10.169-5.352 c7.856-6.174,12.546-16.088,12.546-26.521V8.982C52.991,8.43,52.544,7.982,51.991,7.982z ' %3E%3C/path%3E%3Cpath d='M50.991,28.067 c0,9.824-4.404,19.151-11.782,24.949c-2.883,2.266-5.983,3.92-9.218,4.921c-3.235-1-6.335-2.655-9.218-4.921 C13.395,47.219,8.991,37.891,8.991,28.067V9.971c12.242-0.272,18.865-5.497,21-7.545c2.135,2.049,8.758,7.273,21,7.545V28.067z' %3E%3C/path%3E%3C/g%3E%3C/svg%3E") -1px 0px / cover no-repeat;
+        mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' id='ac_shield' x='0px' y='0px' viewBox='6.991001129150391 0 45.999996185302734 59.981998443603516' xml:space='preserve' height='21px' width='21px'%3E%3Cg xmlns='http://www.w3.org/2000/svg' transform='translate(6 0)'%3E%3Cpath d='M51.991,7.982c-14.628,0-21.169-7.566-21.232-7.64c-0.38-0.456-1.156-0.456-1.536,0c-0.064,0.076-6.537,7.64-21.232,7.64 c-0.552,0-1,0.448-1,1v19.085c0,10.433,4.69,20.348,12.546,26.521c3.167,2.489,6.588,4.29,10.169,5.352 c0.093,0.028,0.189,0.042,0.285,0.042s0.191-0.014,0.285-0.042c3.581-1.063,7.002-2.863,10.169-5.352 c7.856-6.174,12.546-16.088,12.546-26.521V8.982C52.991,8.43,52.544,7.982,51.991,7.982z ' %3E%3C/path%3E%3Cpath d='M50.991,28.067 c0,9.824-4.404,19.151-11.782,24.949c-2.883,2.266-5.983,3.92-9.218,4.921c-3.235-1-6.335-2.655-9.218-4.921 C13.395,47.219,8.991,37.891,8.991,28.067V9.971c12.242-0.272,18.865-5.497,21-7.545c2.135,2.049,8.758,7.273,21,7.545V28.067z' %3E%3C/path%3E%3C/g%3E%3C/svg%3E") -1px 0px / cover no-repeat;
+        background-image: linear-gradient(135deg, /*[[backgroundColor]]*/ 30%, /*[[fontColor]]*/ 150%);
+        display: flex;  
+    }
+    
+    
+    .player-token-hp{
+        display: flex;
+        background-image: linear-gradient(135deg, /*[[backgroundColor]]*/ 30%, /*[[fontColor]]*/ 150%) !important;
+        height: 20px;
+        padding: 3px 4px;
+        border-radius: 5px;
+    }
+    
+    .ac,
+    .player-token-ac,
+    .hpbar,
+    .hpbar input,
+    .player-token-hp{
+         text-shadow:1px 1px #000,
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000 !important;	
+    }
+    .hpbar input{
+        background: none !important;      
+       
+    }
+    .hpbar{
+        background-image: linear-gradient(135deg, /*[[backgroundColor]]*/ 40%, /*[[fontColor]]*/ 150%) !important;
+        border-radius: 5px;
+    }
+    .player-token.ui-draggable{
+        filter: drop-shadow(0px 0px 1px /*[[fontColor]]*/);
+    }
+    .VTTToken div{
+        filter: drop-shadow(1px 1px 2px /*[[backgroundColor]]*/);
+    }
+    .context-menu-submenu:after{
+        border-color: transparent transparent transparent /*[[fontColor]]*/;
+    }
+    .ac text{
+           fill: /*[[fontColor]]*/ !important;
+    }
+    .ac path:nth-of-type(2),
+    .ac path:first-of-type{
+           fill: none !important;
+    }
+    .journal-note-entry:nth-child(odd) { 
+        background: none !important;
+        backdrop-filter: brightness(0.8);      
+    }
+    .journal-chapter-title{
+        background: linear-gradient(to top, /*[[backgroundColor]]*/, /*[[fontColor]]*/ 250%);
+        text-shadow:1px 1px #000,
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000 !important;
+        padding-left: 5px;
+    }
+    .journal-chapter{
+        border: 1px solid /*[[borderColor]]*/;
+        margin-bottom: 10px;
+    }
+    .journal-note-entry-title{
+        padding-left: 20px;   
+    }
+    .sidebar-panel-header{
+        position: relative;   
+    }
+    .sidebar-panel-header:before,
+    .sidepanel-content.glc-game-log:before,
+    #monster-panel:before{
+        content: '';
+        position: absolute;
+        bottom: -15px;
+        height: 15px;
+        left:  0px;
+        width: 100%;
+        background-image: linear-gradient(to bottom, /*[[backgroundColor]]*/ 10%, #0000);       
+        z-index: 100;
+    }    
+  
+    .sidepanel-content.glc-game-log:before,
+    #monster-panel:before {
+        top: 0px;
+    }
+    
+    .sidepanel-content.glc-game-log:before,
+    #monster-panel:before {
+     height: 80px;   
+    }
+    
+   .player-card {
+        filter: drop-shadow(1px 1px 2px /*[[linkColor]]*/);
+        background: linear-gradient(/*[[backgroundColor]]*/, /*[[transparencyBackgroundColor]]*/ ) !important;
+    }
     
     .help-tabs li a,
     .token-image-modal-footer-title,
@@ -4202,6 +4341,14 @@ div#site{
         color: /*[[linkColor]]*/;
     }
     
+    
+    .context-menu-item:not(.context-menu-not-selectable):not(.context-menu-disabled):hover{
+        background: /*[[backgroundColor]]*/ !important;
+        box-shadow: inset 0 0 20px 1px /*[[linkColor]]*/ !important;;
+        border: 1px 0px solid /*[[linkColor]]*/;
+        color: /*[[linkColor]]*/;
+    }
+    
     #scene_selector .scene .scene_title ~ div button[style="background: rgb(255, 127, 127);"]{
         background: /*[[backgroundColor]]*/ !important;
         box-shadow: inset 0 0 20px 1px /*[[linkColor]]*/ !important;
@@ -4216,16 +4363,14 @@ div#site{
         margin: 1px;
         border-radius: 2px;
     }
-    
-    
+     
     #scene_selector .sortable_placeholder{
         background: /*[[backgroundColor]]*/ !important;
         box-shadow: inset 0 0 40px 1px /*[[linkColor]]*/ !important;;
         border: 1px solid /*[[linkColor]]*/;
         color: /*[[linkColor]]*/;
     }
-        
-   
+         
     button[id$='-button']:hover, 
     button[id$='_button']:hover, 
     button[id^=jitsi_]:hover, 
@@ -4248,7 +4393,7 @@ div#site{
     .importer_toggle:hover, 
     #zoom_buttons button:hover, 
     .GameLogEntry_Message__1GoY3 button:hover{
-        background: /*[[backgroundColor]]*/;
+        background: /*[[backgroundColor]]*/ !important;
         color: /*[[linkColor]]*/;
         border-color: /*[[linkColor]]*/;
         transition: none;
@@ -4399,19 +4544,7 @@ div#site{
         color: /*[[rollColor]]*/ !important;
     }
 
-    /*AboveVtt*/
-    
-    #castbutton,
-    .sidebar__pane-content .rc-switch{
-        text-shadow: none !important;   
-        background: /*[[sidebarColor]]*/ !important;
-        color: /*[[fontColor]]*/;
-    }
-    
-    
-    .sidebar__pane-content .rc-switch.rc-switch-checked{
-        background: /*[[rollCalcColor]]*/ !important;      
-    }
+
     
 /*Mobile and Tablet*/
 
@@ -4742,7 +4875,6 @@ regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond
 regexp("https://www.dndbeyond.com/combat-tracker.*#DiceTray"), regexp("https://www.dndbeyond.com/campaigns.*#DiceTray"),
 regexp("https://www.dndbeyond.com/encounters.*#DiceTray"), regexp("https://www.dndbeyond.com/my-encounters.*#DiceTray"){
     :root {
-
         --custom-capture-background: /*[[customCaptureBackground]]*/;
         --dice-color: sepia(/*[[diceSepia]]*/%) hue-rotate(/*[[hueRotation]]*/deg) brightness(/*[[diceBrightness]]*/%) saturate(/*[[diceSaturation]]*/%) contrast(/*[[diceContrast]]*/%) invert(/*[[diceInvert]]*/);
         --rgb-speed: /*[[rgbSpeed]]*/s;
