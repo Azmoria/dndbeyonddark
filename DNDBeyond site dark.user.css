@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.225
+@version      1.2.226
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -4361,8 +4361,8 @@ div#site{
         border: 1px solid /*[[linkColor]]*/;
         color: /*[[linkColor]]*/;
     }
-    .player-card-footer.show .ability_value,
-    .player-card-footer.show .ability_score{
+    .player-card-footer .ability_value,
+    .player-card-footer .ability_score{
         border-color: /*[[borderColor]]*/
     }
     #scene_selector_toggle > span{
