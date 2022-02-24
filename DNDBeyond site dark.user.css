@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.228
+@version      1.2.229
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -4150,7 +4150,8 @@ div#site{
     div#splash {
         height: fit-content;
     }
-    a.above-vtt-warning-secondary-div{
+    a.above-vtt-warning-secondary-div,
+    .help-tabs li:hover{
         background: /*[[backgroundColor]]*/!important;
     }
     div.above-vtt-warning-secondary-div ~ a.ddb-campaigns-warning-div{
@@ -4389,8 +4390,9 @@ div#site{
         background: /*[[backgroundColor]]*/ !important;
         box-shadow: inset 0 0 10px 1px /*[[linkColor]]*/ !important;;
         border: 1px solid /*[[linkColor]]*/;
-        color: /*[[linkColor]]*/;
+        color: /*[[linkColor]]*/ !important;
     }
+  
     .player-card-footer .ability_value,
     .player-card-footer .ability_score{
         border-color: /*[[borderColor]]*/
@@ -4401,7 +4403,8 @@ div#site{
     .material-icons{
         color: /*[[fontColor]]*/ !important;   
     }
-     #scene_selector_toggle:hover .material-icons{
+     #scene_selector_toggle:hover .material-icons,
+    .help-tabs li:hover a{
          color: /*[[linkColor]]*/ !important;
     }
     .context-menu-item:not(.context-menu-not-selectable, .context-menu-disabled) {
@@ -4933,16 +4936,18 @@ div#site{
 }
 @-moz-document regexp("https://docs.google.com/document/d/e/2PACX-1vRSJ6Izvldq5c9z_d-9-Maa8ng1SUK2mGSQWkPjtJip0cy9dxAwAug58AmT9zRtJmiUx5Vhkp7hATSt/.*embedded=true"), regexp("https://docs.google.com/document/d/e/2PACX-1vRSJ6Izvldq5c9z_d-9-Maa8ng1SUK2mGSQWkPjtJip0cy9dxAwAug58AmT9zRtJmiUx5Vhkp7hATSt/.*embedded=true#.*") {
     /*AboveVTT FAQ*/
-    div.c18,
-    .c11{
+   
+    body>div[class^="c"],
+    body>div[class^="c"]:first-of-type>div:first-of-type>p>span{
         background: /*[[backgroundColor]]*/;
     }    
-    [class^="c"]{        
+   div[class^="c"] span,
+   div[class^="c"] p,
+   div[class^="c"] div{        
         color: /*[[fontColor]]*/;   
     }    
-    .c1,
-    .c7{
-        color: /*[[linkColor]]*/;   
+    a{
+        color: /*[[linkColor]]*/ !important;   
     }    
 }
 
