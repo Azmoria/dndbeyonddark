@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.139
+@version      1.3.140
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -573,7 +573,7 @@ EOT;
 
 ==/UserStyle== */
 @-moz-document regexp("https://www.dndbeyond.com/profile/.*/characters/\\d*"),
-regexp("https://www.dndbeyond.com/characters/.*") {
+regexp("https://www.dndbeyond.com/characters/\d.*") {
     
 
     /*Character Sheet only*/
@@ -677,7 +677,6 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-extras-mobile,
     .integrated-dice-menu__item,
     .Basic-Text-Frame,
-    .body-rpgcharacterbuilder.site,
     .filter-listing-item,
     input[type="text"],
     input[type="number"],
@@ -845,8 +844,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     body:not(.body-forum):not(.section-posts):not(.section-changelog):not(.body-privatemessage-details) blockquote::after,
     .ddbc-creature-block,
     .ddbc-creature-block:after,
-    .ddbc-creature-block:before,
-    .body-rpgcharacterbuilder.site{
+    .ddbc-creature-block:before{
         background-image: none !important;
     }
 
