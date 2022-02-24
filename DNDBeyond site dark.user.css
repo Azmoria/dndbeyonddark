@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.221
+@version      1.2.222
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -4188,24 +4188,16 @@ div#site{
         border-radius: 5px;
     }
     
-    .ac,
-    .player-token-ac,
+    .hpbar input{
+        background: none !important;  
+    }
+    
     .hpbar,
     .hpbar input,
+    .ac,
+    .player-token-ac,   
     .player-token-hp{
-         text-shadow:1px 1px /*[[backgroundColor]]*/,
-        -1px -1px 0 /*[[backgroundColor]]*/,  
-         1px -1px 0 /*[[backgroundColor]]*/,
-        -1px 1px 0 /*[[backgroundColor]]*/,
-        1px 1px 0 /*[[backgroundColor]]*/ !important;	
-    }
-    .hpbar input{
-        background: none !important;      
-       
-    }
-    img.token-image[style*="width: 52.5px; height: 52.5px;"] ~ .hpbar,
-    img.token-image[style*="width: 52.5px; height: 52.5px;"] ~ .hpbar input{
-        text-shadow:0.5px 0.5px /*[[backgroundColor]]*/,
+        text-shadow: 0.5px 0.5px /*[[backgroundColor]]*/,
         -0.5px -0.5px 0 /*[[backgroundColor]]*/,  
          0.5px -0.5px 0 /*[[backgroundColor]]*/,
         -0.5px 0.5px 0 /*[[backgroundColor]]*/,
