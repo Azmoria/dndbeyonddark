@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.220
+@version      1.2.221
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -2908,8 +2908,7 @@ div#site{
 	.i-legendary-monster,
 	.i-checkmark,
 	.ddb-statblock.ddb-statblock-monster.ddb-statblock-ability-scores div::before,
-	.es-form-icon,
-    .player-see-more img[src="chrome-extension://ipcjcbhpofedihcloggaichibomadlei/assets/arrows_down.png"]{
+	.es-form-icon{
 		filter: /*[[filter]]*/;
 	}
     
@@ -4194,11 +4193,11 @@ div#site{
     .hpbar,
     .hpbar input,
     .player-token-hp{
-         text-shadow:1px 1px #000,
-        -1px -1px 0 #000,  
-         1px -1px 0 #000,
-        -1px 1px 0 #000,
-        1px 1px 0 #000 !important;	
+         text-shadow:1px 1px /*[[backgroundColor]]*/,
+        -1px -1px 0 /*[[backgroundColor]]*/,  
+         1px -1px 0 /*[[backgroundColor]]*/,
+        -1px 1px 0 /*[[backgroundColor]]*/,
+        1px 1px 0 /*[[backgroundColor]]*/ !important;	
     }
     .hpbar input{
         background: none !important;      
@@ -4206,11 +4205,11 @@ div#site{
     }
     img.token-image[style*="width: 52.5px; height: 52.5px;"] ~ .hpbar,
     img.token-image[style*="width: 52.5px; height: 52.5px;"] ~ .hpbar input{
-        text-shadow:0.5px 0.5px #000,
-        -0.5px -0.5px 0 #000,  
-         0.5px -0.5px 0 #000,
-        -0.5px 0.5px 0 #000,
-        0.5px 0.5px 0 #000 !important;
+        text-shadow:0.5px 0.5px /*[[backgroundColor]]*/,
+        -0.5px -0.5px 0 /*[[backgroundColor]]*/,  
+         0.5px -0.5px 0 /*[[backgroundColor]]*/,
+        -0.5px 0.5px 0 /*[[backgroundColor]]*/,
+        0.5px 0.5px 0 /*[[backgroundColor]]*/ !important;
     }
     .hpbar{
         background-image: linear-gradient(135deg, /*[[backgroundColor]]*/ 40%, /*[[fontColor]]*/ 150%) !important;
@@ -4238,11 +4237,11 @@ div#site{
     }
     .journal-chapter-title{
         background: linear-gradient(to top, /*[[backgroundColor]]*/, /*[[fontColor]]*/ 250%);
-        text-shadow:1px 1px #000,
-        -1px -1px 0 #000,  
-         1px -1px 0 #000,
-        -1px 1px 0 #000,
-        1px 1px 0 #000 !important;
+        text-shadow:1px 1px /*[[backgroundColor]]*/,
+        -1px -1px 0 /*[[backgroundColor]]*/,  
+         1px -1px 0 /*[[backgroundColor]]*/,
+        -1px 1px 0 /*[[backgroundColor]]*/,
+        1px 1px 0 /*[[backgroundColor]]*/ !important;
         padding-left: 5px;
     }
     .journal-chapter{
@@ -4283,8 +4282,8 @@ div#site{
     }
     
    .player-card {
-        filter: drop-shadow(1px 1px 2px /*[[linkColor]]*/);
-        background: linear-gradient(/*[[backgroundColor]]*/, /*[[transparencyBackgroundColor]]*/ ) !important;
+        box-shadow: 0px 0px 2px 0px /*[[borderColor]]*/;
+        background: linear-gradient(/*[[backgroundColor]]*/, /*[[rollCalcColor]]*/ 250%) !important;
     }
     
     .help-tabs li a,
@@ -4300,7 +4299,8 @@ div#site{
     .sidebar__controls img[src*="chrome-extension://"],
     .player-attribute img[src*="chrome-extension://"],
     .sidebar-panel-body button img[src*="chrome-extension://"],
-    #soundpad img[src*="chrome-extension://"]{
+    #soundpad img[src*="chrome-extension://"],
+    .player-see-more img[src="chrome-extension://ipcjcbhpofedihcloggaichibomadlei/assets/arrows_down.png"]{
         /*[[aboveFilter]]*/
     }
     
