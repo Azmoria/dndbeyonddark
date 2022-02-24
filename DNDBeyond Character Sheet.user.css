@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.137
+@version      1.3.138
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -656,6 +656,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-spells-filter__adv-filter-button,
     .ct-equipment-shop__item > .ddbc-collapsible__content,
     .ct-spell-manager__spell > .ddbc-collapsible__content,
+    .ct-equipment-manage-pane__item>.ddbc-collapsible__content,
     .site .ct-button.ct-theme-button--outline:disabled,
     .ct-feats-manage-pane__feat-content,
     .ddbc-ability-score-manager__component-value,
