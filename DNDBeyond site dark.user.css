@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.222
+@version      1.2.223
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -4093,12 +4093,24 @@ div#site{
         background: /*[[backgroundColor]]*/ !important;
         color: /*[[fontColor]]*/;
     }
-    
-    
+    #combat_footer button{
+        flex-grow: 1;   
+    }
+    #combat_footer{
+        display: flex;   
+    }
     .sidebar__pane-content .rc-switch.rc-switch-checked{
         background: /*[[rollCalcColor]]*/ !important;      
     }
- 
+    .tracker-list{
+        padding: 5px 3px;   
+    }
+    #combat_tracker_inside #combat_footer button:last-of-type{
+        border-bottom-right-radius: 5px;   
+    }
+    #combat_tracker_inside #combat_footer button:first-of-type{
+        border-bottom-left-radius: 5px; 
+    }
     div#scene_selector, 
     #combat_tracker_inside, 
     #edit_dialog, 
@@ -4118,6 +4130,11 @@ div#site{
         background: /*[[backgroundColor]]*/!important;
         color: /*[[fontColor]]*/!important;
         border-color: /*[[borderColor]]*/ !important;
+    }
+    
+    #combat_tracker_inside{
+        border-radius: 5px 5px 0 0;
+        width: 250px;
     }
     .sidebar__controls .tab-btn{ 
         border: none;
@@ -4178,8 +4195,7 @@ div#site{
         background-image: linear-gradient(135deg, /*[[backgroundColor]]*/ 30%, /*[[fontColor]]*/ 150%);
         display: flex;  
     }
-    
-    
+        
     .player-token-hp{
         display: flex;
         background-image: linear-gradient(135deg, /*[[backgroundColor]]*/ 30%, /*[[fontColor]]*/ 150%) !important;
@@ -4340,16 +4356,20 @@ div#site{
     button.drawTypeSelected,
     button.above-roll20:hover{
         background: /*[[backgroundColor]]*/ !important;
-        box-shadow: inset 0 0 20px 1px /*[[linkColor]]*/ !important;;
+        box-shadow: inset 0 0 10px 1px /*[[linkColor]]*/ !important;;
         border: 1px solid /*[[linkColor]]*/;
         color: /*[[linkColor]]*/;
     }
     
-    
-    .context-menu-item:not(.context-menu-not-selectable):not(.context-menu-disabled):hover{
+    .context-menu-item:not(.context-menu-not-selectable, .context-menu-disabled) {
+        border: 1px solid /*[[backgroundColor]]*/;
+        border-width: 1px 0px;
+    }
+    .context-menu-item:not(.context-menu-not-selectable, .context-menu-disabled):hover {
         background: /*[[backgroundColor]]*/ !important;
-        box-shadow: inset 0 0 20px 1px /*[[linkColor]]*/ !important;;
-        border: 1px 0px solid /*[[linkColor]]*/;
+        box-shadow: inset 0 0 20px 1px /*[[linkColor]]*/ !important;
+        border: 1px solid /*[[linkColor]]*/;
+        border-width: 1px 0px;
         color: /*[[linkColor]]*/;
     }
     
@@ -4357,11 +4377,21 @@ div#site{
         background: /*[[backgroundColor]]*/ !important;
         box-shadow: inset 0 0 20px 1px /*[[linkColor]]*/ !important;
     }
+     
+    #combat_area tr{
+        border: 1px solid /*[[backgroundColor]]*/;       
+    }
+  
     #combat_area tr[data-current]{
         background: /*[[backgroundColor]]*/ !important;
         box-shadow: inset 0 0 20px 1px /*[[linkColor]]*/ !important;
-        border: 1px solid /*[[linkColor]]*/;
+        border-color: /*[[linkColor]]*/;   
     }
+    
+    #combat_area tr:not(tr[data-current] ~ tr, tr[data-current]) {
+        border-bottom: none;   
+    }
+    
     button.above-roll20{
         border: 1px solid /*[[borderColor]]*/;
         margin: 1px;
