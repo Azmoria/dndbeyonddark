@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Dice Tray Stream Window
 // @namespace    Azmoria
-// @version      1.0.015
+// @version      1.0.016
 // @description  Stream your Dice to another window
 // @author       Azmoria
 // @downloadURL  https://github.com/Azmoria/dndbeyonddark/raw/master/Dice%20Tray%20Stream%20Window.user.js
@@ -16,20 +16,19 @@
 // ==/UserScript==
 var childWindow = null;
 
-
 async function resizeChild(child){
     var winHeight = await window.innerHeight;
     var winWidth = await window.innerWidth;
     var childHTML = await child.document.documentElement;
-    if(winHeight == screen.height && winWidth == screen.width) {
-       await childHTML.requestFullscreen();
-    }
-   else if(winWidth<1900){
-        await child.resizeTo(winWidth+16, winHeight+71);
-    }
-    else{
-        await child.resizeTo(winWidth-1, winHeight+60);
-    }
+        if(winHeight == screen.height && winWidth == screen.width) {
+            await childHTML.requestFullscreen();
+        }
+        else if(winWidth<1900){
+            await child.resizeTo(winWidth+16, winHeight+71);
+        }
+        else{
+            await child.resizeTo(winWidth-1, winHeight+60);
+        }
 }
 
 async function diceTray() {
@@ -39,8 +38,11 @@ async function diceTray() {
     if(childWindow.document.querySelector('video') == undefined || childWindow.document.querySelector('video') == null){
         await childWindow.document.write('<video id="video" muted autoplay></video>');
     }
-    await childWindow.history.pushState({}, "Dice Tray - " + document.title, window.location.href+"#DiceTray");
-    childWindow.document.title = "Dice Tray - " + await document.title;
+    if(childWindow.location.href.indexOf("abovevtt") > -1 && childWindow.location.href.indexOf("encounter") > -1 && childWindow.location.href.indexOf("#DiceTray") > -1){}
+    else{
+        await childWindow.history.pushState({}, "Dice Tray - " + document.title, window.location.href+"#DiceTray");
+        childWindow.document.title = "Dice Tray - " + await document.title;
+    }
     const body = await childWindow.document.querySelector('body');
     var canvas = await document.querySelector('.dice-rolling-panel__container');
     const video = await childWindow.document.querySelector('#video');
@@ -48,7 +50,6 @@ async function diceTray() {
     var stream = await canvas.captureStream(30);
     if(video.srcObject == undefined || video.srcObject == null){
         video.srcObject = await stream;
-        console.log('test2');
     }
     else {
         canvas = await document.querySelector('.dice-rolling-panel__container');
@@ -61,11 +62,13 @@ async function diceTray() {
         await childWindow.document.write('<video id="video'+n+'" muted autoplay></video>');
         const newVideo = await childWindow.document.querySelector('#video'+n);
         newVideo.srcObject = await newStream;
-        console.log('test3');
     }
     await window.addEventListener('resize', function(event){
-        if(childWindow.innerHeight < (childWindow.screen.height-1) && childWindow.innerwidth != childWindow.screen.width) {
-            resizeChild(childWindow);
+        if(childWindow.location.href.indexOf("abovevtt") > -1 && childWindow.location.href.indexOf("encounter") > -1 && childWindow.location.href.indexOf("#DiceTray") > -1){}
+        else{
+            if(childWindow.innerHeight < (childWindow.screen.height-1) && childWindow.innerwidth != childWindow.screen.width) {
+                resizeChild(childWindow);
+            }
         }
     });
     return childWindow;
