@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.231
+@version      1.2.232
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -1660,7 +1660,7 @@ url-prefix("https://www.dndbeyond.com/my-characters"),
 url-prefix("https://www.dndbeyond.com/search"),
 url-prefix("https://www.dndbeyond.com/modifier"),
 url-prefix("https://www.dndbeyond.com/entity"),
-url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyond.com/subclasses"), url-prefix("https://www.dndbeyond.com/articles"), url-prefix("https://www.dndbeyond.com/tag"), url-prefix("https://www.dndbeyond.com/subraces"), url-prefix("https://www.dndbeyond.com/changelog"), regexp("https://www.dndbeyond.com/profile/.*/characters"), regexp("https://www.dndbeyond.com/encounter-builder"), regexp("https://www.dndbeyond.com/my-encounters"), regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond.com/combat-tracker.*"), regexp("https://www.dndbeyond.com/items"), regexp("https://www.dndbeyond.com/my-dice"), regexp("https://www.dndbeyond.com/members/.*"), regexp("https://www.dndbeyond.com/private-messages.*"), regexp("https://www.dndbeyond.com/content/.*"), url-prefix("https://www.dndbeyond.com/account"), url-prefix("https://linkst.dndbeyond.com"), url-prefix("https://www.dndbeyond.com/new-content"), url-prefix("https://www.dndbeyond.com/my-notifications"), url-prefix("https://www.dndbeyond.com/linkout"), url-prefix("https://www.dndbeyond.com/members"), url-prefix("https://www.dndbeyond.com/comments"){
+url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyond.com/subclasses"), url-prefix("https://www.dndbeyond.com/articles"), url-prefix("https://www.dndbeyond.com/tag"), url-prefix("https://www.dndbeyond.com/subraces"), url-prefix("https://www.dndbeyond.com/changelog"), regexp("https://www.dndbeyond.com/profile/.*/characters"), regexp("https://www.dndbeyond.com/encounter-builder"), regexp("https://www.dndbeyond.com/my-encounters"), regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond.com/combat-tracker.*"), regexp("https://www.dndbeyond.com/items"), regexp("https://www.dndbeyond.com/my-dice"), regexp("https://www.dndbeyond.com/members/.*"), regexp("https://www.dndbeyond.com/private-messages.*"), regexp("https://www.dndbeyond.com/content/.*"), url-prefix("https://www.dndbeyond.com/account"), url-prefix("https://linkst.dndbeyond.com"), url-prefix("https://www.dndbeyond.com/new-content"), url-prefix("https://www.dndbeyond.com/my-notifications"), url-prefix("https://www.dndbeyond.com/linkout"), url-prefix("https://www.dndbeyond.com/members"), url-prefix("https://www.dndbeyond.com/comments"), regexp("https://www.dndbeyond.com/.*abovevtt=true"){
 
     :root, :before, :after{
     --custom-icon-filter: /*[[iconFilter]]*/;
@@ -2911,7 +2911,58 @@ div#site{
 	.es-form-icon{
 		filter: /*[[filter]]*/;
 	}
-    
+    /*Tooltip popup concentration icon fix*/
+    .tooltip-body-statblock-item-value .i-concentration{
+        background-image: url(https://www.dndbeyond.com/content/1-0-1891-0/skins/waterdeep/images/icons/core_mechanics/concentration.svg);
+        width: 16px;
+        height: 16px;
+        margin-right: 5px;
+        display: inline-block;
+        text-indent: -99999px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        vertical-align: top;
+    }
+    /* AboveVTT tooltip - semi functional but won't be needed once ddb-dice merge
+    @media screen and (max-width: 1023px){
+        
+        
+        #db-tooltip-container h3,
+        .tooltip,
+        .popover h3 {
+            display: block !important;
+
+        }
+         #db-tooltip-container,
+        .popover {
+            left: 20px !important;
+            top: 20px !important;
+             pointer-events: none !important;
+              width: 60vw !important;
+     
+        }
+        .tooltip {
+            width: 100vw !important;
+            min-width: 300px !important;
+            pointer-events: none !important;
+         }
+    }
+     @media screen and (max-width: 867px) {
+         
+    }
+        .monster_frame{
+            top: 30px !important;
+            height: calc(100% - 35px) !important;       
+            width: 60vw !important;
+        }
+        .monster_frame iframe{
+            height: 100% !important;   
+            width: 100% !important;
+        }
+   
+    .db-tooltip-container{
+        display: block;   
+    }*/
     .input-checkbox__icon:not(:checked)
     {
         fill: /*[[borderColor]]*/ !important;
@@ -4085,6 +4136,8 @@ div#site{
     
     /*AboveVTT Changes*/
     
+    
+
     #castbutton,
     .sidebar__pane-content .rc-switch,
     .sidebar-panel-header,
@@ -4094,7 +4147,18 @@ div#site{
         background: /*[[backgroundColor]]*/ !important;
         color: /*[[fontColor]]*/;
     }
-
+    .monster-row__config-handle img{
+        display: none !important;
+    }
+     .monster-row__config-handle{
+        -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' style='height: 512px; width: 512px;'%3E%3Cg class='' transform='translate(0,0)' style=''%3E%3Cpath d='M234.875 18.78c-26.087 2.367-51.557 8.56-74.875 18.782 15.37 32.763 14.222 66.706-6.72 82.407-20.835 15.617-54.055 7.965-81.124-15.69-16.246 19.452-29.336 41.36-38.875 65.626 33.83 12.333 56.635 37.665 52.94 63.5-3.698 25.835-32.697 43.74-68.626 46.094 2.338 25.796 8.91 50.778 18.937 73.875 17.81-8.182 35.793-11.09 51.095-8.938 13.032 1.87 23.927 7.015 31.156 16.657 15.817 21.097 7.603 54.713-16.78 81.97 19.516 16.35 42.216 29.444 66.594 39.03 12.33-33.828 37.655-56.634 63.5-52.938 25.844 3.697 43.74 32.696 46.094 68.625 26.087-2.365 51.557-8.555 74.875-18.78-15.766-32.997-14.26-67.588 6.843-83.406 9.64-7.23 22.568-9.022 35.594-7.125 15.112 2.16 31.19 10.25 45.563 22.78 16.088-19.345 29.4-41.51 38.875-65.594-33.83-12.332-56.635-37.653-52.938-63.5 3.697-25.846 32.665-43.772 68.594-46.125-2.36-25.944-8.774-50.663-18.906-73.874-32.612 15.117-66.66 13.145-82.282-7.687-15.696-20.944-7.252-53.86 16.688-81-19.52-16.352-42.248-29.447-66.625-39.032-12.332 33.828-37.657 56.66-63.5 52.968-25.846-3.693-43.744-32.696-46.095-68.625zm21.656 95.126c79.626 0 144.376 64.752 144.376 144.375 0 79.626-64.75 144.376-144.375 144.376-79.624 0-144.374-64.75-144.374-144.375 0-79.624 64.75-144.374 144.375-144.374zm0 18.688c-69.524 0-125.686 56.162-125.686 125.687 0 69.526 56.162 125.69 125.687 125.69 69.526 0 125.69-56.164 125.69-125.69 0-69.522-56.164-125.686-125.69-125.686zm.033 15.125c61.094 0 110.625 49.53 110.625 110.624 0 61.095-49.53 110.625-110.625 110.625s-110.625-49.53-110.625-110.626c0-61.095 49.53-110.625 110.625-110.625z' fill='%23000000' fill-opacity='1'/%3E%3C/g%3E%3C/svg%3E");
+         -webkit-mask-position: center;
+         -webkit-mask-size: contain;
+         -webkit-mask-repeat: no-repeat;
+         border-left: 1px solid /*[[borderColor]]*/ !important;
+    }
+    
+    
     #combat_footer button{
         flex-grow: 1;   
     }
@@ -4173,7 +4237,8 @@ div#site{
     .sidebar-panel-body p,
     #tokens-panel-header,
     #tokens-panel-footer,
-    button.above-roll20{
+    button.above-roll20,
+    .ddbc-tab-options--layout-pill .ddbc-tab-options__header-heading{
         background: /*[[backgroundColor]]*/ !important;
         color: /*[[fontColor]]*/!important;
     }
@@ -4468,15 +4533,15 @@ div#site{
     .top_menu button:hover, 
     .monster_frame > button:hover, 
     .stp-btn:hover, 
-    #hide_rightpanel:hover, 
     .player-actions button:hover, 
     #add-party:hover, 
     .importer_toggle:hover, 
     #zoom_buttons button:hover, 
-    .GameLogEntry_Message__1GoY3 button:hover{
+    .GameLogEntry_Message__1GoY3 button:hover,
+    .ddbc-tab-options--layout-pill .ddbc-tab-options__header-heading:hover{
         background: /*[[backgroundColor]]*/ !important;
-        color: /*[[linkColor]]*/;
-        border-color: /*[[linkColor]]*/;
+        color: /*[[linkColor]]*/ !important;
+        border-color: /*[[linkColor]]*/ !important;
         transition: none;
     }
     
@@ -4499,7 +4564,6 @@ div#site{
     .player-actions button,
     #add-party, 
     #reset_round_number, 
-    #hide_rightpanel, 
     #zoom_buttons button, 
     .stream_button, 
     .GameLogEntry_Message__1GoY3 button
@@ -4793,7 +4857,95 @@ div#site{
 }  
     
 
+@-moz-document regexp("https://www.dndbeyond.com/.*abovevtt.*") {
+    /*New AboveVTT Changes for ddb-dice fork/merge*/
+    .sidebar-panel-body{
+        border: 1px solid /*[[borderColor]]*/;
+    }
+    .sidebar-tab-image > div[style*=-webkit-mask]
+    {
+        background-color: /*[[fontColor]]*/ !important;
+    }
+    #loading_overlay div[style*="background-image: url("]{
+        -webkit-mask-image: url(https://raw.githubusercontent.com/Azmoria/dndbeyonddark/master/Images/Dark%20Images/book-cover-mask.png);
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-size: cover;
+        -webkit-mask-position: center center;
+    }
+    .sidebar__controls .tab-btn.selected-tab{
+        height: 29px !important;
+    }
+    .sidebar__controls .tab-btn.selected-tab .sidebar-tab-image{
+        border-bottom: none !important;
+    }
+    .ct-sidebar__controls .tab-btn, 
+    .sidebar__controls .tab-btn,
+    .sidebar-panel-loading-indicator{
+        background-color: /*[[backgroundColor]]*/ !important;
+    }
+    .sidebar-tab-image > div[style*=-webkit-mask]:hover, 
+    .sidebar-tab-image > div[style*=-webkit-mask]:hover{
+        background-color: /*[[linkColor]]*/ !important;
+    }
 
+   .gamelog-button__icon path{
+          fill: /*[[fontColor]]*/;
+    }
+    .sidebar-tab-image:hover .gamelog-button__icon path{
+          fill: /*[[linkColor]]*/;
+    }
+    #combat_tracker_inside #combat_area{
+        width: 100%;   
+    }
+    .tracker-list::-webkit-scrollbar-track {
+
+    border-radius: 5px;
+    }
+
+    .tracker-list::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    }
+    .sidepanel-content.glc-game-log:before
+    {
+        background-image: none;   
+    }
+    #players-panel:before {
+    height: 40px;
+    }
+    #players-panel:before
+     {
+        top: 0px;
+    }
+    #players-panel:before
+    {
+        content: '';
+        position: absolute;
+        bottom: -15px;
+        height: 15px;
+        left: 0px;
+        width: 100%;
+        background-image: linear-gradient(to bottom, #0b0b0d 10%, #0000);
+        z-index: 100;
+        pointer-events: none !important;
+    }
+    [id*="-panel"]:after
+    {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right:0;
+        left: 0px;
+        top:0;
+        width: 100%;
+        border: 1px solid /*[[borderColor]]*/;
+        z-index: 105;
+        pointer-events: none !important;
+    }
+    .avtt-sidebar-controls{
+        border-bottom: 1px solid /*[[borderColor]]*/;
+    }
+
+}
 
 @-moz-document url("https://www.dndbeyond.com/") {
 
