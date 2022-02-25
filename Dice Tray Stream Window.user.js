@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Dice Tray Stream Window
 // @namespace    Azmoria
-// @version      1.0.014
+// @version      1.0.015
 // @description  Stream your Dice to another window
 // @author       Azmoria
 // @downloadURL  https://github.com/Azmoria/dndbeyonddark/raw/master/Dice%20Tray%20Stream%20Window.user.js
@@ -15,6 +15,7 @@
 // @run-at      document-end
 // ==/UserScript==
 var childWindow = null;
+
 
 async function resizeChild(child){
     var winHeight = await window.innerHeight;
@@ -32,21 +33,38 @@ async function resizeChild(child){
 }
 
 async function diceTray() {
-    childWindow = await window.open('', 'Dice Tray', 'toolbar=0,location=0,menubar=0,width="'+window.innerWidth+'",height="'+window.innerHeight+'"');
+    if (childWindow == null) {
+        childWindow = await window.open('', 'Dice Tray', 'toolbar=0,location=0,menubar=0');
+    }
     if(childWindow.document.querySelector('video') == undefined || childWindow.document.querySelector('video') == null){
         await childWindow.document.write('<video id="video" muted autoplay></video>');
     }
     await childWindow.history.pushState({}, "Dice Tray - " + document.title, window.location.href+"#DiceTray");
     childWindow.document.title = "Dice Tray - " + await document.title;
-    resizeChild(childWindow);
     const body = await childWindow.document.querySelector('body');
-    const canvas = await document.querySelector('canvas');
-    const video = await childWindow.document.querySelector('video');
+    var canvas = await document.querySelector('.dice-rolling-panel__container');
+    const video = await childWindow.document.querySelector('#video');
     await body.setAttribute("id", 'diceTrayBody');
     var stream = await canvas.captureStream(30);
-    video.srcObject = await stream;
+    if(video.srcObject == undefined || video.srcObject == null){
+        video.srcObject = await stream;
+        console.log('test2');
+    }
+    else {
+        canvas = await document.querySelector('.dice-rolling-panel__container');
+        var newStream = await canvas.captureStream(30);
+        var n = 0;
+        var videoTags = await childWindow.document.getElementsByTagName("video");
+        for (let i=0; i < videoTags.length; i++){
+            n+=1;
+        }
+        await childWindow.document.write('<video id="video'+n+'" muted autoplay></video>');
+        const newVideo = await childWindow.document.querySelector('#video'+n);
+        newVideo.srcObject = await newStream;
+        console.log('test3');
+    }
     await window.addEventListener('resize', function(event){
-        if(childWindow.innerHeight < (screen.height-1) && childWindow.innerwidth != screen.width) {
+        if(childWindow.innerHeight < (childWindow.screen.height-1) && childWindow.innerwidth != childWindow.screen.width) {
             resizeChild(childWindow);
         }
     });
