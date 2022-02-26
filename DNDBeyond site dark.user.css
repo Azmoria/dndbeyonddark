@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.236
+@version      1.2.237
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -3782,7 +3782,8 @@ div#site{
     .manage-race-tabs .ddbc-tab-list__nav-item--is-active svg path,
     .ddbeb-modal__close-button svg rect,
     .actions-container>button svg path,
-    .search-field__icon path{
+    .search-field__icon path,
+    .encounter-builder-sidebar__close-button svg rect{
         fill: /*[[fontColor]]*/ !important;
     }
     .ddbc-tab-list__nav-item:hover svg path,
@@ -3957,7 +3958,11 @@ div#site{
         padding: 12px;
     }
     
-     .heading-anchor:hover a:before{
+    .heading-anchor:hover a:before,
+    .ddb-search-popular-terms-list-item+.ddb-search-popular-terms-list-item::before, 
+    .ddb-search-results-suggestions-list-item+.ddb-search-popular-terms-list-item::before, 
+    .ddb-search-popular-terms-list-item+.ddb-search-results-suggestions-list-item::before, 
+    .ddb-search-results-suggestions-list-item+.ddb-search-results-suggestions-list-item::before{
         background: /*[[fontColor]]*/;   
     }
     .heading-anchor a:hover:before{
