@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.235
+@version      1.2.236
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -167,7 +167,8 @@ dark "Dark Mode" <<<EOT
     .body-rpgmonster .listing-filters .advanced-filter a span,
     .add-monster-modal__header-text--name,
     .ddb-campaigns-character-card-footer-links div:last-of-type>button:first-of-type,
-    .list-row-primary-text a[href^="/monsters"]{
+    .list-row-primary-text a[href^="/monsters"],
+    .listing__items .listing__list-item__column.blocked{
         color: #D35050 !important;
     }
 
@@ -306,7 +307,8 @@ light "Light Mode" <<<EOT
     .listing .info .row.monster-name .link:hover,
     .listing .info .row.monster-name .link,
     .list-row-primary-text-monster,
-    .combatant-card--monster .combatant-summary__name{
+    .combatant-card--monster .combatant-summary__name,
+    .listing__items .listing__list-item__column.blocked{
         color: #bc0f0f !important;
     }
 
@@ -2060,7 +2062,8 @@ div#site{
     .lb-outerContainer,
     .subscriptions__block,
     .ddb-account-tab-body .listing-container-table table tbody tr:nth-child(2n+1),
-    .ddb-account-tab-body .listing-container-table table tbody tr
+    .ddb-account-tab-body .listing-container-table table tbody tr,
+    #content-management-root .ddb-button
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
@@ -2226,7 +2229,8 @@ div#site{
     .more-info-content table tbody tr:nth-child(odd) td,
     .more-info-body-description table tbody tr:nth-child(odd) td,
     #site .p-article-content table tbody tr:nth-child(odd) td,
-    .ddb-account-tab-body .listing-container-table table tbody tr:nth-child(odd) td{ 
+    .ddb-account-tab-body .listing-container-table table tbody tr:nth-child(odd) td,
+    .listing__items tr:nth-child(odd) td{ 
         background: none !important;
         backdrop-filter: brightness(0.8);      
     }
@@ -2462,7 +2466,8 @@ div#site{
     .ddb-notification-toast-homebrew div.ddb-notification-toast-header-text,
     body.body-privatemessage .single-column #content .u-dropDown .u-dropDownMenu li>a,
     body.body-privatemessage .single-column #content .u-dropDown .u-dropDownMenu,
-    .body-forum-recentlyupdatedforumthreads .p-forum-a .col-thread .thread-title>a
+    .body-forum-recentlyupdatedforumthreads .p-forum-a .col-thread .thread-title>a,
+    .listing__list-item__column
     {
 		color: /*[[fontColor]]*/ !important;
 	}
@@ -2774,7 +2779,8 @@ div#site{
     .section-compendium .site-bar, 
     .section-adventures .site-bar, 
     .section-rules .site-bar, 
-    .site-bar.section-compendium
+    .site-bar.section-compendium,
+    #content-management-root .ddb-button
     {
         border-color: /*[[linkColor]]*/ !important;
     }
@@ -3552,8 +3558,26 @@ div#site{
     position: absolute;
     top: 0px;
     }
-        
-    .ddbc-toggle-field--is-enabled .ddbc-toggle-field__nub{
+    
+    
+    .rc-switch-checked:after{
+        content: 'ON';
+        font-size: 10px;
+        color: /*[[backgroundColor]]*/;
+        background-color: /*[[linkColor]]*/;
+        box-shadow: -15px 0px 25px 4px /*[[backgroundColor]]*/; 
+    }
+    
+    .rc-switch[aria-checked*="false"]:after{
+        content: 'OFF';
+        font-size: 9px;
+        color: /*[[backgroundColor]]*/;
+        background-color: /*[[fontColor]]*/;
+        box-shadow: 10px 0px 30px 10px /*[[backgroundColor]]*/;    
+    }
+    
+    .ddbc-toggle-field--is-enabled .ddbc-toggle-field__nub
+    {
         background-color: /*[[linkColor]]*/;
         box-shadow: -12px 0px 20px 1px /*[[backgroundColor]]*/;      
     }
@@ -3697,7 +3721,8 @@ div#site{
     .toggle-button .toggle-in-collection,
     .compendium-image>figcaption a.ddb-lightbox-outer:hover,
     .ui-state-highlight,
-    .p-article-a .p-article-interact .p-article-comments a:first-of-type:hover
+    .p-article-a .p-article-interact .p-article-comments a:first-of-type:hover,
+    #content-management-root .ddb-button:hover
     {
         background-color: /*[[backgroundColor]]*/ !important;
         box-shadow: inset 0px 0px 30px 0px /*[[linkColor]]*/ !important;
