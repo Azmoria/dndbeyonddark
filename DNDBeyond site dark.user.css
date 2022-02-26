@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.232
+@version      1.2.233
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -2057,7 +2057,10 @@ div#site{
     .body-page .p-article-a .p-article-content table tbody tr,
     table.table-compendium>tbody>tr,
     .static-container-details .content-container table tbody tr,
-    .lb-outerContainer
+    .lb-outerContainer,
+    .subscriptions__block,
+    .ddb-account-tab-body .listing-container-table table tbody tr:nth-child(2n+1),
+    .ddb-account-tab-body .listing-container-table table tbody tr
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
@@ -2222,7 +2225,8 @@ div#site{
     .body-page .p-article-a .p-article-content table tbody tr:nth-child(odd) td,
     .more-info-content table tbody tr:nth-child(odd) td,
     .more-info-body-description table tbody tr:nth-child(odd) td,
-    #site .p-article-content table tbody tr:nth-child(odd) td { 
+    #site .p-article-content table tbody tr:nth-child(odd) td,
+    .ddb-account-tab-body .listing-container-table table tbody tr:nth-child(odd) td{ 
         background: none !important;
         backdrop-filter: brightness(0.8);      
     }
@@ -2574,7 +2578,8 @@ div#site{
     .post-excerpt__title a,
     .ddb-campaigns-character-card-footer-links a,
     .ddb-campaigns-character-card-footer-links div:not(:last-of-type)>button,
-    .monster-row__stat-block a
+    .monster-row__stat-block a,
+    .above-vtt-content-div a[href*="discord"]
     {
 		color: /*[[linkColor]]*/ !important
 	}
