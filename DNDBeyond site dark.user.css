@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.234
+@version      1.2.235
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -4411,7 +4411,7 @@ div#site{
     .player-attribute img[src*="chrome-extension://"],
     .sidebar-panel-body button img[src*="chrome-extension://"],
     #soundpad img[src*="chrome-extension://"],
-    .player-see-more img[src$="arrows_down.png"][src*="arrows_down.png"]{
+    .player-see-more img[src$="arrows_down.png"][src^="chrome-extension:"]{
         /*[[aboveFilter]]*/
     }
     
