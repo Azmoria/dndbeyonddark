@@ -38,7 +38,7 @@ async function diceTray() {
     if(childWindow.document.querySelector('video') == undefined || childWindow.document.querySelector('video') == null){
         await childWindow.document.write('<video id="video" muted autoplay></video>');
     }
-    if(childWindow.location.href.indexOf("abovevtt") > -1 && childWindow.location.href.indexOf("encounter") > -1 && childWindow.location.href.indexOf("#DiceTray") > -1){}
+    if(childWindow.location.href.indexOf("abovevtt") > -1 && childWindow.location.href.indexOf("encounter") > -1 && childWindow.location.href.indexOf("#DiceTray") > -1) {}
     else{
         await childWindow.history.pushState({}, "Dice Tray - " + document.title, window.location.href+"#DiceTray");
         childWindow.document.title = "Dice Tray - " + await document.title;
@@ -57,7 +57,15 @@ async function diceTray() {
         var n = 0;
         var videoTags = await childWindow.document.getElementsByTagName("video");
         for (let i=0; i < videoTags.length; i++){
+            if(n>2) {
+                await childWindow.document.querySelector('#video'+n).remove();
+                await focus();
+                n=3;
+                break;
+            }
+            else {
             n+=1;
+            }
         }
         await childWindow.document.write('<video id="video'+n+'" muted autoplay></video>');
         const newVideo = await childWindow.document.querySelector('#video'+n);
