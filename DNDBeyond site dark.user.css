@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.240
+@version      1.2.241
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -2064,7 +2064,8 @@ div#site{
     .subscriptions__block,
     .ddb-account-tab-body .listing-container-table table tbody tr:nth-child(2n+1),
     .ddb-account-tab-body .listing-container-table table tbody tr,
-    #content-management-root .ddb-button
+    #content-management-root .ddb-button,
+    [class*="GameLogNotification_MessageWrapper"]
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
@@ -2141,6 +2142,9 @@ div#site{
     }
 
 
+    [class*="GameLogNotification_MessageIcon"][class*="GameLogNotification_MessageIconDie"]{
+        background-color: /*[[fontColor]]*/ !important;
+    }
     
     #site .forum-row td,
 	#site .forum-thread-row td,
@@ -2208,7 +2212,7 @@ div#site{
     
     .ddb-campaigns-character-card-footer-links a[class*="ddb-listing-client"]:hover:before,
     .ddb-campaigns-character-card-footer-links div:not(:last-of-type)>button:hover:before{ 
-        background-color: /*[[linkColor]]*/;  
+        background-color: /*[[linkColor]]*/ !important;  
     }
     .ddb-campaigns-character-card-footer-links a[class*="ddb-listing-client"]:before,
     .ddb-campaigns-character-card-footer-links div:not(:last-of-type)>button:before{
@@ -2468,7 +2472,8 @@ div#site{
     body.body-privatemessage .single-column #content .u-dropDown .u-dropDownMenu li>a,
     body.body-privatemessage .single-column #content .u-dropDown .u-dropDownMenu,
     .body-forum-recentlyupdatedforumthreads .p-forum-a .col-thread .thread-title>a,
-    .listing__list-item__column
+    .listing__list-item__column,
+    [class*="GameLogNotification_MessageTotal"]
     {
 		color: /*[[fontColor]]*/ !important;
 	}
@@ -2684,7 +2689,8 @@ div#site{
     body.section-posts blockquote,
     .combat-tracker-page__combat-tracker,
     .p-forum .alert,
-    .mce-floatpanel.mce-window .mce-textbox
+    .mce-floatpanel.mce-window .mce-textbox,
+    [class*="GameLogNotification_MessageWrapper"]
     {
 		border-width: /*[[borderWidth]]*/
 		!important;
@@ -4124,6 +4130,9 @@ div#site{
         text-decoration: none !important;   
     }
     
+    
+    
+    
      /* homebrew sortable table header fix*/
     .b-table-a th .asc:before, 
     .b-shoutbox-a .shoutbox-messages>table.listing th .asc:before, 
@@ -5187,7 +5196,8 @@ regexp("https://www.dndbeyond.com/encounters.*#DiceTray"), regexp("https://www.d
     div#options-menu button.MuiButtonBase-root,
     .glc-game-log button,
     .MuiPopover-root .MuiPaper-root,
-    .mon-stat-block button.integrated-dice__container:hover
+    .mon-stat-block button.integrated-dice__container:hover,
+    [class*="GameLogNotification_MessageIcon"]
     {
         background-color: /*[[rollCalcColor]]*/ !important;
     }
