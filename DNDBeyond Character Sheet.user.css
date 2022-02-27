@@ -2875,6 +2875,26 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         background: /*[[background]]*/ !important;
         color: /*[[fontColor]]*/ !important;
     }
+        .rc-switch-checked:after{
+        content: 'ON';
+        font-size: 10px;
+        color: /*[[background]]*/;
+        background-color: /*[[highlightColor]]*/;
+        box-shadow: -15px 0px 25px 4px /*[[background]]*/; 
+        text-shadow: none;
+    }
+    
+    .rc-switch:not(.rc-switch-checked):after{
+        content: 'OFF';
+        font-size: 9px;
+        color: /*[[background]]*/;
+        background-color: /*[[fontColor]]*/;
+        box-shadow: 10px 0px 30px 10px /*[[background]]*/;    
+        text-shadow: none;
+    }
+    .rc-switch.rc-switch-checked{
+        background: /*[[rollCalcColor]]*/ !important;   
+    }
     .monster-row__config-handle img{
         display: none !important;
     }
