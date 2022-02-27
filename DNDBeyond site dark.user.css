@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.239
+@version      1.2.240
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -3569,9 +3569,9 @@ div#site{
         box-shadow: -15px 0px 25px 4px /*[[backgroundColor]]*/; 
     }
     
-    .rc-switch[aria-checked*="false"]:after{
+    .rc-switch:not(.rc-switch-checked):after{
         content: 'OFF';
-        font-size: 9px;
+        font-size: 9px !important;
         color: /*[[backgroundColor]]*/;
         background-color: /*[[fontColor]]*/;
         box-shadow: 10px 0px 30px 10px /*[[backgroundColor]]*/;    
@@ -4203,6 +4203,7 @@ div#site{
     }
     .sidebar__pane-content .rc-switch.rc-switch-checked{
         background: /*[[rollCalcColor]]*/ !important;      
+        border-color: /*[[linkColor]]*/ !important;
     }
     .tracker-list{
         padding: 5px 3px;   
