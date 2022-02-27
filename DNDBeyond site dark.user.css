@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.238
+@version      1.2.239
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -1691,7 +1691,9 @@ div#site{
 		border-radius: 6px;
 		border: none;
 	}
-    
+    ::-webkit-scrollbar-corner { 
+        background: /*[[backgroundColor]]*/;
+    }
 
     
     :focus,
@@ -2051,7 +2053,6 @@ div#site{
     .ddb-notification-toast-homebrew,
     .p-forum .alert,
     .mce-floatpanel.mce-window .mce-tab.mce-active,
-    #splash,
     .mce-container-body,
     .combatant-card--character.in-combat .combatant-card__right-bit,
     .combatant-card--monster.in-combat .combatant-card__right-bit,
@@ -4226,7 +4227,8 @@ div#site{
     .token-image-modal-content,
     .token-image-modal-content p,
     .token-image-modal-content div,
-    .hpbar
+    .hpbar,
+    #splash
     {
         background: /*[[backgroundColor]]*/!important;
         color: /*[[fontColor]]*/!important;
