@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.147
+@version      1.3.148
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -699,7 +699,6 @@ regexp("https://www.dndbeyond.com/characters/\d.*"), regexp("https://www.dndbeyo
     .starting-equipment-rule-slot-inactive,
     .ct-inventory-filter__adv-filter-button,
     .ct-extras-filter__adv-filter-button,
-    .alertify .ajs-body,
     ._3A6FDLVnjjt8AEw9hQLvFY,
     ._1WXtuzqHtOKDwJKEVpp6Oi,
     [class^="ct-vehicle-block__block"],
@@ -997,7 +996,8 @@ regexp("https://www.dndbeyond.com/characters/\d.*"), regexp("https://www.dndbeyo
     .ct-campaign-pane__character-name-link,
     .ct-campaign-pane__name-link,
     .ct-campaign-pane__character-user,
-    li[class*="-gutters"]
+    li[class*="-gutters"],
+    .alertify .ajs-body
     {
         color: /*[[fontColor]]*/ !important;
     }
@@ -2664,6 +2664,19 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         background-color: /*[[background]]*/ !important;
         color: /*[[fontColor]]*/ !important;
     }
+    .beyond20-quick-roll-tooltip{
+        background: none !important;   
+    }
+    
+    
+    .beyond20-quick-roll-icon{
+        background: /*[[rollCalcColor]]*/ !important;
+    }
+    .beyond20-quick-roll-icon{
+        border: 1px solid /*[[rollColor]]*/ !important;
+        border-radius: 5px;
+    }
+
     
     .beyond20-dice-roller a,
     .beyond20-button-roll-damages{
@@ -3207,7 +3220,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     button.drawTypeSelected,
     button.above-roll20:hover{
         background: /*[[background]]*/ !important;
-        box-shadow: inset 0 0 10px 1px /*[[highlightColor]]*/ !important;;
+        box-shadow: inset 0 0 10px 1px /*[[highlightColor]]*/ !important;
         border: 1px solid /*[[highlightColor]]*/;
         color: /*[[highlightColor]]*/ !important;
     }
