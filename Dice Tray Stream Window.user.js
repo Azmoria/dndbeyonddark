@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Dice Tray Stream Window
 // @namespace    Azmoria
-// @version      1.0.017
+// @version      1.0.018
 // @description  Stream your Dice to another window
 // @author       Azmoria
 // @downloadURL  https://github.com/Azmoria/dndbeyonddark/raw/master/Dice%20Tray%20Stream%20Window.user.js
@@ -49,22 +49,23 @@ async function diceTray() {
     await body.setAttribute("id", 'diceTrayBody');
     var stream = await canvas.captureStream(30);
     if(video.srcObject == undefined || video.srcObject == null){
+        stream.label = await window.location.href;
         video.srcObject = await stream;
     }
     else {
         canvas = await document.querySelector('.dice-rolling-panel__container');
         var newStream = await canvas.captureStream(30);
+        newStream.label = await window.location.href;
         var n = 0;
         var videoTags = await childWindow.document.getElementsByTagName("video");
         for (let i=0; i < videoTags.length; i++){
-            if(n>2) {
+            if(videoTags[i].srcObject.label.indexOf("profile") > -1 && videoTags[i].srcObject.label.indexOf("character") > -1) {
                 await childWindow.document.querySelector('#video'+n).remove();
-                await focus();
-                n=3;
+                n=i;
                 break;
             }
             else {
-            n+=1;
+                n+=1;
             }
         }
         await childWindow.document.write('<video id="video'+n+'" muted autoplay></video>');
