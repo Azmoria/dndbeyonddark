@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.144
+@version      1.3.145
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -589,7 +589,9 @@ regexp("https://www.dndbeyond.com/characters/\d.*"), regexp("https://www.dndbeyo
         width: 10px;
         height: 10px;
     }
-
+    ::-webkit-scrollbar-corner { 
+        background: /*[[background]]*/;
+    }
     ::-webkit-scrollbar-track {
         background: none;
     }
@@ -2659,7 +2661,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ajs-header,
     .ajs-primary.ajs-buttons{
         background-color: /*[[background]]*/ !important;
-        color: /*[[fontColor]]*/;
+        color: /*[[fontColor]]*/ !important;
     }
     
     .beyond20-dice-roller a,
@@ -2766,8 +2768,15 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     #lock_display{
         background-color: /*[[background]]*/ !important;
     }
-     .sidebar-panel-body{
+    .sidebar-panel-body{
         border: 1px solid /*[[borderColor]]*/;
+    }
+    .ct-sidebar__pane{
+        border: solid /*[[borderColor]]*/;
+        border-width: 0px 1px 1px 1px !important;   
+    }
+    .ct-sidebar__pane-content:before, .ct-sidebar__pane-gap:before{
+        border:none;
     }
     .sidebar-tab-image > div[style*=-webkit-mask]
     {
@@ -2795,7 +2804,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         background-color: /*[[highlightColor]]*/ !important;
     }
 
-   .gamelog-button__icon path{
+    .gamelog-button__icon path,
+    .ddbeb-modal__close-button rect{
           fill: /*[[fontColor]]*/;
     }
     .sidebar-tab-image:hover .gamelog-button__icon path{
@@ -2851,6 +2861,11 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .avtt-sidebar-controls{
         border-bottom: 1px solid /*[[borderColor]]*/;
     }
+    .avtt-sidebar-controls .selected-tab{
+        border: 1px solid /*[[borderColor]]*/;
+        border-width: 1px 1px 0px 1px;
+    }
+    
       #castbutton,
     .sidebar__pane-content .rc-switch,
     .sidebar-panel-header,
@@ -2904,7 +2919,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .token-image-modal-content,
     .token-image-modal-content p,
     .token-image-modal-content div,
-    .hpbar
+    .hpbar,
+    #splash
     {
         background: /*[[background]]*/!important;
         color: /*[[fontColor]]*/!important;
@@ -3073,8 +3089,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .sidebar-panel-header{
         position: relative;   
     }
-    .sidebar-panel-header:before,
-    .sidepanel-content.glc-game-log:before,
+    
+
     #monster-panel:before{
         content: '';
         position: absolute;
@@ -3183,7 +3199,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         color: /*[[fontColor]]*/ !important;   
     }
      #scene_selector_toggle:hover .material-icons,
-    .help-tabs li:hover a{
+    .help-tabs li:hover a,
+    #splash a{
          color: /*[[highlightColor]]*/ !important;
     }
     .context-menu-item:not(.context-menu-not-selectable, .context-menu-disabled) {
