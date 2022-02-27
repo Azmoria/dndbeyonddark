@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.237
+@version      1.2.238
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -1662,7 +1662,7 @@ url-prefix("https://www.dndbeyond.com/my-characters"),
 url-prefix("https://www.dndbeyond.com/search"),
 url-prefix("https://www.dndbeyond.com/modifier"),
 url-prefix("https://www.dndbeyond.com/entity"),
-url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyond.com/subclasses"), url-prefix("https://www.dndbeyond.com/articles"), url-prefix("https://www.dndbeyond.com/tag"), url-prefix("https://www.dndbeyond.com/subraces"), url-prefix("https://www.dndbeyond.com/changelog"), regexp("https://www.dndbeyond.com/profile/.*/characters"), regexp("https://www.dndbeyond.com/encounter-builder"), regexp("https://www.dndbeyond.com/my-encounters"), regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond.com/combat-tracker.*"), regexp("https://www.dndbeyond.com/items"), regexp("https://www.dndbeyond.com/my-dice"), regexp("https://www.dndbeyond.com/members/.*"), regexp("https://www.dndbeyond.com/private-messages.*"), regexp("https://www.dndbeyond.com/content/.*"), url-prefix("https://www.dndbeyond.com/account"), url-prefix("https://linkst.dndbeyond.com"), url-prefix("https://www.dndbeyond.com/new-content"), url-prefix("https://www.dndbeyond.com/my-notifications"), url-prefix("https://www.dndbeyond.com/linkout"), url-prefix("https://www.dndbeyond.com/members"), url-prefix("https://www.dndbeyond.com/comments"), regexp("https://www.dndbeyond.com/.*abovevtt=true"){
+url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyond.com/subclasses"), url-prefix("https://www.dndbeyond.com/articles"), url-prefix("https://www.dndbeyond.com/tag"), url-prefix("https://www.dndbeyond.com/subraces"), url-prefix("https://www.dndbeyond.com/changelog"), regexp("https://www.dndbeyond.com/profile/.*/characters"), regexp("https://www.dndbeyond.com/encounter-builder"), regexp("https://www.dndbeyond.com/my-encounters"), regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond.com/combat-tracker.*"), regexp("https://www.dndbeyond.com/items"), regexp("https://www.dndbeyond.com/my-dice"), regexp("https://www.dndbeyond.com/members/.*"), regexp("https://www.dndbeyond.com/private-messages.*"), regexp("https://www.dndbeyond.com/content/.*"), url-prefix("https://www.dndbeyond.com/account"), url-prefix("https://linkst.dndbeyond.com"), url-prefix("https://www.dndbeyond.com/new-content"), url-prefix("https://www.dndbeyond.com/my-notifications"), url-prefix("https://www.dndbeyond.com/linkout"), url-prefix("https://www.dndbeyond.com/members"), url-prefix("https://www.dndbeyond.com/comments"), regexp("https://www.dndbeyond.com/encounters.*abovevtt=true"){
 
     :root, :before, :after{
     --custom-icon-filter: /*[[iconFilter]]*/;
@@ -4180,7 +4180,7 @@ div#site{
     {
         text-shadow: none !important;   
         background: /*[[backgroundColor]]*/ !important;
-        color: /*[[fontColor]]*/;
+        color: /*[[fontColor]]*/ !important;
     }
     .monster-row__config-handle img{
         display: none !important;
@@ -4670,13 +4670,15 @@ div#site{
     .beyond20-roll-die-result,
     .ajs-dialog,
     .ajs-header,
-    .ajs-primary.ajs-buttons{
+    .ajs-primary.ajs-buttons,
+    .beyond20-roll-detail-normal{
         background-color: /*[[backgroundColor]]*/ !important;
-        color: /*[[fontColor]]*/;
+        color: /*[[fontColor]]*/ !important;
     }
     
     .beyond20-dice-roller a,
-    .beyond20-button-roll-damages{
+    .beyond20-button-roll-damages,
+    .beyond20-tooltip{
         color: /*[[fontColor]]*/;
     }
     
@@ -4892,7 +4894,7 @@ div#site{
 }  
     
 
-@-moz-document regexp("https://www.dndbeyond.com/.*abovevtt.*") {
+@-moz-document regexp("https://www.dndbeyond.com/encounters.*abovevtt.*") {
     /*New AboveVTT Changes for ddb-dice fork/merge*/
     .sidebar-panel-body{
         border: 1px solid /*[[borderColor]]*/;
