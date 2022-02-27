@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.141
+@version      1.3.142
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -573,7 +573,7 @@ EOT;
 
 ==/UserStyle== */
 @-moz-document regexp("https://www.dndbeyond.com/profile/.*/characters/\\d*"),
-regexp("https://www.dndbeyond.com/characters/\d.*"), regexp("https://www.dndbeyond.com/.*&abovevtt=true") {
+regexp("https://www.dndbeyond.com/characters/\d.*"), regexp("https://www.dndbeyond.com/profile.*&abovevtt=true") {
     
 
     /*Character Sheet only*/
@@ -642,7 +642,7 @@ regexp("https://www.dndbeyond.com/characters/\d.*"), regexp("https://www.dndbeyo
     .ddbc-campaign-summary,
     body:not(.body-forum):not(.section-posts):not(.section-changelog):not(.body-privatemessage-details) blockquote,
     .ct-editor-box,
-    input:not(.es-form-field-query),
+    input:not(.es-form-field-query, .hp, .max_hp),
     .ddbc-checkbox__input,
     .ct-item-detail__tag,
     .ct-spell-detail__tag,
@@ -2727,7 +2727,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .ct-character-header-desktop{
         /*[[titleToggle]]*/
     }
-     .glc-game-log > div > ol > li > div > div:nth-of-type(2){
+     .glc-game-log > div > ol > li > div > div:nth-of-type(2),
+    #lock_display{
         color: /*[[fontColor]]*/ !important;    
     }
     .ct-character-sheet__inner{
@@ -2751,4 +2752,11 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         height: 28px !important;  
         z-index: 110;
     }
+
+    .ddbc-tab-options--layout-pill .ddbc-tab-options__header-heading,
+    .ddbc-tab-options--layout-pill .ddbc-tab-options__header-heading:hover,
+    #lock_display{
+        background-color: /*[[background]]*/ !important;
+    }
+    
 }
