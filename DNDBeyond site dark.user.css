@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.241
+@version      1.2.242
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -4462,7 +4462,7 @@ div#site{
        display: none;
     }
     .scene div button:nth-of-type(3) {    
-   -webkit-mask-image: url(chrome-extension://ipcjcbhpofedihcloggaichibomadlei/assets/icons/edit.svg);
+   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' id='Layer_1' x='0px' y='0px' viewBox='0 0 512 512' style='enable-background:new 0 0 512 512;' xml:space='preserve'%3E%3Cg%3E%3Cg%3E%3Cpath d='M495.807,66.962L444.696,15.85c-21.136-21.134-55.53-21.134-76.666,0.001l-29.815,29.815L31.926,351.956L0.341,512 l159.396-32.304l336.069-336.069C516.943,122.49,516.943,88.099,495.807,66.962z M338.215,96.776l25.557,25.556l-264.07,264.07 l-25.557-25.555L338.215,96.776z M46.294,465.811l13.468-68.239l54.471,54.471L46.294,465.811z M150.812,437.512l-25.555-25.555 l264.07-264.07l25.555,25.555L150.812,437.512z M470.252,118.072l-29.815,29.815L363.77,71.221l29.813-29.814 c7.05-7.047,18.514-7.045,25.559-0.001l51.11,51.111C477.296,99.562,477.296,111.027,470.252,118.072z'/%3E%3C/g%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3C/svg%3E");
     -webkit-mask-size: 13px;
     -webkit-mask-repeat:  no-repeat;
     -webkit-mask-position: center center;
@@ -4470,7 +4470,7 @@ div#site{
     }
 
     .scene div button:nth-of-type(4) {    
-   -webkit-mask-image: url(chrome-extension://ipcjcbhpofedihcloggaichibomadlei/assets/icons/delete.svg);
+   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns:dc='http://purl.org/dc/elements/1.1/' xmlns:cc='http://creativecommons.org/ns%23' xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns%23' xmlns:svg='http://www.w3.org/2000/svg' xmlns='http://www.w3.org/2000/svg' xmlns:sodipodi='http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd' xmlns:inkscape='http://www.inkscape.org/namespaces/inkscape' viewBox='0 -256 1792 1792' id='svg3741' version='1.1' inkscape:version='0.48.3.1 r9886' width='100%25' height='100%25' sodipodi:docname='trash_font_awesome.svg'%3E%3Cmetadata id='metadata3751'%3E%3Crdf:RDF%3E%3Ccc:Work rdf:about=''%3E%3Cdc:format%3Eimage/svg+xml%3C/dc:format%3E%3Cdc:type rdf:resource='http://purl.org/dc/dcmitype/StillImage'/%3E%3C/cc:Work%3E%3C/rdf:RDF%3E%3C/metadata%3E%3Cdefs id='defs3749'/%3E%3Csodipodi:namedview pagecolor='%23ffffff' bordercolor='%23666666' borderopacity='1' objecttolerance='10' gridtolerance='10' guidetolerance='10' inkscape:pageopacity='0' inkscape:pageshadow='2' inkscape:window-width='640' inkscape:window-height='480' id='namedview3747' showgrid='false' inkscape:zoom='0.13169643' inkscape:cx='896' inkscape:cy='896' inkscape:window-x='0' inkscape:window-y='25' inkscape:window-maximized='0' inkscape:current-layer='svg3741'/%3E%3Cg transform='matrix(1,0,0,-1,197.42373,1255.0508)' id='g3743'%3E%3Cpath d='M 512,800 V 224 q 0,-14 -9,-23 -9,-9 -23,-9 h -64 q -14,0 -23,9 -9,9 -9,23 v 576 q 0,14 9,23 9,9 23,9 h 64 q 14,0 23,-9 9,-9 9,-23 z m 256,0 V 224 q 0,-14 -9,-23 -9,-9 -23,-9 h -64 q -14,0 -23,9 -9,9 -9,23 v 576 q 0,14 9,23 9,9 23,9 h 64 q 14,0 23,-9 9,-9 9,-23 z m 256,0 V 224 q 0,-14 -9,-23 -9,-9 -23,-9 h -64 q -14,0 -23,9 -9,9 -9,23 v 576 q 0,14 9,23 9,9 23,9 h 64 q 14,0 23,-9 9,-9 9,-23 z M 1152,76 v 948 H 256 V 76 Q 256,54 263,35.5 270,17 277.5,8.5 285,0 288,0 h 832 q 3,0 10.5,8.5 7.5,8.5 14.5,27 7,18.5 7,40.5 z M 480,1152 h 448 l -48,117 q -7,9 -17,11 H 546 q -10,-2 -17,-11 z m 928,-32 v -64 q 0,-14 -9,-23 -9,-9 -23,-9 h -96 V 76 q 0,-83 -47,-143.5 -47,-60.5 -113,-60.5 H 288 q -66,0 -113,58.5 Q 128,-11 128,72 v 952 H 32 q -14,0 -23,9 -9,9 -9,23 v 64 q 0,14 9,23 9,9 23,9 h 309 l 70,167 q 15,37 54,63 39,26 79,26 h 320 q 40,0 79,-26 39,-26 54,-63 l 70,-167 h 309 q 14,0 23,-9 9,-9 9,-23 z' id='path3745' inkscape:connector-curvature='0' style='fill:currentColor'/%3E%3C/g%3E%3C/svg%3E");
     -webkit-mask-size: 13px;
     -webkit-mask-repeat:  no-repeat;
     -webkit-mask-position: center center;
