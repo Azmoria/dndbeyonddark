@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.244
+@version      1.2.245
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -4186,7 +4186,8 @@ div#site{
     #castbutton,
     .sidebar__pane-content .rc-switch,
     .sidebar-panel-header,
-    .player-token-hp
+    .player-token-hp,
+    .sidebar-modal .sidebar-panel-content
     {
         text-shadow: none !important;   
         background: /*[[backgroundColor]]*/ !important;
