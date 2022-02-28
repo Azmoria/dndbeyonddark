@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.245
+@version      1.2.246
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -5442,6 +5442,9 @@ regexp("https://www.dndbeyond.com/encounters.*#DiceTray"), regexp("https://www.d
     
     /*[[rgbDice]]*/
       
+    .dice-icon-die--d100{
+        -webkit-mask-repeat: repeat-x;   
+    }
     
 /*dice Cusomtization and JS compainion script css*/   
     canvas.dice-rolling-panel__container,
@@ -5471,7 +5474,7 @@ regexp("https://www.dndbeyond.com/encounters.*#DiceTray"), regexp("https://www.d
         overflow: hidden;
         margin: 0px !important;
     }
-    
+
 
 }
 
