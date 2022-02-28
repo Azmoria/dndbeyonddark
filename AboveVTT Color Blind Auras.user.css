@@ -2,9 +2,9 @@
 @name         AboveVTT Color Blind Auras
 @preprocessor uso
 @namespace    AboveVTT Color Blind Auras
-@version      0.1
+@version      0.2
 @author       Azmoria (Jay_Lane)
-@updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/
+@updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/AboveVTT%20Color%20Blind%20Auras.user.css
 @var color aboveFull "Above Full Health" #0000FFdd
 @var color full "Full Health" #00FF00dd
 @var color damaged "Lightly Damaged" #22aa00dd
