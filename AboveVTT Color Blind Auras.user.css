@@ -2,7 +2,7 @@
 @name         AboveVTT Color Blind Auras
 @preprocessor uso
 @namespace    AboveVTT Color Blind Auras
-@version      0.2
+@version      0.3
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/AboveVTT%20Color%20Blind%20Auras.user.css
 @var color aboveFull "Above Full Health" #0000FFdd
@@ -31,6 +31,7 @@
 
     .VTTToken img[style*="box-shadow: rgba(255, 61,"][style*=" 0, 0.8)"],
     .VTTToken img[style*="box-shadow: rgba(255, 56,"][style*=" 0, 0.8)"],
+    .VTTToken img[style*="box-shadow: rgba(255, 51,"][style*=" 0, 0.8)"],
     .VTTToken img[style*="box-shadow: rgba(255, 50,"][style*=" 0, 0.8)"],
     .VTTToken img[style*="box-shadow: rgba(255, 45,"][style*=" 0, 0.8)"],
     .VTTToken img[style*="box-shadow: rgba(255, 40,"][style*=" 0, 0.8)"],
