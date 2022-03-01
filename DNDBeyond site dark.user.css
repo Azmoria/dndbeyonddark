@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.246
+@version      1.2.247
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -2235,7 +2235,8 @@ div#site{
     .more-info-body-description table tbody tr:nth-child(odd) td,
     #site .p-article-content table tbody tr:nth-child(odd) td,
     .ddb-account-tab-body .listing-container-table table tbody tr:nth-child(odd) td,
-    .listing__items tr:nth-child(odd) td{ 
+    .listing__items tr:nth-child(odd) td,
+    .compendium-left-aligned-table tr:nth-child(odd) td{ 
         background: none !important;
         backdrop-filter: brightness(0.8);      
     }
