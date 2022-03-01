@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.153
+@version      1.3.154
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -77,6 +77,32 @@
 @var color iconSecondary "Icon Secondary Color" #041925
 @var color scrollbarColor "Scrollbar Color" #5dbbf7
 @var color rollColor "Rollable Items Color" #5dbbf7
+@advanced dropdown titleToggle "Character Title Background" {
+    off "OFF"<<<EOT
+        background: none !important; 
+    EOT;
+    on "Default"<<<EOT
+    EOT;
+    sheetColor "Sheet Color"<<<EOT
+        background: var(--sheet-color);
+    EOT;
+}
+@advanced dropdown scrollWheelHP "Enable Scrollwheel HP" {
+    off "OFF"<<<EOT    
+    EOT;
+    on "ON"<<<EOT
+        .ct-health-manager__adjuster-scrollwheel {
+            display: block !important;
+        }
+        .ct-health-manager__adjuster-scrollwheel .ct-health-manager__adjuster-scrollwheel-instructions {
+            color: var(--font-color) !important;
+        }
+        .ddbc-scrollwheel__bg,
+        .ddbc-scrollwheel__wheel{
+            background: var(--sidebar-color);
+        }
+    EOT;
+}
 @advanced dropdown rollableAreas "Rollable Area's Button Style" {
     small "Smaller Buttons" <<<EOT
         .ct-character-sheet--dice-enabled .integrated-dice__container{
@@ -153,17 +179,6 @@
         {
             border-color: var(--character-sheet-border);
         }
-    EOT;
-}
-
-@advanced dropdown titleToggle "Character Title Background" {
-    off "OFF"<<<EOT
-        background: none !important; 
-    EOT;
-    on "Default"<<<EOT
-    EOT;
-    sheetColor "Sheet Color"<<<EOT
-        background: var(--sheet-color);
     EOT;
 }
 @var color rollCalcColor "Roll Results Background Color" #030f1acc
@@ -781,7 +796,8 @@ regexp("https://www.dndbeyond.com/characters/\d.*"), regexp("https://www.dndbeyo
         background-color: /*[[sheetColor]]*/ !important;
     }
     .ct-character-header__group--game-log,
-    .ddbc-number-bar__option--implied{
+    .ddbc-number-bar__option--implied,
+    .ct-health-manager__adjuster-button button{
        
         background-color: /*[[highlightColor]]*/ !important;
     }
@@ -1681,12 +1697,13 @@ regexp("https://www.dndbeyond.com/characters/\d.*"), regexp("https://www.dndbeyo
         background-color: /*[[fontColor]]*/;
     }
  
-    .ct-health-manager__adjuster-button button{
-        padding: 18px 25px!important; 
+    .site .ct-health-manager__adjuster-button button.ct-theme-button--filled.ct-button{
+        padding: 15px 15px!important; 
+        box-shadow: inset 0px 0px 20px /*[[borderColor]]*/ !important;
     }
      .ct-health-manager__adjuster-button button:before{               
-        top: 11px !important;
-        left: 17px !important;
+        top: 7px !important;
+        left: 7px !important;
     }
 
     /*[[outlineToggle]]*/
@@ -2319,6 +2336,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         --rgb-border-from: hue-rotate(/*[[borderRgbFrom]]*/deg);
         --rgb-border-to: hue-rotate(/*[[borderRgbTo]]*/deg);
         --character-sheet-border: /*[[borderColor]]*/;
+        --font-color: /*[[fontColor]]*/;
+        --sidebar-color: /*[[sidebarColor]]*/;
     }
 
     /*Dice Alpha Size and position changes for full site*/
@@ -2621,7 +2640,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     canvas.dice-rolling-panel__container{
         opacity: /*[[diceOpacity]]*/;  
     }
-    
+    /*[[scrollWheelHP]]*/
     /*[[rgbDice]]*/
     
     /*D100 Fix*/   
