@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.154
+@version      1.3.155
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -101,6 +101,10 @@
         .ddbc-scrollwheel__wheel{
             background: var(--sidebar-color);
         }
+        .ddbc-scrollwheel__wheel-bg {
+            background: linear-gradient(180deg,#0006,#0005 3%,#ddd3 18.83%,#fff9 49.39%,#ddd3 79.64%,#0005 98%,#0006);
+        }
+
     EOT;
 }
 @advanced dropdown rollableAreas "Rollable Area's Button Style" {
