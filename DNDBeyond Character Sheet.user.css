@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.155
+@version      1.3.156
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -102,9 +102,14 @@
             background: var(--sidebar-color);
         }
         .ddbc-scrollwheel__wheel-bg {
-            background: linear-gradient(180deg,#0006,#0005 3%,#ddd3 18.83%,#fff9 49.39%,#ddd3 79.64%,#0005 98%,#0006);
+            background: linear-gradient(180deg,#000f,#0009 3%,#ddd5 18.83%,#fffa 49.39%,#ddd9 79.64%,#0006 98%,#000f);
         }
-
+        .ddbc-scrollwheel__wheel-scroll {
+            background-image: repeating-linear-gradient(180deg,#000 1px,#000 2px,transparent 4px,transparent 8px);
+            opacity: 0.3;
+            bottom: 2px;
+            z-index:1;
+        }
     EOT;
 }
 @advanced dropdown rollableAreas "Rollable Area's Button Style" {
