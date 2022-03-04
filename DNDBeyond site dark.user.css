@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.248
+@version      1.2.249
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -1391,84 +1391,7 @@ EOT;
 Light "Light Mode"<<<EOT
 EOT;
 }
-@advanced dropdown rollableAreas "Rollable Area's Button Style" {
-    small "Smaller Buttons" <<<EOT
-        .ct-character-sheet--dice-enabled .integrated-dice__container{
-      
-            border-width: 0px !important;
-        }
-        .ct-character-sheet--dice-enabled .ct-skills__item .integrated-dice__container,
-        .ct-character-sheet--dice-enabled .ct-spells-spell__tohit .integrated-dice__container,
-        .ct-character-sheet--dice-enabled .ddbc-combat-attack__tohit .integrated-dice__container {
-           
-            height: auto;
-            font-size: 15px;
-            width: auto;
-            margin-bottom: 0px;
-        }
-        .ct-character-sheet--dice-enabled .ddbc-combat-attack__tohit .integrated-dice__container,
-        .ct-character-sheet--dice-enabled .ddbc-combat-attack__damage .integrated-dice__container,
-        .ct-character-sheet--dice-enabled .ddbc-combat-item-attack__damage .integrated-dice__container,
-        .ct-character-sheet--dice-enabled .ddbc-spell-damage-effect__damages .integrated-dice__container,
-        .ct-character-sheet--dice-enabled .ddbc-spell-damage-effect__healing .integrated-dice__container,
-        .ct-character-sheet--dice-enabled .ct-skills__col--modifier .integrated-dice__container,
-        .ct-character-sheet--dice-enabled .ddbc-combat-attack__tohit .integrated-dice__container,
-        .ct-character-sheet--dice-enabled .ddbc-ability-summary__primary .integrated-dice__container,
-        .ct-character-sheet--dice-enabled .ct-initiative-box__value .integrated-dice__container,
-        .ct-character-sheet--dice-enabled .ddbc-combat-attack__tohit .integrated-dice__container:hover,
-        .ct-character-sheet--dice-enabled .ddbc-combat-attack__damage .integrated-dice__container:hover,
-        .ct-character-sheet--dice-enabled .ddbc-combat-item-attack__damage .integrated-dice__container:hover,
-        .ct-character-sheet--dice-enabled .ddbc-spell-damage-effect__damages .integrated-dice__container:hover,
-        .ct-character-sheet--dice-enabled .ddbc-spell-damage-effect__healing .integrated-dice__container:hover,
-        .ct-character-sheet--dice-enabled .ct-skills__col--modifier .integrated-dice__container:hover,
-        .ct-character-sheet--dice-enabled .ddbc-combat-attack__tohit .integrated-dice__container:hover,
-        .ct-character-sheet--dice-enabled .ddbc-ability-summary__primary .integrated-dice__container:hover,
-        .ct-character-sheet--dice-enabled .ct-initiative-box__value .integrated-dice__container:hover,
-        .encounter-builder-app [aria-haspopup=menu].integrated-dice__container,
-        .encounter-builder-app [aria-haspopup=menu].integrated-dice__container:hover {
-            border-color: var(--character-sheet-border);
-            padding: 0px 1px;
-            height: auto;
-        }
-        .ct-character-sheet--dice-enabled .ct-skills__item .ct-skills__col--skill {
-            padding: 2px 0px !important;
-        }
-        .ddbc-tab-list .integrated-dice__container span {
-            font-size: 14px;
-        }  
-        .ct-skills__item .ct-skills__col--modifier,
-        .ct-skills__item .ct-skills__col--adjustments {
-            padding: 0px !important;
-            line-height: 16px;
-        }
 
-    EOT;
-    default "DNDBeyond Default" <<<EOT
-        .ct-character-sheet--dice-enabled .ddbc-combat-attack__tohit .integrated-dice__container,
-        .ct-character-sheet--dice-enabled .ddbc-combat-attack__damage .integrated-dice__container,
-        .ct-character-sheet--dice-enabled .ddbc-combat-item-attack__damage .integrated-dice__container,
-        .ct-character-sheet--dice-enabled .ddbc-spell-damage-effect__damages .integrated-dice__container,
-        .ct-character-sheet--dice-enabled .ddbc-spell-damage-effect__healing .integrated-dice__container,
-        .ct-character-sheet--dice-enabled .ct-skills__col--modifier .integrated-dice__container,
-        .ct-character-sheet--dice-enabled .ddbc-combat-attack__tohit .integrated-dice__container,
-        .ct-character-sheet--dice-enabled .ddbc-ability-summary__primary .integrated-dice__container,
-        .ct-character-sheet--dice-enabled .ct-initiative-box__value .integrated-dice__container,
-        .ct-character-sheet--dice-enabled .ddbc-combat-attack__tohit .integrated-dice__container:hover,
-        .ct-character-sheet--dice-enabled .ddbc-combat-attack__damage .integrated-dice__container:hover,
-        .ct-character-sheet--dice-enabled .ddbc-combat-item-attack__damage .integrated-dice__container:hover,
-        .ct-character-sheet--dice-enabled .ddbc-spell-damage-effect__damages .integrated-dice__container:hover,
-        .ct-character-sheet--dice-enabled .ddbc-spell-damage-effect__healing .integrated-dice__container:hover,
-        .ct-character-sheet--dice-enabled .ct-skills__col--modifier .integrated-dice__container:hover,
-        .ct-character-sheet--dice-enabled .ddbc-combat-attack__tohit .integrated-dice__container:hover,
-        .ct-character-sheet--dice-enabled .ddbc-ability-summary__primary .integrated-dice__container:hover,
-        .ct-character-sheet--dice-enabled .ct-initiative-box__value .integrated-dice__container:hover,
-        .encounter-builder-app [aria-haspopup=menu].integrated-dice__container,
-        .encounter-builder-app [aria-haspopup=menu].integrated-dice__container:hover 
-        {
-            border-color: var(--character-sheet-border);
-        }
-    EOT;
-}
 
 @advanced dropdown beyond20Invert "Invert Beyond20 Menu"{
 yes "Yes" <<<EOT
