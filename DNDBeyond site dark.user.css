@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.250
+@version      1.2.251
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -876,18 +876,30 @@ on "ON" <<<EOT
         content: '';
         display: block;
         position: absolute;
-        top:0;
+        top: 0;
         bottom:0;
         left:0;
         right:0;
-        height: calc(100% - 11px);
+        height: 100%;
         opacity:0.8;
         background: var(--background-color);
         z-index: -1;
+
     }
     .compendium-toc-full-text{
-        margin-top: 20px;
+        top: 19px !important;
+        position: relative; 
+        padding-top: 15px;
     }
+
+    .compendium-toc-full{
+        margin-bottom: 30px;
+    }
+   
+    #site .compendium-toc-block-text:before{
+        height: calc(100% - 11px);
+    }
+
     #site .compendium-toc-block-text:before{
         margin: 0px 10px;
     }
