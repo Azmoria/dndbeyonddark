@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.253
+@version      1.2.254
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -4119,275 +4119,7 @@ div#site{
     
     /*AboveVTT Changes*/
     
-    
-
-    #castbutton,
-    .sidebar__pane-content .rc-switch,
-    .sidebar-panel-header,
-    .player-token-hp,
-    .sidebar-modal .sidebar-panel-content
-    {
-        text-shadow: none !important;   
-        background: /*[[backgroundColor]]*/ !important;
-        color: /*[[fontColor]]*/ !important;
-    }
-    .monster-row__config-handle img{
-        display: none !important;
-    }
-     .monster-row__config-handle{
-        -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' style='height: 512px; width: 512px;'%3E%3Cg class='' transform='translate(0,0)' style=''%3E%3Cpath d='M234.875 18.78c-26.087 2.367-51.557 8.56-74.875 18.782 15.37 32.763 14.222 66.706-6.72 82.407-20.835 15.617-54.055 7.965-81.124-15.69-16.246 19.452-29.336 41.36-38.875 65.626 33.83 12.333 56.635 37.665 52.94 63.5-3.698 25.835-32.697 43.74-68.626 46.094 2.338 25.796 8.91 50.778 18.937 73.875 17.81-8.182 35.793-11.09 51.095-8.938 13.032 1.87 23.927 7.015 31.156 16.657 15.817 21.097 7.603 54.713-16.78 81.97 19.516 16.35 42.216 29.444 66.594 39.03 12.33-33.828 37.655-56.634 63.5-52.938 25.844 3.697 43.74 32.696 46.094 68.625 26.087-2.365 51.557-8.555 74.875-18.78-15.766-32.997-14.26-67.588 6.843-83.406 9.64-7.23 22.568-9.022 35.594-7.125 15.112 2.16 31.19 10.25 45.563 22.78 16.088-19.345 29.4-41.51 38.875-65.594-33.83-12.332-56.635-37.653-52.938-63.5 3.697-25.846 32.665-43.772 68.594-46.125-2.36-25.944-8.774-50.663-18.906-73.874-32.612 15.117-66.66 13.145-82.282-7.687-15.696-20.944-7.252-53.86 16.688-81-19.52-16.352-42.248-29.447-66.625-39.032-12.332 33.828-37.657 56.66-63.5 52.968-25.846-3.693-43.744-32.696-46.095-68.625zm21.656 95.126c79.626 0 144.376 64.752 144.376 144.375 0 79.626-64.75 144.376-144.375 144.376-79.624 0-144.374-64.75-144.374-144.375 0-79.624 64.75-144.374 144.375-144.374zm0 18.688c-69.524 0-125.686 56.162-125.686 125.687 0 69.526 56.162 125.69 125.687 125.69 69.526 0 125.69-56.164 125.69-125.69 0-69.522-56.164-125.686-125.69-125.686zm.033 15.125c61.094 0 110.625 49.53 110.625 110.624 0 61.095-49.53 110.625-110.625 110.625s-110.625-49.53-110.625-110.626c0-61.095 49.53-110.625 110.625-110.625z' fill='%23000000' fill-opacity='1'/%3E%3C/g%3E%3C/svg%3E");
-         -webkit-mask-position: center;
-         -webkit-mask-size: contain;
-         -webkit-mask-repeat: no-repeat;
-         border-left: 1px solid /*[[borderColor]]*/ !important;
-    }
-    
-    
-    #combat_footer button{
-        flex-grow: 1;   
-    }
-    #combat_footer{
-        display: flex;   
-    }
-    .sidebar__pane-content .rc-switch.rc-switch-checked{
-        background: /*[[rollCalcColor]]*/ !important;      
-        border-color: /*[[linkColor]]*/ !important;
-    }
-    .tracker-list{
-        padding: 5px 3px;   
-    }
-    #combat_tracker_inside #combat_footer button:last-of-type{
-        border-bottom-right-radius: 5px;   
-    }
-    #combat_tracker_inside #combat_footer button:first-of-type{
-        border-bottom-left-radius: 5px; 
-    }
-    div#scene_selector, 
-    #combat_tracker_inside, 
-    #edit_dialog, 
-    #mega_importer, 
-    #prewiz, 
-    #wizard_popup, 
-    .top_menu,
-    .sidebar__pane-content,
-    .soundpad-section-title,
-    .sidebar__pane-content button,
-    .token-image-modal,
-    .token-image-modal-content,
-    .token-image-modal-content p,
-    .token-image-modal-content div,
-    .hpbar,
-    #splash
-    {
-        background: /*[[backgroundColor]]*/!important;
-        color: /*[[fontColor]]*/!important;
-        border-color: /*[[borderColor]]*/ !important;
-    }
-    
-    #combat_tracker_inside{
-        border-radius: 5px 5px 0 0;
-        width: 250px;
-    }
-    .sidebar__controls .tab-btn{ 
-        border: none;
-    }
-    .sidebar__controls .tab-btn.selected-tab {    
-        height: 23px;
-        border-top: 1px solid /*[[borderColor]]*/;
-        border-left: 1px solid /*[[borderColor]]*/;
-        border-right: 1px solid /*[[borderColor]]*/;
-    }
-
-    div#splash {
-        height: fit-content;
-    }
-    a.above-vtt-warning-secondary-div,
-    .help-tabs li:hover{
-        background: /*[[backgroundColor]]*/!important;
-    }
-    div.above-vtt-warning-secondary-div ~ a.ddb-campaigns-warning-div{
-        color: /*[[fontColor]]*/ !important;
-    }
-    .scene,
-    #help-menu,
-    .help-tabs,
-    .sidebar-panel-body,
-    .sidebar-panel-footer,
-    .custom-token-list,
-    .context-menu-item,
-    .context-menu-list,
-    .custom-token-image-row,
-    [class*="custom-token-image-row"],
-    .sidebar-panel-body button,
-    .ability_score,
-    .sidebar-panel-body p,
-    #tokens-panel-header,
-    #tokens-panel-footer,
-    button.above-roll20,
-    .ddbc-tab-options--layout-pill .ddbc-tab-options__header-heading{
-        background: /*[[backgroundColor]]*/ !important;
-        color: /*[[fontColor]]*/!important;
-    }
-    
-    .player-token-ac {
-        border-radius: 0px;
-        background-color: /*[[backgroundColor]]*/;
-        width: 25px;
-        height: 25px;
-         -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' id='ac_shield' x='0px' y='0px' viewBox='6.991001129150391 0 45.999996185302734 59.981998443603516' xml:space='preserve' height='21px' width='21px'%3E%3Cg xmlns='http://www.w3.org/2000/svg' transform='translate(6 0)'%3E%3Cpath d='M51.991,7.982c-14.628,0-21.169-7.566-21.232-7.64c-0.38-0.456-1.156-0.456-1.536,0c-0.064,0.076-6.537,7.64-21.232,7.64 c-0.552,0-1,0.448-1,1v19.085c0,10.433,4.69,20.348,12.546,26.521c3.167,2.489,6.588,4.29,10.169,5.352 c0.093,0.028,0.189,0.042,0.285,0.042s0.191-0.014,0.285-0.042c3.581-1.063,7.002-2.863,10.169-5.352 c7.856-6.174,12.546-16.088,12.546-26.521V8.982C52.991,8.43,52.544,7.982,51.991,7.982z ' %3E%3C/path%3E%3Cpath d='M50.991,28.067 c0,9.824-4.404,19.151-11.782,24.949c-2.883,2.266-5.983,3.92-9.218,4.921c-3.235-1-6.335-2.655-9.218-4.921 C13.395,47.219,8.991,37.891,8.991,28.067V9.971c12.242-0.272,18.865-5.497,21-7.545c2.135,2.049,8.758,7.273,21,7.545V28.067z' %3E%3C/path%3E%3C/g%3E%3C/svg%3E") -1px 0px / 24px 24px no-repeat;
-        mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' id='ac_shield' x='0px' y='0px' viewBox='6.991001129150391 0 45.999996185302734 59.981998443603516' xml:space='preserve' height='21px' width='21px'%3E%3Cg xmlns='http://www.w3.org/2000/svg' transform='translate(6 0)'%3E%3Cpath d='M51.991,7.982c-14.628,0-21.169-7.566-21.232-7.64c-0.38-0.456-1.156-0.456-1.536,0c-0.064,0.076-6.537,7.64-21.232,7.64 c-0.552,0-1,0.448-1,1v19.085c0,10.433,4.69,20.348,12.546,26.521c3.167,2.489,6.588,4.29,10.169,5.352 c0.093,0.028,0.189,0.042,0.285,0.042s0.191-0.014,0.285-0.042c3.581-1.063,7.002-2.863,10.169-5.352 c7.856-6.174,12.546-16.088,12.546-26.521V8.982C52.991,8.43,52.544,7.982,51.991,7.982z ' %3E%3C/path%3E%3Cpath d='M50.991,28.067 c0,9.824-4.404,19.151-11.782,24.949c-2.883,2.266-5.983,3.92-9.218,4.921c-3.235-1-6.335-2.655-9.218-4.921 C13.395,47.219,8.991,37.891,8.991,28.067V9.971c12.242-0.272,18.865-5.497,21-7.545c2.135,2.049,8.758,7.273,21,7.545V28.067z' %3E%3C/path%3E%3C/g%3E%3C/svg%3E") -1px 0px / 24px 24px no-repeat;
-        background-image: linear-gradient(135deg, /*[[backgroundColor]]*/ 30%, /*[[fontColor]]*/ 150%);
-        display: flex;  
-        padding: 4px 7px;
-    }
-    
-    .ac svg{
-        border-radius: 0px;
-        background-color: /*[[backgroundColor]]*/;
-         -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' id='ac_shield' x='0px' y='0px' viewBox='6.991001129150391 0 45.999996185302734 59.981998443603516' xml:space='preserve' height='21px' width='21px'%3E%3Cg xmlns='http://www.w3.org/2000/svg' transform='translate(6 0)'%3E%3Cpath d='M51.991,7.982c-14.628,0-21.169-7.566-21.232-7.64c-0.38-0.456-1.156-0.456-1.536,0c-0.064,0.076-6.537,7.64-21.232,7.64 c-0.552,0-1,0.448-1,1v19.085c0,10.433,4.69,20.348,12.546,26.521c3.167,2.489,6.588,4.29,10.169,5.352 c0.093,0.028,0.189,0.042,0.285,0.042s0.191-0.014,0.285-0.042c3.581-1.063,7.002-2.863,10.169-5.352 c7.856-6.174,12.546-16.088,12.546-26.521V8.982C52.991,8.43,52.544,7.982,51.991,7.982z ' %3E%3C/path%3E%3Cpath d='M50.991,28.067 c0,9.824-4.404,19.151-11.782,24.949c-2.883,2.266-5.983,3.92-9.218,4.921c-3.235-1-6.335-2.655-9.218-4.921 C13.395,47.219,8.991,37.891,8.991,28.067V9.971c12.242-0.272,18.865-5.497,21-7.545c2.135,2.049,8.758,7.273,21,7.545V28.067z' %3E%3C/path%3E%3C/g%3E%3C/svg%3E") -1px 0px / cover no-repeat;
-        mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' id='ac_shield' x='0px' y='0px' viewBox='6.991001129150391 0 45.999996185302734 59.981998443603516' xml:space='preserve' height='21px' width='21px'%3E%3Cg xmlns='http://www.w3.org/2000/svg' transform='translate(6 0)'%3E%3Cpath d='M51.991,7.982c-14.628,0-21.169-7.566-21.232-7.64c-0.38-0.456-1.156-0.456-1.536,0c-0.064,0.076-6.537,7.64-21.232,7.64 c-0.552,0-1,0.448-1,1v19.085c0,10.433,4.69,20.348,12.546,26.521c3.167,2.489,6.588,4.29,10.169,5.352 c0.093,0.028,0.189,0.042,0.285,0.042s0.191-0.014,0.285-0.042c3.581-1.063,7.002-2.863,10.169-5.352 c7.856-6.174,12.546-16.088,12.546-26.521V8.982C52.991,8.43,52.544,7.982,51.991,7.982z ' %3E%3C/path%3E%3Cpath d='M50.991,28.067 c0,9.824-4.404,19.151-11.782,24.949c-2.883,2.266-5.983,3.92-9.218,4.921c-3.235-1-6.335-2.655-9.218-4.921 C13.395,47.219,8.991,37.891,8.991,28.067V9.971c12.242-0.272,18.865-5.497,21-7.545c2.135,2.049,8.758,7.273,21,7.545V28.067z' %3E%3C/path%3E%3C/g%3E%3C/svg%3E") -1px 0px / cover no-repeat;
-        background-image: linear-gradient(135deg, /*[[backgroundColor]]*/ 30%, /*[[fontColor]]*/ 150%);
-        display: flex;  
-    }
-        
-    .player-token-hp{
-        display: flex;
-        background-image: linear-gradient(135deg, /*[[backgroundColor]]*/ 30%, /*[[fontColor]]*/ 150%) !important;
-        height: 20px;
-        padding: 3px 4px;
-        border-radius: 5px;
-    }
-    
-    .hpbar input{
-        background: none !important;  
-    }
-    
-    .hpbar,
-    .hpbar input,
-    .ac,
-    .player-token-ac,   
-    .player-token-hp{
-        text-shadow: 0.5px 0.5px /*[[backgroundColor]]*/,
-        -0.5px -0.5px 0 /*[[backgroundColor]]*/,  
-         0.5px -0.5px 0 /*[[backgroundColor]]*/,
-        -0.5px 0.5px 0 /*[[backgroundColor]]*/,
-        0.5px 0.5px 0 /*[[backgroundColor]]*/ !important;
-    }
-    .hpbar{
-        background-image: linear-gradient(135deg, /*[[backgroundColor]]*/ 40%, /*[[fontColor]]*/ 150%) !important;
-        border-radius: 5px;
-    }
-    .VTTToken img[style*="box-shadow: rgba(0, 0, 255, "][style*=" 255, 0.8)"] ~ .hpbar {
-        background-image: linear-gradient(135deg, /*[[backgroundColor]]*/ -50%, #00F 100%) !important;
-    }
-    .VTTToken img[style*=", 255,"][style*=" 0, 0.8)"] ~ .hpbar {
-        background-image: linear-gradient(135deg, /*[[backgroundColor]]*/ 10%, #0F0 150%) !important;
-    }
-    .VTTToken img[style*="box-shadow: rgba(0, 255, 0,"][style*=" 0, 0.8)"] ~ .hpbar,
-    .VTTToken img[style*="box-shadow: rgba(5, 255, 0,"][style*=" 0, 0.8)"] ~ .hpbar {
-        background-image: linear-gradient(135deg, /*[[backgroundColor]]*/ -50%, #0F0 100%) !important;
-    }
-    .VTTToken img[style*="box-shadow: rgba(255, "][style*=" 0, 0.8)"] ~ .hpbar,
-    .VTTToken img[style*="box-shadow: rgba(255, 255,"][style*=" 0, 0.8)"] ~ .hpbar {
-        background-image: linear-gradient(135deg, /*[[backgroundColor]]*/ 20%, #FF0 150%) !important;
-    }
-    .VTTToken img[style*="box-shadow: rgba(255, 51,"][style*=" 0, 0.8)"] ~ .hpbar,
-    .VTTToken img[style*="box-shadow: rgba(255, 50,"][style*=" 0, 0.8)"] ~ .hpbar,
-    .VTTToken img[style*="box-shadow: rgba(255, 45,"][style*=" 0, 0.8)"] ~ .hpbar,
-    .VTTToken img[style*="box-shadow: rgba(255, 40,"][style*=" 0, 0.8)"] ~ .hpbar,
-    .VTTToken img[style*="box-shadow: rgba(255, 35,"][style*=" 0, 0.8)"] ~ .hpbar,
-    .VTTToken img[style*="box-shadow: rgba(255, 30,"][style*=" 0, 0.8)"] ~ .hpbar,
-    .VTTToken img[style*="box-shadow: rgba(255, 25,"][style*=" 0, 0.8)"] ~ .hpbar,
-    .VTTToken img[style*="box-shadow: rgba(255, 20,"][style*=" 0, 0.8)"] ~ .hpbar,
-    .VTTToken img[style*="box-shadow: rgba(255, 15,"][style*=" 0, 0.8)"] ~ .hpbar,
-    .VTTToken img[style*="box-shadow: rgba(255, 10,"][style*=" 0, 0.8)"] ~ .hpbar,
-    .VTTToken img[style*="box-shadow: rgba(255, 5,"][style*=" 0, 0.8)"] ~ .hpbar{
-        background-image: linear-gradient(135deg, /*[[backgroundColor]]*/ 50%, #f40 150%) !important;
-    }
-    .VTTToken img[style*="(255, 0, 0"][style*=" 0, 0.8)"] ~ .hpbar{
-        background-image: linear-gradient(135deg, /*[[backgroundColor]]*/ 90%, #f00 150%) !important;
-    }
-    .player-token.ui-draggable{
-        filter: drop-shadow(0px 0px 1px /*[[fontColor]]*/);
-    }
-    .VTTToken div{
-        filter: drop-shadow(1px 1px 2px /*[[backgroundColor]]*/);
-    }
-    .context-menu-submenu:after{
-        border-color: transparent transparent transparent /*[[fontColor]]*/;
-    }
-    .ac text{
-           fill: /*[[fontColor]]*/ !important;
-    }
-    .ac path:nth-of-type(2),
-    .ac path:first-of-type{
-           fill: none !important;
-    }
-    .journal-note-entry:nth-child(odd) { 
-        background: none !important;
-        backdrop-filter: brightness(0.8);      
-    }
-    .journal-chapter-title{
-        background: linear-gradient(to top, /*[[backgroundColor]]*/, /*[[fontColor]]*/ 250%);
-        text-shadow:1px 1px /*[[backgroundColor]]*/,
-        -1px -1px 0 /*[[backgroundColor]]*/,  
-         1px -1px 0 /*[[backgroundColor]]*/,
-        -1px 1px 0 /*[[backgroundColor]]*/,
-        1px 1px 0 /*[[backgroundColor]]*/ !important;
-        padding-left: 5px;
-    }
-    .journal-chapter{
-        border: 1px solid /*[[borderColor]]*/;
-        margin-bottom: 10px;
-    }
-    .journal-note-entry-title{
-        padding-left: 20px;   
-    }
-    .sidebar-panel-header{
-        position: relative;   
-    }
-    .sidebar-panel-header:before,
-    .sidepanel-content.glc-game-log:before,
-    #monster-panel:before{
-        content: '';
-        position: absolute;
-        bottom: -15px;
-        height: 15px;
-        left:  0px;
-        width: 100%;
-        background-image: linear-gradient(to bottom, /*[[backgroundColor]]*/ 10%, #0000);       
-        z-index: 100;
-        pointer-events: none !important;
-    }    
-     .sidebar__controls{
-        z-index: 105 !important;
-    }
-  
-    .sidepanel-content.glc-game-log:before,
-    #monster-panel:before {
-        top: 0px;
-    }
-    
-    .sidepanel-content.glc-game-log:before,
-    #monster-panel:before {
-     height: 40px;   
-    }
-    
-   .player-card {
-        box-shadow: 0px 0px 2px 0px /*[[borderColor]]*/;
-        background: linear-gradient(/*[[backgroundColor]]*/, /*[[rollCalcColor]]*/ 250%) !important;
-    }
-    
-    .help-tabs li a,
-    .token-image-modal-footer-title,
-    .material-icons.button-icon,
-    .sidepanel-content,
-    .sidepanel-content button,
-    .scene_selector button{
-        color: /*[[fontColor]]*/ !important;
-    }
-    
-    img[src*="assets/logo.png"],
+     img[src*="assets/logo.png"],
     .sidebar__controls img[src*="chrome-extension://"],
     .player-attribute img[src*="chrome-extension://"],
     .sidebar-panel-body button img[src*="chrome-extension://"],
@@ -4395,198 +4127,14 @@ div#site{
     .player-see-more img[src$="arrows_down.png"][src^="chrome-extension:"]{
         /*[[aboveFilter]]*/
     }
-    
-    .scene div button:nth-of-type(3) img,
-    .scene div button:nth-of-type(4) img{
-       display: none;
-    }
-    .scene div button:nth-of-type(3) {    
-   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' id='Layer_1' x='0px' y='0px' viewBox='0 0 512 512' style='enable-background:new 0 0 512 512;' xml:space='preserve'%3E%3Cg%3E%3Cg%3E%3Cpath d='M495.807,66.962L444.696,15.85c-21.136-21.134-55.53-21.134-76.666,0.001l-29.815,29.815L31.926,351.956L0.341,512 l159.396-32.304l336.069-336.069C516.943,122.49,516.943,88.099,495.807,66.962z M338.215,96.776l25.557,25.556l-264.07,264.07 l-25.557-25.555L338.215,96.776z M46.294,465.811l13.468-68.239l54.471,54.471L46.294,465.811z M150.812,437.512l-25.555-25.555 l264.07-264.07l25.555,25.555L150.812,437.512z M470.252,118.072l-29.815,29.815L363.77,71.221l29.813-29.814 c7.05-7.047,18.514-7.045,25.559-0.001l51.11,51.111C477.296,99.562,477.296,111.027,470.252,118.072z'/%3E%3C/g%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3C/svg%3E");
-    -webkit-mask-size: 13px;
-    -webkit-mask-repeat:  no-repeat;
-    -webkit-mask-position: center center;
-    background: /*[[fontColor]]*/ !important;
-    }
 
-    .scene div button:nth-of-type(4) {    
-   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns:dc='http://purl.org/dc/elements/1.1/' xmlns:cc='http://creativecommons.org/ns%23' xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns%23' xmlns:svg='http://www.w3.org/2000/svg' xmlns='http://www.w3.org/2000/svg' xmlns:sodipodi='http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd' xmlns:inkscape='http://www.inkscape.org/namespaces/inkscape' viewBox='0 -256 1792 1792' id='svg3741' version='1.1' inkscape:version='0.48.3.1 r9886' width='100%25' height='100%25' sodipodi:docname='trash_font_awesome.svg'%3E%3Cmetadata id='metadata3751'%3E%3Crdf:RDF%3E%3Ccc:Work rdf:about=''%3E%3Cdc:format%3Eimage/svg+xml%3C/dc:format%3E%3Cdc:type rdf:resource='http://purl.org/dc/dcmitype/StillImage'/%3E%3C/cc:Work%3E%3C/rdf:RDF%3E%3C/metadata%3E%3Cdefs id='defs3749'/%3E%3Csodipodi:namedview pagecolor='%23ffffff' bordercolor='%23666666' borderopacity='1' objecttolerance='10' gridtolerance='10' guidetolerance='10' inkscape:pageopacity='0' inkscape:pageshadow='2' inkscape:window-width='640' inkscape:window-height='480' id='namedview3747' showgrid='false' inkscape:zoom='0.13169643' inkscape:cx='896' inkscape:cy='896' inkscape:window-x='0' inkscape:window-y='25' inkscape:window-maximized='0' inkscape:current-layer='svg3741'/%3E%3Cg transform='matrix(1,0,0,-1,197.42373,1255.0508)' id='g3743'%3E%3Cpath d='M 512,800 V 224 q 0,-14 -9,-23 -9,-9 -23,-9 h -64 q -14,0 -23,9 -9,9 -9,23 v 576 q 0,14 9,23 9,9 23,9 h 64 q 14,0 23,-9 9,-9 9,-23 z m 256,0 V 224 q 0,-14 -9,-23 -9,-9 -23,-9 h -64 q -14,0 -23,9 -9,9 -9,23 v 576 q 0,14 9,23 9,9 23,9 h 64 q 14,0 23,-9 9,-9 9,-23 z m 256,0 V 224 q 0,-14 -9,-23 -9,-9 -23,-9 h -64 q -14,0 -23,9 -9,9 -9,23 v 576 q 0,14 9,23 9,9 23,9 h 64 q 14,0 23,-9 9,-9 9,-23 z M 1152,76 v 948 H 256 V 76 Q 256,54 263,35.5 270,17 277.5,8.5 285,0 288,0 h 832 q 3,0 10.5,8.5 7.5,8.5 14.5,27 7,18.5 7,40.5 z M 480,1152 h 448 l -48,117 q -7,9 -17,11 H 546 q -10,-2 -17,-11 z m 928,-32 v -64 q 0,-14 -9,-23 -9,-9 -23,-9 h -96 V 76 q 0,-83 -47,-143.5 -47,-60.5 -113,-60.5 H 288 q -66,0 -113,58.5 Q 128,-11 128,72 v 952 H 32 q -14,0 -23,9 -9,9 -9,23 v 64 q 0,14 9,23 9,9 23,9 h 309 l 70,167 q 15,37 54,63 39,26 79,26 h 320 q 40,0 79,-26 39,-26 54,-63 l 70,-167 h 309 q 14,0 23,-9 9,-9 9,-23 z' id='path3745' inkscape:connector-curvature='0' style='fill:currentColor'/%3E%3C/g%3E%3C/svg%3E");
-    -webkit-mask-size: 13px;
-    -webkit-mask-repeat:  no-repeat;
-    -webkit-mask-position: center center;
-    background: /*[[fontColor]]*/ !important;
+    a.above-vtt-warning-secondary-div{
+     background: /*[[backgroundColor]]*/ !important;     
+        
     }
-    
-    
-     .scene div button:nth-of-type(3),
-    .scene div button:nth-of-type(4){
-        margin: 0px 5px;
+    div.above-vtt-warning-secondary-div ~ a.ddb-campaigns-warning-div{
+        color: /*[[fontColor]]*/ !important;
     }
-    
-    .scene div button:nth-of-type(3):hover,
-    .scene div button:nth-of-type(4):hover{
-        background: /*[[linkColor]]*/ !important;;
-    }
-    #importer_area b{
-       color: transparent !important;
-        -webkit-background-clip: text !important;
-    }
-    .aoeshape:focus, 
-    .drawbutton.button-enabled,
-    button[id$='-button'].button-enabled:hover,
-    .aoeshape:focus:hover, 
-    .drawbutton.button-enabled:hover,
-    [data-name*="SHARE/SEE"][style*="background: red"],
-    .help-tabs li.active,
-    button.drawTypeSelected,
-    button.above-roll20:hover{
-        background: /*[[backgroundColor]]*/ !important;
-        box-shadow: inset 0 0 10px 1px /*[[linkColor]]*/ !important;;
-        border: 1px solid /*[[linkColor]]*/;
-        color: /*[[linkColor]]*/ !important;
-    }
-  
-    .player-card-footer .ability_value,
-    .player-card-footer .ability_score{
-        border-color: /*[[borderColor]]*/
-    }
-    #scene_selector_toggle > span{
-        transition: transform 0.5s ease-in-out !important;
-    }
-    .material-icons{
-        color: /*[[fontColor]]*/ !important;   
-    }
-     #scene_selector_toggle:hover .material-icons,
-    .help-tabs li:hover a{
-         color: /*[[linkColor]]*/ !important;
-    }
-    .context-menu-item:not(.context-menu-not-selectable, .context-menu-disabled) {
-        border: 1px solid /*[[backgroundColor]]*/;
-        border-width: 1px 0px;
-    }
-    .context-menu-item:not(.context-menu-not-selectable, .context-menu-disabled):hover {
-        background: /*[[backgroundColor]]*/ !important;
-        box-shadow: inset 0 0 20px 1px /*[[linkColor]]*/ !important;
-        border: 1px solid /*[[linkColor]]*/;
-        border-width: 1px 0px;
-        color: /*[[linkColor]]*/;
-    }
-    
-    #scene_selector .scene .scene_title ~ div button[style="background: rgb(255, 127, 127);"]{
-        background: /*[[backgroundColor]]*/ !important;
-        box-shadow: inset 0 0 20px 1px /*[[linkColor]]*/ !important;
-    }
-     
-    #combat_area tr{
-        border: 1px solid /*[[backgroundColor]]*/;       
-    }
-  
-    #combat_area tr[data-current]{
-        background: /*[[backgroundColor]]*/ !important;
-        box-shadow: inset 0 0 20px 1px /*[[linkColor]]*/ !important;
-        border-color: /*[[linkColor]]*/;   
-    }
-    
-    #combat_area tr:not(tr[data-current] ~ tr, tr[data-current]) {
-        border-bottom: none;   
-    }
-    
-    button.above-roll20{
-        border: 1px solid /*[[borderColor]]*/;
-        margin: 1px;
-        border-radius: 2px;
-    }
-     
-    #scene_selector .sortable_placeholder{
-        background: /*[[backgroundColor]]*/ !important;
-        box-shadow: inset 0 0 40px 1px /*[[linkColor]]*/ !important;;
-        border: 1px solid /*[[linkColor]]*/;
-        color: /*[[linkColor]]*/;
-    }
-         
-    button[id$='-button']:hover, 
-    button[id$='_button']:hover, 
-    button[id^=jitsi_]:hover, 
-    #combat_tracker > button:hover,
-    #scene_selector_toggle:hover, 
-    body > button:hover,
-    #addscene:hover, 
-    .scene button:hover, 
-    #combat_tracker_inside button:hover, 
-    #edit_dialog button:hover, 
-    #mega_importer button:hover, 
-    #prewiz td button:hover, 
-    #wizard_popup button:hover, 
-    .top_menu button:hover, 
-    .monster_frame > button:hover, 
-    .stp-btn:hover, 
-    .player-actions button:hover, 
-    #add-party:hover, 
-    .importer_toggle:hover, 
-    #zoom_buttons button:hover, 
-    .GameLogEntry_Message__1GoY3 button:hover,
-    .ddbc-tab-options--layout-pill .ddbc-tab-options__header-heading:hover{
-        background: /*[[backgroundColor]]*/ !important;
-        color: /*[[linkColor]]*/ !important;
-        border-color: /*[[linkColor]]*/ !important;
-        transition: none;
-    }
-    
-    button[id$='-button'], 
-    button[id$='_button'], 
-    button[id^=jitsi_], 
-    #combat_tracker > button, 
-    #scene_selector_toggle, 
-    body > button, 
-    #addscene, 
-    .scene button, 
-    #edit_dialog button, 
-    #mega_importer button, 
-    #prewiz td button, 
-    #wizard_popup button, 
-    #aoe_feet, 
-    .top_menu button, 
-    .monster_frame > button, 
-    .stp-btn, 
-    .player-actions button,
-    #add-party, 
-    #reset_round_number, 
-    #zoom_buttons button, 
-    .stream_button, 
-    .GameLogEntry_Message__1GoY3 button
-    {
-        background: /*[[backgroundColor]]*/ !important;
-        color: /*[[fontColor]]*/;
-        height: 22px;
-        border-radius: 7px;
-        box-shadow: inset 0 1px 0 rgb(255 255 255 / 20%), 0 1px 2px rgb(0 0 0 / 5%);
-        padding: 2px 8px;
-        transition: none;
-        border: 1px solid lightgray;
-    }
-    
-    
-    .sidebar__controls button.hasTooltip,
-    #combat_tracker_inside button,
-    .sidebar-modal{
-        background: /*[[backgroundColor]]*/ !important;
-        color: /*[[fontColor]]*/;
-    }
-    
-    .scene button,
-    .top_menu button,
-    .top_menu button.button-enabled{
-        border: none;
-        box-shadow: none;
-        padding: 2px 8px;
-        margin: 0px;
-    }
-    
-    
-    .top_menu button{
-        margin: 0px;
-        border-radius: 0px;
-    }
-       
     /*Fix for side menus*/
     
     .sidebar-menu.se-fixed .quick-menu-tier-1::-webkit-scrollbar {
@@ -4850,6 +4398,462 @@ div#site{
 
 @-moz-document regexp("https://www.dndbeyond.com/encounters.*abovevtt.*") {
     /*New AboveVTT Changes for ddb-dice fork/merge*/
+    #castbutton,
+    .sidebar__pane-content .rc-switch,
+    .sidebar-panel-header,
+    .player-token-hp,
+    .sidebar-modal .sidebar-panel-content
+    {
+        text-shadow: none !important;   
+        background: /*[[backgroundColor]]*/ !important;
+        color: /*[[fontColor]]*/ !important;
+    }
+    .monster-row__config-handle img{
+        display: none !important;
+    }
+     .monster-row__config-handle{
+        -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' style='height: 512px; width: 512px;'%3E%3Cg class='' transform='translate(0,0)' style=''%3E%3Cpath d='M234.875 18.78c-26.087 2.367-51.557 8.56-74.875 18.782 15.37 32.763 14.222 66.706-6.72 82.407-20.835 15.617-54.055 7.965-81.124-15.69-16.246 19.452-29.336 41.36-38.875 65.626 33.83 12.333 56.635 37.665 52.94 63.5-3.698 25.835-32.697 43.74-68.626 46.094 2.338 25.796 8.91 50.778 18.937 73.875 17.81-8.182 35.793-11.09 51.095-8.938 13.032 1.87 23.927 7.015 31.156 16.657 15.817 21.097 7.603 54.713-16.78 81.97 19.516 16.35 42.216 29.444 66.594 39.03 12.33-33.828 37.655-56.634 63.5-52.938 25.844 3.697 43.74 32.696 46.094 68.625 26.087-2.365 51.557-8.555 74.875-18.78-15.766-32.997-14.26-67.588 6.843-83.406 9.64-7.23 22.568-9.022 35.594-7.125 15.112 2.16 31.19 10.25 45.563 22.78 16.088-19.345 29.4-41.51 38.875-65.594-33.83-12.332-56.635-37.653-52.938-63.5 3.697-25.846 32.665-43.772 68.594-46.125-2.36-25.944-8.774-50.663-18.906-73.874-32.612 15.117-66.66 13.145-82.282-7.687-15.696-20.944-7.252-53.86 16.688-81-19.52-16.352-42.248-29.447-66.625-39.032-12.332 33.828-37.657 56.66-63.5 52.968-25.846-3.693-43.744-32.696-46.095-68.625zm21.656 95.126c79.626 0 144.376 64.752 144.376 144.375 0 79.626-64.75 144.376-144.375 144.376-79.624 0-144.374-64.75-144.374-144.375 0-79.624 64.75-144.374 144.375-144.374zm0 18.688c-69.524 0-125.686 56.162-125.686 125.687 0 69.526 56.162 125.69 125.687 125.69 69.526 0 125.69-56.164 125.69-125.69 0-69.522-56.164-125.686-125.69-125.686zm.033 15.125c61.094 0 110.625 49.53 110.625 110.624 0 61.095-49.53 110.625-110.625 110.625s-110.625-49.53-110.625-110.626c0-61.095 49.53-110.625 110.625-110.625z' fill='%23000000' fill-opacity='1'/%3E%3C/g%3E%3C/svg%3E");
+         -webkit-mask-position: center;
+         -webkit-mask-size: contain;
+         -webkit-mask-repeat: no-repeat;
+         border-left: 1px solid /*[[borderColor]]*/ !important;
+    }
+    
+    
+    #combat_footer button{
+        flex-grow: 1;   
+    }
+    #combat_footer{
+        display: flex;   
+    }
+    .sidebar__pane-content .rc-switch.rc-switch-checked{
+        background: /*[[rollCalcColor]]*/ !important;      
+        border-color: /*[[linkColor]]*/ !important;
+    }
+    .tracker-list{
+        padding: 5px 3px;   
+    }
+    #combat_tracker_inside #combat_footer button:last-of-type{
+        border-bottom-right-radius: 5px;   
+    }
+    #combat_tracker_inside #combat_footer button:first-of-type{
+        border-bottom-left-radius: 5px; 
+    }
+    div#scene_selector, 
+    #combat_tracker_inside, 
+    #edit_dialog, 
+    #mega_importer, 
+    #prewiz, 
+    #wizard_popup, 
+    .top_menu,
+    .sidebar__pane-content,
+    .soundpad-section-title,
+    .sidebar__pane-content button,
+    .token-image-modal,
+    .token-image-modal-content,
+    .token-image-modal-content p,
+    .token-image-modal-content div,
+    .hpbar,
+    #splash
+    {
+        background: /*[[backgroundColor]]*/!important;
+        color: /*[[fontColor]]*/!important;
+        border-color: /*[[borderColor]]*/ !important;
+    }
+    
+    #combat_tracker_inside{
+        border-radius: 5px 5px 0 0;
+        width: 250px;
+    }
+    .sidebar__controls .tab-btn{ 
+        border: none;
+    }
+    .sidebar__controls .tab-btn.selected-tab {    
+        height: 23px;
+        border-top: 1px solid /*[[borderColor]]*/;
+        border-left: 1px solid /*[[borderColor]]*/;
+        border-right: 1px solid /*[[borderColor]]*/;
+    }
+
+    div#splash {
+        height: fit-content;
+    }
+
+    .help-tabs li:hover{
+        background: /*[[backgroundColor]]*/!important;
+    }
+
+    .scene,
+    #help-menu,
+    .help-tabs,
+    .sidebar-panel-body,
+    .sidebar-panel-footer,
+    .custom-token-list,
+    .context-menu-item,
+    .context-menu-list,
+    .custom-token-image-row,
+    [class*="custom-token-image-row"],
+    .sidebar-panel-body button,
+    .ability_score,
+    .sidebar-panel-body p,
+    #tokens-panel-header,
+    #tokens-panel-footer,
+    button.above-roll20,
+    .ddbc-tab-options--layout-pill .ddbc-tab-options__header-heading{
+        background: /*[[backgroundColor]]*/ !important;
+        color: /*[[fontColor]]*/!important;
+    }
+    
+    .player-token-ac {
+        border-radius: 0px;
+        background-color: /*[[backgroundColor]]*/;
+        width: 25px;
+        height: 25px;
+         -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' id='ac_shield' x='0px' y='0px' viewBox='6.991001129150391 0 45.999996185302734 59.981998443603516' xml:space='preserve' height='21px' width='21px'%3E%3Cg xmlns='http://www.w3.org/2000/svg' transform='translate(6 0)'%3E%3Cpath d='M51.991,7.982c-14.628,0-21.169-7.566-21.232-7.64c-0.38-0.456-1.156-0.456-1.536,0c-0.064,0.076-6.537,7.64-21.232,7.64 c-0.552,0-1,0.448-1,1v19.085c0,10.433,4.69,20.348,12.546,26.521c3.167,2.489,6.588,4.29,10.169,5.352 c0.093,0.028,0.189,0.042,0.285,0.042s0.191-0.014,0.285-0.042c3.581-1.063,7.002-2.863,10.169-5.352 c7.856-6.174,12.546-16.088,12.546-26.521V8.982C52.991,8.43,52.544,7.982,51.991,7.982z ' %3E%3C/path%3E%3Cpath d='M50.991,28.067 c0,9.824-4.404,19.151-11.782,24.949c-2.883,2.266-5.983,3.92-9.218,4.921c-3.235-1-6.335-2.655-9.218-4.921 C13.395,47.219,8.991,37.891,8.991,28.067V9.971c12.242-0.272,18.865-5.497,21-7.545c2.135,2.049,8.758,7.273,21,7.545V28.067z' %3E%3C/path%3E%3C/g%3E%3C/svg%3E") -1px 0px / 24px 24px no-repeat;
+        mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' id='ac_shield' x='0px' y='0px' viewBox='6.991001129150391 0 45.999996185302734 59.981998443603516' xml:space='preserve' height='21px' width='21px'%3E%3Cg xmlns='http://www.w3.org/2000/svg' transform='translate(6 0)'%3E%3Cpath d='M51.991,7.982c-14.628,0-21.169-7.566-21.232-7.64c-0.38-0.456-1.156-0.456-1.536,0c-0.064,0.076-6.537,7.64-21.232,7.64 c-0.552,0-1,0.448-1,1v19.085c0,10.433,4.69,20.348,12.546,26.521c3.167,2.489,6.588,4.29,10.169,5.352 c0.093,0.028,0.189,0.042,0.285,0.042s0.191-0.014,0.285-0.042c3.581-1.063,7.002-2.863,10.169-5.352 c7.856-6.174,12.546-16.088,12.546-26.521V8.982C52.991,8.43,52.544,7.982,51.991,7.982z ' %3E%3C/path%3E%3Cpath d='M50.991,28.067 c0,9.824-4.404,19.151-11.782,24.949c-2.883,2.266-5.983,3.92-9.218,4.921c-3.235-1-6.335-2.655-9.218-4.921 C13.395,47.219,8.991,37.891,8.991,28.067V9.971c12.242-0.272,18.865-5.497,21-7.545c2.135,2.049,8.758,7.273,21,7.545V28.067z' %3E%3C/path%3E%3C/g%3E%3C/svg%3E") -1px 0px / 24px 24px no-repeat;
+        background-image: linear-gradient(135deg, /*[[backgroundColor]]*/ 30%, /*[[fontColor]]*/ 150%);
+        display: flex;  
+        padding: 4px 7px;
+    }
+    
+    .ac svg{
+        border-radius: 0px;
+        background-color: /*[[backgroundColor]]*/;
+         -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' id='ac_shield' x='0px' y='0px' viewBox='6.991001129150391 0 45.999996185302734 59.981998443603516' xml:space='preserve' height='21px' width='21px'%3E%3Cg xmlns='http://www.w3.org/2000/svg' transform='translate(6 0)'%3E%3Cpath d='M51.991,7.982c-14.628,0-21.169-7.566-21.232-7.64c-0.38-0.456-1.156-0.456-1.536,0c-0.064,0.076-6.537,7.64-21.232,7.64 c-0.552,0-1,0.448-1,1v19.085c0,10.433,4.69,20.348,12.546,26.521c3.167,2.489,6.588,4.29,10.169,5.352 c0.093,0.028,0.189,0.042,0.285,0.042s0.191-0.014,0.285-0.042c3.581-1.063,7.002-2.863,10.169-5.352 c7.856-6.174,12.546-16.088,12.546-26.521V8.982C52.991,8.43,52.544,7.982,51.991,7.982z ' %3E%3C/path%3E%3Cpath d='M50.991,28.067 c0,9.824-4.404,19.151-11.782,24.949c-2.883,2.266-5.983,3.92-9.218,4.921c-3.235-1-6.335-2.655-9.218-4.921 C13.395,47.219,8.991,37.891,8.991,28.067V9.971c12.242-0.272,18.865-5.497,21-7.545c2.135,2.049,8.758,7.273,21,7.545V28.067z' %3E%3C/path%3E%3C/g%3E%3C/svg%3E") -1px 0px / cover no-repeat;
+        mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' id='ac_shield' x='0px' y='0px' viewBox='6.991001129150391 0 45.999996185302734 59.981998443603516' xml:space='preserve' height='21px' width='21px'%3E%3Cg xmlns='http://www.w3.org/2000/svg' transform='translate(6 0)'%3E%3Cpath d='M51.991,7.982c-14.628,0-21.169-7.566-21.232-7.64c-0.38-0.456-1.156-0.456-1.536,0c-0.064,0.076-6.537,7.64-21.232,7.64 c-0.552,0-1,0.448-1,1v19.085c0,10.433,4.69,20.348,12.546,26.521c3.167,2.489,6.588,4.29,10.169,5.352 c0.093,0.028,0.189,0.042,0.285,0.042s0.191-0.014,0.285-0.042c3.581-1.063,7.002-2.863,10.169-5.352 c7.856-6.174,12.546-16.088,12.546-26.521V8.982C52.991,8.43,52.544,7.982,51.991,7.982z ' %3E%3C/path%3E%3Cpath d='M50.991,28.067 c0,9.824-4.404,19.151-11.782,24.949c-2.883,2.266-5.983,3.92-9.218,4.921c-3.235-1-6.335-2.655-9.218-4.921 C13.395,47.219,8.991,37.891,8.991,28.067V9.971c12.242-0.272,18.865-5.497,21-7.545c2.135,2.049,8.758,7.273,21,7.545V28.067z' %3E%3C/path%3E%3C/g%3E%3C/svg%3E") -1px 0px / cover no-repeat;
+        background-image: linear-gradient(135deg, /*[[backgroundColor]]*/ 30%, /*[[fontColor]]*/ 150%);
+        display: flex;  
+    }
+        
+    .player-token-hp{
+        display: flex;
+        background-image: linear-gradient(135deg, /*[[backgroundColor]]*/ 30%, /*[[fontColor]]*/ 150%) !important;
+        height: 20px;
+        padding: 3px 4px;
+        border-radius: 5px;
+    }
+    
+    .hpbar input{
+        background: none !important;  
+    }
+    
+    .hpbar,
+    .hpbar input,
+    .ac,
+    .player-token-ac,   
+    .player-token-hp{
+        text-shadow: 0.5px 0.5px /*[[backgroundColor]]*/,
+        -0.5px -0.5px 0 /*[[backgroundColor]]*/,  
+         0.5px -0.5px 0 /*[[backgroundColor]]*/,
+        -0.5px 0.5px 0 /*[[backgroundColor]]*/,
+        0.5px 0.5px 0 /*[[backgroundColor]]*/ !important;
+    }
+    .hpbar{
+        background-image: linear-gradient(135deg, /*[[backgroundColor]]*/ 40%, /*[[fontColor]]*/ 150%) !important;
+        border-radius: 5px;
+    }
+    .VTTToken img[style*="box-shadow: rgba(0, 0, 255, "][style*=" 255, 0.8)"] ~ .hpbar {
+        background-image: linear-gradient(135deg, /*[[backgroundColor]]*/ -50%, #00F 100%) !important;
+    }
+    .VTTToken img[style*=", 255,"][style*=" 0, 0.8)"] ~ .hpbar {
+        background-image: linear-gradient(135deg, /*[[backgroundColor]]*/ 10%, #0F0 150%) !important;
+    }
+    .VTTToken img[style*="box-shadow: rgba(0, 255, 0,"][style*=" 0, 0.8)"] ~ .hpbar,
+    .VTTToken img[style*="box-shadow: rgba(5, 255, 0,"][style*=" 0, 0.8)"] ~ .hpbar {
+        background-image: linear-gradient(135deg, /*[[backgroundColor]]*/ -50%, #0F0 100%) !important;
+    }
+    .VTTToken img[style*="box-shadow: rgba(255, "][style*=" 0, 0.8)"] ~ .hpbar,
+    .VTTToken img[style*="box-shadow: rgba(255, 255,"][style*=" 0, 0.8)"] ~ .hpbar {
+        background-image: linear-gradient(135deg, /*[[backgroundColor]]*/ 20%, #FF0 150%) !important;
+    }
+    .VTTToken img[style*="box-shadow: rgba(255, 51,"][style*=" 0, 0.8)"] ~ .hpbar,
+    .VTTToken img[style*="box-shadow: rgba(255, 50,"][style*=" 0, 0.8)"] ~ .hpbar,
+    .VTTToken img[style*="box-shadow: rgba(255, 45,"][style*=" 0, 0.8)"] ~ .hpbar,
+    .VTTToken img[style*="box-shadow: rgba(255, 40,"][style*=" 0, 0.8)"] ~ .hpbar,
+    .VTTToken img[style*="box-shadow: rgba(255, 35,"][style*=" 0, 0.8)"] ~ .hpbar,
+    .VTTToken img[style*="box-shadow: rgba(255, 30,"][style*=" 0, 0.8)"] ~ .hpbar,
+    .VTTToken img[style*="box-shadow: rgba(255, 25,"][style*=" 0, 0.8)"] ~ .hpbar,
+    .VTTToken img[style*="box-shadow: rgba(255, 20,"][style*=" 0, 0.8)"] ~ .hpbar,
+    .VTTToken img[style*="box-shadow: rgba(255, 15,"][style*=" 0, 0.8)"] ~ .hpbar,
+    .VTTToken img[style*="box-shadow: rgba(255, 10,"][style*=" 0, 0.8)"] ~ .hpbar,
+    .VTTToken img[style*="box-shadow: rgba(255, 5,"][style*=" 0, 0.8)"] ~ .hpbar{
+        background-image: linear-gradient(135deg, /*[[backgroundColor]]*/ 50%, #f40 150%) !important;
+    }
+    .VTTToken img[style*="(255, 0, 0"][style*=" 0, 0.8)"] ~ .hpbar{
+        background-image: linear-gradient(135deg, /*[[backgroundColor]]*/ 90%, #f00 150%) !important;
+    }
+    .player-token.ui-draggable{
+        filter: drop-shadow(0px 0px 1px /*[[fontColor]]*/);
+    }
+    .VTTToken div{
+        filter: drop-shadow(1px 1px 2px /*[[backgroundColor]]*/);
+    }
+    .context-menu-submenu:after{
+        border-color: transparent transparent transparent /*[[fontColor]]*/;
+    }
+    .ac text{
+           fill: /*[[fontColor]]*/ !important;
+    }
+    .ac path:nth-of-type(2),
+    .ac path:first-of-type{
+           fill: none !important;
+    }
+    .journal-note-entry:nth-child(odd) { 
+        background: none !important;
+        backdrop-filter: brightness(0.8);      
+    }
+    .journal-chapter-title{
+        background: linear-gradient(to top, /*[[backgroundColor]]*/, /*[[fontColor]]*/ 250%);
+        text-shadow:1px 1px /*[[backgroundColor]]*/,
+        -1px -1px 0 /*[[backgroundColor]]*/,  
+         1px -1px 0 /*[[backgroundColor]]*/,
+        -1px 1px 0 /*[[backgroundColor]]*/,
+        1px 1px 0 /*[[backgroundColor]]*/ !important;
+        padding-left: 5px;
+    }
+    .journal-chapter{
+        border: 1px solid /*[[borderColor]]*/;
+        margin-bottom: 10px;
+    }
+    .journal-note-entry-title{
+        padding-left: 20px;   
+    }
+    .sidebar-panel-header{
+        position: relative;   
+    }
+    .sidebar-panel-header:before,
+    .sidepanel-content.glc-game-log:before,
+    #monster-panel:before{
+        content: '';
+        position: absolute;
+        bottom: -15px;
+        height: 15px;
+        left:  0px;
+        width: 100%;
+        background-image: linear-gradient(to bottom, /*[[backgroundColor]]*/ 10%, #0000);       
+        z-index: 100;
+        pointer-events: none !important;
+    }    
+     .sidebar__controls{
+        z-index: 105 !important;
+    }
+  
+    .sidepanel-content.glc-game-log:before,
+    #monster-panel:before {
+        top: 0px;
+    }
+    
+    .sidepanel-content.glc-game-log:before,
+    #monster-panel:before {
+     height: 40px;   
+    }
+    
+   .player-card {
+        box-shadow: 0px 0px 2px 0px /*[[borderColor]]*/;
+        background: linear-gradient(/*[[backgroundColor]]*/, /*[[rollCalcColor]]*/ 250%) !important;
+    }
+    
+    .help-tabs li a,
+    .token-image-modal-footer-title,
+    .material-icons.button-icon,
+    .sidepanel-content,
+    .sidepanel-content button,
+    .scene_selector button{
+        color: /*[[fontColor]]*/ !important;
+    }
+    
+
+    
+    .scene div button:nth-of-type(3) img,
+    .scene div button:nth-of-type(4) img{
+       display: none;
+    }
+    .scene div button:nth-of-type(3) {    
+   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' id='Layer_1' x='0px' y='0px' viewBox='0 0 512 512' style='enable-background:new 0 0 512 512;' xml:space='preserve'%3E%3Cg%3E%3Cg%3E%3Cpath d='M495.807,66.962L444.696,15.85c-21.136-21.134-55.53-21.134-76.666,0.001l-29.815,29.815L31.926,351.956L0.341,512 l159.396-32.304l336.069-336.069C516.943,122.49,516.943,88.099,495.807,66.962z M338.215,96.776l25.557,25.556l-264.07,264.07 l-25.557-25.555L338.215,96.776z M46.294,465.811l13.468-68.239l54.471,54.471L46.294,465.811z M150.812,437.512l-25.555-25.555 l264.07-264.07l25.555,25.555L150.812,437.512z M470.252,118.072l-29.815,29.815L363.77,71.221l29.813-29.814 c7.05-7.047,18.514-7.045,25.559-0.001l51.11,51.111C477.296,99.562,477.296,111.027,470.252,118.072z'/%3E%3C/g%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3C/svg%3E");
+    -webkit-mask-size: 13px;
+    -webkit-mask-repeat:  no-repeat;
+    -webkit-mask-position: center center;
+    background: /*[[fontColor]]*/ !important;
+    }
+
+    .scene div button:nth-of-type(4) {    
+   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns:dc='http://purl.org/dc/elements/1.1/' xmlns:cc='http://creativecommons.org/ns%23' xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns%23' xmlns:svg='http://www.w3.org/2000/svg' xmlns='http://www.w3.org/2000/svg' xmlns:sodipodi='http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd' xmlns:inkscape='http://www.inkscape.org/namespaces/inkscape' viewBox='0 -256 1792 1792' id='svg3741' version='1.1' inkscape:version='0.48.3.1 r9886' width='100%25' height='100%25' sodipodi:docname='trash_font_awesome.svg'%3E%3Cmetadata id='metadata3751'%3E%3Crdf:RDF%3E%3Ccc:Work rdf:about=''%3E%3Cdc:format%3Eimage/svg+xml%3C/dc:format%3E%3Cdc:type rdf:resource='http://purl.org/dc/dcmitype/StillImage'/%3E%3C/cc:Work%3E%3C/rdf:RDF%3E%3C/metadata%3E%3Cdefs id='defs3749'/%3E%3Csodipodi:namedview pagecolor='%23ffffff' bordercolor='%23666666' borderopacity='1' objecttolerance='10' gridtolerance='10' guidetolerance='10' inkscape:pageopacity='0' inkscape:pageshadow='2' inkscape:window-width='640' inkscape:window-height='480' id='namedview3747' showgrid='false' inkscape:zoom='0.13169643' inkscape:cx='896' inkscape:cy='896' inkscape:window-x='0' inkscape:window-y='25' inkscape:window-maximized='0' inkscape:current-layer='svg3741'/%3E%3Cg transform='matrix(1,0,0,-1,197.42373,1255.0508)' id='g3743'%3E%3Cpath d='M 512,800 V 224 q 0,-14 -9,-23 -9,-9 -23,-9 h -64 q -14,0 -23,9 -9,9 -9,23 v 576 q 0,14 9,23 9,9 23,9 h 64 q 14,0 23,-9 9,-9 9,-23 z m 256,0 V 224 q 0,-14 -9,-23 -9,-9 -23,-9 h -64 q -14,0 -23,9 -9,9 -9,23 v 576 q 0,14 9,23 9,9 23,9 h 64 q 14,0 23,-9 9,-9 9,-23 z m 256,0 V 224 q 0,-14 -9,-23 -9,-9 -23,-9 h -64 q -14,0 -23,9 -9,9 -9,23 v 576 q 0,14 9,23 9,9 23,9 h 64 q 14,0 23,-9 9,-9 9,-23 z M 1152,76 v 948 H 256 V 76 Q 256,54 263,35.5 270,17 277.5,8.5 285,0 288,0 h 832 q 3,0 10.5,8.5 7.5,8.5 14.5,27 7,18.5 7,40.5 z M 480,1152 h 448 l -48,117 q -7,9 -17,11 H 546 q -10,-2 -17,-11 z m 928,-32 v -64 q 0,-14 -9,-23 -9,-9 -23,-9 h -96 V 76 q 0,-83 -47,-143.5 -47,-60.5 -113,-60.5 H 288 q -66,0 -113,58.5 Q 128,-11 128,72 v 952 H 32 q -14,0 -23,9 -9,9 -9,23 v 64 q 0,14 9,23 9,9 23,9 h 309 l 70,167 q 15,37 54,63 39,26 79,26 h 320 q 40,0 79,-26 39,-26 54,-63 l 70,-167 h 309 q 14,0 23,-9 9,-9 9,-23 z' id='path3745' inkscape:connector-curvature='0' style='fill:currentColor'/%3E%3C/g%3E%3C/svg%3E");
+    -webkit-mask-size: 13px;
+    -webkit-mask-repeat:  no-repeat;
+    -webkit-mask-position: center center;
+    background: /*[[fontColor]]*/ !important;
+    }
+    
+    
+     .scene div button:nth-of-type(3),
+    .scene div button:nth-of-type(4){
+        margin: 0px 5px;
+    }
+    
+    .scene div button:nth-of-type(3):hover,
+    .scene div button:nth-of-type(4):hover{
+        background: /*[[linkColor]]*/ !important;;
+    }
+    #importer_area b{
+       color: transparent !important;
+        -webkit-background-clip: text !important;
+    }
+    .aoeshape:focus, 
+    .drawbutton.button-enabled,
+    button[id$='-button'].button-enabled:hover,
+    .aoeshape:focus:hover, 
+    .drawbutton.button-enabled:hover,
+    [data-name*="SHARE/SEE"][style*="background: red"],
+    .help-tabs li.active,
+    button.drawTypeSelected,
+    button.above-roll20:hover{
+        background: /*[[backgroundColor]]*/ !important;
+        box-shadow: inset 0 0 10px 1px /*[[linkColor]]*/ !important;;
+        border: 1px solid /*[[linkColor]]*/;
+        color: /*[[linkColor]]*/ !important;
+    }
+  
+    .player-card-footer .ability_value,
+    .player-card-footer .ability_score{
+        border-color: /*[[borderColor]]*/
+    }
+    #scene_selector_toggle > span{
+        transition: transform 0.5s ease-in-out !important;
+    }
+    .material-icons{
+        color: /*[[fontColor]]*/ !important;   
+    }
+     #scene_selector_toggle:hover .material-icons,
+    .help-tabs li:hover a{
+         color: /*[[linkColor]]*/ !important;
+    }
+    .context-menu-item:not(.context-menu-not-selectable, .context-menu-disabled) {
+        border: 1px solid /*[[backgroundColor]]*/;
+        border-width: 1px 0px;
+    }
+    .context-menu-item:not(.context-menu-not-selectable, .context-menu-disabled):hover {
+        background: /*[[backgroundColor]]*/ !important;
+        box-shadow: inset 0 0 20px 1px /*[[linkColor]]*/ !important;
+        border: 1px solid /*[[linkColor]]*/;
+        border-width: 1px 0px;
+        color: /*[[linkColor]]*/;
+    }
+    
+    #scene_selector .scene .scene_title ~ div button[style="background: rgb(255, 127, 127);"]{
+        background: /*[[backgroundColor]]*/ !important;
+        box-shadow: inset 0 0 20px 1px /*[[linkColor]]*/ !important;
+    }
+     
+    #combat_area tr{
+        border: 1px solid /*[[backgroundColor]]*/;       
+    }
+  
+    #combat_area tr[data-current]{
+        background: /*[[backgroundColor]]*/ !important;
+        box-shadow: inset 0 0 20px 1px /*[[linkColor]]*/ !important;
+        border-color: /*[[linkColor]]*/;   
+    }
+    
+    #combat_area tr:not(tr[data-current] ~ tr, tr[data-current]) {
+        border-bottom: none;   
+    }
+    
+    button.above-roll20{
+        border: 1px solid /*[[borderColor]]*/;
+        margin: 1px;
+        border-radius: 2px;
+    }
+     
+    #scene_selector .sortable_placeholder{
+        background: /*[[backgroundColor]]*/ !important;
+        box-shadow: inset 0 0 40px 1px /*[[linkColor]]*/ !important;;
+        border: 1px solid /*[[linkColor]]*/;
+        color: /*[[linkColor]]*/;
+    }
+         
+    button[id$='-button']:hover, 
+    button[id$='_button']:hover, 
+    button[id^=jitsi_]:hover, 
+    #combat_tracker > button:hover,
+    #scene_selector_toggle:hover, 
+    body > button:hover,
+    #addscene:hover, 
+    .scene button:hover, 
+    #combat_tracker_inside button:hover, 
+    #edit_dialog button:hover, 
+    #mega_importer button:hover, 
+    #prewiz td button:hover, 
+    #wizard_popup button:hover, 
+    .top_menu button:hover, 
+    .monster_frame > button:hover, 
+    .stp-btn:hover, 
+    .player-actions button:hover, 
+    #add-party:hover, 
+    .importer_toggle:hover, 
+    #zoom_buttons button:hover, 
+    .GameLogEntry_Message__1GoY3 button:hover,
+    .ddbc-tab-options--layout-pill .ddbc-tab-options__header-heading:hover{
+        background: /*[[backgroundColor]]*/ !important;
+        color: /*[[linkColor]]*/ !important;
+        border-color: /*[[linkColor]]*/ !important;
+        transition: none;
+    }
+    
+    button[id$='-button'], 
+    button[id$='_button'], 
+    button[id^=jitsi_], 
+    #combat_tracker > button, 
+    #scene_selector_toggle, 
+    body > button, 
+    #addscene, 
+    .scene button, 
+    #edit_dialog button, 
+    #mega_importer button, 
+    #prewiz td button, 
+    #wizard_popup button, 
+    #aoe_feet, 
+    .top_menu button, 
+    .monster_frame > button, 
+    .stp-btn, 
+    .player-actions button,
+    #add-party, 
+    #reset_round_number, 
+    #zoom_buttons button, 
+    .stream_button, 
+    .GameLogEntry_Message__1GoY3 button
+    {
+        background: /*[[backgroundColor]]*/ !important;
+        color: /*[[fontColor]]*/;
+        height: 22px;
+        border-radius: 7px;
+        box-shadow: inset 0 1px 0 rgb(255 255 255 / 20%), 0 1px 2px rgb(0 0 0 / 5%);
+        padding: 2px 8px;
+        transition: none;
+        border: 1px solid lightgray;
+    }
+    
+    
+    .sidebar__controls button.hasTooltip,
+    #combat_tracker_inside button,
+    .sidebar-modal{
+        background: /*[[backgroundColor]]*/ !important;
+        color: /*[[fontColor]]*/;
+    }
+    
+    .scene button,
+    .top_menu button,
+    .top_menu button.button-enabled{
+        border: none;
+        box-shadow: none;
+        padding: 2px 8px;
+        margin: 0px;
+    }
+    
+    
+    .top_menu button{
+        margin: 0px;
+        border-radius: 0px;
+    }
     .sidebar-panel-body{
         border: 1px solid /*[[borderColor]]*/;
     }
@@ -4906,6 +4910,12 @@ div#site{
     #players-panel:before
      {
         top: 0px;
+    }
+    .ui-widget-content{
+        background: /*[[backgroundColor]]*/ !important;
+    }
+    .note.ui-dialog-content.ui-widget-content {
+        width: 100% !important;
     }
     #players-panel:before
     {
