@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.255
+@version      1.2.256
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -4419,7 +4419,15 @@ div#site{
          border-left: 1px solid /*[[borderColor]]*/ !important;
     }
     
-    
+    #sheet{
+        resize: horizontal !important;
+        overflow: auto;
+        direction: rtl !important;
+    }
+    .iframe-encounter-combat-tracker{
+        resize: horizontal !important;
+        overflow: auto;
+    }
     #combat_footer button{
         flex-grow: 1;   
     }
