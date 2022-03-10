@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.160
+@version      1.3.161
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -3276,7 +3276,8 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     [data-name*="SHARE/SEE"][style*="background: red"],
     .help-tabs li.active,
     button.drawTypeSelected,
-    button.above-roll20:hover{
+    button.above-roll20:hover,
+    .drawTypeSelected.ddbc-tab-options__header-heading--is-active{
         background: /*[[background]]*/ !important;
         box-shadow: inset 0 0 10px 1px /*[[highlightColor]]*/ !important;
         border: 1px solid /*[[highlightColor]]*/;
