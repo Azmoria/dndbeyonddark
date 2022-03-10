@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.254
+@version      1.2.255
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -4706,7 +4706,8 @@ div#site{
     [data-name*="SHARE/SEE"][style*="background: red"],
     .help-tabs li.active,
     button.drawTypeSelected,
-    button.above-roll20:hover{
+    button.above-roll20:hover,
+    .drawTypeSelected.ddbc-tab-options__header-heading--is-active{
         background: /*[[backgroundColor]]*/ !important;
         box-shadow: inset 0 0 10px 1px /*[[linkColor]]*/ !important;;
         border: 1px solid /*[[linkColor]]*/;
