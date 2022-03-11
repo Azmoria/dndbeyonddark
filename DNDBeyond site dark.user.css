@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.257
+@version      1.2.258
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -1610,10 +1610,13 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     --background-color: /*[[backgroundColor]]*/;
     --transparency-color: /*[[transparencyBackgroundColor]]*/;
     }
-        
-div#site{
-    height: initial;
-        }
+    body{
+       overflow: overlay !important;
+    }
+    
+    div#site{
+        height: initial;
+    }
 
 	::-webkit-scrollbar {
 		width: 3px;
@@ -1621,7 +1624,7 @@ div#site{
 	}
 
 	::-webkit-scrollbar-track {
-		background: /*[[backgroundColor]]*/;
+		background: transparent !important;
 	}
 	::-webkit-scrollbar-thumb {
 		background-color: /*[[scrollbarColor]]*/;
@@ -1629,13 +1632,13 @@ div#site{
 		border: none;
 	}
     ::-webkit-scrollbar-corner { 
-        background: /*[[backgroundColor]]*/;
+        background: transparent;
     }
 
     
     :focus,
     .ddbeb-button:focus{
-    outline: none !important;
+        outline: none !important;
     }
     
     .p-comments-b .p-comment-post, 
@@ -4405,7 +4408,7 @@ div#site{
         }
     }    
 }  
-    
+
 
 @-moz-document regexp("https://www.dndbeyond.com/encounters.*abovevtt.*") {
     /*New AboveVTT Changes for ddb-dice fork/merge*/
@@ -5006,7 +5009,7 @@ div#site{
 	}
 
 	::-webkit-scrollbar-track {
-		background: /*[[backgroundColor]]*/;
+		background: transparent;
 	}
     
 	::-webkit-scrollbar-thumb {
@@ -5014,6 +5017,9 @@ div#site{
 		border-radius: 6px;
 		border: none;
 	}
+    body{
+       overflow: overlay !important;
+    }
     
 	#site-main,
 	.post-excerpt__content,
@@ -5137,6 +5143,7 @@ div#site{
     body.body-error div{
         color: /*[[fontColor]]*/;
     }
+    
   
 }
 @-moz-document regexp("https://docs.google.com/document/d/e/2PACX-1vRSJ6Izvldq5c9z_d-9-Maa8ng1SUK2mGSQWkPjtJip0cy9dxAwAug58AmT9zRtJmiUx5Vhkp7hATSt/.*embedded=true"), regexp("https://docs.google.com/document/d/e/2PACX-1vRSJ6Izvldq5c9z_d-9-Maa8ng1SUK2mGSQWkPjtJip0cy9dxAwAug58AmT9zRtJmiUx5Vhkp7hATSt/.*embedded=true#.*") {
@@ -5171,8 +5178,7 @@ regexp("https://www.dndbeyond.com/encounters.*#DiceTray"), regexp("https://www.d
         --character-sheet-border: /*[[borderColor]]*/;
     }
 
-    /*Dice Alpha Size and position changes for full site*/
-    /*[[rollableAreas]]*/
+
 
 
     .tippy-popper {
