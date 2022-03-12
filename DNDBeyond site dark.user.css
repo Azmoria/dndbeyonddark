@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.258
+@version      1.2.259
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -203,6 +203,7 @@ dark "Dark Mode" <<<EOT
     .list-row-primary-text-item{
         color: #1877EC !important;
     }
+
 
     .thread-prefix span.thread-prefix{
         background-color: #7D5A0C !important;
@@ -1610,13 +1611,14 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     --background-color: /*[[backgroundColor]]*/;
     --transparency-color: /*[[transparencyBackgroundColor]]*/;
     }
+     
     body{
        overflow: overlay !important;
     }
-    
+        
     div#site{
-        height: initial;
-    }
+    height: initial;
+        }
 
 	::-webkit-scrollbar {
 		width: 3px;
@@ -1634,8 +1636,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     ::-webkit-scrollbar-corner { 
         background: transparent;
     }
-
-    
+  
     :focus,
     .ddbeb-button:focus{
         outline: none !important;
@@ -2535,11 +2536,14 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     {
 		color: /*[[linkColor]]*/ !important
 	}
-
+    .mon-stat-block .tooltip-hover.skill-tooltip,
+    .mon-stat-block .tooltip-hover.skill-tooltip:hover,
+    .mon-stat-block .tooltip-hover.condition-tooltip{
+        text-decoration: 1px underline dotted /*[[linkColor]]*/ !important;   
+    }
     
        /*[[fontContrast]]*/
     
-
 	.quick-menu-item-closed > .quick .sidenav-next-nav,
 	.sidebar-menu.se-fixed,
 	.listing .info:nth-of-type(8n+1),
@@ -2882,6 +2886,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         background-repeat: no-repeat;
         vertical-align: top;
     }
+    
     /* AboveVTT tooltip - semi functional but won't be needed once ddb-dice merge
     @media screen and (max-width: 1023px){
         
@@ -4408,7 +4413,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         }
     }    
 }  
-
+    
 
 @-moz-document regexp("https://www.dndbeyond.com/encounters.*abovevtt.*") {
     /*New AboveVTT Changes for ddb-dice fork/merge*/
@@ -4422,17 +4427,66 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         background: /*[[backgroundColor]]*/ !important;
         color: /*[[fontColor]]*/ !important;
     }
-  
 
+    
+     /*  resizable windows stuff if implemented
+    
+    
     #sheet{
-        resize: horizontal !important;
-        overflow: auto;
-        direction: rtl !important;
+         left: 0px;
+         right: auto;
+         display: none;
+         position: fixed !important;
+         min-width: 200px !important;
+         min-height: 200px !important;
     }
-    .iframe-encounter-combat-tracker{
-        resize: horizontal !important;
-        overflow: auto;
+
+    #sheet.open{
+        display: block !important;  
+        transition: none;
+        transform: none;
+        backdrop-filter: opacity(0);
+
     }
+    #resizeDragMon{
+         display: flex;
+         left: 40px;
+         top: 80px;
+         right: auto;
+         width: 400px;
+         height: 85%;
+         max-height: 98%;
+         position: fixed !important;
+         min-width: 200px !important;
+         opacity: 1;
+         min-height: 200px !important;
+         background: /*[[sidebarColor]]*//*;       
+    }
+    #resizeDragMon.hideMon{
+        visibility: hidden;
+    }
+    #sheet iframe{
+        width: 100% !important;
+        height: calc(100% - 25px) !important;
+    }
+
+    #resizeDragMon iframe{
+        width: 100% !important;
+        height: calc(100% - 25px) !important;
+        position: relative !important;
+        left: 0 !important;
+        top: 20px !important;
+        max-height: 100% !important;
+    }
+    .ui-resizable-handle{
+        z-index: 10005 !important;  
+         border: 1px dotted gray;
+    }*/
+    
+    #sheet{
+        background: /*[[transparencyBackgroundColor]]*/;   
+    }
+
     #combat_footer button{
         flex-grow: 1;   
     }
@@ -4907,19 +4961,18 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         width: 100%;   
     }
     .tracker-list::-webkit-scrollbar-track {
-
-    border-radius: 5px;
+         border-radius: 5px;
     }
 
     .tracker-list::-webkit-scrollbar-thumb {
-    border-radius: 5px;
+        border-radius: 5px;
     }
     .sidepanel-content.glc-game-log:before
     {
         background-image: none;   
     }
     #players-panel:before {
-    height: 40px;
+        height: 40px;
     }
     #players-panel:before
      {
@@ -5004,6 +5057,9 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
 
 @-moz-document url("https://www.dndbeyond.com/") {
 
+    body{
+        overflow: overlay !important;   
+    }
 	::-webkit-scrollbar {
 		width: 3px;
 	}
@@ -5017,9 +5073,6 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
 		border-radius: 6px;
 		border: none;
 	}
-    body{
-       overflow: overlay !important;
-    }
     
 	#site-main,
 	.post-excerpt__content,
@@ -5143,7 +5196,6 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     body.body-error div{
         color: /*[[fontColor]]*/;
     }
-    
   
 }
 @-moz-document regexp("https://docs.google.com/document/d/e/2PACX-1vRSJ6Izvldq5c9z_d-9-Maa8ng1SUK2mGSQWkPjtJip0cy9dxAwAug58AmT9zRtJmiUx5Vhkp7hATSt/.*embedded=true"), regexp("https://docs.google.com/document/d/e/2PACX-1vRSJ6Izvldq5c9z_d-9-Maa8ng1SUK2mGSQWkPjtJip0cy9dxAwAug58AmT9zRtJmiUx5Vhkp7hATSt/.*embedded=true#.*") {
@@ -5178,14 +5230,9 @@ regexp("https://www.dndbeyond.com/encounters.*#DiceTray"), regexp("https://www.d
         --character-sheet-border: /*[[borderColor]]*/;
     }
 
-
-
-
     .tippy-popper {
         z-index: 60000 !important;
     }
-
-
 
     .dice_result__divider {
         -webkit-mask: url("data:image/svg+xml;charset=utf-8,%3Csvg width='19' height='80' viewBox='0 0 19 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23FFFFFF' d='M10 0v35H9V0z'/%3E%3Cpath fill='%23FFFFFF' d='M10 70v105H9V70Z'/%3E%3Cpath fill='%23FFFFFF00' d='M19 68H0V33h19z'/%3E%3Cpath fill='%23FFFFFF' d='M19 57H0v-3h19zM19 47H0v-3h19z'/%3E%3C/svg%3E") no-repeat 100% 100%;
