@@ -633,7 +633,7 @@ regexp("https://www.dndbeyond.com/characters/\d.*"), regexp("https://www.dndbeyo
       .ct-character-sheet__inner {
         resize: horizontal;
         direction: rtl;
-        max-height: 95vH !important;
+          max-height: 95vH !important;
     }
     
      .ct-character-sheet__inner>* {
@@ -643,9 +643,11 @@ regexp("https://www.dndbeyond.com/characters/\d.*"), regexp("https://www.dndbeyo
     
     /*Background colors, images and styles */
     body {
-        overflow: overlay !important;
+        overflow: overlay;
     }
+    
 
+    
     .ct-character-sheet:before{
         /*[[titleToggle]]*/
     }
@@ -663,7 +665,7 @@ regexp("https://www.dndbeyond.com/characters/\d.*"), regexp("https://www.dndbeyo
         -o-background-size: cover !important;
         background-size: cover !important;
     }
-    
+
     .ct-decorate-pane__backdrop{
         /*[[backgroundImg]]*/
         background-color: /*[[background]]*/
@@ -1547,38 +1549,39 @@ regexp("https://www.dndbeyond.com/characters/\d.*"), regexp("https://www.dndbeyo
     .ct-character-sheet-desktop .ddbc-damage-type-icon__img--necrotic>path:nth-of-type(2),
     .ct-character-sheet-desktop .ddbc-damage-type-icon__img--necrotic>polygon:first-of-type,
     .ct-character-sheet-desktop .ddbc-aoe-type-icon path,
-   .ct-character-sheet-desktop .ddbc-concentration-icon>rect,
-   .ct-character-sheet-desktop .ddbc-ritual-icon>path:first-of-type,
-   .ct-character-sheet-desktop .ddbc-damage-type-icon__img--piercing>path:first-of-type,
-   .ct-character-sheet-desktop .ddbc-damage-type-icon__img--piercing>polygon,
-   .ct-character-sheet-desktop .ddbc-damage-type-icon__img--psychic>polygon,
-   .ct-character-sheet-desktop .ddbc-damage-type-icon__img--psychic>path:first-of-type,
-   .ct-character-sheet-desktop .ddbc-damage-type-icon__img--force>line,
-   .ct-character-sheet-desktop .ddbc-damage-type-icon__img--force>path,
-   .ct-character-sheet-desktop .ddbc-combat-attack__icon-img--weapon-ranged path,
-   .ct-character-sheet-desktop .ddbc-combat-attack__icon-img--action-attack-weapon-melee path,
-   .ct-character-sheet-desktop .ddbc-combat-attack__icon-img--weapon-melee path,
-   .ct-character-sheet-desktop svg.ddbc-svg.ddbc-combat-attack__icon-img--weapon-melee.ddbc-attack-type-icon.ddbc-attack-type-icon--1-1 path:first-of-type,
-   .ct-character-sheet-desktop svg.ddbc-svg.ddbc-combat-attack__icon-img--weapon-melee.ddbc-attack-type-icon.ddbc-attack-type-icon--1-1 path:nth-of-type(2),
-   .ct-character-sheet-desktop .ddbc-damage-type-icon__img--bludgeoning>polygon,
-   .ct-character-sheet-desktop .ddbc-damage-type-icon__img--slashing>path,
-   .ct-character-sheet-desktop .ddbc-damage-type-icon__img--acid>path,
-   .ct-character-sheet-desktop .ddbc-damage-type-icon__img--poison>path,
-   .ct-character-sheet-desktop .ddbc-damage-type-icon__img--thunder>path,
-   .ct-character-sheet-desktop .ddbc-damage-type-icon__img--thunder>polygon,
-   .ct-character-sheet-desktop .ddbc-damage-type-icon__img--lightning>path,
-   .ct-character-sheet-desktop .ddbc-spell-school-icon--transmutation>path,
-   .ct-character-sheet-desktop .ddbc-spell-school-icon--evocation>path,
-   .ct-character-sheet-desktop .ddbc-damage-type-icon__img--cold>path,
-   .ct-character-sheet-desktop .ddbc-damage-type-icon__img--fire>path,
-   .ct-character-sheet-desktop .ddbc-damage-type-icon__img--radiant>path,
-   .ct-character-sheet-desktop .ddbc-spell-school-icon--conjuration>path,
-   .ct-character-sheet-desktop .ddbc-attack-type-icon--1-1 path:nth-of-type(3),
-   .ct-character-sheet-desktop .ddbc-spell-school-icon path,
-   .ct-character-sheet-desktop .ddbc-attack-type-icon--weapon-spell path,
-   .ct-character-sheet-desktop svg.ddbc-svg.ddbc-combat-attack__icon-img--action-attack-general-ranged.ddbc-attack-type-icon.ddbc-attack-type-icon--3-2 path,
-   .ct-character-sheet-desktop .ddbc-attunement-svg polygon,
-   .ct-character-sheet-desktop .ddbc-attunement-svg path
+    .ct-character-sheet-desktop .ddbc-concentration-icon>rect,
+    .ct-character-sheet-desktop .ddbc-ritual-icon>path:first-of-type,
+    .ct-character-sheet-desktop .ddbc-damage-type-icon__img--piercing>path:first-of-type,
+    .ct-character-sheet-desktop .ddbc-damage-type-icon__img--piercing>polygon,
+    .ct-character-sheet-desktop .ddbc-damage-type-icon__img--psychic>polygon,
+    .ct-character-sheet-desktop .ddbc-damage-type-icon__img--psychic>path:first-of-type,
+    .ct-character-sheet-desktop .ddbc-damage-type-icon__img--force>line,
+    .ct-character-sheet-desktop .ddbc-damage-type-icon__img--force>path,
+    .ct-character-sheet-desktop .ddbc-combat-attack__icon-img--weapon-ranged path,
+    .ct-character-sheet-desktop .ddbc-combat-attack__icon-img--action-attack-weapon-melee path,
+    .ct-character-sheet-desktop .ddbc-combat-attack__icon-img--weapon-melee path,
+    .ct-character-sheet-desktop svg.ddbc-svg.ddbc-combat-attack__icon-img--weapon-melee.ddbc-attack-type-icon.ddbc-attack-type-icon--1-1 path:first-of-type,
+    .ct-character-sheet-desktop svg.ddbc-svg.ddbc-combat-attack__icon-img--weapon-melee.ddbc-attack-type-icon.ddbc-attack-type-icon--1-1 path:nth-of-type(2),
+    .ct-character-sheet-desktop .ddbc-damage-type-icon__img--bludgeoning>polygon,
+    .ct-character-sheet-desktop .ddbc-damage-type-icon__img--slashing>path,
+    .ct-character-sheet-desktop .ddbc-damage-type-icon__img--acid>path,
+    .ct-character-sheet-desktop .ddbc-damage-type-icon__img--poison>path,
+    .ct-character-sheet-desktop .ddbc-damage-type-icon__img--thunder>path,
+    .ct-character-sheet-desktop .ddbc-damage-type-icon__img--thunder>polygon,
+    .ct-character-sheet-desktop .ddbc-damage-type-icon__img--lightning>path,
+    .ct-character-sheet-desktop .ddbc-spell-school-icon--transmutation>path,
+    .ct-character-sheet-desktop .ddbc-spell-school-icon--evocation>path,
+    .ct-character-sheet-desktop .ddbc-damage-type-icon__img--cold>path,
+    .ct-character-sheet-desktop .ddbc-damage-type-icon__img--fire>path,
+    .ct-character-sheet-desktop .ddbc-damage-type-icon__img--radiant>path,
+    .ct-character-sheet-desktop .ddbc-spell-school-icon--conjuration>path,
+    .ct-character-sheet-desktop .ddbc-attack-type-icon--1-1 path:nth-of-type(3),
+    .ct-character-sheet-desktop .ddbc-spell-school-icon path,
+    .ct-character-sheet-desktop .ddbc-attack-type-icon--weapon-spell path,
+    .ct-character-sheet-desktop svg.ddbc-svg.ddbc-combat-attack__icon-img--action-attack-general-ranged.ddbc-attack-type-icon.ddbc-attack-type-icon--3-2 path,
+    .ct-character-sheet-desktop .ddbc-attunement-svg polygon,
+    .ct-character-sheet-desktop .ddbc-attunement-svg path,
+    .ct-character-sheet__inner svg > path[fill^="#242528"]
     {
         fill: /*[[iconPrimary]]*/ !important;
         opacity: 1 !important;
@@ -1592,7 +1595,8 @@ regexp("https://www.dndbeyond.com/characters/\d.*"), regexp("https://www.dndbeyo
     .ddbc-damage-type-icon__img--piercing>path:nth-of-type(2),
     .ddbc-damage-type-icon__img--psychic>path:nth-of-type(2),
     .ddbc-damage-type-icon__img--bludgeoning>path,
-    .ct-character-sheet--dark-mode .ddbc-attack-type-icon--1-1 path:nth-of-type(3)
+    .ct-character-sheet--dark-mode .ddbc-attack-type-icon--1-1 path:nth-of-type(3),
+    .ct-character-sheet__inner svg > path[fill^="#fff"]
     {
         fill: /*[[iconSecondary]]*/ !important;
         opacity: 1 !important;
@@ -2819,7 +2823,6 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         }
     }
 }
-
 @-moz-document regexp("https://www.dndbeyond.com/profile/.*/characters/\\d.*abovevtt=true.*"){
 
     /*AboveVtt*/
