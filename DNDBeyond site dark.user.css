@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.262
+@version      1.2.264
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -2896,46 +2896,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         vertical-align: top;
     }
     
-    /* AboveVTT tooltip - semi functional but won't be needed once ddb-dice merge
-    @media screen and (max-width: 1023px){
-        
-        
-        #db-tooltip-container h3,
-        .tooltip,
-        .popover h3 {
-            display: block !important;
 
-        }
-         #db-tooltip-container,
-        .popover {
-            left: 20px !important;
-            top: 20px !important;
-             pointer-events: none !important;
-              width: 60vw !important;
-     
-        }
-        .tooltip {
-            width: 100vw !important;
-            min-width: 300px !important;
-            pointer-events: none !important;
-         }
-    }
-     @media screen and (max-width: 867px) {
-         
-    }
-        .monster_frame{
-            top: 30px !important;
-            height: calc(100% - 35px) !important;       
-            width: 60vw !important;
-        }
-        .monster_frame iframe{
-            height: 100% !important;   
-            width: 100% !important;
-        }
-   
-    .db-tooltip-container{
-        display: block;   
-    }*/
     .input-checkbox__icon:not(:checked)
     {
         fill: /*[[borderColor]]*/ !important;
@@ -4269,7 +4230,12 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
             background: /*[[backgroundColor]]*/ !important;
         }
     }
-    
+    @media screen and (max-width: 768px) {
+            .sidebar__control-group--visibility button {
+                background: /*[[transparencyBackgroundColor]]*/;
+                
+        }
+    }
     @media screen and (max-width: 800px){	
 
         .top-table-page{ 
