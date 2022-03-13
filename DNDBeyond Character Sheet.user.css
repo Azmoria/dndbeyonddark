@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.164
+@version      1.3.165
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -1581,7 +1581,11 @@ regexp("https://www.dndbeyond.com/characters/\d.*"), regexp("https://www.dndbeyo
     .ct-character-sheet-desktop svg.ddbc-svg.ddbc-combat-attack__icon-img--action-attack-general-ranged.ddbc-attack-type-icon.ddbc-attack-type-icon--3-2 path,
     .ct-character-sheet-desktop .ddbc-attunement-svg polygon,
     .ct-character-sheet-desktop .ddbc-attunement-svg path,
-    .ct-character-sheet__inner svg > path[fill^="#242528"]
+    .ct-character-sheet__inner svg > path[fill^="#b0b7bd"],
+    .ct-character-sheet__inner svg > polygon[fill^="#b0b7bd"],
+    .ct-sidebar__inner svg > path[fill^="#fff"],
+    .ct-sidebar__inner svg > polygon[fill^="#fff"]
+
     {
         fill: /*[[iconPrimary]]*/ !important;
         opacity: 1 !important;
@@ -1596,7 +1600,12 @@ regexp("https://www.dndbeyond.com/characters/\d.*"), regexp("https://www.dndbeyo
     .ddbc-damage-type-icon__img--psychic>path:nth-of-type(2),
     .ddbc-damage-type-icon__img--bludgeoning>path,
     .ct-character-sheet--dark-mode .ddbc-attack-type-icon--1-1 path:nth-of-type(3),
-    .ct-character-sheet__inner svg > path[fill^="#fff"]
+    .ct-character-sheet__inner svg > path[fill^="#fff"],
+    .ct-character-sheet__inner svg > path[fill^="#242528"],
+    .ct-character-sheet__inner svg > polygon[fill^="#fff"],
+    .ct-character-sheet__inner svg > polygon[fill^="#242528"],
+    .ct-sidebar__inner svg > polygon[fill^="#242528"],
+    .ct-sidebar__inner svg > path[fill^="#242528"]
     {
         fill: /*[[iconSecondary]]*/ !important;
         opacity: 1 !important;
@@ -1628,6 +1637,9 @@ regexp("https://www.dndbeyond.com/characters/\d.*"), regexp("https://www.dndbeyo
         opacity: 1 !important;
     }
     
+    .ct-sidebar__inner svg > path[stroke^="#242528"]{
+        stroke: /*[[iconSecondary]]*/ !important; 
+    }
     .ddbc-disadvantage-svg path{
         fill: #b00000 !important;  
     }
