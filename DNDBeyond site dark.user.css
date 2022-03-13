@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.261
+@version      1.2.262
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -1406,17 +1406,26 @@ EOT;
 Light "Light Mode"<<<EOT
 EOT;
 }
+@advanced dropdown aboveContainDice "Prevent Dice from entering side bar; resize your window after changing this option to reset aspect ratio" {
+    off "OFF" <<<EOT
+    EOT;
+    on "ON" <<<EOT
+        canvas.dice-rolling-panel__container{
+            max-width: calc(100% - 340px) !important;
+        }
+    EOT;
+}
 
 
 @advanced dropdown beyond20Invert "Invert Beyond20 Menu"{
-yes "Yes" <<<EOT
-.ajs-dialog iframe
-    {
-        filter: invert(1)   
-    }
-EOT;
-no "No" <<<EOT
-EOT;
+    yes "Yes" <<<EOT
+    .ajs-dialog iframe
+        {
+            filter: invert(1)   
+        }
+    EOT;
+    no "No" <<<EOT
+    EOT;
 }
 @var select zindex "Dice Over/Under the Results Popup" {
  "Under": "60000",
@@ -4431,8 +4440,33 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         color: /*[[fontColor]]*/ !important;
     }
 
+    /*[[aboveContainDice]]*/;
+
+
+
     
-     /*  resizable windows stuff if implemented
+    
+    
+/*
+    #combat_tracker_inside .ui-resizable-s,
+    #combat_tracker_inside .ui-resizable-se,
+    #combat_tracker_inside .ui-resizable-sw{
+        bottom:-25px !important;  
+    }
+    #combat_tracker_inside{
+        min-width: 215px !important;   
+        min-height: 200px !important;
+    }
+    #combat_tracker_inside .ui-resizable-e,
+    #combat_tracker_inside .ui-resizable-w  {
+        height: calc(100% + 25px) !important;  
+    }
+    
+    #combat_tracker_inside .ui-resizable-se{
+        right: -3px;
+        bottom: -22px !important;
+    }
+       resizable windows stuff if implemented
     
     
     #sheet{
