@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.265
+@version      1.2.266
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -2435,7 +2435,13 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     body.body-privatemessage .single-column #content .u-dropDown .u-dropDownMenu,
     .body-forum-recentlyupdatedforumthreads .p-forum-a .col-thread .thread-title>a,
     .listing__list-item__column,
-    [class*="GameLogNotification_MessageTotal"]
+    [class*="GameLogNotification_MessageTotal"],
+    [class*="glc-game-log"] div[class*="Title"],
+    [class*="glc-game-log"] div[class*="TotalContainer-Flex"] span,
+    [class*="glc-game-log"] [class*="Sender"],
+    [class*="glc-game-log"] [class*="Line-Notation"],
+    [class*="glc-game-log"] [class*="SetPreviewDescription"],
+    [class*="glc-game-log"] [class*="SendToLabel"]
     {
 		color: /*[[fontColor]]*/ !important;
 	}
@@ -2560,6 +2566,11 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .mon-stat-block .tooltip-hover.skill-tooltip:hover,
     .mon-stat-block .tooltip-hover.condition-tooltip{
         text-decoration: 1px underline dotted /*[[linkColor]]*/ !important;   
+    }
+    
+    
+    [class*="glc-game-log"] [class*="SendToLabel"] ~ button:hover {
+        color: /*[[rollColor]]*/ !important;
     }
     
        /*[[fontContrast]]*/
@@ -5396,7 +5407,7 @@ regexp("https://www.dndbeyond.com/encounters.*#DiceTray"), regexp("https://www.d
         opacity: 1 !important;
     }
     .dice-die-button__count,
-    .dice-die-button__tooltip {
+    .dice-die-button__tooltip{
         color: /*[[rollColor]]*/
     }
 
