@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.264
+@version      1.2.265
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -11,6 +11,7 @@
 @var color forumSecondaryColor "Forum Secondary Color" #111d
 @var color forumTertiaryColor "Forum Tertiary Color" #1e1e1edd
 @var color fontColor "Font Color" #ddd
+@var color linkColor "Link Color" #88bcd6
 @var color sidebarColor "Sidebar Color" #0b0b0dff
 @var color rollColor "Rollable Items Color" #5dbbf7
 @var color rollCalcColor "Roll Results Background Color" #030f1acc
@@ -329,7 +330,7 @@ light "Light Mode" <<<EOT
     
 EOT;
 }
-@var color linkColor "Link Color" #88bcd6
+
 @var color borderColor "Border Color" #999
 @advanced dropdown borderStyle "Border Style" {
 solid "Solid" <<<EOT
@@ -355,7 +356,7 @@ none EOT;
 @var color scrollbarColor "Scrollbar Color" #88bcd6
 @advanced dropdown compendiumBackgrounds "Compendium Backgrounds where compatible"{
 on "ON" <<<EOT
-@-moz-document regexp("https://www.dndbeyond.com/sources/moot/.*"), regexp("https://www.dndbeyond.com/sources/sacoc/.*"), regexp("https://www.dndbeyond.com/sources/ftod/.*"), regexp("https://www.dndbeyond.com/sources/vrgtr/.*"), regexp("https://www.dndbeyond.com/sources/twbtw/.*"), regexp("https://www.dndbeyond.com/sources/cm/.*"), regexp("https://www.dndbeyond.com/sources/egtw/.*"), regexp("https://www.dndbeyond.com/sources/idrotf/.*"), regexp("https://www.dndbeyond.com/sources/dmg/.*"), regexp("https://www.dndbeyond.com/sources/phb/.*"), regexp("https://www.dndbeyond.com/sources/erftlw/.*"), regexp("https://www.dndbeyond.com/sources/ddvram/.*"), regexp("https://www.dndbeyond.com/classes/.*"), regexp("https://www.dndbeyond.com/races/.*") {
+@-moz-document regexp("https://www.dndbeyond.com/sources/moot/.*"), regexp("https://www.dndbeyond.com/sources/sacoc/.*"), regexp("https://www.dndbeyond.com/sources/ftod/.*"), regexp("https://www.dndbeyond.com/sources/vrgtr/.*"), regexp("https://www.dndbeyond.com/sources/twbtw/.*"), regexp("https://www.dndbeyond.com/sources/cm/.*"), regexp("https://www.dndbeyond.com/sources/egtw/.*"), regexp("https://www.dndbeyond.com/sources/idrotf/.*"), regexp("https://www.dndbeyond.com/sources/dmg/.*"), regexp("https://www.dndbeyond.com/sources/phb/.*"), regexp("https://www.dndbeyond.com/sources/erftlw/.*"), regexp("https://www.dndbeyond.com/sources/ddvram/.*"), regexp("https://www.dndbeyond.com/classes/.*"), regexp("https://www.dndbeyond.com/races/.*"), regexp("https://www.dndbeyond.com/sources/cotn/.*") {
 
     #site-main,
     body.responsive-enabled #site #site-main .container #content,
@@ -838,14 +839,14 @@ on "ON" <<<EOT
     }
 }
 
-@-moz-document regexp("https://www.dndbeyond.com/sources/moot"), regexp("https://www.dndbeyond.com/sources/twbtw"), regexp("https://www.dndbeyond.com/sources/tcoe"), regexp("https://www.dndbeyond.com/sources/erftlw"), regexp("https://www.dndbeyond.com/sources/egtw"), regexp("https://www.dndbeyond.com/sources/idrotf"), regexp("https://www.dndbeyond.com/sources/ftod"),regexp("https://www.dndbeyond.com/sources/vrgtr"), regexp("https://www.dndbeyond.com/sources/sacoc"), regexp("https://www.dndbeyond.com/sources/cm"), regexp("https://www.dndbeyond.com/sources/ai"), regexp("https://www.dndbeyond.com/sources/phb"), regexp("https://www.dndbeyond.com/sources/dmg"), regexp("https://www.dndbeyond.com/sources/it/phb"), regexp("https://www.dndbeyond.com/sources/mm"), regexp("https://www.dndbeyond.com/sources/ggtr"), regexp("https://www.dndbeyond.com/sources/mtof"), regexp("https://www.dndbeyond.com/sources/scag"), regexp("https://www.dndbeyond.com/sources/vgtm"), regexp("https://www.dndbeyond.com/sources/wgte"), regexp("https://www.dndbeyond.com/sources/xgte"), regexp("https://www.dndbeyond.com/sources/bgdia"), regexp("https://www.dndbeyond.com/sources/cos"), regexp("https://www.dndbeyond.com/sources/dc"), regexp("https://www.dndbeyond.com/sources/doip"), regexp("https://www.dndbeyond.com/sources/sdw"), regexp("https://www.dndbeyond.com/sources/slw"), regexp("https://www.dndbeyond.com/sources/ddvram"), regexp("https://www.dndbeyond.com/sources/gos"), regexp("https://www.dndbeyond.com/sources/hotdq"),  regexp("https://www.dndbeyond.com/sources/imr"), regexp("https://www.dndbeyond.com/sources/lr"), regexp("https://www.dndbeyond.com/sources/llok"),  regexp("https://www.dndbeyond.com/sources/lmop"), regexp("https://www.dndbeyond.com/sources/oota"), regexp("https://www.dndbeyond.com/sources/pota"),  regexp("https://www.dndbeyond.com/sources/rot"), regexp("https://www.dndbeyond.com/sources/ddia-mord"), regexp("https://www.dndbeyond.com/sources/skt"), regexp("https://www.dndbeyond.com/sources/tftyp"), regexp("https://www.dndbeyond.com/sources/toa"), regexp("https://www.dndbeyond.com/sources/wdh"), regexp("https://www.dndbeyond.com/sources/wdotmm") {
+@-moz-document regexp("https://www.dndbeyond.com/sources/moot"), regexp("https://www.dndbeyond.com/sources/twbtw"), regexp("https://www.dndbeyond.com/sources/tcoe"), regexp("https://www.dndbeyond.com/sources/erftlw"), regexp("https://www.dndbeyond.com/sources/egtw"), regexp("https://www.dndbeyond.com/sources/idrotf"), regexp("https://www.dndbeyond.com/sources/ftod"),regexp("https://www.dndbeyond.com/sources/vrgtr"), regexp("https://www.dndbeyond.com/sources/sacoc"), regexp("https://www.dndbeyond.com/sources/cm"), regexp("https://www.dndbeyond.com/sources/ai"), regexp("https://www.dndbeyond.com/sources/phb"), regexp("https://www.dndbeyond.com/sources/dmg"), regexp("https://www.dndbeyond.com/sources/it/phb"), regexp("https://www.dndbeyond.com/sources/mm"), regexp("https://www.dndbeyond.com/sources/ggtr"), regexp("https://www.dndbeyond.com/sources/mtof"), regexp("https://www.dndbeyond.com/sources/scag"), regexp("https://www.dndbeyond.com/sources/vgtm"), regexp("https://www.dndbeyond.com/sources/wgte"), regexp("https://www.dndbeyond.com/sources/xgte"), regexp("https://www.dndbeyond.com/sources/bgdia"), regexp("https://www.dndbeyond.com/sources/cos"), regexp("https://www.dndbeyond.com/sources/dc"), regexp("https://www.dndbeyond.com/sources/doip"), regexp("https://www.dndbeyond.com/sources/sdw"), regexp("https://www.dndbeyond.com/sources/slw"), regexp("https://www.dndbeyond.com/sources/ddvram"), regexp("https://www.dndbeyond.com/sources/gos"), regexp("https://www.dndbeyond.com/sources/hotdq"),  regexp("https://www.dndbeyond.com/sources/imr"), regexp("https://www.dndbeyond.com/sources/lr"), regexp("https://www.dndbeyond.com/sources/llok"),  regexp("https://www.dndbeyond.com/sources/lmop"), regexp("https://www.dndbeyond.com/sources/oota"), regexp("https://www.dndbeyond.com/sources/pota"),  regexp("https://www.dndbeyond.com/sources/rot"), regexp("https://www.dndbeyond.com/sources/ddia-mord"), regexp("https://www.dndbeyond.com/sources/skt"), regexp("https://www.dndbeyond.com/sources/tftyp"), regexp("https://www.dndbeyond.com/sources/toa"), regexp("https://www.dndbeyond.com/sources/wdh"), regexp("https://www.dndbeyond.com/sources/wdotmm"), regexp("https://www.dndbeyond.com/sources/cotn") {
    
     #site-main,
     body.responsive-enabled #site #site-main .container #content,
     .secondary-content,
     .compendium-hr,
     html body.hide-ads #site-main #footer-push{
-        background: none !important;   
+        background: none !important;  
     }
 
     .compendium-toc-block-header:before, 
@@ -909,6 +910,15 @@ on "ON" <<<EOT
     }
 
 
+
+}
+
+@-moz-document regexp("https://www.dndbeyond.com/sources/cotn") {
+    body{
+        background: url(https://media.dndbeyond.com/compendium-images/cotn/HJ1ybS42ooBqdXzF/CotN-ToC4k.png) no-repeat center center, var(--background-color) !important;
+        background-size: cover !important;
+        background-attachment: fixed !important; 
+    }
 
 }
 @-moz-document regexp("https://www.dndbeyond.com/sources/moot") {
@@ -2015,7 +2025,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .ddb-account-tab-body .listing-container-table table tbody tr:nth-child(2n+1),
     .ddb-account-tab-body .listing-container-table table tbody tr,
     #content-management-root .ddb-button,
-    [class*="GameLogNotification_MessageWrapper"]
+    [class*="GameLogNotification_MessageWrapper"],
+    .appendixdivcotn
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
@@ -4038,6 +4049,10 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .ddbc-truncated-content--is-hidden .ddbc-truncated-content__content:after {
         background: linear-gradient(0deg, /*[[backgroundColor]]*/ 6%,hsla(0,0%,100%,0));
     }
+    aside.cotn-flowchart:before{
+        background: linear-gradient(to right, /*[[linkColor]]*/, /*[[fontColor]]*/);
+        opacity: 0.6;
+    }
     
      /*[[iFrameFilter]]*/ 
     
@@ -4406,85 +4421,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         color: /*[[fontColor]]*/ !important;
     }
 
-    /*[[aboveContainDice]]*/;
-
-
-
-    
-    
-    
-/*
-    #combat_tracker_inside .ui-resizable-s,
-    #combat_tracker_inside .ui-resizable-se,
-    #combat_tracker_inside .ui-resizable-sw{
-        bottom:-25px !important;  
-    }
-    #combat_tracker_inside{
-        min-width: 215px !important;   
-        min-height: 200px !important;
-    }
-    #combat_tracker_inside .ui-resizable-e,
-    #combat_tracker_inside .ui-resizable-w  {
-        height: calc(100% + 25px) !important;  
-    }
-    
-    #combat_tracker_inside .ui-resizable-se{
-        right: -3px;
-        bottom: -22px !important;
-    }
-       resizable windows stuff if implemented
-    
-    
-    #sheet{
-         left: 0px;
-         right: auto;
-         display: none;
-         position: fixed !important;
-         min-width: 200px !important;
-         min-height: 200px !important;
-    }
-
-    #sheet.open{
-        display: block !important;  
-        transition: none;
-        transform: none;
-        backdrop-filter: opacity(0);
-
-    }
-    #resizeDragMon{
-         display: flex;
-         left: 40px;
-         top: 80px;
-         right: auto;
-         width: 400px;
-         height: 85%;
-         max-height: 98%;
-         position: fixed !important;
-         min-width: 200px !important;
-         opacity: 1;
-         min-height: 200px !important;
-         background: /*[[sidebarColor]]*//*;       
-    }
-    #resizeDragMon.hideMon{
-        visibility: hidden;
-    }
-    #sheet iframe{
-        width: 100% !important;
-        height: calc(100% - 25px) !important;
-    }
-
-    #resizeDragMon iframe{
-        width: 100% !important;
-        height: calc(100% - 25px) !important;
-        position: relative !important;
-        left: 0 !important;
-        top: 20px !important;
-        max-height: 100% !important;
-    }
-    .ui-resizable-handle{
-        z-index: 10005 !important;  
-         border: 1px dotted gray;
-    }*/
+    /*[[aboveContainDice]]*/
     
     #sheet{
         background: /*[[transparencyBackgroundColor]]*/;   
@@ -4755,14 +4692,14 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     }
     
     
-     .scene div button:nth-of-type(3),
+    .scene div button:nth-of-type(3),
     .scene div button:nth-of-type(4){
         margin: 0px 5px;
     }
     
     .scene div button:nth-of-type(3):hover,
     .scene div button:nth-of-type(4):hover{
-        background: /*[[linkColor]]*/ !important;;
+        background: /*[[linkColor]]*/ !important;
     }
     #importer_area b{
        color: transparent !important;
@@ -4780,7 +4717,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .drawTypeSelected.ddbc-tab-options__header-heading--is-active,
     .ddbc-tab-options__header-heading.ddbc-tab-options__header-heading--is-active{
         background: /*[[backgroundColor]]*/ !important;
-        box-shadow: inset 0 0 10px 1px /*[[linkColor]]*/ !important;;
+        box-shadow: inset 0 0 10px 1px /*[[linkColor]]*/ !important;
         border: 1px solid /*[[linkColor]]*/;
         color: /*[[linkColor]]*/ !important;
     }
