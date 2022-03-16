@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.269
+@version      1.2.270
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -2448,17 +2448,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     {
 		color: /*[[fontColor]]*/ !important;
 	}
-   
 
-    [class*="glc-game-log"] [class*="MessageContainer-Flex"] .ct-sidebar__header-parent{
-        font-weight: bold;
-    }
-    
-    [class*="glc-game-log"] [class*="MessageContainer-Flex"] [class*="ddbc-concentration-icon"]{
-         width: 20px;
-         height: 20px;
-    }
- 
 	.select2-container-multi .select2-choices {
 		padding: 0px;
 	}
@@ -4442,7 +4432,38 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         background: /*[[backgroundColor]]*/ !important;
         color: /*[[fontColor]]*/ !important;
     }
+    
+    [class*="glc-game-log"] [class*="MessageContainer-Flex"] .ct-sidebar__header-parent{
+        font-weight: bold;
+    }
+    
+    [class*="glc-game-log"] [class*="MessageContainer-Flex"] [class*="ddbc-concentration-icon"]{
+         width: 20px;
+         height: 20px;
+    }
+    
+    #combat_footer,
+    #combat_tracker_inside{
+        border-style: solid;
+        border-color: /*[[borderColor]]*/;      
+    }
+    #combat_footer{
+        border-width: 0px 1px 1px 1px;
+        border-radius: 0px 0px 5px 5px; 
+        left: -1px;
+        right: -1px;
+        position: absolute;
+    }
 
+    #combat_tracker_inside{
+         border-width: 1px 1px 0px 1px;
+         border-radius: 5px 5px 0 0;
+    }
+    .top_menu.visible{
+        border: 1px solid /*[[borderColor]]*/;   
+        box-sizing: content-box;
+        overflow: hidden;
+    }
     /*[[aboveContainDice]]*/
     
     #sheet{
