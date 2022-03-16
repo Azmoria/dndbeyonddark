@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.268
+@version      1.2.269
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -2442,14 +2442,23 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     [class*="glc-game-log"] [class*="Line-Notation"],
     [class*="glc-game-log"] [class*="SetPreviewDescription"],
     [class*="glc-game-log"] [class*="SendToLabel"],
-    [class*="glc-game-log"] [class*="Line-Breakdown"] span
+    [class*="glc-game-log"] [class*="Line-Breakdown"] span,
+    [class*="glc-game-log"] [class*="MessageContainer-Flex"] p,
+    [class*="glc-game-log"] [class*="MessageContainer-Flex"] div
     {
 		color: /*[[fontColor]]*/ !important;
 	}
-    
+   
 
-   
-   
+    [class*="glc-game-log"] [class*="MessageContainer-Flex"] .ct-sidebar__header-parent{
+        font-weight: bold;
+    }
+    
+    [class*="glc-game-log"] [class*="MessageContainer-Flex"] [class*="ddbc-concentration-icon"]{
+         width: 20px;
+         height: 20px;
+    }
+ 
 	.select2-container-multi .select2-choices {
 		padding: 0px;
 	}
@@ -3204,6 +3213,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .content-container .legendary {
 		color: #FEA227 !important;
 	}
+
 	.listing .info .row.item-name .name .common,
 	.common,
 	a.button,
