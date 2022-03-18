@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.168
+@version      1.3.169
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -588,7 +588,7 @@ EOT;
 Light "Light Mode"<<<EOT
 EOT;
 }
-@advanced dropdown aboveContainDice "Prevent Dice from entering side bar; resize your window after changing this option to reset aspect ratio" {
+@advanced dropdown aboveContainDice "AboveVTT prevent dice from entering side bar; resize your window after changing this option to reset aspect ratio" {
     off "OFF" <<<EOT
     EOT;
     on "ON" <<<EOT
