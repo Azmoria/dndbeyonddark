@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.272
+@version      1.2.273
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -4510,7 +4510,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .hpbar,
     #splash
     {
-        background: /*[[sidebarColor]]*/!important;
+        background: /*[[backgroundColor]]*/!important;
         color: /*[[fontColor]]*/!important;
         border-color: /*[[borderColor]]*/ !important;
     }
@@ -4802,26 +4802,38 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     }
   
     #combat_area tr[data-current]{
-        background: /*[[sidebarColor]]*/ !important;
+        background: /*[[backgroundColor]]*/ !important;
         box-shadow: inset 0 0 20px 1px /*[[linkColor]]*/ !important;  
     }
     
     #combat_tracker button,
     #combat_tracker input{
-        border-color: /*[[fontColor]]*/ !important;   
+        border: none !important;  ;  
         text-shadow:none !important;
-        background: /*[[sidebarColor]]*/ !important;
+        background: /*[[backgroundColor]]*/ !important;
         color: /*[[fontColor]]*/;
     }
     
     #combat_tracker input{
-        box-shadow: 1px 1px 1px 0px /*[[fontColor]]*/ !important;  
+        box-shadow: inset 0 1px 1px -2px /*[[fontColor]]*/, inset -1px -1px 4px -2px /*[[fontColor]]*/ !important; 
     }
-           
+    #combat_tracker input:focus{
+        box-shadow: inset 0 1px 1px -2px /*[[linkColor]]*/, inset -1px -1px 4px -2px /*[[linkColor]]*/ !important; 
+    }
+
+    #combat_tracker button{
+        box-shadow: inset 0 1px 1px -2px /*[[fontColor]]*/, inset -1px -1px 3px -2px /*[[fontColor]]*/;
+    }
     
     #combat_tracker button:hover{
-        box-shadow: 1px 1px 1px 0px /*[[linkColor]]*/ !important;  
+        box-shadow: inset 0 1px 1px -2px /*[[linkColor]]*/, inset -1px -1px 3px -2px /*[[linkColor]]*/;  
         color: /*[[linkColor]]*/;  
+    }
+    #combat_footer button{
+        box-shadow: inset 0 1px 1px -2px /*[[fontColor]]*/, inset -1px -1px 4px -2px /*[[fontColor]]*/;
+    }
+    #combat_footer button:hover{
+        box-shadow: inset 0 1px 1px -2px /*[[linkColor]]*/, inset -1px -1px 4px -2px /*[[linkColor]]*/;
     }
     
     #combat_tracker button:hover .rollSVG path:not([fill*="none"]), 
@@ -4833,7 +4845,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     
     #combat_footer{
         background-image:none !important;
-        background:/*[[sidebarColor]]*/ !important;
+        background:/*[[backgroundColor]]*/ !important;
     }
     #combat_area tr[data-current][data-target*="characters"]{
         background: transparent !important;
