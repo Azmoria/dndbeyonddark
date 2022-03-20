@@ -4486,9 +4486,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         background: /*[[rollCalcColor]]*/ !important;      
         border-color: /*[[linkColor]]*/ !important;
     }
-    .tracker-list{
-        padding: 5px 3px;   
-    }
+
     #combat_tracker_inside #combat_footer button:last-of-type{
         border-bottom-right-radius: 5px;   
     }
@@ -4512,14 +4510,14 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .hpbar,
     #splash
     {
-        background: /*[[backgroundColor]]*/!important;
+        background: /*[[sidebarColor]]*/!important;
         color: /*[[fontColor]]*/!important;
         border-color: /*[[borderColor]]*/ !important;
     }
     
     #combat_tracker_inside{
         border-radius: 5px 5px 0 0;
-        width: 250px;
+        width: 255px;
     }
     .sidebar__controls .tab-btn{ 
         border: none;
@@ -4802,20 +4800,57 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         background: /*[[backgroundColor]]*/ !important;
         box-shadow: inset 0 0 20px 1px /*[[linkColor]]*/ !important;
     }
-     
-    #combat_area tr{
-        border: 1px solid /*[[backgroundColor]]*/;       
-    }
   
     #combat_area tr[data-current]{
-        background: /*[[backgroundColor]]*/ !important;
-        box-shadow: inset 0 0 20px 1px /*[[linkColor]]*/ !important;
-        border-color: /*[[linkColor]]*/;   
+        background: /*[[sidebarColor]]*/ !important;
+        box-shadow: inset 0 0 20px 1px /*[[linkColor]]*/ !important;  
     }
     
+    #combat_tracker button,
+    #combat_tracker input{
+        border-color: /*[[fontColor]]*/ !important;   
+        text-shadow:none !important;
+        background: /*[[sidebarColor]]*/ !important;
+        color: /*[[fontColor]]*/;
+    }
+    
+    #combat_tracker input{
+        box-shadow: 1px 1px 1px 0px /*[[fontColor]]*/ !important;  
+    }
+           
+    
+    #combat_tracker button:hover{
+        box-shadow: 1px 1px 1px 0px /*[[linkColor]]*/ !important;  
+        color: /*[[linkColor]]*/;  
+    }
+    
+    #combat_tracker button:hover .rollSVG path:not([fill*="none"]), 
+    #combat_tracker button:hover .findSVG path:not([fill*="none"]), 
+    #combat_tracker button:hover .delSVG path:not([fill*="none"]), 
+    #combat_tracker button:hover .statSVG path:not([fill*="none"]) {
+        fill: /*[[linkColor]]*/;
+    }
+    
+    #combat_footer{
+        background-image:none !important;
+        background:/*[[sidebarColor]]*/ !important;
+    }
+    #combat_area tr[data-current][data-target*="characters"]{
+        background: transparent !important;
+        box-shadow: inset 0 0 20px 1px #0F07 !important;
+    }
     #combat_area tr:not(tr[data-current] ~ tr, tr[data-current]) {
         border-bottom: none;   
     }
+    
+    .rollSVG path:not([fill*="none"]), 
+    .findSVG path:not([fill*="none"]), 
+    .delSVG path:not([fill*="none"]), 
+    .statSVG path:not([fill*="none"]){
+        fill: /*[[fontColor]]*/;
+    }
+    
+   
     
     button.above-roll20{
         border: 1px solid /*[[borderColor]]*/;
@@ -4825,7 +4860,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
      
     #scene_selector .sortable_placeholder{
         background: /*[[backgroundColor]]*/ !important;
-        box-shadow: inset 0 0 40px 1px /*[[linkColor]]*/ !important;;
+        box-shadow: inset 0 0 40px 1px /*[[linkColor]]*/ !important;
         border: 1px solid /*[[linkColor]]*/;
         color: /*[[linkColor]]*/;
     }
@@ -4893,7 +4928,6 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     
     
     .sidebar__controls button.hasTooltip,
-    #combat_tracker_inside button,
     .sidebar-modal{
         background: /*[[backgroundColor]]*/ !important;
         color: /*[[fontColor]]*/;
