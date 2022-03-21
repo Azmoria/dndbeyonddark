@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.274
+@version      1.2.275
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -4494,7 +4494,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         border-bottom-left-radius: 5px; 
     }
     div#scene_selector, 
-    #combat_tracker_inside, 
+    
     #edit_dialog, 
     #mega_importer, 
     #prewiz, 
@@ -4513,6 +4513,10 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         background: /*[[backgroundColor]]*/!important;
         color: /*[[fontColor]]*/!important;
         border-color: /*[[borderColor]]*/ !important;
+    }
+    
+    #combat_tracker_inside{
+        background: /*[[transparencyBackgroundColor]]*/ !important;
     }
     
     #combat_tracker_inside{
@@ -4845,7 +4849,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     
     #combat_footer{
         background-image:none !important;
-        background:/*[[backgroundColor]]*/ !important;
+        background:  /*[[transparencyBackgroundColor]]*/ !important;
     }
     #combat_area tr[data-current][data-target*="characters"]{
         background: transparent !important;
