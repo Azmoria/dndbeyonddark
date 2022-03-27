@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.181
+@version      1.3.182
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -1645,13 +1645,44 @@ regexp("https://www.dndbeyond.com/characters/\d.*"), regexp("https://www.dndbeyo
     .ct-character-sheet-desktop .ddbc-attack-type-icon--weapon-spell path,
     .ct-character-sheet-desktop svg.ddbc-svg.ddbc-combat-attack__icon-img--action-attack-general-ranged.ddbc-attack-type-icon.ddbc-attack-type-icon--3-2 path,
     .ct-character-sheet-desktop .ddbc-attunement-svg polygon,
-    .ct-character-sheet-desktop .ddbc-attunement-svg path,
-    .ct-character-sheet__inner svg > path[fill^="#b0b7bd"],
-    .ct-character-sheet__inner svg > polygon[fill^="#b0b7bd"],
-    .ct-sidebar__inner svg > path[fill^="#fff"],
-    .ct-sidebar__inner svg > polygon[fill^="#fff"],
-    .ct-character-sheet__inner svg > path[fill^="#242528"],
-    .ct-character-sheet__inner svg > polygon[fill^="#242528"]
+    .ct-character-sheet-desktop .ddbc-attunement-svg path,    
+    .ct-sidebar .ddbc-damage-type-icon__img--necrotic>path:first-of-type,
+    .ct-sidebar .ddbc-damage-type-icon__img--necrotic>path:nth-of-type(2),
+    .ct-sidebar .ddbc-damage-type-icon__img--necrotic>polygon:first-of-type,
+    .ct-sidebar .ddbc-aoe-type-icon path,
+    .ct-sidebar .ddbc-concentration-icon>rect,
+    .ct-sidebar .ddbc-ritual-icon>path:first-of-type,
+    .ct-sidebar .ddbc-damage-type-icon__img--piercing>path:first-of-type,
+    .ct-sidebar .ddbc-damage-type-icon__img--piercing>polygon,
+    .ct-sidebar .ddbc-damage-type-icon__img--psychic>polygon,
+    .ct-sidebar .ddbc-damage-type-icon__img--psychic>path:first-of-type,
+    .ct-sidebar .ddbc-damage-type-icon__img--force>line,
+    .ct-sidebar .ddbc-damage-type-icon__img--force>path,
+    .ct-sidebar .ddbc-combat-attack__icon-img--weapon-ranged path,
+    .ct-sidebar .ddbc-combat-attack__icon-img--action-attack-weapon-melee path,
+    .ct-sidebar .ddbc-combat-attack__icon-img--weapon-melee path,
+    .ct-sidebar svg.ddbc-svg.ddbc-combat-attack__icon-img--weapon-melee.ddbc-attack-type-icon.ddbc-attack-type-icon--1-1 path:first-of-type,
+    .ct-sidebar svg.ddbc-svg.ddbc-combat-attack__icon-img--weapon-melee.ddbc-attack-type-icon.ddbc-attack-type-icon--1-1 path:nth-of-type(2),
+    .ct-sidebar .ddbc-damage-type-icon__img--bludgeoning>polygon,
+    .ct-sidebar .ddbc-damage-type-icon__img--slashing>path,
+    .ct-sidebar .ddbc-damage-type-icon__img--acid>path,
+    .ct-sidebar .ddbc-damage-type-icon__img--poison>path,
+    .ct-sidebar .ddbc-damage-type-icon__img--thunder>path,
+    .ct-sidebar .ddbc-damage-type-icon__img--thunder>polygon,
+    .ct-sidebar .ddbc-damage-type-icon__img--lightning>path,
+    .ct-sidebar .ddbc-spell-school-icon--transmutation>path,
+    .ct-sidebar .ddbc-spell-school-icon--evocation>path,
+    .ct-sidebar .ddbc-damage-type-icon__img--cold>path,
+    .ct-sidebar .ddbc-damage-type-icon__img--fire>path,
+    .ct-sidebar .ddbc-damage-type-icon__img--radiant>path,
+    .ct-sidebar .ddbc-spell-school-icon--conjuration>path,
+    .ct-sidebar .ddbc-attack-type-icon--1-1 path:nth-of-type(3),
+    .ct-sidebar .ddbc-spell-school-icon path,
+    .ct-sidebar .ddbc-attack-type-icon--weapon-spell path,
+    .ct-sidebar svg.ddbc-svg.ddbc-combat-attack__icon-img--action-attack-general-ranged.ddbc-attack-type-icon.ddbc-attack-type-icon--3-2 path,
+    .ct-sidebar .ddbc-attunement-svg polygon,
+    .ct-sidebar .ddbc-attunement-svg path,
+    .ddbc-damage-type-icon__img--force line
     {
         fill: /*[[iconPrimary]]*/ !important;
         opacity: 1 !important;
@@ -1665,11 +1696,7 @@ regexp("https://www.dndbeyond.com/characters/\d.*"), regexp("https://www.dndbeyo
     .ddbc-damage-type-icon__img--piercing>path:nth-of-type(2),
     .ddbc-damage-type-icon__img--psychic>path:nth-of-type(2),
     .ddbc-damage-type-icon__img--bludgeoning>path,
-    .ct-character-sheet--dark-mode .ddbc-attack-type-icon--1-1 path:nth-of-type(3),
-    .ct-character-sheet__inner svg > path[fill^="#fff"],
-    .ct-character-sheet__inner svg > polygon[fill^="#fff"],
-    .ct-sidebar__inner svg > polygon[fill^="#242528"],
-    .ct-sidebar__inner svg > path[fill^="#242528"]
+    .ct-character-sheet--dark-mode .ddbc-attack-type-icon--1-1 path:nth-of-type(3)
     {
         fill: /*[[iconSecondary]]*/ !important;
         opacity: 1 !important;
@@ -1701,7 +1728,8 @@ regexp("https://www.dndbeyond.com/characters/\d.*"), regexp("https://www.dndbeyo
     
     .ddbc-damage-type-icon__img--force>line,
     .ddbc-damage-type-icon__img--force>path,
-    .ddbc-aoe-type-icon rect{
+    .ddbc-aoe-type-icon rect,
+    .ddbc-damage-type-icon__img--force line{
         stroke: /*[[iconPrimary]]*/ !important; 
         opacity: 1 !important;
     }
@@ -2791,18 +2819,7 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     }   
     
 /*AboveVtt stuff*/
-    .ct-sidebar svg>[stroke="#242528"]{
-        stroke: /*[[fontColor]]*/ !important;
-    }
-    .ct-sidebar svg>[stroke="#fff"]{
-        stroke: /*[[sidebarColor]]*/ !important;
-    }
-    .ct-sidebar svg>[fill="#fff"]{
-        fill: /*[[sidebarColor]]*/  !important;
-    }
-    .ct-sidebar svg>[fill="#242528"]{
-        fill: /*[[highlightColor]]*/  !important;
-    }
+
       #castbutton{
         text-shadow: none !important;   
         background: /*[[sidebarColor]]*/ !important;
@@ -2810,7 +2827,9 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     }
 /*AboveVtt stuff end*/
     
-
+   .ct-sidebar .ddbc-concentration-icon path{
+        fill: /*[[sidebarColor]]*/ !important;
+    }
 
 /*Beyond 20 + Talespire rolls settings*/
   
