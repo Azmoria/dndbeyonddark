@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.284
+@version      1.2.285
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -1682,7 +1682,8 @@ url-prefix("https://www.dndbeyond.com/my-creations"),
 url-prefix("https://www.dndbeyond.com/my-campaigns"),
 url-prefix("https://www.dndbeyond.com/campaigns"),
 regexp("https://www.dndbeyond.com/profile/.*/characters/.*/builder#/.*"), regexp("https://www.dndbeyond.com/characters/builder.*"),
-url-prefix("https://www.dndbeyond.com/my-characters"),
+url-prefix("https://www.dndbeyond.com/my-characters"), 
+regexp("https://www.dndbeyond.com/characters"),
 url-prefix("https://www.dndbeyond.com/search"),
 url-prefix("https://www.dndbeyond.com/modifier"),
 url-prefix("https://www.dndbeyond.com/entity"),
