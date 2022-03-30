@@ -1,12 +1,13 @@
 // ==UserScript==
 // @name         Dice Tray Stream Window
 // @namespace    Azmoria
-// @version      1.0.021
+// @version      1.0.022
 // @description  Stream your Dice to another window
 // @author       Azmoria
 // @downloadURL  https://github.com/Azmoria/dndbeyonddark/raw/master/Dice%20Tray%20Stream%20Window.user.js
 // @updateURL    https://github.com/Azmoria/dndbeyonddark/raw/master/Dice%20Tray%20Stream%20Window.user.js
 // @include      https://www.dndbeyond.com/profile/*/characters/*
+// @include      https://www.dndbeyond.com/characters/*
 // @include      https://www.dndbeyond.com/encounter-builder
 // @include      https://www.dndbeyond.com/combat-tracker*
 // @include      https://www.dndbeyond.com/encounters/*
