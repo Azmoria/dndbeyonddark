@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.185
+@version      1.3.186
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -2914,6 +2914,11 @@ regexp("https://www.dndbeyond.com/characters/.*") {
     .talespireLink {
         background: /*[[sheetColor]]*/ !important;
         color: /*[[highlightColor]]*/ !important;
+    }
+    
+    /*dice z-index fix*/
+    #character-tools-target{
+        z-index: unset;
     }
 
 /*Mobile and Tablet*/
