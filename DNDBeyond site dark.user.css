@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.288
+@version      1.2.289
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -5659,13 +5659,11 @@ regexp("https://www.dndbeyond.com/encounters.*#DiceTray"), regexp("https://www.d
         top: 0;
         left: 0;   
         height: calc(100% + 1px);
-        width: calc(100% + 1px);
-        
+        width: calc(100% + 1px);      
     }
      body#diceTrayBody{
         /*[[jsPopupBackground]]*/
-        background-color: /*[[captureBackground]]*/ !important;
-       
+        background-color: /*[[captureBackground]]*/ !important;     
         background-repeat: no-repeat !important;
         background-position: top center !important;
         background-attachment: fixed !important;
@@ -5674,7 +5672,7 @@ regexp("https://www.dndbeyond.com/encounters.*#DiceTray"), regexp("https://www.d
         -moz-background-size: cover !important;
         -o-background-size: cover !important;
         background-size: cover !important;
-        overflow: hidden;
+        overflow: hidden !important;
         margin: 0px !important;
     }
 
