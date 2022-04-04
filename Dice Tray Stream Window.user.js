@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Dice Tray Stream Window
 // @namespace    Azmoria
-// @version      1.0.022
+// @version      1.0.023
 // @description  Stream your Dice to another window
 // @author       Azmoria
 // @downloadURL  https://github.com/Azmoria/dndbeyonddark/raw/master/Dice%20Tray%20Stream%20Window.user.js
@@ -92,4 +92,4 @@ async function diceTray() {
 
 setTimeout(async function() {
     childWindow = await diceTray();
-}, 1000);
+}, 2000);
