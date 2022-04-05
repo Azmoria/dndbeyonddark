@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.291
+@version      1.2.292
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -1504,22 +1504,7 @@ EOT;
     no "No" <<<EOT
     EOT;
 }
-@advanced dropdown beyond20HideAlertify "Hide Beyond20 Popup"{
-yes "Yes" <<<EOT
-    .alertify:last-of-type,
-    .ajs-modal,
-    .ajs-dimmer{
-        display:none !important;
-        visibility: hidden !important;
-        width: 0px !important;
-        height: 0px !important;
-        z-index: -100000;
-        pointer-events: none;
-    }
-EOT;
-no "No" <<<EOT
-EOT;
-}
+
 @var select zindex "Dice Over/Under the Results Popup" {
  "Under": "60000",
  "Over": "60002"
@@ -4284,7 +4269,6 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         background-color: /*[[backgroundColor]]*/ !important;
         color: /*[[fontColor]]*/ !important;
     }
-    /*[[beyond20HideAlertify]]*/
     
     .beyond20-dice-roller a,
     .beyond20-button-roll-damages,
