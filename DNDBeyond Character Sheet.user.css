@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.188
+@version      1.3.189
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -201,22 +201,7 @@ EOT;
 no "No" <<<EOT
 EOT;
 }
-@advanced dropdown beyond20HideAlertify "Hide Beyond20 Popup"{
-yes "Yes" <<<EOT
-    .alertify:last-of-type,
-    .ajs-modal,
-    .ajs-dimmer{
-        display:none !important;
-        visibility: hidden !important;
-        width: 0px !important;
-        height: 0px !important;
-        z-index: -100000;
-        pointer-events: none;
-    }
-EOT;
-no "No" <<<EOT
-EOT;
-}
+
 @var select zindex "Dice Over/Under the Results Popup" {
  "Under": "60000",
  "Over": "60002"
@@ -2870,7 +2855,6 @@ regexp("https://www.dndbeyond.com/characters/.*") {
         color: /*[[fontColor]]*/ !important;
     }
     
-    /*[[beyond20HideAlertify]]*/
     
     .beyond20-quick-roll-tooltip{
         background: none !important;   
