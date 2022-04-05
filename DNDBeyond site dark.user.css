@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.290
+@version      1.2.291
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -1506,8 +1506,15 @@ EOT;
 }
 @advanced dropdown beyond20HideAlertify "Hide Beyond20 Popup"{
 yes "Yes" <<<EOT
-    .alertify:last-of-type{
-        display:none;
+    .alertify:last-of-type,
+    .ajs-modal,
+    .ajs-dimmer{
+        display:none !important;
+        visibility: hidden !important;
+        width: 0px !important;
+        height: 0px !important;
+        z-index: -100000;
+        pointer-events: none;
     }
 EOT;
 no "No" <<<EOT
