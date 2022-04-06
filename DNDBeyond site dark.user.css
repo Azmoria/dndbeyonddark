@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.292
+@version      1.2.293
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -1504,7 +1504,6 @@ EOT;
     no "No" <<<EOT
     EOT;
 }
-
 @var select zindex "Dice Over/Under the Results Popup" {
  "Under": "60000",
  "Over": "60002"
@@ -1684,6 +1683,7 @@ url-prefix("https://www.dndbeyond.com/my-campaigns"),
 url-prefix("https://www.dndbeyond.com/campaigns"),
 regexp("https://www.dndbeyond.com/profile/.*/characters/.*/builder#/.*"), 
 regexp("https://www.dndbeyond.com/characters/.*/builder.*"),
+regexp("https://www.dndbeyond.com/characters/builder.*"),
 url-prefix("https://www.dndbeyond.com/my-characters"), 
 regexp("https://www.dndbeyond.com/characters"),
 url-prefix("https://www.dndbeyond.com/search"),
@@ -2096,7 +2096,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .ddb-account-tab-body .listing-container-table table tbody tr,
     #content-management-root .ddb-button,
     [class*="GameLogNotification_MessageWrapper"],
-    .appendixdivcotn
+    .appendixdivcotn,
+    [aria-labelledby="confirm-dialog"]
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
@@ -2197,6 +2198,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .site .character-button-block-large,
     .site .character-button-block-oversized, 
     .site .character-button-block-small, 
+    .builder-type-choice-item a,
     .site .character-button-large, 
     .site .character-button-medium, 
     .site .character-button-modal, 
@@ -2222,7 +2224,6 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
 		width: 100%;
 	}
     
-    a.character-button-block.builder-button,
     .whats-new-button,
     #site .forum-row .status-icon,
 	#site .forum-thread-row  .status-icon,
@@ -2515,7 +2516,9 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     [class*="glc-game-log"] [class*="Line-Breakdown"] span,
     [class*="glc-game-log"] [class*="MessageContainer-Flex"] p,
     [class*="glc-game-log"] [class*="MessageContainer-Flex"] div,
-    [class*="ZeroStateContainer"]
+    [class*="ZeroStateContainer"],
+    .MuiDialogActions-root button,
+    .MuiPaper-root h2
     {
 		color: /*[[fontColor]]*/ !important;
 	}
@@ -2741,7 +2744,11 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .combat-tracker-page__combat-tracker,
     .p-forum .alert,
     .mce-floatpanel.mce-window .mce-textbox,
-    [class*="GameLogNotification_MessageWrapper"]
+    [class*="GameLogNotification_MessageWrapper"],
+    .MuiDialogActions-root button,
+    .MuiOutlinedInput-root fieldset,
+    .MuiPaper-root
+    
     {
 		border-width: /*[[borderWidth]]*/
 		!important;
@@ -2838,9 +2845,14 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .section-adventures .site-bar, 
     .section-rules .site-bar, 
     .site-bar.section-compendium,
-    #content-management-root .ddb-button
+    #content-management-root .ddb-button,
+    .Mui-focused fieldset
     {
         border-color: /*[[linkColor]]*/ !important;
+    }
+    .Mui-focused fieldset legend
+    {
+        display: none;
     }
     
     .p-article-a .p-article-interact .p-article-comments a:first-of-type:after{
@@ -3743,7 +3755,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .compendium-image>figcaption a.ddb-lightbox-outer:hover,
     .ui-state-highlight,
     .p-article-a .p-article-interact .p-article-comments a:first-of-type:hover,
-    #content-management-root .ddb-button:hover
+    #content-management-root .ddb-button:hover,
+    .MuiDialogActions-root button:hover
     {
         background-color: /*[[backgroundColor]]*/ !important;
         box-shadow: inset 0px 0px 30px 0px /*[[linkColor]]*/ !important;
@@ -4147,9 +4160,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .more-info a{
         text-decoration: none !important;   
     }
-    
-    
-    
+        
     
      /* homebrew sortable table header fix*/
     .b-table-a th .asc:before, 
