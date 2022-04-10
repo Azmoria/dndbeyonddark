@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Dice Tray Stream Window
 // @namespace    Azmoria
-// @version      1.0.023
+// @version      1.0.024
 // @description  Stream your Dice to another window
 // @author       Azmoria
 // @downloadURL  https://github.com/Azmoria/dndbeyonddark/raw/master/Dice%20Tray%20Stream%20Window.user.js
@@ -13,7 +13,8 @@
 // @include      https://www.dndbeyond.com/encounters/*
 // @include      https://www.dndbeyond.com/my-encounters
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=dndbeyond.com
-// @run-at      document-end
+// @run-at       document-end
+// @grant        window.focus
 // ==/UserScript==
 var childWindow = null;
 
@@ -33,8 +34,16 @@ async function resizeChild(child){
 }
 
 async function diceTray() {
+    if(window.opener != null) {
+        childWindow = window.opener.childWindow;
+    }
+    if(window.parent != null) {
+        childWindow = window.parent.childWindow;
+    }
     if (childWindow == null) {
         childWindow = await window.open('', 'Dice Tray', 'toolbar=0,location=0,menubar=0');
+        window.childWindow = childWindow;
+        window.parent.childWindow = childWindow;
     }
     if(childWindow.document.querySelector('video') == undefined || childWindow.document.querySelector('video') == null){
         await childWindow.document.write('<video id="video" muted autoplay></video>');
@@ -62,7 +71,22 @@ async function diceTray() {
             var n = 0;
             var videoTags = await childWindow.document.getElementsByTagName("video");
             for (let i=0; i < videoTags.length; i++){
-                if(videoTags[i].srcObject.label.indexOf("profile") > -1 && videoTags[i].srcObject.label.indexOf("character") > -1) {
+                if(videoTags[i].srcObject.label.indexOf("character") > -1 && window.location.href.indexOf("character") > -1) {
+                    await childWindow.document.querySelector('#video'+n).remove();
+                    n=i;
+                    break;
+                }
+                if(videoTags[i].srcObject.label.indexOf("combat-tracker") > -1 && window.location.href.indexOf("combat-tracker") > -1){
+                    await childWindow.document.querySelector('#video'+n).remove();
+                    n=i;
+                    break;
+                }
+                if(videoTags[i].srcObject.label.indexOf("encounter-builder") > -1 && window.location.href.indexOf("encounter-builder") > -1){
+                    await childWindow.document.querySelector('#video'+n).remove();
+                    n=i;
+                    break;
+                }
+                if(videoTags[i].srcObject.label.indexOf("my-encounters") > -1 && window.location.href.indexOf("my-encounters") > -1){
                     await childWindow.document.querySelector('#video'+n).remove();
                     n=i;
                     break;
@@ -87,6 +111,7 @@ async function diceTray() {
             }
         }
     });
+
     return childWindow;
 }
 
