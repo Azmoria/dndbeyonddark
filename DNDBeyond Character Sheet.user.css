@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.191
+@version      1.3.192
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -668,6 +668,15 @@ EOT;
     EOT;
     custom "Custom Image"<<<EOT
        background-image: var(--custom-capture-background) !important;
+    EOT;
+}
+@advanced dropdown hideDiceOnSheet "JS Invisible Dice on Character Sheet"{
+ off "Default"<<<EOT
+    EOT;
+    custom "Hide"<<<EOT
+       .dice-rolling-panel__container {
+            visibility: hidden;
+        }
     EOT;
 }
 @var color captureBackground "JS Dice Tray Background Color - Default #009933 for websafe green screen" #009933
@@ -2838,7 +2847,7 @@ regexp("https://www.dndbeyond.com/characters/\d.*&abovevtt=true") {
         overflow: hidden !important;
         margin: 0px !important;
     }   
-    
+    /*[[hideDiceOnSheet]]*/
 /*AboveVtt stuff*/
 
       #castbutton{
