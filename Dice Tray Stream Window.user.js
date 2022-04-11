@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Dice Tray Stream Window
 // @namespace    Azmoria
-// @version      1.0.025
+// @version      1.0.026
 // @description  Stream your Dice to another window
 // @author       Azmoria
 // @downloadURL  https://github.com/Azmoria/dndbeyonddark/raw/master/Dice%20Tray%20Stream%20Window.user.js
@@ -34,7 +34,7 @@ async function resizeChild(child){
 }
 
 async function diceTray() {
-    if(window.parent != null && (window.parent.childWindow != undefined || window.parent.childWindow != null)) {
+    if(window.parent != null && window.parent.childWindow != undefined && window.parent.childWindow != null) {
         childWindow = window.parent.childWindow;
         window.childWindow = childWindow;
         console.log(childWindow.name + " is the child of parent window");
@@ -46,7 +46,7 @@ async function diceTray() {
         console.log(childWindow.name + " is the child of this window");
     }
     if(childWindow.document.querySelector('video') == undefined || childWindow.document.querySelector('video') == null){
-        await childWindow.document.write('<video id="video" muted autoplay></video>');
+        await childWindow.document.write('<video id="video0" muted autoplay></video>');
         resizeChild(childWindow);
     }
     if(window.location.href.indexOf("abovevtt") > -1) {
@@ -63,7 +63,7 @@ async function diceTray() {
     }
     const body = await childWindow.document.querySelector('body');
     var canvas = await document.querySelector('.dice-rolling-panel__container');
-    const video = await childWindow.document.querySelector('#video');
+    const video = await childWindow.document.querySelector('#video0');
     await body.setAttribute("id", 'diceTrayBody');
     var stream = await canvas.captureStream(30);
     if(video.srcObject == undefined || video.srcObject == null){
@@ -128,4 +128,6 @@ async function diceTray() {
 
 setTimeout(async function() {
     childWindow = await diceTray();
+    window.childWindow = childWindow;
+    window.parent.childWindow = childWindow;
 }, 2000);
