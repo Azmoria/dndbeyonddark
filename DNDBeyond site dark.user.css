@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.295
+@version      1.2.296
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -1589,6 +1589,15 @@ EOT;
     EOT;
     custom "Custom Image"<<<EOT
        background-image: var(--custom-capture-background) !important;
+    EOT;
+}
+@advanced dropdown hideDiceOnSheet "JS Invisible Dice on Character Sheet"{
+ off "Default"<<<EOT
+    EOT;
+    custom "Hide"<<<EOT
+       .dice-rolling-panel__container {
+            visibility: hidden;
+        }
     EOT;
 }
 @var color captureBackground "JS Dice Tray Background Color - Default #009933 for websafe green screen" #009933
@@ -5688,7 +5697,7 @@ regexp("https://www.dndbeyond.com/encounters.*#DiceTray"), regexp("https://www.d
         margin: 0px !important;
     }
 
-
+    /*[[hideDiceOnSheet]]*/
 }
 
 
