@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Dice Tray Stream Window
 // @namespace    Azmoria
-// @version      1.0.026
+// @version      1.0.027
 // @description  Stream your Dice to another window
 // @author       Azmoria
 // @downloadURL  https://github.com/Azmoria/dndbeyonddark/raw/master/Dice%20Tray%20Stream%20Window.user.js
@@ -79,27 +79,23 @@ async function diceTray() {
         let addRemove = "Video added to ";
         for (let i=0; i < videoTags.length; i++){
             if(videoTags[i].srcObject.label.indexOf("character") > -1 && window.location.href.indexOf("character") > -1) {
-                await childWindow.document.querySelector('#video'+n).remove();
                 addRemove = "Video replaced in "
                 n=i;
                 break;
             }
             if(videoTags[i].srcObject.label.indexOf("combat-tracker") > -1 && window.location.href.indexOf("combat-tracker") > -1){
                 if (n > 2) {
-                    await childWindow.document.querySelector('#video'+n).remove();
                     addRemove = "Video replaced in "
                     n=i;
                     break;
                 }
             }
             if(videoTags[i].srcObject.label.indexOf("encounter-builder") > -1 && window.location.href.indexOf("encounter-builder") > -1){
-                await childWindow.document.querySelector('#video'+n).remove();
                 addRemove = "Video replaced in "
                 n=i;
                 break;
             }
             if(videoTags[i].srcObject.label.indexOf("my-encounters") > -1 && window.location.href.indexOf("my-encounters") > -1){
-                await childWindow.document.querySelector('#video'+n).remove();
                 addRemove = "Video replaced in "
                 n=i;
                 break;
@@ -108,7 +104,9 @@ async function diceTray() {
                 n+=1;
             }
         }
-        await childWindow.document.write('<video id="video'+n+'" muted autoplay></video>');
+        if (!childWindow.document.querySelector('#video'+n)){
+            await childWindow.document.write('<video id="video'+n+'" muted autoplay></video>');
+        }
         const newVideo = await childWindow.document.querySelector('#video'+n);
         newVideo.srcObject = await newStream;
         console.log(addRemove + childWindow.name);
