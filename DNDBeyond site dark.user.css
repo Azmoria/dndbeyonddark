@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.296
+@version      1.2.297
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -2999,7 +2999,26 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
 	.i-legendary-monster,
 	.i-checkmark,
 	.ddb-statblock.ddb-statblock-monster.ddb-statblock-ability-scores div::before,
-	.es-form-icon{
+	.es-form-icon,
+    .context-menu-icon-charmed:before,
+    .context-menu-icon-blinded:before,
+    .context-menu-icon-deafened:before,
+    .context-menu-icon-exhaustion:before,
+    .context-menu-icon-exhausted:before,
+    .context-menu-icon-frightened:before,
+    .context-menu-icon-grappled:before,
+    .context-menu-icon-incapacitated:before,
+    .context-menu-icon-invisible:before,
+    .context-menu-icon-paralyzed:before,
+    .context-menu-icon-petrified:before,
+    .context-menu-icon-poisoned:before,
+    .context-menu-icon-prone:before,
+    .context-menu-icon-restrained:before,
+    .context-menu-icon-stunned:before,
+    .context-menu-icon-unconscious:before,
+    .context-menu-icon-inspiration:before,
+    .context-menu-icon-baned:before,
+    .context-menu-icon-bardic-inspiration:before{
 		filter: /*[[filter]]*/;
 	}
     /*Tooltip popup concentration icon fix*/
