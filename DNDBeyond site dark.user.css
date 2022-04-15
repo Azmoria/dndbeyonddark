@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.297
+@version      1.2.298
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -4366,6 +4366,85 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         position: relative;   
     }
     
+/*Beyond RNG*/
+    .rpgmonster-listing .rng-injected{
+        background: none !important;
+        box-shadow: inset 0px 0px 10px #bc1010;
+    }
+    
+    .rpgfeat-listing .rng-injected,
+    .rpgbackground-listing .rng-injected{
+        background: none !important;
+        box-shadow: inset 0px 0px 10px #fe9327;
+    }
+    
+    .igear-listing .rng-injected,
+    .rpgmagic-item-listing .rng-injected{
+        background: none !important;
+        box-shadow: inset 0px 0px 10px #4273E8;
+    }
+    
+    .rpgspell-listing .rng-injected{
+        background: none !important;
+        box-shadow: inset 0px 0px 10px #9877fa;
+    }
+    
+    .rng-dice-button
+    {
+        width: 70px;
+        height: 70px;  
+        box-shadow: inset 0 1px 0 rgb(255 255 255 / 10%), 0 1px 2px rgb(0 0 0 / 5%);
+        border-radius: 50px !important;
+        border: 1px solid #f9f9f945;
+        padding: 3px;
+    }
+    .spinning-border
+    {
+        width: 94px !important;
+        height: 94px !important;
+        border-width: 1px !important;
+    }
+    .rng-dice-button:active
+    {
+        box-shadow: inset 0px 0px 20px #000d, 0px 0px 15px #000d;
+    }
+    
+    .body-rpgbackground-index .rng-dice-button,
+    .body-rpgfeat-index .rng-dice-button{
+        background: linear-gradient(to bottom,#FEA227,#f96a3b);        
+    }
+    .body-rpgigear-index .rng-dice-button,
+    .body-rpgmagicitem-index .rng-dice-button {
+         background: linear-gradient(to bottom,#4273E8,#143A7C);
+    }
+    .body-rpgspell-index .rng-dice-button{
+       background: linear-gradient(to bottom,#9877fa,#704cd9);
+    }
+    .body-rpgmonster-index .rng-dice-button{
+       background: linear-gradient(to bottom,#eb1313,#8d0b0b);
+    }
+    
+    .body-rpgmonster-index .spinning-border{
+       border-color: #eb1313;
+    }
+        .body-rpgbackground-index .spinning-border,
+    .body-rpgfeat-index .spinning-border
+    {
+        border-color:#fe9327
+    }    
+    .body-rpgigear-index .spinning-border,
+    .body-rpgmagicitem-index .spinning-border
+    {
+        border-color: #4273E8;
+    }
+    .body-rpgspell-index .spinning-border
+    {
+        border-color: #9877fa;
+    }
+    
+    
+    
+ 
 /*Mobile and Tablet*/
 
 
