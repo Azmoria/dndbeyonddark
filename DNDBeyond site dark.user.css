@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.298
+@version      1.2.299
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -186,7 +186,8 @@ dark "Dark Mode" <<<EOT
     .listing .info .row.spell-name .link:hover,
     .listing .info .row.spell-name .link,
     a[style*="color: #704cd9;"],
-    .list-row-primary-text-spell{
+    .list-row-primary-text-spell,
+    .list-row-spell a{
         color: #896CE0 !important;
     }
     .tooltip-hover.magic-item-tooltip, 
@@ -2636,7 +2637,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     body.body-mycontent .list-row-name-primary-text a,
     body.body-mycontent .list-row-name-primary-text a:hover,
     #splash a,
-    body[class*="homebrewindex"]:not(.body-rpgmagicitem):not(.body-rpgmonster) .content-container a.link,
+    body[class*="homebrewindex"]:not(.body-rpgmagicitem):not(.body-rpgmonster):not(.body-rpgspell) .content-container a.link,
     .encounter-builder-page em a,
     .post-excerpt__title a,
     .ddb-campaigns-character-card-footer-links a,
@@ -4373,7 +4374,9 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     }
     
     .rpgfeat-listing .rng-injected,
-    .rpgbackground-listing .rng-injected{
+    .rpgbackground-listing .rng-injected,
+    .irace-listing .rng-injected,
+    .rpgclass-listing .rng-injected{
         background: none !important;
         box-shadow: inset 0px 0px 10px #fe9327;
     }
@@ -4410,40 +4413,55 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     }
     
     .body-rpgbackground-index .rng-dice-button,
-    .body-rpgfeat-index .rng-dice-button{
+    .body-rpgfeat-index .rng-dice-button,
+    .body-rpgbackground-homebrewindex .rng-dice-button,
+    .body-rpgfeat-homebrewindex .rng-dice-button,
+    .body-rpgirace-homebrewindex .rng-dice-button,
+    .body-rpgclass-homebrewindex .rng-dice-button
+    {
         background: linear-gradient(to bottom,#FEA227,#f96a3b);        
     }
     .body-rpgigear-index .rng-dice-button,
-    .body-rpgmagicitem-index .rng-dice-button {
+    .body-rpgmagicitem-index .rng-dice-button,
+    .body-rpgigear-homebrewindex .rng-dice-button,
+    .body-rpgmagicitem-homebrewindex .rng-dice-button{
          background: linear-gradient(to bottom,#4273E8,#143A7C);
     }
-    .body-rpgspell-index .rng-dice-button{
+    .body-rpgspell-index .rng-dice-button,
+    .body-rpgspell-homebrewindex .rng-dice-button{
        background: linear-gradient(to bottom,#9877fa,#704cd9);
     }
-    .body-rpgmonster-index .rng-dice-button{
+    .body-rpgmonster-index .rng-dice-button,
+    .body-rpgmonster-homebrewindex .rng-dice-button{
        background: linear-gradient(to bottom,#eb1313,#8d0b0b);
     }
     
-    .body-rpgmonster-index .spinning-border{
+    .body-rpgmonster-index .spinning-border,
+    .body-rpgmonster-homebrewindex .spinning-border{
        border-color: #eb1313;
     }
-        .body-rpgbackground-index .spinning-border,
-    .body-rpgfeat-index .spinning-border
+    
+    .body-rpgbackground-index .spinning-border,
+    .body-rpgfeat-index .spinning-border,
+    .body-rpgbackground-homebrewindex .spinning-border,
+    .body-rpgfeat-homebrewindex .spinning-border,
+    .body-rpgirace-homebrewindex .spinning-border,
+    .body-rpgclass-homebrewindex .spinning-border
     {
         border-color:#fe9327
-    }    
+    } 
     .body-rpgigear-index .spinning-border,
-    .body-rpgmagicitem-index .spinning-border
+    .body-rpgmagicitem-index .spinning-border,
+    .body-rpgigear-homebrewindex .spinning-border,
+    .body-rpgmagicitem-homebrewindex .spinning-border
     {
         border-color: #4273E8;
     }
-    .body-rpgspell-index .spinning-border
+    .body-rpgspell-index .spinning-border,
+    .body-rpgspell-homebrewindex .spinning-border
     {
         border-color: #9877fa;
     }
-    
-    
-    
  
 /*Mobile and Tablet*/
 
