@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.300
+@version      1.2.301
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -168,7 +168,9 @@ dark "Dark Mode" <<<EOT
     .add-monster-modal__header-text--name,
     .ddb-campaigns-character-card-footer-links div:last-of-type>button:first-of-type,
     .list-row-primary-text a[href^="/monsters"],
-    .listing__items .listing__list-item__column.blocked{
+    .listing__items .listing__list-item__column.blocked,
+    .stat-block-background--space .stat-block-ability-scores,
+    .red-statblock-text {
         color: #D35050 !important;
     }
 
@@ -2529,11 +2531,12 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     [class*="glc-game-log"] [class*="MessageContainer-Flex"] div,
     [class*="ZeroStateContainer"],
     .MuiDialogActions-root button,
-    .MuiPaper-root h2
+    .MuiPaper-root h2,
+    .monstrous-logs p
     {
 		color: /*[[fontColor]]*/ !important;
 	}
-
+  
 	.select2-container-multi .select2-choices {
 		padding: 0px;
 	}
@@ -2758,8 +2761,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     [class*="GameLogNotification_MessageWrapper"],
     .MuiDialogActions-root button,
     .MuiOutlinedInput-root fieldset,
-    .MuiPaper-root
-    
+    .MuiPaper-root,
+    .monstrous-logs
     {
 		border-width: /*[[borderWidth]]*/
 		!important;
@@ -3104,7 +3107,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     body:not(.body-forum):not(.section-posts):not(.section-changelog):not(.body-privatemessage-details) blockquote::before, 
     body:not(.body-forum):not(.section-posts):not(.section-changelog):not(.body-privatemessage-details) blockquote::after,
     #splash,
-    .mce-btn[aria-disabled="true"]
+    .mce-btn[aria-disabled="true"],
+    .stat-block-background--space
     {
 		background-image: none !important;
 	}
