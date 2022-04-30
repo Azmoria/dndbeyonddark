@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.303
+@version      1.2.304
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -2110,7 +2110,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     [class*="GameLogNotification_MessageWrapper"],
     .appendixdivcotn,
     [aria-labelledby="confirm-dialog"],
-    .combatant-card__right-bit
+    .combatant-card__right-bit,
+    .draggable-encounter-monster__will-make-group-indicator:before
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
@@ -2532,7 +2533,9 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     [class*="ZeroStateContainer"],
     .MuiDialogActions-root button,
     .MuiPaper-root h2,
-    .monstrous-logs p
+    .monstrous-logs p,
+    .encounter-details-monster__quantity span,
+    .line-item span
     {
 		color: /*[[fontColor]]*/ !important;
 	}
@@ -3046,8 +3049,10 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     
     .input-checkbox__input:checked~.input-checkbox__icon .svg-border,
     .input-checkbox__input:hover:checked~.input-checkbox__icon .svg-border,
-    .input-checkbox__input:hover~.input-checkbox__icon .svg-border{
+    .input-checkbox__input:hover~.input-checkbox__icon .svg-border,
+    .input-checkbox__input:checked~.input-checkbox__icon .svg-center{
         fill: /*[[linkColor]]*/ !important;
+        opacity: 1;
     }
     
 	
@@ -3851,7 +3856,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .ddbeb-modal__close-button svg rect,
     .actions-container>button svg path,
     .search-field__icon path,
-    .encounter-builder-sidebar__close-button svg rect{
+    .encounter-builder-sidebar__close-button svg rect,
+    .encounter-details-monster__quantity svg rect{
         fill: /*[[fontColor]]*/ !important;
     }
     .ddbc-tab-list__nav-item:hover svg path,
@@ -4253,6 +4259,11 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         /*[[aboveFilter]]*/
     }
 
+    .popup-content {
+        background-color: /*[[sidebarColor]]*/ !important;
+    }
+ 
+    
     .sidebar-panel-loading-indicator {
         background: /*[[backgroundColor]]*/ !important;
     }
@@ -4665,6 +4676,36 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         
     }
     
+    .tokens-panel-row.folder,
+    .tokens-panel-row,
+    .tokens-panel-row.player-row .player-expansion-button{
+        background-color: /*[[sidebarColor]]*/ !important;
+    }
+    
+    .tokens-panel-row-details,
+    .pp-value,
+    .walking-value{
+        color: /*[[fontColor]]*/;
+    }
+    
+    .token-row-gear {
+        display: block;
+        width: 30px;
+        border-radius: 3px;
+        object-fit: cover;
+        border: 1px solid #d8e1e8;
+        cursor: pointer;
+        margin: 0 2px;
+        min-width: 30px;
+        background: /*[[rollCalcColor]]*/; 
+        padding: 3px;
+    }
+    
+    .token-row-gear img {
+        filter: /*[[filter]]*/;
+        
+    }
+
     #combat_tracker_title_bar,
     #resizeDragMon{
         background: /*[[combatTrackerBackgroundColor]]*/;   
@@ -4844,8 +4885,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         border-radius: 5px;
     }
   
-    .VTTToken img ~ .hpbar:after{
-        display:none;
+  /*  .VTTToken img ~ .hpbar:after{
+        display:block;
         position: absolute;
         height:10px;
         width:100%;
@@ -4854,10 +4895,10 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         right: 0px;
         content: '';
         border-radius:0px 0px 5px 5px;
-        background-color: /*[[backgroundColor]]*/ !important;
+        background-color: /*[[backgroundColor]]*/   /* !important;
         background-image: linear-gradient(to left, transparent calc(100% - var(--hp-percentage)), var(--token-hp-aura-color) 0%, var(--token-hp-aura-color) 100%) !important;
         box-shadow: inset 0px 0px 4px 2px var(--token-temp-hp), 0px 0px 5px 3px var(--token-temp-hp);
-    }
+    }*/
 
     .player-token.ui-draggable{
         filter: drop-shadow(0px 0px 1px /*[[fontColor]]*/);
@@ -5340,8 +5381,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     #chat-text::placeholder{
         opacity: 0.7;
         color: /*[[fontColor]]*/;
-    }
-    
+    }  
 }
 
 @-moz-document url("https://www.dndbeyond.com/") {
@@ -5658,6 +5698,7 @@ regexp("https://www.dndbeyond.com/encounters.*#DiceTray"), regexp("https://www.d
         box-shadow: 1px 1px 30px 5px /*[[sidebarColor]]*/;   
         z-index: 1;
     }
+
     .ct-sidebar__pane-content:before{
         z-index: 2;   
     }
@@ -5755,6 +5796,7 @@ regexp("https://www.dndbeyond.com/encounters.*#DiceTray"), regexp("https://www.d
     {
         background-color: /*[[sidebarColor]]*/ !important;
     }
+    
 
     .encounter-builder-app .integrated-dice__container {
         color: /*[[rollColor]]*/;
