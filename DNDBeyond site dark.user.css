@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.305
+@version      1.2.306
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -3591,7 +3591,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     input.es-form-field-query.ui-autocomplete-input[placeholder="Search Everything..."],
     .p-comments-b .p-comment-user .p-comment-stats .p-comment-statitem .postbit-item,
     body.body-forum .single-column #content .p-forum-a .p-comment-post .u-dropDown span.user.user-role-registered-users,
-    .mon-stat-block button.integrated-dice__container{
+    .mon-stat-block button.integrated-dice__container,
+    .mon-stat-block button[data-exp]{
         background: none !important;
     }
     .body-page .p-article-a .p-article-content h2::after, 
@@ -5552,7 +5553,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
 
 @-moz-document regexp("https://www.dndbeyond.com/encounter-builder"),
 regexp("https://www.dndbeyond.com/combat-tracker.*"), regexp("https://www.dndbeyond.com/campaigns/.*"),
-regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond.com/my-encounters"), regexp("https://www.dndbeyond.com/encounter-builder.*#DiceTray"),
+regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond.com/my-encounters"), regexp("https://www.dndbeyond.com/monsters/.*"), regexp("https://www.dndbeyond.com/encounter-builder.*#DiceTray"),
 regexp("https://www.dndbeyond.com/combat-tracker.*#DiceTray"), regexp("https://www.dndbeyond.com/campaigns.*#DiceTray"),
 regexp("https://www.dndbeyond.com/encounters.*#DiceTray"), regexp("https://www.dndbeyond.com/my-encounters.*#DiceTray"){
     :root {
@@ -5804,15 +5805,18 @@ regexp("https://www.dndbeyond.com/encounters.*#DiceTray"), regexp("https://www.d
     }
     
 
-    .encounter-builder-app .integrated-dice__container {
-        color: /*[[rollColor]]*/;
-        background: /*[[backgroundColor]]*/;
+    .encounter-builder-app .integrated-dice__container,
+    .mon-stat-block button[data-exp] {
+        color: /*[[rollColor]]*/ !important;
+        background: /*[[backgroundColor]]*/ !important;
         border: 1px solid #0000;
     }
-    .encounter-builder-app .integrated-dice__container:hover {
+    .encounter-builder-app .integrated-dice__container:hover,
+    .mon-stat-block button[data-exp] {
         border: 1px /*[[rollColor]]*/ solid !important;
     }
 
+   
 
     .encounter-builder-app .integrated-dice__container:focus {
         outline: none !important;
