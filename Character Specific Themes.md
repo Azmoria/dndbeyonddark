@@ -14,28 +14,21 @@ Next click "Write new style" on the left but make sure "as Usercss" is checked b
 
 Select all again and paste the original copied theme (CTRL+V)
 
-Scroll down to where it says https[]()://www[]().dndbeyond.com/profile/.*/characters/\\d* 
+Click Section 1
 
-![image](https://user-images.githubusercontent.com/65363489/151717940-3edc60e0-3687-4c12-adc3-351cef938d71.png)
+![image](https://user-images.githubusercontent.com/65363489/167322711-57aa0890-ef36-4302-9eb1-f0646cc1efdc.png)
 
+Replace the regexp lines with your character sheet url like so:
 
-You can delete the other line below by hitting the minus sign.
-
-Replace the first line with the specific url for your character as so:
-
-![image](https://user-images.githubusercontent.com/65363489/151717988-858ac274-35a8-4714-9b77-4ee0e819a096.png)
-
-
-and again further down as so:
-
-![image](https://user-images.githubusercontent.com/65363489/151717813-2cd447d4-f264-4035-86f7-c29461459d3f.png)
-
+![image](https://user-images.githubusercontent.com/65363489/167322839-b4686a3f-002e-43ca-a29b-deda88b9135e.png)
 The second line is used for the dice tray popup compainion Javascript. You can find more info here: <a href="https://github.com/Azmoria/dndbeyonddark/blob/master/Dice%20Capture%20README.md">Dice Capture README.md</a>
 
-again you can remove the other lines they are for dice outside the character sheet.
+and replace the regexp lines again further down for AboveVTT in section 2:
+
+![image](https://user-images.githubusercontent.com/65363489/167322930-c049493e-b7d6-46dc-ac6c-fa89305bbee1.png)
 
 You will also have to change the name of the file at the very top beside @name before it will let you save it. 
-I change this to my character name but you can name it whatever you would like. I also remove the update url to make sure it does not automatically update although I don't think this is required. I do it anyway as I've had them accidently update and have to redo these steps.
+I change this to my character name but you can name it whatever you would like. I also suggestion removing the update url and changing @namespace.
 
 ![image](https://user-images.githubusercontent.com/65363489/146813954-f1f93c6d-9e5a-4614-bcaf-a82f01b29eb9.png)
 
