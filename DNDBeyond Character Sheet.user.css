@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.195
+@version      1.3.196
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -476,7 +476,6 @@ EOT;
             width: 40px;
             height: 20px;
             border-radius:10px;
-            border: 
         }
         div[aria-roledescription="Game Log"]:before {
             border: none;
@@ -3004,9 +3003,17 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true"){
   
     
     #tokenOptionsPopup,
-    #tokenOptionsPopup [id*='flyout']{
-        background: /*[[background]]*/;
+    #tokenOptionsPopup [id*="flyout"]
+    {
+        background: /*[[sheetColor]]*/;
         color: /*[[fontColor]]*/;
+    }
+    #tokenOptionsPopup
+    {
+    backdrop-filter: blur(6px);
+    }
+    #tokenOptionsPopup button{
+        color: /*[[fontColor]]*/;        
     }
     
      #tokenOptionsPopup [id*='flyout'] li{
@@ -3179,7 +3186,6 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true"){
     }
     
       #castbutton,
-    .sidebar__pane-content .rc-switch,
     .sidebar-panel-header,
     .player-token-hp
     {
@@ -3187,13 +3193,11 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true"){
         background: /*[[background]]*/ !important;
         color: /*[[fontColor]]*/ !important;
     }
-        .rc-switch-checked:after{
+       .rc-switch-checked:after{
         content: 'ON';
         font-size: 10px;
         color: /*[[background]]*/;
         background-color: /*[[highlightColor]]*/;
-        box-shadow: -15px 0px 25px 4px /*[[background]]*/; 
-        text-shadow: none;
     }
     
     .rc-switch:not(.rc-switch-checked):after{
@@ -3201,11 +3205,27 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true"){
         font-size: 9px;
         color: /*[[background]]*/;
         background-color: /*[[fontColor]]*/;
-        box-shadow: 10px 0px 30px 10px /*[[background]]*/;    
-        text-shadow: none;
     }
     .rc-switch.rc-switch-checked{
         background: /*[[rollCalcColor]]*/ !important;   
+    }
+    
+   
+     #tokenOptionsContainer .rc-switch{
+        box-shadow: inset 0px 0px 6px -4px #000 !important;
+        background: /*[[sheetColor]]*/ !important;      
+    }
+    
+    
+    #tokenOptionsContainer .rc-switch.rc-switch-checked{
+        box-shadow: inset 0px 0px 6px -4px #000 !important;
+        background: /*[[rollCalcColor]]*/ !important;      
+        border-color: /*[[highlightColor]]*/ !important;
+    }
+    
+    #tokenOptionsContainer .rc-switch:after{
+        box-shadow: inset 0px 0px 6px -4px #000 !important;
+        filter: drop-shadow(1px 1px 2px);
     }
     .monster-row__config-handle img{
         display: none !important;
