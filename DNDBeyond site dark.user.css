@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.307
+@version      1.2.308
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -4664,15 +4664,23 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .sidebar__pane-content .rc-switch,
     .sidebar-panel-header,
     .player-token-hp,
-    .sidebar-modal .sidebar-panel-content,
-    #tokenOptionsPopup,
-    #tokenOptionsPopup [id*="flyout"]
+    .sidebar-modal .sidebar-panel-content
     {
         text-shadow: none !important;   
         background: /*[[backgroundColor]]*/ !important;
         color: /*[[fontColor]]*/ !important;
     }
     
+    #tokenOptionsPopup,
+    #tokenOptionsPopup [id*="flyout"]
+    {
+        background: /*[[transparencyBackgroundColor]]*/;
+        color: /*[[fontColor]]*/;
+    }
+    #tokenOptionsPopup
+    {
+    backdrop-filter: blur(6px);
+    }
     #tokenOptionsPopup button{
         color: /*[[fontColor]]*/;        
     }
@@ -4732,10 +4740,27 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         bottom: -40px !important;
     }
     #combat_footer,
-    #combat_tracker_inside{
+    #combat_tracker_inside,
+    .flyout-from-menu-item, 
+    #tokenOptionsContainer>button, 
+    #notes-flyout button, 
+    #adjustments-flyout>div>button{
         border-style: solid;
         border-color: /*[[borderColor]]*/;      
     }
+    
+     .flyout-from-menu-item, 
+    #tokenOptionsContainer>button, 
+    #notes-flyout button, 
+    #adjustments-flyout>div>button{
+        background: transparent;     
+    }
+    
+    
+    .menu-input[disabled] {
+        opacity:0.5;
+    }
+ 
     #combat_tracker_inside>#combat_footer{
         border-width: 0px 1px 1px 1px;
         border-radius: 0px 0px 5px 5px; 
@@ -4774,9 +4799,21 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     #combat_footer{
         display: flex;   
     }
-    .sidebar__pane-content .rc-switch.rc-switch-checked{
+    #tokenOptionsContainer .rc-switch{
+        box-shadow: inset 0px 0px 6px -4px #000 !important;
+        background: /*[[transparencyBackgroundColor]]*/ !important;      
+    }
+    
+    
+    #tokenOptionsContainer .rc-switch.rc-switch-checked{
+        box-shadow: inset 0px 0px 6px -4px #000 !important;
         background: /*[[rollCalcColor]]*/ !important;      
         border-color: /*[[linkColor]]*/ !important;
+    }
+    
+    #tokenOptionsContainer .rc-switch:after{
+        box-shadow: inset 0px 0px 6px -4px #000 !important;
+        filter: drop-shadow(1px 1px 2px);
     }
 
     #combat_tracker_inside #combat_footer button:last-of-type{
