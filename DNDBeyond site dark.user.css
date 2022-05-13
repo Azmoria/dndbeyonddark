@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.308
+@version      1.2.309
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -2111,7 +2111,9 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .appendixdivcotn,
     [aria-labelledby="confirm-dialog"],
     .combatant-card__right-bit,
-    .draggable-encounter-monster__will-make-group-indicator:before
+    .draggable-encounter-monster__will-make-group-indicator:before,
+    .MuiInputBase-colorPrimary.MuiInputBase-formControl,
+    body .ddb-characters-listing-header ~ [class*="ddb-character-app-"] > .MuiFormControl-root.MuiFormControl-fullWidth.MuiTextField-root[class*="ddb-character-app-"] 
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
@@ -2535,7 +2537,9 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .MuiPaper-root h2,
     .monstrous-logs p,
     .encounter-details-monster__quantity span,
-    .line-item span
+    .line-item span,
+    .MuiFormLabel-colorPrimary.MuiFormLabel-filled,
+    .MuiInputLabel-formControl.MuiInputLabel-animated.MuiInputLabel-shrink
     {
 		color: /*[[fontColor]]*/ !important;
 	}
@@ -3866,7 +3870,9 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .actions-container>button svg path,
     .search-field__icon path,
     .encounter-builder-sidebar__close-button svg rect,
-    .encounter-details-monster__quantity svg rect{
+    .encounter-details-monster__quantity svg rect,
+    svg[class*="ddb-character-app-"] 
+    {
         fill: /*[[fontColor]]*/ !important;
     }
     .ddbc-tab-list__nav-item:hover svg path,
