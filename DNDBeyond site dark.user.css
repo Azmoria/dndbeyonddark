@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.310
+@version      1.2.311
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -3640,13 +3640,6 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     top: 0px;
     }
     
-    #edit_dialog button.rc-switch-checked,
-    #edit_dialog button.rc-switch-checked:hover{
-        border-color: /*[[linkColor]]*/;
-        color: /*[[backgroundColor]]*/ !important;
-        box-shadow: inset 0px 0px 10px 10px /*[[linkColor]]*/ !important; 
-    }
-   
     .rc-switch-checked:after{
         content: 'ON';
         font-size: 10px;
@@ -4807,13 +4800,15 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     #combat_footer{
         display: flex;   
     }
-    #tokenOptionsContainer .rc-switch{
+    #tokenOptionsContainer .rc-switch,
+    #edit_dialog .rc-switch{
         box-shadow: inset 0px 0px 6px -4px #000 !important;
         background: /*[[transparencyBackgroundColor]]*/ !important;      
     }
     
     
-    #tokenOptionsContainer .rc-switch.rc-switch-checked{
+    #tokenOptionsContainer .rc-switch.rc-switch-checked,
+    #edit_dialog .rc-switch.rc-switch-checked{
         box-shadow: inset 0px 0px 6px -4px #000 !important;
         background: /*[[rollCalcColor]]*/ !important;      
         border-color: /*[[linkColor]]*/ !important;
@@ -5280,7 +5275,6 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         background: /*[[backgroundColor]]*/ !important;
         color: /*[[fontColor]]*/ !important;
         height: 22px;
-        border-radius: 7px;
         box-shadow: inset 0 1px 0 rgb(255 255 255 / 20%), 0 1px 2px rgb(0 0 0 / 5%);
         padding: 2px 8px;
         transition: none;
