@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.313
+@version      1.2.314
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -1878,7 +1878,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
 	input[type="search"],
 	input[type="password"],
 	input[type="email"],
-	textarea,
+	textarea:not(.drawing-text-box),
 	select,
 	.filter-listing-item,
 	.ability-score-calc-component-value,
@@ -5147,6 +5147,33 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         border-width: 1px 0px;
         color: /*[[linkColor]]*/;
     }
+    
+    /*Player and scene panels Start*/
+    
+    .sidebar-list-item-row.encounter, 
+    .sidebar-list-item-row.folder,
+    .sidebar-list-item-row,
+    .sidebar-list-item-row.player-row .player-expansion-button,
+    .sidebar-list-item-row.encounter.collapsed, 
+    .sidebar-list-item-row.folder.collapsed{
+        background: /*[[sidebarColor]]*/;
+       
+    }
+    
+    .sidebar-list-item-row-details
+    {
+     color: /*[[fontColor]]*/;
+    }
+    #text_controller_inside{
+        background: /*[[backgroundColor]]*/ !important;
+        min-width: 225px !important;
+    }
+    
+    .stream-dice-button{
+        box-shadow: 1px 1px 1px 1px #ddd3, 1px 2px 0px -2px #ddd3; 
+    }
+    
+    /*player and scene panels end*/
     
     #scene_selector .scene .scene_title ~ div button[style="background: rgb(255, 127, 127);"]{
         background: /*[[backgroundColor]]*/ !important;
