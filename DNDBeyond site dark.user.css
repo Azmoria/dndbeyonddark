@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.317
+@version      1.2.318
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -170,7 +170,10 @@ dark "Dark Mode" <<<EOT
     .list-row-primary-text a[href^="/monsters"],
     .listing__items .listing__list-item__column.blocked,
     .stat-block-background--space .stat-block-ability-scores,
-    .red-statblock-text {
+    .red-statblock-text,
+    .stat-block-ability-scores, 
+    .Stat-Block-Styles_Stat-Block-Data, 
+    .Stat-Block-Styles_Stat-Block-Data-Last{
         color: #D35050 !important;
     }
 
