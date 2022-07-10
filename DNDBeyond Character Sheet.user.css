@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.198
+@version      1.3.200
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -3004,7 +3004,9 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true"){
     
     #tokenOptionsPopup,
     #tokenOptionsPopup [id*="flyout"],
-    #resizeDragMon .avtt-stat-block-container .detail-content
+    #resizeDragMon .avtt-stat-block-container .detail-content,
+    .sidebar-flyout .tooltip ~ div,
+    #playerTokenSelectedWarning
     {
         background: /*[[sheetColor]]*/;
         color: /*[[fontColor]]*/;
@@ -3017,6 +3019,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true"){
         color: /*[[fontColor]]*/;        
     }
     
+    
      #tokenOptionsPopup [id*='flyout'] li{
         background: none;  
         color: /*[[fontColor]]*/;
@@ -3026,8 +3029,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true"){
     #tokenOptionsPopup [id*='flyout'] li:before{
         /*[[aboveFilter]]*/;
     }
-   
-
+    
     g.beholder-dm-screen__screen path {
         fill: #201911;
         stroke: #0c0a08;
