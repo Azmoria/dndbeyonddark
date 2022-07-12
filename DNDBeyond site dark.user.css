@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.324
+@version      1.2.325
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -1864,6 +1864,9 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
 	.p-article-a .section-changelog .p-article-content table tbody tr td,
 	.Basic-Text-Frame,
 	aside,
+    aside.text--rules-sidebar,
+    aside.text--quote-box,
+    aside.rules-text,
 	.section-posts .p-article-a,
 	.section-changelog .p-article-a,
 	.p-article-a .p-article-footer .p-article-tags .tag,
@@ -2712,6 +2715,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
 	blockquote.adventure-read-aloud-text,
 	aside.rules-text,
 	aside,
+    aside.text--rules-sidebar,
+    aside.rules-text,
 	body:not(.body-forum):not(.section-posts):not(.section-changelog):not(.body-privatemessage-details) blockquote,
 	.post-excerpt,
 	ddb-campaigns-list-item-wrapper,
@@ -3199,10 +3204,36 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .tasha-notes,
     .Flowchart-Block,
     .morden-notes,
-    .tasha-notes{
+    .tasha-notes,
+    aside.text--rules-sidebar,
+    aside.rules-text{
 		border-image: none !important;
 	}
-    
+    aside.text--rules-sidebar,
+    aside.rules-text{
+        filter: drop-shadow(0px 0px 3px #ccc);
+    }
+    aside::before {
+        content: '';
+        background-image: url(https://media.dndbeyond.com/compendium-images/test/svg-rules-banner-4.svg),url(https://media.dndbeyond.com/compendium-images/test/svg-rules-banner-3.svg) !important;
+        background-position: left, right !important;
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+        height: 11px !important;
+        position: absolute !important;
+        z-index: -1;
+    }
+    aside::after {
+        content: '';
+        background-image: url(https://media.dndbeyond.com/compendium-images/test/svg-rules-banner-4.svg),url(https://media.dndbeyond.com/compendium-images/test/svg-rules-banner-3.svg) !important;
+        background-position: left, right !important;
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+        height: 11px !important;
+        position: absolute !important;
+        z-index: -1;
+        transform: scaleY(-1);
+    }
     .morden-notes,
     .tasha-notes{
         filter: none;
