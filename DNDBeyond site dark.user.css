@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.323
+@version      1.2.324
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -361,7 +361,7 @@ none EOT;
 @var color scrollbarColor "Scrollbar Color" #88bcd6
 @advanced dropdown compendiumBackgrounds "Compendium Backgrounds where compatible"{
 on "ON" <<<EOT
-@-moz-document regexp("https://www.dndbeyond.com/sources/moot/.*"), regexp("https://www.dndbeyond.com/sources/sacoc/.*"), regexp("https://www.dndbeyond.com/sources/ftod/.*"), regexp("https://www.dndbeyond.com/sources/vrgtr/.*"), regexp("https://www.dndbeyond.com/sources/twbtw/.*"), regexp("https://www.dndbeyond.com/sources/cm/.*"), regexp("https://www.dndbeyond.com/sources/egtw/.*"), regexp("https://www.dndbeyond.com/sources/idrotf/.*"), regexp("https://www.dndbeyond.com/sources/dmg/.*"), regexp("https://www.dndbeyond.com/sources/phb/.*"), regexp("https://www.dndbeyond.com/sources/erftlw/.*"), regexp("https://www.dndbeyond.com/sources/ddvram/.*"), regexp("https://www.dndbeyond.com/classes/.*"), regexp("https://www.dndbeyond.com/races/.*"), regexp("https://www.dndbeyond.com/sources/cotn/.*"), regexp("https://www.dndbeyond.com/sources/motm/.*"), regexp("https://www.dndbeyond.com/sources/mcv1/.*"), regexp("https://www.dndbeyond.com/sources/tvd/.*"), regexp("https://www.dndbeyond.com/sources/trc/.*") {
+@-moz-document regexp("https://www.dndbeyond.com/sources/moot/.*"), regexp("https://www.dndbeyond.com/sources/sacoc/.*"), regexp("https://www.dndbeyond.com/sources/ftod/.*"), regexp("https://www.dndbeyond.com/sources/vrgtr/.*"), regexp("https://www.dndbeyond.com/sources/twbtw/.*"), regexp("https://www.dndbeyond.com/sources/cm/.*"), regexp("https://www.dndbeyond.com/sources/egtw/.*"), regexp("https://www.dndbeyond.com/sources/idrotf/.*"), regexp("https://www.dndbeyond.com/sources/dmg/.*"), regexp("https://www.dndbeyond.com/sources/phb/.*"), regexp("https://www.dndbeyond.com/sources/erftlw/.*"), regexp("https://www.dndbeyond.com/sources/ddvram/.*"), regexp("https://www.dndbeyond.com/classes/.*"), regexp("https://www.dndbeyond.com/races/.*"), regexp("https://www.dndbeyond.com/sources/cotn/.*"), regexp("https://www.dndbeyond.com/sources/motm/.*"), regexp("https://www.dndbeyond.com/sources/mcv1/.*"), regexp("https://www.dndbeyond.com/sources/tvd/.*"), regexp("https://www.dndbeyond.com/sources/trc/.*"), regexp("https://www.dndbeyond.com/sources/sja/.*") {
 
     #site-main,
     body.responsive-enabled #site #site-main .container #content,
@@ -844,7 +844,7 @@ on "ON" <<<EOT
     }
 }
 
-@-moz-document regexp("https://www.dndbeyond.com/sources/moot"), regexp("https://www.dndbeyond.com/sources/twbtw"), regexp("https://www.dndbeyond.com/sources/tcoe"), regexp("https://www.dndbeyond.com/sources/erftlw"), regexp("https://www.dndbeyond.com/sources/egtw"), regexp("https://www.dndbeyond.com/sources/idrotf"), regexp("https://www.dndbeyond.com/sources/ftod"),regexp("https://www.dndbeyond.com/sources/vrgtr"), regexp("https://www.dndbeyond.com/sources/sacoc"), regexp("https://www.dndbeyond.com/sources/cm"), regexp("https://www.dndbeyond.com/sources/ai"), regexp("https://www.dndbeyond.com/sources/phb"), regexp("https://www.dndbeyond.com/sources/dmg"), regexp("https://www.dndbeyond.com/sources/it/phb"), regexp("https://www.dndbeyond.com/sources/mm"), regexp("https://www.dndbeyond.com/sources/ggtr"), regexp("https://www.dndbeyond.com/sources/mtof"), regexp("https://www.dndbeyond.com/sources/scag"), regexp("https://www.dndbeyond.com/sources/vgtm"), regexp("https://www.dndbeyond.com/sources/wgte"), regexp("https://www.dndbeyond.com/sources/xgte"), regexp("https://www.dndbeyond.com/sources/bgdia"), regexp("https://www.dndbeyond.com/sources/cos"), regexp("https://www.dndbeyond.com/sources/dc"), regexp("https://www.dndbeyond.com/sources/doip"), regexp("https://www.dndbeyond.com/sources/sdw"), regexp("https://www.dndbeyond.com/sources/slw"), regexp("https://www.dndbeyond.com/sources/ddvram"), regexp("https://www.dndbeyond.com/sources/gos"), regexp("https://www.dndbeyond.com/sources/hotdq"),  regexp("https://www.dndbeyond.com/sources/imr"), regexp("https://www.dndbeyond.com/sources/lr"), regexp("https://www.dndbeyond.com/sources/llok"),  regexp("https://www.dndbeyond.com/sources/lmop"), regexp("https://www.dndbeyond.com/sources/oota"), regexp("https://www.dndbeyond.com/sources/pota"),  regexp("https://www.dndbeyond.com/sources/rot"), regexp("https://www.dndbeyond.com/sources/ddia-mord"), regexp("https://www.dndbeyond.com/sources/skt"), regexp("https://www.dndbeyond.com/sources/tftyp"), regexp("https://www.dndbeyond.com/sources/toa"), regexp("https://www.dndbeyond.com/sources/wdh"), regexp("https://www.dndbeyond.com/sources/wdotmm"), regexp("https://www.dndbeyond.com/sources/cotn"), regexp("https://www.dndbeyond.com/sources/motm") {
+@-moz-document regexp("https://www.dndbeyond.com/sources/moot"), regexp("https://www.dndbeyond.com/sources/twbtw"), regexp("https://www.dndbeyond.com/sources/tcoe"), regexp("https://www.dndbeyond.com/sources/erftlw"), regexp("https://www.dndbeyond.com/sources/egtw"), regexp("https://www.dndbeyond.com/sources/idrotf"), regexp("https://www.dndbeyond.com/sources/ftod"),regexp("https://www.dndbeyond.com/sources/vrgtr"), regexp("https://www.dndbeyond.com/sources/sacoc"), regexp("https://www.dndbeyond.com/sources/cm"), regexp("https://www.dndbeyond.com/sources/ai"), regexp("https://www.dndbeyond.com/sources/phb"), regexp("https://www.dndbeyond.com/sources/dmg"), regexp("https://www.dndbeyond.com/sources/it/phb"), regexp("https://www.dndbeyond.com/sources/mm"), regexp("https://www.dndbeyond.com/sources/ggtr"), regexp("https://www.dndbeyond.com/sources/mtof"), regexp("https://www.dndbeyond.com/sources/scag"), regexp("https://www.dndbeyond.com/sources/vgtm"), regexp("https://www.dndbeyond.com/sources/wgte"), regexp("https://www.dndbeyond.com/sources/xgte"), regexp("https://www.dndbeyond.com/sources/bgdia"), regexp("https://www.dndbeyond.com/sources/cos"), regexp("https://www.dndbeyond.com/sources/dc"), regexp("https://www.dndbeyond.com/sources/doip"), regexp("https://www.dndbeyond.com/sources/sdw"), regexp("https://www.dndbeyond.com/sources/slw"), regexp("https://www.dndbeyond.com/sources/ddvram"), regexp("https://www.dndbeyond.com/sources/gos"), regexp("https://www.dndbeyond.com/sources/hotdq"),  regexp("https://www.dndbeyond.com/sources/imr"), regexp("https://www.dndbeyond.com/sources/lr"), regexp("https://www.dndbeyond.com/sources/llok"),  regexp("https://www.dndbeyond.com/sources/lmop"), regexp("https://www.dndbeyond.com/sources/oota"), regexp("https://www.dndbeyond.com/sources/pota"),  regexp("https://www.dndbeyond.com/sources/rot"), regexp("https://www.dndbeyond.com/sources/ddia-mord"), regexp("https://www.dndbeyond.com/sources/skt"), regexp("https://www.dndbeyond.com/sources/tftyp"), regexp("https://www.dndbeyond.com/sources/toa"), regexp("https://www.dndbeyond.com/sources/wdh"), regexp("https://www.dndbeyond.com/sources/wdotmm"), regexp("https://www.dndbeyond.com/sources/cotn"), regexp("https://www.dndbeyond.com/sources/motm"), regexp("https://www.dndbeyond.com/sources/sja") {
    
     #site-main,
     body.responsive-enabled #site #site-main .container #content,
@@ -915,6 +915,14 @@ on "ON" <<<EOT
     }
 
 
+
+}
+@-moz-document regexp("https://www.dndbeyond.com/sources/sja") {
+    body{
+        background: url(https://media.dndbeyond.com/compendium-images/sja/9h8GiE7HbKsyOg18/toc-4k.png) no-repeat center center, var(--background-color) !important;
+        background-size: cover !important;
+        background-attachment: fixed !important; 
+    }
 
 }
 
