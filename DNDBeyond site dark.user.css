@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.329
+@version      1.2.330
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -1741,7 +1741,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     --transparency-color: /*[[transparencyBackgroundColor]]*/;
     }
      
-    body{
+    body,
+    .sidebar-scroll-menu{
        overflow: overlay !important;
     }
         
@@ -1754,18 +1755,21 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         height: 3px;
 	}
 
-	::-webkit-scrollbar-track {
+	::-webkit-scrollbar-track,
+    .sidebar-menu .sidebar-scroll-menu::-webkit-scrollbar-track {
 		background: transparent !important;
 	}
-	::-webkit-scrollbar-thumb {
+	::-webkit-scrollbar-thumb,
+    .sidebar-menu .sidebar-scroll-menu::-webkit-scrollbar-thumb{
 		background-color: /*[[scrollbarColor]]*/;
 		border-radius: 6px;
 		border: none;
 	}
-    ::-webkit-scrollbar-corner { 
+    ::-webkit-scrollbar-corner,
+    .sidebar-menu .sidebar-scroll-menu::-webkit-scrollbar-corner { 
         background: transparent;
     }
-  
+    
     :focus,
     .ddbeb-button:focus{
         outline: none !important;
