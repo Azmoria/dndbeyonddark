@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.330
+@version      1.2.331
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -170,10 +170,7 @@ dark "Dark Mode" <<<EOT
     .list-row-primary-text a[href^="/monsters"],
     .listing__items .listing__list-item__column.blocked,
     .stat-block-background--space .stat-block-ability-scores,
-    .red-statblock-text,
-    .stat-block-ability-scores, 
-    .Stat-Block-Styles_Stat-Block-Data, 
-    .Stat-Block-Styles_Stat-Block-Data-Last{
+    .red-statblock-text{
         color: #D35050 !important;
     }
 
@@ -2576,7 +2573,10 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .MuiFormLabel-colorPrimary.MuiFormLabel-filled[class*="ddb-character-app-"],
     .MuiInputLabel-formControl.MuiInputLabel-animated.MuiInputLabel-shrink[class*="ddb-character-app-"],
     .MuiTypography-h4[class*="ddb-character-app-"],
-    .MuiTypography-subtitle1[class*="ddb-character-app-"]
+    .MuiTypography-subtitle1[class*="ddb-character-app-"],
+    .stat-block-ability-scores, 
+    .Stat-Block-Styles_Stat-Block-Data, 
+    .Stat-Block-Styles_Stat-Block-Data-Last
     {
 		color: /*[[fontColor]]*/ !important;
 	}
