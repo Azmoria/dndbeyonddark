@@ -2616,10 +2616,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true") {
         border-left: 10px solid transparent;
         border-right: 10px solid transparent;
     }
-    body.body-rpgcharacter-sheet>div:last-of-type:not(.ct-sidebar__portal)>div.dcm-container:first-of-type[style^="top"]{
-        border:none;
-    }
-    
+   
     
     
     body.body-rpgcharacter-sheet>div:last-of-type:not(.ct-sidebar__portal)>div[class^="_"]>div>div{
@@ -3067,6 +3064,10 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true"){
     #tokenOptionsPopup [id*='flyout'] li:before{
         /*[[aboveFilter]]*/;
     }
+    body.body-rpgcharacter-sheet>div:last-of-type:not(.ct-sidebar__portal)>div.dcm-container:first-of-type[style^="top"]{
+        border:none;
+    }
+    
     .note.ui-dialog-content.ui-widget-content {
         width: 100% !important;
     }   
