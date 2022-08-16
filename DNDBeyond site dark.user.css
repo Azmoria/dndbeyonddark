@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.334
+@version      1.2.335
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -5288,21 +5288,24 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
   
     #combat_area tr[data-current]{
         background: /*[[backgroundColor]]*/ !important;
-        box-shadow: inset 0 0 20px 1px /*[[linkColor]]*/ !important;  
+        box-shadow: inset 0 0 20px 1px /*[[linkColor]]*/;  
     }
     
     #combat_area button,
-    #combat_area input{
+    #combat_area input.init{
         border: none !important;  ;  
         text-shadow:none !important;
         background: /*[[backgroundColor]]*/ !important;
         color: /*[[fontColor]]*/;
     }
     
-    #combat_area input{
+    #combat_area input.init{
         box-shadow: inset 0 1px 1px -2px /*[[fontColor]]*/, inset -1px -1px 4px -2px /*[[fontColor]]*/ !important; 
     }
-    #combat_area input:focus{
+    #combat_area input{
+         background: transparent !important;
+    }
+    #combat_area input.init:focus{
         box-shadow: inset 0 1px 1px -2px /*[[linkColor]]*/, inset -1px -1px 4px -2px /*[[linkColor]]*/ !important; 
     }
 
@@ -5338,7 +5341,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     }
     #combat_area tr[data-current][data-target*="characters"]{
         background: transparent !important;
-        box-shadow: inset 0 0 20px 1px #0F07 !important;
+        box-shadow: inset 0 0 20px 1px #0F07;
     }
     #combat_area tr:not(tr[data-current] ~ tr, tr[data-current]) {
         border-bottom: none;   
