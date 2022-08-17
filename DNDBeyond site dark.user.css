@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.337
+@version      1.2.338
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -4824,7 +4824,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
          height: 20px;
     }
     #round_number_label,
-    #combat_tracker_title_bar ~ .tracker-list,
+    #combat_tracker_inside .tracker-list,
     #tokenOptionsPopup [id*="flyout"] li,
     .dcm-section-header{
        background: none !important;   
@@ -4866,7 +4866,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     #resizeDragMon{
         background: /*[[combatTrackerBackgroundColor]]*/;   
     }
-    #combat_tracker_inside>#combat_tracker_title_bar ~ #combat_footer{
+    #combat_tracker_inside #combat_footer{
         padding-top: 13px !important;  
         bottom: -40px !important;
     }
@@ -4912,11 +4912,11 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     /*[[aboveContainDice]]*/
     
     #sheet,
-    #combat_tracker_inside>#combat_tracker_title_bar ~ #combat_footer button{
+    #combat_tracker_inside #combat_footer button{
         background: /*[[combatTrackerBackgroundColor]]*/;
         box-shadow: inset 0 1px 1px -2px /*[[fontColor]]*/, inset -1px -1px 4px -2px /*[[fontColor]]*/;
     }
-     #combat_tracker_inside>#combat_tracker_title_bar ~ #combat_footer button:hover {
+     #combat_tracker_inside #combat_footer button:hover {
          color: /*[[linkColor]]*/ !important;
          box-shadow: inset 0 1px 1px -2px /*[[linkColor]]*/, inset -1px -1px 4px -2px /*[[linkColor]]*/;
   
@@ -4926,7 +4926,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         fill: /*[[fontColor]]*/;
     }
     
-    #combat_tracker_inside>#combat_tracker_title_bar ~ #combat_footer button:hover svg path,
+    #combat_tracker_inside #combat_footer button:hover svg path,
     #scenes-panel .selected-scene svg path{
           fill: /*[[linkColor]]*/;
     }
@@ -5166,8 +5166,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .sidepanel-content button,
     .scene_selector button,
     .custom-gamelog-message,
-    #combat_tracker_inside>#combat_tracker_title_bar ~ #combat_footer button,
-    #combat_tracker_inside>#combat_tracker_title_bar ~ #combat_area button{
+    #combat_tracker_inside #combat_footer button,
+    #combat_tracker_inside #combat_area button{
         color: /*[[fontColor]]*/ !important;
     }
     
@@ -5243,7 +5243,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         transition: transform 0.5s ease-in-out !important;
     }
     .material-icons,
-    #combat_tracker_inside>#combat_tracker_title_bar ~ #round_number_label button{
+    #combat_tracker_inside #round_number_label button{
         color: /*[[fontColor]]*/ !important;   
     }
      #scene_selector_toggle:hover .material-icons,
@@ -5342,8 +5342,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     }
     
     #combat_footer,
-    #combat_tracker_inside>#combat_tracker_title_bar ~ .tracker-list #combat_area button,
-    #combat_tracker_inside>#combat_tracker_title_bar ~ #round_number_label button{
+    #combat_tracker_inside .tracker-list #combat_area button,
+    #combat_tracker_inside #round_number_label button{
         background-image:none !important;
         background:  /*[[combatTrackerBackgroundColor]]*/ !important;
     }
