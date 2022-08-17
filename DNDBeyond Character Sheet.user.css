@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.207
+@version      1.3.208
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -3114,8 +3114,8 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true"){
      .glc-game-log > div > ol > li > div > div:nth-of-type(2),
     #lock_display,
     .hpbar input,
-    #combat_tracker_inside #combat_tracker_title_bar ~ .tracker-list,
-    #combat_tracker_inside #combat_tracker_title_bar ~ #round_number_label{
+    #combat_tracker_inside .tracker-list,
+    #combat_tracker_inside #round_number_label{
         color: /*[[fontColor]]*/ !important;    
     }
     .ct-character-sheet__inner{
@@ -3346,8 +3346,8 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true"){
     #combat_tracker_inside{
         background: /*[[aboveVTTCombatTracker]]*/ !important;
     }
-    #combat_tracker_title_bar ~ #round_number_label,
-    #combat_tracker_title_bar ~ .tracker-list{
+    #round_number_label,
+    #combat_tracker_inside .tracker-list{
        background: none !important;           
     }
     
@@ -3715,7 +3715,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true"){
     #combat_tracker button:hover .findSVG path:not([fill*="none"]), 
     #combat_tracker button:hover .delSVG path:not([fill*="none"]), 
     #combat_tracker button:hover .statSVG path:not([fill*="none"]) {
-        fill: /*[[highlightColor]]*/;
+        fill: /*[[highlightColor]]*/ !important;
     }
     
     #combat_footer{
@@ -3736,7 +3736,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true"){
     .findSVG path:not([fill*="none"]), 
     .delSVG path:not([fill*="none"]), 
     .statSVG path:not([fill*="none"]){
-        fill: /*[[fontColor]]*/;
+        fill: /*[[fontColor]]*/ !important;
     }
     
     button.above-roll20{
