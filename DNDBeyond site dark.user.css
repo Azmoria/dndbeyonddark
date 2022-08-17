@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.340
+@version      1.2.341
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -2291,7 +2291,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .site .character-button-small,
     .character-card__overlay,
     .character-card__overlay-message,
-    .character-builder-step_by_step:before{
+    .character-builder-step_by_step:before,
+    .MuiChip-filled{
 		background-color: /*[[transparencyBackgroundColor]]*/ !important;
 	}
 
@@ -2731,7 +2732,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .encounter-details-difficulty-summary__campaign-summary a,
     .encounter-details-difficulty-summary__campaign-summary a:hover,
     .encounter-details-difficulty-summary__party-summary-button,
-    .encounter-details-difficulty-summary__party-summary-button:hover
+    .encounter-details-difficulty-summary__party-summary-button:hover,
+    .MuiChip-labelSmall 
     {
 		color: /*[[linkColor]]*/ !important
 	}
