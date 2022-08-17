@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.338
+@version      1.2.339
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -2179,7 +2179,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .combatant-card__right-bit,
     .draggable-encounter-monster__will-make-group-indicator:before,
     .MuiInputBase-colorPrimary.MuiInputBase-formControl[class*="ddb-character-app-"],
-    body .ddb-characters-listing-header ~ [class*="ddb-character-app-"] > .MuiFormControl-root.MuiFormControl-fullWidth.MuiTextField-root[class*="ddb-character-app-"] 
+    body .ddb-characters-listing-header ~ [class*="ddb-character-app-"] > .MuiFormControl-root.MuiFormControl-fullWidth.MuiTextField-root[class*="ddb-character-app-"],
+    .vehicle-stat-block.vehicle-stat-block-spelljammer
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
@@ -2350,7 +2351,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     #site .p-article-content table tbody tr:nth-child(odd) td,
     .ddb-account-tab-body .listing-container-table table tbody tr:nth-child(odd) td,
     .listing__items tr:nth-child(odd) td,
-    .compendium-left-aligned-table tr:nth-child(odd) td{ 
+    .compendium-left-aligned-table tr:nth-child(odd) td,
+    .vehicle-stat-block.vehicle-stat-block-spelljammer .vehicle-stat-block__attributes div:nth-child(odd){ 
         background: none !important;
         backdrop-filter: brightness(0.8);      
     }
@@ -2856,7 +2858,10 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         outline: none !important;
 	}
 
-    
+    .vehicle-stat-block.vehicle-stat-block-spelljammer::before, 
+    .vehicle-stat-block.vehicle-stat-block-spelljammer::after{
+        border-width: 1px 0px 0px 0px
+    }
     .quick-menu-item-label,
     .body-rpghomebrew a.character-button-block,
     #encounter-builder-root .input-select__dropdown-wrapper,
