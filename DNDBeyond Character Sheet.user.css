@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.206
+@version      1.3.207
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -3049,8 +3049,15 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true"){
     .content-container h3,
     .content-container .ability-block__heading,
     .mon-stat-block__description-block-heading,
-    #combat_area td input:not(.init){
+    #combat_area td input:not(.init),
+    #combat_area td:nth-of-type(4){
         color: /*[[fontColor]]*/;        
+    }
+    
+    #combat_area .ct_dead .hp,
+    #combat_area .ct_dead .max_hp,
+    #combat_area .ct_dead td:nth-of-type(4){
+        color: #bc0f0f !important;
     }
     .more-info::after,
     .mon-stat-block::before, 
