@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.347
+@version      1.2.348
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -3263,7 +3263,6 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .p-user-a.s_newContent .p-user-stats,
     .currency-list-item-row,
     .p-comments .p-comment-actions .p-comment-actionsAdmin>.label,
-    .Newspaper-Clipping,
     table.listing-warning-record th,
     .compendium-toc-block-header,
     .compendium-toc-full-header,
@@ -3335,7 +3334,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
 	}
     aside.text--rules-sidebar,
     aside.rules-text{
-        filter: drop-shadow(0px 0px 3px #ccc);
+        filter: none;      
+        box-shadow: 4px 4px 5px 0px /*[[transparencyBackgroundColor]]*/;
     }
     aside::before {
         content: '';
@@ -3428,10 +3428,28 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         border-color: /*[[fontColor]]*/;            
     }
         
-        
+    .Newspaper-Clipping {
+        display: block;
+        width: 410px;
+        border: none;
+        padding: 20px;
+        margin: 12px;
+        background-image: url(https://www.dndbeyond.com/attachments/7/419/news-clipping.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        -webkit-filter: drop-shadow(0px 6px 6px #000 );
+        filter: drop-shadow(0px 6px 6px #000) saturate(2) brightness(0.8);
+        color: #000 !important;
+    }
     .notification.notification-success.notification-visible{
         border-top: 2px solid /*[[linkColor]]*/ !important;
     }
+    div [class*='read-aloud-text'] {
+    -webkit-box-shadow: 2px 2px 2px 0px /*[[transparencyBackgroundColor]]*/;
+    -moz-box-shadow: 2px 2px 2px 0px /*[[transparencyBackgroundColor]]*/;
+    box-shadow: 2px 2px 2px 0px /*[[transparencyBackgroundColor]]*/;
+    }
+    
 
 	.collapsible-body {
 		border: none !important;
