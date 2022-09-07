@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.348
+@version      1.2.349
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -3429,14 +3429,6 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     }
         
     .Newspaper-Clipping {
-        display: block;
-        width: 410px;
-        border: none;
-        padding: 20px;
-        margin: 12px;
-        background-image: url(https://www.dndbeyond.com/attachments/7/419/news-clipping.png);
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
         -webkit-filter: drop-shadow(0px 6px 6px #000 );
         filter: drop-shadow(0px 6px 6px #000) saturate(2) brightness(0.8);
         color: #000 !important;
