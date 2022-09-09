@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.350
+@version      1.2.352
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -3184,9 +3184,15 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .context-menu-icon-baned:before,
     .context-menu-icon-bardic-inspiration:before,
     #tokenOptionsPopup [id*="flyout"] li:before,
-    #tokenOptionsPopup .icon-invisible:before{
+    #tokenOptionsPopup .icon-invisible:before,
+    .comment.user-role-d-d-staff .p-comment-wrapper::before{
 		filter: /*[[filter]]*/;
 	}
+    
+    #site #content .p-comments span.user-role-d-d-staff {
+        color: #7789C6 !important;
+        background: url(https://www.dndbeyond.com/attachments/0/22/dndstaff.png) no-repeat left center !important;
+    }
     /*Tooltip popup concentration icon fix*/
     .tooltip-body-statblock-item-value .i-concentration{
         background-image: url(https://www.dndbeyond.com/content/1-0-1891-0/skins/waterdeep/images/icons/core_mechanics/concentration.svg);
@@ -3596,8 +3602,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     }
 
     body.body-forum .single-column #content .p-forum-a div.j-comment[data-author-id="23611187"] .p-comment-user-background {
-    background-image: url(https://media-waterdeep.cursecdn.com/attachments/0/79/bebackground.jpg) !important;
-    background-repeat: no-repeat !important;
+        background-image: url(https://media-waterdeep.cursecdn.com/attachments/0/79/bebackground.jpg) !important;
+        background-repeat: no-repeat !important;
         box-shadow: inset 0 1px 0 #fff !important;
     }
 
@@ -3712,6 +3718,14 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
       background-position: top left !important;
       background-size: 100% auto !important;
       opacity: 0.5;
+    }
+    /* Exuperius / Jared */
+    div.j-comment[data-author-id="101888240"] .p-comment-user-background {
+      background-image: url(https://media-waterdeep.cursecdn.com/attachments/9/382/jw-forum-bg-fade.png) !important;
+      background-repeat: no-repeat !important;
+      background-position: top left !important;
+      background-size: 100% auto !important;
+      opacity: 0.6;
     }
 
     /* Stormknight / Faith */
