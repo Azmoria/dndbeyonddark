@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.354
+@version      1.2.355
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -5330,8 +5330,10 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         box-shadow: inset 1px 1px 4px -4px #ffffffe3, 1px 1px 1px 0px #000, -1px 0px 1px 0px #000;
     }
     
-     button.loop-button:active{
-          box-shadow: inset #000 1px 1px 1px 2px;
+    button.loop-button:active,
+    button.soundpad_editsound:active,
+    button.soundpad_delsound:activ{
+          box-shadow: inset #000 2px 2px 2px 1px;
           transform: translate(0px, 2px); 
     }
         
@@ -5344,11 +5346,18 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         position:relative;
         box-shadow: inset 1px 1px 4px -4px #ffffffe3, 1px 1px 1px 0px #000, -1px 0px 1px 0px #000;
     }
-    .soundpad_editsound{
-        top: -5px;
-        left: 3px;
+    .soundpad_delsound{
+          top: -5px;
+        left: 6px;
     }
     
+    .soundpad_editsound{
+        top: -5px;
+        left: 4px;
+    }
+    .soundpad_addsection:not([style^='display: none;']) ~ .soundpad-section audio{
+        width: 250px;
+    }
     img.loop-img {
         left: -4px;
         height:17px;
