@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.363
+@version      1.2.364
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -4981,28 +4981,47 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .tokens-panel-row-details,
     .pp-value,
     .walking-value,
-    #tokenOptionsPopup [id*="flyout"] li{
+    #tokenOptionsPopup [id*="flyout"] li,
+    .subtitle-attibute span.fly-value{
         color: /*[[fontColor]]*/;
     }
     
-    .token-row-gear {
-        display: block;
-        width: 30px;
-        border-radius: 3px;
-        object-fit: cover;
+    #playersFolder .token-row-gear {
         border: 1px solid #d8e1e8;
-        cursor: pointer;
-        margin: 0 2px;
-        min-width: 30px;
-        background: /*[[rollCalcColor]]*/; 
-        padding: 3px;
+    }
+    
+    #playersFolder .token-row-add .material-icons,
+    #playersFolder .token-row-add svg rect{
+        color: #1b9af0 !important;
+    }
+    
+    #playersFolder .subtitle-attibute svg *{
+        fill: /*[[fontColor]]*/ !important;
+    }
+    #playersFolder .subtitle-attibute svg,
+    #playersFolder .subtitle-attibute .material-icons{
+        opacity: 0.6;
+    }
+
+    #playersFolder .subtitle-title{
+        color: /*[[fontColor]]*/ !important;
+        opacity: 0.6;
     }
     
     .token-row-gear img {
-        filter: /*[[filter]]*/;
-        
+        filter: /*[[filter]]*/;   
     }
-
+    #playersFolder .token-row-button, 
+    .token-row-gear,
+    #playersFolder .token-row-gear{
+        background: /*[[rollCalcColor]]*/; 
+    }
+    
+    
+    #playersFolder .exhaustion-pip.filled{
+        background: /*[[fontColor]]*/
+    }
+    
     #combat_tracker_title_bar,
     #resizeDragMon{
         background: /*[[combatTrackerBackgroundColor]]*/;   
