@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.365
+@version      1.2.366
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -2265,7 +2265,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .MuiInputBase-colorPrimary.MuiInputBase-formControl[class*="ddb-character-app-"],
     body .ddb-characters-listing-header ~ [class*="ddb-character-app-"] > .MuiFormControl-root.MuiFormControl-fullWidth.MuiTextField-root[class*="ddb-character-app-"],
     .vehicle-stat-block.vehicle-stat-block-spelljammer,
-    .sharing-block
+    .sharing-block,
+    .variant-cta-container
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
@@ -3215,7 +3216,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .context-menu-icon-bardic-inspiration:before,
     #tokenOptionsPopup [id*="flyout"] li:before,
     #tokenOptionsPopup .icon-invisible:before,
-    .comment.user-role-d-d-staff .p-comment-wrapper::before{
+    .comment.user-role-d-d-staff .p-comment-wrapper::before,   
+    .variant-cta-icon-mask{
 		filter: /*[[filter]]*/;
 	}
     
