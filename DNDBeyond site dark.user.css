@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.366
+@version      1.2.367
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -2307,7 +2307,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .body-privatemessage-details .p-comment-index,
     .body-rpgrace-details .p-comment-index,
     body.section-posts .u-dropDown .u-dropDownMenu,
-    .mce-floatpanel.mce-window .mce-tab
+    .mce-floatpanel.mce-window .mce-tab,
+    .comment.user-role-d-d-staff .p-comment-header
     {
         background-color: /*[[forumTertiaryColor]]*/ !important;
     }
