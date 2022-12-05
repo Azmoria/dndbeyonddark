@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name         Dice Tray Stream Window
 // @namespace    Azmoria
-// @version      1.0.028
+// @version      1.0.029
 // @description  Stream your Dice to another window
 // @author       Azmoria
 // @downloadURL  https://github.com/Azmoria/dndbeyonddark/raw/master/Dice%20Tray%20Stream%20Window.user.js
 // @updateURL    https://github.com/Azmoria/dndbeyonddark/raw/master/Dice%20Tray%20Stream%20Window.user.js
-// @require https://code.jquery.com/jquery-3.6.0.min.js
+// @require 	 https://code.jquery.com/jquery-3.6.0.min.js
 // @include      https://www.dndbeyond.com/profile/*/characters/*
 // @include      https://www.dndbeyond.com/characters/*
 // @include      https://www.dndbeyond.com/encounter-builder
@@ -155,12 +155,12 @@ observer.observe(document.body, {
 
 function buildDiceTrayButton(){
 	$('#site').css('--theme-color', $('.ddbc-svg--themed path').css('fill'));
-	let statusButton = `<div class="ct-character-header-desktop__button diceTrayButton" role="button" tabindex="0" style='background: rgba(16, 22, 26, 0.86)'><div class="ct-character-header-desktop__button-icon"><span class="dice-icon-die dice-icon-die--d20" style='width: 100%; height: 100%;-webkit-mask-size: contain;
-    margin: 0px;'></span></div><span class="ct-character-header-desktop__button-label" style='color: #fff'>Dice Tray</span></div>`
+	let statusButton = `<div class="dice-die-button diceTrayButton" role="button" tabindex="0" style='background: rgba(16, 22, 26, 0.86);'><div class="ct-character-header-desktop__button-icon"><span class="dice-icon-die dice-icon-die--d20" style='width: 100%; height: 100%;-webkit-mask-size: contain;
+    margin: 0px;'></span></div><span class="ct-character-header-desktop__button-label" style='color: #fff; left: 50%; position: absolute; transform: translateX(-50%);'>Dice Tray</span></div>`
 
 	$('.dice-toolbar__dropdown>div:last-of-type').prepend(statusButton)
 
-	$('.ct-character-header-desktop__button.diceTrayButton').off().on("click", function(){
+	$('.dice-die-button.diceTrayButton').off().on("click", function(){
         childWindow = diceTray();
         window.childWindow = childWindow;
         window.parent.childWindow = childWindow;
