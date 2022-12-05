@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         Dice Tray Stream Window
 // @namespace    Azmoria
-// @version      1.0.027
+// @version      1.0.028
 // @description  Stream your Dice to another window
 // @author       Azmoria
 // @downloadURL  https://github.com/Azmoria/dndbeyonddark/raw/master/Dice%20Tray%20Stream%20Window.user.js
 // @updateURL    https://github.com/Azmoria/dndbeyonddark/raw/master/Dice%20Tray%20Stream%20Window.user.js
+// @require https://code.jquery.com/jquery-3.6.0.min.js
 // @include      https://www.dndbeyond.com/profile/*/characters/*
 // @include      https://www.dndbeyond.com/characters/*
 // @include      https://www.dndbeyond.com/encounter-builder
@@ -39,11 +40,15 @@ async function diceTray() {
         window.childWindow = childWindow;
         console.log(childWindow.name + " is the child of parent window");
     }
-    if (childWindow == null) {
+    if (childWindow == null || window.childWindow.closed != false){
         childWindow = await window.open('', 'Dice Tray', 'toolbar=0,location=0,menubar=0');
         window.childWindow = childWindow;
         window.parent.childWindow = childWindow;
         console.log(childWindow.name + " is the child of this window");
+         childWindow.onbeforeunload = function(){
+            delete window.childWindow;
+            delete window.parent.childWindow;
+        };
     }
     if(childWindow.document.querySelector('video') == undefined || childWindow.document.querySelector('video') == null){
         await childWindow.document.write('<video id="video0" muted autoplay></video>');
@@ -124,8 +129,40 @@ async function diceTray() {
     return childWindow;
 }
 
-setTimeout(async function() {
-    childWindow = await diceTray();
-    window.childWindow = childWindow;
-    window.parent.childWindow = childWindow;
-}, 2000);
+let observer = new MutationObserver((mutations) => {
+  mutations.forEach((mutation) => {
+    if (!mutation.addedNodes) return
+
+    for (let i = 0; i < mutation.addedNodes.length; i++) {
+      // do things to your newly added nodes here
+      let node = mutation.addedNodes[i]
+      if ((node.className == 'dice-rolling-panel' || $('.dice-rolling-panel').length>0) && !window.diceTrayAdded){
+        window.diceTrayAdded = true;
+        setTimeout(function(){
+            	buildDiceTrayButton();
+        }, 2000)
+      }
+    }
+  })
+})
+
+observer.observe(document.body, {
+    childList: true
+  , subtree: true
+  , attributes: false
+  , characterData: false
+})
+
+function buildDiceTrayButton(){
+	$('#site').css('--theme-color', $('.ddbc-svg--themed path').css('fill'));
+	let statusButton = `<div class="ct-character-header-desktop__button diceTrayButton" role="button" tabindex="0" style='background: rgba(16, 22, 26, 0.86)'><div class="ct-character-header-desktop__button-icon"><span class="dice-icon-die dice-icon-die--d20" style='width: 100%; height: 100%;-webkit-mask-size: contain;
+    margin: 0px;'></span></div><span class="ct-character-header-desktop__button-label" style='color: #fff'>Dice Tray</span></div>`
+
+	$('.dice-toolbar__dropdown>div:last-of-type').prepend(statusButton)
+
+	$('.ct-character-header-desktop__button.diceTrayButton').off().on("click", function(){
+        childWindow = diceTray();
+        window.childWindow = childWindow;
+        window.parent.childWindow = childWindow;
+	});
+}
