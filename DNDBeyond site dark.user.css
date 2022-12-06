@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.370
+@version      1.2.371
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -2272,6 +2272,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .compendium-disclaimer,
     .body-page .p-article-a .p-article-content table tbody tr,
     table.table-compendium>tbody>tr,
+    table.table-compendium>thead>tr,
     .static-container-details .content-container table tbody tr,
     .lb-outerContainer,
     .subscriptions__block,
@@ -2287,7 +2288,9 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     body .ddb-characters-listing-header ~ [class*="ddb-character-app-"] > .MuiFormControl-root.MuiFormControl-fullWidth.MuiTextField-root[class*="ddb-character-app-"],
     .vehicle-stat-block.vehicle-stat-block-spelljammer,
     .sharing-block,
-    .variant-cta-container
+    .variant-cta-container,
+    aside.text--krynn-letter,
+    aside.text--krynn-sidebar
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
@@ -2973,7 +2976,9 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .MuiPaper-root,
     .monstrous-logs,
     .morden-notes,
-    .tasha-notes
+    .tasha-notes,
+    aside.text--krynn-letter,
+     aside.text--krynn-sidebar
     {
 		border-width: /*[[borderWidth]]*/
 		!important;
@@ -2983,10 +2988,19 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
 		!important;
         outline: none !important;
 	}
-    aside.text--krynn-letter{
-        border: none !important;
-        color: #000 !important;
+   
+    
+     aside.text--krynn-sidebar,
+    .text--krynn-letter p{
+        background: none !important;
+        filter: none !important;
     }
+    .sotdq-flow aside,
+    .sotdq-flow aside:before,
+     aside.text--krynn-letter{
+        background-image: none !important;
+    }
+
     .vehicle-stat-block.vehicle-stat-block-spelljammer::before, 
     .vehicle-stat-block.vehicle-stat-block-spelljammer::after{
         border-width: 1px 0px 0px 0px
@@ -3243,7 +3257,9 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     #tokenOptionsPopup [id*="flyout"] li:before,
     #tokenOptionsPopup .icon-invisible:before,
     .comment.user-role-d-d-staff .p-comment-wrapper::before,   
-    .variant-cta-icon-mask{
+    .variant-cta-icon-mask,
+    .text--krynn-sidebar::before,
+    .text--krynn-sidebar::after{
 		filter: /*[[filter]]*/;
 	}
     
