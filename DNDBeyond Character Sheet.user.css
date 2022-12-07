@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.217
+@version      1.3.218
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -218,7 +218,7 @@ EOT;
     on "Default"<<<EOT
     EOT;
     Custom "Custom Dice Sliders"<<<EOT
-        var(--dice-color) !important;
+        var(--dice-color);
     EOT;
 }
 @var range diceSepia "Custom Dice Sepia %" [0, 0, 100, 1]
@@ -241,20 +241,20 @@ EOT;
     }
     @-webkit-keyframes rainbow {
         from { 
-            -webkit-filter: var(--rgb-sliders-check) hue-rotate(1deg); 
+            -webkit-filter: var(--rgb-sliders-check) hue-rotate(1deg) var(--dice-color); 
         }
         to { 
-            -webkit-filter: var(--rgb-sliders-check) hue-rotate(360deg); 
+            -webkit-filter: var(--rgb-sliders-check) hue-rotate(360deg) var(--dice-color); 
         }
     }
     @keyframes rainbow {
         from {
-            -webkit-filter: var(--rgb-sliders-check) hue-rotate(1deg);
-            filter: var(--rgb-sliders-check) hue-rotate(1deg);
+            -webkit-filter: var(--rgb-sliders-check) hue-rotate(1deg) var(--dice-color);
+            filter: var(--rgb-sliders-check) hue-rotate(1deg) var(--dice-color);
         }
         to {
-            -webkit-filter: var(--rgb-sliders-check) hue-rotate(360deg);
-            filter: var(--rgb-sliders-check) hue-rotate(360deg);
+            -webkit-filter: var(--rgb-sliders-check) hue-rotate(360deg) var(--dice-color);
+            filter: var(--rgb-sliders-check) hue-rotate(360deg) var(--dice-color);
         }
     }
     EOT;
@@ -265,20 +265,20 @@ EOT;
             }
         @-webkit-keyframes rgb {
                 0%, 100% { 
-                    -webkit-filter: var(--rgb-sliders-check) var(--rgb-from); 
+                    -webkit-filter: var(--rgb-sliders-check) var(--rgb-from) var(--dice-color); 
                 }
                 50% { 
-                    -webkit-filter: var(--rgb-sliders-check) var(--rgb-to); 
+                    -webkit-filter: var(--rgb-sliders-check) var(--rgb-to) var(--dice-color); 
                 }
             }
         @keyframes rgb {
                 0%, 100% {
-                    -webkit-filter: var(--rgb-sliders-check) var(--rgb-from);
-                    filter: var(--rgb-sliders-check) var(--rgb-from);
+                    -webkit-filter: var(--rgb-sliders-check) var(--rgb-from) var(--dice-color);
+                    filter: var(--rgb-sliders-check) var(--rgb-from) var(--dice-color);
                 }
               50% {
-                    -webkit-filter: var(--rgb-sliders-check) var(--rgb-to);
-                    filter: var(--rgb-sliders-check) var(--rgb-to);
+                    -webkit-filter: var(--rgb-sliders-check) var(--rgb-to) var(--dice-color);
+                    filter: var(--rgb-sliders-check) var(--rgb-to) var(--dice-color);
                 }
             }
     EOT;
