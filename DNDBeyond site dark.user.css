@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.374
+@version      1.2.375
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -1682,7 +1682,7 @@ EOT;
     on "Default"<<<EOT
     EOT;
     Custom "Custom Dice Sliders"<<<EOT
-        var(--dice-color) !important;
+        var(--dice-color);
     EOT;
 }
 @var range diceSepia "Custom Dice Sepia %" [0, 0, 100, 1]
@@ -1700,49 +1700,51 @@ EOT;
     EOT;
     Rainbow "Rainbow"<<<EOT
     canvas.dice-rolling-panel__container,
-    body#diceTrayBody video{
+    body#diceTrayBody video,
+    body#diceTrayBody canvas{
     -webkit-animation: rainbow var(--rgb-speed) linear infinite;
     }
     @-webkit-keyframes rainbow {
         from { 
-            -webkit-filter: var(--rgb-sliders-check) hue-rotate(1deg); 
+            -webkit-filter: var(--rgb-sliders-check) hue-rotate(1deg) var(--dice-color); 
         }
         to { 
-            -webkit-filter: var(--rgb-sliders-check) hue-rotate(360deg); 
+            -webkit-filter: var(--rgb-sliders-check) hue-rotate(360deg) var(--dice-color); 
         }
     }
     @keyframes rainbow {
         from {
-            -webkit-filter: var(--rgb-sliders-check) hue-rotate(1deg);
-            filter: var(--rgb-sliders-check) hue-rotate(1deg);
+            -webkit-filter: var(--rgb-sliders-check) hue-rotate(1deg) var(--dice-color);
+            filter: var(--rgb-sliders-check) hue-rotate(1deg) var(--dice-color);
         }
         to {
-            -webkit-filter: var(--rgb-sliders-check) hue-rotate(360deg);
-            filter: var(--rgb-sliders-check) hue-rotate(360deg);
+            -webkit-filter: var(--rgb-sliders-check) hue-rotate(360deg) var(--dice-color);
+            filter: var(--rgb-sliders-check) hue-rotate(360deg) var(--dice-color);
         }
     }
     EOT;
     Custom "Custom RGB"<<<EOT
         canvas.dice-rolling-panel__container,
-        body#diceTrayBody video{
+        body#diceTrayBody video,
+    body#diceTrayBody canvas{
             -webkit-animation: rgb var(--rgb-speed) linear infinite;
             }
         @-webkit-keyframes rgb {
                 0%, 100% { 
-                    -webkit-filter: var(--rgb-sliders-check) var(--rgb-from); 
+                    -webkit-filter: var(--rgb-sliders-check) var(--rgb-from) var(--dice-color); 
                 }
                 50% { 
-                    -webkit-filter: var(--rgb-sliders-check) var(--rgb-to); 
+                    -webkit-filter: var(--rgb-sliders-check) var(--rgb-to) var(--dice-color); 
                 }
             }
         @keyframes rgb {
                 0%, 100% {
-                    -webkit-filter: var(--rgb-sliders-check) var(--rgb-from);
-                    filter: var(--rgb-sliders-check) var(--rgb-from);
+                    -webkit-filter: var(--rgb-sliders-check) var(--rgb-from) var(--dice-color);
+                    filter: var(--rgb-sliders-check) var(--rgb-from) var(--dice-color);
                 }
               50% {
-                    -webkit-filter: var(--rgb-sliders-check) var(--rgb-to);
-                    filter: var(--rgb-sliders-check) var(--rgb-to);
+                    -webkit-filter: var(--rgb-sliders-check) var(--rgb-to) var(--dice-color);
+                    filter: var(--rgb-sliders-check) var(--rgb-to) var(--dice-color);
                 }
             }
     EOT;
