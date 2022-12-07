@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.219
+@version      1.3.220
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -236,7 +236,8 @@ EOT;
     EOT;
     Rainbow "Rainbow"<<<EOT
     canvas.dice-rolling-panel__container,
-    body#diceTrayBody video{
+    body#diceTrayBody video,
+    body#diceTrayBody canvas{
     -webkit-animation: rainbow var(--rgb-speed) linear infinite;
     }
     @-webkit-keyframes rainbow {
@@ -260,7 +261,8 @@ EOT;
     EOT;
     Custom "Custom RGB"<<<EOT
         canvas.dice-rolling-panel__container,
-        body#diceTrayBody video{
+        body#diceTrayBody video,
+        body#diceTrayBody canvas{
             -webkit-animation: rgb var(--rgb-speed) linear infinite;
             }
         @-webkit-keyframes rgb {
