@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.216
+@version      1.3.217
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -218,7 +218,7 @@ EOT;
     on "Default"<<<EOT
     EOT;
     Custom "Custom Dice Sliders"<<<EOT
-        var(--dice-color);
+        var(--dice-color) !important;
     EOT;
 }
 @var range diceSepia "Custom Dice Sepia %" [0, 0, 100, 1]
@@ -2869,10 +2869,12 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true") {
       
 /*dice Cusomtization and JS compainion script css*/   
     canvas.dice-rolling-panel__container,
-    body#diceTrayBody video{
-        filter: /*[[diceTint]]*/
+    body#diceTrayBody video,
+    body#diceTrayBody canvas{
+        filter: /*[[diceTint]]*/;
     }
-    body#diceTrayBody video{
+    body#diceTrayBody video,
+    body#diceTrayBody canvas{
         position: absolute;
         top: 0;
         left: 0;   
