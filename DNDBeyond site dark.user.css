@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.375
+@version      1.2.376
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -2253,7 +2253,6 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .mce-panel,
     .mce-container, 
     .mce-widget, 
-    .mce-widget *, 
     .mce-reset,
     .view-cover-art,
     table.listing-warning-record td,
@@ -2268,7 +2267,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .ddb-notification-toast-homebrew,
     .p-forum .alert,
     .mce-floatpanel.mce-window .mce-tab.mce-active,
-    .mce-container-body,
+    .mce-container-body.mce-flow-layout,
     .combatant-card--character.in-combat .combatant-card__right-bit,
     .combatant-card--monster.in-combat .combatant-card__right-bit,
     .compendium-disclaimer,
@@ -2292,7 +2291,9 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .sharing-block,
     .variant-cta-container,
     aside.text--krynn-letter,
-    aside.text--krynn-sidebar
+    aside.text--krynn-sidebar,
+    .mce-abs-layout,
+    .mce-btn button
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
@@ -2409,7 +2410,10 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .MuiChip-filled,
     a.onedndcard--playtest-disclaimer-view-faq,
     a.one-dnd--playtest-disclaimer-view-faq,
-    .playtest--download-pdf a{
+    .playtest--download-pdf a,
+    .mce-abs-layout-item button,
+    .mce-tabs,
+    .mce-i-checkbox{
 		background-color: /*[[transparencyBackgroundColor]]*/ !important;
 	}
     body #site-main a.onedndcard--playtest-disclaimer-view-faq,
@@ -2661,7 +2665,6 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .mce-container, 
     .mce-container *, 
     .mce-widget, 
-    .mce-widget *, 
     .mce-reset,
     .b-pagination-b li.b-pagination-item>a,
     .comment .p-comment-notes .p-comment-edited,
@@ -2991,7 +2994,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
 		!important;
         outline: none !important;
 	}
-   
+ 
     
      aside.text--krynn-sidebar,
     .text--krynn-letter p{
@@ -3000,7 +3003,9 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     }
     .sotdq-flow aside,
     .sotdq-flow aside:before,
-     aside.text--krynn-letter{
+     aside.text--krynn-letter,
+    .mce-i-checkbox,
+    .mce-btn{
         background-image: none !important;
     }
 
