@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.376
+@version      1.2.377
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -2507,6 +2507,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .dice-roll-tampered{
         background-color: #820D0D;   
     }
+    
+    
 
 	.extra-forum-header,
 	.p-forum-a .col-forum .active-viewers,
@@ -6038,6 +6040,13 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     a{
         color: /*[[linkColor]]*/ !important;   
     }    
+}
+
+
+@-moz-document regexp("https://www.dndbeyond.com/changelog.*"){
+    code{
+        background-color: #5c5c5c8c;
+    }
 }
 
 @-moz-document regexp("https://www.dndbeyond.com/encounter-builder"),
