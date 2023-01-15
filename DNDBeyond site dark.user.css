@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.378
+@version      1.2.379
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -3475,27 +3475,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         filter: none;      
         box-shadow: 4px 4px 5px 0px /*[[transparencyBackgroundColor]]*/;
     }
-    aside::before {
-        content: '';
-        background-image: url(https://media.dndbeyond.com/compendium-images/test/svg-rules-banner-4.svg),url(https://media.dndbeyond.com/compendium-images/test/svg-rules-banner-3.svg) !important;
-        background-position: left, right !important;
-        background-size: contain !important;
-        background-repeat: no-repeat !important;
-        height: 11px !important;
-        position: absolute !important;
-        z-index: -1;
-    }
-    aside::after {
-        content: '';
-        background-image: url(https://media.dndbeyond.com/compendium-images/test/svg-rules-banner-4.svg),url(https://media.dndbeyond.com/compendium-images/test/svg-rules-banner-3.svg) !important;
-        background-position: left, right !important;
-        background-size: contain !important;
-        background-repeat: no-repeat !important;
-        height: 11px !important;
-        position: absolute !important;
-        z-index: -1;
-        transform: scaleY(-1);
-    }
+
     .morden-notes,
     .tasha-notes{
         filter: none;
