@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.377
+@version      1.2.378
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -266,6 +266,30 @@ dark "Dark Mode" <<<EOT
     .section-posts #content .p-comment-username a span.user-role-d-d-beyond-staff {
         color:  var(--font-color) !important;
     }
+    .quick-menu.quick-menu-tier-1 .quick-menu .quick-menu-item-opened
+    {
+        backdrop-filter: brightness(1.6) !important;
+    } 
+    .quick-menu.quick-menu-tier-1 .quick-menu .quick-menu-item-tier-3
+    {
+        backdrop-filter: brightness(1.5) !important;
+    }
+    
+    .quick-menu.quick-menu-tier-1 .quick-menu .quick-menu-item-tier-4
+    {
+        backdrop-filter: brightness(1.4) !important;
+    }
+    
+    
+    .quick-menu.quick-menu-tier-1 .quick-menu .quick-menu-item-tier-5
+    {
+        backdrop-filter: brightness(1.3) !important;
+    }
+    
+    .quick-menu.quick-menu-tier-1 .quick-menu .quick-menu-item-active
+    {
+        backdrop-filter: brightness(2.5) !important;
+    }
 
 EOT;
 light "Light Mode" <<<EOT
@@ -328,6 +352,30 @@ light "Light Mode" <<<EOT
     .section-changelog #content .p-comment-username a span.user-role-d-d-beyond-staff,
     .section-posts #content .p-comment-username a span.user-role-d-d-beyond-staff {
         color:  var(--font-color) !important;
+    }
+    .quick-menu.quick-menu-tier-1 .quick-menu .quick-menu-item-opened
+    {
+        backdrop-filter: brightness(0.9) !important;
+    } 
+    .quick-menu.quick-menu-tier-1 .quick-menu .quick-menu-item-tier-3
+    {
+        backdrop-filter: brightness(0.8) !important;
+    }
+    
+    .quick-menu.quick-menu-tier-1 .quick-menu .quick-menu-item-tier-4
+    {
+        backdrop-filter: brightness(0.7) !important;
+    }
+    
+    
+    .quick-menu.quick-menu-tier-1 .quick-menu .quick-menu-item-tier-5
+    {
+        backdrop-filter: brightness(0.8) !important;
+    }
+    
+    .quick-menu.quick-menu-tier-1 .quick-menu .quick-menu-item-active
+    {
+        backdrop-filter: brightness(0.6) !important;
     }
     
 EOT;
@@ -4040,11 +4088,17 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     }
     .ac_results li.ac_over a, 
     .ac_results li.ac_over>div,
-    .quick-menu .quick-menu-item-tier-3,
-    .quick-menu .quick-menu-item-tier-4 {
+    .quick-menu li.quick-menu-item-tier-1,
+    .quick-menu li.quick-menu-item-tier-2,
+    .quick-menu li.quick-menu-item-tier-3,
+    .quick-menu li.quick-menu-item-tier-4,
+    .quick-menu li.quick-menu-item-tier-5{
         background: none !important;        
     }
-    
+    .quick-menu ul{
+        background: /*[[backgroundColor]]*/ !important;
+    }
+
 
     button.ct-button.character-button.ddbc-button.character-button-block,
     button.ct-button.character-button.ddbc-button.character-button-block:hover,
