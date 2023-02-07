@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.220
+@version      1.3.221
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -3166,6 +3166,13 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true"){
     #combat_tracker_inside #round_number_label{
         color: /*[[fontColor]]*/ !important;    
     }
+    
+    .body-rpgcharacter-sheet #combat_tracker_inside #round_number_label{
+        border-bottom: none;
+    }
+    .body-rpgcharacter-sheet #combat_tracker_inside #round_number_label{
+        border-bottom: none;
+    }
     .ct-character-sheet__inner{
         background-repeat: no-repeat !important;
         background-position: top center !important;
@@ -3411,6 +3418,12 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true"){
     #combat_footer{
         padding-top: 9px !important;  
         bottom: -40px !important;
+    }
+    .body-rpgcharacter-sheet #combat_footer button.enabled{
+        box-shadow: inset 0px 0px 0px 12px #F002, inset 0px 0px 3px 0px #Fff6;
+    }
+    .body-rpgcharacter-sheet #combat_footer{
+        bottom: -27px !important;
     }
     .ct-sidebar{
         height: 100vh !important;   
