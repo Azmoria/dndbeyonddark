@@ -2,13 +2,13 @@ _Note:_ If you are having problems with dice not rendering behind the window see
 
 
 
-For chrome this and dice speed have been put into an extension which you can find <a href="ahttps://chrome.google.com/webstore/detail/beyond-dice-tray/endcocbbbeihjgkcpopkkldchjfhjagn?hl=en&authuser=0">here</a>
+For chrome this and dice speed have been put into an extension which you can find <a href="https://chrome.google.com/webstore/detail/beyond-dice-tray/endcocbbbeihjgkcpopkkldchjfhjagn?hl=en&authuser=0">here</a>
 
 
 
 
 
-
+----
 
 
 [![Capture Dice from DNDBeyond for Streaming/OBS](https://user-images.githubusercontent.com/65363489/150996224-001f9634-2a69-435b-8a70-a2190cb8d500.png)](https://youtu.be/mpB4d-lpnRU")
