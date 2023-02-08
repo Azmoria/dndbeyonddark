@@ -1,5 +1,16 @@
 _Note:_ If you are having problems with dice not rendering behind the window see <a href="https://github.com/Azmoria/dndbeyonddark/blob/master/Dice%20Capture%20README.md#:~:text=You%20can%20put,hidden%20behind%20others.">This section</a> for a work around.
 
+
+
+For chrome this and dice speed have been put into an extension which you can find <a href="ahttps://chrome.google.com/webstore/detail/beyond-dice-tray/endcocbbbeihjgkcpopkkldchjfhjagn?hl=en&authuser=0">here</a>
+
+
+
+
+
+
+
+
 [![Capture Dice from DNDBeyond for Streaming/OBS](https://user-images.githubusercontent.com/65363489/150996224-001f9634-2a69-435b-8a70-a2190cb8d500.png)](https://youtu.be/mpB4d-lpnRU")
 
 
