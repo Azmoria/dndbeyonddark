@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.221
+@version      1.3.222
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -3062,7 +3062,9 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true"){
     a.ddbeb-button{
         border: 1px /*[[rollColor]]*/ solid !important;
     }
-
+    .dice-toolbar {
+        background-color: var(--dice-color) !important;
+    }
 
     .encounter-builder-app .integrated-dice__container, .mon-stat-block button[data-exp] {
         color: /*[[rollColor]]*/ !important;
