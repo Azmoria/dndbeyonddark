@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.222
+@version      1.3.223
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -3540,7 +3540,6 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true"){
         backdrop-filter: brightness(0.8);      
     }
     .journal-chapter-title{
-        background: linear-gradient(to top, /*[[background]]*/, /*[[fontColor]]*/ 250%);
         text-shadow:1px 1px /*[[background]]*/,
         -1px -1px 0 /*[[background]]*/,  
          1px -1px 0 /*[[background]]*/,
@@ -3553,6 +3552,17 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true"){
         margin-bottom: 10px;
     }
     
+    #tokenOptionsPopup button,
+    .dcm-section-header,
+    #combat_area td:nth-of-type(4),
+    #combat_area tr[data-name].CTToken:before,
+    #combat_area tr.CTToken:before,
+    .sidebar-list-item-row-details-title{
+        color: /*[[fontColor]]*/;        
+    }
+    .sidebar-list-item-row {
+        border: 1px solid #d8e1e87d;
+    }
     .hpbar{
         border: 1px solid /*[[fontColor]]*/;
     }
@@ -3563,7 +3573,24 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true"){
         position: relative;   
     }
     
-
+    .panel-warning,
+    .sidebar-list-item-row,
+    .sidebar-list-item-row.encounter.collapsed, 
+    .sidebar-list-item-row.folder.collapsed{
+        background: none;
+        backdrop-filter: brightness(2.5) blur(2px);
+    }
+    .sidebar-list-item-row.player-row .player-expansion-button{
+        background:/*[[sidebarColor]]*/;
+        filter:brightness(2.5);
+    }
+    .panel-warning{
+        box-shadow:none;
+    }
+    .sidebar-list-item-row.encounter, 
+    .sidebar-list-item-row.folder{
+        background:/*[[sidebarColor]]*/;
+    }
     #monster-panel:before{
         content: '';
         position: absolute;
