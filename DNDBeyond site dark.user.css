@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.383
+@version      1.2.384
 @author       Azmoria (Jay_Lane)
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -5299,7 +5299,6 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .custom-token-image-row,
     [class*="custom-token-image-row"]:not(.custom-token-image-row-handle),
     .sidebar-panel-body button,
-    .ability_score,
     .sidebar-panel-body p,
     #tokens-panel-header,
     #tokens-panel-footer,
@@ -5393,14 +5392,23 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         background: none !important;
         backdrop-filter: brightness(0.8);      
     }
+    .note-list .sidebar-list-item-row{
+        background: none;
+        backdrop-filter: brightness(1.5)
+    }
     .journal-chapter-title{
-        background: linear-gradient(to top, /*[[backgroundColor]]*/, /*[[fontColor]]*/ 250%);
         text-shadow:1px 1px /*[[backgroundColor]]*/,
         -1px -1px 0 /*[[backgroundColor]]*/,  
          1px -1px 0 /*[[backgroundColor]]*/,
         -1px 1px 0 /*[[backgroundColor]]*/,
         1px 1px 0 /*[[backgroundColor]]*/ !important;
         padding-left: 5px;
+    }
+    .btn-chapter-icon{
+        opacity:0.6
+    }
+    .sidebar-list-item-row{
+        border: 1px solid #d8e1e87d;
     }
     .journal-chapter{
         border: 1px solid /*[[borderColor]]*/;
@@ -5587,17 +5595,25 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     }
     
     /*Player and scene panels Start*/
-    
-    .sidebar-list-item-row.encounter, 
-    .sidebar-list-item-row.folder,
+
+    .panel-warning,
     .sidebar-list-item-row,
-    .sidebar-list-item-row.player-row .player-expansion-button,
     .sidebar-list-item-row.encounter.collapsed, 
     .sidebar-list-item-row.folder.collapsed{
-        background: /*[[sidebarColor]]*/;
-       
+        background: none;
+        backdrop-filter: brightness(2.5) blur(2px);
     }
-    
+    .sidebar-list-item-row.player-row .player-expansion-button{
+        background:/*[[sidebarColor]]*/;
+        filter:brightness(2.5);
+    }
+    .panel-warning{
+        box-shadow:none;
+    }
+    .sidebar-list-item-row.encounter, 
+    .sidebar-list-item-row.folder{
+        background:/*[[sidebarColor]]*/;
+    }
     .sidebar-list-item-row-details
     {
      color: /*[[fontColor]]*/;
