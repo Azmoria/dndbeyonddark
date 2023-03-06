@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.223
+@version      1.3.226
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -732,7 +732,7 @@ EOT;
 
 ==/UserStyle== */
 @-moz-document regexp("https://www.dndbeyond.com/profile/.*/characters/\\d*"),
-regexp("https://www.dndbeyond.com/characters/\d.*"), 
+regexp("https://www.dndbeyond.com/characters/\\d.*"), 
 regexp("https://www.dndbeyond.com/profile.*abovevtt=true"),
 regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true") {
     
@@ -1477,9 +1477,16 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true") {
     }
     
 
-    .ct-character-sheet--dice-enabled .integrated-dice__container:hover{
+    .ct-character-sheet--dice-enabled .integrated-dice__container:hover,
+    .above-aoe.integrated-dice__container:hover{
         border-color: /*[[rollColor]]*/ !important;
     }
+    
+    
+    .above-aoe.integrated-dice__container:hover{
+        background: /*[[rollCalcColor]]*/ !important;
+    }
+   
     .integrated-dice__container span,
     .avtt-roll-formula-button.integrated-dice__container {
         color: /*[[rollColor]]*/ !important;
