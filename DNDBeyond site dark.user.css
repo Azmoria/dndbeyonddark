@@ -2,8 +2,8 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.394
-@author       Azmoria (Jay_Lane)
+@version      1.2.396
+@author       Azmoria (Jay_Lane) 
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -2510,7 +2510,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .playtest--download-pdf a,
     .mce-abs-layout-item button,
     .mce-tabs,
-    .mce-i-checkbox{
+    .mce-i-checkbox,
+    .privacy-policy-notice{
 		background-color: /*[[transparencyBackgroundColor]]*/ !important;
 	}
     body #site-main a.onedndcard--playtest-disclaimer-view-faq,
@@ -5081,11 +5082,35 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     #resizeDragMon .avtt-stat-block-container .detail-content,
     .sidebar-flyout .tooltip ~ div,
     #playerTokenSelectedWarning,
-    #above-vtt-error-message
+    #above-vtt-error-message,
+    #qrm_dialog .menu_table,
+    #qrm_dialog #quick_roll_footer,
+    #qrm_dialog .general_input
     {
         text-shadow: none !important;   
         background: /*[[backgroundColor]]*/ !important;
         color: /*[[fontColor]]*/ !important;
+    }
+    #qrm_dialog #quick_roll_footer{
+        border-radius: 0px 0px 5px 5px;
+        border-top: 1px solid #666
+    }
+    #qrm_dialog{
+        border-radius:5px
+    }
+    #qrm_dialog #quick_roll_title_bar{
+        position: absolute !important;
+        top: -22px;
+        width: calc(100% + 2px);
+        left: -1px;
+        border:1px solid #ddd;
+        border-bottom:0px;
+    }
+    #qrm_dialog .menu_table{
+        overflow-x:hidden;
+    }
+    #qrm_dialog {
+        border-width:1px !important;
     }
     
     .legacy-monster{ 
@@ -5184,6 +5209,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     #playersFolder .subtitle-attibute .material-icons{
         opacity: 0.6;
     }
+    
+    
 
     #playersFolder .subtitle-title{
         color: /*[[fontColor]]*/ !important;
@@ -5518,7 +5545,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .scene_selector button,
     .custom-gamelog-message,
     #combat_tracker_inside #combat_footer button,
-    #combat_tracker_inside #combat_area button{
+    #combat_tracker_inside #combat_area button,
+    #qrm_dialog button{
         color: /*[[fontColor]]*/ !important;
     }
     
@@ -5758,7 +5786,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     }
     
     #combat_area button,
-    #combat_area input.init{
+    #combat_area input.init,
+    #qrm_dialog button{
         border: none !important;  ;  
         text-shadow:none !important;
         background: /*[[backgroundColor]]*/ !important;
@@ -5779,14 +5808,17 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         box-shadow: inset 0 1px 1px -2px /*[[fontColor]]*/, inset -1px -1px 3px -2px /*[[fontColor]]*/;
     }
     
-    #combat_area button:hover{
+    #combat_area button:hover,
+    #qrm_dialog button:hover{
         box-shadow: inset 0 1px 1px -2px /*[[linkColor]]*/, inset -1px -1px 3px -2px /*[[linkColor]]*/;  
         color: /*[[linkColor]]*/;  
     }
-    #combat_area button{
+    #combat_area button,
+    #qrm_dialog button{
         box-shadow: inset 0 1px 1px -2px /*[[fontColor]]*/, inset -1px -1px 4px -2px /*[[fontColor]]*/;
     }
-    #combat_area button:hover{
+    #combat_area button:hover,
+    #qrm_dialog button:hover{
         box-shadow: inset 0 1px 1px -2px /*[[linkColor]]*/, inset -1px -1px 4px -2px /*[[linkColor]]*/;
     }
     
@@ -5795,12 +5827,19 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     #combat_area button:hover .rollSVG path:not([fill*="none"]), 
     #combat_area button:hover .findSVG path:not([fill*="none"]), 
     #combat_area button:hover .delSVG path:not([fill*="none"]), 
-    #combat_area button:hover .statSVG path:not([fill*="none"]) {
+    #combat_area button:hover .statSVG path:not([fill*="none"]),
+    #qrm_dialog button:hover .closedEye path:not([fill*="none"]),
+    #qrm_dialog button:hover .openEye path:not([fill*="none"]),
+    #qrm_dialog button:hover .rollSVG path:not([fill*="none"]), 
+    #qrm_dialog button:hover .findSVG path:not([fill*="none"]), 
+    #qrm_dialog button:hover .delSVG path:not([fill*="none"]), 
+    #qrm_dialog button:hover .statSVG path:not([fill*="none"]){
         fill: /*[[linkColor]]*/;
     }
     
     #combat_footer,
     #combat_tracker_inside .tracker-list #combat_area button,
+    #qrm_dialog button,
     #combat_tracker_inside #round_number_label button{
         background-image:none !important;
         background:  /*[[combatTrackerBackgroundColor]]*/ !important;
@@ -5822,7 +5861,73 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         fill: /*[[fontColor]]*/;
     }
     
-   
+    #qrm_dialog .roll_mods_button{
+        background: none !important;
+        box-shadow: none !important;
+    }
+     #qrm_dialog .roll_mods_button#adv{   
+        filter: sepia(0.3) hue-rotate(63deg) saturate(8);
+        opacity: 0.5;
+    }
+      #qrm_dialog .roll_mods_button#disadv{   
+        filter: sepia(0.3) hue-rotate(312deg) saturate(14);
+         opacity: 0.5;
+    }
+    #qrm_dialog .roll_mods_button#adv[value='ON']{   
+         filter: sepia(0.3) hue-rotate(63deg) saturate(8) drop-shadow(0px 0px 3px #0F0);
+         opacity: 1;
+    }
+    #qrm_dialog .roll_mods_button#disadv[value='ON']{   
+         filter: sepia(0.3) hue-rotate(312deg) saturate(14) drop-shadow(0px 0px 3px #F00);
+        opacity: 1;
+    }
+    #qrm_dialog .roll_mods_button#disadv{
+        margin-left: 5px;
+    }
+    #qrm_dialog .roll_mods_group{
+        display: flex;
+        align-items: center;
+        position: relative;
+        left: 2%;
+    }
+    #qrm_dialog .roll_mods_group button{
+        width: 20px !important;
+        height: 20px !important;
+    }
+    #qrm_dialog{
+        min-width:509px;
+    }
+    #qrm_dialog .qrm_name_line{
+        color: /*[[fontColor]]*/;
+    }
+    #quick_roll_area>tr>td>td:first-of-type{
+        width: 54% !important;
+    }
+    #quick_roll_area>tr>td>td:nth-of-type(2){
+        width: 19% !important;
+    }
+    #quick_roll_area>tr>td>td:nth-of-type(3){
+        width: 20% !important;
+    }
+    #quick_roll_area #roll_bonus{
+        width: 35% !important;
+    }
+    #quick_roll_area #qrm_roll_result{
+        width: 55% !important;
+    }
+    #qrm_dialog button{
+        border-radius: 5px !important;
+        margin-top:5px
+            
+    }
+    
+    #quick_roll_area #qrm_roll_result[style*='background: red']{
+        box-shadow:inset 0px 0px 10px 0px #F00 !important;
+    }
+    #quick_roll_area #qrm_roll_result[style*='background: green']{
+        box-shadow:inset 0px 0px 10px 0px #0f0 !important;
+    }
+    
     .rollSVG{
         width: 16px;
         bottom: 0px;
