@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.400
+@version      1.2.401
 @author       Azmoria (Jay_Lane) 
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -5529,8 +5529,7 @@ img[src*='assets/icons/delete.svg']{
     .btn-chapter-icon:has(>img){
         opacity:1;
     }
-    no-repeat;
-    }
+  
     .sidebar-list-item-row{
         border: 1px solid #d8e1e87d;
     }
