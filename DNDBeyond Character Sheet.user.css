@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.227
+@version      1.3.228
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -3133,7 +3133,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true"){
         fill: #fff !important;
         stroke: #fff !important;
     }
-    .ddbc-tab-options--layout-pill .ddbc-tab-options__header-heading--is-active svg path{
+    .ddbc-tab-options--layout-pill .ddbc-tab-options__header-heading svg path{
         fill: #fff !important;
     }
     
@@ -3891,7 +3891,9 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true"){
         transition: none;
         border: 1px solid lightgray;
     }
-    
+    #combat_area tr.CTToken:before{
+        font-size: 11px
+    }
     
     .sidebar__controls button.hasTooltip,
     #combat_tracker_inside button,
