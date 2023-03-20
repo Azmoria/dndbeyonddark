@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.401
+@version      1.2.402
 @author       Azmoria (Jay_Lane) 
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -4654,7 +4654,9 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .player-see-more img[src$="arrows_down.png"][src^="chrome-extension:"]{
         /*[[aboveFilter]]*/
     }
-
+   .sidebar-panel-body button img[src*="/assets/icons/save.svg"]{
+        filter: none;
+    }
     .popup-content {
         background-color: /*[[sidebarColor]]*/ !important;
     }
@@ -5513,7 +5515,10 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .btn-chapter-icon{
         opacity:0.6
     }
-img[src*='assets/icons/delete.svg']{
+ 
+    
+    
+    img[src*='assets/icons/delete.svg']{
         background-color: /*[[fontColor]]*/;
         -webkit-mask-size: cover;
         width: 20px;
@@ -5727,13 +5732,13 @@ img[src*='assets/icons/delete.svg']{
 
     }
     .quick-menu-item-link.importer-back-button,
-     .quick-menu-item-link.importer-back-button:hover
+    .quick-menu-item-link.importer-back-button:hover
     {
         color: /*[[linkColor]]*/; 
         margin-right: 20px;
     }
     
-        #mega_importer.source_select .sidebar-scroll-menu a.back-to-source-select:before {
+    #mega_importer.source_select .sidebar-scroll-menu a.back-to-source-select:before {
         mask-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 1035 1612" wtx-context="05D16396-5013-40FF-8B8A-9908FE3CC7DF"%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23000; %7D %3C/style%3E%3C/defs%3E%3Ctitle%3Echevron-left-white%3C/title%3E%3Cpath class="cls-1" d="M1184,90q26.5,0,45.5,19l165,166q19,19,19,45t-19,45l-531,531,531,531q19,19,19,45t-19,45l-165,166q-19,19-45.5,19t-45.5-19l-741-742q-19-19-19-45t19-45l741-742Q1157.5,90,1184,90Z" transform="translate(-378.5 -90)"/%3E%3C/svg%3E');
         -webkit-mask-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 1035 1612" wtx-context="05D16396-5013-40FF-8B8A-9908FE3CC7DF"%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23000; %7D %3C/style%3E%3C/defs%3E%3Ctitle%3Echevron-left-white%3C/title%3E%3Cpath class="cls-1" d="M1184,90q26.5,0,45.5,19l165,166q19,19,19,45t-19,45l-531,531,531,531q19,19,19,45t-19,45l-165,166q-19,19-45.5,19t-45.5-19l-741-742q-19-19-19-45t19-45l741-742Q1157.5,90,1184,90Z" transform="translate(-378.5 -90)"/%3E%3C/svg%3E');
         -webkit-mask-repeat: no-repeat;
