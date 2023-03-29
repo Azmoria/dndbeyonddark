@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.404
+@version      1.2.405
 @author       Azmoria (Jay_Lane) 
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -5156,11 +5156,25 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         fill: #fff !important;
         stroke: #fff !important;
     }
-    .ddbc-tab-options--layout-pill .ddbc-tab-options__header-heading svg path{
+    .ddbc-tab-options--layout-pill .ddbc-tab-options__header-heading svg path,
+    #sounds-panel svg path{
         fill: #fff !important;
     }
-    
-
+    #track-list li:hover{
+        background: none;
+        backdrop-filter: brightness(1.5);
+    }
+    #sounds-panel .sidebar-panel-header button.pressed{
+        border: 1px solid transparent !important;  
+    }
+    #sounds-panel .sidebar-panel-body>button:first-of-type{
+        margin-right: 10px;
+    }
+    #sounds-panel .sidebar-panel-body>button{
+        border-radius: 5px;
+        border-width: 1px;
+        border-style: solid;
+    }
     #combat_area tr[data-name].CTToken:before{
         opacity:0.6;
     }
