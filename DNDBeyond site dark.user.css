@@ -1978,7 +1978,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
      
     body,
     .sidebar-scroll-menu{
-       overflow: overlay !important;
+       overflow: scroll !important;
     }
         
     div#site{
@@ -5578,9 +5578,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .sidebar-panel-header{
         position: relative;   
     }
-    .sidebar-panel-content .sidebar-panel-body{
-        border-width: 0px;      
-    }    
+
      .sidebar__controls{
         z-index: 105 !important;
     }
