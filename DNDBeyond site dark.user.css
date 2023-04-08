@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.407
+@version      1.2.408
 @author       Azmoria (Jay_Lane) 
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -1978,7 +1978,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
      
     body,
     .sidebar-scroll-menu{
-       overflow: scroll !important;
+       overflow: overlay !important;
+      
     }
         
     div#site{
@@ -5123,6 +5124,9 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         left: -1px;
         border:1px solid #ddd;
         border-bottom:0px;
+    }
+    .sidebar-menu .sidebar-scroll-menu {
+        overflow: scroll !important;
     }
     #qrm_dialog .menu_table{
         overflow-x:hidden;
