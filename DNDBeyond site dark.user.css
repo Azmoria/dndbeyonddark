@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.409
+@version      1.2.410
 @author       Azmoria (Jay_Lane) 
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -468,6 +468,9 @@ regexp("https://www.dndbeyond.com/sources/dosi/.*"), regexp("https://www.dndbeyo
     html body.hide-ads #site-main #footer-push{
         background: none !important;  
     }
+    html body.responsive-enabled{
+        --theme-page-bg-image-base: url(https://media.dndbeyond.com/compendium-images/one-dnd/3t4Ut1eEc3GNh103/one-dnd-bg-texture.png) !important;
+    }
     @media(min-width:1024px){
         body{
             background: var(--theme-page-bg-image-1024) no-repeat center 114px,var(--theme-page-bg-image-base) var(--theme-page-bg-color) !important;
@@ -479,7 +482,7 @@ regexp("https://www.dndbeyond.com/sources/dosi/.*"), regexp("https://www.dndbeyo
         }
     }
     @media(min-width:2561px){
-        body{
+         body{
             background: var(--theme-page-bg-image-2561) no-repeat center 114px,var(--theme-page-bg-image-base) var(--theme-page-bg-color) !important;
         }
     }
