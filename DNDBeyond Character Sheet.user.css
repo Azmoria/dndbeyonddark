@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.228
+@version      1.3.229
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -863,7 +863,8 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true") {
     [class^="ct-vehicle-block__block"],
     .ct-vehicle-pane__tag,
     .ct-quick-nav__button,
-    .ct-reset-pane__hitdie-manager-dice .integrated-dice__container
+    .ct-reset-pane__hitdie-manager-dice .integrated-dice__container,
+    .claimPremade-buttonContent
     {
         background-color: /*[[sheetColor]]*/ !important;
         color: /*[[fontColor]]*/ !important;
