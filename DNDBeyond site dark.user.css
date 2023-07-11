@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.413
+@version      1.2.414
 @author       Azmoria (Jay_Lane) 
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -5738,7 +5738,10 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         box-shadow: inset 0 0 10px 1px /*[[linkColor]]*/ !important;
         color: /*[[linkColor]]*/ !important;
     }
-   
+    .top_menu .ddbc-tab-options--layout-pill button{
+        backdrop-filter: brightness(1.5);
+        background: none !important;
+    }
   
     .player-card-footer .ability_value,
     .player-card-footer .ability_score{
@@ -6041,7 +6044,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     #mega_importer button:hover, 
     #prewiz td button:hover, 
     #wizard_popup button:hover, 
-    .top_menu button:hover, 
+
     .monster_frame > button:hover, 
     .stp-btn:hover, 
     .player-actions button:hover, 
@@ -6054,6 +6057,10 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         color: /*[[linkColor]]*/ !important;
         border-color: /*[[linkColor]]*/ !important;
         transition: none;
+    }
+    .top_menu .ddbc-tab-options--layout-pill button:hover{
+        background: none !important;
+        backdrop-filter: brightness(2.8) !important;
     }
     
     button[id$='-button'], 
@@ -6106,8 +6113,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     }
     
     .scene button,
-    .top_menu button,
-    .top_menu button.button-enabled{
+    .top_menu button{
         border: none;
         box-shadow: none;
         padding: 2px 8px;
