@@ -2880,7 +2880,8 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true") {
 /*dice Cusomtization and JS compainion script css*/   
     canvas.dice-rolling-panel__container,
     body#diceTrayBody video,
-    body#diceTrayBody canvas{
+    body#diceTrayBody canvas,
+    canvas#dddice-canvas{
         filter: /*[[diceTint]]*/;
     }
     body#diceTrayBody video,
