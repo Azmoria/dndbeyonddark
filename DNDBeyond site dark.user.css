@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.414
+@version      1.2.415
 @author       Azmoria (Jay_Lane) 
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -6454,7 +6454,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
 regexp("https://www.dndbeyond.com/combat-tracker.*"), regexp("https://www.dndbeyond.com/campaigns/.*"),
 regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond.com/my-encounters"), regexp("https://www.dndbeyond.com/monsters/.*"), regexp("https://www.dndbeyond.com/encounter-builder.*#DiceTray"),
 regexp("https://www.dndbeyond.com/combat-tracker.*#DiceTray"), regexp("https://www.dndbeyond.com/campaigns.*#DiceTray"),
-regexp("https://www.dndbeyond.com/encounters.*#DiceTray"), regexp("https://www.dndbeyond.com/my-encounters.*#DiceTray"){
+regexp("https://www.dndbeyond.com/encounters.*#DiceTray"), regexp("https://www.dndbeyond.com/my-encounters.*#DiceTray"), regexp("https://dddice.com/room/.*"){
     :root {
         --custom-capture-background: /*[[customCaptureBackground]]*/;
         --dice-color: sepia(/*[[diceSepia]]*/%) hue-rotate(/*[[hueRotation]]*/deg) brightness(/*[[diceBrightness]]*/%) saturate(/*[[diceSaturation]]*/%) contrast(/*[[diceContrast]]*/%) invert(/*[[diceInvert]]*/);
@@ -6745,7 +6745,9 @@ regexp("https://www.dndbeyond.com/encounters.*#DiceTray"), regexp("https://www.d
 /*dice Cusomtization and JS compainion script css*/   
     canvas.dice-rolling-panel__container,
     body#diceTrayBody video,
-    body#diceTrayBody canvas{
+    body#diceTrayBody canvas,
+    canvas#dddice-canvas,
+    #dddice canvas{
         filter: /*[[diceTint]]*/
     }
     body#diceTrayBody video{
