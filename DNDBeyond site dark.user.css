@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.416
+@version      1.2.417
 @author       Azmoria (Jay_Lane) 
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -6153,6 +6153,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .sidebar__controls .tab-btn{
         background-color: /*[[backgroundColor]]*/ !important;
     }
+
     .sidebar-tab-image > div[style*=-webkit-mask]:hover, 
     .sidebar-tab-image > div[style*=-webkit-mask]:hover{
         background-color: /*[[linkColor]]*/ !important;
@@ -6161,9 +6162,29 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
    .gamelog-button__icon path{
           fill: /*[[fontColor]]*/;
     }
+    
     .sidebar-tab-image:hover .gamelog-button__icon path{
           fill: /*[[linkColor]]*/;
     }
+    
+    .tab-btn.notification .gamelog-button__icon path{
+         animation: 2s gamelogflash infinite ease-in-out
+    }
+  
+    @keyframes gamelogflash{
+        0%, 100%{
+            fill: /*[[linkColor]]*/;
+             transform: scale(1.1)
+       
+        }
+        50%{
+            fill: /*[[fontColor]]*/;
+             transform: scale(1)
+        }
+    }
+
+    
+    
     #combat_tracker_inside #combat_area{
         width: 100%;   
     }
