@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.419
+@version      1.2.420
 @author       Azmoria (Jay_Lane) 
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -1997,6 +1997,26 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     --background-color: /*[[backgroundColor]]*/;
     --transparency-color: /*[[transparencyBackgroundColor]]*/;
     }
+    
+    :root .site{
+        --theme-table-row-bg-hover: /*[[backgroundColor]]*/;
+        --theme-table-row-bg-dark: /*[[backgroundColor]]*/;
+        --theme-table-row-bg-light: /*[[backgroundColor]]*/;
+        --compendium-rules-sidebar-color: /*[[backgroundColor]]*/;
+        --compendium-quote-box-color: /*[[backgroundColor]]*/;
+        --sidebar-active-border: /*[[borderColor]]*/;
+        --sidebar-hover-border: /*[[linkColor]]*/;
+        --sidebar-active-bg: /*[[backgroundColor]]*/;
+        --sidebar-hover-bg: none;
+        --compendium-sidebar-bg: /*[[backgroundColor]]*/;
+        --compendium-sidebar-tier-1: /*[[backgroundColor]]*/;
+        --compendium-sidebar-tier-3: /*[[backgroundColor]]*/;
+        --compendium-sidebar-tier-4: /*[[backgroundColor]]*/;
+        --compendium-sidebar-tier-5: /*[[backgroundColor]]*/;
+        --nav-to-top-bg: /*[[backgroundColor]]*/;
+        --nav-to-top-hover-bg: /*[[linkColor]]*/;
+    }
+
      
     body,
     .sidebar-scroll-menu{
@@ -5785,7 +5805,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     }
      #scene_selector_toggle:hover .material-icons,
     .help-tabs li:hover a,
-    #mega_importer.source_select .sidebar-scroll-menu a{
+    #mega_importer.source_select .sidebar-scroll-menu a,
+    .tabs-content a{
          color: /*[[linkColor]]*/ !important;   
     }
     
