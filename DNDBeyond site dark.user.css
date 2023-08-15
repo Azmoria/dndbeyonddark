@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.420
+@version      1.2.421
 @author       Azmoria (Jay_Lane) 
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -189,7 +189,8 @@ dark "Dark Mode" <<<EOT
     .listing .info .row.spell-name .link,
     a[style*="color: #704cd9;"],
     .list-row-primary-text-spell,
-    .list-row-spell a{
+    .list-row-spell a,
+    .section-bigby-presents-glory-of-the-giants.body-page .p-article-a .p-article-content :is(.table-compendium,.text--rules-sidebar) .tooltip-hover.spell-tooltip{
         color: #896CE0 !important;
     }
     .tooltip-hover.magic-item-tooltip, 
@@ -1986,7 +1987,7 @@ regexp("https://www.dndbeyond.com/characters"),
 url-prefix("https://www.dndbeyond.com/search"),
 url-prefix("https://www.dndbeyond.com/modifier"),
 url-prefix("https://www.dndbeyond.com/entity"),
-url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyond.com/subclasses"), url-prefix("https://www.dndbeyond.com/articles"), url-prefix("https://www.dndbeyond.com/tag"), url-prefix("https://www.dndbeyond.com/subraces"), url-prefix("https://www.dndbeyond.com/changelog"), regexp("https://www.dndbeyond.com/profile/.*/characters"), regexp("https://www.dndbeyond.com/encounter-builder"), regexp("https://www.dndbeyond.com/my-encounters"), regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond.com/combat-tracker.*"), regexp("https://www.dndbeyond.com/items"), regexp("https://www.dndbeyond.com/my-dice"), regexp("https://www.dndbeyond.com/members/.*"), regexp("https://www.dndbeyond.com/private-messages.*"), regexp("https://www.dndbeyond.com/content/.*"), url-prefix("https://www.dndbeyond.com/account"), url-prefix("https://linkst.dndbeyond.com"), url-prefix("https://www.dndbeyond.com/new-content"), url-prefix("https://www.dndbeyond.com/my-notifications"), url-prefix("https://www.dndbeyond.com/linkout"), url-prefix("https://www.dndbeyond.com/members"), url-prefix("https://www.dndbeyond.com/comments"), regexp("https://www.dndbeyond.com/encounters.*abovevtt=true"), regexp("https://www.dndbeyond.com/spell-list.*"), regexp("https://www.dndbeyond.com/creature-rule.*"), regexp("https://www.dndbeyond.com/community-update"), regexp("https://www.dndbeyond.com/characters/premade.*"){
+url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyond.com/subclasses"), url-prefix("https://www.dndbeyond.com/articles"), url-prefix("https://www.dndbeyond.com/tag"), url-prefix("https://www.dndbeyond.com/subraces"), url-prefix("https://www.dndbeyond.com/changelog"), regexp("https://www.dndbeyond.com/profile/.*/characters"), regexp("https://www.dndbeyond.com/encounter-builder"), regexp("https://www.dndbeyond.com/my-encounters"), regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond.com/combat-tracker.*"), regexp("https://www.dndbeyond.com/items"), regexp("https://www.dndbeyond.com/my-dice"), regexp("https://www.dndbeyond.com/members/.*"), regexp("https://www.dndbeyond.com/private-messages.*"), regexp("https://www.dndbeyond.com/content/.*"), url-prefix("https://www.dndbeyond.com/account"), url-prefix("https://linkst.dndbeyond.com"), url-prefix("https://www.dndbeyond.com/new-content"), url-prefix("https://www.dndbeyond.com/my-notifications"), url-prefix("https://www.dndbeyond.com/linkout"), url-prefix("https://www.dndbeyond.com/members"), url-prefix("https://www.dndbeyond.com/comments"), regexp("https://www.dndbeyond.com/encounters.*abovevtt=true"), regexp("https://www.dndbeyond.com/spell-list.*"), regexp("https://www.dndbeyond.com/creature-rule.*"), regexp("https://www.dndbeyond.com/community-update"), regexp("https://www.dndbeyond.com/characters/premade.*"), regexp("https://www.dndbeyond.com/claim.*"){
 
     :root, :before, :after{
     --custom-icon-filter: /*[[iconFilter]]*/;
@@ -2591,7 +2592,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .ddb-campaigns-character-card-footer-links a[class*="ddb-listing-client"],
     .ddb-campaigns-character-card-footer-links div:not(:last-of-type)>button,
     tbody.tier--odd td,
-    tbody.tier--even td{
+    tbody.tier--even td,
+    .compendium-art figcaption a.ddb-lightbox-outer{
         background: none !important;
     }
     
@@ -3015,7 +3017,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .encounter-details-difficulty-summary__party-summary-button:hover,
     .MuiChip-labelSmall,
     .toc--index a:hover strong, 
-    .toc--index a:focus strong
+    .toc--index a:focus strong,
+    #site .claim .button:hover
     {
 		color: /*[[linkColor]]*/ !important
 	}
@@ -3154,7 +3157,13 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
 		!important;
         outline: none !important;
 	}
- 
+    
+    .section-bigby-presents-glory-of-the-giants .text--diancastras-saga,
+    aside.text--bigby-notes,
+    aside.bigby--giant-runes.runes-parchment,
+    aside.text--bigby-open{
+        color: #000 !important;
+    }
     
      aside.text--krynn-sidebar,
     .text--krynn-letter p{
@@ -3178,7 +3187,11 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .body-rpghomebrew a.character-button-block,
     #encounter-builder-root .input-select__dropdown-wrapper,
     .portrait-name-avatar-none,
-    .adventure-chapter-header{
+    .adventure-chapter-header,
+    aside.text--diancastras-saga,
+    aside.text--diancastra-double,
+    aside.bigby--giant-runes.runes-parchment,
+    aside.text--bigby-open{
 		border: none !important;
 	}
     	
@@ -3260,7 +3273,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .section-rules .site-bar, 
     .site-bar.section-compendium,
     #content-management-root .ddb-button,
-    .Mui-focused fieldset
+    .Mui-focused fieldset,
+    #site .claim .button:hover
     {
         border-color: /*[[linkColor]]*/ !important;
     }
@@ -4031,11 +4045,12 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .p-comments-b .p-comment-user .p-comment-stats .p-comment-statitem .postbit-item,
     body.body-forum .single-column #content .p-forum-a .p-comment-post .u-dropDown span.user.user-role-registered-users,
     .mon-stat-block button.integrated-dice__container,
-    .mon-stat-block button[data-exp]{
+    .mon-stat-block button[data-exp],
+    #site .claim .button{
         background: none !important;
     }
     .body-page .p-article-a .p-article-content h2::after, 
-    .body-page .p-article-a .p-article-content h3::after, 
+    .body-page .p-article-a .p-article-content h3::after, x
     .section-posts .p-article-a .p-article-content h2::after, 
     .section-posts .p-article-a .p-article-content h3::after, 
     .p-article-a .section-changelog .p-article-content h2::after, 
@@ -6559,7 +6574,8 @@ regexp("https://www.dndbeyond.com/encounters.*#DiceTray"), regexp("https://www.d
     .glc-game-log button,
     .MuiPopover-root .MuiPaper-root,
     .mon-stat-block button.integrated-dice__container:hover,
-    [class*="GameLogNotification_MessageIcon"]
+    [class*="GameLogNotification_MessageIcon"],
+    .avtt-roll-button:hover
     {
         background-color: /*[[rollCalcColor]]*/ !important;
     }
@@ -6776,13 +6792,15 @@ regexp("https://www.dndbeyond.com/encounters.*#DiceTray"), regexp("https://www.d
     
 
     .encounter-builder-app .integrated-dice__container,
-    .mon-stat-block button[data-exp] {
+    .mon-stat-block button[data-exp],
+    .avtt-roll-button{
         color: /*[[rollColor]]*/ !important;
         background: /*[[backgroundColor]]*/ !important;
-        border: 1px solid #0000;
+        border: 1px solid #0000 !important;
     }
     .encounter-builder-app .integrated-dice__container:hover,
-    .mon-stat-block button[data-exp] {
+    .mon-stat-block button[data-exp],
+    .avtt-roll-button:hover{
         border: 1px /*[[rollColor]]*/ solid !important;
     }
 
