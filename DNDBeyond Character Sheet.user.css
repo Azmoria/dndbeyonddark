@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.235
+@version      1.3.236
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -3059,8 +3059,26 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true"){
         background: /*[[background]]*/ !important;
         color: /*[[fontColor]]*/;
     }
-    .
     
+    
+   
+    .tooltip-body-description table tbody tr:nth-child(odd),
+    .tooltip-body-description table tbody tr:nth-child(even),
+    .tooltip-body-description table tbody tr,
+    .info-tooltip-popup,
+    .info-tooltip-popup tr,
+    .info-tooltip-popup tr,
+    .tooltip-body-statblock-item-value,
+    .tooltip-body-statblock-item-label,
+    .tooltip-body-description,
+    .sidebar-flyout .tooltip ~ div{
+        background: /*[[background]]*/ !important; 
+        color: /*[[fontColor]]*/ !important;
+    }
+    .tooltip-hover,
+    .tooltip-hover:hover{
+        color: /*[[highlightColor]]*/ !important;
+    }
     .tooltip,
     .sidebar-flyout>div,
     a.ddbeb-button{
