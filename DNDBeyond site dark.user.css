@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.424
+@version      1.2.425
 @author       Azmoria (Jay_Lane) 
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -2079,6 +2079,40 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .body-forum-search .p-comments-a .p-comment-post,
     .quick-menu-item-active>.quick-menu-item-label{
         background: none;
+    }
+    
+    [role='presentation']>[class*='ddb-character-app']:nth-of-type(3),
+    [role='presentation']>[class*='ddb-character-app']:nth-of-type(3) [class*='ddb-character-app']{
+        background: /*[[backgroundColor]]*/;
+        color: /*[[fontColor]]*/;
+    }
+
+     .ddb-character-app-14q7noi>[class*='ddb-character-app'] .ddbc-ability-summary *{
+        color: #000;
+    }
+     .ddb-character-app-14q7noi>[class*='ddb-character-app'] .ddbc-ability-summary [class*='dark-mode'],
+     .ddb-character-app-14q7noi>[class*='ddb-character-app'] label,
+     .ddb-character-app-14q7noi>[class*='ddb-character-app'] p,
+    .my-characters-wrapper .ddb-characters-listing button{
+        color: /*[[fontColor]]*/ !important;
+    }
+    
+    .ddb-character-app-14q7noi>[class*='ddb-character-app'] .Mui-selected{
+        color: /*[[linkColor]]*/ !important;
+        border: 1px solid /*[[linkColor]]*/ !important;
+        margin: 3px;
+        border-radius: 5px !important;
+    }
+
+     .ddb-character-app-14q7noi>[class*='ddb-character-app'] .Mui-checked path{
+        fill: /*[[linkColor]]*/
+    }
+     .ddb-character-app-14q7noi>[class*='ddb-character-app'] .Mui-checked svg,
+    .my-characters-wrapper .ddb-characters-listing button{
+        background: none !important;
+    }
+    .my-characters-wrapper .ddb-characters-listing button{
+        border-color:  !important;
     }
     
 	body.responsive-enabled #site #site-main .container #content,
