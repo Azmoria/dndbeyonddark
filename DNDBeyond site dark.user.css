@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.425
+@version      1.2.426
 @author       Azmoria (Jay_Lane) 
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -5947,7 +5947,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .sidebar-list-item-row.encounter.collapsed, 
     .sidebar-list-item-row.folder.collapsed{
         background: none;
-        backdrop-filter: brightness(2.5) blur(2px);
+        backdrop-filter: brightness(2.5);
+        transform: none !important;
     }
     .sidebar-list-item-row.player-row .player-expansion-button{
         background:/*[[sidebarColor]]*/;
