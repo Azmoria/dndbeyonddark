@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.426
+@version      1.2.427
 @author       Azmoria (Jay_Lane) 
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -2111,9 +2111,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .my-characters-wrapper .ddb-characters-listing button{
         background: none !important;
     }
-    .my-characters-wrapper .ddb-characters-listing button{
-        border-color:  !important;
-    }
+
     
 	body.responsive-enabled #site #site-main .container #content,
 	body.responsive-enabled #site #site-main.fixed .container #content,
@@ -4104,7 +4102,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         background: none !important;
     }
     .body-page .p-article-a .p-article-content h2::after, 
-    .body-page .p-article-a .p-article-content h3::after, x
+    .body-page .p-article-a .p-article-content h3::after,
     .section-posts .p-article-a .p-article-content h2::after, 
     .section-posts .p-article-a .p-article-content h3::after, 
     .p-article-a .section-changelog .p-article-content h2::after, 
@@ -4269,10 +4267,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     #campaigns-client .MuiList-root{
         background: none !important;
     }
-    #campaigns-client .MuiButtonBase-root{
-        background: 
-    }
-    
+
+
     
 
     button.ct-button.character-button.ddbc-button.character-button-block,
