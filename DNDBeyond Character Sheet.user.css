@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.237
+@version      1.3.238
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -124,10 +124,10 @@
         .ct-character-sheet--dice-enabled .ddbc-combat-attack__tohit .integrated-dice__container,
         .avtt-roll-formula-button.integrated-dice__container{
            
-            height: auto;
-            font-size: 15px;
-            width: auto;
-            margin-bottom: 0px;
+            height: auto !important;
+            font-size: 15px !important;
+            width: auto !important;
+            margin-bottom: 0px !important;
         }
         .ct-character-sheet--dice-enabled .ddbc-combat-attack__tohit .integrated-dice__container,
         .ct-character-sheet--dice-enabled .ddbc-combat-attack__damage .integrated-dice__container,
@@ -779,7 +779,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true") {
         /*[[titleToggle]]*/
     }
     
-    html body.body-rpgcharacter-sheet{
+    html body#site.body-rpgcharacter-sheet{
         /*[[backgroundImg]]*/
         background-color: /*[[background]]*/
         !important;
@@ -3138,6 +3138,21 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true"){
     #combat_area .ct_dead td:nth-of-type(4){
         color: #bc0f0f !important;
     }
+
+    #tokenOptionsPopup [id*="flyout"] li.active-condition,
+    #tokenOptionsPopup [id*="flyout"] li:hover{
+        background: /*[[sheetColor]]*/ !important;
+        box-shadow: inset 0 0 10px 1px /*[[rollColor]]*/ !important;
+        color: /*[[rollColor]]*/ !important;
+    }
+    
+        #tokenOptionsPopup,
+    #tokenOptionsPopup [id*="flyout"]
+    {
+        background: /*[[sheetColor]]*/;
+        color: /*[[fontColor]]*/;
+    }
+
     .more-info::after,
     .mon-stat-block::before, 
     .mon-stat-block::after{
@@ -3163,6 +3178,18 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true"){
         fill: #fff !important;
     }
     
+    .popout-button svg path:not([fill='none']),
+    .gamelog-button__icon path{
+       fill: #ddd !important;
+    }
+
+    .popout-button svg path[fill='none']{
+        fill: none !important;
+    }
+    
+
+
+
     #tokenOptionsPopup [id*='flyout'] li:before{
         /*[[aboveFilter]]*/;
     }
