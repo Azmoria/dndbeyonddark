@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.429
+@version      1.2.430
 @author       Azmoria (Jay_Lane) 
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -6553,6 +6553,11 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .ddb-strip-item-subscription-benefits,
     .ddb-strip-aligned-item-subscription-benefits{
         background-image: url(https://github.com/Azmoria/dndbeyonddark/blob/master/Images/Dark%20Images/strip-subscription-benefits.png?raw=true);
+    }
+
+    .ddb-strip-aligned-item-games,
+    .ddb-strip-item-games{
+        background-image: url(https://raw.githubusercontent.com/Azmoria/dndbeyonddark/master/Images/Dark%20Images/strip-maps-dark-mode.png);
     }
     
     .user-interactions .option-count{
