@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.238
+@version      1.3.239
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -3062,7 +3062,20 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true"){
     }
     
     
-   
+    #light_presets_properties>div.light_preset_row{
+        border-bottom: 1px dotted /*[[borderColor]]*/
+    }
+    #light_presets_properties div.removePreset,
+    div#addLightPreset
+    {
+        background: /*[[sheetColor]]*/;
+    }   
+    #edit_preset_light_dialog{
+        background: /*[[background]]*/;
+        color: /*[[fontColor]]*/;
+    }
+  
+        
     .tooltip-body-description table tbody tr:nth-child(odd),
     .tooltip-body-description table tbody tr:nth-child(even),
     .tooltip-body-description table tbody tr,
