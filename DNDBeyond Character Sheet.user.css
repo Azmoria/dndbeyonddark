@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.241
+@version      1.3.242
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -1034,7 +1034,8 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true") {
     body:not(.body-forum):not(.section-posts):not(.section-changelog):not(.body-privatemessage-details) blockquote::after,
     .ddbc-creature-block,
     .ddbc-creature-block:after,
-    .ddbc-creature-block:before{
+    .ddbc-creature-block:before,
+    .settings-container .settings-modal{
         background-image: none !important;
     }
 
