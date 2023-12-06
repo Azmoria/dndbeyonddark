@@ -9,26 +9,25 @@
 ==/UserStyle== */
 
 @-moz-document regexp(".*abovevtt=true") {
-    body::-webkit-scrollbar {
+	body::-webkit-scrollbar {
 		width: 0px;
-        height: 0px;
+		height: 0px;
 	}
-
-	 body::-webkit-scrollbar-track
-    {
+	body::-webkit-scrollbar-track
+	{
 		background: transparent !important;
 	}
-	 body::-webkit-scrollbar-thumb
-    {
+	body::-webkit-scrollbar-thumb
+	{
 		background-color:transparent;
-        border-radius: 6px;
+		border-radius: 6px;
 		border: none;
 	}
-     body::-webkit-scrollbar-corner
-    { 
-        background: transparent;
-    }
-    .sidebar__pane-content{
-        box-shadow: none;
-    }
+	body::-webkit-scrollbar-corner
+	{ 
+		background: transparent;
+	}
+	.sidebar__pane-content{
+		box-shadow: none;
+	}
 }
