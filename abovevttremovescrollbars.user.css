@@ -1,10 +1,11 @@
 /* ==UserStyle==
 @name           Remove AboveVTT scrollbars
 @namespace      Remove AboveVTT scrollbars
-@version        1.0.1
+@version        1.0.2
 @description    Remove scroll bars in abovevtt
 @preprocessor   uso
 @author         Azmoria
+@updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/abovevttremovescrollbars.user.css
 ==/UserStyle== */
 
 @-moz-document regexp(".*abovevtt=true") {
