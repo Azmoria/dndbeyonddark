@@ -5,7 +5,7 @@
 @description    Remove scroll bars in abovevtt
 @preprocessor   uso
 @author         Azmoria
-@updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/abovevttremovescrollbars.user.css
+@updateURL      https://github.com/Azmoria/dndbeyonddark/raw/master/abovevttremovescrollbars.user.css
 ==/UserStyle== */
 
 @-moz-document regexp(".*abovevtt=true") {
@@ -27,5 +27,8 @@
      body::-webkit-scrollbar-corner
     { 
         background: transparent;
+    }
+    .sidebar__pane-content{
+        box-shadow: none;
     }
 }
