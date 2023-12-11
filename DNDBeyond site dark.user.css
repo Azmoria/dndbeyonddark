@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.445
+@version      1.2.446
 @author       Azmoria (Jay_Lane) 
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -1261,13 +1261,13 @@ on "ON" <<<EOT
     }
 
     @media (min-width: 1921px) {
-        body {background: url(https://media.dndbeyond.com/compendium-images/tcsr/ui/toc-2k.jpg) no-repeat center -60px, var(--background-color) !important;
+        body {background: url(https://media.dndbeyond.com/compendium-images/tcsr/ui/2k-toc.png) no-repeat center -60px, var(--background-color) !important;
       background-size: cover !important;
             background-attachment: fixed !important; }
     }
 
     @media (min-width: 2561px) {
-        body {background: url(https://media.dndbeyond.com/compendium-images/tcsr/ui/toc-4k.jpg) no-repeat center -60px, var(--background-color) !important;
+        body {background: url(https://media.dndbeyond.com/compendium-images/tcsr/ui/4k-toc.png) no-repeat center -60px, var(--background-color) !important;
       background-size: cover !important;
             background-attachment: fixed !important; }
     }
