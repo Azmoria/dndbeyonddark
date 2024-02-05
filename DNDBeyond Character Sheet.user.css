@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.243
+@version      1.3.244
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -3296,7 +3296,8 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true"){
     .ddbc-tab-options--layout-pill .ddbc-tab-options__header-heading,
     .ddbc-tab-options--layout-pill .ddbc-tab-options__header-heading:hover,
     #lock_display,
-     .mon-stat-block button[data-exp]{
+     .mon-stat-block button[data-exp],
+    button.daylight{
         background-color: /*[[background]]*/ !important;
     }
     .sidebar-panel-body{
@@ -3799,7 +3800,8 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true"){
     .help-tabs li.active,
     button.drawTypeSelected,
     button.above-roll20:hover,
-    .drawTypeSelected.ddbc-tab-options__header-heading--is-active{
+    .drawTypeSelected.ddbc-tab-options__header-heading--is-active,
+    button.daylight.active-daylight{
         background: /*[[background]]*/ !important;
         box-shadow: inset 0 0 10px 1px /*[[highlightColor]]*/ !important;
         border: 1px solid /*[[highlightColor]]*/;
