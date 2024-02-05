@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.447
+@version      1.2.450
 @author       Azmoria (Jay_Lane) 
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -2270,6 +2270,14 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         --nav-to-top-hover-bg: /*[[linkColor]]*/;
     }
 
+    table.table-compendium *{
+        --sb-table-row-bg-hover: /*[[backgroundColor]]*/ !important;
+        --sb-table-row-bg-dark: /*[[backgroundColor]]*/ !important;
+        --sb-table-row-bg-light: /*[[backgroundColor]]*/ !important;
+        --dark-sb-table-row-bg-light: /*[[backgroundColor]]*/ !important;
+        --dark-sb-table-row-bg-dark: /*[[backgroundColor]]*/ !important;
+        --dark-sb-table-row-bg-hover: /*[[backgroundColor]]*/ !important;
+    }
      
     body,
     .sidebar-scroll-menu{
@@ -2851,7 +2859,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     body #site-main a.onedndcard--playtest-disclaimer-view-faq,
     body #site-main a.one-dnd--playtest-disclaimer-view-faq,
     body #site-main .playtest--download-pdf a,
-    body .ddb-character-app-r7444x{
+    body .ddb-character-app-r7444x,
+    .article-main blockquote p span{
         color: /*[[fontColor]]*/ !important;   
     }
 
@@ -2934,7 +2943,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .ddb-account-tab-body .listing-container-table table tbody tr:nth-child(odd) td,
     .listing__items tr:nth-child(odd) td,
     .compendium-left-aligned-table tr:nth-child(odd) td,
-    .vehicle-stat-block.vehicle-stat-block-spelljammer .vehicle-stat-block__attributes div:nth-child(odd)   { 
+    .vehicle-stat-block.vehicle-stat-block-spelljammer .vehicle-stat-block__attributes div:nth-child(odd),
+    .table-compendium tr:nth-child(odd) td{ 
         background: none !important;
         backdrop-filter: brightness(0.8);      
     }
@@ -5611,7 +5621,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         border-bottom: 1px dotted /*[[borderColor]]*/
     }
     #light_presets_properties div.removePreset,
-    div#addLightPreset
+    div#addLightPreset,
+    #tokenOptionsContainer button.daylight
     {
         background: /*[[transparencyBackgroundColor]]*/
     }   
@@ -6119,7 +6130,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     
     button.loop-button:active,
     button.soundpad_editsound:active,
-    button.soundpad_delsound:activ{
+    button.soundpad_delsound:active{
           box-shadow: inset #000 2px 2px 2px 1px;
           transform: translate(0px, 2px); 
     }
@@ -6477,7 +6488,6 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     #mega_importer button:hover, 
     #prewiz td button:hover, 
     #wizard_popup button:hover, 
-
     .monster_frame > button:hover, 
     .stp-btn:hover, 
     .player-actions button:hover, 
@@ -6485,7 +6495,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .importer_toggle:hover, 
     #zoom_buttons button:hover, 
     .GameLogEntry_Message__1GoY3 button:hover,
-    .ddbc-tab-options--layout-pill .ddbc-tab-options__header-heading:hover{
+    .ddbc-tab-options--layout-pill .ddbc-tab-options__header-heading:hover,
+    button.daylight.active-daylight{
         background: /*[[backgroundColor]]*/ !important;
         color: /*[[linkColor]]*/ !important;
         border-color: /*[[linkColor]]*/ !important;
