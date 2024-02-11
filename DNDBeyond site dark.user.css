@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.450
+@version      1.2.451
 @author       Azmoria (Jay_Lane) 
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -6069,7 +6069,21 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         color: /*[[fontColor]]*/ !important;
     }
     
-
+    [class*="glc-game-log"] .crit-success div[class*="TotalContainer-Flex"] span,
+    [class*="glc-game-log"] .crit-success div[class*="TotalContainer-Flex"] span,
+    [class*="glc-game-log"] .crit-success div[class*="TotalContainer-Flex"] .aboveDiceTotal{
+        color:#1fc219 !important;
+    }
+    [class*="glc-game-log"] .crit-fail div[class*="TotalContainer-Flex"] span,
+    [class*="glc-game-log"] .crit-fail div[class*="TotalContainer-Flex"] span,
+    [class*="glc-game-log"] .crit-fail div[class*="TotalContainer-Flex"] .aboveDiceTotal{
+        color:#e40812 !important;
+    }
+    [class*="glc-game-log"] .crit-mixed div[class*="TotalContainer-Flex"] span,
+    [class*="glc-game-log"] .crit-mixed div[class*="TotalContainer-Flex"] span,
+    [class*="glc-game-log"] .crit-mixed div[class*="TotalContainer-Flex"] .aboveDiceTotal{
+        color:#1b9af0 !important;
+    }
     
     .scene div button:nth-of-type(3) img,
     .scene div button:nth-of-type(4) img{
