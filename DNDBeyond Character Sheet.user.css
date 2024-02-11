@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.244
+@version      1.3.245
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -3235,6 +3235,22 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true"){
     g.beholder-dm-screen__screen path {
         fill: #201911;
         stroke: #0c0a08;
+    }
+    
+   body.body-rpgcharacter-sheet>div.ct-sidebar__portal [class*="glc-game-log"] .crit-success div[class*="TotalContainer-Flex"] span,
+   body.body-rpgcharacter-sheet>div.ct-sidebar__portal [class*="glc-game-log"] .crit-success div[class*="TotalContainer-Flex"] span,
+   body.body-rpgcharacter-sheet>div.ct-sidebar__portal [class*="glc-game-log"] .crit-success div[class*="TotalContainer-Flex"] .aboveDiceTotal{
+        color:#1fc219 !important;
+    }
+   body.body-rpgcharacter-sheet>div.ct-sidebar__portal [class*="glc-game-log"] .crit-fail div[class*="TotalContainer-Flex"] span,
+   body.body-rpgcharacter-sheet>div.ct-sidebar__portal [class*="glc-game-log"] .crit-fail div[class*="TotalContainer-Flex"] span,
+   body.body-rpgcharacter-sheet>div.ct-sidebar__portal [class*="glc-game-log"] .crit-fail div[class*="TotalContainer-Flex"] .aboveDiceTotal{
+        color:#e40812 !important;
+    }
+   body.body-rpgcharacter-sheet>div.ct-sidebar__portal [class*="glc-game-log"] .crit-mixed div[class*="TotalContainer-Flex"] span,
+   body.body-rpgcharacter-sheet>div.ct-sidebar__portal [class*="glc-game-log"] .crit-mixed div[class*="TotalContainer-Flex"] span,
+   body.body-rpgcharacter-sheet>div.ct-sidebar__portal [class*="glc-game-log"] .crit-mixed div[class*="TotalContainer-Flex"] .aboveDiceTotal{
+        color:#1b9af0 !important;
     }
     
     /*[[aboveContainDice]]*/   
