@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.245
+@version      1.3.246
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -4006,7 +4006,8 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true"){
     #reset_round_number, 
     #zoom_buttons button, 
     .stream_button, 
-    .GameLogEntry_Message__1GoY3 button
+    .GameLogEntry_Message__1GoY3 button,
+    .meet-controls-bar button#startScreenShare
     {
         background: /*[[background]]*/ !important;
         color: /*[[fontColor]]*/;
@@ -4017,6 +4018,19 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true"){
         padding: 2px 8px;
         transition: none;
         border: 1px solid lightgray;
+    }
+    button[id^=jitsi_],
+    .meet-controls-bar button#startScreenShare{
+        height:27px;
+    }
+    .meet-controls-bar select{
+        height: 27px;
+        border-radius:5px;
+    }
+    .meet-controls-bar button,
+    .meet-controls-bar select{
+        border-color: #777 !important;
+         background: /*[[background]]*/ !important;
     }
     #combat_area tr.CTToken:before{
         font-size: 11px
