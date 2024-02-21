@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.454
+@version      1.2.455
 @author       Azmoria (Jay_Lane) 
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -5567,7 +5567,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     #qrm_dialog .general_input,
     .sidebar-flyout > div,
     .custom-stat-block,
-    .light_preset_title_row
+    .light_preset_title_row,
+    .animation_preset_title_row
     {
         text-shadow: none !important;   
         background: /*[[backgroundColor]]*/ !important;
@@ -5649,16 +5650,20 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         background: none;
         backdrop-filter: brightness(1.5);
     }
-    #light_presets_properties>div.light_preset_row{
+    #light_presets_properties>div.light_preset_row,
+    #animation_presets_properties>div.animation_preset_row{
         border-bottom: 1px dotted /*[[borderColor]]*/
     }
     #light_presets_properties div.removePreset,
+    #animation_presets_properties div.removePreset,
     div#addLightPreset,
+    div#addAnimationPreset,
     #tokenOptionsContainer button.daylight
     {
         background: /*[[transparencyBackgroundColor]]*/
     }   
-    div#addLightPreset
+    div#addLightPreset,
+    div#addAnimationPreset
     {
         color: /*[[rollColor]]*/
     }
