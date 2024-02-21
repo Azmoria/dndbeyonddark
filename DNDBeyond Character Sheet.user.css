@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.247
+@version      1.3.248
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -3076,19 +3076,25 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true"){
     
     
     #light_presets_properties>div.light_preset_row,
-    #animation_presets_properties>div.animation_preset_row{
+    #animation_presets_properties>div.animation_preset_row,
+    #aura_presets_properties>div.aura_preset_row{
         border-bottom: 1px dotted /*[[borderColor]]*/
     }
     #light_presets_properties div.removePreset,
+    #animation_presets_properties div.removePreset,
+    #aura_presets_properties div.removePreset,
     div#addLightPreset,
-    div#addAnimationPreset
+    div#addAnimationPreset,
+    div#addAuraPreset
     {
         background: /*[[sheetColor]]*/;
     }   
     #edit_preset_light_dialog,
     #edit_preset_animation_dialog,
+    #edit_preset_aura_dialog,
     .light_preset_title_row,
-    .animation_preset_title_row{
+    .animation_preset_title_row,
+    .aura_preset_title_row{
         background: /*[[background]]*/ !important;
         color: /*[[fontColor]]*/;
     }
