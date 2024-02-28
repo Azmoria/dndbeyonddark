@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.456
+@version      1.2.457
 @author       Azmoria (Jay_Lane) 
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -6535,6 +6535,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     button[id$='-button']:hover, 
     button[id$='_button']:hover, 
     button[id^=jitsi_]:hover, 
+    button[id^=peerVideo_]:hover,
     #combat_tracker_inside > button:hover,
     #scene_selector_toggle:hover, 
     body > button:hover,
@@ -6567,6 +6568,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     button[id$='-button'], 
     button[id$='_button'], 
     button[id^=jitsi_], 
+    button[id^=peerVideo_],
     #combat_area > button, 
     #scene_selector_toggle, 
     body > button, 
@@ -6596,7 +6598,11 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         transition: none;
         border: 1px solid lightgray;
     }
+    button[id^=peerVideo_].muted{
+        background: #5c0000 !important;
+    }
     button[id^=jitsi_],
+    button[id^=peerVideo_],
     .meet-controls-bar button#startScreenShare{
         height:27px;
         border-color: #777;
