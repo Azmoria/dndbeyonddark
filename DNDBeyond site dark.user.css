@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.460
+@version      1.2.461
 @author       Azmoria (Jay_Lane) 
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -173,7 +173,19 @@ dark "Dark Mode" <<<EOT
     .red-statblock-text{
         color: #D35050 !important;
     }
-
+    body *{
+     --compendium-monster-tooltip: #D35050;
+     --compendium-spell-tooltip: #896CE0;
+     --compendium-magic-item-tooltip: #1877EC;
+    }
+    .section-tome-of-beasts-1 li::marker, .section-tome-of-beasts-1 strong:not(em strong,ul strong,strong em,.flexible-double-column.hangingIndent strong,.epigraph strong),
+.section-tome-of-beasts-1 .monster--stat-block.tob--stat-block .monster--stats p:nth-child(odd),
+.section-tome-of-beasts-1 .monster--stat-block.tob--stat-block .monster--action-header{
+        color: #9f6fa5;;
+    }
+    .section-tome-of-beasts-1 .monster--stat-block.tob--stat-block{
+        --stat-block-divider: #9f6fa5;;
+    }
     .tooltip-hover.spell-tooltip,
     .tooltip-hover.spell-tooltip:hover,
     .tooltip-hover.spell-tooltip:focus,
