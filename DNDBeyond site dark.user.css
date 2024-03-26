@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.461
+@version      1.2.462
 @author       Azmoria (Jay_Lane) 
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -5164,8 +5164,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
      img[src*="assets/logo.png"],
     .sidebar__controls img[src*="chrome-extension://"],
     .player-attribute img[src*="chrome-extension://"],
-    .sidebar-panel-body button img[src*="chrome-extension://"],
-    #soundpad img[src*="chrome-extension://"],
+    .sidebar-panel-body button img[src*="chrome-extension://"]:not([src$='Onedrive_Icon.svg']),
+    #soundpad img[src*="chrome-extension://"]:not([src$='Onedrive_Icon.svg']),
     .player-see-more img[src$="arrows_down.png"][src^="chrome-extension:"]{
         /*[[aboveFilter]]*/
     }
@@ -6685,10 +6685,13 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     }
     .sidebar-tab-image > div[style*=-webkit-mask],
     .sidebar-tab-image > div[style*=mask],
-    .sidebar-list-item-row-item button.dropboxChooser.token-row-button span.dropin-btn-status
+    .sidebar-list-item-row-item button.dropboxChooser.token-row-button span.dropin-btn-status,
+    .sidebar-list-item-row-item button.launchPicker.token-row-button span.onedrive-btn-status
     {
         background-color: /*[[fontColor]]*/ !important;
     }
+
+
     #loading_overlay div[style*="background-image: url("]{
         -webkit-mask-image: url(https://raw.githubusercontent.com/Azmoria/dndbeyonddark/master/Images/Dark%20Images/book-cover-mask.png);
         -webkit-mask-repeat: no-repeat;
