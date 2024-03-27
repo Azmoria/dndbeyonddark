@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.249
+@version      1.3.250
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -733,8 +733,8 @@ EOT;
 ==/UserStyle== */
 @-moz-document regexp("https://www.dndbeyond.com/profile/.*/characters/\\d*"),
 regexp("https://www.dndbeyond.com/characters/\\d.*"), 
-regexp("https://www.dndbeyond.com/profile.*abovevtt=true"),
-regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true") {
+regexp("https://www.dndbeyond.com/profile.*abovevtt=true.*"),
+regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
     
 
     /*Character Sheet*/
@@ -3047,7 +3047,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true") {
     }
 }
 @-moz-document regexp("https://www.dndbeyond.com/profile/.*/characters/\\d.*abovevtt=true.*"), 
-regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true"){
+regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
   /*AboveVtt Only*/
   
     
