@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.250
+@version      1.3.251
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -3153,7 +3153,8 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
     #combat_area td:nth-of-type(4),
     #combat_area tr[data-name].CTToken:before,
     #combat_area tr.CTToken:before,
-    .tooltip-body-description { 
+    .tooltip-body-description,
+    #edit_dialog button:not(.rc-switch){ 
         color: /*[[fontColor]]*/;        
     }
     #combat_area tr[data-name].CTToken:before{
