@@ -5663,6 +5663,10 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     {
         backdrop-filter: blur(6px);
     }
+    .trackNameOverflow {
+        width: 230px;
+    }
+    
     #tokenOptionsPopup button,
     .dcm-section-header,
     #combat_area td:nth-of-type(4),
