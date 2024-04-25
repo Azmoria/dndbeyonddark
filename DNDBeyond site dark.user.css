@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.468
+@version      1.2.470
 @author       Azmoria (Jay_Lane) 
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -2957,8 +2957,18 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .ddb-campaigns-character-card-footer-links div:not(:last-of-type)>button,
     tbody.tier--odd td,
     tbody.tier--even td,
-    .compendium-art figcaption a.ddb-lightbox-outer{
+    .compendium-art figcaption a.ddb-lightbox-outer,
+    [class*='styles_searchSort'],
+    [class*='styles_search__GpeP']{
         background: none !important;
+    }
+
+    [class*='styles_searchLabel'],
+    #sortLabel
+    {
+   
+        border-radius:5px;
+
     }
     
     .text--god-sidebar,
@@ -2967,11 +2977,11 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     }
     
     .ddb-campaigns-character-card-footer-links a[class*="ddb-listing-client"]:hover:before,
-    .ddb-campaigns-character-card-footer-links div:not(:last-of-type)>button:hover:before{ 
+    .ddb-campaigns-character-card-footer-links div>button:hover:before{ 
         background-color: /*[[linkColor]]*/ !important;  
     }
     .ddb-campaigns-character-card-footer-links a[class*="ddb-listing-client"]:before,
-    .ddb-campaigns-character-card-footer-links div:not(:last-of-type)>button:before{
+    .ddb-campaigns-character-card-footer-links div>button:before{
         content:'';
         position: absolute;
         top: 0;
@@ -2982,6 +2992,15 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         opacity: 0.05;
         background-color: transparent;
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    }
+    .ddb-campaigns-character-card-footer-links div>button{
+         position: relative;
+    }
+     .ddb-campaigns-character-card-footer-links div:last-of-type>button{
+         position: relative;
+    }
+     .ddb-campaigns-character-card-footer-links div:last-of-type>button:hover:before{
+        background-color: #F00 !important;
     }
     
     .player-info-table .value .ddbc-proficiency-half-svg path,
