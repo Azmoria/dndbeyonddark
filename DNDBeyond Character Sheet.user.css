@@ -758,6 +758,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
     }
     :root{
         --theme-color: /*[[highlightColor]]*/;
+        --theme-contrast: /*[[fontColor]]*/;
     }
     * {
         scrollbar-width: thin;
