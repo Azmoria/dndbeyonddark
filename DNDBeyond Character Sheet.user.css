@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.258
+@version      1.3.259
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -635,6 +635,120 @@ EOT;
 Light "Light Mode"<<<EOT
 EOT;
 }
+@advanced dropdown fontContrast "AboveVTT - Tooltip Font Contrast Colors" {
+dark "Dark Mode" <<<EOT   
+    .tooltip-hover.monster-tooltip, 
+    .tooltip-hover.monster-tooltip:hover, 
+    .tooltip-hover.monster-tooltip:focus, 
+    .tooltip-hover.monster-tooltip:active, 
+    .tooltip-hover.monster-tooltip:visited,
+    .plural-monster-tooltip,
+    .body-page .p-article-a .p-article-content a.monster-tooltip,
+    .body-forum .p-article-a .p-article-content a.monster-tooltip,
+    .single-column #content .p-forum-a .p-comment-wrapper [style*="color:red"],
+    .single-column #content .p-forum-a .p-comment-wrapper [style*="color: rgba(255, 0, 0, 1)"],
+    [style*="color: rgba(255, 0, 0, 1)"],
+    .mon-stat-block__name .mon-stat-block__name-link, 
+    .mon-stat-block__name .mon-stat-block__name-link:active, 
+    .mon-stat-block__name .mon-stat-block__name-link:hover, 
+    .mon-stat-block__name .mon-stat-block__name-link:visited,
+    .listing .info .row.monster-name .link:hover,
+    .listing .info .row.monster-name .link,
+    #site .ddb-campaigns-list-item-footer-buttons-item-delete,
+    #site .ddb-campaigns-character-card-footer-links-item-remove,
+    #site .ddb-campaigns-character-card-footer-links-item-remove,
+    #site .ddb-campaigns-character-card-footer-links-item-delete,
+    .list-row-primary-text-monster,
+    .homebrew-creation-actions-item-delete,
+    .homebrew-creation-actions-item-delete:hover,
+    .ddb-homebrew-rejection-label,
+    .combatant-card--monster .combatant-summary__name,
+    .body-rpgmonster .listing-filters .advanced-filter a span,
+    .add-monster-modal__header-text--name,
+    .ddb-campaigns-character-card-footer-links div:last-of-type>button:first-of-type,
+    .list-row-primary-text a[href^="/monsters"],
+    .listing__items .listing__list-item__column.blocked,
+    .stat-block-background--space .stat-block-ability-scores,
+    .red-statblock-text{
+        color: #D35050 !important;
+    }
+    body *{
+     --compendium-monster-tooltip: #D35050;
+     --compendium-spell-tooltip: #896CE0;
+     --compendium-magic-item-tooltip: #1877EC;
+    }
+    .section-tome-of-beasts-1 li::marker, .section-tome-of-beasts-1 strong:not(em strong,ul strong,strong em,.flexible-double-column.hangingIndent strong,.epigraph strong),
+.section-tome-of-beasts-1 .monster--stat-block.tob--stat-block .monster--stats p:nth-child(odd),
+.section-tome-of-beasts-1 .monster--stat-block.tob--stat-block .monster--action-header{
+        color: #9f6fa5;
+    }
+    .section-tome-of-beasts-1 .monster--stat-block.tob--stat-block{
+        --stat-block-divider: #9f6fa5;
+    }
+    .tooltip-hover.spell-tooltip,
+    .tooltip-hover.spell-tooltip:hover,
+    .tooltip-hover.spell-tooltip:focus,
+    .tooltip-hover.spell-tooltip:active,
+    .tooltip-hover.spell-tooltip:visited,
+    .body-page .p-article-a .p-article-content a.spell-tooltip,
+    .mon-stat-block .tooltip-hover.spell-tooltip, 
+    .mon-stat-block .tooltip-hover.spell-tooltip:hover, 
+    .mon-stat-block .tooltip-hover.spell-tooltip:focus, 
+    .mon-stat-block .tooltip-hover.spell-tooltip:active,
+    .mon-stat-block .tooltip-hover.spell-tooltip:visited,
+    .listing .info .row.spell-name .link:hover,
+    .listing .info .row.spell-name .link,
+    a[style*="color: #704cd9;"],
+    .list-row-primary-text-spell,
+    .list-row-spell a,
+    .section-bigby-presents-glory-of-the-giants.body-page .p-article-a .p-article-content :is(.table-compendium,.text--rules-sidebar) .tooltip-hover.spell-tooltip{
+        color: #896CE0 !important;
+    }
+    .tooltip-hover.magic-item-tooltip, 
+    .tooltip-hover.magic-item-tooltip:hover,
+    .tooltip-hover.magic-item-tooltip:focus, 
+    .tooltip-hover.magic-item-tooltip:active, 
+    .tooltip-hover.magic-item-tooltip:visited,
+    .mon-stat-block .tooltip-hover.magic-item-tooltip, 
+    .mon-stat-block .tooltip-hover.magic-item-tooltip:hover,
+    .mon-stat-block .tooltip-hover.magic-item-tooltip:focus, 
+    .mon-stat-block .tooltip-hover.magic-item-tooltip:active, 
+    .mon-stat-block .tooltip-hover.magic-item-tooltip:visited,
+    .body-page .p-article-a .p-article-content a.magic-item-tooltip,
+    .list-row-primary-text-item{
+        color: #1877EC !important;
+    }
+  
+
+
+EOT;
+light "Light Mode" <<<EOT
+   
+
+    .mon-stat-block .tooltip-hover.spell-tooltip, 
+    .mon-stat-block .tooltip-hover.spell-tooltip:hover, 
+    .mon-stat-block .tooltip-hover.spell-tooltip:focus, 
+    .mon-stat-block .tooltip-hover.spell-tooltip:active,
+    .mon-stat-block .tooltip-hover.spell-tooltip:visited,
+    .listing .info .row.spell-name .link:hover,
+    .listing .info .row.spell-name .link,
+    .list-row-primary-text-spell{
+        color: #704cd9 !important;
+    }
+
+    
+    .listing .info .row.monster-name .link:hover,
+    .listing .info .row.monster-name .link,
+    .list-row-primary-text-monster,
+    .combatant-card--monster .combatant-summary__name,
+    .listing__items .listing__list-item__column.blocked{
+        color: #bc0f0f !important;
+    }
+
+
+    
+EOT;
+}
 @advanced dropdown aboveFlyType "AboveVTT Flight icon theme" {
     on "Wings" <<<EOT
      .elev:not(:empty) svg path{
@@ -920,7 +1034,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
     .ct-character-sheet__inner .ct-theme-button--filled{
         background: /*[[sheetColor]]*/ !important;
     }
-    
+
     .ct-slot-manager__slot--used:before,
     .ct-spells-spell__scaled-level,
     .ddbc-tab-options__header-heading.ddbc-tab-options__header-heading--is-active,
@@ -1239,7 +1353,8 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
     span.ct-currency-pane__lifestyle-detail-header,
     .ct-campaign-pane__character-name-text,
     li[class*="-gutters"][role="menuitem"]:hover,
-    body.body-rpgcharacter-sheet>div:last-of-type:not(.ct-sidebar__portal)>div[class^="_"] span:last-of-type, body.body-rpgcharacter-sheet>div.ct-sidebar__portal .glc-game-log span:hover:first-of-type{
+    body.body-rpgcharacter-sheet>div:last-of-type:not(.ct-sidebar__portal)>div[class^="_"] span:last-of-type, body.body-rpgcharacter-sheet>div.ct-sidebar__portal .glc-game-log span:hover:first-of-type,
+    .tooltip-hover.skill-tooltip{
         color: /*[[highlightColor]]*/ !important;
     }
 
@@ -3070,6 +3185,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
 regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
   /*AboveVtt Only*/
   
+    /*[[fontContrast]]*/
     
     #tokenOptionsPopup,
     #tokenOptionsPopup [id*="flyout"],
