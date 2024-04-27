@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.256
+@version      1.3.257
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -1610,9 +1610,14 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
     .ddbc-paint-brush-svg path,
     .ct-sidebar .ddbc-svg--themed path,
     .ddbc-attack-type-icon--2-1 path[d^="M8.17 16.03L.63 17l5.12-3.33-5.54-3.64h5.71L0"],
-    .ddbc-attack-type-icon--2-1 path[d^="M13.15 16.53c-1.62 0-3.15-.61-3.57-1.42A6"]{
+    .ddbc-attack-type-icon--2-1 path[d^="M13.15 16.53c-1.62 0-3.15-.61-3.57-1.42A6"],
+    .ct-sidebar .ddbc-svg--themed polygon{
         fill: /*[[highlightColor]]*/ !important;
         opacity: 1 !important;
+    }
+
+    .ct-sidebar svg mask{
+        display:none;
     }
     
     .ddbc-svg.ddbc-chevron-svg.ddbc-chevron-right-svg.ddbc-svg--builder path,
