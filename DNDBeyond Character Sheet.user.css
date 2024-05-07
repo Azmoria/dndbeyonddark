@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.260
+@version      1.3.261
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -32,7 +32,7 @@
         .dice_result *,
         .glc-game-log *,
         .dice-rolling-panel *,
-        div.ct-sidebar__pane-content *{
+        div.ct-sidebar__inner [class*='styles_content'] *{
                text-shadow: 1px 0px 0
               var(--outline-color),
             0.9239px 0.3827px 0
@@ -371,7 +371,7 @@ EOT;
     Rainbow "Rainbow"<<<EOT
         .ddbc-box-background path,
         .ddbc-saving-throws-summary path,
-        .ct-sidebar__pane-content:before,
+        .ct-sidebar__inner [class*='styles_content']:before,
         .ct-sidebar__pane-gap:before,
         .ct-sidebar__pane-top svg,
         .ct-sidebar__pane-bottom svg,
@@ -408,7 +408,7 @@ EOT;
     Custom "Custom RGB"<<<EOT
         .ddbc-box-background path,
         .ddbc-saving-throws-summary path,
-        .ct-sidebar__pane-content:before,
+        .ct-sidebar__inner [class*='styles_content']:before,
         .ct-sidebar__pane-gap:before,
         .ct-sidebar__pane-top svg,
         .ct-sidebar__pane-bottom svg,
@@ -873,6 +873,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
     :root{
         --theme-color: /*[[highlightColor]]*/;
         --theme-contrast: /*[[fontColor]]*/;
+        --theme-background-solid: /*[[sidebarColor]]*/
     }
     * {
         scrollbar-width: thin;
@@ -992,7 +993,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
         color: /*[[fontColor]]*/ !important;
     }
     
-    .ct-sidebar__pane-content,
+    .ct-sidebar__inner [class*='styles_content'],
     .ct-sidebar__pane-gap,
     .ct-sidebar thead td,
     .ct-sidebar thead th,
@@ -1111,7 +1112,8 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
         box-shadow: 0 0 30px 1px #35b000 inset !important;
     }
 
-    .ct-sidebar__pane-content>div:first-of-type{
+    .ct-sidebar__inner [class*='styles_content']>div:first-of-type,
+    .ct-sidebar__inner [class*='styles_content']>div:first-of-type{
         height:100%;
     }
 
@@ -1349,7 +1351,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
     .talespireLink,
     li.ct-character-sheet-MuiListItem-button:hover,
     .ct-inventory__action:hover,
-    .ct-sidebar__pane-content .ddbc-collapsible__header:hover,
+    .ct-sidebar__inner [class*='styles_content'] .ddbc-collapsible__header:hover,
     span.ct-currency-pane__lifestyle-detail-header,
     .ct-campaign-pane__character-name-text,
     li[class*="-gutters"][role="menuitem"]:hover,
@@ -1377,7 +1379,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
     .site .ct-button.ct-theme-button--filled,
     .ddbc-campaign-summary,
     .ct-sidebar__pane-gap,
-    .ct-sidebar__pane-content,
+    .ct-sidebar__inner [class*='styles_content'],
     .ct-combat-tablet__cta-button,
     .ct-status-summary-mobile__health,
     .ct-status-summary-mobile__button,
@@ -1401,7 +1403,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
     .add-attribute-button.button-alt.button-alt-default{
         border-color: /*[[borderColor]]*/ !important;
     }
-    .ct-sidebar__pane-content,
+    .ct-sidebar__inner [class*='styles_content'],
     .ct-sidebar__pane-gap,
     .settings-container .settings-modal .attribute-container .attribute .html-value-container,
     .settings-container .settings-modal .attribute-container .attribute .name,
@@ -1413,7 +1415,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
     .ct-sidebar__pane-gap{
         position: relative;   
     }
-    .ct-sidebar__pane-content:before,
+    .ct-sidebar__inner [class*='styles_content']:before,
     .ct-sidebar__pane-gap:before {
         content: '';
         position: fixed;
@@ -2582,7 +2584,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
     }
     
     @media (max-width: 1200px){
-        .ct-sidebar__pane-content:before{       
+        .ct-sidebar__inner [class*='styles_content']:before{       
             position:fixed;
              top: 0;
             left: 0;
@@ -2885,7 +2887,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
         box-shadow: 1px 1px 30px 5px /*[[sidebarColor]]*/;   
         z-index: 1;
     }
-    .ct-sidebar__pane-content:before{
+    .ct-sidebar__inner [class*='styles_content']:before{
         z-index: 2;   
     }
     
@@ -3457,7 +3459,8 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
     .ddbc-tab-list__nav-item{
         border-bottom: none;   
     }
-    .ct-sidebar__controls .tab-btn.selected-tab{
+    .ct-sidebar__controls .tab-btn.selected-tab,
+    [class*='styles_controls'] .tab-btn.selected-tab{
         height: 27px !important;  
         z-index: 110;
     }
@@ -3479,7 +3482,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
         border: solid /*[[borderColor]]*/;
         border-width: 0px 1px 1px 1px !important;   
     }
-    .ct-sidebar__pane-content:before, .ct-sidebar__pane-gap:before{
+    .ct-sidebar__inner [class*='styles_content']:before, .ct-sidebar__pane-gap:before{
         border:none;
     }
     .sidebar-tab-image > div[style*=-webkit-mask],
@@ -3493,14 +3496,17 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
         -webkit-mask-size: cover;
         -webkit-mask-position: center center;
     }
-    .sidebar__controls .tab-btn.selected-tab{
-        height: 29px !important;
+    .sidebar__controls .tab-btn.selected-tab,
+    [class*='styles_controls'] .tab-btn.selected-tab{
+        height: 27px !important;
     }
-    .sidebar__controls .tab-btn.selected-tab .sidebar-tab-image{
+    .sidebar__controls .tab-btn.selected-tab .sidebar-tab-image,
+    [class*='styles_controls'] .tab-btn.selected-tab .sidebar-tab-image{
         border-bottom: none !important;
     }
     .ct-sidebar__controls .tab-btn, 
     .sidebar__controls .tab-btn,
+    [class*='styles_controls'] .tab-btn,
     .sidebar-panel-loading-indicator{
         background-color: /*[[background]]*/ !important;
     }
