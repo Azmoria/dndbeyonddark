@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.261
+@version      1.3.262
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -1633,7 +1633,8 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
     }
    
     .integrated-dice__container span,
-    .avtt-roll-formula-button.integrated-dice__container {
+    .avtt-roll-formula-button.integrated-dice__container,
+    .ct-character-sheet--dice-enabled .integrated-dice__container {
         color: /*[[rollColor]]*/ !important;
     }
 
