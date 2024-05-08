@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.473
+@version      1.2.474
 @author       Azmoria (Jay_Lane) 
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -2316,6 +2316,12 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     --forum-secondary-color: /*[[forumSecondaryColor]]*/;
     --background-color: /*[[backgroundColor]]*/;
     --transparency-color: /*[[transparencyBackgroundColor]]*/;
+    
+    }
+    *{
+     --active-color: /*[[fontColor]]*/;   
+     --inactive-color: /*[[fontColor]]*/aa; 
+     --border-color: /*[[borderColor]]*/;
     }
     
     :root .site{
@@ -2335,6 +2341,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         --compendium-sidebar-tier-5: /*[[backgroundColor]]*/;
         --nav-to-top-bg: /*[[backgroundColor]]*/;
         --nav-to-top-hover-bg: /*[[linkColor]]*/;
+
     }
 
     table.table-compendium *{
@@ -2961,7 +2968,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     tbody.tier--even td,
     .compendium-art figcaption a.ddb-lightbox-outer,
     [class*='styles_searchSort'],
-    [class*='styles_search__GpeP']{
+    [class*='styles_search__GpeP'],
+    [class*='styles_alert']{
         background: none !important;
     }
 
@@ -3308,7 +3316,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .lox-chapter-end,
     .badge-label,
     .collapsible-header-meta,
-    .combatant-summary__quantity
+    .combatant-summary__quantity,
+    [class*='styles_alert']
     {
 		color: /*[[fontColor]]*/ !important;
 	}
@@ -3321,7 +3330,9 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
 	.select2-container-multi .select2-choices {
 		padding: 0px;
 	}
-
+    .ddb-campaigns-character-card-footer-links a[href='#']{
+        background: /*[[linkColor]]*/44 !important;
+    }
     .article-main a,
     .sidebar-menu a,
     .compendium-toc-block-header h2 a,
