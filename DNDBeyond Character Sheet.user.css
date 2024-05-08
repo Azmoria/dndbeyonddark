@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.262
+@version      1.3.263
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -891,7 +891,11 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
         overflow: overlay !important;
     }
     
-
+    *{
+     --active-color: /*[[fontColor]]*/;   
+     --inactive-color: /*[[fontColor]]*/aa; 
+     --border-color: /*[[borderColor]]*/;
+    }
     
     .ct-character-sheet:before{
         /*[[titleToggle]]*/
@@ -925,7 +929,9 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
     .ct-component-carousel__active {
         background: transparent !important;
     }
-
+    [class*='styles_numberDisplay'][class*='styles_modified']:after {
+        content: '*';
+    }
     .ct-health-summary__adjuster-field-input,
     .ddbc-campaign-summary,
     body:not(.body-forum):not(.section-posts):not(.section-changelog):not(.body-privatemessage-details) blockquote,
