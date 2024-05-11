@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.478
+@version      1.2.479
 @author       Azmoria (Jay_Lane) 
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -5754,7 +5754,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .animation_preset_title_row,
     .aura_preset_title_row,
     .custom-stat-block .stat-block-background,
-    .note-text .stat-block-background
+    .note-text .stat-block-background,
+    #tokenOptionsPopup>#tokenOptionsContainer>div[data-option-name='lockRestrictDrop'] select option
     {
         text-shadow: none !important;   
         background: /*[[backgroundColor]]*/ !important;
@@ -5989,7 +5990,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .flyout-from-menu-item, 
     #tokenOptionsContainer>button, 
     #notes-flyout button, 
-    #adjustments-flyout>div>button{
+    #adjustments-flyout>div>button,
+    #tokenOptionsPopup>#tokenOptionsContainer>div[data-option-name='lockRestrictDrop'] select{
         border-style: solid;
         border-color: /*[[borderColor]]*/;      
     }
