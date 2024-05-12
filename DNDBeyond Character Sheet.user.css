@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.263
+@version      1.3.264
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -1377,7 +1377,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
         , 1px -1px 0 /*[[sheetColor]]*/
     }
 
-
+    
     /*Borders*/
     .ct-health-summary__adjuster-field-input,
     .ct-character-header-desktop__button,
@@ -1434,6 +1434,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
         min-width: 340px;
         pointer-events: none;
     }
+
     
     .ct-health-summary__adjuster-field, 
     .ct-character-header-desktop__button, 
@@ -3070,10 +3071,16 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
     /*[[hideDiceOnSheet]]*/
 /*AboveVtt stuff*/
 
-      #castbutton{
+     #castbutton{
         text-shadow: none !important;   
         background: /*[[sidebarColor]]*/ !important;
         color: /*[[fontColor]]*/ !important;
+    }
+    .advantageHover svg [fill="#b0b7bd"], .advantageHover svg [fill="#242528"]{
+        fill: #4fcf4f !important;
+    }
+    .disadvantageHover svg [fill="#b0b7bd"], .disadvantageHover svg [fill="#242528"]{
+        fill: #bb4242!important;
     }
 /*AboveVtt stuff end*/
     
