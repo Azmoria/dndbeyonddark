@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.264
+@version      1.3.265
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -3076,12 +3076,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
         background: /*[[sidebarColor]]*/ !important;
         color: /*[[fontColor]]*/ !important;
     }
-    .advantageHover svg [fill="#b0b7bd"], .advantageHover svg [fill="#242528"]{
-        fill: #4fcf4f !important;
-    }
-    .disadvantageHover svg [fill="#b0b7bd"], .disadvantageHover svg [fill="#242528"]{
-        fill: #bb4242!important;
-    }
+
 /*AboveVtt stuff end*/
     
    .ct-sidebar .ddbc-concentration-icon path{
@@ -3341,7 +3336,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
     #tokenOptionsPopup [id*="flyout"] li.active-condition,
     #tokenOptionsPopup [id*="flyout"] li:hover{
         background: /*[[sheetColor]]*/ !important;
-        box-shadow: inset 0 0 10px 1px /*[[rollColor]]*/ !important;
+        box-shadow: inset 0 0 25px 5px /*[[rollColor]]*/33, inset 0 0 1px 1px /*[[fontColor]]*/66  !important;
         color: /*[[rollColor]]*/ !important;
     }
     
@@ -3995,8 +3990,8 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
     .drawTypeSelected.ddbc-tab-options__header-heading--is-active,
     button.daylight.active-daylight{
         background: /*[[background]]*/ !important;
-        box-shadow: inset 0 0 10px 1px /*[[highlightColor]]*/ !important;
-        border: 1px solid /*[[highlightColor]]*/;
+        box-shadow: inset 0 0 25px 5px /*[[highlightColor]]*/33, inset 0 0 1px 1px /*[[fontColor]]*/66  !important;
+
         color: /*[[highlightColor]]*/ !important;
     }
     .top_menu{
@@ -4154,12 +4149,12 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
         transition: none;
     }
     .top_menu .ddbc-tab-options--layout-pill button{
-        backdrop-filter: brightness(1.5);
+        backdrop-filter: brightness(3);
         background: none !important;
     }
     .top_menu .ddbc-tab-options--layout-pill button:hover{
         background: none !important;
-        backdrop-filter: brightness(2.8) !important;
+        backdrop-filter: brightness(4) !important;
     }
     
     button[id$='-button'], 
@@ -4236,7 +4231,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
         border: none;
         box-shadow: none;
     }
-    
+
     
     .top_menu button{
         margin: 0px;
