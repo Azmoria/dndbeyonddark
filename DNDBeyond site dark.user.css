@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.483
+@version      1.2.484
 @author       Azmoria (Jay_Lane) 
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -1170,6 +1170,8 @@ regexp("https://www.dndbeyond.com/sources/wel"){
 
 
 }
+
+
 @-moz-document regexp("https://www.dndbeyond.com/sources/tob1"),
 regexp("https://www.dndbeyond.com/sources/veor"), 
 regexp("https://www.dndbeyond.com/sources/fm"),
@@ -1198,6 +1200,12 @@ regexp("https://www.dndbeyond.com/sources/wel") {
             background-size: cover !important;
             background-attachment: fixed !important; 
         }
+    }
+}
+
+@-moz-document regexp("https://www.dndbeyond.com/sources/fm"){
+ body {
+    background-position:center 0% !important;
     }
 }
 @-moz-document regexp("https://www.dndbeyond.com/sources/hcs"){
