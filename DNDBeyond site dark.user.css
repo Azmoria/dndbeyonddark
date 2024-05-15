@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.484
+@version      1.2.485
 @author       Azmoria (Jay_Lane) 
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -181,10 +181,47 @@ dark "Dark Mode" <<<EOT
     .section-tome-of-beasts-1 li::marker, .section-tome-of-beasts-1 strong:not(em strong,ul strong,strong em,.flexible-double-column.hangingIndent strong,.epigraph strong),
 .section-tome-of-beasts-1 .monster--stat-block.tob--stat-block .monster--stats p:nth-child(odd),
 .section-tome-of-beasts-1 .monster--stat-block.tob--stat-block .monster--action-header{
-        color: #9f6fa5;;
+        color: #9f6fa5;
+    }
+    .section-flee-mortals-rule-primer li::marker, 
+    .section-flee-mortals-rule-primer strong:not(ul strong,.flexible-double-column.hangingIndent strong,
+    .epigraph strong,.spell-components p strong), 
+    .section-flee-mortals li::marker, 
+    .section-flee-mortals strong:not(ul strong,.flexible-double-column.hangingIndent strong,
+    .epigraph strong,.spell-components p strong), 
+    .section-where-evil-lives li::marker, 
+    .section-where-evil-lives strong:not(ul strong,.flexible-double-column.hangingIndent strong,.epigraph strong,
+    .spell-components p strong),
+    .section-flee-mortals-rule-primer 
+    .text--rules-sidebar.mcdm-sidebar p:first-of-type, 
+    .section-flee-mortals .text--rules-sidebar.mcdm-sidebar p:first-of-type, 
+    .section-where-evil-lives .text--rules-sidebar.mcdm-sidebar p:first-of-type,
+    .section-flee-mortals-rule-primer .monster--stat-block.mcdm-statblock .monster--stats p:nth-child(odd), 
+    .section-flee-mortals .monster--stat-block.mcdm-statblock .monster--stats p:nth-child(odd), 
+    .section-where-evil-lives .monster--stat-block.mcdm-statblock .monster--stats p:nth-child(odd),
+    .section-flee-mortals-rule-primer .monster--stat-block.mcdm-statblock .monster--action-header,
+    .section-flee-mortals .monster--stat-block.mcdm-statblock .monster--action-header, 
+    .section-where-evil-lives .monster--stat-block.mcdm-statblock .monster--action-header{
+        --mcdm-primary: #45a5a4;
+    }
+    .section-flee-mortals-rule-primer .mcdm-epigraph-red p:not(:last-of-type), 
+    .section-flee-mortals .mcdm-epigraph-red p:not(:last-of-type), 
+    .section-where-evil-lives .mcdm-epigraph-red p:not(:last-of-type){
+        --theme-page-fg-color: #d78888;
+    }
+    .section-flee-mortals-rule-primer a [data-content-type=mcdm-companion]:before, 
+    .section-flee-mortals a [data-content-type=mcdm-companion]:before, 
+    .section-where-evil-lives a [data-content-type=mcdm-companion]:before,
+    .section-flee-mortals-rule-primer a [data-content-type=mcdm-retainer]:before, 
+    .section-flee-mortals a [data-content-type=mcdm-retainer]:before, 
+    .section-where-evil-lives a [data-content-type=mcdm-retainer]:before,
+    .section-flee-mortals-rule-primer a [data-content-type=mcdm-magic-item]:before, 
+    .section-flee-mortals a [data-content-type=mcdm-magic-item]:before, 
+    .section-where-evil-lives a [data-content-type=mcdm-magic-item]:before{
+        color: #9a7a28;
     }
     .section-tome-of-beasts-1 .monster--stat-block.tob--stat-block{
-        --stat-block-divider: #9f6fa5;;
+        --stat-block-divider: #9f6fa5;
     }
     .tooltip-hover.spell-tooltip,
     .tooltip-hover.spell-tooltip:hover,
