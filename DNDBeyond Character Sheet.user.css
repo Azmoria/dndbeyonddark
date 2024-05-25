@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.266
+@version      1.3.267
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -1158,7 +1158,35 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
         cursor: default;
     }
     
+    menu[class*='styles_tabs']>li>button[class*='styles_tabButton']{
+      max-height: 26px;
+    }
+    menu[class*='styles_tabs']{
+      margin-bottom: 6px;
+    }
 
+    [class*='ct-primary-box__tab'] .ddbc-tab-options__body,
+    .ct-primary-box__tab--actions .ddbc-tab-options__content{
+    max-height: 551px;
+    }
+
+    .ct-description .ddbc-tab-options__content,
+    .ct-notes .ddbc-tab-options__content,
+    .ct-features .ddbc-tab-options__content{
+    height: 569px;
+    }
+
+    .ct-primary-box .ct-creatures, 
+    .ct-primary-box .ct-equipment, 
+    .ct-primary-box .ct-extras, 
+    .ct-primary-box .ct-spells,
+    .ct-primary-box .ct-description,
+    .ct-primary-box .ct-features,
+    .ct-primary-box .ct-notes{
+    height: 612px;
+    }
+
+    
 
     body:not(.body-forum):not(.section-posts):not(.section-changelog):not(.body-privatemessage-details) blockquote::before,
     body:not(.body-forum):not(.section-posts):not(.section-changelog):not(.body-privatemessage-details) blockquote::after,
