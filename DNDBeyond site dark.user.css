@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.493
+@version      1.2.494
 @author       Azmoria (Jay_Lane) 
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -2504,6 +2504,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         --nav-to-top-bg: /*[[backgroundColor]]*/;
         --nav-to-top-hover-bg: /*[[linkColor]]*/;
         --grey-900: /*[[fontColor]]*/;
+        --grey-500: /*[[fontColor]]*/;
     }
 
     table.table-compendium *{
@@ -2523,9 +2524,11 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
       
  
     div#site{
-    height: initial;
-        }
-
+        height: initial;
+    }
+    .collapsible-body svg path:not([fill='none']){
+        fill: /*[[fontColor]]*/;
+    }
 	::-webkit-scrollbar {
 		width: 3px;
         height: 3px;
@@ -3480,7 +3483,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .badge-label,
     .collapsible-header-meta,
     .combatant-summary__quantity,
-    [class*='styles_alert']
+    [class*='styles_alert'],
+    .ct-spell-detail__components-description
     {
 		color: /*[[fontColor]]*/ !important;
 	}
