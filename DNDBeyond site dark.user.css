@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.494
+@version      1.2.495
 @author       Azmoria (Jay_Lane) 
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -2971,7 +2971,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     html body.responsive-enabled, 
     .monster-stat-block-no-access-content,
     .builder-page .builder-type-instructions ~ .MuiGrid-root [class*='ddb-character-app'],
-    [class*='styles_button']
+    [class*='styles_button'],
+    [class*='styles_searchSort'] label
     {
 		background-color: /*[[backgroundColor]]*/
 		!important;
@@ -3801,7 +3802,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .section-the-book-of-many-things .text--asteria-notes, 
     .section-the-book-of-many-things .text--asteria-notes-signed,
     .sidenav-comp-page a,
-    .top-table-page a{
+    .top-table-page a,
+    [class*='styles_searchSort'] label{
         background-image: none !important;
     }   
     .section-the-book-of-many-things .black-card-suite{
