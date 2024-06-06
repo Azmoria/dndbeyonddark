@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.268
+@version      1.3.269
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -3118,7 +3118,14 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
     button.avtt-roll-button:hover{
         background: /*[[rollCalcColor]]*/ !important;
     }
-    
+    .mon-stat-block .avtt-ability-roll-button,
+    .mon-stat-block .avtt-roll-button,
+    .avtt-stat-block-container .avtt-ability-roll-button,
+    .avtt-stat-block-container .avtt-roll-button{
+        color: /*[[rollColor]]*/ !important;
+        background: /*[[rollCalcColor]]*/ !important;
+        border: 1px /*[[rollColor]]*/ solid !important;
+    }
 
 
 /*Beyond 20 + Talespire rolls settings*/
