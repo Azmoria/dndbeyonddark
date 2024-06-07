@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.501
+@version      1.2.502
 @author       Azmoria (Jay_Lane) 
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -2214,7 +2214,8 @@ EOT;
             bottom:0;   
             width: 200%;
             height:200%;
-            transform: translate(-25%, -18%);
+            transform: scale(var(--token-scale)) translate(calc(-25% / var(--token-scale)), calc(-18% / var(--token-scale)));
+            pointer-events:none;
             z-index: -1;    
             -webkit-mask-size: cover !important;
             -webkit-mask-repeat:  no-repeat;
