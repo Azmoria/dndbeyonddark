@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.504
+@version      1.2.505
 @author       Azmoria (Jay_Lane) 
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -5195,6 +5195,10 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
      background: #000 !important;   
     }
     
+    body#tinymce[contenteditable$="true"]{
+     background: #fff !important;   
+    }
+    
     .forum-thread-row.has-dev-comments .col-thread::before,
     div.ddb-search-filter-item:not(.selected)>div>div.ddb-search-filter-item-label-text,
     .combatant-card--character .combatant-card__right-bit span.combatant-card__hp-current, 
@@ -5344,11 +5348,11 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     /*AboveVTT Changes*/
     
      img[src*="assets/logo.png"],
-    .sidebar__controls img[src*="chrome-extension://"],
-    .player-attribute img[src*="chrome-extension://"],
-    .sidebar-panel-body button img[src*="chrome-extension://"]:not([src$='Onedrive_Icon.svg']),
-    #soundpad img[src*="chrome-extension://"]:not([src$='Onedrive_Icon.svg']),
-    .player-see-more img[src$="arrows_down.png"][src^="chrome-extension:"]{
+    .sidebar__controls img[src*="-extension://"],
+    .player-attribute img[src*="-extension://"],
+    .sidebar-panel-body button img[src*="-extension://"]:not([src$='Onedrive_Icon.svg']),
+    #soundpad img[src*="-extension://"]:not([src$='Onedrive_Icon.svg']),
+    .player-see-more img[src$="arrows_down.png"][src^="-extension:"]{
         /*[[aboveFilter]]*/
     }
    .sidebar-panel-body button img[src*="/assets/icons/save.svg"]{
