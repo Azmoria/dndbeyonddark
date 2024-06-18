@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.508
+@version      1.2.509
 @author       Azmoria (Jay_Lane) 
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -507,7 +507,9 @@ regexp("https://www.dndbeyond.com/sources/dilct/.*"),
 regexp("https://www.dndbeyond.com/sources/vnee/vecna-nest-of-the-eldritch-eye"),
 regexp("https://www.dndbeyond.com/sources/veor/.*"),
 regexp("https://www.dndbeyond.com/sources/fm/.*"),
-regexp("https://www.dndbeyond.com/sources/wel/.*") {
+regexp("https://www.dndbeyond.com/sources/wel/.*"), 
+regexp("https://www.dndbeyond.com/sources/qftis/.*") 
+{
 
     #site-main,
     body.responsive-enabled #site #site-main .container #content,
@@ -1212,7 +1214,8 @@ regexp("https://www.dndbeyond.com/sources/wel"){
 @-moz-document regexp("https://www.dndbeyond.com/sources/tob1"),
 regexp("https://www.dndbeyond.com/sources/veor"), 
 regexp("https://www.dndbeyond.com/sources/fm"),
-regexp("https://www.dndbeyond.com/sources/wel") {
+regexp("https://www.dndbeyond.com/sources/wel"),
+regexp("https://www.dndbeyond.com/sources/qftis") {
 
     @media (min-width: 1024px) {
         body {
