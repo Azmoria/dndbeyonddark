@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.510
+@version      1.2.511
 @author       Azmoria (Jay_Lane) 
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -5858,6 +5858,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         position: absolute !important;
         min-width: 420px !important;
         min-height: 275px !important;
+
     }
     .sidebar-panel-body .sp-container{
         position: fixed !important;
@@ -6175,11 +6176,16 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .hpbar,
     #splash,
     .visibility-container,
-    .elevationLegendDiv
+    .elevationLegendDiv,
+    #vision_menu #bucket_menu
     {
         background: /*[[backgroundColor]]*/!important;
         color: /*[[fontColor]]*/!important;
         border-color: /*[[borderColor]]*/ !important;
+    }
+    #vision_menu #bucket_menu{
+        transform: translate(5px);
+        border: 1px solid;
     }
     
     #combat_tracker_inside{
@@ -6406,7 +6412,13 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     [class*="glc-game-log"] .crit-mixed div[class*="TotalContainer-Flex"] .aboveDiceTotal{
         color:#1b9af0 !important;
     }
-    
+    [class*="glc-game-log"] div[class*="TotalContainer-Flex"] .custom-spell-save-text span{
+        color: /*[[fontColor]]*/ !important;
+        font-size: 10px;
+        font-weight: bold;
+        line-height: 10px;
+        text-wrap: nowrap;
+    }
     .scene div button:nth-of-type(3) img,
     .scene div button:nth-of-type(4) img{
        display: none;
