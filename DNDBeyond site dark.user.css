@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.512
+@version      1.2.513
 @author       Azmoria (Jay_Lane) 
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
@@ -6921,7 +6921,9 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     #zoom_buttons button, 
     .stream_button, 
     .GameLogEntry_Message__1GoY3 button,
-    .meet-controls-bar button#startScreenShare
+    .meet-controls-bar button#startScreenShare,
+    .meet-controls-bar button#peerVideo_echo_cancel,
+    .meet-controls-bar button#peerVideo_noise_sup
     {
         background: /*[[backgroundColor]]*/ !important;
         color: /*[[fontColor]]*/ !important;
@@ -6936,9 +6938,18 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     }
     button[id^=jitsi_],
     button[id^=peerVideo_],
-    .meet-controls-bar button#startScreenShare{
+    .meet-controls-bar button#startScreenShare,
+    .meet-controls-bar button#peerVideo_echo_cancel,
+    .meet-controls-bar button#peerVideo_noise_sup,
+    .meet-controls-bar button#peerVideo_noise_sup:hover,
+    .meet-controls-bar button#peerVideo_echo_cancel:hover{
         height:27px;
-        border-color: #777;
+        border-color: #777 !important;
+    }
+    .meet-controls-bar button#peerVideo_echo_cancel.enabled,
+    .meet-controls-bar button#peerVideo_noise_sup.enabled{
+        color: #01b03b !important;
+        box-shadow: inset 0 0 25px 5px #01b03b33;
     }
     .meet-controls-bar select{
         height: 27px;
