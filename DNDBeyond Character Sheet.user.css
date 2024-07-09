@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.276
+@version      1.3.277
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -4213,10 +4213,14 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
     #zoom_buttons button, 
     .stream_button, 
     .GameLogEntry_Message__1GoY3 button,
-    .meet-controls-bar button#startScreenShare
+    .meet-controls-bar button#startScreenShare,
+    .meet-controls-bar button#peerVideo_echo_cancel,
+    .meet-controls-bar button#peerVideo_noise_sup,
+    .meet-controls-bar button#peerVideo_noise_sup:hover,
+    .meet-controls-bar button#peerVideo_echo_cancel:hover
     {
         background: /*[[background]]*/ !important;
-        color: /*[[fontColor]]*/;
+        color: /*[[fontColor]]*/ !important;
         height: 22px;
         margin: 0 2px;
         border-radius: 7px;
@@ -4230,7 +4234,11 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
     }
     button[id^=jitsi_],
     button[id^=peerVideo_],
-    .meet-controls-bar button#startScreenShare{
+    .meet-controls-bar button#startScreenShare,
+    .meet-controls-bar button#peerVideo_echo_cancel,
+    .meet-controls-bar button#peerVideo_noise_sup,
+    .meet-controls-bar button#peerVideo_noise_sup:hover,
+    .meet-controls-bar button#peerVideo_echo_cancel:hover{
         height:27px;
     }
     .meet-controls-bar select{
@@ -4238,9 +4246,16 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
         border-radius:5px;
     }
     .meet-controls-bar button,
-    .meet-controls-bar select{
+    .meet-controls-bar select,
+    .meet-controls-bar button#peerVideo_echo_cancel,
+    .meet-controls-bar button#peerVideo_noise_sup{
         border-color: #777 !important;
          background: /*[[background]]*/ !important;
+    }
+    .meet-controls-bar button#peerVideo_echo_cancel.enabled,
+    .meet-controls-bar button#peerVideo_noise_sup.enabled{
+        color: #01b03b !important;
+        box-shadow: inset 0 0 25px 5px #01b03b33;
     }
     #combat_area tr.CTToken:before{
         font-size: 11px
