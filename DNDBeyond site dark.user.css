@@ -2,11 +2,11 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.515
+@version      1.2.516
 @author       Azmoria (Jay_Lane) 
 @updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
-@var color transparencyBackgroundColor "Transparency of some backgrounds/busttons" #000000aa
+@var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
 @var color forumPostColor "Forum Post Color" #0f0f0fdd
 @var color forumSecondaryColor "Forum Secondary Color" #111d
 @var color forumTertiaryColor "Forum Tertiary Color" #1e1e1edd
