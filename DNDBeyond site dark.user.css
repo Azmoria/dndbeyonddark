@@ -2,9 +2,8 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.516
+@version      1.2.517
 @author       Azmoria (Jay_Lane) 
-@updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
 @var color forumPostColor "Forum Post Color" #0f0f0fdd
@@ -177,6 +176,7 @@ dark "Dark Mode" <<<EOT
      --compendium-monster-tooltip: #D35050;
      --compendium-spell-tooltip: #896CE0;
      --compendium-magic-item-tooltip: #1877EC;
+    --kp-purple: #a275d7;
     }
     .section-tome-of-beasts-1 li::marker, .section-tome-of-beasts-1 strong:not(em strong,ul strong,strong em,.flexible-double-column.hangingIndent strong,.epigraph strong),
 .section-tome-of-beasts-1 .monster--stat-block.tob--stat-block .monster--stats p:nth-child(odd),
@@ -509,7 +509,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/veor/.*"),
 regexp("https://www.dndbeyond.com/sources/dnd/fm/.*"),
 regexp("https://www.dndbeyond.com/sources/dnd/wel/.*"), 
 regexp("https://www.dndbeyond.com/sources/dnd/qftis/.*"), 
-regexp("https://www.dndbeyond.com/sources/dnd/ghpp/grim-hollow-player-pack") 
+regexp("https://www.dndbeyond.com/sources/dnd/ghpp/grim-hollow-player-pack"), 
+regexp("https://www.dndbeyond.com/sources/dnd/boet/.*")  
 {
 
     #site-main,
@@ -1138,7 +1139,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/tob1"),
 regexp("https://www.dndbeyond.com/sources/dnd/veor"),
 regexp("https://www.dndbeyond.com/sources/dnd/fm"),
 regexp("https://www.dndbeyond.com/sources/dnd/wel"),
-regexp("https://www.dndbeyond.com/sources/dnd/qftis")
+regexp("https://www.dndbeyond.com/sources/dnd/qftis"), 
+regexp("https://www.dndbeyond.com/sources/dnd/boet")
 {
    
     #site-main,
@@ -1218,7 +1220,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/qftis")
 regexp("https://www.dndbeyond.com/sources/dnd/veor"), 
 regexp("https://www.dndbeyond.com/sources/dnd/fm"),
 regexp("https://www.dndbeyond.com/sources/dnd/wel"),
-regexp("https://www.dndbeyond.com/sources/dnd/qftis") {
+regexp("https://www.dndbeyond.com/sources/dnd/qftis"), 
+regexp("https://www.dndbeyond.com/sources/dnd/boet")  {
 
     @media (min-width: 1024px) {
         body {
@@ -1246,7 +1249,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/qftis") {
     }
 }
 
-@-moz-document regexp("https://www.dndbeyond.com/sources/dnd/fm"){
+@-moz-document regexp("https://www.dndbeyond.com/sources/dnd/fm"), 
+regexp("https://www.dndbeyond.com/sources/dnd/boet") {
  body {
     background-position:center 0% !important;
     }
