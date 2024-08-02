@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.517
+@version      1.2.518
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -5849,6 +5849,11 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     }
     body{
         overflow: scroll !important;
+    }
+    .dm-eyes-only,
+    .dm-eyes-only:before{
+        background: /*[[sidebarColor]]*/;
+        border-color: /*[[borderColor]]*/;
     }
     #qrm_dialog .menu_table{
         overflow-x:hidden;
