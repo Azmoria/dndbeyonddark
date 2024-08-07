@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.521
+@version      1.2.522
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -3860,7 +3860,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     position: relative;
     display: inline-block;
     vertical-align: text-top;
-    min-height: 280px;
+    min-height: 170px;
 
     }
     
@@ -3873,11 +3873,13 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     }
     
     .dice-set__subsets {
-    display: flex;
-    flex-wrap: wrap;
-    position: absolute;
-    bottom: 25px;
-    left: 25px;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        
+    }
+    .dice-set__subset{
+        margin: 0px 7px 7px 0px
     }
     .dice-mydice{
         position: relative;
