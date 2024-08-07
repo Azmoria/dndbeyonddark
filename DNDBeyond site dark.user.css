@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.519
+@version      1.2.520
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -7434,12 +7434,16 @@ regexp("https://www.dndbeyond.com/encounters.*#DiceTray"), regexp("https://www.d
     .ct-game-log-pane>div>div:first-of-type>div>span,
     .MuiButton-label,
     [class^="GameLog_ZeroState"],
-    .glc-game-log button
+    .glc-game-log button,
+    [class*='Line-Title'] .aboveDiceOutput .tooltip-hover,
+    [class*='Line-Title'] .aboveDiceOutput 
     { 
         color: /*[[fontColor]]*/ !important;
     }
     
-
+    .above-vtt-container-roll-output{
+        filter: brightness(0.7)
+    }
         
     .sidebar__control svg path,
     .sidebar__control svg polygon,
