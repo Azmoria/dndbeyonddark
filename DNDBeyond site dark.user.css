@@ -5877,6 +5877,10 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         color:  var(--text-deco-color, /*[[linkColor]]*/) !important;
         text-decoration: none !important;
     }
+    #resizeDragMon .avtt-stat-block-container .mon-stat-block .tooltip-hover:not(.monster-tooltip):not(.magic-item-tooltip):not(.spell-tooltip){
+        color:  /*[[fontColor]]*/ !important;
+        text-decoration: 1px dotted /*[[linkColor]]*/ underline !important;
+    }
     #qrm_dialog {
         border-width:1px !important;
     }
