@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.522
+@version      1.2.523
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -171,6 +171,7 @@ dark "Dark Mode" <<<EOT
     .stat-block-background--space .stat-block-ability-scores,
     .red-statblock-text{
         color: #D35050 !important;
+        --text-deco-color: #D35050;
     }
     body *{
      --compendium-monster-tooltip: #D35050;
@@ -241,6 +242,7 @@ dark "Dark Mode" <<<EOT
     .list-row-spell a,
     .section-bigby-presents-glory-of-the-giants.body-page .p-article-a .p-article-content :is(.table-compendium,.text--rules-sidebar) .tooltip-hover.spell-tooltip{
         color: #896CE0 !important;
+        --text-deco-color: #896CE0;
     }
     .tooltip-hover.magic-item-tooltip, 
     .tooltip-hover.magic-item-tooltip:hover,
@@ -255,6 +257,7 @@ dark "Dark Mode" <<<EOT
     .body-page .p-article-a .p-article-content a.magic-item-tooltip,
     .list-row-primary-text-item{
         color: #1877EC !important;
+        --text-deco-color: #1877EC;
     }
     .player-info-table .lowest-value{
         
@@ -5869,6 +5872,10 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     }
     #qrm_dialog .menu_table{
         overflow-x:hidden;
+    }
+    #resizeDragMon .avtt-stat-block-container .mon-stat-block .tooltip-hover{
+        color:  var(--text-deco-color, /*[[linkColor]]*/) !important;
+        text-decoration: none !important;
     }
     #qrm_dialog {
         border-width:1px !important;
