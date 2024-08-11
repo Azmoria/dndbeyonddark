@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.524
+@version      1.2.525
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -7454,7 +7454,12 @@ regexp("https://www.dndbeyond.com/encounters.*#DiceTray"), regexp("https://www.d
     { 
         color: /*[[fontColor]]*/ !important;
     }
-    
+    .visually-hidden{
+        display: none;
+    }
+    .ui-widget-content .note-text a{
+        color: /*[[linkColor]]*/ !important;
+    }
     .above-vtt-container-roll-output,
     .above-vtt-roll-whisper{
         filter: brightness(0.7)
