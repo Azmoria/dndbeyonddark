@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.525
+@version      1.2.526
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -7398,7 +7398,10 @@ regexp("https://www.dndbeyond.com/encounters.*#DiceTray"), regexp("https://www.d
     .tippy-popper {
         z-index: 60000 !important;
     }
-
+    .note-text{
+     --compendium-quote-box-color: #FAF8EC;
+    }
+        
     .dice_result__divider {
         -webkit-mask: url("data:image/svg+xml;charset=utf-8,%3Csvg width='19' height='80' viewBox='0 0 19 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23FFFFFF' d='M10 0v35H9V0z'/%3E%3Cpath fill='%23FFFFFF' d='M10 70v105H9V70Z'/%3E%3Cpath fill='%23FFFFFF00' d='M19 68H0V33h19z'/%3E%3Cpath fill='%23FFFFFF' d='M19 57H0v-3h19zM19 47H0v-3h19z'/%3E%3C/svg%3E") no-repeat 100% 100%;
         background-color: /*[[fontColor]]*/;
