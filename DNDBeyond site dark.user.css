@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.526
+@version      1.2.527
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -513,7 +513,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/fm/.*"),
 regexp("https://www.dndbeyond.com/sources/dnd/wel/.*"), 
 regexp("https://www.dndbeyond.com/sources/dnd/qftis/.*"), 
 regexp("https://www.dndbeyond.com/sources/dnd/ghpp/grim-hollow-player-pack"), 
-regexp("https://www.dndbeyond.com/sources/dnd/boet/.*")  
+regexp("https://www.dndbeyond.com/sources/dnd/boet/.*"), 
+regexp("https://www.dndbeyond.com/sources/dnd/tfts/.*")    
 {
 
     #site-main,
@@ -1143,7 +1144,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/veor"),
 regexp("https://www.dndbeyond.com/sources/dnd/fm"),
 regexp("https://www.dndbeyond.com/sources/dnd/wel"),
 regexp("https://www.dndbeyond.com/sources/dnd/qftis"), 
-regexp("https://www.dndbeyond.com/sources/dnd/boet")
+regexp("https://www.dndbeyond.com/sources/dnd/boet"), 
+regexp("https://www.dndbeyond.com/sources/dnd/tfts") 
 {
    
     #site-main,
@@ -1224,7 +1226,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/veor"),
 regexp("https://www.dndbeyond.com/sources/dnd/fm"),
 regexp("https://www.dndbeyond.com/sources/dnd/wel"),
 regexp("https://www.dndbeyond.com/sources/dnd/qftis"), 
-regexp("https://www.dndbeyond.com/sources/dnd/boet")  {
+regexp("https://www.dndbeyond.com/sources/dnd/boet"), 
+regexp("https://www.dndbeyond.com/sources/dnd/tfts")   {
 
     @media (min-width: 1024px) {
         body {
