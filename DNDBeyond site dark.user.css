@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.527
+@version      1.2.528
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -2577,7 +2577,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         border-radius: 5px !important;
     }
 
-     .ddb-character-app-14q7noi>[class*='ddb-character-app'] .Mui-checked path{
+     .ddb-character-app-14q7noi>[class*='ddb-character-app'] .Mui-checked path,
+    [class*='gamelog-button__icon'] path{
         fill: /*[[linkColor]]*/
     }
      .ddb-character-app-14q7noi>[class*='ddb-character-app'] .Mui-checked svg,
@@ -2817,6 +2818,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .starting-equipment-rule-slot-inactive,
     .p-forum-poll .b-poll-a .b-poll-voting .form-field-string-choice-field>label:first-child,
     .gamelog-button,
+    button[class*='gamelog-button'],
     .dice-set__info__desc,
     [class^="party-selector-"],
     [class^="party-stats_"],
@@ -3940,7 +3942,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         outline: none !important;
     }
         
-    .gamelog-button{
+    .gamelog-button,
+    button[class*='gamelog-button']{
         padding: 6px 20px 6px 12px;
         border-width: /*[[borderWidth]]*/
         !important;
@@ -4899,6 +4902,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .actions-container .actions__tooltip>ul>li:hover,
     .ddbeb-button:hover:not([disabled]),
     .gamelog-button:hover:not([disabled]),
+    button[class*='gamelog-button']:hover:not([disabled]),
     .actions-container>button:hover:not([disabled]),
     body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions li.selected a,
     body.body-privatemessage .p-pm-a .p-pm-filter ul.user-actions li:hover a,
@@ -5803,7 +5807,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
 }  
     
 
-@-moz-document regexp("https://www.dndbeyond.com/encounters.*abovevtt.*") {
+@-moz-document regexp("https://www.dndbeyond.com/encounters.*abovevtt.*"),
+regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
     /*New AboveVTT Changes for ddb-dice fork/merge*/
     #castbutton,
     .sidebar__pane-content .rc-switch,
@@ -7057,15 +7062,18 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         background-color: /*[[linkColor]]*/ !important;
     }
 
-   .gamelog-button__icon path{
+   .gamelog-button__icon path,
+    [class*='gamelog-button__icon'] path{
           fill: /*[[fontColor]]*/;
     }
     
-    .sidebar-tab-image:hover .gamelog-button__icon path{
+    .sidebar-tab-image:hover .gamelog-button__icon path,
+    .sidebar-tab-image:hover [class*='gamelog-button__icon'] path{
           fill: /*[[linkColor]]*/;
     }
     
-    .tab-btn.notification .gamelog-button__icon path{
+    .tab-btn.notification .gamelog-button__icon path,
+    .sidebar-tab-image:hover [class*='gamelog-button__icon'] path{
          animation: 2s gamelogflash infinite ease-in-out
     }
   
