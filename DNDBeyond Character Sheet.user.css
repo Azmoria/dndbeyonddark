@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.290
+@version      1.3.291
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -1783,7 +1783,8 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
     .ddbc-builder-svg,
     .ct-sidebar__control-icon,
     .ddbc-character-tidbits__body,
-    .ddbc-box-background{
+    .ddbc-box-background,
+    .ct-sidebar__inner [class*='styles_controls']{
         filter: drop-shadow(1px 1px 0px #000);
     }
     .ct-quick-info svg > path,
