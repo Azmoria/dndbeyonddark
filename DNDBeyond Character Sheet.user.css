@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.297
+@version      1.3.298
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -3297,7 +3297,97 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
     .token .note-condition.condition-img{
         pointer-events: auto !important;
     }
-        
+                    /*********NEW STAT BLOCK***********/
+    .stat-block{
+        --theme-table-header-fg-color: /*[[fontColor]]*/;
+    }
+
+    .stat-block .monster-header {
+        padding-top: 4px;
+        letter-spacing: .35px;
+        font-weight: 500;
+        color: var(--monster-header-color,#5b160c);
+        font-size: var(--monster-trait-header-size,18px);
+        font-family: var(--monster-trait-header-font,"Roboto Condensed",Helvetica,sans-serif);
+        border-bottom: 2px solid var(--monster-header-underline,#7a3c2f)
+    }
+    
+    .stat-block .monster-header+p {
+        break-before: avoid
+    }
+    
+    .stat-block .stats {
+        display: flex;
+        gap: 10px
+    }
+    
+    .stat-block .stats+p {
+        margin-top: 10px
+    }
+    
+    .stat-block .stats table.abilities-saves {
+        --theme-table-row-color: transparent;
+        flex: 1 1 auto;
+        line-height: 24px;
+        background: revert;
+        border: none;
+        font-size: 16px;
+        break-inside: avoid
+    }
+    
+    .stat-block .stats table.abilities-saves.physical {
+        --stats-score: #4b3e347d;
+        --stats-mods: #4b34377d;
+        --stats-score-hover: rgba(153,127,109,0.49019607843137253);
+        --stats-mods-hover: rgba(153,109,114,0.49019607843137253)
+    }
+    
+    .stat-block .stats table.abilities-saves.mental {
+        --stats-score: #34454b7d;
+        --stats-mods: #38344b7d;
+        --stats-score-hover: rgba(109,141,153,0.49019607843137253);
+        --stats-mods-hover: rgba(117,109,153,0.49019607843137253)
+    }
+    
+    
+    
+    .stat-block .stats table.abilities-saves thead tr th,
+    .stat-block .stats table.abilities-saves tbody,
+    .stat-block .stats table.abilities-saves tbody th,
+    .stat-block .stats table.abilities-saves tbody td,
+    .stat-block .stats table.abilities-saves thead{
+        border: none !important;
+    }
+    
+    
+    .stat-block .stats table.abilities-saves tbody tr {
+        background-color: var(--theme-table-row-color, /*[[backgroundColor]]*/) !important;
+    }
+    
+    .stat-block .stats table.abilities-saves tbody tr:hover {
+        background-color: var(--stats-hover) !important;
+    }
+    
+    .stat-block .stats table.abilities-saves tbody tr:hover :nth-child(-n+3) {
+        background-color: var(--stats-score-hover) !important;
+    }
+    
+    .stat-block .stats table.abilities-saves tbody tr:hover :nth-child(n+3) {
+        background-color: var(--stats-mods-hover) !important;
+    }
+    
+    .body-page #site .p-article-a .p-article-content .stat-block .stats table.abilities-saves tbody tr :nth-child(-n+3) {
+        background-color: var(--stats-score) !important;
+    }
+    
+    .stat-block .stats table.abilities-saves tbody tr :nth-child(n+3) {
+        background-color: var(--stats-mods) !important;
+    }
+    .stat-block {
+      --stat-block-bg-override: /*[[backgroundColor]]*/;
+      color: /*[[fontColor]]*/;
+    }
+/******* END NEW STAT BLOCK ******/
     .tooltip-body-description table tbody tr:nth-child(odd),
     .tooltip-body-description table tbody tr:nth-child(even),
     .tooltip-body-description table tbody tr,
