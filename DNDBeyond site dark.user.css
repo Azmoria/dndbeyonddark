@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.531
+@version      1.2.532
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -3141,6 +3141,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         background-blend-mode: soft-light !important;
         background-size: 100% 100%;
         background-repeat: no-repeat;
+        pointer-events:none;
     }
     .section-players-handbook .rhythm-box-tall:before {
         background-image: url(https://www.dndbeyond.com/attachments/11/527/test3.png);
