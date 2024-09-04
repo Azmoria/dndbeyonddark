@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.532
+@version      1.2.533
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -6002,9 +6002,13 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
     body{
         overflow: scroll !important;
     }
-    [class*="glc-game-log"] [class*="MessageContainer-Flex"] div.note-text *{
+    [class*="glc-game-log"] [class*="MessageContainer-Flex"] div.note-text .text--quote-box *,
+    [class*="glc-game-log"] [class*="MessageContainer-Flex"] div.note-text .rules-text *,
+    [class*="glc-game-log"] [class*="MessageContainer-Flex"] div.note-text .block-torn-paper *,
+    [class*="glc-game-log"] [class*="MessageContainer-Flex"] div.note-text .read-aloud-text * {   
         color: #242527 !important;
     }
+
     .block-send-to-game-log span{
         color: /*[[fontColor]]*/ !important;
         text-shadow:1px 1px 2px #000;
