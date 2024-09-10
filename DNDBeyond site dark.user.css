@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.535
+@version      1.2.537
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -3345,6 +3345,20 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .table-compendium tr:nth-child(odd) td{ 
         background: none !important;
         backdrop-filter: brightness(0.8);      
+    }
+    .static-container-details .content-container table tbody tr td:hover,
+    table.table-compendium>tbody>tr td:hover,
+    table.wiki-content-table>tbody>tr td:hover,
+    .body-page .p-article-a .p-article-content table tbody tr td:hover,
+    .more-info-content table tbody tr td:hover,
+    .more-info-body-description table tbody tr td:hover,
+    #site .p-article-content table tbody tr td:hover,
+    .ddb-account-tab-body .listing-container-table table tbody tr td:hover,
+    .listing__items tr td:hover,
+    .compendium-left-aligned-table tr td:hover,
+    .vehicle-stat-block.vehicle-stat-block-spelljammer .vehicle-stat-block__attributes div:hover,
+    .table-compendium tr td:hover{
+        backdrop-filter: brightness(2.2) !important; 
     }
     #Diagram42UnseenOrderHandout1 img,
     #Diagram43UnseenOrderHandout2 img,
