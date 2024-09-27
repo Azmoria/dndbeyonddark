@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.538
+@version      1.2.539
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -2573,6 +2573,10 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
 
      .ddb-character-app-14q7noi>[class*='ddb-character-app'] .ddbc-ability-summary *{
         color: #000;
+    }
+    
+    .input-select.is-open {
+        z-index:10000000 !important;
     }
      .ddb-character-app-14q7noi>[class*='ddb-character-app'] .ddbc-ability-summary [class*='dark-mode'],
      .ddb-character-app-14q7noi>[class*='ddb-character-app'] label,
