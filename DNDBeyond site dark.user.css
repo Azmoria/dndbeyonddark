@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.539
+@version      1.2.540
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -520,7 +520,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/ghpp/grim-hollow-player-pack"),
 regexp("https://www.dndbeyond.com/sources/dnd/boet/(.|\s)*\S(.|\s)*"), 
 regexp("https://www.dndbeyond.com/sources/dnd/tfts/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/phb-2024/(.|\s)*\S(.|\s)*"),
-regexp("https://www.dndbeyond.com/sources/dnd/free-rules/(.|\s)*\S(.|\s)*")  
+regexp("https://www.dndbeyond.com/sources/dnd/free-rules/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/uhlh/(.|\s)*\S(.|\s)*")  
 {
 
     #site-main,
@@ -4070,7 +4071,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         display: none;
     }
     .section-free-rules hr.separator,
-    .section-players-handbook hr.separator{
+    .section-players-handbook hr.separator,
+    .section-uni-and-the-hunt-for-the-lost-horn hr.separator{
         filter: /*[[filter]]*/;
     }
     .p-article-a .p-article-interact .p-article-comments a:first-of-type:after{
