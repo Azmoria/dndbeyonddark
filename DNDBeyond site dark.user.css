@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.540
+@version      1.2.541
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -6304,7 +6304,7 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
         color: /*[[fontColor]]*/;
     }
     
-    #playersFolder .token-row-gear {
+    #playersFolder .folder-item-list .token-row-gear {
         border: 1px solid #d8e1e8;
     }
     
@@ -6332,9 +6332,9 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
     .token-row-gear img {
         filter: /*[[filter]]*/;   
     }
-    #playersFolder .token-row-button, 
+    #playersFolder .folder-item-list .token-row-button, 
     .token-row-gear,
-    #playersFolder .token-row-gear{
+    #playersFolder .folder-item-list .token-row-gear{
         background: /*[[rollCalcColor]]*/; 
     }
     
