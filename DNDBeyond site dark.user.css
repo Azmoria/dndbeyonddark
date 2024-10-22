@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.545
+@version      1.2.546
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -6037,6 +6037,10 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
     .glc-game-log #chat-language{
         background: none !important;
         --border-color: #3d3d3d;
+        
+    }
+    #chat-language option {
+        --theme-background-solid:/*[[sidebarColor]]*/;
     }
             /*********NEW STAT BLOCK***********/
     .stat-block{
