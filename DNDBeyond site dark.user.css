@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.543
+@version      1.2.545
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -5142,7 +5142,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
      {
         fill: /*[[linkColor]]*/ !important;
     }
-    .tooltip::after{
+    .tooltip::after,
+    [class*='styles_collapsible']:not([class*='styles_withHeading']) [class*='styles_content']:after{
     background: linear-gradient(to top, /*[[backgroundColor]]*/, #00000000) !important;
     }
     
@@ -5990,6 +5991,9 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
         background: #e6e6e6 !important;
         color: #000 !important;
     }
+    select#chat-language{
+        background: none !important;
+    }
     #qrm_dialog #quick_roll_footer{
         border-radius: 0px 0px 5px 5px;
         border-top: 1px solid #666
@@ -6026,7 +6030,14 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
     .block-send-to-game-log{
         backdrop-filter:brightness(0.6);
     }
-
+    
+    .body-rpgcampaign select#chat-language{
+        bottom:1px;
+    }
+    .glc-game-log #chat-language{
+        background: none !important;
+        --border-color: #3d3d3d;
+    }
             /*********NEW STAT BLOCK***********/
     .stat-block{
         --theme-table-header-fg-color: /*[[fontColor]]*/;
