@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.546
+@version      1.2.547
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -83,7 +83,40 @@ dark "Dark Mode" <<<EOT
 
 
     }
+    .section-dungeon-masters-guide .rhythm-of-play{
+        --example-bg: rgba(30, 30, 30, .878);
+        --example-bg-emphasis: #c8dcdb;
+        --example-border: #799a9c;
+        --example-number-background: #779596;
+        --player-text-color: #5f8686;
+        --dm-text-color: #97864d;
+    }
+     .section-dungeon-masters-guide  .rhythm-box{
+        background-color: transparent !important;
+        background:none !important;
+        border: none !important;
+        position:relative;
+    }
     
+    .section-dungeon-masters-guide .rhythm-box:before {
+        background-image: url(https://media.dndbeyond.com/compendium-images/dmg/ui/rhythm-box.png);
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.2;
+        background-blend-mode: soft-light !important;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        pointer-events:none;
+    }
+    .section-dungeon-masters-guide  .rhythm-box-tall:before {
+        background-image: url(https://media.dndbeyond.com/compendium-images/dmg/ui/rhythm-box.png);
+        padding: 20px 16px 8px 22px;
+    }
     .single-column #content .p-forum-a .p-comment-wrapper [style*="color: rgba(51, 51, 0, 1)"]
     {
         color: rgba(100, 100, 0, 1) !important;
@@ -478,6 +511,7 @@ regexp("https://www.dndbeyond.com/sources/dnd/cm/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/egtw/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/idrotf/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/dmg-2014/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/dmg-2024/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/erftlw/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/ddvram/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/cotn/(.|\s)*\S(.|\s)*"),
@@ -521,7 +555,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/boet/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/tfts/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/phb-2024/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/free-rules/(.|\s)*\S(.|\s)*"),
-regexp("https://www.dndbeyond.com/sources/dnd/uhlh/(.|\s)*\S(.|\s)*")  
+regexp("https://www.dndbeyond.com/sources/dnd/uhlh/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/soee/(.|\s)*\S(.|\s)*")
 {
 
     #site-main,
@@ -1154,7 +1189,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/qftis(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/boet(/)?"), 
 regexp("https://www.dndbeyond.com/sources/dnd/tfts(/)?"), 
 regexp("https://www.dndbeyond.com/sources/dnd/phb-2024(/)?"), 
-regexp("https://www.dndbeyond.com/sources/dnd/free-rules(/)?")
+regexp("https://www.dndbeyond.com/sources/dnd/free-rules(/)?"), 
+regexp("https://www.dndbeyond.com/sources/dnd/dmg-2024(/)?")
 {
    
     #site-main,
@@ -1238,7 +1274,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/qftis(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/boet(/)?"), 
 regexp("https://www.dndbeyond.com/sources/dnd/tfts(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/phb-2024(/)?"), 
-regexp("https://www.dndbeyond.com/sources/dnd/free-rules(/)?"){
+regexp("https://www.dndbeyond.com/sources/dnd/free-rules(/)?"), 
+regexp("https://www.dndbeyond.com/sources/dnd/dmg-2024(/)?"){
 
     @media (min-width: 1024px) {
         body {
@@ -4071,9 +4108,9 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     {
         display: none;
     }
-    .section-free-rules hr.separator,
-    .section-players-handbook hr.separator,
-    .section-uni-and-the-hunt-for-the-lost-horn hr.separator{
+    hr.tr:hover td,
+    hr.separator,
+    hr.separator{
         filter: /*[[filter]]*/;
     }
     .p-article-a .p-article-interact .p-article-comments a:first-of-type:after{
