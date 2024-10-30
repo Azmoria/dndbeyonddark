@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.306
+@version      1.3.307
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -1435,7 +1435,8 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
     [class*="NotRoot"] div[class*="MessageWrapper"],
     [class*="NotRoot"] [class*="MessageTotal"],
     #character-privacy-radio,
-    .settings-container .settings-modal .attribute-container .attribute .html-value-container
+    .settings-container .settings-modal .attribute-container .attribute .html-value-container,
+    [class*='styles_label']
     {
         color: /*[[fontColor]]*/ !important;
     }
