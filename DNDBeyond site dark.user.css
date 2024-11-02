@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.547
+@version      1.2.548
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -3019,8 +3019,9 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     html body.responsive-enabled, 
     .monster-stat-block-no-access-content,
     .builder-page .builder-type-instructions ~ .MuiGrid-root [class*='ddb-character-app'],
-    [class*='styles_button'],
-    [class*='styles_searchSort'] label
+    [class*='styles_button_'],
+    [class*='styles_searchSort'] label,
+    [class*=Button][class*='styles_dark']
     {
         background-color: /*[[backgroundColor]]*/
         !important;
@@ -3029,6 +3030,7 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
         color: /*[[fontColor]]*/
         !important;
     }
+
     .character-builder-inner [class*='ddb-character-app']{
         background:transparent;
     }
@@ -3661,7 +3663,9 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .combatant-summary__quantity,
     [class*='styles_alert'],
     .ct-spell-detail__components-description,
-    [class*='styles_settingsButtonText']
+    [class*='styles_settingsButtonText'],
+    [class*='styles_item'][role] p,
+    [class*='styles_item'][role] span
     {
         color: /*[[fontColor]]*/ !important;
     }
@@ -3923,7 +3927,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .morden-notes,
     .tasha-notes,
     aside.text--krynn-letter,
-     aside.text--krynn-sidebar
+     aside.text--krynn-sidebar,
+    [class*=Button][class*='styles_dark']
     {
         border-width: /*[[borderWidth]]*/
         !important;
@@ -5105,7 +5110,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .ui-state-highlight,
     .p-article-a .p-article-interact .p-article-comments a:first-of-type:hover,
     #content-management-root .ddb-button:hover,
-    .MuiDialogActions-root button:hover
+    .MuiDialogActions-root button:hover,
+    [class*=Button][class*='styles_dark'][class*='styles_builder-green'][class*='styles_outline']
     {
         background-color: /*[[backgroundColor]]*/ !important;
         box-shadow: inset 0px 0px 30px 0px /*[[linkColor]]*/ !important;
