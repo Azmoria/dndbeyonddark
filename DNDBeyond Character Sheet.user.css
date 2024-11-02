@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.307
+@version      1.3.308
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -1021,6 +1021,8 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
     .ct-slot-manager__slot,
     .site .ct-button.ct-theme-button--outline,
     .ct-character-header-desktop__button,
+    [class*='styles_campaignSummary'],
+    [class*='styles_campaignSummary'] ~ *,
     .site .ct-button.ct-theme-button--filled:disabled,
     .site .ct-theme-button--outline.ct-button:hover,
     .site .ct-theme-button--outline.ct-button:active,
@@ -1859,7 +1861,8 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
     
     .ddbc-svg.ddbc-chevron-svg.ddbc-chevron-right-svg.ddbc-svg--builder path,
     .ddbc-svg.ddbc-chevron-svg path,
-    div .ddbc-chevron-svg svg path{
+    div .ddbc-chevron-svg svg path,
+    .ct-character-sheet__inner [class*='styles_campaignSummary'] ~ * svg path{
         fill: /*[[fontColor]]*/ !important;
     }
 
