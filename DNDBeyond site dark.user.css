@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.548
+@version      1.2.549
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -3279,7 +3279,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     body #site-main .playtest--download-pdf a,
     body .ddb-character-app-r7444x,
     .article-main blockquote p span,
-    [class*='LabelChip_LabelChip']{
+    [class*='LabelChip_LabelChip'],
+    .glc-game-log .ct-sidebar__heading span:not([class*='uncommon'], [class*='rare'], [class*='very-rare'], [class*='legendary'], [class*='artifact']){
         color: /*[[fontColor]]*/ !important;   
     }
 
