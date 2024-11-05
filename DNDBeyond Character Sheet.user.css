@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.308
+@version      1.3.309
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -885,7 +885,15 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
         /*[[titleToggle]]*/
     }
 
-    
+    :root *{
+        --color-common: /*[[fontColor]]*/;
+        --color-uncommon: #1FC219;
+        --color-rare: #4990E2;
+        --color-veryrare: #9810E0;
+        --color-legendary: #FEA227;
+        --color-artifact: #be8972;
+        --theme-background: /*[[sheetColor]]*/;
+    }
     
     html body#site.body-rpgcharacter-sheet{
         /*[[backgroundImg]]*/
@@ -1438,7 +1446,8 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
     [class*="NotRoot"] [class*="MessageTotal"],
     #character-privacy-radio,
     .settings-container .settings-modal .attribute-container .attribute .html-value-container,
-    [class*='styles_label']
+    [class*='styles_label'],
+    .ct-sidebar__inner .glc-game-log .abovevtt-sidebar-injected *
     {
         color: /*[[fontColor]]*/ !important;
     }
@@ -2265,7 +2274,8 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
     .container .ct-health-manager__status--negative{
          color: #c53131 !important;
     }
-    
+
+
     
     .ct-slot-manager__slot,
     button.ct-theme-button.button-action-decrease.button-action-decrease--small.ct-theme-button--filled.ct-theme-button--interactive.ct-button.character-button.ddbc-button.character-button-small,
