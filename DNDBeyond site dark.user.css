@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.549
+@version      1.2.550
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -3021,7 +3021,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .builder-page .builder-type-instructions ~ .MuiGrid-root [class*='ddb-character-app'],
     [class*='styles_button_'],
     [class*='styles_searchSort'] label,
-    [class*=Button][class*='styles_dark']
+    [class*=Button][class*='styles_dark'],
+    [class*='styles_details']
     {
         background-color: /*[[backgroundColor]]*/
         !important;
@@ -3312,7 +3313,9 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .compendium-art figcaption a.ddb-lightbox-outer,
     [class*='styles_searchSort'],
     [class*='styles_search__GpeP'],
-    [class*='styles_alert']{
+    [class*='styles_alert'],
+    .ability-score-calcs [class*='styles_highlight'],
+    .ability-score-calcs [class*='styles_value']{
         background: none !important;
     }
 
@@ -3387,10 +3390,22 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .listing__items tr:nth-child(odd) td,
     .compendium-left-aligned-table tr:nth-child(odd) td,
     .vehicle-stat-block.vehicle-stat-block-spelljammer .vehicle-stat-block__attributes div:nth-child(odd),
-    .table-compendium tr:nth-child(odd) td{ 
+    .table-compendium tr:nth-child(odd) td,
+    .ability-score-calcs [class*='styles_row']:nth-child(2n+3 of [class*='styles_row']) div
+    { 
         background: none !important;
         backdrop-filter: brightness(0.8);      
     }
+    .ability-score-calcs [class*='styles_highlight'] div{
+        background: none !important;
+        backdrop-filter: brightness(1.5);   
+    }
+
+    .ability-score-calcs [class*='styles_highlight'] div[class*='value'] {
+        background: none !important;
+        backdrop-filter: brightness(1.8);   
+    }
+
 
     #Diagram42UnseenOrderHandout1 img,
     #Diagram43UnseenOrderHandout2 img,
@@ -3666,7 +3681,12 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .ct-spell-detail__components-description,
     [class*='styles_settingsButtonText'],
     [class*='styles_item'][role] p,
-    [class*='styles_item'][role] span
+    [class*='styles_item'][role] span,
+    [class*='styles_summaryDescription'],
+    [class*='styles_radioDescription'],
+    [class*='styles_tabButton'],
+    .class-manager-starting-class,
+    [class*=Button][class*='styles_light']
     {
         color: /*[[fontColor]]*/ !important;
     }
@@ -7727,8 +7747,12 @@ regexp("https://www.dndbeyond.com/encounters.*#DiceTray"), regexp("https://www.d
         mask-size: cover;
         background-image: none
     }
-
-
+    #above-vtt-error-message{
+        background: /*[[backgroundColor]]*/;
+    }
+    #above-vtt-error-message a{
+        color: /*[[linkColor]]*/
+    }
     .sidebar__pane-content {
         border: 1px solid /*[[borderColor]]*/;
         box-shadow: none;
