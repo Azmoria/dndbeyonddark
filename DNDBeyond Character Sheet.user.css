@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.311
+@version      1.3.312
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -3408,7 +3408,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
     .ui-widget-content .note-text a{
         color: /*[[highlightColor]]*/ !important;
     }
-      .glc-game-log #chat-language{
+    .glc-game-log #chat-language{
         background: none !important;
         --border-color: #3d3d3d;
     }
@@ -3427,6 +3427,12 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
     .token .note-condition.condition-img{
         pointer-events: auto !important;
     }
+    
+
+    .ct-sidebar__inner .glc-game-log .abovevtt-sidebar-injected button.avtt-roll-button:hover{
+        background: /*[[rollCalcColor]]*/ !important;
+    }
+
                     /*********NEW STAT BLOCK***********/
     .stat-block{
         --theme-table-header-fg-color: /*[[fontColor]]*/;
@@ -3582,7 +3588,8 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
     [class*='Line-Title'] .aboveDiceOutput,
     .above-vtt-container-roll-output,
     .above-vtt-roll-whisper,
-    .condition-duration-icon:before
+    .condition-duration-icon:before,
+    .ct-sidebar__inner .glc-game-log .abovevtt-sidebar-injected button.avtt-roll-button
     { 
         color: /*[[fontColor]]*/ !important;        
     }
