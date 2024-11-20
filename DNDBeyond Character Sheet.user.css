@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.312
+@version      1.3.313
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -1906,7 +1906,8 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
     {
         fill: /*[[sheetColor]]*/ !important;
     }
-    
+
+
     .ct-sidebar__pane-top path{
         fill: /*[[sidebarColor]]*/ !important;    
     }
@@ -2105,10 +2106,11 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
     
     
     .ct-character-sheet__inner .ddbc-advantage-svg path,
-    .ct-character-sheet__inner .ddbc-advantage-svg polygon:nth-of-type(2){
+    .ct-character-sheet__inner .ddbc-advantage-svg polygon:nth-of-type(2),
+    .ct-character-sheet__inner svg.ddbc-bonus-positive-svg>path{
         fill: #2C9400 !important;
     }
-    
+
 
     .ct-sidebar__pane-bottom path,
     .ct-sidebar__pane-top path,
