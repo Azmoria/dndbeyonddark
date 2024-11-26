@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.554
+@version      1.2.555
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -3442,7 +3442,9 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     .my-characters-wrapper [class*='styles_search']{
         background: /*[[backgroundColor]]*/ !important;
     }
-
+    .section-the-lord-of-the-rings-roleplaying .text--quote-box{
+        border:none !important;
+    }
     
     .user-interactions .option-count,
     .dice-roll-tampered{
