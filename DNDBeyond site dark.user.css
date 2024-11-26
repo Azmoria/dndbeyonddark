@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.553
+@version      1.2.554
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -122,7 +122,12 @@ dark "Dark Mode" <<<EOT
         color: rgba(100, 100, 0, 1) !important;
         
     }
-    
+    :root .section-the-lord-of-the-rings-roleplaying{
+        --lotr-red: #bb4242;
+    }
+    .section-the-lord-of-the-rings-roleplaying .monster--stat-block strong{
+        color: #978f87;
+    }
     .single-column #content .p-forum-a .p-comment-wrapper [style*="color: rgba(0, 51, 0, 1)"]
     {
         color: rgb(24, 80, 24) !important;         
@@ -3025,7 +3030,8 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     [class*='styles_button_'],
     [class*='styles_searchSort'] label,
     [class*=Button][class*='styles_dark'],
-    [class*='styles_details']
+    [class*='styles_details'],
+    .section-the-lord-of-the-rings-roleplaying .monster--stat-block .monster--stats
     {
         background-color: /*[[backgroundColor]]*/
         !important;
@@ -3082,7 +3088,10 @@ url-prefix("https://www.dndbeyond.com/monster"), url-prefix("https://www.dndbeyo
     }
     
     
-    
+    .section-the-lord-of-the-rings-roleplaying .text--gandolf-letter{
+        color: var(--lotr-red) !important;
+        border:none !important;
+    }
     .body-page .p-article-a .p-article-content .stat-block .monster-header {
         padding-top: 4px;
         letter-spacing: .35px;
