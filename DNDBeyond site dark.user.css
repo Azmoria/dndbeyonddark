@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.552
+@version      1.2.553
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -556,7 +556,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/tfts/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/phb-2024/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/free-rules/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/uhlh/(.|\s)*\S(.|\s)*"),
-regexp("https://www.dndbeyond.com/sources/dnd/soee/(.|\s)*\S(.|\s)*")
+regexp("https://www.dndbeyond.com/sources/dnd/soee/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/lotrr/(.|\s)*\S(.|\s)*")
 {
 
     #site-main,
@@ -1190,7 +1191,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/boet(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/tfts(/)?"), 
 regexp("https://www.dndbeyond.com/sources/dnd/phb-2024(/)?"), 
 regexp("https://www.dndbeyond.com/sources/dnd/free-rules(/)?"), 
-regexp("https://www.dndbeyond.com/sources/dnd/dmg-2024(/)?")
+regexp("https://www.dndbeyond.com/sources/dnd/dmg-2024(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/lotrr(/)?")
 {
    
     #site-main,
@@ -1275,7 +1277,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/boet(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/tfts(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/phb-2024(/)?"), 
 regexp("https://www.dndbeyond.com/sources/dnd/free-rules(/)?"), 
-regexp("https://www.dndbeyond.com/sources/dnd/dmg-2024(/)?"){
+regexp("https://www.dndbeyond.com/sources/dnd/dmg-2024(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/lotrr(/)?"){
 
     @media (min-width: 1024px) {
         body {
