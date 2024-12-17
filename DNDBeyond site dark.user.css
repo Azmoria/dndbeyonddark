@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.556
+@version      1.2.557
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -210,8 +210,6 @@ dark "Dark Mode" <<<EOT
     .red-statblock-text{
         color: #D35050 !important;
         --text-deco-color: #D35050;
-
-        
     }
     body *{
      --compendium-monster-tooltip: #D35050;
@@ -251,6 +249,14 @@ dark "Dark Mode" <<<EOT
     .section-flee-mortals .mcdm-epigraph-red p:not(:last-of-type), 
     .section-where-evil-lives .mcdm-epigraph-red p:not(:last-of-type){
         --theme-page-fg-color: #d78888;
+    }
+    :root .section-the-griffons-saddlebag-book-two{
+        --griffin-red: #ad5c5c;
+        --theme-image-caption-link-hover-color: #502929;
+    }
+    .section-the-griffons-saddlebag-book-two .text--rules-sidebar p:first-of-type,
+    .section-the-griffons-saddlebag-book-two .text--rules-sidebar strong{
+        color: #9c8473 !important;
     }
     .section-flee-mortals-rule-primer a [data-content-type=mcdm-companion]:before, 
     .section-flee-mortals a [data-content-type=mcdm-companion]:before, 
@@ -562,7 +568,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/phb-2024/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/free-rules/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/uhlh/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/soee/(.|\s)*\S(.|\s)*"),
-regexp("https://www.dndbeyond.com/sources/dnd/lotrr/(.|\s)*\S(.|\s)*")
+regexp("https://www.dndbeyond.com/sources/dnd/lotrr/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/gsb2/(.|\s)*\S(.|\s)*")
 {
 
     #site-main,
@@ -1197,7 +1204,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/tfts(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/phb-2024(/)?"), 
 regexp("https://www.dndbeyond.com/sources/dnd/free-rules(/)?"), 
 regexp("https://www.dndbeyond.com/sources/dnd/dmg-2024(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/lotrr(/)?")
+regexp("https://www.dndbeyond.com/sources/dnd/lotrr(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/gsb2(/)?")
 {
    
     #site-main,
@@ -1283,7 +1291,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/tfts(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/phb-2024(/)?"), 
 regexp("https://www.dndbeyond.com/sources/dnd/free-rules(/)?"), 
 regexp("https://www.dndbeyond.com/sources/dnd/dmg-2024(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/lotrr(/)?"){
+regexp("https://www.dndbeyond.com/sources/dnd/lotrr(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/gsb2(/)?"){
 
     @media (min-width: 1024px) {
         body {
@@ -3996,8 +4005,11 @@ regexp("https://www.dndbeyond.com/project-sigil/download"){
         color: #000 !important;
     }
     
-    
-    
+    .section-the-griffons-saddlebag-book-two aside.gsb2-epigraph, 
+    .section-the-griffons-saddlebag-book-two aside.gsb2-epigraph-small{
+        color: var(--theme-page-fg-color, #222) !important;
+        border: none !important;
+    }
     .text--drakkenheim-note,
     .section-dungeons-of-drakkenheim .adventure-flow-chart aside{
         background-color: transparent !important;
