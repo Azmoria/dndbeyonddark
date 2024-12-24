@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.558
+@version      1.2.559
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -6702,7 +6702,7 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
     .player-token.ui-draggable{
         filter: drop-shadow(0px 0px 1px /*[[fontColor]]*/);
     }
-    .VTTToken div:not(.hpvisualbar, .hpbar, .token-image){
+    .VTTToken div:not(.hpvisualbar, .hpbar, .token-image, .base){
         filter: drop-shadow(1px 0px 0px #000b);
     }
     .context-menu-submenu:after{
