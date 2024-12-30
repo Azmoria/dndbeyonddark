@@ -2,9 +2,8 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.560
+@version      1.2.561
 @author       Azmoria (Jay_Lane) 
-@updateURL https://github.com/Azmoria/dndbeyonddark/raw/refs/heads/master/DNDBeyond%20site%20dark.user.css
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
 @var color forumPostColor "Forum Post Color" #0f0f0fdd
@@ -1318,6 +1317,13 @@ regexp("https://www.dndbeyond.com/sources/dnd/gsb2(/)?"){
             background-size: cover !important;
             background-attachment: fixed !important; 
         }
+    }
+}
+ 
+@-moz-document regexp("https://www.dndbeyond.com/sources/dnd/gsb2(/)?"){
+    body{
+        background-position: center 75% !important;
+       
     }
 }
 
