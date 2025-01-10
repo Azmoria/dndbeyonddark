@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.564
+@version      1.2.565
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -2573,6 +2573,7 @@ regexp("https://www.dndbeyond.com/species.*"){
         --grey-900: /*[[fontColor]]*/;
         --grey-500: /*[[fontColor]]*/;
         --stat-block-bg-override: /*[[backgroundColor]]*/;
+        --character-default-color: /*[[linkColor]]*/;
     }
 
     table.table-compendium *{
@@ -2801,6 +2802,7 @@ regexp("https://www.dndbeyond.com/species.*"){
     .equipment-manager-inventory-header,
     .site .character-button-outline,
     .ct-item-detail__tag,
+    [class*=Button][class*='styles_builder-gree'][class*='styles_outline'],
     .ddb-characters-listing-actions__search-box,
     .more-info footer .tags .tag,
     .ddb-top-result,
