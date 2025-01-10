@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.563
+@version      1.2.564
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -2830,6 +2830,7 @@ regexp("https://www.dndbeyond.com/species.*"){
     .listing-forum-search .statistics .statistics-body,
     body.hide-ads footer#footer, body.disable-ads footer#footer,
     .ct-spell-detail__tag,
+    .ct-spell-detail [class*='styles_tag'],
     .class-spell-list-header,
     .p-forum-poll .b-poll-a,
     blockquote.Call-Out-Box,
@@ -3740,7 +3741,8 @@ regexp("https://www.dndbeyond.com/species.*"){
     [class*='styles_radioDescription'],
     [class*='styles_tabButton'],
     .class-manager-starting-class,
-    [class*=Button][class*='styles_light']
+    [class*=Button][class*='styles_light'],
+    .spell-list-heading [class*='styles_spellName']
     {
         color: /*[[fontColor]]*/ !important;
     }
