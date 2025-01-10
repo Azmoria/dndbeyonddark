@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.562
+@version      1.2.563
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -3144,20 +3144,41 @@ regexp("https://www.dndbeyond.com/species.*"){
     }
     
     .body-page .p-article-a .p-article-content .stat-block .stats table.abilities-saves.physical {
-        --stats-score: #4b3e347d;
-        --stats-mods: #4b34377d;
-        --stats-score-hover: rgba(153,127,109,0.49019607843137253);
-        --stats-mods-hover: rgba(153,109,114,0.49019607843137253)
+        --stats-score: #4b3e347d !important;
+        --stats-mods: #4b34377d !important;
+        --stats-score-hover: rgba(153,127,109,0.49019607843137253) !important;
+        --stats-mods-hover: rgba(153,109,114,0.49019607843137253) !important;
     }
     
     .body-page .p-article-a .p-article-content .stat-block .stats table.abilities-saves.mental {
-        --stats-score: #34454b7d;
-        --stats-mods: #38344b7d;
-        --stats-score-hover: rgba(109,141,153,0.49019607843137253);
-        --stats-mods-hover: rgba(117,109,153,0.49019607843137253)
+        --stats-score: #34454b7d !important;
+        --stats-mods: #38344b7d !important;
+        --stats-score-hover: rgba(109,141,153,0.49019607843137253) !important;
+        --stats-mods-hover: rgba(117,109,153,0.49019607843137253) !important;
     }
     
+    .stat-block .stats table.abilities-saves.physical {
+        --stats-score: #4b3e347d !important;
+        --stats-mods: #4b34377d !important;
+        --stats-score-hover: rgba(153,127,109,0.49019607843137253) !important;
+        --stats-mods-hover: rgba(153,109,114,0.49019607843137253) !important;
+        --sb-stats-score: #4b3e347d !important;
+        --sb-stats-mods: #4b34377d !important;
+        --sb-stats-score-hover: rgba(153,127,109,0.49019607843137253) !important;
+        --sb-stats-mods-hover: rgba(153,109,114,0.49019607843137253) !important;
+    }
     
+    .stat-block .stats table.abilities-saves.mental {
+        --stats-score: #34454b7d !important;
+        --stats-mods: #38344b7d !important;
+        --stats-score-hover: rgba(109,141,153,0.49019607843137253) !important;
+        --stats-mods-hover: rgba(117,109,153,0.49019607843137253) !important;
+        --sb-stats-score: #34454b7d !important;
+        --sb-stats-mods: #38344b7d !important;
+        --sb-stats-score-hover: rgba(109,141,153,0.49019607843137253) !important;
+        --sb-stats-mods-hover: rgba(117,109,153,0.49019607843137253) !important;
+    }
+   
     
     .body-page .p-article-a .p-article-content .stat-block .stats table.abilities-saves thead tr th,
     .body-page .p-article-a .p-article-content .stat-block .stats table.abilities-saves tbody,
@@ -3410,7 +3431,7 @@ regexp("https://www.dndbeyond.com/species.*"){
         padding: 5px;
     }
 
-    .static-container-details .content-container table tbody tr:nth-child(odd) td,
+    .static-container-details .content-container table:not(.physical, .mental) tbody tr:nth-child(odd) td,
     table.table-compendium>tbody>tr:nth-child(odd) td,
     table.wiki-content-table>tbody>tr:nth-child(odd) td,
     .body-page .p-article-a .p-article-content table tbody tr:nth-child(odd) td,
@@ -6185,7 +6206,11 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
         --stats-score: #4b3e347d;
         --stats-mods: #4b34377d;
         --stats-score-hover: rgba(153,127,109,0.49019607843137253);
-        --stats-mods-hover: rgba(153,109,114,0.49019607843137253)
+        --stats-mods-hover: rgba(153,109,114,0.49019607843137253);
+        --sb-stats-score: #4b3e347d;
+        --sb-stats-mods: #4b34377d;
+        --sb-stats-score-hover: rgba(153,127,109,0.49019607843137253);
+        --sb-stats-mods-hover: rgba(153,109,114,0.49019607843137253);
     }
     
     .stat-block .stats table.abilities-saves.mental {
@@ -6193,6 +6218,10 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
         --stats-mods: #38344b7d;
         --stats-score-hover: rgba(109,141,153,0.49019607843137253);
         --stats-mods-hover: rgba(117,109,153,0.49019607843137253)
+        --sb-stats-score: #34454b7d;
+        --sb-stats-mods: #38344b7d;
+        --sb-stats-score-hover: rgba(109,141,153,0.49019607843137253);
+        --sb-stats-mods-hover: rgba(117,109,153,0.49019607843137253)
     }
     
     
