@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.566
+@version      1.2.567
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -570,7 +570,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/free-rules/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/uhlh/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/soee/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/lotrr/(.|\s)*\S(.|\s)*"),
-regexp("https://www.dndbeyond.com/sources/dnd/gsb2/(.|\s)*\S(.|\s)*")
+regexp("https://www.dndbeyond.com/sources/dnd/gsb2/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/hwt/(.|\s)*\S(.|\s)*")
 {
 
     #site-main,
@@ -1207,7 +1208,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/free-rules(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/dmg-2024(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/lotrr(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/gsb2(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/mm-2024(/)?")
+regexp("https://www.dndbeyond.com/sources/dnd/mm-2024(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/hwt(/)?")
 {
    
     #site-main,
@@ -1295,7 +1297,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/free-rules(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/dmg-2024(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/lotrr(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/gsb2(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/mm-2024(/)?"){
+regexp("https://www.dndbeyond.com/sources/dnd/mm-2024(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/hwt(/)?"){
 
     @media (min-width: 1024px) {
         body {
@@ -3339,7 +3342,8 @@ regexp("https://www.dndbeyond.com/species.*"){
     .article-main blockquote p span,
     [class*='LabelChip_LabelChip'],
     .glc-game-log .ct-sidebar__heading span:not([class*='uncommon'], [class*='rare'], [class*='very-rare'], [class*='legendary'], [class*='artifact']),
-    [class*='styles_description']{
+    [class*='styles_description'],
+    .font-container p{
         color: /*[[fontColor]]*/ !important;   
     }
 
@@ -5326,6 +5330,27 @@ regexp("https://www.dndbeyond.com/species.*"){
         padding: 10px 0px;
         }
     
+    .section-humblewood-tales .compendium-sources ul li{
+        list-style-image: none;
+        list-style-type: ' ';
+    }
+    .section-humblewood-tales .compendium-sources ul li{
+        position:relative;
+    }
+    .section-humblewood-tales .compendium-sources ul li::before{
+        mask-image: url(https://media.dndbeyond.com/compendium-images/hcs/ui/humble-icon.svg);
+        -webkit-mask-image: url(https://media.dndbeyond.com/compendium-images/hcs/ui/humble-icon.svg);
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        background: #dddddd;
+        content: '';
+        width: 1em;
+        height: 1em;
+        position: absolute;
+        top:1em;
+        left: -15px;
+        transform: translateY(-0.4em);     
+    }
     
 .top-next-page a::after, .sidenav-next-page a::after{
     
