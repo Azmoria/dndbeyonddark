@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.568
+@version      1.2.569
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -3144,7 +3144,8 @@ regexp("https://www.dndbeyond.com/species.*"){
         margin-top: 10px
     }
     
-    .body-page .p-article-a .p-article-content .stat-block .stats table.abilities-saves {
+    .body-page .p-article-a .p-article-content .stat-block .stats table.abilities-saves,
+    .tooltip-body-2024 table.stat-table{
         --theme-table-row-color: transparent;
         flex: 1 1 auto;
         line-height: 24px;
@@ -3154,21 +3155,24 @@ regexp("https://www.dndbeyond.com/species.*"){
         break-inside: avoid
     }
     
-    .body-page .p-article-a .p-article-content .stat-block .stats table.abilities-saves.physical {
+    .body-page .p-article-a .p-article-content .stat-block .stats table.abilities-saves.physical,
+    .tooltip-body-2024 table.stat-table.physical{
         --stats-score: #4b3e347d !important;
         --stats-mods: #4b34377d !important;
         --stats-score-hover: rgba(153,127,109,0.49019607843137253) !important;
         --stats-mods-hover: rgba(153,109,114,0.49019607843137253) !important;
     }
     
-    .body-page .p-article-a .p-article-content .stat-block .stats table.abilities-saves.mental {
+    .body-page .p-article-a .p-article-content .stat-block .stats table.abilities-saves.mental,
+    .tooltip-body-2024 table.stat-table.mental {
         --stats-score: #34454b7d !important;
         --stats-mods: #38344b7d !important;
         --stats-score-hover: rgba(109,141,153,0.49019607843137253) !important;
         --stats-mods-hover: rgba(117,109,153,0.49019607843137253) !important;
     }
     
-    .stat-block .stats table.abilities-saves.physical {
+    .stat-block .stats table.abilities-saves.physical,
+    .tooltip-body-2024 table.stat-table.physical {
         --stats-score: #4b3e347d !important;
         --stats-mods: #4b34377d !important;
         --stats-score-hover: rgba(153,127,109,0.49019607843137253) !important;
@@ -3179,7 +3183,8 @@ regexp("https://www.dndbeyond.com/species.*"){
         --sb-stats-mods-hover: rgba(153,109,114,0.49019607843137253) !important;
     }
     
-    .stat-block .stats table.abilities-saves.mental {
+    .stat-block .stats table.abilities-saves.mental,
+    .tooltip-body-2024 table.stat-table.mental {
         --stats-score: #34454b7d !important;
         --stats-mods: #38344b7d !important;
         --stats-score-hover: rgba(109,141,153,0.49019607843137253) !important;
@@ -3195,32 +3200,45 @@ regexp("https://www.dndbeyond.com/species.*"){
     .body-page .p-article-a .p-article-content .stat-block .stats table.abilities-saves tbody,
     .body-page .p-article-a .p-article-content .stat-block .stats table.abilities-saves tbody th,
     .body-page .p-article-a .p-article-content .stat-block .stats table.abilities-saves tbody td,
-    .body-page .p-article-a .p-article-content .stat-block .stats table.abilities-saves thead{
+    .body-page .p-article-a .p-article-content .stat-block .stats table.abilities-saves thead,
+    table.stat-table thead tr th,
+    table.stat-table tbody,
+    table.stat-table tbody th,
+    table.stat-table tbody td,
+    table.stat-table thead,
+    table.stat-table tbody tr{
         border: none !important;
+        color: /*[[fontColor]]*/ !important;
     }
     
     
-    .body-page #site .p-article-a .p-article-content .stat-block .stats table.abilities-saves tbody tr {
+    .body-page #site .p-article-a .p-article-content .stat-block .stats table.abilities-saves tbody tr,
+    table.stat-table tbody{
         background-color: var(--theme-table-row-color, /*[[backgroundColor]]*/) !important;
     }
     
-    .body-page #site .p-article-a .p-article-content .stat-block .stats table.abilities-saves tbody tr:hover {
+    .body-page #site .p-article-a .p-article-content .stat-block .stats table.abilities-saves tbody tr:hover,
+    table.stat-table tbody tr:hover {
         background-color: var(--stats-hover) !important;
     }
     
-    .body-page #site .p-article-a .p-article-content .stat-block .stats table.abilities-saves tbody tr:hover :nth-child(-n+3) {
+    .body-page #site .p-article-a .p-article-content .stat-block .stats table.abilities-saves tbody tr:hover :nth-child(-n+3),
+    table.stat-table tbody tr:hover :nth-child(-n+3) {
         background-color: var(--stats-score-hover) !important;
     }
     
-    .body-page #site .p-article-a .p-article-content .stat-block .stats table.abilities-saves tbody tr:hover :nth-child(n+3) {
+    .body-page #site .p-article-a .p-article-content .stat-block .stats table.abilities-saves tbody tr:hover :nth-child(n+3),
+    table.stat-table tbody tr:hover :nth-child(n+3){
         background-color: var(--stats-mods-hover) !important;
     }
     
-    .body-page #site .p-article-a .p-article-content .stat-block .stats table.abilities-saves tbody tr :nth-child(-n+3) {
+    .body-page #site .p-article-a .p-article-content .stat-block .stats table.abilities-saves tbody tr :nth-child(-n+3),
+    table.stat-table tbody tr :nth-child(-n+3) {
         background-color: var(--stats-score) !important;
     }
     
-    .body-page #site .p-article-a .p-article-content .stat-block .stats table.abilities-saves tbody tr :nth-child(n+3) {
+    .body-page #site .p-article-a .p-article-content .stat-block .stats table.abilities-saves tbody tr :nth-child(n+3),
+    table.stat-table tbody tr :nth-child(n+3) {
         background-color: var(--stats-mods) !important;
     }
 
