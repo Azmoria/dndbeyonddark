@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.567
+@version      1.2.568
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -523,7 +523,7 @@ regexp("https://www.dndbeyond.com/sources/dnd/egtw/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/idrotf/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/dmg-2014/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/dmg-2024/(.|\s)*\S(.|\s)*"),
-regexp("https://www.dndbeyond.com/sources/dnd/mm-2024(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/mm-2024/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/erftlw/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/ddvram/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/cotn/(.|\s)*\S(.|\s)*"),
@@ -2580,6 +2580,8 @@ regexp("https://www.dndbeyond.com/species.*"){
         --grey-500: /*[[fontColor]]*/;
         --stat-block-bg-override: /*[[backgroundColor]]*/;
         --character-default-color: /*[[linkColor]]*/;
+        --treasure-bg: /*[[backgroundColor]]*/;
+        --legendary-actions-color: color-mix(in srgb, /*[[fontColor]]*/ 60%, #0000 0%);
     }
 
     table.table-compendium *{
@@ -3751,11 +3753,15 @@ regexp("https://www.dndbeyond.com/species.*"){
     [class*='styles_tabButton'],
     .class-manager-starting-class,
     [class*=Button][class*='styles_light'],
-    .spell-list-heading [class*='styles_spellName']
+    .spell-list-heading [class*='styles_spellName'],
+    .body-page .p-article-a .p-article-content .compendium-hr.monster-with-metadata+p
     {
         color: /*[[fontColor]]*/ !important;
     }
-  
+    .section-monster-manual .monster-lore{
+        background-blend-mode: soft-light;
+        border: none !important;
+    }
      .badge-label,
     .collapsible-header-meta{
         filter: contrast(0.6);
