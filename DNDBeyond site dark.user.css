@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.569
+@version      1.2.570
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -3121,7 +3121,7 @@ regexp("https://www.dndbeyond.com/species.*"){
         color: var(--lotr-red) !important;
         border:none !important;
     }
-    .body-page .p-article-a .p-article-content .stat-block .monster-header {
+    .body-page .p-article-a .p-article-content .stat-block .monster-header{
         padding-top: 4px;
         letter-spacing: .35px;
         font-weight: 500;
@@ -3131,6 +3131,10 @@ regexp("https://www.dndbeyond.com/species.*"){
         border-bottom: 2px solid var(--monster-header-underline,#7a3c2f)
     }
     
+    .content-container .mon-stat-block-2024 .mon-stat-block-2024__header a,
+    .content-container .mon-stat-block-2024 .mon-stat-block-2024__header a:visited{
+        color: var(--monster-header-color,#5b160c) !important;
+    }
     .body-page .p-article-a .p-article-content .stat-block .monster-header+p {
         break-before: avoid
     }
@@ -3145,7 +3149,7 @@ regexp("https://www.dndbeyond.com/species.*"){
     }
     
     .body-page .p-article-a .p-article-content .stat-block .stats table.abilities-saves,
-    .tooltip-body-2024 table.stat-table{
+    table.stat-table{
         --theme-table-row-color: transparent;
         flex: 1 1 auto;
         line-height: 24px;
@@ -3156,7 +3160,7 @@ regexp("https://www.dndbeyond.com/species.*"){
     }
     
     .body-page .p-article-a .p-article-content .stat-block .stats table.abilities-saves.physical,
-    .tooltip-body-2024 table.stat-table.physical{
+    table.stat-table.physical{
         --stats-score: #4b3e347d !important;
         --stats-mods: #4b34377d !important;
         --stats-score-hover: rgba(153,127,109,0.49019607843137253) !important;
@@ -3164,7 +3168,7 @@ regexp("https://www.dndbeyond.com/species.*"){
     }
     
     .body-page .p-article-a .p-article-content .stat-block .stats table.abilities-saves.mental,
-    .tooltip-body-2024 table.stat-table.mental {
+    table.stat-table.mental {
         --stats-score: #34454b7d !important;
         --stats-mods: #38344b7d !important;
         --stats-score-hover: rgba(109,141,153,0.49019607843137253) !important;
@@ -3172,7 +3176,7 @@ regexp("https://www.dndbeyond.com/species.*"){
     }
     
     .stat-block .stats table.abilities-saves.physical,
-    .tooltip-body-2024 table.stat-table.physical {
+    table.stat-table.physical {
         --stats-score: #4b3e347d !important;
         --stats-mods: #4b34377d !important;
         --stats-score-hover: rgba(153,127,109,0.49019607843137253) !important;
@@ -3184,7 +3188,7 @@ regexp("https://www.dndbeyond.com/species.*"){
     }
     
     .stat-block .stats table.abilities-saves.mental,
-    .tooltip-body-2024 table.stat-table.mental {
+    table.stat-table.mental {
         --stats-score: #34454b7d !important;
         --stats-mods: #38344b7d !important;
         --stats-score-hover: rgba(109,141,153,0.49019607843137253) !important;
@@ -3241,8 +3245,22 @@ regexp("https://www.dndbeyond.com/species.*"){
     table.stat-table tbody tr :nth-child(n+3) {
         background-color: var(--stats-mods) !important;
     }
-
-
+    .mon-stat-block-2024{
+        background: var(--stat-block-bg-override) !important;
+    }
+    .mon-stat-block-2024 .tooltip-hover, .mon-stat-block-2024 .tooltip-hover:hover, 
+    .mon-stat-block-2024 .tooltip-hover:focus, .mon-stat-block-2024 .tooltip-hover:active, 
+    .mon-stat-block-2024 .tooltip-hover:visited{
+        color: /*[[linkColor]]*/ !important;
+    }
+    .mon-stat-block-2024__name .mon-stat-block-2024__name-link, 
+    .mon-stat-block-2024__name .mon-stat-block-2024__name-link:visited, 
+    .mon-stat-block-2024__attribute, 
+    .mon-stat-block-2024__tidbit, 
+    .mon-stat-block-2024__description-block-heading,
+    .mon-stat-block-2024__meta{
+        color: var(--font-color) !important;
+    }
     .section-players-handbook .rhythm-of-play {
         background-image: linear-gradient(to right, #201809, var(--background-color));
     }
@@ -6314,10 +6332,11 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
     .stat-block .stats table.abilities-saves tbody tr :nth-child(n+3) {
         background-color: var(--stats-mods) !important;
     }
-    .stat-block {
+    .stat-block{
       --stat-block-bg-override: /*[[backgroundColor]]*/;
       color: /*[[fontColor]]*/;
     }
+
 /******* END NEW STAT BLOCK ******/
 
 
