@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.570
+@version      1.2.571
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -180,6 +180,11 @@ dark "Dark Mode" <<<EOT
     .tooltip-hover.monster-tooltip:focus, 
     .tooltip-hover.monster-tooltip:active, 
     .tooltip-hover.monster-tooltip:visited,
+    .mon-stat-block-2024 .tooltip-hover.monster-tooltip, 
+    .mon-stat-block-2024 .tooltip-hover.monster-tooltip:hover, 
+    .mon-stat-block-2024 .tooltip-hover.monster-tooltip:focus, 
+    .mon-stat-block-2024 .tooltip-hover.monster-tooltip:active, 
+    .mon-stat-block-2024 .tooltip-hover.monster-tooltip:visited,
     .plural-monster-tooltip,
     .body-page .p-article-a .p-article-content a.monster-tooltip,
     .body-forum .p-article-a .p-article-content a.monster-tooltip,
@@ -277,6 +282,11 @@ dark "Dark Mode" <<<EOT
     .tooltip-hover.spell-tooltip:focus,
     .tooltip-hover.spell-tooltip:active,
     .tooltip-hover.spell-tooltip:visited,
+    .mon-stat-block-2024 .tooltip-hover.spell-tooltip, 
+    .mon-stat-block-2024 .tooltip-hover.spell-tooltip:hover, 
+    .mon-stat-block-2024 .tooltip-hover.spell-tooltip:focus, 
+    .mon-stat-block-2024 .tooltip-hover.spell-tooltip:active, 
+    .mon-stat-block-2024 .tooltip-hover.spell-tooltip:visited,
     .body-page .p-article-a .p-article-content a.spell-tooltip,
     .mon-stat-block .tooltip-hover.spell-tooltip, 
     .mon-stat-block .tooltip-hover.spell-tooltip:hover, 
@@ -297,6 +307,11 @@ dark "Dark Mode" <<<EOT
     .tooltip-hover.magic-item-tooltip:focus, 
     .tooltip-hover.magic-item-tooltip:active, 
     .tooltip-hover.magic-item-tooltip:visited,
+    .mon-stat-block-2024 .tooltip-hover.magic-item-tooltip, 
+    .mon-stat-block-2024 .tooltip-hover.magic-item-tooltip:hover, 
+    .mon-stat-block-2024 .tooltip-hover.magic-item-tooltip:focus, 
+    .mon-stat-block-2024 .tooltip-hover.magic-item-tooltip:active, 
+    .mon-stat-block-2024 .tooltip-hover.magic-item-tooltip:visited,
     .mon-stat-block .tooltip-hover.magic-item-tooltip, 
     .mon-stat-block .tooltip-hover.magic-item-tooltip:hover,
     .mon-stat-block .tooltip-hover.magic-item-tooltip:focus, 
@@ -3134,6 +3149,9 @@ regexp("https://www.dndbeyond.com/species.*"){
     .content-container .mon-stat-block-2024 .mon-stat-block-2024__header a,
     .content-container .mon-stat-block-2024 .mon-stat-block-2024__header a:visited{
         color: var(--monster-header-color,#5b160c) !important;
+    }
+    .legendary-actions{
+        color: var(--legendary-actions-color)
     }
     .body-page .p-article-a .p-article-content .stat-block .monster-header+p {
         break-before: avoid
