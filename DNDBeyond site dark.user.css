@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.572
+@version      1.2.573
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -3809,7 +3809,8 @@ regexp("https://www.dndbeyond.com/species.*"){
     .class-manager-starting-class,
     [class*=Button][class*='styles_light'],
     .spell-list-heading [class*='styles_spellName'],
-    .body-page .p-article-a .p-article-content .compendium-hr.monster-with-metadata+p
+    .body-page .p-article-a .p-article-content .compendium-hr.monster-with-metadata+p,
+    .more-info-body-description
     {
         color: /*[[fontColor]]*/ !important;
     }
