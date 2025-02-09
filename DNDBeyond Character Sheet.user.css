@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.328
+@version      1.3.329
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -1215,6 +1215,121 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
     .ct-sidebar .stat-block .stats table.abilities-saves tbody tr{
         color: /*[[fontColor]]*/
     }
+
+  .body-page .p-article-a .p-article-content .stat-block .stats table.abilities-saves,
+    table.stat-table{
+        --theme-table-row-color: transparent;
+        flex: 1 1 auto;
+        line-height: 24px;
+        background: revert;
+        border: none;
+        font-size: 16px;
+        break-inside: avoid
+    }
+    
+    .body-page .p-article-a .p-article-content .stat-block .stats table.abilities-saves.physical,
+    table.stat-table.physical{
+        --stats-score: #4b3e347d !important;
+        --stats-mods: #4b34377d !important;
+        --stats-score-hover: rgba(153,127,109,0.49019607843137253) !important;
+        --stats-mods-hover: rgba(153,109,114,0.49019607843137253) !important;
+    }
+    
+    .body-page .p-article-a .p-article-content .stat-block .stats table.abilities-saves.mental,
+    table.stat-table.mental {
+        --stats-score: #34454b7d !important;
+        --stats-mods: #38344b7d !important;
+        --stats-score-hover: rgba(109,141,153,0.49019607843137253) !important;
+        --stats-mods-hover: rgba(117,109,153,0.49019607843137253) !important;
+    }
+    
+    .stat-block .stats table.abilities-saves.physical,
+    table.stat-table.physical {
+        --stats-score: #4b3e347d !important;
+        --stats-mods: #4b34377d !important;
+        --stats-score-hover: rgba(153,127,109,0.49019607843137253) !important;
+        --stats-mods-hover: rgba(153,109,114,0.49019607843137253) !important;
+        --sb-stats-score: #4b3e347d !important;
+        --sb-stats-mods: #4b34377d !important;
+        --sb-stats-score-hover: rgba(153,127,109,0.49019607843137253) !important;
+        --sb-stats-mods-hover: rgba(153,109,114,0.49019607843137253) !important;
+    }
+    
+    .stat-block .stats table.abilities-saves.mental,
+    table.stat-table.mental {
+        --stats-score: #34454b7d !important;
+        --stats-mods: #38344b7d !important;
+        --stats-score-hover: rgba(109,141,153,0.49019607843137253) !important;
+        --stats-mods-hover: rgba(117,109,153,0.49019607843137253) !important;
+        --sb-stats-score: #34454b7d !important;
+        --sb-stats-mods: #38344b7d !important;
+        --sb-stats-score-hover: rgba(109,141,153,0.49019607843137253) !important;
+        --sb-stats-mods-hover: rgba(117,109,153,0.49019607843137253) !important;
+    }
+   
+    
+    .body-page .p-article-a .p-article-content .stat-block .stats table.abilities-saves thead tr th,
+    .body-page .p-article-a .p-article-content .stat-block .stats table.abilities-saves tbody,
+    .body-page .p-article-a .p-article-content .stat-block .stats table.abilities-saves tbody th,
+    .body-page .p-article-a .p-article-content .stat-block .stats table.abilities-saves tbody td,
+    .body-page .p-article-a .p-article-content .stat-block .stats table.abilities-saves thead,
+    table.stat-table thead tr th,
+    table.stat-table tbody,
+    table.stat-table tbody th,
+    table.stat-table tbody td,
+    table.stat-table thead,
+    table.stat-table tbody tr{
+        border: none !important;
+        color: /*[[fontColor]]*/ !important;
+    }
+    
+    
+    .body-page #site .p-article-a .p-article-content .stat-block .stats table.abilities-saves tbody tr,
+    table.stat-table tbody{
+        background-color: var(--theme-table-row-color, /*[[backgroundColor]]*/) !important;
+    }
+    
+    .body-page #site .p-article-a .p-article-content .stat-block .stats table.abilities-saves tbody tr:hover,
+    table.stat-table tbody tr:hover {
+        background-color: var(--stats-hover) !important;
+    }
+    
+    .body-page #site .p-article-a .p-article-content .stat-block .stats table.abilities-saves tbody tr:hover :nth-child(-n+3),
+    table.stat-table tbody tr:hover :nth-child(-n+3) {
+        background-color: var(--stats-score-hover) !important;
+    }
+    
+    .body-page #site .p-article-a .p-article-content .stat-block .stats table.abilities-saves tbody tr:hover :nth-child(n+3),
+    table.stat-table tbody tr:hover :nth-child(n+3){
+        background-color: var(--stats-mods-hover) !important;
+    }
+    
+    .body-page #site .p-article-a .p-article-content .stat-block .stats table.abilities-saves tbody tr :nth-child(-n+3),
+    table.stat-table tbody tr :nth-child(-n+3) {
+        background-color: var(--stats-score) !important;
+    }
+    
+    .body-page #site .p-article-a .p-article-content .stat-block .stats table.abilities-saves tbody tr :nth-child(n+3),
+    table.stat-table tbody tr :nth-child(n+3) {
+        background-color: var(--stats-mods) !important;
+    }
+    .mon-stat-block-2024{
+        background: var(--stat-block-bg-override) !important;
+    }
+    .mon-stat-block-2024 .tooltip-hover, .mon-stat-block-2024 .tooltip-hover:hover, 
+    .mon-stat-block-2024 .tooltip-hover:focus, .mon-stat-block-2024 .tooltip-hover:active, 
+    .mon-stat-block-2024 .tooltip-hover:visited{
+        color: /*[[highlightColor]]*/ !important;
+    }
+    .mon-stat-block-2024__name .mon-stat-block-2024__name-link, 
+    .mon-stat-block-2024__name .mon-stat-block-2024__name-link:visited, 
+    .mon-stat-block-2024__attribute, 
+    .mon-stat-block-2024__tidbit, 
+    .mon-stat-block-2024__description-block-heading,
+    .mon-stat-block-2024__meta{
+        color: var(--font-color) !important;
+    }
+
 /******* END NEW STAT BLOCK ******/
   
     .ddbc-number-bar__option:hover,
@@ -1491,7 +1606,9 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
     [class*='styles_label'],
     .ct-sidebar__inner .glc-game-log .abovevtt-sidebar-injected *,
     .ct-defense-manage-pane__item-extra,
-    div button.add-monster-token-to-vtt
+    div button.add-monster-token-to-vtt,
+    .ddb-statblock-item-label, 
+    .ddb-statblock-item-value
     {
         color: /*[[fontColor]]*/ !important;
     }
