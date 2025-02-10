@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.574
+@version      1.2.575
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -2560,7 +2560,7 @@ regexp("https://www.dndbeyond.com/project-sigil/download"),
 regexp("https://www.dndbeyond.com/species.*"){
 
 
-    body{
+    :root, :before, :after{
         --active-color: /*[[fontColor]]*/;   
         --inactive-color: /*[[fontColor]]*/aa; 
         --border-color: /*[[borderColor]]*/;
@@ -2572,7 +2572,7 @@ regexp("https://www.dndbeyond.com/species.*"){
         --transparency-color: /*[[transparencyBackgroundColor]]*/;
     }
     
-    .site{
+    :root .site{
         --theme-table-row-bg-hover: /*[[backgroundColor]]*/;
         --theme-table-row-bg-dark: /*[[backgroundColor]]*/;
         --theme-table-row-bg-light: /*[[backgroundColor]]*/;
@@ -7883,7 +7883,7 @@ regexp("https://www.dndbeyond.com/combat-tracker.*"), regexp("https://www.dndbey
 regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond.com/my-encounters"), regexp("https://www.dndbeyond.com/monsters/.*"), regexp("https://www.dndbeyond.com/encounter-builder.*#DiceTray"),
 regexp("https://www.dndbeyond.com/combat-tracker.*#DiceTray"), regexp("https://www.dndbeyond.com/campaigns.*#DiceTray"),
 regexp("https://www.dndbeyond.com/encounters.*#DiceTray"), regexp("https://www.dndbeyond.com/my-encounters.*#DiceTray"), regexp("https://dddice.com/room/.*"){
-    body {
+    :root {
         --custom-capture-background: /*[[customCaptureBackground]]*/;
         --dice-color: sepia(/*[[diceSepia]]*/%) hue-rotate(/*[[hueRotation]]*/deg) brightness(/*[[diceBrightness]]*/%) saturate(/*[[diceSaturation]]*/%) contrast(/*[[diceContrast]]*/%) invert(/*[[diceInvert]]*/);
         --rgb-speed: /*[[rgbSpeed]]*/s;
