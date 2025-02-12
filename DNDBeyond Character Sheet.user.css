@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.333
+@version      1.3.334
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -3637,7 +3637,8 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
     .sidebar-flyout,
     .custom-stat-block,
     .custom-stat-block .stat-block-background,
-    .note-text .stat-block-background {
+    .note-text .stat-block-background,
+    :is(.tooltip) .table-compendium tr>:is(th,td) {
         background: /*[[background]]*/ !important;
         color: /*[[fontColor]]*/;
     }
