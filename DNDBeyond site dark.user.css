@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.576
+@version      1.2.577
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -6201,6 +6201,7 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
         background: /*[[backgroundColor]]*/ !important;
         color: /*[[fontColor]]*/ !important;
     }
+    
 
     input.roll-input-mod{
         background: #e6e6e6 !important;
@@ -6208,6 +6209,13 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
     }
     select#chat-language{
         background: none !important;
+    }
+    #above-vtt-error-message{
+        background: color-mix(
+            in srgb,
+            /*[[backgroundColor]]*/ 80%,
+            transparent  0%
+          ) !important;
     }
     #qrm_dialog #quick_roll_footer{
         border-radius: 0px 0px 5px 5px;
@@ -6354,6 +6362,13 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
     .stat-block{
       --stat-block-bg-override: /*[[backgroundColor]]*/;
       color: /*[[fontColor]]*/;
+    }
+    .stat-block .mon-stat-block__attribute-label, 
+    .stat-block .mon-stat-block__attribute-data-value, 
+    .stat-block .mon-stat-block__tidbits span, 
+    .stat-block .mon-stat-block__attribute-data-extra, 
+    .stat-block .mon-stat-block__meta{
+        color: /*[[fontColor]]*/;
     }
 
 /******* END NEW STAT BLOCK ******/
@@ -7907,9 +7922,7 @@ regexp("https://www.dndbeyond.com/encounters.*#DiceTray"), regexp("https://www.d
         mask-size: cover;
         background-image: none
     }
-    #above-vtt-error-message{
-        background: /*[[backgroundColor]]*/;
-    }
+
     #above-vtt-error-message a{
         color: /*[[linkColor]]*/
     }
