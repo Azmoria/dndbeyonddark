@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.330
+@version      1.3.331
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -2653,8 +2653,58 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
         --grey-50: #000;
         --common-0: #000;
         color: /*[[fontColor]]*/;
+        background-color: /*[[sidebarColor]]*/;
     }
-   
+    [class*='styles_progressBar'] [class*='styles_bar'] {
+      font-weight: bold;
+      padding: 0.125rem 0.75rem;
+      text-align: center;
+      background: var(--ttui_grey-50);
+      color: var(--ttui_grey-500);
+      border: none;
+      cursor: default;
+    }
+
+    [class*='styles_progressBar'] [class*='styles_bar'][aria-disabled="false"] {
+      cursor: pointer;
+    }
+
+    [class*='styles_progressBar'] [class*='styles_bar'][aria-disabled="false"]:hover {
+      background-color: var(--ttui_grey-600);
+      color: var(--ttui_grey-100);
+    }
+
+    [class*='styles_progressBar'] [class*='styles_bar'][class*='styles_active'] {
+      background-color: var(--theme-color);
+      color: var(--ttui_common-0);
+    }
+
+    [class*='styles_progressBar'] [class*='styles_bar'][class*='styles_active'][aria-disabled="false"]:hover {
+      background-color: color-mix(
+        in srgb,
+        var(--theme-color),
+        /*[[sidebarColor]]*/ 20%
+      );
+      color: var(--ttui_common-0);
+    }
+
+    [class*='styles_progressBar'] [class*='styles_bar'][class*='styles_implied'] {
+      background-color: color-mix(
+        in srgb,
+        var(--theme-color),
+        /*[[sidebarColor]]*/  40%
+      );
+      color: var(--ttui_common-0);
+    }
+
+    [class*='styles_progressBar'] [class*='styles_bar'][class*='styles_implied'][aria-disabled="false"]:hover {
+      background-color: color-mix(
+        in srgb,
+        var(--theme-color),
+        /*[[sidebarColor]]*/  20%
+      );
+    }
+
 
     .ct-sidebar .ddbc-collapsible__header svg.ddbc-svg {
         pointer-events: none;
