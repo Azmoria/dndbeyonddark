@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.579
+@version      1.2.580
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -2551,7 +2551,7 @@ regexp("https://www.dndbeyond.com/profile/.*/characters/.*/builder#/.*"),
 regexp("https://www.dndbeyond.com/characters/.*/builder.*"),
 regexp("https://www.dndbeyond.com/characters/builder.*"),
 regexp("https://www.dndbeyond.com/my-characters"), 
-regexp("https://www.dndbeyond.com/characters.*"),
+regexp("https://www.dndbeyond.com/characters"),
 regexp("https://www.dndbeyond.com/search.*"),
 regexp("https://www.dndbeyond.com/modifier.*"),
 regexp("https://www.dndbeyond.com/entity.*"),
