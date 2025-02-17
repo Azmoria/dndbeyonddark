@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.582
+@version      1.2.583
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -4100,7 +4100,7 @@ regexp("https://www.dndbeyond.com/species.*"){
         !important;
         outline: none !important;
     }
-   
+ 
     .text--morte-notes{
         border: 6px solid var(--morte-border-color) !important;
     }
@@ -5289,19 +5289,40 @@ regexp("https://www.dndbeyond.com/species.*"){
     #content-management-root .ddb-button:hover,
     .MuiDialogActions-root button:hover,
     [class*=Button][class*='styles_dark'][class*='styles_builder-green'][class*='styles_outline'],
-    .character-button, .character-button-block, .character-button-block-large, .character-button-block-oversized, .character-button-block-small, .character-button-large, .character-button-medium, .character-button-modal, .character-button-modal-cancel, .character-button-outline, .character-button-oversized, .character-button-small
+    .character-button, 
+    .character-button-block, 
+    .character-button-block-large, 
+    .character-button-block-oversized, 
+    .character-button-block-small, 
+    .character-button-large, 
+    .character-button-medium, 
+    .character-button-modal, 
+    .character-button-modal-cancel, 
+    .character-button-outline, 
+    .character-button-oversized, 
+    .character-button-small,
+    [class*='styles_dark'][class*=Button][class*='styles_builder-green'][class*='styles_solid']
     {
         background-color: /*[[backgroundColor]]*/ !important;
-        box-shadow: inset 0px 0px 30px 0px /*[[linkColor]]*/ !important;
+        box-shadow: inset 0px 0px 30px 0px color-mix(in srgb, /*[[linkColor]]*/ 60%, transparent 0%)!important;
         border-color: /*[[linkColor]]*/ !important;
+    }
+    .site .character-button, 
+    .site .character-button:active, 
+    .site .character-button:focus,
+    [class*=Button][class*=styles_builder-green][class*=styles_solid],
+    [class*='styles_dark'][class*=Button][class*='styles_builder-green'][class*='styles_solid']{
+        border-color: color-mix(in srgb, /*[[linkColor]]*/ 20%, transparent 0%) !important;
     }
     .site .character-button-outline, 
     .site .character-button-outline:active, 
-    .site .character-button-outline:focus{
+    .site .character-button-outline:focus,
+    [class*='styles_dark'][class*=Button][class*='styles_builder-green'][class*='styles_outline']{
         background-color: /*[[transparencyBackgroundColor]]*/ !important;
         box-shadow: none !important;
-        border-color: /*[[linkColor]]*/ !important;
+        border-color: color-mix(in srgb, /*[[linkColor]]*/ 20%, transparent 0%) !important;
     }
+
     .p-article-a .p-article-interact .p-article-comments a:first-of-type:hover:after{
         border-color: /*[[linkColor]]*/ transparent !important;
         opacity: 0.6;
