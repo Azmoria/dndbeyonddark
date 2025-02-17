@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.581
+@version      1.2.582
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -3074,7 +3074,8 @@ regexp("https://www.dndbeyond.com/species.*"){
     [class*='styles_searchSort'] label,
     [class*=Button][class*='styles_dark'],
     [class*='styles_details'],
-    .section-the-lord-of-the-rings-roleplaying .monster--stat-block .monster--stats
+    .section-the-lord-of-the-rings-roleplaying .monster--stat-block .monster--stats,
+    [class*='styles_container']
     {
         background-color: /*[[backgroundColor]]*/
         !important;
@@ -3336,14 +3337,21 @@ regexp("https://www.dndbeyond.com/species.*"){
         border-color: /*[[borderColor]]*/ !important;   
     }
     
-      body.body-forum .single-column #content .p-forum-a .p-comment-post .p-comment-container{
+    body.body-forum .single-column #content .p-forum-a .p-comment-post .p-comment-container{
         box-shadow: inset 0px 1px 1px /*[[borderColor]]*/ !important;
     }
     
     .p-comments-b .p-comment-user-background{
         box-shadow: inset 0px 0px 1px /*[[borderColor]]*/;
     }
-
+    
+    .collapsible-body [class*='styles_container']{
+        box-shadow:  0 0 .1rem color-mix(
+            in srgb,
+            /*[[borderColor]]*/ 60%,
+            transparent  0%
+          ) !important;
+    }
 
     [class*="GameLogNotification_MessageIcon"][class*="GameLogNotification_MessageIconDie"]{
         background-color: /*[[fontColor]]*/ !important;
@@ -3387,7 +3395,8 @@ regexp("https://www.dndbeyond.com/species.*"){
     .mce-abs-layout-item button,
     .mce-tabs,
     .mce-i-checkbox,
-    .privacy-policy-notice{
+    .privacy-policy-notice,
+    [class*=Checkbox][class*='styles_builder'] input:checked {
         background-color: /*[[transparencyBackgroundColor]]*/ !important;
     }
     body #site-main a.onedndcard--playtest-disclaimer-view-faq,
@@ -3398,7 +3407,7 @@ regexp("https://www.dndbeyond.com/species.*"){
     [class*='LabelChip_LabelChip'],
     .glc-game-log .ct-sidebar__heading span:not([class*='uncommon'], [class*='rare'], [class*='very-rare'], [class*='legendary'], [class*='artifact']),
     [class*='styles_description'],
-    .font-container p{
+    .font-container p {
         color: /*[[fontColor]]*/ !important;   
     }
 
@@ -3518,7 +3527,8 @@ regexp("https://www.dndbeyond.com/species.*"){
         backdrop-filter: brightness(1.5);   
     }
 
-    .ability-score-calcs [class*='styles_highlight'] div[class*='value'] {
+    .ability-score-calcs [class*='styles_highlight'] div[class*='value'],
+    [class*='LabelChip_labelChip'] {
         background: none !important;
         backdrop-filter: brightness(1.8);   
     }
@@ -3808,7 +3818,10 @@ regexp("https://www.dndbeyond.com/species.*"){
     [class*=Button][class*='styles_light'],
     .spell-list-heading [class*='styles_spellName'],
     .body-page .p-article-a .p-article-content .compendium-hr.monster-with-metadata+p,
-    .more-info-body-description
+    .more-info-body-description,
+    [class*='styles_numberDisplay'],
+    [class*='styles_labelSignColor'],
+    [class*='LabelChip_labelChip']
     {
         color: /*[[fontColor]]*/ !important;
     }
@@ -4076,7 +4089,8 @@ regexp("https://www.dndbeyond.com/species.*"){
     .tasha-notes,
     aside.text--krynn-letter,
      aside.text--krynn-sidebar,
-    [class*=Button][class*='styles_dark']
+    [class*=Button][class*='styles_dark'],
+    [class*=Checkbox][class*='styles_builder'] input:checked
     {
         border-width: /*[[borderWidth]]*/
         !important;
@@ -4753,7 +4767,7 @@ regexp("https://www.dndbeyond.com/species.*"){
     .listing .info .row.item-name .name .rare,
     .rare,
     .content-container .rare {
-            color: #4990E2 !important;
+        color: #4990E2 !important;
     }
     .listing .info .row.item-name .name .uncommon,
     .uncommon,
@@ -4765,6 +4779,17 @@ regexp("https://www.dndbeyond.com/species.*"){
     .content-container .legendary {
         color: #FEA227 !important;
     }
+    
+    #site-main [class*='styles_characterBuilder'] [class*=styles_itemName]{
+        --color-common: /*[[fontColor]]*/;
+        --color-uncommon: #1fc219;
+        --color-rare: #4990e2;
+        --color-veryrare: #9810e0;
+        --color-legendary: #FEA227;
+        --color-artifact: #BE8972;
+    }
+    
+    
 
     .listing .info .row.item-name .name .common,
     .common,
@@ -5178,7 +5203,7 @@ regexp("https://www.dndbeyond.com/species.*"){
         background-color: /*[[transparencyBackgroundColor]]*/ !important;
         box-shadow: inset 0 0 25px 0px #eaeaea;
     }
-    
+
     .body-rpghomebrew a.character-button-block:hover{
         box-shadow: none !important;
         background: none !important;
@@ -5263,13 +5288,20 @@ regexp("https://www.dndbeyond.com/species.*"){
     .p-article-a .p-article-interact .p-article-comments a:first-of-type:hover,
     #content-management-root .ddb-button:hover,
     .MuiDialogActions-root button:hover,
-    [class*=Button][class*='styles_dark'][class*='styles_builder-green'][class*='styles_outline']
+    [class*=Button][class*='styles_dark'][class*='styles_builder-green'][class*='styles_outline'],
+    .character-button, .character-button-block, .character-button-block-large, .character-button-block-oversized, .character-button-block-small, .character-button-large, .character-button-medium, .character-button-modal, .character-button-modal-cancel, .character-button-outline, .character-button-oversized, .character-button-small
     {
         background-color: /*[[backgroundColor]]*/ !important;
         box-shadow: inset 0px 0px 30px 0px /*[[linkColor]]*/ !important;
         border-color: /*[[linkColor]]*/ !important;
     }
-    
+    .site .character-button-outline, 
+    .site .character-button-outline:active, 
+    .site .character-button-outline:focus{
+        background-color: /*[[transparencyBackgroundColor]]*/ !important;
+        box-shadow: none !important;
+        border-color: /*[[linkColor]]*/ !important;
+    }
     .p-article-a .p-article-interact .p-article-comments a:first-of-type:hover:after{
         border-color: /*[[linkColor]]*/ transparent !important;
         opacity: 0.6;
