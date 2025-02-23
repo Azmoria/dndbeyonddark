@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.336
+@version      1.3.335
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -1027,7 +1027,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
     .ct-sidebar .ddbc-collapsible__header,
     .ct-character-manage-pane__intro,
     .ct-restore-life,
-    .ddbc-exclusive-checkbox .ddbc-exclusive-checkbox__slot,
+    .ddbc-exclusive-checkbox .ddbc-exclusive-checkbox__slot--inactive,
     .ct-spell-caster__casting-action-count,  
     .ct-equipment-manage-pane__item>.ddbc-collapsible__content,
     .settings-container .settings-modal .attribute-container .attribute .html-value-container,
@@ -1093,7 +1093,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
         box-shadow: 0 0 20px 1px /*[[highlightColor]]*/ inset !important;
         background-color: /*[[sheetColor]]*/ !important;
     }
-
+    
     .ct-theme-button--filled:after{
         content:'';
         position: absolute;
@@ -1158,17 +1158,23 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
         font-size: 16px;
         break-inside: avoid
     }
-    .ct-sidebar .stat-block{
+    .ct-sidebar .stat-block,
+    [class*='styles_creatureBlock']{
         --sb-stat-block-bg-override: /*[[background]]*/;
     }
-    .ct-sidebar .stat-block .stats table.abilities-saves.physical {
+    [class*='styles_v2024'][class*='styles_creatureBlock']{
+        background-color: var(--sb-stat-block-bg-override, #fff)
+    }
+    .ct-sidebar .stat-block .stats table.abilities-saves.physical,
+    [class*='styles_v2024'] [class*='styles_stats'] table[class*='styles_statTable'][class*='styles_physical']{
         --sb-stats-score: #4b3e347d;
         --sb-stats-mods: #4b34377d;
         --sb-stats-score-hover: rgba(153,127,109,0.49019607843137253);
         --sb-stats-mods-hover: rgba(153,109,114,0.49019607843137253)
     }
     
-    .ct-sidebar .stat-block .stats table.abilities-saves.mental {
+    .ct-sidebar .stat-block .stats table.abilities-saves.mental,
+    [class*='styles_v2024'] [class*='styles_stats'] table[class*='styles_statTable'][class*='styles_mental'] {
         --sb-stats-score: #34454b7d;
         --sb-stats-mods: #38344b7d;
         --sb-stats-score-hover: rgba(109,141,153,0.49019607843137253);
@@ -1176,44 +1182,53 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
     }
     
     
-    
     .stat-block .stats table.abilities-saves thead tr th,
     .stat-block .stats table.abilities-saves tbody,
     .stat-block .stats table.abilities-saves tbody th,
     .stat-block .stats table.abilities-saves tbody td,
-    .stat-block .stats table.abilities-saves thead{
+    .stat-block .stats table.abilities-saves thead,
+    [class*='styles_v2024'] [class*='styles_stats'] table[class*='styles_statTable'] tbody tr
+    {
         border: none !important;
     }
     
     
-    .ct-sidebar .stat-block .stats table.abilities-saves tbody tr {
+    .ct-sidebar .stat-block .stats table.abilities-saves tbody tr,
+     [class*='styles_v2024'] [class*='styles_stats'] table[class*='styles_statTable'] tbody tr{
         background-color: var(--theme-table-row-color, /*[[background]]*/) !important;
     }
     
-    .ct-sidebar .stat-block .stats table.abilities-saves tbody tr:hover {
+    .ct-sidebar .stat-block .stats table.abilities-saves tbody tr:hover,
+    [class*='styles_v2024'] [class*='styles_stats'] table[class*='styles_statTable'] tbody tr:hover{
         background-color: var(--sb-stats-hover) !important;
     }
     
-    .ct-sidebar .stat-block .stats table.abilities-saves tbody tr:hover :nth-child(-n+3) {
+    .ct-sidebar .stat-block .stats table.abilities-saves tbody tr:hover :nth-child(-n+3),
+    [class*='styles_v2024'] [class*='styles_stats'] table[class*='styles_statTable'] tbody tr:hover :nth-child(-n+3){
         background-color: var(--sb-stats-score-hover) !important;
     }
     
-    .ct-sidebar .stat-block .stats table.abilities-saves tbody tr:hover :nth-child(n+3) {
+    .ct-sidebar .stat-block .stats table.abilities-saves tbody tr:hover :nth-child(n+3),
+    [class*='styles_v2024'] [class*='styles_stats'] table[class*='styles_statTable'] tbody tr:hover :nth-child(n+3){
         background-color: var(--sb-stats-mods-hover) !important;
     }
     
-    .ct-sidebar .stat-block .stats table.abilities-saves tbody tr :nth-child(-n+3) {
+    .ct-sidebar .stat-block .stats table.abilities-saves tbody tr :nth-child(-n+3),
+    [class*='styles_v2024'] [class*='styles_stats'] table[class*='styles_statTable'] tbody tr :nth-child(-n+3){
         background-color: var(--sb-stats-score) !important;
     }
     
-    .ct-sidebar .stat-block .stats table.abilities-saves tbody tr :nth-child(n+3) {
+    .ct-sidebar .stat-block .stats table.abilities-saves tbody tr :nth-child(n+3),
+    [class*='styles_v2024'] [class*='styles_stats'] table[class*='styles_statTable'] tbody tr :nth-child(n+3){
         background-color: var(--sb-stats-mods) !important;
     }
-    .stat-block {
-      --stat-block-bg-override: /*[[backgroundColor]]*/;
+    .stat-block,
+     [class*='styles_v2024'] [class*='styles_stats']{
+      --stat-block-bg-override: /*[[background]]*/;
       color: /*[[fontColor]]*/;
     }
-    .ct-sidebar .stat-block .stats table.abilities-saves tbody tr{
+    .ct-sidebar .stat-block .stats table.abilities-saves tbody tr,
+    [class*='styles_v2024'] [class*='styles_stats'] table[class*='styles_statTable'] tbody tr{
         color: /*[[fontColor]]*/
     }
 
@@ -2422,34 +2437,29 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
 
     .container [class*='ddbc-item-name--rarity-very-rare'],
     .container .very-rare,
-    .container [class*='styles_veryrare'],
-    [class*='styles_itemName'][class*='styles_veryrare']
+    .container [class*='styles_veryrare']
     {
         color: #9810E0 !important;
     }
     .container [class*='ddbc-item-name--rarity-rare'],
     .container .rare,
-    .container [class*='styles_rare'],
-    [class*='styles_itemName'][class*='styles_rare']{
+    .container [class*='styles_rare']{
         color: #4990E2 !important;
     }
     .container [class*='ddbc-item-name--rarity-uncommon'],
     .container .uncommon,
-    .container [class*='styles_uncommon'],
-    [class*='styles_itemName'][class*='styles_uncommon'] {
+    .container [class*='styles_uncommon'] {
         color: #1FC219 !important;
     }
     .container [class*='ddbc-item-name--rarity-legendary'],
     .container .legendary,
-    .container [class*='styles_legendary'],
-    [class*='styles_itemName'][class*='styles_legendary'] {
+    .container [class*='styles_legendary'] {
         color: #FEA227 !important;
     }
     
     .container [class*='ddbc-item-name--rarity-artifact'],
     .container .artifact,
-    .container [class*='styles_artifact'],
-    [class*='styles_itemName'][class*='styles_artifact']{
+    .container [class*='styles_artifact']{
         color: #be8972 !important;
     }
     
@@ -3200,7 +3210,9 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
         border-left: 10px solid transparent;
         border-right: 10px solid transparent;
     }
- 
+    body.body-rpgcharacter-sheet>div:last-of-type:not(.ct-sidebar__portal)>div:first-of-type[style^="top"]{
+        
+    }
     
     
     body.body-rpgcharacter-sheet>div:last-of-type:not(.ct-sidebar__portal)>div[class^="_"]>div>div{
@@ -4504,7 +4516,6 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
         box-shadow: 0px 0px 2px 0px /*[[borderColor]]*/;
         background: linear-gradient(/*[[background]]*/, /*[[rollCalcColor]]*/ 250%) !important;
     }
-
     
     .help-tabs li a,
     .token-image-modal-footer-title,
