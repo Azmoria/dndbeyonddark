@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.335
+@version      1.3.336
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -121,14 +121,15 @@
         }
         .ct-character-sheet--dice-enabled .ct-skills__item .integrated-dice__container,
         .ct-character-sheet--dice-enabled .ct-spells-spell__tohit .integrated-dice__container,
-        .ct-character-sheet--dice-enabled .ddbc-combat-attack__tohit .integrated-dice__container,
-        .avtt-roll-formula-button.integrated-dice__container{
+        .ct-character-sheet--dice-enabled .ddbc-combat-attack__tohit .integrated-dice__container{
            
             height: auto !important;
             font-size: 15px !important;
             width: auto !important;
             margin-bottom: 0px !important;
         }
+
+
         .ct-character-sheet--dice-enabled .ddbc-combat-attack__tohit .integrated-dice__container,
         .ct-character-sheet--dice-enabled .ddbc-combat-attack__damage .integrated-dice__container,
         .ct-character-sheet--dice-enabled .ddbc-combat-item-attack__damage .integrated-dice__container,
@@ -151,14 +152,29 @@
         .encounter-builder-app [aria-haspopup=menu].integrated-dice__container:hover,
         .avtt-roll-formula-button.integrated-dice__container:hover{
             border-color: var(--character-sheet-border);
-            padding: 0px 1px;
-            height: auto;
+            padding: 0px 1px !important;
+            height: calc-size(fit-content, size + 2px) !important;
+            min-height: unset !important;
+            max-width: unset !important;
+            width: calc-size(fit-content, size + 2px) !important;
+        }
+        .ct-character-sheet--dice-enabled .ddbc-combat-attack__tohit .integrated-dice__container,
+        .ct-character-sheet--dice-enabled .ddbc-combat-attack__damage .integrated-dice__container,
+        .ct-character-sheet--dice-enabled .ddbc-combat-item-attack__damage .integrated-dice__container,
+        .ct-character-sheet--dice-enabled .ddbc-spell-damage-effect__damages .integrated-dice__container,
+        .ct-character-sheet--dice-enabled .ddbc-spell-damage-effect__healing .integrated-dice__container,
+        .ct-character-sheet--dice-enabled .ct-skills__col--modifier .integrated-dice__container,
+        .ct-character-sheet--dice-enabled .ddbc-combat-attack__tohit .integrated-dice__container,
+        .ct-character-sheet--dice-enabled .ddbc-ability-summary__primary .integrated-dice__container,
+        .ct-character-sheet--dice-enabled .ct-initiative-box__value .integrated-dice__container,
+        .avtt-roll-formula-button.integrated-dice__container{
+            height: calc-size(fit-content, size + 4px) !important;
+            width: calc-size(fit-content, size + 4px) !important;
         }
         .ct-character-sheet--dice-enabled .ct-skills__item .ct-skills__col--skill {
             padding: 2px 0px !important;
         }
-        .ddbc-tab-list .integrated-dice__container,
-        .avtt-roll-formula-button.integrated-dice__container{
+        .ddbc-tab-list .integrated-dice__container{
             font-size: 14px;
         }  
         .ct-skills__item .ct-skills__col--modifier,
