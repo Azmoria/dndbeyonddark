@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.586
+@version      1.2.587
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -3088,7 +3088,9 @@ regexp("https://www.dndbeyond.com/species.*"){
     .section-the-lord-of-the-rings-roleplaying .monster--stat-block .monster--stats,
     [class*='styles_container'],
     [class*='styles_hpSummaryContent'],
-    [class*='styles_confirmModal']
+    [class*='styles_confirmModal'],
+    [class*='styles_cardFooter'],
+     [class*='Select_options']
     {
         background-color: /*[[backgroundColor]]*/
         !important;
@@ -3501,7 +3503,8 @@ regexp("https://www.dndbeyond.com/species.*"){
     .player-info-table .value .ddbc-proficiency-half-svg path,
     .player-info-table .value .ddbc-proficiency-half-svg circle,
     .player-info-table .value .ddbc-proficiency-svg path,
-    .player-info-table .value .ddbc-proficiency-svg circle {
+    .player-info-table .value .ddbc-proficiency-svg circle,
+    [class*='Select_button'] svg{
         fill: /*[[fontColor]]*/ ;
     }
     .player-info-table td,
@@ -3834,7 +3837,10 @@ regexp("https://www.dndbeyond.com/species.*"){
     .more-info-body-description,
     [class*='styles_numberDisplay'],
     [class*='styles_labelSignColor'],
-    [class*='LabelChip_labelChip']
+    [class*='LabelChip_labelChip'],
+    [class*='styles_font'],
+    [class*='styles_header'],
+    [class*='ddb-character-app']>[class*='ddb-character-app'] .ddbc-ability-summary *
     {
         color: /*[[fontColor]]*/ !important;
     }
