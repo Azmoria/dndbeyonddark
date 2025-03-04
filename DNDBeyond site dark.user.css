@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.588
+@version      1.2.589
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -124,6 +124,9 @@ dark "Dark Mode" <<<EOT
     }
     :root .section-the-lord-of-the-rings-roleplaying{
         --lotr-red: #bb4242;
+    }
+    :root .section-helianas-guide-to-monster-hunting-part-1 {
+        --heliana-red: #8a0f26;
     }
     .section-the-lord-of-the-rings-roleplaying .monster--stat-block strong{
         color: #978f87;
@@ -588,7 +591,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/soee/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/lotrr/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/gsb2/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/hwt/(.|\s)*\S(.|\s)*"), 
-regexp("https://www.dndbeyond.com/sources/dnd/isotss/(.|\s)*\S(.|\s)*")
+regexp("https://www.dndbeyond.com/sources/dnd/isotss/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/hgtmh1/(.|\s)*\S(.|\s)*")
 {
 
     #site-main,
@@ -1227,7 +1231,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/lotrr(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/gsb2(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/mm-2024(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/hwt(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/isotss(/)?")
+regexp("https://www.dndbeyond.com/sources/dnd/isotss(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/hgtmh1(/)?")
 {
    
     #site-main,
@@ -1317,7 +1322,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/lotrr(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/gsb2(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/mm-2024(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/hwt(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/isotss(/)?"){
+regexp("https://www.dndbeyond.com/sources/dnd/isotss(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/hgtmh1(/)?"){
 
     @media (min-width: 1024px) {
         body {
@@ -3102,7 +3108,9 @@ regexp("https://www.dndbeyond.com/species.*"){
         color: /*[[fontColor]]*/
         !important;
     }
-
+    .section-helianas-guide-to-monster-hunting-part-1 .mini-stat-block{
+        background-color: /*[[backgroundColor]]*/ !important;
+    }
     .character-builder-inner [class*='ddb-character-app']{
         background:transparent;
     }
