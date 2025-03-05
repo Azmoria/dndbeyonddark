@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.589
+@version      1.2.590
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -3989,7 +3989,8 @@ regexp("https://www.dndbeyond.com/species.*"){
     .content-container a:active,
     .tooltip a,
     .tooltip-body-description a,
-    [class*='styles_pdfLinkWrapper'] a
+    [class*='styles_pdfLinkWrapper'] a,
+    .content-container blockquote a
     {
         color: /*[[linkColor]]*/ !important
     }
