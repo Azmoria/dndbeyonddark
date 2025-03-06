@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.590
+@version      1.2.591
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -3289,7 +3289,8 @@ regexp("https://www.dndbeyond.com/species.*"){
     table.stat-table tbody tr :nth-child(n+3) {
         background-color: var(--stats-mods) !important;
     }
-    .mon-stat-block-2024{
+    .mon-stat-block-2024,
+    .tooltip-flyout .tooltip-body .mon-stat-block-2024{
         background: var(--stat-block-bg-override) !important;
     }
     .mon-stat-block-2024 .tooltip-hover, .mon-stat-block-2024 .tooltip-hover:hover, 
