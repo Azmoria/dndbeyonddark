@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.593
+@version      1.2.594
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -2619,11 +2619,11 @@ regexp("https://www.dndbeyond.com/species.*"){
         [class*='_panel_'] {
             display:block !important;
             visibility: hidden;
-            transition: 0ms visibility 100ms;
+            transition: 0ms visibility 200ms;
         }
         [class*='_showPanel_'] {
             visibility: visible;
-            transition: 0ms visibility 100ms;
+            transition: 0ms visibility 200ms;
         }
 
     }
@@ -8030,7 +8030,8 @@ regexp("https://www.dndbeyond.com/encounters.*#DiceTray"), regexp("https://www.d
     .mon-stat-block button.integrated-dice__container:hover,
     [class*="GameLogNotification_MessageIcon"],
     .avtt-roll-button:hover,
-    .avtt-ability-roll-button:hover
+    .avtt-ability-roll-button:hover,
+    .avtt-aoe-button:hover
     {
         background-color: /*[[rollCalcColor]]*/ !important;
     }
@@ -8259,7 +8260,9 @@ regexp("https://www.dndbeyond.com/encounters.*#DiceTray"), regexp("https://www.d
 
     .encounter-builder-app .integrated-dice__container,
     .mon-stat-block button[data-exp],
-    .avtt-roll-button{
+    .avtt-roll-button,
+    .avtt-aoe-button,
+    .tooltip .above-aoe{
         color: /*[[rollColor]]*/ !important;
         background: /*[[backgroundColor]]*/ !important;
         border: 1px solid #0000 !important;
@@ -8268,7 +8271,10 @@ regexp("https://www.dndbeyond.com/encounters.*#DiceTray"), regexp("https://www.d
     .mon-stat-block .avtt-ability-roll-button,
     .mon-stat-block .avtt-roll-button,
     .avtt-stat-block-container .avtt-ability-roll-button,
-    .avtt-stat-block-container .avtt-roll-button{
+    .avtt-stat-block-container .avtt-roll-button,
+    .avtt-stat-block-container .avtt-aoe-button,
+    .mon-stat-block .avtt-aoe-button,
+    .tooltip .above-aoe{
         color: /*[[rollColor]]*/ !important;
         background: /*[[backgroundColor]]*/ !important;
         border: 1px /*[[rollColor]]*/ solid !important;
@@ -8276,7 +8282,9 @@ regexp("https://www.dndbeyond.com/encounters.*#DiceTray"), regexp("https://www.d
         
     .encounter-builder-app .integrated-dice__container:hover,
     .mon-stat-block button[data-exp],
-    .avtt-roll-button:hover{
+    .avtt-roll-button:hover,
+    .avtt-aoe-button:hover,
+    .tooltip .above-aoe:hover{
         border: 1px /*[[rollColor]]*/ solid !important;
     }
 
