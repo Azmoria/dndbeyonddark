@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.594
+@version      1.2.595
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -592,7 +592,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/lotrr/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/gsb2/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/hwt/(.|\s)*\S(.|\s)*"), 
 regexp("https://www.dndbeyond.com/sources/dnd/isotss/(.|\s)*\S(.|\s)*"),
-regexp("https://www.dndbeyond.com/sources/dnd/hgtmh1/(.|\s)*\S(.|\s)*")
+regexp("https://www.dndbeyond.com/sources/dnd/hgtmh1/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/ottg/(.|\s)*\S(.|\s)*")
 {
 
     #site-main,
@@ -1232,7 +1233,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/gsb2(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/mm-2024(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/hwt(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/isotss(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/hgtmh1(/)?")
+regexp("https://www.dndbeyond.com/sources/dnd/hgtmh1(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/ottg(/)?")
 {
    
     #site-main,
@@ -1323,7 +1325,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/gsb2(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/mm-2024(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/hwt(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/isotss(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/hgtmh1(/)?"){
+regexp("https://www.dndbeyond.com/sources/dnd/hgtmh1(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/ottg(/)?"){
 
     @media (min-width: 1024px) {
         body {
@@ -1350,7 +1353,13 @@ regexp("https://www.dndbeyond.com/sources/dnd/hgtmh1(/)?"){
         }
     }
 }
- 
+@-moz-document regexp("https://www.dndbeyond.com/sources/dnd/ottg(/)?"){
+    body{
+        background-position: center 60% !important;
+       
+    }
+}
+
 @-moz-document regexp("https://www.dndbeyond.com/sources/dnd/gsb2(/)?"){
     body{
         background-position: center 75% !important;
@@ -3330,6 +3339,28 @@ regexp("https://www.dndbeyond.com/species.*"){
         background-size: 100% 100%;
         background-repeat: no-repeat;
         pointer-events:none;
+    }
+
+    .section-obojima-tales-from-the-tall-grass .general-rules,
+    .section-obojima-tales-from-the-tall-grass .vibes-note,
+    .section-obojima-tales-from-the-tall-grass .narration-text{
+        background-blend-mode: soft-light !important;
+        border: none !important;
+        
+    }
+    .section-obojima-tales-from-the-tall-grass .vibes-note p:first-of-type{
+        color: var(--first-paragraph-color, hsl(197, 84%, 37%));
+
+    }
+    .section-obojima-tales-from-the-tall-grass .design-note {
+        background: none !important;
+        border: none !important;
+    }
+    .section-obojima-tales-from-the-tall-grass.body-page .p-article-a .p-article-content .table-overflow-wrapper table.ingredients-table {
+    --obojima-ingredient: hsl(90, 28%, 15%);
+    --obojima-light-green: hsl(67, 56%, 15%);
+    --obojima-yellow: hsl(49, 73%, 19%);
+    --compendium-item-tooltip: var(--obojima-yellow);
     }
     .section-players-handbook .rhythm-box-tall:before {
         background-image: url(https://www.dndbeyond.com/attachments/11/527/test3.png);
