@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.341
+@version      1.3.342
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -1056,10 +1056,15 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
     .ct-equipment-manage-pane__item>.ddbc-collapsible__content,
     .settings-container .settings-modal .attribute-container .attribute .html-value-container,
     .settings-container .settings-modal .attribute-container .attribute,
-        .ddbc-collapsible__content > [class*='styles_detail']{
+    .ddbc-collapsible__content > [class*='styles_detail'],
+    .ct-sidebar__inner>[class*='styles_pane']>[class*='styles_content'] .glc-game-log{
        background: /*[[sidebarColor]]*/ !important;   
     }
     
+    .ct-sidebar__inner>[class*='styles_pane']>[class*='styles_content']{
+        padding: 0px; 
+    }
+
     .ddbc-no-proficiency-icon {
         background: /*[[fontColor]]*/ !important
     }
