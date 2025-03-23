@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.595
+@version      1.2.596
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -6699,8 +6699,20 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
     #playersFolder .subtitle-attibute .material-icons{
         opacity: 0.6;
     }
-    
-    
+    #resizeDragMon .avtt-stat-block-container .tooltip-hover{
+        -webkit-text-decoration-thickness:1px !important; 
+        -webkit-text-decoration-style: dotted !important;  
+        text-decoration-thickness:1px !important; 
+        text-decoration-style: dotted !important;
+    }
+
+    #resizeDragMon .avtt-stat-block-container :is(.rule-tooltip, .skill-tooltip, .condition-tooltip, .sense-tooltip){
+        color: inherit !important;
+        font-weight: inherit !important;
+        text-decoration-line: underline !important; 
+        -webkit-text-decoration-color: /*[[linkColor]]*/ !important;
+        text-decoration-color: /*[[linkColor]]*/ !important;
+    }
 
     #playersFolder .subtitle-title{
         color: /*[[fontColor]]*/ !important;
