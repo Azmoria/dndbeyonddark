@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.342
+@version      1.3.343
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -3754,7 +3754,21 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
     .token .note-condition.condition-img{
         pointer-events: auto !important;
     }
-    
+    #resizeDragMon .avtt-stat-block-container .tooltip-hover{
+        -webkit-text-decoration-thickness:1px !important; 
+        -webkit-text-decoration-style: dotted !important;  
+        text-decoration-thickness:1px !important; 
+        text-decoration-style: dotted !important;
+    }
+
+    #resizeDragMon .avtt-stat-block-container :is(.rule-tooltip, .skill-tooltip, .condition-tooltip, .sense-tooltip){
+        color: inherit !important;
+        font-weight: inherit !important;
+        text-decoration-line: underline !important; 
+        -webkit-text-decoration-color: /*[[highlightColor]]*/ !important;
+        text-decoration-color: /*[[highlightColor]]*/ !important;
+    }
+
 
     .ct-sidebar__inner .glc-game-log .abovevtt-sidebar-injected button.avtt-roll-button:hover{
         background: /*[[rollCalcColor]]*/ !important;
