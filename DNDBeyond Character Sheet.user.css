@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.343
+@version      1.3.344
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -3689,7 +3689,8 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
             in srgb,
             /*[[background]]*/ 80%,
             transparent  0%
-          )
+          );
+           color: /*[[fontColor]]*/;
     }
 
     .sidebar-flyout,
