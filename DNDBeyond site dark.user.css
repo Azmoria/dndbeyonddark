@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.598
+@version      1.2.599
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -225,6 +225,7 @@ dark "Dark Mode" <<<EOT
      --compendium-magic-item-tooltip: #1877EC;
      --kp-purple: #a275d7;
      --monster-header-color: #D35050;
+    --character-creature-block-red: #D35050;
      --monster-header-underline: #8f2424;
     }
     .section-tome-of-beasts-1 li::marker, .section-tome-of-beasts-1 strong:not(em strong,ul strong,strong em,.flexible-double-column.hangingIndent strong,.epigraph strong),
@@ -3108,7 +3109,8 @@ regexp("https://www.dndbeyond.com/species.*"){
     [class*='styles_hpSummaryContent'],
     [class*='styles_confirmModal'],
     [class*='styles_cardFooter'],
-     [class*='Select_options']
+     [class*='Select_options'],
+    .stat-block
     {
         background-color: /*[[backgroundColor]]*/
         !important;
@@ -3171,48 +3173,50 @@ regexp("https://www.dndbeyond.com/species.*"){
         color: var(--lotr-red) !important;
         border:none !important;
     }
-    .body-page .p-article-a .p-article-content .stat-block .monster-header{
-        padding-top: 4px;
-        letter-spacing: .35px;
-        font-weight: 500;
-        color: var(--monster-header-color,#5b160c);
-        font-size: var(--monster-trait-header-size,18px);
-        font-family: var(--monster-trait-header-font,"Roboto Condensed",Helvetica,sans-serif);
-        border-bottom: 2px solid var(--monster-header-underline,#7a3c2f)
+    .stat-block .monster-header{
+        padding-top: 4px !important;
+        letter-spacing: .35px !important;
+        font-weight: 500 !important;
+        color: var(--monster-header-color,#5b160c) !important;
+        font-size: var(--monster-trait-header-size,18px) !important;
+        font-family: var(--monster-trait-header-font,"Roboto Condensed",Helvetica,sans-serif) !important;
+        border-bottom: 2px solid var(--monster-header-underline,#7a3c2f) !important;
     }
-    
+    .stat-block .monster-header~p:not(.monster-header){
+         color: var(--font-color) !important;
+    }
     .content-container .mon-stat-block-2024 .mon-stat-block-2024__header a,
     .content-container .mon-stat-block-2024 .mon-stat-block-2024__header a:visited{
         color: var(--monster-header-color,#5b160c) !important;
     }
     .legendary-actions{
-        color: var(--legendary-actions-color)
+        color: var(--legendary-actions-color) !important;
     }
-    .body-page .p-article-a .p-article-content .stat-block .monster-header+p {
-        break-before: avoid
-    }
-    
-    .body-page .p-article-a .p-article-content .stat-block .stats {
-        display: flex;
-        gap: 10px
+    .stat-block .monster-header+p {
+        break-before: avoid !important;
     }
     
-    .body-page .p-article-a .p-article-content .stat-block .stats+p {
-        margin-top: 10px
+    .stat-block .stats {
+        display: flex !important;
+        gap: 10px !important;
     }
     
-    .body-page .p-article-a .p-article-content .stat-block .stats table.abilities-saves,
+     .stat-block .stats+p {
+        margin-top: 10px !important;
+    }
+    
+     .stat-block .stats table.abilities-saves,
     table.stat-table{
         --theme-table-row-color: transparent;
-        flex: 1 1 auto;
-        line-height: 24px;
-        background: revert;
-        border: none;
-        font-size: 16px;
-        break-inside: avoid
+        flex: 1 1 auto !important;
+        line-height: 24px !important;
+        background: revert !important;
+        border: none !important;
+        font-size: 16px !important;
+        break-inside: avoid !important;
     }
     
-    .body-page .p-article-a .p-article-content .stat-block .stats table.abilities-saves.physical,
+    .stat-block .stats table.abilities-saves.physical,
     table.stat-table.physical{
         --stats-score: #4b3e347d !important;
         --stats-mods: #4b34377d !important;
@@ -3220,7 +3224,7 @@ regexp("https://www.dndbeyond.com/species.*"){
         --stats-mods-hover: rgba(153,109,114,0.49019607843137253) !important;
     }
     
-    .body-page .p-article-a .p-article-content .stat-block .stats table.abilities-saves.mental,
+    .stat-block .stats table.abilities-saves.mental,
     table.stat-table.mental {
         --stats-score: #34454b7d !important;
         --stats-mods: #38344b7d !important;
@@ -3253,13 +3257,15 @@ regexp("https://www.dndbeyond.com/species.*"){
     }
    
     
-    .body-page .p-article-a .p-article-content .stat-block .stats table.abilities-saves thead tr th,
-    .body-page .p-article-a .p-article-content .stat-block .stats table.abilities-saves tbody,
-    .body-page .p-article-a .p-article-content .stat-block .stats table.abilities-saves tbody th,
-    .body-page .p-article-a .p-article-content .stat-block .stats table.abilities-saves tbody td,
-    .body-page .p-article-a .p-article-content .stat-block .stats table.abilities-saves thead,
+    .stat-block .stats table.abilities-saves thead tr th,
+    .stat-block .stats table.abilities-saves tbody,
+    .stat-block .stats table.abilities-saves tbody tr,
+    .stat-block .stats table.abilities-saves tbody th,
+    .stat-block .stats table.abilities-saves tbody td,
+    .stat-block .stats table.abilities-saves thead,
     table.stat-table thead tr th,
     table.stat-table tbody,
+    table.stat-table tbody tbody tr,
     table.stat-table tbody th,
     table.stat-table tbody td,
     table.stat-table thead,
@@ -3269,32 +3275,32 @@ regexp("https://www.dndbeyond.com/species.*"){
     }
     
     
-    .body-page #site .p-article-a .p-article-content .stat-block .stats table.abilities-saves tbody tr,
+    .stats table.abilities-saves tbody tr,
     table.stat-table tbody{
         background-color: var(--theme-table-row-color, /*[[backgroundColor]]*/) !important;
     }
     
-    .body-page #site .p-article-a .p-article-content .stat-block .stats table.abilities-saves tbody tr:hover,
+    .stats table.abilities-saves tbody tr:hover,
     table.stat-table tbody tr:hover {
         background-color: var(--stats-hover) !important;
     }
     
-    .body-page #site .p-article-a .p-article-content .stat-block .stats table.abilities-saves tbody tr:hover :nth-child(-n+3),
+    .stats table.abilities-saves tbody tr:hover :nth-child(-n+3),
     table.stat-table tbody tr:hover :nth-child(-n+3) {
         background-color: var(--stats-score-hover) !important;
     }
     
-    .body-page #site .p-article-a .p-article-content .stat-block .stats table.abilities-saves tbody tr:hover :nth-child(n+3),
+    .stats table.abilities-saves tbody tr:hover :nth-child(n+3),
     table.stat-table tbody tr:hover :nth-child(n+3){
         background-color: var(--stats-mods-hover) !important;
     }
     
-    .body-page #site .p-article-a .p-article-content .stat-block .stats table.abilities-saves tbody tr :nth-child(-n+3),
+    .stats table.abilities-saves tbody tr :nth-child(-n+3),
     table.stat-table tbody tr :nth-child(-n+3) {
         background-color: var(--stats-score) !important;
     }
     
-    .body-page #site .p-article-a .p-article-content .stat-block .stats table.abilities-saves tbody tr :nth-child(n+3),
+    .stats table.abilities-saves tbody tr :nth-child(n+3),
     table.stat-table tbody tr :nth-child(n+3) {
         background-color: var(--stats-mods) !important;
     }
