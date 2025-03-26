@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.597
+@version      1.2.598
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -3883,7 +3883,8 @@ regexp("https://www.dndbeyond.com/species.*"){
     [class*='LabelChip_labelChip'],
     [class*='styles_font'],
     [class*='styles_header'],
-    [class*='ddb-character-app']>[class*='ddb-character-app'] .ddbc-ability-summary *
+    [class*='ddb-character-app']>[class*='ddb-character-app'] .ddbc-ability-summary *,
+    .character-builder span[class*=numberDisplay], .character-builder span[class*=spellName]
     {
         color: /*[[fontColor]]*/ !important;
     }
@@ -4650,7 +4651,19 @@ regexp("https://www.dndbeyond.com/species.*"){
         background-size: 102% 100%;
         z-index: -1;
     }
-    
+        [class*='styles_paper'] [class*='styles_summary']{
+        background-image: url(https://www.dndbeyond.com/Content/Skins/Waterdeep/images/listing-bars/1a-700.png), linear-gradient(/*[[backgroundColor]]*/, /*[[backgroundColor]]*/) !important;
+        background-blend-mode: overlay, normal !important;
+        
+    }
+    [class*='styles_paper'] [class*='styles_summary']:hover{
+        background-blend-mode: soft-light, normal !important;
+    }
+    [class*='styles_paper'] [class*='styles_content']:before,
+    [class*='styles_paper'] [class*='styles_content']:after{
+        background: none !important;
+    }
+
     aside,
     .more-info::after,
     blockquote.block-colored,
@@ -5364,7 +5377,8 @@ regexp("https://www.dndbeyond.com/species.*"){
     .character-button-outline, 
     .character-button-oversized, 
     .character-button-small,
-    [class*='styles_dark'][class*=Button][class*='styles_builder-green'][class*='styles_solid']
+    [class*='styles_dark'][class*=Button][class*='styles_builder-green'][class*='styles_solid'],
+    [class*=Button][class*='styles_builder-green'][class*='styles_solid']
     {
         background-color: /*[[backgroundColor]]*/ !important;
         box-shadow: inset 0px 0px 30px 0px color-mix(in srgb, /*[[linkColor]]*/ 60%, transparent 0%)!important;
@@ -5374,13 +5388,15 @@ regexp("https://www.dndbeyond.com/species.*"){
     .site .character-button:active, 
     .site .character-button:focus,
     [class*=Button][class*=styles_builder-green][class*=styles_solid],
-    [class*='styles_dark'][class*=Button][class*='styles_builder-green'][class*='styles_solid']{
+    [class*='styles_dark'][class*=Button][class*='styles_builder-green'][class*='styles_solid'],
+    [class*=Button][class*='styles_builder-green'][class*='styles_solid']{
         border-color: color-mix(in srgb, /*[[linkColor]]*/ 20%, transparent 0%) !important;
     }
     .site .character-button-outline, 
     .site .character-button-outline:active, 
     .site .character-button-outline:focus,
-    [class*='styles_dark'][class*=Button][class*='styles_builder-green'][class*='styles_outline']{
+    [class*='styles_dark'][class*=Button][class*='styles_builder-green'][class*='styles_outline'],
+    [class*=Button][class*='styles_builder-green'][class*='styles_outline']{
         background-color: /*[[transparencyBackgroundColor]]*/ !important;
         box-shadow: none !important;
         border-color: color-mix(in srgb, /*[[linkColor]]*/ 20%, transparent 0%) !important;
