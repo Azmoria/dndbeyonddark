@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.600
+@version      1.2.601
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -6537,7 +6537,7 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
     .stat-block .stats table.abilities-saves tbody tr:hover :nth-child(-n+3) {
         background-color: var(--stats-score-hover) !important;
     }
-    .body-page #site .p-article-a .p-article-content .stat-block .stats table.abilities-saves tbody tr:hover :nth-child(n+3,
+    .body-page #site .p-article-a .p-article-content .stat-block .stats table.abilities-saves tbody tr:hover :nth-child(n+3),
     .stat-block .stats table.abilities-saves tbody tr:hover :nth-child(n+3) {
         background-color: var(--stats-mods-hover) !important;
     }
