@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.603
+@version      1.2.604
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -6394,6 +6394,7 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
     select#chat-language{
         background: none !important;
     }
+
     #above-vtt-error-message{
         background: color-mix(
             in srgb,
@@ -6719,7 +6720,8 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
         opacity:0.3
     }
     .glc-game-log .popout-button path:not([fill='none']),
-    .players-popout-button svg path:not([fill='none']) {
+    .players-popout-button svg path:not([fill='none']),
+    .help-tabs a.popout path:not([fill='none']){
         fill: /*[[fontColor]]*/;
     }
     .ct_dead .hp,
