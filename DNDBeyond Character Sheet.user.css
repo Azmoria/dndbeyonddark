@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.346
+@version      1.3.347
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -4056,7 +4056,8 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
     }
     
     .popout-button svg path:not([fill='none']),
-    .gamelog-button__icon path{
+    .gamelog-button__icon path,
+    .help-tabs a.popout path:not([fill='none']){
        fill: #ddd !important;
     }
 
