@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.605
+@version      1.2.606
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -7414,6 +7414,7 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
     .context-menu-item:not(.context-menu-not-selectable, .context-menu-disabled) {
         border: 1px solid /*[[backgroundColor]]*/;
         border-width: 1px 0px;
+        border-radius:5px;
     }
     .context-menu-item:not(.context-menu-not-selectable, .context-menu-disabled):hover {
         background: /*[[backgroundColor]]*/ !important;
