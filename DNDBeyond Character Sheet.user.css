@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.348
+@version      1.3.349
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -1524,7 +1524,8 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
     .ct-sidebar__inner [class*='ddbc-creature-block'] .avtt-roll-button,
     .ct-sidebar__inner [class*='styles_creatureBlock'] .avtt-roll-button,
     .ct-sidebar__inner [class*='styles_creatureBlock'] .avtt-aoe-button,
-    .ct-sidebar__inner [class*='ddbc-creature-block'] .avtt-aoe-button{
+    .ct-sidebar__inner [class*='ddbc-creature-block'] .avtt-aoe-button,
+    .ct-sidebar__inner .avtt-ability-roll-button{
         background: var(--theme-background) !important;
         color: /*[[rollColor]]*/ !important;
         border-color: /*[[rollColor]]*/ !important;
