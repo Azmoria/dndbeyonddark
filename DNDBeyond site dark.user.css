@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.606
+@version      1.2.607
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -6943,7 +6943,8 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
     #splash,
     .visibility-container,
     .elevationLegendDiv,
-    #vision_menu #bucket_menu
+    #vision_menu #bucket_menu,
+    .glc-game-log .avtt-ability-roll-button
     {
         background: /*[[backgroundColor]]*/!important;
         color: /*[[fontColor]]*/!important;
@@ -8196,6 +8197,7 @@ regexp("https://www.dndbeyond.com/encounters.*#DiceTray"), regexp("https://www.d
     .sidebar__pane-content button,
     div#options-menu button.MuiButtonBase-root,
     .glc-game-log button,
+    .glc-game-log .avtt-ability-roll-button,
     .MuiPopover-root .MuiPaper-root,
     .mon-stat-block button.integrated-dice__container:hover,
     [class*="GameLogNotification_MessageIcon"],
@@ -8229,6 +8231,7 @@ regexp("https://www.dndbeyond.com/encounters.*#DiceTray"), regexp("https://www.d
     .MuiButton-label,
     [class^="GameLog_ZeroState"],
     .glc-game-log button,
+    .glc-game-log .avtt-ability-roll-button,
     [class*='Line-Title'] .aboveDiceOutput .tooltip-hover,
     [class*='Line-Title'] .aboveDiceOutput,
     .above-vtt-roll-whisper
@@ -8454,6 +8457,7 @@ regexp("https://www.dndbeyond.com/encounters.*#DiceTray"), regexp("https://www.d
     .mon-stat-block button[data-exp],
     .avtt-roll-button:hover,
     .avtt-aoe-button:hover,
+    .glc-game-log .avtt-ability-roll-button:hover,
     .tooltip .above-aoe:hover{
         border: 1px /*[[rollColor]]*/ solid !important;
     }
