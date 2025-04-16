@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.609
+@version      1.2.610
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -5327,6 +5327,7 @@ regexp("https://www.dndbeyond.com/species.*"){
         box-shadow: inset 0 0 25px 0px #eaeaea;
     }
 
+ 
     .body-rpghomebrew a.character-button-block:hover{
         box-shadow: none !important;
         background: none !important;
@@ -5448,7 +5449,11 @@ regexp("https://www.dndbeyond.com/species.*"){
         box-shadow: none !important;
         border-color: color-mix(in srgb, /*[[linkColor]]*/ 20%, transparent 0%) !important;
     }
-
+    .site .builder-type-choice-item .character-button-block,
+    .site .builder-type-choice-item .character-button-block div{
+        box-shadow: none !important;
+        background: none !important;
+    }
     .p-article-a .p-article-interact .p-article-comments a:first-of-type:hover:after{
         border-color: /*[[linkColor]]*/ transparent !important;
         opacity: 0.6;
@@ -6531,7 +6536,7 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
         border: none !important;
     }
     
-    .body-page #site .p-article-a .p-article-content
+    .body-page #site .p-article-a .p-article-content,
     .stat-block .stats table.abilities-saves tbody tr {
         background-color: var(--theme-table-row-color, /*[[backgroundColor]]*/) !important;
     }
@@ -7259,12 +7264,14 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
        color: transparent !important;
         -webkit-background-clip: text !important;
     }
-     
+   
     #tokenOptionsPopup [id*="flyout"] li{
-        background: /*[[backgroundColor]]*/ !important;;
         color: /*[[fontColor]]*/ !important;
-        border: 1px solid transparent !important;
+        border: none;
         height:24px
+    }
+    #tokenOptionsPopup [id*="flyout"] ul:first-of-type li{
+        border: 1px solid transparent;
     }
     button.loop-button.loop-pressed {
         box-shadow: inset #000 1px 1px 1px 1px;
@@ -7607,13 +7614,13 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
         color: /*[[fontColor]]*/;
     }
     #quick_roll_area>tr>td>td:first-of-type{
-        width: 54% !important;
+        width: 51% !important;
     }
     #quick_roll_area>tr>td>td:nth-of-type(2){
         width: 19% !important;
     }
     #quick_roll_area>tr>td>td:nth-of-type(3){
-        width: 20% !important;
+        width: 30% !important;
     }
     #quick_roll_area #roll_bonus{
         width: 35% !important;
