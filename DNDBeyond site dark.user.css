@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.611
+@version      1.2.612
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -635,12 +635,15 @@ regexp("https://www.dndbeyond.com/sources/dnd/vsspp/(.|\s)*\S(.|\s)*")
     }
 }
 
-@-moz-document regexp("https://www.dndbeyond.com/sources/dnd/paitm/[a-zA-Z]+/(.|\s)*\S(.|\s)*|https://www.dndbeyond.com/sources/paitm/poster-map|https://www.dndbeyond.com/sources/aatm/(.|\s)*\S(.|\s)*|https://www.dndbeyond.com/sources/hcs/(.|\s)*\S(.|\s)*"),
+@-moz-document regexp("https://www.dndbeyond.com/sources/dnd/paitm/[a-zA-Z]+/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/paitm/poster-map"),
+regexp("https://www.dndbeyond.com/sources/dnd/aatm/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/hcs/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/vsspp/(.|\s)*\S(.|\s)*")
 {
 
     body{
-        background-blend-mode: multiply;      
+        background-blend-mode: multiply !important;      
     }
 }
 @-moz-document regexp("https://www.dndbeyond.com/classes/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/races/(.|\s)*\S(.|\s)*"){
