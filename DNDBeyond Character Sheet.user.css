@@ -1,10 +1,9 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.349
+@version      1.3.350
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
-@updateURL https://github.com/Azmoria/dndbeyonddark/raw/master/DNDBeyond%20Character%20Sheet.user.css
 @advanced dropdown backgroundImg "Background" {
     color "Color" <<<EOT
         background-image: none !important; 
@@ -1496,7 +1495,8 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
     .ct-primary-box .ct-notes{
     height: 612px;
     }
-    .dropdown-check-list ul.avttBuffItems>ul{
+    .dropdown-check-list ul.avttBuffItems>ul,
+    #avttBuffSheetPins li{
         background:none !important;
         color-scheme: dark;
     }
@@ -1504,7 +1504,8 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
     .dropdown-check-list ul.avttBuffItems>ul>ul>li:first-of-type:hover{
         backdrop-filter:brightness(3);
     }
-    .dropdown-check-list ul.avttBuffItems select{
+    .dropdown-check-list ul.avttBuffItems select,
+    #avttBuffSheetPins select{
         background: #363636 !important;       
         color-scheme: dark;
     }
@@ -4040,9 +4041,12 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
         background: none;
         color: /*[[fontColor]]*/;
     }
-     #tokenOptionsPopup [id*='flyout'] li{
+    #tokenOptionsPopup [id*='flyout'] li{
         background: none;  
         color: /*[[fontColor]]*/;
+        border: none;
+    }   
+    #tokenOptionsPopup [id*="flyout"] ul:first-of-type li{
         border: 1px solid transparent;
     }
     #selectedEyeSVG .st1{
