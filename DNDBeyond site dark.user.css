@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.612
+@version      1.2.613
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -4500,6 +4500,7 @@ regexp("https://www.dndbeyond.com/species.*"){
     .i-aoe-line,
     .i-aoe-sphere,
     .i-aoe-square,
+    .i-aoe-emanation,
     .i-artificer,
     .i-bard,
     .i-cleric,
