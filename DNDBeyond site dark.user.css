@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.614
+@version      1.2.615
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -7468,10 +7468,9 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
         background:/*[[sidebarColor]]*/;
         filter:brightness(2.5);
     }
-    #journal-panel .folder>.folder,
-    #journal-panel .folder>.note-list{
-       padding-left:3px;
-    
+
+    #journal-panel .folder>.folder{
+        transform: scale(0.96) !important;
     }
 
     .panel-warning{
