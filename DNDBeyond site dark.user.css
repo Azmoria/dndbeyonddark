@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.615
+@version      1.2.616
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -6629,7 +6629,7 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
         position: absolute !important;
         min-width: 420px !important;
         min-height: 275px !important;
-
+        background: color-mix(in srgb, transparent, /*[[sidebarColor]]*/ 90%);
     }
     .sidebar-panel-body .sp-container{
         position: fixed !important;
@@ -6651,8 +6651,9 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
     #tokenOptionsPopup,
     #tokenOptionsPopup [id*="flyout"]
     {
-        background: /*[[transparencyBackgroundColor]]*/;
+        background: color-mix(in srgb, transparent, /*[[sidebarColor]]*/ 90%);
         color: /*[[fontColor]]*/;
+        backdrop-filter: blur(20px);
     }
     #tokenOptionsPopup
     {
@@ -6825,7 +6826,8 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
         opacity: 0.6;
     }
     
-    .token-row-gear img {
+    .token-row-gear img,
+    .sp-clear-enabled .sp-clear{
         filter: /*[[filter]]*/;   
     }
     #playersFolder .folder-item-list .token-row-button, 
