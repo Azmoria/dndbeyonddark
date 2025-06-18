@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.621
+@version      1.2.622
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -605,8 +605,9 @@ regexp("https://www.dndbeyond.com/sources/dnd/ottg/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/tmom/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/vsspp/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/ssh/(.|\s)*\S(.|\s)*"),
-regexp("https://www.dndbeyond.com/sources/dnd/modr/(.|\s)*\S(.|\s)*")
-
+regexp("https://www.dndbeyond.com/sources/dnd/modr/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/tcmp1/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/tcmp2/(.|\s)*\S(.|\s)*")
 {
 
     #site-main,
@@ -1254,7 +1255,9 @@ regexp("https://www.dndbeyond.com/sources/dnd/hgtmh1(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/ottg(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/tmom(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/ssh(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/modr(/)?")
+regexp("https://www.dndbeyond.com/sources/dnd/modr(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/tcmp1(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/tcmp2(/)?")
 {
    
     #site-main,
@@ -1349,7 +1352,9 @@ regexp("https://www.dndbeyond.com/sources/dnd/hgtmh1(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/ottg(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/tmom(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/ssh(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/modr(/)?"){
+regexp("https://www.dndbeyond.com/sources/dnd/modr(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/tcmp1(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/tcmp2(/)?"){
 
     @media (min-width: 1024px) {
         body {
@@ -3386,7 +3391,8 @@ regexp("https://www.dndbeyond.com/species.*"){
     .section-players-handbook .rhythm-of-play {
         background-image: linear-gradient(to right, #201809, var(--background-color));
     }
-    .section-players-handbook .rhythm-box{
+    .section-players-handbook .rhythm-box,
+    .epigraph--with-author.crooked-quote{
         background-color: transparent !important;
         background:none !important;
         border: none !important;
