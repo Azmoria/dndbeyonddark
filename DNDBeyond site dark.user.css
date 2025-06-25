@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.622
+@version      1.2.623
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -607,7 +607,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/vsspp/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/ssh/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/modr/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/tcmp1/(.|\s)*\S(.|\s)*"),
-regexp("https://www.dndbeyond.com/sources/dnd/tcmp2/(.|\s)*\S(.|\s)*")
+regexp("https://www.dndbeyond.com/sources/dnd/tcmp2/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/drde/(.|\s)*\S(.|\s)*")
 {
 
     #site-main,
@@ -650,7 +651,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/tcmp2/(.|\s)*\S(.|\s)*")
 regexp("https://www.dndbeyond.com/sources/dnd/paitm/poster-map"),
 regexp("https://www.dndbeyond.com/sources/dnd/aatm/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/hcs/(.|\s)*\S(.|\s)*"),
-regexp("https://www.dndbeyond.com/sources/dnd/vsspp/(.|\s)*\S(.|\s)*")
+regexp("https://www.dndbeyond.com/sources/dnd/vsspp/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/drde/(.|\s)*\S(.|\s)*")
 {
 
     body{
@@ -1257,7 +1259,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/tmom(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/ssh(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/modr(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/tcmp1(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/tcmp2(/)?")
+regexp("https://www.dndbeyond.com/sources/dnd/tcmp2(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/drde(/)?")
 {
    
     #site-main,
@@ -1354,7 +1357,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/tmom(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/ssh(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/modr(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/tcmp1(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/tcmp2(/)?"){
+regexp("https://www.dndbeyond.com/sources/dnd/tcmp2(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/drde(/)?"){
 
     @media (min-width: 1024px) {
         body {
@@ -3150,6 +3154,10 @@ regexp("https://www.dndbeyond.com/species.*"){
         color: /*[[fontColor]]*/
         !important;
     }
+    body.responsive-enabled #site #site-main .container #content .poem--copper-song{
+        color: initial !important;
+    }
+
     .section-helianas-guide-to-monster-hunting-part-1 .mini-stat-block{
         background-color: /*[[backgroundColor]]*/ !important;
     }
@@ -3539,7 +3547,8 @@ regexp("https://www.dndbeyond.com/species.*"){
     [class*='LabelChip_LabelChip'],
     .glc-game-log .ct-sidebar__heading span:not([class*='uncommon'], [class*='rare'], [class*='very-rare'], [class*='legendary'], [class*='artifact']),
     [class*='styles_description'],
-    .font-container p {
+    .font-container p,
+    .dracofont{
         color: /*[[fontColor]]*/ !important;   
     }
 
