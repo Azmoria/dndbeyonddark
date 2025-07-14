@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.624
+@version      1.2.625
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -2657,6 +2657,10 @@ regexp("https://www.dndbeyond.com/species.*"){
         --dark-sb-table-row-bg-light: /*[[backgroundColor]]*/ !important;
         --dark-sb-table-row-bg-dark: /*[[backgroundColor]]*/ !important;
         --dark-sb-table-row-bg-hover: /*[[backgroundColor]]*/ !important;
+    }
+    aside {
+        --sb-rules-sidebar: /*[[backgroundColor]]*/ !important;
+        --dark-sb-rules-sidebar: /*[[backgroundColor]]*/ !important;
     }
     [class*='_megaMenu_']{
         [class*='_panel_'] {
