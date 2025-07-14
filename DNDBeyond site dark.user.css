@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.623
+@version      1.2.624
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -8537,7 +8537,8 @@ regexp("https://www.dndbeyond.com/encounters.*#DiceTray"), regexp("https://www.d
     .avtt-stat-block-container .avtt-roll-button,
     .avtt-stat-block-container .avtt-aoe-button,
     .mon-stat-block .avtt-aoe-button,
-    .tooltip .above-aoe{
+    .tooltip .above-aoe,
+    .avtt-stat-block-container .abovevtt-slash-command-journal button{
         color: /*[[rollColor]]*/ !important;
         background: /*[[backgroundColor]]*/ !important;
         border: 1px /*[[rollColor]]*/ solid !important;
