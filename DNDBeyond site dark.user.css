@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.625
+@version      1.2.626
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -608,7 +608,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/ssh/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/modr/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/tcmp1/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/tcmp2/(.|\s)*\S(.|\s)*"),
-regexp("https://www.dndbeyond.com/sources/dnd/drde/(.|\s)*\S(.|\s)*")
+regexp("https://www.dndbeyond.com/sources/dnd/drde/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/bqgt/(.|\s)*\S(.|\s)*")
 {
 
     #site-main,
@@ -3148,7 +3149,8 @@ regexp("https://www.dndbeyond.com/species.*"){
     [class*='styles_cardFooter'],
      [class*='Select_options'],
     .stat-block,
-    [class*='styles_listing'] [class*='styles_summary']
+    [class*='styles_listing'] [class*='styles_summary'],
+    div.text--quote-box
     
     {
         background-color: /*[[backgroundColor]]*/
