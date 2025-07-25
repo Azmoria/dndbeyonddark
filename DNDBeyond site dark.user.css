@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.626
+@version      1.2.627
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -17,6 +17,8 @@
 @advanced dropdown fontContrast "Font Contrast Colors" {
 dark "Dark Mode" <<<EOT
 
+
+    
     @supports (-moz-appearance:none){
         html>#tinymce [style*="color: rgb(0, 0, 0"],
         html>#tinymce [style*="color: rgb(51, 51, 51"],
@@ -82,6 +84,10 @@ dark "Dark Mode" <<<EOT
         }
 
 
+    }
+    body.section-cthulhu-by-torchlight strong:not(ul strong, .flexible-double-column.hangingIndent strong, .epigraph strong),  
+    body.section-cthulhu-by-torchlight li::marker{
+        color: hsl(242 45% 71% / 1) !important;
     }
     .section-dungeon-masters-guide .rhythm-of-play{
         --example-bg: rgba(30, 30, 30, .878);
@@ -609,7 +615,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/modr/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/tcmp1/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/tcmp2/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/drde/(.|\s)*\S(.|\s)*"),
-regexp("https://www.dndbeyond.com/sources/dnd/bqgt/(.|\s)*\S(.|\s)*")
+regexp("https://www.dndbeyond.com/sources/dnd/bqgt/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/ctbt/(.|\s)*\S(.|\s)*")
 {
 
     #site-main,
