@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.627
+@version      1.2.628
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -84,6 +84,12 @@ dark "Dark Mode" <<<EOT
         }
 
 
+    }
+
+    .av--text--location-header {
+        p:first-of-type {
+            color: #dd4043;
+        }
     }
     body.section-cthulhu-by-torchlight strong:not(ul strong, .flexible-double-column.hangingIndent strong, .epigraph strong),  
     body.section-cthulhu-by-torchlight li::marker{
@@ -616,7 +622,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/tcmp1/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/tcmp2/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/drde/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/bqgt/(.|\s)*\S(.|\s)*"),
-regexp("https://www.dndbeyond.com/sources/dnd/ctbt/(.|\s)*\S(.|\s)*")
+regexp("https://www.dndbeyond.com/sources/dnd/ctbt/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/av/(.|\s)*\S(.|\s)*")
 {
 
     #site-main,
@@ -1268,7 +1275,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/ssh(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/modr(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/tcmp1(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/tcmp2(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/drde(/)?")
+regexp("https://www.dndbeyond.com/sources/dnd/drde(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/av(/)?")
 {
    
     #site-main,
@@ -1366,7 +1374,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/ssh(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/modr(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/tcmp1(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/tcmp2(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/drde(/)?"){
+regexp("https://www.dndbeyond.com/sources/dnd/drde(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/av(/)?"){
 
     @media (min-width: 1024px) {
         body {
@@ -1394,7 +1403,23 @@ regexp("https://www.dndbeyond.com/sources/dnd/drde(/)?"){
     }
 }
 
-
+@-moz-document regexp("https://www.dndbeyond.com/sources/dnd/av(/)?"){
+    @media (min-width: 1024px) {
+        body {
+            --toc-bg-image-1024: url(https://media.dndbeyond.com/compendium-images/av/8szLzUrKLEz7rDTX/toc-av-1k.png)
+        }
+    }
+    @media (min-width: 1921px) {
+        body {
+            --toc-bg-image-1921: url(https://media.dndbeyond.com/compendium-images/av/8szLzUrKLEz7rDTX/toc-av-2k.png)
+        }
+    }
+    @media (min-width: 2561px) {
+        body {
+         --toc-bg-image-2561: url(https://media.dndbeyond.com/compendium-images/av/8szLzUrKLEz7rDTX/toc-av-3k.png)
+        }
+    }
+}
 @-moz-document regexp("https://www.dndbeyond.com/sources/dnd/ottg(/)?"){
     body{
         background-position: center 60% !important;
@@ -3157,8 +3182,8 @@ regexp("https://www.dndbeyond.com/species.*"){
      [class*='Select_options'],
     .stat-block,
     [class*='styles_listing'] [class*='styles_summary'],
-    div.text--quote-box
-    
+    div.text--quote-box,
+    .compendium-art
     {
         background-color: /*[[backgroundColor]]*/
         !important;
@@ -3980,7 +4005,8 @@ regexp("https://www.dndbeyond.com/species.*"){
     [class*='styles_font'],
     [class*='styles_header'],
     [class*='ddb-character-app']>[class*='ddb-character-app'] .ddbc-ability-summary *,
-    .character-builder span[class*=numberDisplay], .character-builder span[class*=spellName]
+    .character-builder span[class*=numberDisplay], .character-builder span[class*=spellName],
+    .body-page .p-article-a .p-article-content .h5-override
     {
         color: /*[[fontColor]]*/ !important;
     }
