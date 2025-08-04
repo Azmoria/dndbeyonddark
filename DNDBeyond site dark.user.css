@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.628
+@version      1.2.629
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -2640,7 +2640,9 @@ regexp("https://www.dndbeyond.com/characters"),
 regexp("https://www.dndbeyond.com/search.*"),
 regexp("https://www.dndbeyond.com/modifier.*"),
 regexp("https://www.dndbeyond.com/entity.*"),
-regexp("https://www.dndbeyond.com/monster.*"), regexp("https://www.dndbeyond.com/subclasses.*"), regexp("https://www.dndbeyond.com/articles.*"), regexp("https://www.dndbeyond.com/tag.*"), regexp("https://www.dndbeyond.com/subraces.*"), regexp("https://www.dndbeyond.com/changelog.*"), regexp("https://www.dndbeyond.com/profile/.*/characters"), regexp("https://www.dndbeyond.com/encounter-builder"), regexp("https://www.dndbeyond.com/my-encounters"), regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond.com/combat-tracker.*"), regexp("https://www.dndbeyond.com/items"), regexp("https://www.dndbeyond.com/my-dice"), regexp("https://www.dndbeyond.com/members/.*"), regexp("https://www.dndbeyond.com/private-messages.*"), regexp("https://www.dndbeyond.com/content/.*"), regexp("https://www.dndbeyond.com/account.*"), regexp("https://linkst.dndbeyond.com.*"), regexp("https://www.dndbeyond.com/new-content.*"), regexp("https://www.dndbeyond.com/my-notifications.*"), regexp("https://www.dndbeyond.com/linkout.*"), regexp("https://www.dndbeyond.com/members.*"), regexp("https://www.dndbeyond.com/comments.*"), regexp("https://www.dndbeyond.com/encounters.*abovevtt=true.*"), regexp("https://www.dndbeyond.com/spell-list.*"), regexp("https://www.dndbeyond.com/creature-rule.*"), regexp("https://www.dndbeyond.com/community-update.*"), regexp("https://www.dndbeyond.com/characters/premade.*"), regexp("https://www.dndbeyond.com/claim.*"), regexp("https://www.dndbeyond.com/.*dmScreen=1.*"),
+regexp("https://www.dndbeyond.com/monster.*"), regexp("https://www.dndbeyond.com/subclasses.*"), regexp("https://www.dndbeyond.com/articles.*"), regexp("https://www.dndbeyond.com/tag.*"), regexp("https://www.dndbeyond.com/subraces.*"), regexp("https://www.dndbeyond.com/changelog.*"), regexp("https://www.dndbeyond.com/profile/.*/characters"), regexp("https://www.dndbeyond.com/encounter-builder"), regexp("https://www.dndbeyond.com/my-encounters"), regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond.com/combat-tracker.*"), regexp("https://www.dndbeyond.com/items"), regexp("https://www.dndbeyond.com/my-dice"), regexp("https://www.dndbeyond.com/members/.*"), regexp("https://www.dndbeyond.com/private-messages.*"), regexp("https://www.dndbeyond.com/content/.*"), regexp("https://www.dndbeyond.com/account.*"), regexp("https://linkst.dndbeyond.com.*"), regexp("https://www.dndbeyond.com/new-content.*"), regexp("https://www.dndbeyond.com/my-notifications.*"), regexp("https://www.dndbeyond.com/linkout.*"), regexp("https://www.dndbeyond.com/members.*"), regexp("https://www.dndbeyond.com/comments.*"), regexp("https://www.dndbeyond.com/encounters.*abovevtt=true.*"),
+regexp("https://www.dndbeyond.com/campaigns.*abovevtt.*"),
+regexp("https://www.dndbeyond.com/spell-list.*"), regexp("https://www.dndbeyond.com/creature-rule.*"), regexp("https://www.dndbeyond.com/community-update.*"), regexp("https://www.dndbeyond.com/characters/premade.*"), regexp("https://www.dndbeyond.com/claim.*"), regexp("https://www.dndbeyond.com/.*dmScreen=1.*"),
 regexp("https://www.dndbeyond.com/project-sigil/download"),
 regexp("https://www.dndbeyond.com/species.*"){
 
@@ -6433,7 +6435,7 @@ regexp("https://www.dndbeyond.com/species.*"){
 }  
     
 
-@-moz-document regexp("https://www.dndbeyond.com/encounters.*abovevtt.*"),
+@-moz-document regexp("https://www.dndbeyond.com/encounters.*abovevtt.*"), regexp("https://www.dndbeyond.com/campaigns.*abovevtt.*"),
 regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
     /*New AboveVTT Changes for ddb-dice fork/merge*/
     #castbutton,
@@ -6530,7 +6532,7 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
         color:/*[[fontColor]]*/;
         background: /*[[sidebarColor]]*/;
     }
-    .body-rpgcampaign select#chat-language{
+    .body-rpgcampaign:not(.encounter-builder-page) select#chat-language{
         bottom:1px;
     }
     .glc-game-log #chat-language{
