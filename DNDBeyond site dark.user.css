@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.629
+@version      1.2.631
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -2684,7 +2684,15 @@ regexp("https://www.dndbeyond.com/species.*"){
         --treasure-bg: /*[[backgroundColor]]*/;
         --legendary-actions-color: color-mix(in srgb, /*[[fontColor]]*/ 60%, #0000 0%);
     }
-
+    :root {
+        --custom-capture-background: /*[[customCaptureBackground]]*/;
+        --dice-color: sepia(/*[[diceSepia]]*/%) hue-rotate(/*[[hueRotation]]*/deg) brightness(/*[[diceBrightness]]*/%) saturate(/*[[diceSaturation]]*/%) contrast(/*[[diceContrast]]*/%) invert(/*[[diceInvert]]*/);
+        --rgb-speed: /*[[rgbSpeed]]*/s;
+        --rgb-from: hue-rotate(/*[[rgbFrom]]*/deg);
+        --rgb-to: hue-rotate(/*[[rgbTo]]*/deg);
+        --rgb-sliders-check: /*[[diceTint]]*/;
+        --character-sheet-border: /*[[borderColor]]*/;
+    }
     table.table-compendium *{
         --sb-table-row-bg-hover: /*[[backgroundColor]]*/ !important;
         --sb-table-row-bg-dark: /*[[backgroundColor]]*/ !important;
@@ -2747,6 +2755,126 @@ regexp("https://www.dndbeyond.com/species.*"){
         outline: none !important;
     }
     
+    .dice-toolbar:hover .dice-toolbar__dropdown-die{
+        border: 1px /*[[rollColor]]*/ solid !important;
+    }
+    
+    .dice-toolbar__dropdown-selected .dice-toolbar__dropdown-die,
+    .dice-toolbar:hover .dice-toolbar__dropdown-selected .dice-toolbar__dropdown-die
+    {
+        border: 3px /*[[rollColor]]*/ solid !important;
+    }
+    
+    canvas.dice-rolling-panel__container{
+        opacity: /*[[diceOpacity]]*/;  
+    }
+    .dice-die-button:hover .dice-icon-die,
+    .dice-toolbar__dropdown-die:hover .dice-icon-die{
+        background-color: /*[[rollColor]]*/ !important;
+    }
+    .dice_result__info .dice-icon-die,
+    .dice-icon-die{
+        background-color: /*[[fontColor]]*/ !important;
+    }
+    .dice-die-button__count,
+    .dice-die-button__tooltip{
+        color: /*[[rollColor]]*/
+    }
+    /*[[rgbDice]]*/
+      
+    .dice-icon-die--d100{
+        -webkit-mask-repeat: repeat-x;   
+    }
+    
+ 
+    .dice_notification_controls .dice_notification_control,
+    .dice-toolbar,
+    .dice-toolbar:hover,
+    .dice-toolbar__dropdown-selected .dice-toolbar__dropdown-die,
+    .dice-die-button,
+    [class^="GameLogEntry_Message_"],
+    ._1_4XN--HbdIB3j-9HVLY3F,
+    ._1KM4FtjuhNomsZCIfBsJQ1,
+    .dice-die-button__tooltip,
+    .dice-die-button__tooltip__pip,
+    .dice-die-button__count,
+    .glc-game-log > div > ol > li > div > div:nth-of-type(2),
+    div[class^="_1I"],
+    .encounter-builder-sidebar__open-button,
+    .dice-toolbar__dropdown-die:hover,
+    .jss2 .MuiListItem-root:hover,
+    .MuiList-root,
+    .dice-toolbar__dropdown-die
+    {
+        background: /*[[rollCalcColor]]*/ !important;
+    }
+    
+    
+    .dice-toolbar__dropdown .dice-toolbar__target-menu-button{
+        background: none !important;     
+    }
+    
+    .dice_result,
+    .dice_notification_controls .dice_notification_control{
+        background: /*[[rollCalcColor]]*/ !important;
+    }
+ 
+    
+    .GameLogEntry_Message__LMnm6,
+    ._1_4XN--HbdIB3j-9HVLY3F,
+    .dice-die-button__tooltip{
+        border: 1px solid /*[[rollColor]]*/ !important;
+    }
+
+    .dice-toolbar{
+        height: auto !important;   
+    }
+    
+    .dice-die-button__tooltip__pip {
+        border-left-color: /*[[rollColor]]*/;
+        border-bottom-color: /*[[rollColor]]*/;
+    }
+
+    .dice-toolbar__dropdown-selected .dice-toolbar__dropdown-die,
+    .dice-toolbar__dropdown-selected .dice-toolbar__dropdown-die:hover,
+    .GameLogEntry_Message__1GoY3.GameLogEntry_Other__2PSbv,
+    .dice-icon-die:hover,
+    .glc-game-log ol div,
+    div[class^="_1I"],
+    .MuiPaper-root
+    {
+        border-color: /*[[rollColor]]*/ !important;
+    }
+    .dice_notification_controls .dice_notification_control,
+    .dice-toolbar,
+    .dice-toolbar:hover,
+    .dice-toolbar__dropdown-selected .dice-toolbar__dropdown-die,
+    .dice-die-button,
+    [class^="GameLogEntry_Message_"],
+    ._1_4XN--HbdIB3j-9HVLY3F,
+    ._1KM4FtjuhNomsZCIfBsJQ1,
+    .dice-die-button__tooltip,
+    .dice-die-button__tooltip__pip,
+    .dice-die-button__count,
+    .glc-game-log > div > ol > li > div > div:nth-of-type(2),
+    div[class^="_1I"],
+    .encounter-builder-sidebar__open-button,
+    .dice-toolbar__dropdown-die:hover,
+    .jss2 .MuiListItem-root:hover,
+    .MuiList-root,
+    .dice-toolbar__dropdown-die
+    {
+        background: /*[[rollCalcColor]]*/ !important;
+    }
+    
+/*dice Cusomtization and JS compainion script css*/   
+    canvas.dice-rolling-panel__container,
+    body#diceTrayBody video,
+    body#diceTrayBody canvas,
+    canvas#dddice-canvas,
+    #dddice canvas{
+        filter: /*[[diceTint]]*/
+    }
     .p-comments-b .p-comment-post, 
     .body-forum .comment-preview li .p-comment-post, 
     .body-forum-search .p-comments-a .p-comment-post,
