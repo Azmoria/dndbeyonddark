@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.632
+@version      1.2.633
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -7572,6 +7572,7 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
     .top_menu .ddbc-tab-options--layout-pill button{
         backdrop-filter: brightness(3);
         background: none !important;
+        box-sizing: border-box;
     }
   
     .player-card-footer .ability_value,
