@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.631
+@version      1.2.632
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -2862,9 +2862,20 @@ regexp("https://www.dndbeyond.com/species.*"){
     .dice-toolbar__dropdown-die:hover,
     .jss2 .MuiListItem-root:hover,
     .MuiList-root,
-    .dice-toolbar__dropdown-die
+    .dice-toolbar__dropdown-die,
+    [class*='-MessageWrapper']
     {
         background: /*[[rollCalcColor]]*/ !important;
+    }
+     .sidebar__pane-content,
+    .ct-game-log-pane>div>div:first-of-type,
+    [class^="GameLogHeader_Container"]
+    {
+        background-color: /*[[sidebarColor]]*/ !important;
+    }
+    
+    [class*='-MessageWrapper'] [class*='-MessageTotal']{
+        color: /*[[fontColor]]*/;
     }
     
 /*dice Cusomtization and JS compainion script css*/   
