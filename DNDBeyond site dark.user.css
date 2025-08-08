@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.633
+@version      1.2.634
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -6599,7 +6599,8 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
     .note-text .stat-block-background,
     #tokenOptionsPopup>#tokenOptionsContainer>div[data-option-name='lockRestrictDrop'] select option,
     :is(.tooltip) .table-compendium tr>:is(th,td),
-    .folder.ui-droppable-hover
+    .folder.ui-droppable-hover,
+	.note-visibility-toggle-container
     {
         text-shadow: none !important;   
         background: /*[[backgroundColor]]*/ !important;
@@ -6995,7 +6996,8 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
         color: /*[[fontColor]]*/;
     }
     
-    #playersFolder .folder-item-list .token-row-gear{
+    #playersFolder .folder-item-list .token-row-gear,
+	.note-visibility-toggle-container{
         border: 1px solid #d8e1e8;
     }
     
