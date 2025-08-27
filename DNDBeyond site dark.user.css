@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.634
+@version      1.2.635
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -623,7 +623,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/tcmp2/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/drde/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/bqgt/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/ctbt/(.|\s)*\S(.|\s)*"),
-regexp("https://www.dndbeyond.com/sources/dnd/av/(.|\s)*\S(.|\s)*")
+regexp("https://www.dndbeyond.com/sources/dnd/av/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/ghpg/(.|\s)*\S(.|\s)*")
 {
 
     #site-main,
@@ -1276,7 +1277,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/modr(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/tcmp1(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/tcmp2(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/drde(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/av(/)?")
+regexp("https://www.dndbeyond.com/sources/dnd/av(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/ghpg(/)?")
 {
    
     #site-main,
@@ -1375,7 +1377,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/modr(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/tcmp1(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/tcmp2(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/drde(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/av(/)?"){
+regexp("https://www.dndbeyond.com/sources/dnd/av(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/ghpg(/)?"){
 
     @media (min-width: 1024px) {
         body {
@@ -4147,7 +4150,9 @@ regexp("https://www.dndbeyond.com/species.*"){
     [class*='styles_header'],
     [class*='ddb-character-app']>[class*='ddb-character-app'] .ddbc-ability-summary *,
     .character-builder span[class*=numberDisplay], .character-builder span[class*=spellName],
-    .body-page .p-article-a .p-article-content .h5-override
+    .body-page .p-article-a .p-article-content .h5-override,
+	.section-grim-hollow-players-guide li::marker, 
+	.section-grim-hollow-players-guide strong:not(ul strong,.flexible-double-column.hangingIndent strong,.epigraph strong)
     {
         color: /*[[fontColor]]*/ !important;
     }
@@ -5021,6 +5026,9 @@ regexp("https://www.dndbeyond.com/species.*"){
         filter: drop-shadow(0px 6px 6px #000) saturate(2) brightness(0.8);
         color: #000 !important;
     }
+	.grim-quotes{
+		color: #000 !important;
+	}
     .notification.notification-success.notification-visible{
         border-top: 2px solid /*[[linkColor]]*/ !important;
     }
