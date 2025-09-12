@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.635
+@version      1.2.636
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -7412,20 +7412,30 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
         color: /*[[fontColor]]*/ !important;
     }
     
+	body {
+		--crit-success: #1fc219;
+		--crit-fail: #e40812;
+		--crit-mixed: #1b9af0;
+	}
+
+	body.color-blind-avtt {
+		--crit-success: #ff0;
+	}
+
     [class*="glc-game-log"] .crit-success div[class*="TotalContainer-Flex"] span,
     [class*="glc-game-log"] .crit-success div[class*="TotalContainer-Flex"] span,
     [class*="glc-game-log"] .crit-success div[class*="TotalContainer-Flex"] .aboveDiceTotal{
-        color:#1fc219 !important;
+        color:var(--crit-success) !important;
     }
     [class*="glc-game-log"] .crit-fail div[class*="TotalContainer-Flex"] span,
     [class*="glc-game-log"] .crit-fail div[class*="TotalContainer-Flex"] span,
     [class*="glc-game-log"] .crit-fail div[class*="TotalContainer-Flex"] .aboveDiceTotal{
-        color:#e40812 !important;
+        color:var(--crit-fail) !important;
     }
     [class*="glc-game-log"] .crit-mixed div[class*="TotalContainer-Flex"] span,
     [class*="glc-game-log"] .crit-mixed div[class*="TotalContainer-Flex"] span,
     [class*="glc-game-log"] .crit-mixed div[class*="TotalContainer-Flex"] .aboveDiceTotal{
-        color:#1b9af0 !important;
+        color:var(--crit-mixed) !important;
     }
     [class*="glc-game-log"] div[class*="TotalContainer-Flex"] .custom-spell-save-text span{
         color: /*[[fontColor]]*/ !important;
