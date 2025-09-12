@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.356
+@version      1.3.357
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -4123,6 +4123,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
    body#site.body-rpgcharacter-sheet>div.ct-sidebar__portal [class*="glc-game-log"] .crit-success div[class*="TotalContainer-Flex"] span,
    body#site.body-rpgcharacter-sheet>div.ct-sidebar__portal [class*="glc-game-log"] .crit-success div[class*="TotalContainer-Flex"] .aboveDiceTotal{
         color:var(--crit-success) !important;
+	   	text-shadow: revert;
     }
    body#site.body-rpgcharacter-sheet>div.ct-sidebar__portal [class*="glc-game-log"] .crit-fail div[class*="TotalContainer-Flex"] span,
    body#site.body-rpgcharacter-sheet>div.ct-sidebar__portal [class*="glc-game-log"] .crit-fail div[class*="TotalContainer-Flex"] span,
