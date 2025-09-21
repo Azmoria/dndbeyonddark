@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.637
+@version      1.2.638
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -624,7 +624,9 @@ regexp("https://www.dndbeyond.com/sources/dnd/drde/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/bqgt/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/ctbt/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/av/(.|\s)*\S(.|\s)*"),
-regexp("https://www.dndbeyond.com/sources/dnd/ghpg/(.|\s)*\S(.|\s)*")
+regexp("https://www.dndbeyond.com/sources/dnd/ghpg/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/hotb/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/hotb/(.|\s)*\S(.|\s)*")
 {
 
     #site-main,
@@ -1278,7 +1280,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/tcmp1(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/tcmp2(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/drde(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/av(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/ghpg(/)?")
+regexp("https://www.dndbeyond.com/sources/dnd/ghpg(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/hotb(/)?")
 {
    
     #site-main,
@@ -1378,7 +1381,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/tcmp1(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/tcmp2(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/drde(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/av(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/ghpg(/)?"){
+regexp("https://www.dndbeyond.com/sources/dnd/ghpg(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/hotb(/)?"){
 
     @media (min-width: 1024px) {
         body {
@@ -2813,7 +2817,8 @@ regexp("https://www.dndbeyond.com/species.*"){
     }
     
     
-    .dice-toolbar__dropdown .dice-toolbar__target-menu-button{
+    .dice-toolbar__dropdown .dice-toolbar__target-menu-button,
+	.section-heroes-of-the-borderlands.body-page .p-article-a .p-article-content .rhythm-box{
         background: none !important;     
     }
     
@@ -3339,7 +3344,13 @@ regexp("https://www.dndbeyond.com/species.*"){
     body.responsive-enabled #site #site-main .container #content .poem--copper-song{
         color: initial !important;
     }
-
+	.section-heroes-of-the-borderlands .npc-card{
+		background-image: none;
+		background: var(--background-color);
+	}
+	.section-heroes-of-the-borderlands .npc-card .rumors-section{
+		background: var(--transparency-color) !important;
+	}
     .section-helianas-guide-to-monster-hunting-part-1 .mini-stat-block{
         background-color: /*[[backgroundColor]]*/ !important;
     }
