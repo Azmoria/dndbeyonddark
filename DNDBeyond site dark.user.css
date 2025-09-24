@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.638
+@version      1.2.639
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -7437,7 +7437,7 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
     [class*="glc-game-log"] .crit-success div[class*="TotalContainer-Flex"] span,
     [class*="glc-game-log"] .crit-success div[class*="TotalContainer-Flex"] .aboveDiceTotal{
         color:var(--crit-success) !important;
-		text-shadow: revert;
+		text-shadow: revert !important;
     }
     [class*="glc-game-log"] .crit-fail div[class*="TotalContainer-Flex"] span,
     [class*="glc-game-log"] .crit-fail div[class*="TotalContainer-Flex"] span,
