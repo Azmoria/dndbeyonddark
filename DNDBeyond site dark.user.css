@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.639
+@version      1.2.640
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -626,7 +626,7 @@ regexp("https://www.dndbeyond.com/sources/dnd/ctbt/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/av/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/ghpg/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/hotb/(.|\s)*\S(.|\s)*"),
-regexp("https://www.dndbeyond.com/sources/dnd/hotb/(.|\s)*\S(.|\s)*")
+regexp("https://www.dndbeyond.com/sources/dnd/ghcg/(.|\s)*\S(.|\s)*")
 {
 
     #site-main,
@@ -1281,7 +1281,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/tcmp2(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/drde(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/av(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/ghpg(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/hotb(/)?")
+regexp("https://www.dndbeyond.com/sources/dnd/hotb(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/ghcg(/)?")
 {
    
     #site-main,
@@ -1382,7 +1383,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/tcmp2(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/drde(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/av(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/ghpg(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/hotb(/)?"){
+regexp("https://www.dndbeyond.com/sources/dnd/hotb(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/ghcg(/)?"){
 
     @media (min-width: 1024px) {
         body {
@@ -1442,7 +1444,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/hotb(/)?"){
 }
 
 @-moz-document regexp("https://www.dndbeyond.com/sources/dnd/fm(/)?"), 
-regexp("https://www.dndbeyond.com/sources/dnd/boet(/)?") {
+regexp("https://www.dndbeyond.com/sources/dnd/boet(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/ghcg(/)?") {
  body {
     background-position:center 0% !important;
     }
@@ -1879,7 +1882,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/boet(/)?") {
     }
 }
 
-@-moz-document regexp("https://www.dndbeyond.com/sources/dnd/phb-2014(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/ai(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/dmg-2014(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/it/phb(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/mm-2014(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/ggtr(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/mtof(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/scag(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/vgtm(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/wgte(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/xgte(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/bgdia(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/cm(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/cos(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/dc(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/doip(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/sdw(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/slw(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/ddvram(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/gos(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/hotdq(/)?"),  regexp("https://www.dndbeyond.com/sources/dnd/imr(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/lr(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/llok(/)?"),  regexp("https://www.dndbeyond.com/sources/dnd/lmop(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/oota(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/pota(/)?"),  regexp("https://www.dndbeyond.com/sources/dnd/rot(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/ddia-mord(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/skt(/)?"),  regexp("https://www.dndbeyond.com/sources/dnd/tftyp(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/toa(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/wdh(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/wdotmm(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/tod(/)?"){
+@-moz-document regexp("https://www.dndbeyond.com/sources/dnd/phb-2014(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/ai(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/dmg-2014(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/it/phb(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/mm-2014(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/ggtr(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/mtof(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/scag(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/vgtm(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/wgte(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/xgte(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/bgdia(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/cm(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/cos(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/dc(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/doip(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/sdw(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/slw(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/ddvram(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/gos(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/hotdq(/)?"),  regexp("https://www.dndbeyond.com/sources/dnd/imr(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/lr(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/llok(/)?"),  regexp("https://www.dndbeyond.com/sources/dnd/lmop(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/oota(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/pota(/)?"),  regexp("https://www.dndbeyond.com/sources/dnd/rot(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/ddia-mord(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/skt(/)?"),  regexp("https://www.dndbeyond.com/sources/dnd/tftyp(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/toa(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/wdh(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/wdotmm(/)?"), regexp("https://www.dndbeyond.com/sources/dnd/tod(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/ghcg(/)?"){
 
     body:before{
         content: '';
@@ -3741,7 +3745,9 @@ regexp("https://www.dndbeyond.com/species.*"){
     .glc-game-log .ct-sidebar__heading span:not([class*='uncommon'], [class*='rare'], [class*='very-rare'], [class*='legendary'], [class*='artifact']),
     [class*='styles_description'],
     .font-container p,
-    .dracofont{
+    .dracofont,
+	.section-grim-hollow-campaign-guide li::marker,
+	.section-grim-hollow-campaign-guide strong:not(ul strong,.flexible-double-column.hangingIndent strong,.epigraph strong){
         color: /*[[fontColor]]*/ !important;   
     }
 
