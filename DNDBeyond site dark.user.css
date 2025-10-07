@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.640
+@version      1.2.641
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -626,7 +626,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/ctbt/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/av/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/ghpg/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/hotb/(.|\s)*\S(.|\s)*"),
-regexp("https://www.dndbeyond.com/sources/dnd/ghcg/(.|\s)*\S(.|\s)*")
+regexp("https://www.dndbeyond.com/sources/dnd/ghcg/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/wthc/(.|\s)*\S(.|\s)*")
 {
 
     #site-main,
@@ -1282,7 +1283,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/drde(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/av(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/ghpg(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/hotb(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/ghcg(/)?")
+regexp("https://www.dndbeyond.com/sources/dnd/ghcg(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/wthc(/)?")
 {
    
     #site-main,
@@ -1384,7 +1386,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/drde(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/av(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/ghpg(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/hotb(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/ghcg(/)?"){
+regexp("https://www.dndbeyond.com/sources/dnd/ghcg(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/wthc(/)?"){
 
     @media (min-width: 1024px) {
         body {
@@ -1429,6 +1432,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/ghcg(/)?"){
         }
     }
 }
+
+
 @-moz-document regexp("https://www.dndbeyond.com/sources/dnd/ottg(/)?"){
     body{
         background-position: center 60% !important;
@@ -1507,7 +1512,35 @@ regexp("https://www.dndbeyond.com/sources/dnd/ghcg(/)?") {
     }
 }
 
+@-moz-document regexp("https://www.dndbeyond.com/sources/dnd/wthc(/)?"){
+	@media (min-width: 1024px) {
+		body {
+			background: url(https://media.dndbeyond.com/compendium-images/wthc/ui/wthc-compendium-1k-d2.png)  no-repeat center 0%, var(--background-color) !important;
+			background-size: cover !important;
+			background-attachment: fixed !important; 
+		}
+	}
 
+    
+
+    @media (min-width: 1921px) {
+        body {
+            background: url(https://media.dndbeyond.com/compendium-images/wthc/ui/wthc-compendium-2k-d1.png)  no-repeat center 31%, var(--background-color) !important;
+            background-size: cover !important;
+            background-attachment: fixed !important; 
+        }
+    }
+
+    @media (min-width: 2561px) {
+        body {
+            background: url(https://media.dndbeyond.com/compendium-images/wthc/ui/wthc-compendium-4k-d2.png)  no-repeat center 31%, var(--background-color) !important;
+            background-size: cover !important;
+            background-attachment: fixed !important; 
+        }
+    }
+    
+
+}
 
 
 @-moz-document regexp("https://www.dndbeyond.com/sources/dnd/loe(/)?"){
@@ -3794,7 +3827,8 @@ regexp("https://www.dndbeyond.com/species.*"){
     }
     
     .text--god-sidebar,
-    .body-page .p-article-a .p-article-content .text--god-sidebar .compendium-hr.with-metadata{
+    .body-page .p-article-a .p-article-content .text--god-sidebar .compendium-hr.with-metadata,
+	.text--handwriting.aside--image-text-box[class*='eddyism-']{
         color: #000 !important;
     }
     
@@ -4450,6 +4484,33 @@ regexp("https://www.dndbeyond.com/species.*"){
         outline: none !important;
     }
  
+	aside[class*="eddyism"],
+	#missingposterportrait,
+	.npc-card .notes-section
+		{
+		border-width: revert !important;
+		border-style: revert !important;
+		border-color: revert !important;
+		background: revert !important;
+	}
+	.npc-card
+	{
+		background: var(--background-color) !important;
+	}
+	body.body-page #site .container .npc-card a.wthc-pgc-pdf-button{
+		color: #000 !important;
+	}
+	.container-with-art.wthc-1col figure{
+		background: none !important;
+	}
+	.npc-card .notes-section
+	{
+		border-top: 3px dotted #822 !important;
+	}
+	.map-button{
+		background: /*[[transparencyBackgroundColor]]*/;
+	}
+
     .text--morte-notes{
         border: 6px solid var(--morte-border-color) !important;
     }
