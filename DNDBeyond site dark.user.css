@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.641
+@version      1.2.642
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -5010,7 +5010,19 @@ regexp("https://www.dndbeyond.com/species.*"){
     [class*='styles_paper'] [class*='styles_content']:after{
         background: none !important;
     }
+	[class*='styles_content'] span{
+		background:none !important;
+	}
+	[class*='styles_customBackground']{
+		background: none !important
+	}
+	.listing-body [style*='background-color: #efefef']{
+		background: none !important;
+	}
 
+	.content-container a{
+		color: /*[[linkColor]]*/ !important;
+	}
     aside,
     .more-info::after,
     blockquote.block-colored,
@@ -5567,7 +5579,8 @@ regexp("https://www.dndbeyond.com/species.*"){
     .site .character-button-modal-cancel, 
     .site .character-button-outline, 
     .site .character-button-oversized,
-    .site .character-button-small,.ct-button__confirmed{
+    .site .character-button-small,.ct-button__confirmed,
+	:is(.body-rpgclass, .body-rpgspell, .body-rpgrace, .body-rpgmonster, .body-rpgfeat, .body-rpgbackground, .body-rpgigear, .body-rpgmagicitem) .text--rules-sidebar{
         color: /*[[fontColor]]*/ !important;
     }
     .site .ct-button.ct-theme-button--filled:active, 
@@ -5813,7 +5826,7 @@ regexp("https://www.dndbeyond.com/species.*"){
     .search-field__icon path,
     .encounter-builder-sidebar__close-button svg rect,
     .encounter-details-monster__quantity svg rect,
-    svg[class*="ddb-character-app-"] 
+    svg[class*="ddb-character-app-"]
     {
         fill: /*[[fontColor]]*/ !important;
     }
@@ -6769,6 +6782,261 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
     #chat-language option {
         --theme-background-solid:/*[[sidebarColor]]*/;
     }
+
+
+
+	.text--handwriting {
+	font-family: var(--custom-font-view, var(--unique-book-font), var(--unique-book-font-alt), sans-serif);
+	font-size: 22px;
+	position: relative;
+
+	}
+
+	.text--handwriting-container {
+	  position: relative;
+	  display: inline-block;
+	  width: 100%;
+	}
+
+	.text--handwriting-print,
+	.text--handwriting-cursive {
+	  position: absolute;
+	  inset: 0;
+	  transition: opacity 0.35s ease;
+	}
+
+	.text--handwriting-print {
+	  font-family: roboto, sans-serif;
+	  font-size: 18px;
+	  opacity: 0;
+	  max-width: 100%;
+
+	}
+
+	.text--handwriting:hover .text--handwriting-cursive,
+	.text--handwriting:focus .text--handwriting-cursive{
+	opacity: 0;
+	}
+
+	.text--handwriting:hover .text--handwriting-print,
+	.text--handwriting:focus .text--handwriting-print{
+	opacity: 1;
+	}
+
+	.aside--image-text-box {
+	  margin-bottom: 24px;
+
+	  container-type: size;
+	  position: relative;
+
+		--background-image-horizontal: url("https://media-stg.dndbeyond.com/compendium-images/wthc/ui/eddyism-horizontal-yellow2.png");
+		--background-image-vertical:   url("https://media-stg.dndbeyond.com/compendium-images/wthc/ui/eddyism-vert-yellow2.png");
+
+		--default-width-clamp: 100%;
+		--default-height-clamp: 60vh;
+
+		--img-max-width: 750px;
+		--img-max-height: 490px; 
+
+		--img-width: 750px;
+		--img-height: 490px;
+		--text-height-horizontal: 750px;
+		--padding-top-horizontal: 12px;
+		--padding-right-horizontal: 12px;
+		--padding-bottom-horizontal: 12px;
+		--padding-left-horizontal: 12px;
+
+		--img-max-height-vertical: 750px;
+		--img-max-width-vertical: 490px;
+		--text-height-vertical: 750px;
+		--padding-top-vertical: 12px;
+		--padding-right-vertical: 12px;
+		--padding-bottom-vertical: 12px;
+		--padding-left-vertical: 12px;
+
+
+		--default-width-clamp: 100%;
+	  width: clamp(240px, var(--default-width-clamp), var(--img-width, 750px));
+
+		/* responsive height scaling */
+	  --min-text-box-height: 240px;
+	  --fallback-max-text-box-height: 490px;
+	  --floor-threshold: 600px;   /* min width */
+	  --ceiling-threshold: 1200px;/* max width */
+	  --range: calc(var(--ceiling-threshold) - var(--floor-threshold));
+	  --max-vh: 80vh;  /* value at/under --floor-threshold */
+	  --min-vh: 60vh;  /* value at/over --ceiling-threshold */
+
+	  /* unitless (u) measurements for firefox */
+	  --floor-threshold-u: 600; /*same px value as above, but without units*/
+	  --ceiling-threshold-u: 1200; /*same px value as above, but without units*/
+	  --max-vh-u: 80; /* same vh value as above, but without units*/
+	  --min-vh-u: 60; /* same vh value as above, but without units*/
+	  --range-u: calc(var(--ceiling-threshold-u) - var(--floor-threshold-u));
+	  /* --range-u: calc(var(--ceiling-threshold-unitless) - var(--floor-threshold-unitless)); */
+	  --vh-slope-u: calc((var(--min-vh-u) - var(--max-vh-u)) / var(--range-u));
+
+	  /* linear function as a LENGTH:
+		 max-vh-u*1vh + slope*100vw - slope*floor-threshold-u*1px */
+	  --height-linear: calc(
+		var(--max-vh-u) * 1vh
+		+ var(--vh-slope-u) * 100vw
+		- var(--vh-slope-u) * var(--floor-threshold-u) * 1px
+	  );
+
+	  --scaling-clamped-height: clamp(
+		min(var(--min-vh), var(--max-vh)),
+		var(--height-linear),
+		max(var(--min-vh), var(--max-vh))
+	  );
+
+		height: clamp(
+		var(--min-text-box-height),
+		var(--scaling-clamped-height),
+		var(--img-height, var(--fallback-max-text-box-height))
+	  );
+
+		--img-aspect-horizontal: tan(atan2(var(--img-max-width), var(--img-max-height)));
+	  --img-aspect-vertical:   tan(atan2(var(--img-max-height), var(--img-max-width)));
+
+	  @media (max-width: 600px) {
+		--default-height-clamp: 80vh;
+	  }
+	}
+
+	.aside--image-text-box__container {
+	  position: relative;
+	 margin-inline: auto;
+	  inline-size: min(
+		100cqi,
+		calc(100cqb * var(--img-aspect-horizontal)),
+		calc(var(--text-height-horizontal) * var(--img-aspect-horizontal))
+	  );
+	  aspect-ratio: var(--img-aspect-horizontal);
+	  block-size: auto;
+
+	  background: var(--background-image-horizontal) left / 100% 100% no-repeat;
+
+
+	}
+
+	/* overlay text */
+	.aside--image-text-box__copy{
+	  text-wrap: pretty;
+	  hyphens: auto;
+	  z-index: 1;
+	  overflow-y: auto;
+	  scrollbar-gutter: stable both-edges; 
+	  overscroll-behavior: contain;
+	  -webkit-overflow-scrolling: touch; 
+	  height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		  padding-top:    var(--padding-top-horizontal);
+	  padding-right:  var(--padding-right-horizontal);
+	  padding-bottom: var(--padding-bottom-horizontal);
+	  padding-left:   var(--padding-left-horizontal);
+
+		--compendium-p-bottom: 8px;
+	  --compendium-p-top: 0;
+	}
+
+	.aside--image-text-box__copy * {
+		margin: 0 !important;
+
+	}
+
+
+	@container (max-aspect-ratio: 1 / 1){
+	  .aside--image-text-box__container{
+		inline-size: min(
+		  100cqi,
+		  calc(100cqb * var(--img-aspect-vertical)),
+		  calc(var(--text-height-vertical) * var(--img-aspect-vertical))
+		);
+		aspect-ratio: var(--img-aspect-vertical);
+		background-image: var(--background-image-vertical);
+
+	  }
+
+	  .aside--image-text-box__copy{
+		padding-top:    var(--padding-top-vertical);
+		padding-right:  var(--padding-right-vertical);
+		padding-bottom: var(--padding-bottom-vertical);
+		padding-left:   var(--padding-left-vertical);
+	  }
+	}
+
+	.eddyism-yellow {
+	  --background-image-horizontal:  url("https://media-stg.dndbeyond.com/compendium-images/wthc/ui/eddyism-horizontal-yellow2.png");
+		--background-image-vertical:  url("https://media-stg.dndbeyond.com/compendium-images/wthc/ui/eddyism-vert-yellow2.png");
+
+		--img-width: 750px;
+		--img-height: 490px;
+
+		--text-height-horizontal: 427px;
+		--padding-top-horizontal: 79px;
+		--padding-right-horizontal: 31px;
+		--padding-bottom-horizontal: 29px;
+		--padding-left-horizontal: 26px;
+
+		--text-height-vertical: 500px;
+		--padding-top-vertical: 38px;
+		--padding-right-vertical: 18px;
+		--padding-bottom-vertical: 11px;
+		--padding-left-vertical: 60px;
+		transform: rotate(-2deg);
+	}
+
+	.eddyism-blue {
+		--background-image-horizontal:  url("https://media-stg.dndbeyond.com/compendium-images/wthc/ui/eddyism-horizontal-blue2.png");
+		--background-image-vertical:  url("https://media-stg.dndbeyond.com/compendium-images/wthc/ui/eddyism-vertical-blue2.png");
+
+		--img-width: 750px;
+		--img-height: 490px;
+		--text-height-horizontal: 427px;
+		--padding-top-horizontal: 82px;
+		--padding-right-horizontal: 31px;
+		--padding-bottom-horizontal: 29px;
+		--padding-left-horizontal: 75px;
+
+		--text-height-vertical: 500px;
+		--padding-top-vertical: 29px;
+		--padding-right-vertical: 29px;
+		--padding-bottom-vertical: 50px;
+		--padding-left-vertical: 68px;
+		transform: rotate(-2deg);
+
+	}
+
+	.eddyism-pink {
+		--background-image-horizontal:  url("https://media-stg.dndbeyond.com/compendium-images/wthc/ui/eddyism-horiz-pink2.png");
+		--background-image-vertical:  url("https://media-stg.dndbeyond.com/compendium-images/wthc/ui/eddyism-vert-pink2.png");
+
+		--img-width: 750px;
+		--img-height: 490px;
+
+		--text-height-horizontal: 427px;
+
+		--padding-top-horizontal: 10%;
+		--padding-left-horizontal: 11%;
+		--pading-right-horizontal: 4%;
+		--padding-bottom-horizontal: 4%;
+
+		--text-height-vertical: 500px;
+		--padding-top-vertical: 3%;
+		--padding-right-vertical: 4%;
+		--padding-bottom-vertical: 4%;
+		--padding-left-vertical: 19%;
+
+		transform: rotate(-2deg);
+
+	}
+
+
+
             /*********NEW STAT BLOCK***********/
     .body-page #site .p-article-a .p-article-content .stat-block,
     .body-page .p-article-a .p-article-content .stat-block{
