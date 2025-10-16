@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.643
+@version      1.2.644
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -2702,6 +2702,7 @@ regexp("https://www.dndbeyond.com/species.*"){
         --background-color: /*[[backgroundColor]]*/;
         --transparency-color: /*[[transparencyBackgroundColor]]*/;
         --ttui_color-text--secondary: /*[[fontColor]]*/;
+		--link-color: /*[[linkColor]]*/;
     }
     
     :root .site{
@@ -3369,7 +3370,9 @@ regexp("https://www.dndbeyond.com/species.*"){
     .stat-block,
     [class*='styles_listing'] [class*='styles_summary'],
     div.text--quote-box,
-    .compendium-art
+    .compendium-art,
+	.col,
+	.epigraph
     {
         background-color: /*[[backgroundColor]]*/
         !important;
@@ -4473,7 +4476,8 @@ regexp("https://www.dndbeyond.com/species.*"){
     aside.text--krynn-letter,
      aside.text--krynn-sidebar,
     [class*=Button][class*='styles_dark'],
-    [class*=Checkbox][class*='styles_builder'] input:checked
+    [class*=Checkbox][class*='styles_builder'] input:checked,
+	.epigraph
     {
         border-width: /*[[borderWidth]]*/
         !important;
@@ -5032,7 +5036,8 @@ regexp("https://www.dndbeyond.com/species.*"){
     .morden-notes,
     .tasha-notes,
     aside.text--rules-sidebar,
-    aside.rules-text{
+    aside.rules-text,
+	.epigraph{
         border-image: none !important;
     }
     aside.text--rules-sidebar,
