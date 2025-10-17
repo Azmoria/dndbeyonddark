@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.358
+@version      1.3.359
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -868,6 +868,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
         --theme-color: /*[[highlightColor]]*/;
         --theme-contrast: /*[[fontColor]]*/;
         --theme-background-solid: /*[[sidebarColor]]*/;
+		--link-color: /*[[highlightColor]]*/;
         
     }
     .dice-toolbar{
@@ -3736,6 +3737,9 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
     .details-more-info{
         background: /*[[background]]*/;
     }
+		.avtt-file-name .material-symbols-outlined{
+		color: color-mix(in srgb, #ff3e3e, var(--background-color) 30%) !important;
+	}
     #above-vtt-error-message{
         background: color-mix(
             in srgb,
@@ -3762,6 +3766,12 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
         padding:0px;
         transition:none;
     }
+	.avtt-breadcrumb{
+		color: var(--font-color);
+	}
+	.avtt-breadcrumb:hover{
+		color: var(--link-color);
+	}
     #settings-panel .sidebar-panel-body>button{
         background: /*[[highlightColor]]*/33 !important;
     }
