@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.646
+@version      1.2.647
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -2768,7 +2768,9 @@ regexp("https://www.dndbeyond.com/species.*"){
       
     }
       
- 
+	body#tinymce {
+		background: #000 !important;
+	}
     div#site{
         height: initial;
     }
@@ -6709,6 +6711,10 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
         text-shadow: none !important;   
         background: /*[[backgroundColor]]*/ !important;
         color: /*[[fontColor]]*/ !important;
+    }
+    #avttversion[data-version='1.45'] ~ .ui-dialog #field-body-wysiwyg_ifr,
+    #avttversion[data-version='1.45'] ~ .ui-dialog .mce-edit-area iframe{
+         filter: none !important; 
     }
 	body .gamelogcontainer .sidebar__pane-content {
 		border: none !important;
