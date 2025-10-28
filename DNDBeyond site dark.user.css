@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.648
+@version      1.2.649
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -2754,7 +2754,7 @@ regexp("https://www.dndbeyond.com/species.*"){
 
 	[class*='_NavigationMenuContainer_'] [class*='_menuNavList_']{
 		li[class*='_panelButton_']>button[class*='_menuLink'] ~ [class*='_panel_'] {
-			transition: 0s all 0.25s;
+			transition: 0s all 0.4s;
 		}
 		li[class*='_panelButton_']>button[class*='_menuLink']:hover ~ [class*='_panel_'] {
 			transition: 0s all 0s;
@@ -6739,6 +6739,7 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
     #avttversion[data-version='1.45'] ~ .ui-dialog .mce-edit-area iframe{
          filter: none !important; 
     }
+
 	body .gamelogcontainer .sidebar__pane-content {
 		border: none !important;
 	}
