@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.649
+@version      1.2.650
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -627,13 +627,15 @@ regexp("https://www.dndbeyond.com/sources/dnd/av/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/ghpg/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/hotb/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/ghcg/(.|\s)*\S(.|\s)*"),
-regexp("https://www.dndbeyond.com/sources/dnd/wthc/(.|\s)*\S(.|\s)*")
+regexp("https://www.dndbeyond.com/sources/dnd/wthc/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/frhof/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/fraif/(.|\s)*\S(.|\s)*")
 {
 
     #site-main,
     body.responsive-enabled #site #site-main .container #content,
     .secondary-content,
-    .compendium-hr{
+    .compendium-hr:not(.underline-filigree){
         background: none !important;   
     }
         .p-article-content>h1:first-of-type,
@@ -664,6 +666,100 @@ regexp("https://www.dndbeyond.com/sources/dnd/wthc/(.|\s)*\S(.|\s)*")
     html body.hide-ads #site-main #footer-push{
         background: none !important;  
     }
+}
+
+@-moz-document regexp("https://www.dndbeyond.com/sources/dnd/frhof/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/fraif/(.|\s)*\S(.|\s)*") {
+	body{
+		background-blend-mode: hue;
+	}
+	.body-page .p-article-a .p-article-content h1.underline-filigree:after {
+		content: "";
+		display: block;
+		height: var(--uf-height) !important;
+		aspect-ratio: var(--uf-aspect-ratio);
+		background-color: transparent !important;
+		margin: var(--uf-gap) auto 0;
+		max-width: 100%;
+		min-width: 300px;
+		background-image: var(--uf-image);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 100% 100%;
+	}
+
+
+	.body-page .p-article-a .p-article-content aside.aside--nine-slice {
+		--ns-default: url("https://media-stg.dndbeyond.com/compendium-images/fraif/ui/bestiary-quote-box.png") !important;
+		--ns-edge-repeat: stretch !important;
+		--ns-center-fill: fill !important;
+		min-width: 240px !important;
+		min-height: 90px !important;
+		box-sizing: border-box !important;
+		position: relative !important;
+		z-index: 0 !important;
+		border-style: solid !important;
+		border-width: var(--ns-b-top) var(--ns-b-right) var(--ns-b-bottom) var(--ns-b-left) !important;
+		-o-border-image: var(--ns-image) var(--ns-slice-top) var(--ns-slice-right) var(--ns-slice-bottom) var(--ns-slice-left) !important;
+		border-image: var(--ns-image) var(--ns-slice-top) var(--ns-slice-right) var(--ns-slice-bottom) var(--ns-slice-left) !important;
+		-webkit-border-image: var(--ns-image) var(--ns-slice-top) var(--ns-slice-right) var(--ns-slice-bottom) var(--ns-slice-left) var(--ns-edge-repeat) var(--ns-edge-repeat) var(--ns-edge-repeat) var(--ns-edge-repeat) !important;
+		border-image-source: var(--ns-image) !important;
+		border-image-slice: var(--ns-slice-top) var(--ns-slice-right) var(--ns-slice-bottom) var(--ns-slice-left) !important;
+		border-image-width: var(--ns-b-top) var(--ns-b-right) var(--ns-b-bottom) var(--ns-b-left) !important;
+		border-image-outset: 0 !important;
+		border-image-repeat: var(--ns-edge-repeat) !important;
+		background: transparent !important;
+	}
+
+	.body-page .p-article-a .p-article-content aside.gazetteer-sidebar.aside--nine-slice {
+		--ns-slice-top: 13;
+		--ns-slice-right: 7;
+		--ns-slice-bottom: 23;
+		--ns-slice-left: 6;
+		--ns-b-top: 12px;
+		--ns-b-right: 7px;
+		--ns-b-bottom: 24px;
+		--ns-b-left: 5px;
+	}
+
+	.inline-filigree,
+	.body-page .p-article-a .p-article-content h1.compendium-hr,
+	.fraif-chapter-number-container ~ h1{
+		text-shadow:revert !important;
+		color: revert !important;
+	}
+
+
+	.fraif-chapter-number-container ~ h1.compendium-hr {
+		background: var(--fraif-h1-text-color) !important;
+		-webkit-background-clip: text !important;
+		background-clip: text !important;
+	}
+	.body-page .p-article-a .p-article-content h1.compendium-hr{
+		-webkit-text-stroke: 0.3px #c9d3ca2e;
+	}
+	.aside-auroras-text{
+		background:none !important;
+		border:none !important;
+	}
+	.frhof-aside-location-box{
+		background-color: var(--background-color) !important;;
+		position: relative;
+		mix-blend-mode: normal;
+	}
+	h3.compendium-hr.frhof-aside-location-box__header {
+		margin: 0 !important;
+		background-color: #724E4B !important;
+		font-variant: small-caps;
+		color: white !important;
+		--location-box-border-radius: 0.1rem;
+		border-top-left-radius: var(--location-box-border-radius);
+		border-top-right-radius: var(--location-box-border-radius);
+		padding: 1.25rem 0.5rem 0.75rem 0.5rem !important;
+		position: relative;
+		font-size: 3rem !important;
+		font-weight: 500 !important;
+	}
 }
 
 @-moz-document regexp("https://www.dndbeyond.com/sources/dnd/paitm/[a-zA-Z]+/(.|\s)*\S(.|\s)*"),
@@ -1284,7 +1380,9 @@ regexp("https://www.dndbeyond.com/sources/dnd/av(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/ghpg(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/hotb(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/ghcg(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/wthc(/)?")
+regexp("https://www.dndbeyond.com/sources/dnd/wthc(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/frhof(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/fraif(/)?")
 {
    
     #site-main,
@@ -1387,7 +1485,9 @@ regexp("https://www.dndbeyond.com/sources/dnd/av(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/ghpg(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/hotb(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/ghcg(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/wthc(/)?"){
+regexp("https://www.dndbeyond.com/sources/dnd/wthc(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/frhof(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/fraif(/)?") {
 
     @media (min-width: 1024px) {
         body {
@@ -3808,7 +3908,9 @@ regexp("https://www.dndbeyond.com/species.*"){
     .font-container p,
     .dracofont,
 	.section-grim-hollow-campaign-guide li::marker,
-	.section-grim-hollow-campaign-guide strong:not(ul strong,.flexible-double-column.hangingIndent strong,.epigraph strong){
+	.section-grim-hollow-campaign-guide strong:not(ul strong,.flexible-double-column.hangingIndent strong,.epigraph strong),
+	strong:not(ul strong, .flexible-double-column.hangingIndent strong, .epigraph strong), 
+	li::marker{
         color: /*[[fontColor]]*/ !important;   
     }
 
