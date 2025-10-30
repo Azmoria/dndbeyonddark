@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.650
+@version      1.2.651
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -3909,7 +3909,6 @@ regexp("https://www.dndbeyond.com/species.*"){
     .dracofont,
 	.section-grim-hollow-campaign-guide li::marker,
 	.section-grim-hollow-campaign-guide strong:not(ul strong,.flexible-double-column.hangingIndent strong,.epigraph strong),
-	strong:not(ul strong, .flexible-double-column.hangingIndent strong, .epigraph strong), 
 	li::marker{
         color: /*[[fontColor]]*/ !important;   
     }
