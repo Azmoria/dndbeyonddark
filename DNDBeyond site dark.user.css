@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.653
+@version      1.2.654
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -114,6 +114,11 @@ dark "Dark Mode" <<<EOT
     .epigraph strong){
         color: #886eb4 !important;
     }
+    .section-astarions-book-of-hungers li::marker, 
+    .section-astarions-book-of-hungers strong:not(ul strong,.flexible-double-column.hangingIndent            strong,
+    .epigraph strong){
+        color: #aa090c !important;
+    }
     .section-dungeon-masters-guide .rhythm-box:before {
         background-image: url(https://media.dndbeyond.com/compendium-images/dmg/ui/rhythm-box.png);
         content: ' ';
@@ -192,9 +197,10 @@ dark "Dark Mode" <<<EOT
     {
         color: #d465d4 !important;  
     } 
-	.section-forgotten-realms-adventures-in-faerun strong:not(ul strong, .flexible-double-column.hangingIndent strong, .epigraph strong), li::marker{
+	:is(section-forgotten-realms-adventures-in-faerun, .section-netherils-fall-tales-of-terror-treasure-and-time)  strong:not(ul strong, .flexible-double-column.hangingIndent strong, .epigraph strong), li::marker{
 		color: color-mix(in srgb, var(--font-color), #fff 50%) !important;
 	}
+
 
     .section-the-gunslinger-class-valdas-spire-of-secrets li::marker, 
     .section-the-gunslinger-class-valdas-spire-of-secrets strong:not(ul strong,.flexible-double-column.hangingIndent strong,.epigraph strong){
@@ -633,7 +639,9 @@ regexp("https://www.dndbeyond.com/sources/dnd/hotb/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/ghcg/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/wthc/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/frhof/(.|\s)*\S(.|\s)*"),
-regexp("https://www.dndbeyond.com/sources/dnd/fraif/(.|\s)*\S(.|\s)*")
+regexp("https://www.dndbeyond.com/sources/dnd/fraif/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/nf/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/aboh/(.|\s)*\S(.|\s)*")
 {
 
     #site-main,
@@ -673,9 +681,16 @@ regexp("https://www.dndbeyond.com/sources/dnd/fraif/(.|\s)*\S(.|\s)*")
 }
 
 @-moz-document regexp("https://www.dndbeyond.com/sources/dnd/frhof/(.|\s)*\S(.|\s)*"),
-regexp("https://www.dndbeyond.com/sources/dnd/fraif/(.|\s)*\S(.|\s)*") {
+regexp("https://www.dndbeyond.com/sources/dnd/fraif/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/nf/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/aboh/(.|\s)*\S(.|\s)*"){
+
 	body{
 		background-blend-mode: hue;
+	}
+	body.section-astarions-book-of-hungers,
+	body.section-netherils-fall-tales-of-terror-treasure-and-time{
+		background-blend-mode: normal;
 	}
 	.body-page .p-article-a .p-article-content h1.underline-filigree:after {
 		content: "";
@@ -735,7 +750,17 @@ regexp("https://www.dndbeyond.com/sources/dnd/fraif/(.|\s)*\S(.|\s)*") {
 
 
 	.fraif-chapter-number-container ~ h1.compendium-hr {
-		background: var(--fraif-h1-text-color) !important;
+		background: var(--fraif-h1-text-color, transparent) !important;
+		-webkit-background-clip: text !important;
+		background-clip: text !important;
+	}
+	.section-netherils-fall-tales-of-terror-treasure-and-time #Credits{
+		background: var(--nf-h1-text-color) !important;
+		-webkit-background-clip: text !important;
+		background-clip: text !important;
+	}
+	.section-astarions-book-of-hungers .nav-select ~ h1.compendium-hr{
+		background: var(--astarion-h1-text-color) !important;
 		-webkit-background-clip: text !important;
 		background-clip: text !important;
 	}
@@ -1031,7 +1056,9 @@ regexp("https://www.dndbeyond.com/sources/dnd/drde/(.|\s)*\S(.|\s)*")
     }
 }
 
-@-moz-document regexp("https://www.dndbeyond.com/sources/dnd/ggtr/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/scag/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/mtof/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/ttp/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/vgtm/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/wgte/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/xgte/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/bgdia/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/cos/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/dc/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/wa/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/gos/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/hotdq/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/rot/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/hftt/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/lr/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/llok/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/lmop/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/skt/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/pota/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/ddia-mord/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/toa/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/wdh/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/wdotmm/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/tftyp/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/mm-2014/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/doip(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/sdw/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/slw/(.|\s)*\S(.|\s)*") {
+@-moz-document regexp("https://www.dndbeyond.com/sources/dnd/ggtr/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/scag/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/mtof/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/ttp/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/vgtm/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/wgte/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/xgte/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/bgdia/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/cos/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/dc/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/wa/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/gos/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/hotdq/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/rot/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/hftt/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/lr/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/llok/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/lmop/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/skt/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/pota/(.|\s)*\S(.|\s)*"), 
+regexp("https://www.dndbeyond.com/sources/dnd/ddia-mord/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/toa/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/wdh/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/wdotmm/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/tftyp/(.|\s)*\S(.|\s)*"), 
+regexp("https://www.dndbeyond.com/sources/dnd/mm-2014/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/doip(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/sdw/(.|\s)*\S(.|\s)*"), regexp("https://www.dndbeyond.com/sources/dnd/slw/(.|\s)*\S(.|\s)*") {
 
     #site-main,
     body.responsive-enabled #site #site-main .container #content,
@@ -1386,7 +1413,9 @@ regexp("https://www.dndbeyond.com/sources/dnd/hotb(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/ghcg(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/wthc(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/frhof(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/fraif(/)?")
+regexp("https://www.dndbeyond.com/sources/dnd/fraif(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/nf(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/aboh(/)?")
 {
    
     #site-main,
@@ -1491,7 +1520,9 @@ regexp("https://www.dndbeyond.com/sources/dnd/hotb(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/ghcg(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/wthc(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/frhof(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/fraif(/)?") {
+regexp("https://www.dndbeyond.com/sources/dnd/fraif(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/nf(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/aboh(/)?") {
 
     @media (min-width: 1024px) {
         body {
@@ -8576,7 +8607,8 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
     .sidebar-tab-image > div[style*=-webkit-mask],
     .sidebar-tab-image > div[style*=mask],
     .sidebar-list-item-row-item button.dropboxChooser.token-row-button span.dropin-btn-status,
-    .sidebar-list-item-row-item button.launchPicker.token-row-button span.onedrive-btn-status
+    .sidebar-list-item-row-item button.launchPicker.token-row-button span.onedrive-btn-status,
+	.sidebar-list-item-row-item .token-row-button span.avtt-btn-status
     {
         background-color: /*[[fontColor]]*/ !important;
     }
