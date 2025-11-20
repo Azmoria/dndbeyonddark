@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.654
+@version      1.2.656
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -197,7 +197,7 @@ dark "Dark Mode" <<<EOT
     {
         color: #d465d4 !important;  
     } 
-	:is(section-forgotten-realms-adventures-in-faerun, .section-netherils-fall-tales-of-terror-treasure-and-time)  strong:not(ul strong, .flexible-double-column.hangingIndent strong, .epigraph strong), li::marker{
+	 strong:not(ul strong, .flexible-double-column.hangingIndent strong, .epigraph strong), li::marker{
 		color: color-mix(in srgb, var(--font-color), #fff 50%) !important;
 	}
 
@@ -641,7 +641,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/wthc/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/frhof/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/fraif/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/nf/(.|\s)*\S(.|\s)*"),
-regexp("https://www.dndbeyond.com/sources/dnd/aboh/(.|\s)*\S(.|\s)*")
+regexp("https://www.dndbeyond.com/sources/dnd/aboh/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/lfl/(.|\s)*\S(.|\s)*")
 {
 
     #site-main,
@@ -1415,7 +1416,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/wthc(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/frhof(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/fraif(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/nf(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/aboh(/)?")
+regexp("https://www.dndbeyond.com/sources/dnd/aboh(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/lfl(/)?")
 {
    
     #site-main,
@@ -1522,7 +1524,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/wthc(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/frhof(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/fraif(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/nf(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/aboh(/)?") {
+regexp("https://www.dndbeyond.com/sources/dnd/aboh(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/lfl(/)?") {
 
     @media (min-width: 1024px) {
         body {
@@ -3560,7 +3563,9 @@ regexp("https://www.dndbeyond.com/species.*"){
     .character-builder-inner .MuiCardActions-spacing[class*='ddb-character-app']{
         backdrop-filter: brightness(2)
     }
-    
+	.body-page .p-article-a .p-article-content .treasure-habitat{
+		background-color: var(--treasure-bg, var(--background-color)) !important;
+	}
     .comment .p-comment-user-background,
     body.body-forum .single-column #content .u-dropDown .u-dropDownMenu li>a,
     body.body-forum .single-column #content .u-dropDown .u-dropDownMenu,
