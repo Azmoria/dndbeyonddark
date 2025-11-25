@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.656
+@version      1.2.657
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -642,7 +642,9 @@ regexp("https://www.dndbeyond.com/sources/dnd/frhof/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/fraif/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/nf/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/aboh/(.|\s)*\S(.|\s)*"),
-regexp("https://www.dndbeyond.com/sources/dnd/lfl/(.|\s)*\S(.|\s)*")
+regexp("https://www.dndbeyond.com/sources/dnd/lfl/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/ffotr/fated-flight-of-the-recluse"),
+regexp("https://www.dndbeyond.com/sources/dnd/efota/(.|\s)*\S(.|\s)*")
 {
 
     #site-main,
@@ -1417,7 +1419,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/frhof(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/fraif(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/nf(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/aboh(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/lfl(/)?")
+regexp("https://www.dndbeyond.com/sources/dnd/lfl(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/efota(/)?")
 {
    
     #site-main,
@@ -1525,7 +1528,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/frhof(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/fraif(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/nf(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/aboh(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/lfl(/)?") {
+regexp("https://www.dndbeyond.com/sources/dnd/lfl(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/efota(/)?") {
 
     @media (min-width: 1024px) {
         body {
@@ -4000,7 +4004,9 @@ regexp("https://www.dndbeyond.com/species.*"){
 	.text--handwriting.aside--image-text-box[class*='eddyism-']{
         color: #000 !important;
     }
-    
+	aside.newspaper-box{
+		background: none !important;
+	}
     .ddb-campaigns-character-card-footer-links a[class*="ddb-listing-client"]:hover:before,
     .ddb-campaigns-character-card-footer-links div>button:hover:before{ 
         background-color: /*[[linkColor]]*/ !important;  
