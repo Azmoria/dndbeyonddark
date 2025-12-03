@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.657
+@version      1.2.658
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -644,7 +644,9 @@ regexp("https://www.dndbeyond.com/sources/dnd/nf/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/aboh/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/lfl/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/ffotr/fated-flight-of-the-recluse"),
-regexp("https://www.dndbeyond.com/sources/dnd/efota/(.|\s)*\S(.|\s)*")
+regexp("https://www.dndbeyond.com/sources/dnd/efota/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/oswhap/(.|\s)*\S(.|\s)*")
+
 {
 
     #site-main,
@@ -799,7 +801,9 @@ regexp("https://www.dndbeyond.com/sources/dnd/paitm/poster-map"),
 regexp("https://www.dndbeyond.com/sources/dnd/aatm/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/hcs/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/vsspp/(.|\s)*\S(.|\s)*"),
-regexp("https://www.dndbeyond.com/sources/dnd/drde/(.|\s)*\S(.|\s)*")
+regexp("https://www.dndbeyond.com/sources/dnd/drde/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/oswhap/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/oswhap(/)?")
 {
 
     body{
@@ -1420,7 +1424,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/fraif(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/nf(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/aboh(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/lfl(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/efota(/)?")
+regexp("https://www.dndbeyond.com/sources/dnd/efota(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/oswhap(/)?")
 {
    
     #site-main,
@@ -1529,7 +1534,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/fraif(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/nf(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/aboh(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/lfl(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/efota(/)?") {
+regexp("https://www.dndbeyond.com/sources/dnd/efota(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/oswhap(/)?") {
 
     @media (min-width: 1024px) {
         body {
@@ -4464,7 +4470,7 @@ regexp("https://www.dndbeyond.com/species.*"){
     .forum-post-body a:not([style*="color"]):not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip),
     .forum-post-body a:hover:not([style*="color"]):not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip),
     .forum-post-body a:visited:not([style*="color"]):not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip),
-    body.body-page .container a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip):not(.b-pagination-item):not([style*="color"]),
+    body.body-page .container a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip):not(.b-pagination-item):not([style*="color"]):not([class*='compendium-image']),
     body.body-search .container a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip):not(.b-pagination-item):not([style*="color"]),
     body.body-rpgigear .container a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip):not(.b-pagination-item):not([style*="color"]):not(.homebrew-creation-actions-item-delete),
     body.body-rpgrace .container a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip):not(.b-pagination-item):not([style*="color"]):not(.homebrew-creation-actions-item-delete),
@@ -6317,7 +6323,8 @@ regexp("https://www.dndbeyond.com/species.*"){
     z-index: 1;
     }
     
-    input.encounter-builder-header__encounter-name{
+    input.encounter-builder-header__encounter-name,
+	.compendium-art{
         background: transparent !important;  
     }
     
