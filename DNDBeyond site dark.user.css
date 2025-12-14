@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.660
+@version      1.2.661
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -6883,12 +6883,23 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
     #tokenOptionsPopup>#tokenOptionsContainer>div[data-option-name='lockRestrictDrop'] select option,
     :is(.tooltip) .table-compendium tr>:is(th,td),
     .folder.ui-droppable-hover,
-	.note-visibility-toggle-container
+	.note-visibility-toggle-container,
+	#dmScreenContainer,
+	.dmScreenDropdown,
+	.dmScreenDropdown .dmScreenDropdownItem
     {
         text-shadow: none !important;   
-        background: /*[[backgroundColor]]*/ !important;
+        background: var(--background-color) !important;
         color: /*[[fontColor]]*/ !important;
     }
+	#dmScreenContainer table tr,
+	#dmScreenContainer table td{
+		background:none !important;
+		border: none !important;
+	}
+	#dmScreenContainer table tr:nth-child(2n+1){
+		background: color-mix(in srgb, var(--background-color) 50%, #848484 10%) !important;
+	}
     .ui-dialog #field-body-wysiwyg_ifr,
    .ui-dialog .mce-edit-area iframe{
          filter: none !important; 
@@ -6909,7 +6920,10 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
 	.avtt-breadcrumb{
 		color: var(--font-color) !important;
 	}
-	.avtt-breadcrumb:hover{
+	.avtt-breadcrumb:hover,
+	#dmScreenContainer a,
+	#dmScreenContainer a:visited,
+	#dmScreenContainer a:hover{
 		color: var(--link-color) !important;
 	}
     .encounter-body{
