@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.661
+@version      1.2.662
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -2836,7 +2836,8 @@ regexp("https://www.dndbeyond.com/monster.*"), regexp("https://www.dndbeyond.com
 regexp("https://www.dndbeyond.com/campaigns.*abovevtt.*"),
 regexp("https://www.dndbeyond.com/spell-list.*"), regexp("https://www.dndbeyond.com/creature-rule.*"), regexp("https://www.dndbeyond.com/community-update.*"), regexp("https://www.dndbeyond.com/characters/premade.*"), regexp("https://www.dndbeyond.com/claim.*"), regexp("https://www.dndbeyond.com/.*dmScreen=1.*"),
 regexp("https://www.dndbeyond.com/project-sigil/download"),
-regexp("https://www.dndbeyond.com/species.*"){
+regexp("https://www.dndbeyond.com/species.*"),
+regexp("https://www.dndbeyond.com/en/library.*"){
 
 
     :root, :before, :after{
@@ -2851,7 +2852,7 @@ regexp("https://www.dndbeyond.com/species.*"){
         --transparency-color: /*[[transparencyBackgroundColor]]*/;
         --ttui_color-text--secondary: /*[[fontColor]]*/;
 		--link-color: /*[[linkColor]]*/;
-    }
+		--Heading-Text-on-light: /*[[fontColor]]*/    }
     
     :root .site{
         --theme-table-row-bg-hover: /*[[backgroundColor]]*/;
@@ -3545,7 +3546,11 @@ regexp("https://www.dndbeyond.com/species.*"){
     div.text--quote-box,
     .compendium-art,
 	.col,
-	.epigraph
+	.epigraph,
+	main[class*='page_root'],
+	[class*='TabFilters_tabLink'],
+	[class*='Filters_buttonFilterLabel'],
+	[class*='Select_light'] :is([class*='Select_button'], [class*='Select_list'])
     {
         background-color: /*[[backgroundColor]]*/
         !important;
@@ -3554,6 +3559,12 @@ regexp("https://www.dndbeyond.com/species.*"){
         color: /*[[fontColor]]*/
         !important;
     }
+	[class*='Select_light'] [class*='Select_button']:hover{
+		background: color-mix(in srgb, var(--background-color) 100%, var(--link-color) 20%) !important;
+	}
+	[class*='TabFilters_tabLinkActive']:after{
+		background-color: var(--link-color);
+	}
     body.responsive-enabled #site #site-main .container #content .poem--copper-song{
         color: initial !important;
     }
@@ -4044,7 +4055,8 @@ regexp("https://www.dndbeyond.com/species.*"){
     .player-info-table .value .ddbc-proficiency-half-svg circle,
     .player-info-table .value .ddbc-proficiency-svg path,
     .player-info-table .value .ddbc-proficiency-svg circle,
-    [class*='Select_button'] svg{
+    [class*='Select_button'] svg,
+	[class*='SourceCard_sourceSubtitle'] svg{
         fill: /*[[fontColor]]*/ ;
     }
     .player-info-table td,
@@ -4744,7 +4756,8 @@ regexp("https://www.dndbeyond.com/species.*"){
     .section-the-book-of-many-things .text--asteria-notes-signed,
     .sidenav-comp-page a,
     .top-table-page a,
-    [class*='styles_searchSort'] label{
+    [class*='styles_searchSort'] label,
+	main[class*='page_root']{
         background-image: none !important;
     }   
     .section-the-book-of-many-things .black-card-suite{
