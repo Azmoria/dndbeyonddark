@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.663
+@version      1.2.664
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -2656,8 +2656,8 @@ EOT;
     EOT;
 }
 @var select zindex "Dice Over/Under the Results Popup" {
- "Under": "60000",
- "Over": "60002"
+ "Under": "127000",
+ "Over": "135000"
 }
 @var range diceOpacity "Dice Opacity" [1, 0.01, 1, 0.01]
 
@@ -6955,9 +6955,9 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
 		color: var(--font-color) !important;
 	}
 	.avtt-breadcrumb:hover,
-	#dmScreenContainer a,
-	#dmScreenContainer a:visited,
-	#dmScreenContainer a:hover{
+	#dmScreenContainer a:not(.tooltip-hover),
+	#dmScreenContainer a:not(.tooltip-hover):visited,
+	#dmScreenContainer a:not(.tooltip-hover):hover{
 		color: var(--link-color) !important;
 	}
     .encounter-body{
@@ -7706,7 +7706,9 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
     .top_menu.visible{
         border: 1px solid /*[[borderColor]]*/;   
         box-sizing: content-box;
-        overflow: hidden;
+		overflow: hidden auto;
+		height: calc(100% - 100px);
+		max-height: fit-content;
     }
     /*[[aboveContainDice]]*/
     
@@ -9268,7 +9270,9 @@ regexp("https://www.dndbeyond.com/encounters.*#DiceTray"), regexp("https://www.d
         background-image: none
     }
 
-    
+	#noty_layout__bottomRight{
+		z-index:128000 !important;
+	}
     canvas.dice-rolling-panel__container,
     .dice-rolling-panel{
         z-index: /*[[zindex]]*/ !important;
