@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.664
+@version      1.2.665
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -225,7 +225,12 @@ dark "Dark Mode" <<<EOT
     .section-the-gunslinger-class-valdas-spire-of-secrets strong:not(ul strong,.flexible-double-column.hangingIndent strong,.epigraph strong){
         color: #96365e !important;
     }
-    
+    #dmScreenContainer .tooltip-hover:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip) {
+    	color: var(--link-color) !important;
+		&:hover, &:focus, &:active, &:visited{
+			color: var(--link-color) !important;
+		}
+	}
     .tooltip-hover.monster-tooltip, 
     .tooltip-hover.monster-tooltip:hover, 
     .tooltip-hover.monster-tooltip:focus, 
