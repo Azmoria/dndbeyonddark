@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.665
+@version      1.2.666
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -85,7 +85,11 @@ dark "Dark Mode" <<<EOT
 
 
     }
-
+	:root .section-exploring-eberron{
+	 	--theme-primary-color: #229ed8;
+	   --theme-secondary-color: rgba(66, 104, 123);
+	   --theme-accent-color: rgba(221, 178, 0);
+	}
     .av--text--location-header {
         p:first-of-type {
             color: #dd4043;
@@ -669,7 +673,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/aboh/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/lfl/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/ffotr/fated-flight-of-the-recluse"),
 regexp("https://www.dndbeyond.com/sources/dnd/efota/(.|\s)*\S(.|\s)*"),
-regexp("https://www.dndbeyond.com/sources/dnd/oswhap/(.|\s)*\S(.|\s)*")
+regexp("https://www.dndbeyond.com/sources/dnd/oswhap/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/exeb/(.|\s)*\S(.|\s)*")
 
 {
 
@@ -1449,7 +1454,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/nf(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/aboh(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/lfl(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/efota(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/oswhap(/)?")
+regexp("https://www.dndbeyond.com/sources/dnd/oswhap(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/exeb(/)?")
 {
    
     #site-main,
@@ -1559,7 +1565,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/nf(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/aboh(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/lfl(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/efota(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/oswhap(/)?") {
+regexp("https://www.dndbeyond.com/sources/dnd/oswhap(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/exeb(/)?") {
 
     @media (min-width: 1024px) {
         body {
@@ -8560,8 +8567,7 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
     button.daylight.active-daylight{
         background: /*[[backgroundColor]]*/ !important;
         color: /*[[linkColor]]*/ !important;
-        border-color: /*[[linkColor]]*/ !important;
-      
+        border-color: /*[[linkColor]]*/ !important; 
         transition: none;
     }
     .ddbc-tab-options--layout-pill .ddbc-tab-options__header-heading:hover svg path,
