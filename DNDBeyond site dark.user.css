@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.666
+@version      1.2.667
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -3581,7 +3581,9 @@ regexp("https://www.dndbeyond.com/en/library.*"){
 	main[class*='page_root'],
 	[class*='TabFilters_tabLink'],
 	[class*='Filters_buttonFilterLabel'],
-	[class*='Select_light'] :is([class*='Select_button'], [class*='Select_list'])
+	[class*='Select_light'] :is([class*='Select_button'], [class*='Select_list']),
+	[class*='styles_characterSettingsModal'],
+	[class*='styles_previewContainer']
     {
         background-color: /*[[backgroundColor]]*/
         !important;
@@ -4003,7 +4005,9 @@ regexp("https://www.dndbeyond.com/en/library.*"){
     .dracofont,
 	.section-grim-hollow-campaign-guide li::marker,
 	.section-grim-hollow-campaign-guide strong:not(ul strong,.flexible-double-column.hangingIndent strong,.epigraph strong),
-	li::marker{
+	li::marker,
+	[class*='styles_helpText'],
+	[class*='styles_checkboxGroupDescription']{
         color: /*[[fontColor]]*/ !important;   
     }
 
@@ -4048,7 +4052,10 @@ regexp("https://www.dndbeyond.com/en/library.*"){
         border-radius:5px;
 
     }
-    
+	[class*='styles_buttonGroupButton'], 		 	 
+	[class*='styles_buttonGroupButton'] {
+		background: color-mix(in srgb,var(--link-color),transparent 85%) !important;
+	}
     .text--god-sidebar,
     .body-page .p-article-a .p-article-content .text--god-sidebar .compendium-hr.with-metadata,
 	.text--handwriting.aside--image-text-box[class*='eddyism-']{
