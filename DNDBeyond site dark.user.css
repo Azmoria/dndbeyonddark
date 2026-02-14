@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.667
+@version      1.2.668
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -6957,7 +6957,13 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
    .ui-dialog .mce-edit-area iframe{
          filter: none !important; 
     }
-
+	.hide-button.active span{
+		color: var(--link-color) !important;
+	}
+	.hide-button.active {
+		border-color: var(--link-color) !important;
+		background: color-mix(in srgb, var(--link-color) 15%, /*[[rollCalcColor]]*/ 100%) !important;
+	}
 	body .gamelogcontainer .sidebar__pane-content {
 		border: none !important;
 	}
@@ -7755,6 +7761,7 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
     #scenes-panel .selected-scene{
         border-color: /*[[linkColor]]*/ !important;
         box-shadow: inset 0px 0px 1px 1px /*[[linkColor]]*/;
+		background: color-mix(in srgb, var(--link-color) 5%, /*[[rollCalcColor]]*/ 100%) !important;
     }
     #combat_footer button{
         flex-grow: 1;   
