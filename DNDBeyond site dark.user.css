@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.668
+@version      1.2.669
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -2838,6 +2838,15 @@ on "Add Special Thanks Vanity" <<<EOT
 ==/UserStyle==*/
 /*Thanks to Hyrkali for the push to update the forums themeing to more closely resemble the original theme, providing an example and indentifying issues.*/
 /* Alternative Color for font to match DND Beyond Green #47D18C */
+
+@-moz-document regexp("https://www.dndbeyond.com/my-dice"){
+	main>section{
+		margin: 0px !important;
+		width:100% !important;
+		max-width: 100% !important;
+	}
+}
+
 @-moz-document regexp("https://www.dndbeyond.com/sources.*"),
 regexp("https://www.dndbeyond.com/forums.*"),
 regexp("https://www.dndbeyond.com/spells.*"),
@@ -4845,14 +4854,17 @@ regexp("https://www.dndbeyond.com/en/library.*"){
         margin-top: -60px;
     }
     
-    .dice-set__info__title{
+    .dice-set__info__title,
+	[class*="familySetsUl"] [class*="familyH1"]{
         font-size: 12pt;
     }
-    .dice-set__info__desc{
+    .dice-set__info__desc,
+	[class*="familySetsUl"] [class*="familyH1"] ~ p{
         font-size: 10pt; 
         line-height: 11pt;
     }
-    .dice-set {
+    .dice-set,
+	[class*="familySetsUl"]>li{
     margin: 5px;
     padding: 15px;
     border-width: /*[[borderWidth]]*/
@@ -4877,28 +4889,33 @@ regexp("https://www.dndbeyond.com/en/library.*"){
         bottom: 5px;
     }
     
-    .dice-set__subsets {
+    .dice-set__subsets,
+	[class*="familySetsUl"] [class*="setsUl"]{
         display: flex;
         flex-wrap: wrap;
         position: relative;
         
     }
-    .dice-set__subset{
+    .dice-set__subset,
+	[class*="familySetsUl"] [class*="setsUl"]{
         margin: 0px 7px 7px 0px
     }
-    .dice-mydice{
+    .dice-mydice,
+	[class*="familySetsUl"]{
         position: relative;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+		gap: 0px !important;
     }
     .dice-mydice .dice-header,
     .dice-set-current{
         min-width:100%   
     }
 
-    .dice-set{
+    .dice-set,
+	[class*="familySetsUl"]>li{
         flex-grow:1;
     }
     
