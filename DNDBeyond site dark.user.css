@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.669
+@version      1.2.670
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -674,7 +674,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/lfl/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/ffotr/fated-flight-of-the-recluse"),
 regexp("https://www.dndbeyond.com/sources/dnd/efota/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/oswhap/(.|\s)*\S(.|\s)*"),
-regexp("https://www.dndbeyond.com/sources/dnd/exeb/(.|\s)*\S(.|\s)*")
+regexp("https://www.dndbeyond.com/sources/dnd/exeb/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/fpw1/(.|\s)*\S(.|\s)*")
 
 {
 
@@ -1455,7 +1456,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/aboh(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/lfl(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/efota(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/oswhap(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/exeb(/)?")
+regexp("https://www.dndbeyond.com/sources/dnd/exeb(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/fpw1(/)?")
 {
    
     #site-main,
@@ -1566,7 +1568,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/aboh(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/lfl(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/efota(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/oswhap(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/exeb(/)?") {
+regexp("https://www.dndbeyond.com/sources/dnd/exeb(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/fpw1(/)?") {
 
     @media (min-width: 1024px) {
         body {
