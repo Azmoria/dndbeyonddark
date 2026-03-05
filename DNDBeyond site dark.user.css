@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.672
+@version      1.2.673
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -2880,7 +2880,8 @@ regexp("https://www.dndbeyond.com/campaigns.*abovevtt.*"),
 regexp("https://www.dndbeyond.com/spell-list.*"), regexp("https://www.dndbeyond.com/creature-rule.*"), regexp("https://www.dndbeyond.com/community-update.*"), regexp("https://www.dndbeyond.com/characters/premade.*"), regexp("https://www.dndbeyond.com/claim.*"), regexp("https://www.dndbeyond.com/.*dmScreen=1.*"),
 regexp("https://www.dndbeyond.com/project-sigil/download"),
 regexp("https://www.dndbeyond.com/species.*"),
-regexp("https://www.dndbeyond.com/en/library.*"){
+regexp("https://www.dndbeyond.com/en/library.*"),
+regexp("https://www.dndbeyond.com/resources.*"){
 
 
     :root, :before, :after{
@@ -3596,7 +3597,8 @@ this doesn't work  with the inert library page, annoying to have to click but un
 	[class*='Filters_buttonFilterLabel'],
 	[class*='Select_light'] :is([class*='Select_button'], [class*='Select_list']),
 	[class*='styles_characterSettingsModal'],
-	[class*='styles_previewContainer']
+	[class*='styles_previewContainer'],
+	.section-resources .p-article-a
     {
         background-color: /*[[backgroundColor]]*/
         !important;
@@ -4449,7 +4451,8 @@ this doesn't work  with the inert library page, annoying to have to click but un
     .character-builder span[class*=numberDisplay], .character-builder span[class*=spellName],
     .body-page .p-article-a .p-article-content .h5-override,
 	.section-grim-hollow-players-guide li::marker, 
-	.section-grim-hollow-players-guide strong:not(ul strong,.flexible-double-column.hangingIndent strong,.epigraph strong)
+	.section-grim-hollow-players-guide strong:not(ul strong,.flexible-double-column.hangingIndent strong,.epigraph strong),
+	.section-resources .character-sheet-display p
     {
         color: /*[[fontColor]]*/ !important;
     }
