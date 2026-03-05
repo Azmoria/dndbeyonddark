@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.670
+@version      1.2.672
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -2943,7 +2943,8 @@ regexp("https://www.dndbeyond.com/en/library.*"){
         --dark-sb-rules-sidebar: /*[[backgroundColor]]*/ !important;
     }
 
-
+/*
+this doesn't work  with the inert library page, annoying to have to click but unlesse they change that cant be fixed here
 	[class*='_NavigationMenuContainer_'] [class*='_menuNavList_']{
 		li[class*='_panelButton_']>button[class*='_menuLink'] ~ [class*='_panel_'] {
 			transition: 0s all 0.4s;
@@ -2962,7 +2963,7 @@ regexp("https://www.dndbeyond.com/en/library.*"){
 			pointer-events: auto;
 		}
 	}
-
+*/
     [class*='_megaMenu_']{
 
 	
