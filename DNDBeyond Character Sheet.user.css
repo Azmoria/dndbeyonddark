@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.361
+@version      1.3.362
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -251,6 +251,7 @@ EOT;
     EOT;
     Rainbow "Rainbow"<<<EOT
     canvas.dice-rolling-panel__container,
+	div#character-tools-target>canvas,
     body#diceTrayBody video,
     body#diceTrayBody canvas{
     -webkit-animation: rainbow var(--rgb-speed) linear infinite;
@@ -277,7 +278,8 @@ EOT;
     Custom "Custom RGB"<<<EOT
         canvas.dice-rolling-panel__container,
         body#diceTrayBody video,
-        body#diceTrayBody canvas{
+        body#diceTrayBody canvas,
+		div#character-tools-target>canvas{
             -webkit-animation: rgb var(--rgb-speed) linear infinite;
             }
         @-webkit-keyframes rgb {
@@ -811,7 +813,8 @@ EOT;
     off "OFF" <<<EOT
     EOT;
     on "ON" <<<EOT
-        canvas.dice-rolling-panel__container{
+        canvas.dice-rolling-panel__container,
+		div#character-tools-target>canvas{
             max-width: calc(100% - var(--sidebar-width, 340px)) !important;
         }
     EOT;
@@ -875,11 +878,16 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
         --dice-color-hover:/*[[rollCalcColor]]*/;
         --dice-color: /*[[rollCalcColor]]*/;
     }
-    * {
-        scrollbar-width: thin;
-        scrollbar-color: /*[[scrollbarColor]]*/ /*[[sheetColor]]*/;
-        --common-1000: /*[[fontColor]]*/;
+    *{
+        scrollbar-width: thin !important;
+        scrollbar-color: /*[[scrollbarColor]]*/ /*[[sheetColor]]*/ !important;
+        --common-1000: /*[[fontColor]]*/ !important;
     }
+	*::after,
+	*::before{
+		scrollbar-width: initial !important;
+        scrollbar-color: initial !important;
+	}
     
     *:focus{
      outline: none !important;   
@@ -3460,12 +3468,14 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
 
     
     canvas.dice-rolling-panel__container,
-    .dice-rolling-panel{
+    .dice-rolling-panel,
+	div#character-tools-target>canvas{
         z-index: /*[[zindex]]*/ !important;
     }
 
     canvas.dice-rolling-panel__container,
-    .dice-toolbar{
+    .dice-toolbar,
+	div#character-tools-target>canvas{
         position: fixed;
     }
 
@@ -3532,7 +3542,8 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
         border: 3px /*[[rollColor]]*/ solid !important;
     }
     
-    canvas.dice-rolling-panel__container{
+    canvas.dice-rolling-panel__container,
+	div#character-tools-target>canvas{
         opacity: /*[[diceOpacity]]*/;  
     }
     /*[[scrollWheelHP]]*/
@@ -3554,6 +3565,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
       
 /*dice Cusomtization and JS compainion script css*/   
     canvas.dice-rolling-panel__container,
+	div#character-tools-target>canvas,
     body#diceTrayBody video,
     body#diceTrayBody canvas,
     canvas#dddice-canvas{
