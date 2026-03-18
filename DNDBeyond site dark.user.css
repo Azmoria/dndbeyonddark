@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.673
+@version      1.2.674
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -651,6 +651,7 @@ regexp("https://www.dndbeyond.com/sources/dnd/gsb2/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/hwt/(.|\s)*\S(.|\s)*"), 
 regexp("https://www.dndbeyond.com/sources/dnd/isotss/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/hgtmh1/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/hgtmh2/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/ottg/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/tmom/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/vsspp/(.|\s)*\S(.|\s)*"),
@@ -1437,6 +1438,7 @@ regexp("https://www.dndbeyond.com/sources/dnd/mm-2024(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/hwt(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/isotss(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/hgtmh1(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/hgtmh2(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/ottg(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/tmom(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/ssh(/)?"),
@@ -1549,6 +1551,7 @@ regexp("https://www.dndbeyond.com/sources/dnd/mm-2024(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/hwt(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/isotss(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/hgtmh1(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/hgtmh2(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/ottg(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/tmom(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/ssh(/)?"),
