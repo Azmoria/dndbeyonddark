@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.674
+@version      1.2.675
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -647,6 +647,7 @@ regexp("https://www.dndbeyond.com/sources/dnd/free-rules/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/uhlh/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/soee/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/lotrr/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/gsb1/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/gsb2/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/hwt/(.|\s)*\S(.|\s)*"), 
 regexp("https://www.dndbeyond.com/sources/dnd/isotss/(.|\s)*\S(.|\s)*"),
@@ -1433,6 +1434,7 @@ regexp("https://www.dndbeyond.com/sources/dnd/phb-2024(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/free-rules(/)?"), 
 regexp("https://www.dndbeyond.com/sources/dnd/dmg-2024(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/lotrr(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/gsb1(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/gsb2(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/mm-2024(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/hwt(/)?"),
@@ -1546,6 +1548,7 @@ regexp("https://www.dndbeyond.com/sources/dnd/phb-2024(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/free-rules(/)?"), 
 regexp("https://www.dndbeyond.com/sources/dnd/dmg-2024(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/lotrr(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/gsb1(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/gsb2(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/mm-2024(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/hwt(/)?"),
@@ -1622,6 +1625,13 @@ regexp("https://www.dndbeyond.com/sources/dnd/fpw1(/)?") {
 @-moz-document regexp("https://www.dndbeyond.com/sources/dnd/ottg(/)?"){
     body{
         background-position: center 60% !important;
+       
+    }
+}
+
+@-moz-document regexp("https://www.dndbeyond.com/sources/dnd/gsb1(/)?"){
+    body{
+        background-position: center 0% !important;
        
     }
 }
@@ -3619,6 +3629,13 @@ this doesn't work  with the inert library page, annoying to have to click but un
     body.responsive-enabled #site #site-main .container #content .poem--copper-song{
         color: initial !important;
     }
+	.gsb2-epigraph-small,
+	.gsb2-epigraph{
+		background-image: none;
+	}
+	.text--rules-sidebar p:first-of-type{
+		color: var(--font-color);
+	}
 	.section-heroes-of-the-borderlands .npc-card{
 		background-image: none;
 		background: var(--background-color);
