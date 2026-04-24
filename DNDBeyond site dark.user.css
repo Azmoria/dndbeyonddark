@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.675
+@version      1.2.676
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -85,6 +85,7 @@ dark "Dark Mode" <<<EOT
 
 
     }
+
 	:root .section-exploring-eberron{
 	 	--theme-primary-color: #229ed8;
 	   --theme-secondary-color: rgba(66, 104, 123);
@@ -99,6 +100,19 @@ dark "Dark Mode" <<<EOT
     body.section-cthulhu-by-torchlight li::marker{
         color: hsl(242 45% 71% / 1) !important;
     }
+	.section-dr-dhrolins-dictionary-of-dinosaurs .text--rules-sidebar p:first-of-type{
+		color: #424cbd;
+	}
+	.section-dr-dhrolins-dictionary-of-dinosaurs.body-page .p-article-a .p-article-content .stat-block{
+		--stat-block-bg-override: none;
+	}
+	.section-dr-dhrolins-dictionary-of-dinosaurs.body-page .p-article-a .p-article-content .stat-block .monster-header{
+		
+	}
+	.section-dr-dhrolins-dictionary-of-dinosaurs .compendium-art figcaption,
+	.section-dr-dhrolins-dictionary-of-dinosaurs .dhrolin-red-text{
+		color: #bc152e;
+	}
     .section-dungeon-masters-guide .rhythm-of-play{
         --example-bg: rgba(30, 30, 30, .878);
         --example-bg-emphasis: #c8dcdb;
@@ -677,8 +691,9 @@ regexp("https://www.dndbeyond.com/sources/dnd/ffotr/fated-flight-of-the-recluse"
 regexp("https://www.dndbeyond.com/sources/dnd/efota/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/oswhap/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/exeb/(.|\s)*\S(.|\s)*"),
-regexp("https://www.dndbeyond.com/sources/dnd/fpw1/(.|\s)*\S(.|\s)*")
-
+regexp("https://www.dndbeyond.com/sources/dnd/fpw1/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/dddod/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/dmrf/(.|\s)*\S(.|\s)*")
 {
 
     #site-main,
@@ -1461,7 +1476,9 @@ regexp("https://www.dndbeyond.com/sources/dnd/lfl(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/efota(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/oswhap(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/exeb(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/fpw1(/)?")
+regexp("https://www.dndbeyond.com/sources/dnd/fpw1(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/dddod(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/dmrf(/)?")
 {
    
     #site-main,
@@ -1575,7 +1592,9 @@ regexp("https://www.dndbeyond.com/sources/dnd/lfl(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/efota(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/oswhap(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/exeb(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/fpw1(/)?") {
+regexp("https://www.dndbeyond.com/sources/dnd/fpw1(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/dddod(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/dmrf(/)?") {
 
     @media (min-width: 1024px) {
         body {
@@ -2943,6 +2962,7 @@ regexp("https://www.dndbeyond.com/resources.*"){
         --rgb-to: hue-rotate(/*[[rgbTo]]*/deg);
         --rgb-sliders-check: /*[[diceTint]]*/;
         --character-sheet-border: /*[[borderColor]]*/;
+		--log-body: var(--font-color);
     }
     table.table-compendium *{
         --sb-table-row-bg-hover: /*[[backgroundColor]]*/ !important;
@@ -2957,27 +2977,6 @@ regexp("https://www.dndbeyond.com/resources.*"){
         --dark-sb-rules-sidebar: /*[[backgroundColor]]*/ !important;
     }
 
-/*
-this doesn't work  with the inert library page, annoying to have to click but unlesse they change that cant be fixed here
-	[class*='_NavigationMenuContainer_'] [class*='_menuNavList_']{
-		li[class*='_panelButton_']>button[class*='_menuLink'] ~ [class*='_panel_'] {
-			transition: 0s all 0.4s;
-		}
-		li[class*='_panelButton_']>button[class*='_menuLink']:hover ~ [class*='_panel_'] {
-			transition: 0s all 0s;
-			opacity: 1;
-			transform: translateY(0);
-			pointer-events: auto;
-		}
-
-		li[class*='_panelButton_']>button[class*='_menuLink']~ [class*='_panel_']:hover  {
-			transition: 0s all 0s;
-			opacity: 1;
-			transform: translateY(0);
-			pointer-events: auto;
-		}
-	}
-*/
     [class*='_megaMenu_']{
 
 	
