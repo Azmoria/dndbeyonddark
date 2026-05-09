@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.677
+@version      1.2.678
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -3642,6 +3642,11 @@ regexp("https://www.dndbeyond.com/en/library/.*"){
 	.mce-btn, .mce-btn button{
 		background: none !important;
 		box-shadow: none !important;
+		border-radius:5px !important;
+	}
+	.mce-btn.mce-active, .mce-btn.mce-active:hover{
+		background: color-mix(in srgb, var(--background-color) 50%, var(--link-color) 50%) !important;
+        border-radius:5px !important;
 	}
 	.mce-btn:hover, .mce-btn:focus {
 
