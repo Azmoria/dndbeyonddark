@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.676
+@version      1.2.677
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -2913,7 +2913,8 @@ regexp("https://www.dndbeyond.com/spell-list.*"), regexp("https://www.dndbeyond.
 regexp("https://www.dndbeyond.com/project-sigil/download"),
 regexp("https://www.dndbeyond.com/species.*"),
 regexp("https://www.dndbeyond.com/en/library.*"),
-regexp("https://www.dndbeyond.com/resources.*"){
+regexp("https://www.dndbeyond.com/resources.*"),
+regexp("https://www.dndbeyond.com/en/library/.*"){
 
 
     :root, :before, :after{
@@ -2928,8 +2929,24 @@ regexp("https://www.dndbeyond.com/resources.*"){
         --transparency-color: /*[[transparencyBackgroundColor]]*/;
         --ttui_color-text--secondary: /*[[fontColor]]*/;
 		--link-color: /*[[linkColor]]*/;
-		--Heading-Text-on-light: /*[[fontColor]]*/    }
-    
+		--Heading-Text-on-light: /*[[fontColor]]*/;
+		--text-color: /*[[fontColor]]*/;
+		--text-color-active: /*[[fontColor]]*/;
+		--border-color-active: /*[[borderColor]]*/;   }
+
+
+    [class*="Table_root"] {
+		--input-label-color: var(--text-color);
+		--input-background-color: var(--text-color);
+		--input-border-color: var(--border-color);
+		--table-text-color: var(--text-color);
+		--table-background-color: var(--background-color);
+		--table-border-color: var(--border-color);
+		--heading-hover-color: var(--lexicon_gold-200);
+		--row-link-color: var(--lexicon_gold-300);
+		--row-divider-color: var(--border-color);
+		--row-hover-color: var(--lexicon_gold-600);
+	}
     :root .site{
         --theme-table-row-bg-hover: /*[[backgroundColor]]*/;
         --theme-table-row-bg-dark: /*[[backgroundColor]]*/;
@@ -3584,7 +3601,6 @@ regexp("https://www.dndbeyond.com/resources.*"){
     aside.text--krynn-letter,
     aside.text--krynn-sidebar,
     .mce-abs-layout,
-    .mce-btn button,
     html body.responsive-enabled, 
     .monster-stat-block-no-access-content,
     .builder-page .builder-type-instructions ~ .MuiGrid-root [class*='ddb-character-app'],
@@ -3610,7 +3626,8 @@ regexp("https://www.dndbeyond.com/resources.*"){
 	[class*='Select_light'] :is([class*='Select_button'], [class*='Select_list']),
 	[class*='styles_characterSettingsModal'],
 	[class*='styles_previewContainer'],
-	.section-resources .p-article-a
+	.section-resources .p-article-a,
+	[class*='PageSection_section'][style*="background-color:"]
     {
         background-color: /*[[backgroundColor]]*/
         !important;
@@ -3619,6 +3636,20 @@ regexp("https://www.dndbeyond.com/resources.*"){
         color: /*[[fontColor]]*/
         !important;
     }
+	[class*='PageSection_section'][style*="background-color:"] > [class*='PageSection_imagePositionWrapper']{
+		mix-blend-mode: soft-light;
+	}
+	.mce-btn, .mce-btn button{
+		background: none !important;
+		box-shadow: none !important;
+	}
+	.mce-btn:hover, .mce-btn:focus {
+
+		box-shadow: inset 0px 0px 0px 1px color-mix(in srgb, var(--background-color) 50%, var(--link-color) 100%) !important;
+		border-radius:5px !important;
+
+	}
+
 	[class*='Select_light'] [class*='Select_button']:hover{
 		background: color-mix(in srgb, var(--background-color) 100%, var(--link-color) 20%) !important;
 	}
@@ -4146,7 +4177,9 @@ regexp("https://www.dndbeyond.com/resources.*"){
     .player-info-table th{
         padding: 5px;
     }
-
+	[class*="Table_tableWrapper"] {
+		background: none;
+	}
     .static-container-details .content-container table:not(.physical, .mental) tbody tr:nth-child(odd) td,
     table.table-compendium>tbody>tr:nth-child(odd) td,
     table.wiki-content-table>tbody>tr:nth-child(odd) td,
@@ -4159,7 +4192,8 @@ regexp("https://www.dndbeyond.com/resources.*"){
     .compendium-left-aligned-table tr:nth-child(odd) td,
     .vehicle-stat-block.vehicle-stat-block-spelljammer .vehicle-stat-block__attributes div:nth-child(odd),
     .table-compendium tr:nth-child(odd) td,
-    .ability-score-calcs [class*='styles_row']:nth-child(2n+3 of [class*='styles_row']) div
+    .ability-score-calcs [class*='styles_row']:nth-child(2n+3 of [class*='styles_row']) div,
+	[class*="Table_tableWrapper"] tbody tr:nth-child(odd) td
     { 
         background: none !important;
         backdrop-filter: brightness(0.8);      
@@ -4475,6 +4509,15 @@ regexp("https://www.dndbeyond.com/resources.*"){
     {
         color: /*[[fontColor]]*/ !important;
     }
+
+	label{
+		color: var(--font-color);
+	}
+	[class*="Pagination_paginationWrapper"]{
+		--text-color: var(--font-color);
+		--text-color-active: var(--font-color);
+		--border-color-active: var(--link-color);
+	}
     .section-monster-manual .monster-lore{
         background-blend-mode: soft-light;
         border: none !important;
