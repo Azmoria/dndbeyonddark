@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.678
+@version      1.2.679
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -7122,13 +7122,26 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
     [class*="glc-game-log"] [class*="MessageContainer-Flex"] div.note-text .read-aloud-text * {   
         color: #242527 !important;
     }
-
+	.share-player-visibility:hover .visibility-toggle-container, .visibility-toggle-container:hover{
+		background: color-mix(in srgb, /*[[sidebarColor]]*/ 90%, #0000);
+	}
+	.visibility-container button{
+		appearance:none;
+		background: none;
+		border: 1px solid var(--border-color);
+		border-radius:5px;
+		color: var(--font-color);
+	}
+	.visibility-container button.share-player-visibility:after{
+		border-color: var(--font-color) #0000 #0000 #0000;
+	}
     .block-send-to-game-log span{
         color: /*[[fontColor]]*/ !important;
         text-shadow:1px 1px 2px #000;
     }
     .block-send-to-game-log{
         backdrop-filter:brightness(0.6);
+		background: /*[[sidebarColor]]*/;
     }
     button.block-send-to-game-log:has(.whisper-container.visible){
         border-color:/*[[borderColor]]*/;
