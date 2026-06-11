@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.681
+@version      1.2.683
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -16,7 +16,7 @@
 @var color rollCalcColor "Roll Results Background Color" #030f1acc
 @advanced dropdown fontContrast "Font Contrast Colors" {
 dark "Dark Mode" <<<EOT
-f
+
 
     
     @supports (-moz-appearance:none){
@@ -3627,7 +3627,9 @@ regexp("https://www.dndbeyond.com/en/library/.*"){
 	[class*='styles_characterSettingsModal'],
 	[class*='styles_previewContainer'],
 	.section-resources .p-article-a,
-	[class*='PageSection_section'][style*="background-color:"]
+	[class*='PageSection_section'][style*="background-color:"],
+	[class*='styles_option'],
+	.ddb-footer__privacy-policy-notice
     {
         background-color: /*[[backgroundColor]]*/
         !important;
@@ -4790,7 +4792,8 @@ regexp("https://www.dndbeyond.com/en/library/.*"){
      aside.text--krynn-sidebar,
     [class*=Button][class*='styles_dark'],
     [class*=Checkbox][class*='styles_builder'] input:checked,
-	.epigraph
+	.epigraph,
+	[class*='styles_paper'] [class*='styles_content']:before
     {
         border-width: /*[[borderWidth]]*/
         !important;
@@ -4800,7 +4803,9 @@ regexp("https://www.dndbeyond.com/en/library/.*"){
         !important;
         outline: none !important;
     }
- 
+	[class*='styles_paper'] [class*='styles_content']:after{
+		border:none;
+	}
 	aside[class*="eddyism"],
 	#missingposterportrait,
 	.npc-card .notes-section
@@ -5324,7 +5329,7 @@ regexp("https://www.dndbeyond.com/en/library/.*"){
         background-size: 102% 100%;
         z-index: -1;
     }
-        [class*='styles_paper'] [class*='styles_summary']{
+	[class*='styles_paper'] [class*='styles_summary_']{
         background-image: url(https://www.dndbeyond.com/Content/Skins/Waterdeep/images/listing-bars/1a-700.png), linear-gradient(/*[[backgroundColor]]*/, /*[[backgroundColor]]*/) !important;
         background-blend-mode: overlay, normal !important;
         
