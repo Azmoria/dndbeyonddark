@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.683
+@version      1.2.684
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -338,6 +338,12 @@ dark "Dark Mode" <<<EOT
     .section-the-griffons-saddlebag-book-two .text--rules-sidebar strong{
         color: #9c8473 !important;
     }
+	.section-ravenloft-the-horrors-within .dark-domain-details {
+		background: linear-gradient(90deg, hsl(304deg 33% 20% / 0%), hsl(304 33% 10% / 1) 40px, hsl(304 33% 10% / 1) 83%, hsl(304deg 33% 20% / 0%));
+	}
+	:root .section-ravenloft-the-horrors-within{
+		--theme-primary-color: #481839;
+	}
     .section-flee-mortals-rule-primer a [data-content-type=mcdm-companion]:before, 
     .section-flee-mortals a [data-content-type=mcdm-companion]:before, 
     .section-where-evil-lives a [data-content-type=mcdm-companion]:before,
@@ -693,7 +699,15 @@ regexp("https://www.dndbeyond.com/sources/dnd/oswhap/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/exeb/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/fpw1/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/dddod/(.|\s)*\S(.|\s)*"),
-regexp("https://www.dndbeyond.com/sources/dnd/dmrf/(.|\s)*\S(.|\s)*")
+regexp("https://www.dndbeyond.com/sources/dnd/dmrf/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/logsfc/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/sos/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/rthw/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/logttc/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/ns/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/nwb/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/dmr/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/logeer/(.|\s)*\S(.|\s)*"),
 {
 
     #site-main,
@@ -1478,7 +1492,15 @@ regexp("https://www.dndbeyond.com/sources/dnd/oswhap(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/exeb(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/fpw1(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/dddod(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/dmrf(/)?")
+regexp("https://www.dndbeyond.com/sources/dnd/dmrf(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/logsfc(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/sos(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/rthw(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/logttc(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/ns(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/nwb(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/dmr(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/logeer(/)?"),
 {
    
     #site-main,
@@ -1594,7 +1616,15 @@ regexp("https://www.dndbeyond.com/sources/dnd/oswhap(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/exeb(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/fpw1(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/dddod(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/dmrf(/)?") {
+regexp("https://www.dndbeyond.com/sources/dnd/dmrf(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/logsfc(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/sos(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/rthw(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/logttc(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/ns(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/nwb(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/dmr(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/logeer(/)?"), {
 
     @media (min-width: 1024px) {
         body {
