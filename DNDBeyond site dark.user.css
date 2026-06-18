@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.684
+@version      1.2.685
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -8171,7 +8171,9 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
     #combat_tracker_inside #combat_area button,
     #qrm_dialog button,
 	.locate-portal,
+	.go-to-scene-portal span.material-symbols-outlined,
 	.place-linked-portal,
+	.delete-portal,
 	.place-linked-portal{
         color: /*[[fontColor]]*/ !important;
     }
@@ -8508,6 +8510,8 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
     #combat_area input.init,
     #qrm_dialog button,
 	.locate-portal,
+	.go-to-scene-portal,
+	.delete-portal,
 	.place-linked-portal{
         border: none !important;  ;  
         text-shadow:none !important;
@@ -8558,19 +8562,28 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
     #combat_area button:hover,
     #qrm_dialog button:hover,
 	.locate-portal:hover,
+	.go-to-scene-portal:hover,
+	.delete-portal:hover,
 	.place-linked-portal:hover{
         box-shadow: inset 0 1px 1px -2px /*[[linkColor]]*/, inset -1px -1px 3px -2px /*[[linkColor]]*/;  
         color: /*[[linkColor]]*/;  
     }
+	.go-to-scene-portal:hover span{
+		color: /*[[linkColor]]*/;
+	}
     #combat_area button,
     #qrm_dialog button,
 	.locate-portal,
+	.delete-portal,
+	.go-to-scene-portal,
 	.place-linked-portal{
         box-shadow: inset 0 1px 1px -2px /*[[fontColor]]*/, inset -1px -1px 4px -2px /*[[fontColor]]*/;
     }
     #combat_area button:hover,
     #qrm_dialog button:hover,
 	.locate-portal:hover,
+	.delete-portal:hover,
+	.go-to-scene-portal:hover,
 	.place-linked-portal:hover{
         box-shadow: inset 0 1px 1px -2px /*[[linkColor]]*/, inset -1px -1px 4px -2px /*[[linkColor]]*/;
     }
@@ -8586,6 +8599,7 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
     #qrm_dialog button:hover .rollSVG path:not([fill*="none"]), 
     #qrm_dialog button:hover .findSVG path:not([fill*="none"]), 
     #qrm_dialog button:hover .delSVG path:not([fill*="none"]), 
+	#portal_config_window button:hover .delSVG path:not([fill*="none"]),
     #qrm_dialog button:hover .statSVG path:not([fill*="none"]),
 	#portal_config_window button:hover .findSVG path:not([fill*="none"]),
     .encounter-body .removeItem .delSVG path:not([fill*="none"]){
@@ -8597,6 +8611,8 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
     #qrm_dialog button,
     #combat_tracker_inside #round_number_label button,
 	.locate-portal,
+	.delete-portal,
+	.go-to-scene-portal,
 	.place-linked-portal{
         background-image:none !important;
         background:  /*[[combatTrackerBackgroundColor]]*/ !important;
@@ -8679,14 +8695,18 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
     #quick_roll_area #qrm_roll_result{
         width: 55% !important;
     }
-    #qrm_dialog button,
-	.locate-portal,
-	.place-linked-portal{
+    #qrm_dialog button{
         border-radius: 5px !important;
         margin-top:5px
             
     }
     
+	.locate-portal,
+	.go-to-scene-portal,
+	.place-linked-portal,
+	.delete-portal{
+  		border-radius: 5px;
+	}
     #quick_roll_area #qrm_roll_result[style*='background: red']{
         box-shadow:inset 0px 0px 10px 0px #F00 !important;
     }
