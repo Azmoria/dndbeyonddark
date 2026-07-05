@@ -100,12 +100,17 @@ dark "Dark Mode" <<<EOT
     body.section-cthulhu-by-torchlight li::marker{
         color: hsl(242 45% 71% / 1) !important;
     }
+	.section-steinhardts-guide-to-the-eldritch-hunt-player-pack .section-compendium-content:before,
+	.section-steinhardts-guide-to-the-eldritch-hunt-player-pack .section-compendium-content:after{
+		mix-blend-mode: multiply;
+	}
 	.section-dr-dhrolins-dictionary-of-dinosaurs .text--rules-sidebar p:first-of-type{
 		color: #424cbd;
 	}
 	.section-dr-dhrolins-dictionary-of-dinosaurs.body-page .p-article-a .p-article-content .stat-block{
 		--stat-block-bg-override: none;
 	}
+	
 	.section-dr-dhrolins-dictionary-of-dinosaurs.body-page .p-article-a .p-article-content .stat-block .monster-header{
 		
 	}
@@ -708,6 +713,7 @@ regexp("https://www.dndbeyond.com/sources/dnd/ns/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/nwb/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/dmr/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/logeer/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/sgehpp/(.|\s)*\S(.|\s)*")
 {
 
     #site-main,
@@ -1501,6 +1507,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/ns(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/nwb(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/dmr(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/logeer(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/sgehpp(/)?")
+
 {
    
     #site-main,
@@ -1624,7 +1632,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/logttc(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/ns(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/nwb(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/dmr(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/logeer(/)?"), {
+regexp("https://www.dndbeyond.com/sources/dnd/logeer(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/sgehpp(/)?") {
 
     @media (min-width: 1024px) {
         body {
@@ -3208,7 +3217,7 @@ regexp("https://www.dndbeyond.com/en/library/.*"){
     body#diceTrayBody canvas,
     canvas#dddice-canvas,
     #dddice canvas{
-        filter: /*[[diceTint]]*/
+       filter: /*[[diceTint]]*/
     }
     .p-comments-b .p-comment-post, 
     .body-forum .comment-preview li .p-comment-post, 
@@ -9621,8 +9630,8 @@ regexp("https://www.dndbeyond.com/encounters.*#DiceTray"), regexp("https://www.d
     /*[[hideDiceOnSheet]]*/
 }
 
+ /*[[compendiumBackgrounds]]*/
 
-
-    /*[[compendiumBackgrounds]]*/
+    
 
 
