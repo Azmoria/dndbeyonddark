@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.686
+@version      1.2.687
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -713,7 +713,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/ns/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/nwb/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/dmr/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/logeer/(.|\s)*\S(.|\s)*"),
-regexp("https://www.dndbeyond.com/sources/dnd/sgehpp/(.|\s)*\S(.|\s)*")
+regexp("https://www.dndbeyond.com/sources/dnd/sgehpp/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/vsspp2/(.|\s)*\S(.|\s)*")
 {
 
     #site-main,
@@ -4924,7 +4925,8 @@ regexp("https://www.dndbeyond.com/en/library/.*"){
     .sidenav-comp-page a,
     .top-table-page a,
     [class*='styles_searchSort'] label,
-	main[class*='page_root']{
+	main[class*='page_root'],
+	.stat-block{
         background-image: none !important;
     }   
     .section-the-book-of-many-things .black-card-suite{
@@ -9265,7 +9267,8 @@ regexp("https://www.dndbeyond.com/en")	{
 regexp("https://www.dndbeyond.com/combat-tracker.*"), regexp("https://www.dndbeyond.com/campaigns/.*"),
 regexp("https://www.dndbeyond.com/encounters/.*"), regexp("https://www.dndbeyond.com/my-encounters"), regexp("https://www.dndbeyond.com/monsters/.*"), regexp("https://www.dndbeyond.com/encounter-builder.*#DiceTray"),
 regexp("https://www.dndbeyond.com/combat-tracker.*#DiceTray"), regexp("https://www.dndbeyond.com/campaigns.*#DiceTray"),
-regexp("https://www.dndbeyond.com/encounters.*#DiceTray"), regexp("https://www.dndbeyond.com/my-encounters.*#DiceTray"), regexp("https://dddice.com/room/.*"){
+regexp("https://www.dndbeyond.com/encounters.*#DiceTray"), regexp("https://www.dndbeyond.com/my-encounters.*#DiceTray"), regexp("https://dddice.com/room/.*"),
+	regexp("https://www.dndbeyond.com/sources/.*"){
     :root {
         --custom-capture-background: /*[[customCaptureBackground]]*/;
         --dice-color: sepia(/*[[diceSepia]]*/%) hue-rotate(/*[[hueRotation]]*/deg) brightness(/*[[diceBrightness]]*/%) saturate(/*[[diceSaturation]]*/%) contrast(/*[[diceContrast]]*/%) invert(/*[[diceInvert]]*/);
