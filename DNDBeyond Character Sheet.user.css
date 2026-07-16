@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.366
+@version      1.3.367
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -4083,7 +4083,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
     #tokenOptionsPopup [id*="flyout"] li.active-condition,
     #tokenOptionsPopup [id*="flyout"] li:hover{
         background: /*[[sheetColor]]*/ !important;
-        box-shadow: inset 0 0 25px 5px color-mix(in srgb, /*[[rollColor]]*/ 25%, transparent 0%) inset 0 0 1px 1px color-mix(in srgb, /*[[fontColor]]*/ 35%, transparent 0%)  !important;
+        box-shadow: inset 0 0 25px 5px color-mix(in srgb, /*[[rollColor]]*/ 25%, transparent 0%), inset 0 0 1px 1px color-mix(in srgb, /*[[fontColor]]*/ 35%, transparent 0%)  !important;
         color: /*[[rollColor]]*/ !important;
     }
     
