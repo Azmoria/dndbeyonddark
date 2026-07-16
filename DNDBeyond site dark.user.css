@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.687
+@version      1.2.688
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -4578,7 +4578,7 @@ regexp("https://www.dndbeyond.com/en/library/.*"){
         padding: 0px;
     }
     .ddb-campaigns-character-card-footer-links a[href='#']{
-        background: /*[[linkColor]]*/44 !important;
+        background: color-mix(in-srgb, /*[[linkColor]]*/ 25% , transparent 0%) !important;
     }
     .article-main a,
     .sidebar-menu a,
@@ -8363,7 +8363,7 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
     #tokenOptionsPopup [id*="flyout"] li.active-condition,
     #tokenOptionsPopup [id*="flyout"] li:hover{
         background: /*[[backgroundColor]]*/ !important;
-        box-shadow: inset 0 0 25px 5px /*[[linkColor]]*/33, inset 0 0 1px 1px /*[[fontColor]]*/66  !important;
+        box-shadow: inset 0 0 25px 5px color-mix(in srgb, transparent 0%, /*[[linkColor]]*/ 25%), inset 0 0 1px 1px color-mix(in srgb, transparent 0%, /*[[fontColor]]*/ 35%) !important;
         color: /*[[linkColor]]*/ !important;
      
     }
