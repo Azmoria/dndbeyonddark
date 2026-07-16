@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.365
+@version      1.3.366
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -3823,7 +3823,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
 		color: var(--link-color);
 	}
     #settings-panel .sidebar-panel-body>button{
-        background: /*[[highlightColor]]*/33 !important;
+        background: color-mix(in srgb, /*[[highlightColor]]*/ 20%, transparent 0%) !important;
     }
     #light_presets_properties>div.light_preset_row,
     #animation_presets_properties>div.animation_preset_row,
@@ -4083,7 +4083,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
     #tokenOptionsPopup [id*="flyout"] li.active-condition,
     #tokenOptionsPopup [id*="flyout"] li:hover{
         background: /*[[sheetColor]]*/ !important;
-        box-shadow: inset 0 0 25px 5px /*[[rollColor]]*/33, inset 0 0 1px 1px /*[[fontColor]]*/66  !important;
+        box-shadow: inset 0 0 25px 5px color-mix(in srgb, /*[[rollColor]]*/ 25%, transparent 0%) inset 0 0 1px 1px color-mix(in srgb, /*[[fontColor]]*/ 35%, transparent 0%)  !important;
         color: /*[[rollColor]]*/ !important;
     }
     
@@ -4748,8 +4748,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
     button.daylight.active-daylight,
     #combat_button.ddbc-tab-options__header-heading--is-active{
         background: /*[[background]]*/ !important;
-        box-shadow: inset 0 0 25px 5px /*[[highlightColor]]*/33, inset 0 0 1px 1px /*[[fontColor]]*/66  !important;
-
+        box-shadow: inset 0 0 25px 5px color-mix(in srgb, /*[[highlightColor]]*/ 25%, transparent 0%), inset 0 0 1px 1px color-mix(in srgb, /*[[fontColor]]*/ 35%, transparent 0%) !important;
         color: /*[[highlightColor]]*/ !important;
     }
     .top_menu{
