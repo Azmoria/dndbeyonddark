@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.688
+@version      1.2.689
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -4578,7 +4578,7 @@ regexp("https://www.dndbeyond.com/en/library/.*"){
         padding: 0px;
     }
     .ddb-campaigns-character-card-footer-links a[href='#']{
-        background: color-mix(in-srgb, /*[[linkColor]]*/ 25% , transparent 0%) !important;
+        background: color-mix(in srgb, /*[[linkColor]]*/ 25% , transparent 0%) !important;
     }
     .article-main a,
     .sidebar-menu a,
