@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.691
+@version      1.2.692
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -3709,6 +3709,16 @@ regexp("https://www.dndbeyond.com/en/library/.*"){
 	.gsb2-epigraph-small,
 	.gsb2-epigraph{
 		background-image: none;
+	}
+	.section-vampire-the-masquerade-bound-by-blood{
+		--theme-page-bg-color: var(--background-color) !important;
+	}
+	
+	.section-vampire-the-masquerade-bound-by-blood :is(.compendium-toc-full-text, .compendium-toc-blockquote){
+		background: initial !important;   
+		:is(p, h3, li) {
+			text-shadow:none !important;
+		}
 	}
 	.text--rules-sidebar p:first-of-type{
 		color: var(--font-color);
