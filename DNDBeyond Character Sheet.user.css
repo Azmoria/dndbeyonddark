@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.373
+@version      1.3.374
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -223,10 +223,7 @@ no "No" <<<EOT
 EOT;
 }
 
-@var select zindex "Dice Over/Under the Results Popup" {
- "Under": "60000",
- "Over": "60002"
-}
+
 @var range diceOpacity "Dice Opacity" [1, 0.01, 1, 0.01]
 
 @advanced dropdown diceTint "Dice Tint" {
@@ -3473,11 +3470,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
     }
 
     
-    canvas.dice-rolling-panel__container,
-    .dice-rolling-panel,
-	div#character-tools-target>canvas{
-        z-index: /*[[zindex]]*/ !important;
-    }
+
 
     canvas.dice-rolling-panel__container,
     .dice-toolbar,
