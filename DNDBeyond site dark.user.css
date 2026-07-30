@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.693
+@version      1.2.695
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -7087,302 +7087,467 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
 
 
 	.dnd-sheet {
-	  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
-	  color: #e0e0e0 !important;
-	  background-color: #121212 !important;
-	  width: 100% !important;
-	  max-width: 850px !important;
-	  margin: 0 auto !important;
-	  box-sizing: border-box !important;
-	  font-size: 11px !important;
-	  line-height: 1.2 !important;
+
+		--bg-color: #121212;
+		--sheet-bg: #1e1e1e;
+		--text-color: #e0e0e0;
+		--text-muted: #aaaaaa;
+		--border-color: #444444;
+		--border-light: #333333;
+		--box-bg: #2d2d2d;
+		--header-bg: #252525;
+		--table-stripe: #252525;
+		--section-bg: #2a2a2a;
+		--section-text: #ffffff;
+
+
+
+		background-color: var(--bg-color);
+		color: var(--text-color);
+
+		font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		color: var(--text-color);
+		background-color: var(--sheet-bg);
+		width: 100%;
+		margin: 0 auto;
+		box-sizing: border-box;
+		font-size: 11px;
+		line-height: 1.2;
 
 		.dnd-page {
-		  border: 2px solid #444 !important;
-		  padding: 15px !important;
-		  margin-bottom: 30px !important;
-		  background: #181818 !important;
-		  page-break-after: always !important;
-		  box-sizing: border-box !important;
+		  border: 2px solid var(--border-color);
+		  padding: 15px;
+		  margin-bottom: 30px;
+		  background: var(--sheet-bg);
+		  page-break-after: always;
+		  box-sizing: border-box;
 		}
 
-		/* Header Block */
 		.header-box {
-		  border: 2px solid #444 !important;
-		  padding: 8px !important;
-		  margin-bottom: 10px !important;
-		  display: flex !important;
-		  gap: 8px !important;
-		  background: #222222 !important;
-		  box-sizing: border-box !important;
+		  border: 2px solid var(--border-color);
+		  padding: 8px;
+		  margin-bottom: 10px;
+		  display: flex;
+		  gap: 8px;
+		  background: var(--header-bg);
+		  box-sizing: border-box;
 		}
 
 		.header-box .col {
-		  flex: 1 !important;
-		  display: flex !important;
-		  flex-direction: column !important;
-		  justify-content: flex-end !important;
-		  box-sizing: border-box !important;
+		  flex: 1;
+		  display: flex;
+		  flex-direction: column;
+		  justify-content: flex-end;
+		  box-sizing: border-box;
 		}
 
 		.header-box .char-name-box {
-		  flex: 2 !important;
+		  flex: 2;
 		}
 
-		/* Common Box & Field Elements */
 		.box-field {
-		  border: 1px solid #555 !important;
-		  padding: 4px !important;
-		  background: #1e1e1e !important;
-		  color: #fff !important;
-		  min-height: 24px !important;
-		  height: auto !important;
-		  border-radius: 3px !important;
-		  box-sizing: border-box !important;
-		  overflow-wrap: break-word !important;
+		  border: 1px solid var(--border-color);
+		  padding: 4px;
+		  background: var(--box-bg);
+		  color: var(--text-color);
+		  min-height: 24px;
+		  height: auto;
+		  border-radius: 3px;
+		  box-sizing: border-box;
+		  overflow-wrap: break-word;
 		}
 
 		.label {
-		  font-size: 8px !important;
-		  text-transform: uppercase !important;
-		  color: #aaa !important;
-		  text-align: center !important;
-		  display: block !important;
-		  margin-top: 2px !important;
-		  font-weight: bold !important;
+		  font-size: 8px;
+		  text-transform: uppercase;
+		  color: var(--text-muted);
+		  text-align: center;
+		  display: block;
+		  margin-top: 2px;
+		  font-weight: bold;
 		}
 
-		/* Layout Containers */
 		.main-container {
-		  display: flex !important;
-		  gap: 10px !important;
-		  box-sizing: border-box !important;
+		  display: flex;
+		  gap: 10px;
+		  box-sizing: border-box;
 		}
 
 		.left-column {
-		  width: 140px !important;
-		  display: flex !important;
-		  flex-direction: column !important;
-		  gap: 10px !important;
-		  box-sizing: border-box !important;
+		  width: 140px;
+		  display: flex;
+		  flex-direction: column;
+		  gap: 10px;
+		  box-sizing: border-box;
 		}
 
-		.mid-column {
-		  flex: 1 !important;
-		  display: flex !important;
-		  flex-direction: column !important;
-		  gap: 10px !important;
-		  box-sizing: border-box !important;
+		.abilities-table-container, .skills-box {
+		  border: 1px solid var(--border-light);
+		  padding: 6px;
+		  background: var(--sheet-bg);
+		  border-radius: 4px;
+		  box-sizing: border-box;
 		}
 
-		/* Section Titles */
 		.section-title {
-		  font-size: 10px !important;
-		  font-weight: bold !important;
-		  text-align: center !important;
-		  background: #333 !important;
-		  color: #fff !important;
-		  padding: 3px !important;
-		  margin-bottom: 6px !important;
-		  border-radius: 2px !important;
-		  text-transform: uppercase !important;
-		  letter-spacing: 0.5px !important;
+		  font-size: 10px;
+		  font-weight: bold;
+		  text-align: center;
+		  background: var(--section-bg);
+		  color: var(--section-text);
+		  padding: 3px;
+		  margin-bottom: 6px;
+		  border-radius: 2px;
+		  text-transform: uppercase;
+		  letter-spacing: 0.5px;
+		  border: 1px solid var(--border-color);
 		}
 
-		/* Abilities & Skills Boxes */
-		.abilities-table-container,
-		.skills-box {
-		  border: 1px solid #444 !important;
-		  padding: 6px !important;
-		  background: #1c1c1c !important;
-		  border-radius: 4px !important;
-		  box-sizing: border-box !important;
+		table {
+		  width: 100%;
+		  border-collapse: collapse;
+		  text-align: center;
+		  font-size: 9px;
 		}
 
-		.abilities-table-container table {
-		  width: 100% !important;
-		  border-collapse: collapse !important;
-		  text-align: center !important;
-		  font-size: 9px !important;
-		  color: #e0e0e0 !important;
+		th {
+		  padding: 2px;
 		}
 
-		.abilities-table-container th {
-		  padding: 2px !important;
-		  text-align: left !important;
+		thead tr {
+		  border-bottom: 1px solid var(--border-light);
+		  font-size: 8px;
+		  text-transform: uppercase;
+		  color: var(--text-muted);
 		}
 
-		.abilities-table-container thead tr {
-		  border-bottom: 1px solid #444 !important;
-		  font-size: 8px !important;
-		  text-transform: uppercase !important;
-		  color: #aaa !important;
+		thead th:first-child {
+		  text-align: left;
 		}
 
-		.abilities-table-container tbody tr {
-		  border-bottom: 1px solid #2a2a2a !important;
+		tbody tr {
+		  border-bottom: 1px solid var(--table-stripe);
 		}
 
-		.abilities-table-container td {
-		  padding: 3px 2px !important;
+		tbody tr td {
+		  padding: 3px 2px;
+		}
+
+		tbody tr td:first-child {
+		  font-weight: bold;
+		  text-align: left;
+		  text-transform: uppercase;
+		  font-size: 8.5px;
+		}
+
+		tbody tr td:nth-child(2) {
+		  font-weight: bold;
+		  font-size: 11px;
+		}
+
+		.ability-score-field {
+		  display: inline-block;
+		  width: 22px;
+		  border: 1px solid var(--border-color);
+		  padding: 2px;
+		  background: var(--box-bg);
+		  color: var(--text-color);
+		  min-height: 14px;
+		  border-radius: 2px;
+		  box-sizing: border-box;
 		}
 
 		.skill-row {
-		  display: flex !important;
-		  align-items: center !important;
-		  font-size: 9.5px !important;
-		  margin-bottom: 3px !important;
-		  gap: 4px !important;
+		  display: flex;
+		  align-items: center;
+		  font-size: 9.5px;
+		  margin-bottom: 3px;
+		  gap: 4px;
 		}
 
-		.skill-row input[type="checkbox"] {
-		  margin: 0 !important;
-		  accent-color: #666 !important;
-		}
-
-		.skill-row span {
-		  color: #999 !important;
-		  font-size: 8px !important;
+		.skill-row input {
+		  margin: 0;
+		  accent-color: #666;
 		}
 
 		.mod-bullet {
-		  min-width: 24px !important;
-		  height: 24px !important;
-		  border: 1px solid #555 !important;
-		  text-align: center !important;
-		  font-size: 9px !important;
-		  line-height: 24px !important;
-		  background: #262626 !important;
-		  color: #fff !important;
+		  min-width: 24px;
+		  height: 24px;
+		  border: 1px solid var(--border-color);
+		  text-align: center;
+		  font-size: 9px;
+		  line-height: 24px;
+		  background: var(--header-bg);
+		  color: var(--text-color);
 		}
 
-		/* Combat Stats Grid */
+		.skill-row span {
+		  color: var(--text-muted);
+		  font-size: 8px;
+		}
+
+		.mid-column {
+		  flex: 1;
+		  display: flex;
+		  flex-direction: column;
+		  gap: 10px;
+		  box-sizing: border-box;
+		}
+
 		.combat-stats-grid {
-		  display: flex !important;
-		  gap: 6px !important;
-		  text-align: center !important;
-		  box-sizing: border-box !important;
+		  display: flex;
+		  gap: 6px;
+		  text-align: center;
+		  box-sizing: border-box;
 		}
 
 		.combat-metric {
-		  border: 2px solid #444 !important;
-		  padding: 6px !important;
-		  flex: 1 !important;
-		  background: #1c1c1c !important;
-		  border-radius: 4px !important;
-		  box-sizing: border-box !important;
+		  border: 2px solid var(--border-light);
+		  padding: 6px;
+		  flex: 1;
+		  background: var(--box-bg);
+		  border-radius: 4px;
+		  box-sizing: border-box;
 		}
 
 		.metric-val {
-		  font-size: 16px !important;
-		  font-weight: bold !important;
-		  margin-top: 4px !important;
-		  color: #fff !important;
+		  font-size: 16px;
+		  font-weight: bold;
+		  margin-top: 4px;
 		}
 
-		/* Hit Points Section */
 		.hp-box {
-		  border: 1px solid #444 !important;
-		  padding: 6px !important;
-		  background: #1c1c1c !important;
-		  border-radius: 4px !important;
-		  box-sizing: border-box !important;
+		  border: 1px solid var(--border-light);
+		  padding: 6px;
+		  border-radius: 4px;
+		  box-sizing: border-box;
 		}
 
 		.hp-row {
-		  display: flex !important;
-		  gap: 6px !important;
-		  margin-bottom: 6px !important;
-		  box-sizing: border-box !important;
+		  display: flex;
+		  gap: 6px;
+		  margin-bottom: 6px;
+		  box-sizing: border-box;
 		}
 
-		/* Container Blocks (Attacks, Features, Equipment, Bio) */
+		.hp-row .col {
+		  flex: 1;
+		  box-sizing: border-box;
+		}
+
+		.hp-subgrid {
+		  display: flex;
+		  gap: 4px;
+		  box-sizing: border-box;
+		}
+
+		.hp-subgrid > div {
+		  flex: 1;
+		  box-sizing: border-box;
+		}
+
 		.container-block {
-		  border: 1px solid #444 !important;
-		  padding: 6px !important;
-		  border-radius: 4px !important;
-		  min-height: 110px !important;
-		  height: auto !important;
-		  background: #1c1c1c !important;
-		  box-sizing: border-box !important;
+		  border: 1px solid var(--border-light);
+		  padding: 6px;
+		  border-radius: 4px;
+		  min-height: 110px;
+		  height: auto;
+		  background: var(--sheet-bg);
+		  box-sizing: border-box;
 		}
 
-		.container-block table {
-		  width: 100% !important;
-		  border-collapse: collapse !important;
-		  text-align: center !important;
-		  font-size: 9px !important;
-		  color: #e0e0e0 !important;
+		.container-block.flex-1 {
+		  flex: 1;
 		}
 
-		.container-block th {
-		  padding: 2px !important;
-		  text-align: left !important;
+		.attacks-field {
+		  min-height: 120px;
+		  height: auto;
+		  border: 1px solid var(--border-color);
+		  padding: 4px;
+		  background: var(--box-bg);
+		  color: var(--text-color);
+		  border-radius: 3px;
+		  box-sizing: border-box;
+		  overflow-wrap: break-word;
 		}
 
-		.container-block thead tr {
-		  border-bottom: 1px solid #444 !important;
-		  font-size: 8px !important;
-		  text-transform: uppercase !important;
-		  color: #aaa !important;
+		.features-field {
+		  min-height: 180px;
+		  height: auto;
+		  border: 1px solid var(--border-color);
+		  padding: 4px;
+		  background: var(--box-bg);
+		  color: var(--text-color);
+		  border-radius: 3px;
+		  box-sizing: border-box;
+		  overflow-wrap: break-word;
 		}
 
-		.container-block tbody tr {
-		  border-bottom: 1px solid #2a2a2a !important;
+		.equipment-field {
+		  min-height: 90px;
+		  height: auto;
+		  border: 1px solid var(--border-color);
+		  padding: 4px;
+		  background: var(--box-bg);
+		  color: var(--text-color);
+		  border-radius: 3px;
+		  box-sizing: border-box;
+		  overflow-wrap: break-word;
 		}
 
-		.container-block td {
-		  padding: 3px 2px !important;
-		}
-
-		/* Page 2 Grids & Bio Blocks */
 		.page2-grid {
-		  display: flex !important;
-		  gap: 10px !important;
-		  box-sizing: border-box !important;
+		  display: flex;
+		  gap: 10px;
+		  box-sizing: border-box;
+		}
+
+		.page2-grid > .col {
+		  flex: 1;
+		  box-sizing: border-box;
 		}
 
 		.bio-block {
-		  border: 1px solid #444 !important;
-		  padding: 6px !important;
-		  border-radius: 4px !important;
-		  margin-bottom: 8px !important;
-		  background: #1c1c1c !important;
-		  box-sizing: border-box !important;
+		  border: 1px solid var(--border-light);
+		  padding: 6px;
+		  border-radius: 4px;
+		  margin-bottom: 8px;
+		  background: var(--sheet-bg);
+		  box-sizing: border-box;
+		}
+
+		.bio-appearance { 
+		  min-height: 90px; 
+		  height: auto; 
+		  border: 1px solid var(--border-color); 
+		  padding: 4px; 
+		  background: var(--box-bg); 
+		  color: var(--text-color); 
+		  border-radius: 3px; 
+		  box-sizing: border-box; 
+		  overflow-wrap: break-word; 
+		}
+
+		.bio-backstory { 
+		  min-height: 140px; 
+		  height: auto; 
+		  border: 1px solid var(--border-color); 
+		  padding: 4px; 
+		  background: var(--box-bg); 
+		  color: var(--text-color); 
+		  border-radius: 3px; 
+		  box-sizing: border-box; 
+		  overflow-wrap: break-word; 
+		}
+
+		.bio-allies { 
+		  min-height: 90px; 
+		  height: auto; 
+		  border: 1px solid var(--border-color); 
+		  padding: 4px; 
+		  background: var(--box-bg); 
+		  color: var(--text-color); 
+		  border-radius: 3px; 
+		  box-sizing: border-box; 
+		  overflow-wrap: break-word; 
+		}
+
+		.bio-traits-add { 
+		  min-height: 100px; 
+		  height: auto; 
+		  border: 1px solid var(--border-color); 
+		  padding: 4px; 
+		  background: var(--box-bg); 
+		  color: var(--text-color); 
+		  border-radius: 3px; 
+		  box-sizing: border-box; 
+		  overflow-wrap: break-word; 
 		}
 
 		.traits-grid {
-		  display: grid !important;
-		  grid-template-columns: 1fr 1fr !important;
-		  gap: 8px !important;
-		  box-sizing: border-box !important;
+		  display: grid;
+		  grid-template-columns: 1fr 1fr;
+		  gap: 8px;
+		  box-sizing: border-box;
 		}
 
-		/* Coin / Currency Slots */
+		.trait-box-field {
+		  min-height: 60px;
+		  height: auto;
+		  border: 1px solid var(--border-color);
+		  padding: 4px;
+		  background: var(--box-bg);
+		  color: var(--text-color);
+		  border-radius: 3px;
+		  box-sizing: border-box;
+		  overflow-wrap: break-word;
+		}
+
+		.attunement-content {
+		  font-size: 9px;
+		  margin-top: 4px;
+		  box-sizing: border-box;
+		}
+
+		.attunement-content > div {
+		  margin-bottom: 2px;
+		}
+
+		.currency-container {
+		  display: flex;
+		  justify-content: space-between;
+		  margin-bottom: 6px;
+		  margin-top: 4px;
+		  box-sizing: border-box;
+		}
+
 		.coin-slot {
-		  display: flex !important;
-		  align-items: center !important;
-		  gap: 4px !important;
-		  font-size: 9px !important;
-		  font-weight: bold !important;
-		  border: 1px solid #555 !important;
-		  padding: 2px 4px !important;
-		  border-radius: 3px !important;
-		  background: #222 !important;
-		  color: #ccc !important;
-		  box-sizing: border-box !important;
+		  display: flex;
+		  align-items: center;
+		  gap: 4px;
+		  font-size: 9px;
+		  font-weight: bold;
+		  border: 1px solid var(--border-color);
+		  padding: 2px 4px;
+		  border-radius: 3px;
+		  background: var(--header-bg);
+		  box-sizing: border-box;
 		}
 
-		.coin-slot div {
-		  width: 40px !important;
-		  min-height: 24px !important;
-		  height: auto !important;
-		  border: 1px solid #555 !important;
-		  background: #1e1e1e !important;
-		  color: #fff !important;
-		  text-align: right !important;
-		  display: inline-block !important;
-		  line-height: 24px !important;
+		.coin-input {
+		  width: 40px;
+		  min-height: 24px;
+		  height: auto;
+		  border: 1px solid var(--border-color);
+		  background: var(--box-bg);
+		  color: var(--text-color);
+		  text-align: right;
+		  display: inline-block;
+		  line-height: 24px;
+		}
+
+		.treasure-field {
+		  min-height: 80px;
+		  height: auto;
+		  border: 1px solid var(--border-color);
+		  padding: 4px;
+		  background: var(--box-bg);
+		  color: var(--text-color);
+		  border-radius: 3px;
+		  box-sizing: border-box;
+		  overflow-wrap: break-word;
+		}
+
+		.spellcasting-field {
+		  min-height: 120px;
+		  height: auto;
+		  border: 1px solid var(--border-color);
+		  padding: 4px;
+		  background: var(--box-bg);
+		  color: var(--text-color);
+		  border-radius: 3px;
+		  box-sizing: border-box;
+		  overflow-wrap: break-word;
 		}
 
 	}
