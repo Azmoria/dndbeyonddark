@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.692
+@version      1.2.693
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -7084,6 +7084,312 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
         background: var(--background-color) !important;
         color: /*[[fontColor]]*/ !important;
     }
+
+
+	.dnd-sheet {
+	  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+	  color: #e0e0e0 !important;
+	  background-color: #121212 !important;
+	  width: 100% !important;
+	  max-width: 850px !important;
+	  margin: 0 auto !important;
+	  box-sizing: border-box !important;
+	  font-size: 11px !important;
+	  line-height: 1.2 !important;
+
+		.dnd-page {
+		  border: 2px solid #444 !important;
+		  padding: 15px !important;
+		  margin-bottom: 30px !important;
+		  background: #181818 !important;
+		  page-break-after: always !important;
+		  box-sizing: border-box !important;
+		}
+
+		/* Header Block */
+		.header-box {
+		  border: 2px solid #444 !important;
+		  padding: 8px !important;
+		  margin-bottom: 10px !important;
+		  display: flex !important;
+		  gap: 8px !important;
+		  background: #222222 !important;
+		  box-sizing: border-box !important;
+		}
+
+		.header-box .col {
+		  flex: 1 !important;
+		  display: flex !important;
+		  flex-direction: column !important;
+		  justify-content: flex-end !important;
+		  box-sizing: border-box !important;
+		}
+
+		.header-box .char-name-box {
+		  flex: 2 !important;
+		}
+
+		/* Common Box & Field Elements */
+		.box-field {
+		  border: 1px solid #555 !important;
+		  padding: 4px !important;
+		  background: #1e1e1e !important;
+		  color: #fff !important;
+		  min-height: 24px !important;
+		  height: auto !important;
+		  border-radius: 3px !important;
+		  box-sizing: border-box !important;
+		  overflow-wrap: break-word !important;
+		}
+
+		.label {
+		  font-size: 8px !important;
+		  text-transform: uppercase !important;
+		  color: #aaa !important;
+		  text-align: center !important;
+		  display: block !important;
+		  margin-top: 2px !important;
+		  font-weight: bold !important;
+		}
+
+		/* Layout Containers */
+		.main-container {
+		  display: flex !important;
+		  gap: 10px !important;
+		  box-sizing: border-box !important;
+		}
+
+		.left-column {
+		  width: 140px !important;
+		  display: flex !important;
+		  flex-direction: column !important;
+		  gap: 10px !important;
+		  box-sizing: border-box !important;
+		}
+
+		.mid-column {
+		  flex: 1 !important;
+		  display: flex !important;
+		  flex-direction: column !important;
+		  gap: 10px !important;
+		  box-sizing: border-box !important;
+		}
+
+		/* Section Titles */
+		.section-title {
+		  font-size: 10px !important;
+		  font-weight: bold !important;
+		  text-align: center !important;
+		  background: #333 !important;
+		  color: #fff !important;
+		  padding: 3px !important;
+		  margin-bottom: 6px !important;
+		  border-radius: 2px !important;
+		  text-transform: uppercase !important;
+		  letter-spacing: 0.5px !important;
+		}
+
+		/* Abilities & Skills Boxes */
+		.abilities-table-container,
+		.skills-box {
+		  border: 1px solid #444 !important;
+		  padding: 6px !important;
+		  background: #1c1c1c !important;
+		  border-radius: 4px !important;
+		  box-sizing: border-box !important;
+		}
+
+		.abilities-table-container table {
+		  width: 100% !important;
+		  border-collapse: collapse !important;
+		  text-align: center !important;
+		  font-size: 9px !important;
+		  color: #e0e0e0 !important;
+		}
+
+		.abilities-table-container th {
+		  padding: 2px !important;
+		  text-align: left !important;
+		}
+
+		.abilities-table-container thead tr {
+		  border-bottom: 1px solid #444 !important;
+		  font-size: 8px !important;
+		  text-transform: uppercase !important;
+		  color: #aaa !important;
+		}
+
+		.abilities-table-container tbody tr {
+		  border-bottom: 1px solid #2a2a2a !important;
+		}
+
+		.abilities-table-container td {
+		  padding: 3px 2px !important;
+		}
+
+		.skill-row {
+		  display: flex !important;
+		  align-items: center !important;
+		  font-size: 9.5px !important;
+		  margin-bottom: 3px !important;
+		  gap: 4px !important;
+		}
+
+		.skill-row input[type="checkbox"] {
+		  margin: 0 !important;
+		  accent-color: #666 !important;
+		}
+
+		.skill-row span {
+		  color: #999 !important;
+		  font-size: 8px !important;
+		}
+
+		.mod-bullet {
+		  min-width: 24px !important;
+		  height: 24px !important;
+		  border: 1px solid #555 !important;
+		  text-align: center !important;
+		  font-size: 9px !important;
+		  line-height: 24px !important;
+		  background: #262626 !important;
+		  color: #fff !important;
+		}
+
+		/* Combat Stats Grid */
+		.combat-stats-grid {
+		  display: flex !important;
+		  gap: 6px !important;
+		  text-align: center !important;
+		  box-sizing: border-box !important;
+		}
+
+		.combat-metric {
+		  border: 2px solid #444 !important;
+		  padding: 6px !important;
+		  flex: 1 !important;
+		  background: #1c1c1c !important;
+		  border-radius: 4px !important;
+		  box-sizing: border-box !important;
+		}
+
+		.metric-val {
+		  font-size: 16px !important;
+		  font-weight: bold !important;
+		  margin-top: 4px !important;
+		  color: #fff !important;
+		}
+
+		/* Hit Points Section */
+		.hp-box {
+		  border: 1px solid #444 !important;
+		  padding: 6px !important;
+		  background: #1c1c1c !important;
+		  border-radius: 4px !important;
+		  box-sizing: border-box !important;
+		}
+
+		.hp-row {
+		  display: flex !important;
+		  gap: 6px !important;
+		  margin-bottom: 6px !important;
+		  box-sizing: border-box !important;
+		}
+
+		/* Container Blocks (Attacks, Features, Equipment, Bio) */
+		.container-block {
+		  border: 1px solid #444 !important;
+		  padding: 6px !important;
+		  border-radius: 4px !important;
+		  min-height: 110px !important;
+		  height: auto !important;
+		  background: #1c1c1c !important;
+		  box-sizing: border-box !important;
+		}
+
+		.container-block table {
+		  width: 100% !important;
+		  border-collapse: collapse !important;
+		  text-align: center !important;
+		  font-size: 9px !important;
+		  color: #e0e0e0 !important;
+		}
+
+		.container-block th {
+		  padding: 2px !important;
+		  text-align: left !important;
+		}
+
+		.container-block thead tr {
+		  border-bottom: 1px solid #444 !important;
+		  font-size: 8px !important;
+		  text-transform: uppercase !important;
+		  color: #aaa !important;
+		}
+
+		.container-block tbody tr {
+		  border-bottom: 1px solid #2a2a2a !important;
+		}
+
+		.container-block td {
+		  padding: 3px 2px !important;
+		}
+
+		/* Page 2 Grids & Bio Blocks */
+		.page2-grid {
+		  display: flex !important;
+		  gap: 10px !important;
+		  box-sizing: border-box !important;
+		}
+
+		.bio-block {
+		  border: 1px solid #444 !important;
+		  padding: 6px !important;
+		  border-radius: 4px !important;
+		  margin-bottom: 8px !important;
+		  background: #1c1c1c !important;
+		  box-sizing: border-box !important;
+		}
+
+		.traits-grid {
+		  display: grid !important;
+		  grid-template-columns: 1fr 1fr !important;
+		  gap: 8px !important;
+		  box-sizing: border-box !important;
+		}
+
+		/* Coin / Currency Slots */
+		.coin-slot {
+		  display: flex !important;
+		  align-items: center !important;
+		  gap: 4px !important;
+		  font-size: 9px !important;
+		  font-weight: bold !important;
+		  border: 1px solid #555 !important;
+		  padding: 2px 4px !important;
+		  border-radius: 3px !important;
+		  background: #222 !important;
+		  color: #ccc !important;
+		  box-sizing: border-box !important;
+		}
+
+		.coin-slot div {
+		  width: 40px !important;
+		  min-height: 24px !important;
+		  height: auto !important;
+		  border: 1px solid #555 !important;
+		  background: #1e1e1e !important;
+		  color: #fff !important;
+		  text-align: right !important;
+		  display: inline-block !important;
+		  line-height: 24px !important;
+		}
+
+	}
+
+
+
+	
 	#dmScreenContainer table tr,
 	#dmScreenContainer table td{
 		background:none !important;
