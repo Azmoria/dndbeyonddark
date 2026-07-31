@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.374
+@version      1.3.375
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -3634,14 +3634,18 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*") {
    .ct-sidebar .ddbc-concentration-icon path{
         fill: /*[[sidebarColor]]*/ !important;
     }
+
     button.avtt-roll-button,
-    .avtt-aoe-button{
+    .avtt-aoe-button,
+	.note-text .abovevtt-slash-command-journal button{
+		border: 1px solid #b43c35 !important;
         color: /*[[rollColor]]*/ !important;
         border-color: /*[[rollColor]]*/ !important;
         background: none !important;
     } 
     button.avtt-roll-button:hover,
-    .avtt-aoe-button:hover{
+    .avtt-aoe-button:hover,
+	.note-text .abovevtt-slash-command-journal button:hover{
         background: /*[[rollCalcColor]]*/ !important;
     }
     .mon-stat-block .avtt-ability-roll-button,
@@ -4339,7 +4343,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
         text-decoration-color: /*[[highlightColor]]*/ !important;
     }
 
-
+	
     .ct-sidebar__inner .glc-game-log .abovevtt-sidebar-injected button.avtt-roll-button:hover{
         background: /*[[rollCalcColor]]*/ !important;
     }
