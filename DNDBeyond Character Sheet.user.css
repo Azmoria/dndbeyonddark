@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.375
+@version      1.3.376
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -3883,7 +3883,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
 		}
 
 		.left-column {
-		  width: 140px;
+		  width: 170px;
 		  display: flex;
 		  flex-direction: column;
 		  gap: 10px;
@@ -3916,7 +3916,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
 		  width: 100%;
 		  border-collapse: collapse;
 		  text-align: center;
-		  font-size: 9px;
+		  font-size: 11px;
 		}
 
 		th {
@@ -3984,7 +3984,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
 		  height: 24px;
 		  border: 1px solid var(--border-color);
 		  text-align: center;
-		  font-size: 9px;
+		  font-size: 11px;
 		  line-height: 24px;
 		  background: var(--header-bg);
 		  color: var(--text-color);
@@ -4193,7 +4193,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
 		}
 
 		.attunement-content {
-		  font-size: 9px;
+		  font-size: 11px;
 		  margin-top: 4px;
 		  box-sizing: border-box;
 		}
@@ -4214,7 +4214,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
 		  display: flex;
 		  align-items: center;
 		  gap: 4px;
-		  font-size: 9px;
+		  font-size: 11px;
 		  font-weight: bold;
 		  border: 1px solid var(--border-color);
 		  padding: 2px 4px;
