@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.376
+@version      1.3.377
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -3768,7 +3768,20 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
   /*AboveVtt Only*/
   
     /*[[fontContrast]]*/
-    
+
+	:root{
+		--pc-template-bg-color: #121212;
+		--pc-template-sheet-bg: #1e1e1e;
+		--pc-template-text-color: #e0e0e0;
+		--pc-template-text-muted: #aaaaaa;
+		--pc-template-border-color: #444444;
+		--pc-template-border-light: #333333;
+		--pc-template-box-bg: #2d2d2d;
+		--pc-template-header-bg: #252525;
+		--pc-template-table-stripe: #252525;
+		--pc-template-section-bg: #2a2a2a;
+		--pc-template-section-text: #ffffff;
+	}
     #tokenOptionsPopup,
     #tokenOptionsPopup [id*="flyout"],
     #resizeDragMon .avtt-stat-block-container .detail-content,
