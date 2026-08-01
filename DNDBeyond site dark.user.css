@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.696
+@version      1.2.698
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -7085,7 +7085,19 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
         color: /*[[fontColor]]*/ !important;
     }
 
-
+	:root{
+		--pc-template-bg-color: #121212;
+		--pc-template-sheet-bg: #1e1e1e;
+		--pc-template-text-color: #e0e0e0;
+		--pc-template-text-muted: #aaaaaa;
+		--pc-template-border-color: #444444;
+		--pc-template-border-light: #333333;
+		--pc-template-box-bg: #2d2d2d;
+		--pc-template-header-bg: #252525;
+		--pc-template-table-stripe: #252525;
+		--pc-template-section-bg: #2a2a2a;
+		--pc-template-section-text: #ffffff;
+	}
 	.dnd-sheet {
 
 		--bg-color: #121212;
@@ -7487,6 +7499,9 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
 		  font-size: 11px;
 		  margin-top: 4px;
 		  box-sizing: border-box;
+			 background: var(--box-bg);
+			color: var(--text-color);
+			border: 1px solid var(--border-color);
 		}
 
 		.attunement-content > div {
