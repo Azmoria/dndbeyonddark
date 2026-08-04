@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.378
+@version      1.3.380
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -687,6 +687,10 @@ dark "Dark Mode" <<<EOT
     .red-statblock-text{
         color: #D35050 !important;
     }
+	:root{
+		--compendium-item-tooltip: #ca793f;
+		--compendium-action-tooltip:  #149f59;
+	}	
     body *{
      --compendium-monster-tooltip: #D35050;
      --compendium-spell-tooltip: #896CE0;
@@ -3794,6 +3798,10 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
         color: /*[[fontColor]]*/;
     }
     
+	:root .note-text{
+		--theme-page-fg-color: var(--font-color)
+	}
+
     .details-more-info{
         background: /*[[background]]*/;
     }
@@ -3855,14 +3863,6 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
 		  box-sizing: border-box;
 		}
 
-		.header-box .col {
-		  flex: 1;
-		  display: flex;
-		  flex-direction: column;
-		  justify-content: flex-end;
-		  box-sizing: border-box;
-		}
-
 		.header-box .char-name-box {
 		  flex: 2;
 		}
@@ -3889,20 +3889,6 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
 		  font-weight: bold;
 		}
 
-		.main-container {
-		  display: flex;
-		  gap: 10px;
-		  box-sizing: border-box;
-		}
-
-		.left-column {
-		  width: 170px;
-		  display: flex;
-		  flex-direction: column;
-		  gap: 10px;
-		  box-sizing: border-box;
-		}
-
 		.abilities-table-container, .skills-box {
 		  border: 1px solid var(--border-light);
 		  padding: 6px;
@@ -3925,16 +3911,6 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
 		  border: 1px solid var(--border-color);
 		}
 
-		table {
-		  width: 100%;
-		  border-collapse: collapse;
-		  text-align: center;
-		  font-size: 11px;
-		}
-
-		th {
-		  padding: 2px;
-		}
 
 		thead tr {
 		  border-bottom: 1px solid var(--border-light);
@@ -3943,29 +3919,12 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
 		  color: var(--text-muted);
 		}
 
-		thead th:first-child {
-		  text-align: left;
-		}
+
 
 		tbody tr {
 		  border-bottom: 1px solid var(--table-stripe);
 		}
 
-		tbody tr td {
-		  padding: 3px 2px;
-		}
-
-		tbody tr td:first-child {
-		  font-weight: bold;
-		  text-align: left;
-		  text-transform: uppercase;
-		  font-size: 8.5px;
-		}
-
-		tbody tr td:nth-child(2) {
-		  font-weight: bold;
-		  font-size: 11px;
-		}
 
 		.ability-score-field {
 		  display: inline-block;
@@ -3978,14 +3937,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
 		  border-radius: 2px;
 		  box-sizing: border-box;
 		}
-
-		.skill-row {
-		  display: flex;
-		  align-items: center;
-		  font-size: 9.5px;
-		  margin-bottom: 3px;
-		  gap: 4px;
-		}
+	
 
 		.skill-row input {
 		  margin: 0;
@@ -4008,20 +3960,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
 		  font-size: 8px;
 		}
 
-		.mid-column {
-		  flex: 1;
-		  display: flex;
-		  flex-direction: column;
-		  gap: 10px;
-		  box-sizing: border-box;
-		}
-
-		.combat-stats-grid {
-		  display: flex;
-		  gap: 6px;
-		  text-align: center;
-		  box-sizing: border-box;
-		}
+		
 
 		.combat-metric {
 		  border: 2px solid var(--border-light);
@@ -4032,11 +3971,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
 		  box-sizing: border-box;
 		}
 
-		.metric-val {
-		  font-size: 16px;
-		  font-weight: bold;
-		  margin-top: 4px;
-		}
+		
 
 		.hp-box {
 		  border: 1px solid var(--border-light);
@@ -4045,28 +3980,6 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
 		  box-sizing: border-box;
 		}
 
-		.hp-row {
-		  display: flex;
-		  gap: 6px;
-		  margin-bottom: 6px;
-		  box-sizing: border-box;
-		}
-
-		.hp-row .col {
-		  flex: 1;
-		  box-sizing: border-box;
-		}
-
-		.hp-subgrid {
-		  display: flex;
-		  gap: 4px;
-		  box-sizing: border-box;
-		}
-
-		.hp-subgrid > div {
-		  flex: 1;
-		  box-sizing: border-box;
-		}
 
 		.container-block {
 		  border: 1px solid var(--border-light);
@@ -4078,9 +3991,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
 		  box-sizing: border-box;
 		}
 
-		.container-block.flex-1 {
-		  flex: 1;
-		}
+		
 
 		.attacks-field {
 		  min-height: 120px;
@@ -4093,7 +4004,17 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
 		  box-sizing: border-box;
 		  overflow-wrap: break-word;
 		}
-
+		.notes-field {
+		  min-height: 350px;
+		  height: auto;
+		  border: 1px solid var(--border-color);
+		  padding: 4px;
+		  background: var(--box-bg);
+		  color: var(--text-color);
+		  border-radius: 3px;
+		  box-sizing: border-box;
+		  overflow-wrap: break-word;
+		}
 		.features-field {
 		  min-height: 180px;
 		  height: auto;
@@ -4118,18 +4039,10 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
 		  overflow-wrap: break-word;
 		}
 
-		.page2-grid {
-		  display: flex;
-		  gap: 10px;
-		  box-sizing: border-box;
-		}
+		
 
-		.page2-grid > .col {
-		  flex: 1;
-		  box-sizing: border-box;
-		}
-
-		.bio-block {
+		.bio-block,
+		.notes-block {
 		  border: 1px solid var(--border-light);
 		  padding: 6px;
 		  border-radius: 4px;
@@ -4186,12 +4099,6 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
 		  overflow-wrap: break-word; 
 		}
 
-		.traits-grid {
-		  display: grid;
-		  grid-template-columns: 1fr 1fr;
-		  gap: 8px;
-		  box-sizing: border-box;
-		}
 
 		.trait-box-field {
 		  min-height: 60px;
@@ -4209,21 +4116,9 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
 		  font-size: 11px;
 		  margin-top: 4px;
 		  box-sizing: border-box;
-		  background: var(--box-bg);
-		  color: var(--text-color);
-		  border: 1px solid var(--border-color);
-		}
-
-		.attunement-content > div {
-		  margin-bottom: 2px;
-		}
-
-		.currency-container {
-		  display: flex;
-		  justify-content: space-between;
-		  margin-bottom: 6px;
-		  margin-top: 4px;
-		  box-sizing: border-box;
+			 background: var(--box-bg);
+			color: var(--text-color);
+			border: 1px solid var(--border-color);
 		}
 
 		.coin-slot {
@@ -4322,7 +4217,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
     .visually-hidden{
         display: none;
     }
-    .ui-widget-content .note-text a{
+    .ui-widget-content .note-text a:not(.tooltip-hover){
         color: /*[[highlightColor]]*/ !important;
     }
     .glc-game-log #chat-language{
