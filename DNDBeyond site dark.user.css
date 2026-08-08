@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.701
+@version      1.2.702
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -7111,11 +7111,12 @@ mask-position:center;
 		background: var(--font-color);
 
 	}
+	.prof-checkbox .base-circle{
+		stroke: color-mix(in srgb, var(--font-color) 50%, transparent 0%) !important;
+	}
     .prof-checkbox[data-state="1"] .half-fill {
-
         fill: var(--font-color) !important;
     }
-
 
     .prof-checkbox[data-state="2"] .full-fill {
 
@@ -7127,10 +7128,8 @@ mask-position:center;
         fill: var(--font-color) !important;
     }
     .prof-checkbox[data-state="3"] .ring-stroke {
-
         fill: none !important;
-		stroke-color: var(--font-color) !important;
-
+		stroke: var(--font-color) !important;
     }
 
 	.dnd-sheet {
