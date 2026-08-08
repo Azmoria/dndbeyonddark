@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.700
+@version      1.2.701
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -7103,6 +7103,36 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
 		--pc-template-section-bg: #2a2a2a;
 		--pc-template-section-text: #ffffff;
 	}
+	.mce-btn[aria-label="Add Checkbox"] button>i[style*="background-image"] {
+		mask-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 width=%2224%22 height=%2224%22><path d=%22M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z%22/></svg>');
+mask-position:center;
+		mask-repeat: no-repeat;
+		background-image: none !important;
+		background: var(--font-color);
+
+	}
+    .prof-checkbox[data-state="1"] .half-fill {
+
+        fill: var(--font-color) !important;
+    }
+
+
+    .prof-checkbox[data-state="2"] .full-fill {
+
+        fill: var(--font-color) !important;
+    }
+
+    .prof-checkbox[data-state="3"] .full-fill {
+
+        fill: var(--font-color) !important;
+    }
+    .prof-checkbox[data-state="3"] .ring-stroke {
+
+        fill: none !important;
+		stroke-color: var(--font-color) !important;
+
+    }
+
 	.dnd-sheet {
 
 		--bg-color: #121212;
