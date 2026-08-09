@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.702
+@version      1.2.703
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -9086,7 +9086,7 @@ mask-position:center;
         width: 20px !important;
         height: 20px !important;
     }
-    #qrm_dialog{
+    #qrm_dialog:not(:has(>.minimized)){
         min-width:509px;
     }
     #qrm_dialog .qrm_name_line{
