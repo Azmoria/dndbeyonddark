@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.703
+@version      1.2.704
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -7114,7 +7114,12 @@ mask-position:center;
 	.prof-checkbox .base-circle{
 		stroke: color-mix(in srgb, var(--font-color) 50%, transparent 0%) !important;
 	}
-    .prof-checkbox[data-state="1"] .half-fill {
+    .prof-checkbox[data-state="3"] .half-fill {
+        fill: var(--font-color) !important;
+    }
+
+    .prof-checkbox[data-state="1"] .full-fill {
+
         fill: var(--font-color) !important;
     }
 
@@ -7122,12 +7127,7 @@ mask-position:center;
 
         fill: var(--font-color) !important;
     }
-
-    .prof-checkbox[data-state="3"] .full-fill {
-
-        fill: var(--font-color) !important;
-    }
-    .prof-checkbox[data-state="3"] .ring-stroke {
+    .prof-checkbox[data-state="2"] .ring-stroke {
         fill: none !important;
 		stroke: var(--font-color) !important;
     }
@@ -8126,6 +8126,9 @@ mask-position:center;
     #sounds-panel .sidebar-panel-header button.pressed{
         border: 1px solid transparent !important;  
     }
+	#sounds-panel .sidebar-panel-body{
+		background: var(--background-color) !important;
+	}
     #sounds-panel .sidebar-panel-body>button{
         margin-right: 5px;
     }
