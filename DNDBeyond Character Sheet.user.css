@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.381
+@version      1.3.382
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -3790,7 +3790,29 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
 	a {
 		color: var(--link-color, var(--font-color,#000));
 	}
-	
+
+	.prof-checkbox[data-state="3"] .half-fill {
+
+        fill: var(--font-color) !important;
+    }
+
+
+    .prof-checkbox[data-state="1"] .full-fill {
+
+        fill: var(--font-color) !important;
+    }
+
+    .prof-checkbox[data-state="2"] .full-fill {
+
+        fill: var(--font-color) !important;
+    }
+    .prof-checkbox[data-state="2"] .ring-stroke {
+
+        fill: none !important;
+		stroke: var(--font-color) !important;
+
+    }
+
     #tokenOptionsPopup,
     #tokenOptionsPopup [id*="flyout"],
     #resizeDragMon .avtt-stat-block-container .detail-content,
