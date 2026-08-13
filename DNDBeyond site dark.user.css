@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.704
+@version      1.2.705
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -719,7 +719,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/nwb/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/dmr/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/logeer/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/sgehpp/(.|\s)*\S(.|\s)*"),
-regexp("https://www.dndbeyond.com/sources/dnd/vsspp2/(.|\s)*\S(.|\s)*")
+regexp("https://www.dndbeyond.com/sources/dnd/vsspp2/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/foeq/(.|\s)*\S(.|\s)*")
 {
 
     #site-main,
@@ -1513,7 +1514,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/ns(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/nwb(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/dmr(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/logeer(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/sgehpp(/)?")
+regexp("https://www.dndbeyond.com/sources/dnd/sgehpp(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/foeq(/)?")
 
 {
    
@@ -1639,7 +1641,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/ns(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/nwb(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/dmr(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/logeer(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/sgehpp(/)?") {
+regexp("https://www.dndbeyond.com/sources/dnd/sgehpp(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/foeq(/)?") {
 
     @media (min-width: 1024px) {
         body {
@@ -1685,11 +1688,16 @@ regexp("https://www.dndbeyond.com/sources/dnd/sgehpp(/)?") {
     }
 }
 
-
+@-moz-document regexp("https://www.dndbeyond.com/sources/dnd/foeq(/)?"){
+    body{
+        background-position: center top !important;
+       
+    }
+}
 @-moz-document regexp("https://www.dndbeyond.com/sources/dnd/ottg(/)?"){
     body{
         background-position: center 60% !important;
-       
+		
     }
 }
 
@@ -5341,7 +5349,9 @@ regexp("https://www.dndbeyond.com/en/library/.*"){
     {
         background-image: none !important;
     }
-   
+ 	body.section-frontiers-of-eberron-quickstone #site #site-main .primary-content .p-article-a .p-article-content :is(h1,h2,h3):after{
+		background-color: unset !important;
+	}
    
     .compendium-toc-block-header,
     .compendium-toc-full-header,
@@ -7150,88 +7160,42 @@ mask-position:center;
 
 		background-color: var(--bg-color);
 		color: var(--text-color);
-
-		font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 		color: var(--text-color);
 		background-color: var(--sheet-bg);
-		width: 100%;
-		margin: 0 auto;
-		box-sizing: border-box;
-		font-size: 11px;
-		line-height: 1.2;
 
 		.dnd-page {
 		  border: 2px solid var(--border-color);
-		  padding: 15px;
-		  margin-bottom: 30px;
 		  background: var(--sheet-bg);
-		  page-break-after: always;
-		  box-sizing: border-box;
 		}
 
 		.header-box {
 		  border: 2px solid var(--border-color);
-		  padding: 8px;
-		  margin-bottom: 10px;
-		  display: flex;
-		  gap: 8px;
 		  background: var(--header-bg);
-		  box-sizing: border-box;
-		}
-
-		.header-box .char-name-box {
-		  flex: 2;
 		}
 
 		.box-field {
 		  border: 1px solid var(--border-color);
-		  padding: 4px;
 		  background: var(--box-bg);
-		  color: var(--text-color);
-		  min-height: 24px;
-		  height: auto;
-		  border-radius: 3px;
-		  box-sizing: border-box;
-		  overflow-wrap: break-word;
 		}
 
 		.label {
-		  font-size: 8px;
-		  text-transform: uppercase;
 		  color: var(--text-muted);
-		  text-align: center;
-		  display: block;
-		  margin-top: 2px;
-		  font-weight: bold;
 		}
 
 		.abilities-table-container, .skills-box {
 		  border: 1px solid var(--border-light);
-		  padding: 6px;
 		  background: var(--sheet-bg);
-		  border-radius: 4px;
-		  box-sizing: border-box;
 		}
 
 		.section-title {
-		  font-size: 10px;
-		  font-weight: bold;
-		  text-align: center;
 		  background: var(--section-bg);
 		  color: var(--section-text);
-		  padding: 3px;
-		  margin-bottom: 6px;
-		  border-radius: 2px;
-		  text-transform: uppercase;
-		  letter-spacing: 0.5px;
 		  border: 1px solid var(--border-color);
 		}
 
 
 		thead tr {
 		  border-bottom: 1px solid var(--border-light);
-		  font-size: 8px;
-		  text-transform: uppercase;
 		  color: var(--text-muted);
 		}
 
@@ -7243,116 +7207,67 @@ mask-position:center;
 
 
 		.ability-score-field {
-		  display: inline-block;
-		  width: 22px;
 		  border: 1px solid var(--border-color);
-		  padding: 2px;
 		  background: var(--box-bg);
 		  color: var(--text-color);
-		  min-height: 14px;
-		  border-radius: 2px;
-		  box-sizing: border-box;
 		}
 	
 
 		.skill-row input {
-		  margin: 0;
 		  accent-color: #666;
 		}
 
 		.mod-bullet {
-		  min-width: 24px;
-		  height: 24px;
 		  border: 1px solid var(--border-color);
-		  text-align: center;
-		  font-size: 11px;
-		  line-height: 24px;
 		  background: var(--header-bg);
 		  color: var(--text-color);
 		}
 
 		.skill-row span {
 		  color: var(--text-muted);
-		  font-size: 8px;
 		}
 
 		
 
 		.combat-metric {
 		  border: 2px solid var(--border-light);
-		  padding: 6px;
-		  flex: 1;
 		  background: var(--box-bg);
-		  border-radius: 4px;
-		  box-sizing: border-box;
 		}
 
 		
 
 		.hp-box {
 		  border: 1px solid var(--border-light);
-		  padding: 6px;
-		  border-radius: 4px;
-		  box-sizing: border-box;
 		}
 
 
 		.container-block {
 		  border: 1px solid var(--border-light);
-		  padding: 6px;
-		  border-radius: 4px;
-		  min-height: 110px;
-		  height: auto;
 		  background: var(--sheet-bg);
-		  box-sizing: border-box;
 		}
 
 		
 
 		.attacks-field {
-		  min-height: 120px;
-		  height: auto;
 		  border: 1px solid var(--border-color);
-		  padding: 4px;
 		  background: var(--box-bg);
 		  color: var(--text-color);
-		  border-radius: 3px;
-		  box-sizing: border-box;
-		  overflow-wrap: break-word;
 		}
 		.notes-field {
-		  min-height: 350px;
-		  height: auto;
 		  border: 1px solid var(--border-color);
-		  padding: 4px;
 		  background: var(--box-bg);
 		  color: var(--text-color);
-		  border-radius: 3px;
-		  box-sizing: border-box;
-		  overflow-wrap: break-word;
 		}
 		.features-field {
-		  min-height: 180px;
-		  height: auto;
 		  border: 1px solid var(--border-color);
-		  padding: 4px;
 		  background: var(--box-bg);
 		  color: var(--text-color);
-		  border-radius: 3px;
-		  box-sizing: border-box;
-		  overflow-wrap: break-word;
 		}
 
 		.equipment-field {
-		  min-height: 90px;
-		  height: auto;
 		  border: 1px solid var(--border-color);
-		  padding: 4px;
 		  background: var(--box-bg);
 		  color: var(--text-color);
-		  border-radius: 3px;
-		  box-sizing: border-box;
-		  overflow-wrap: break-word;
 		}
 
 		
@@ -7360,130 +7275,71 @@ mask-position:center;
 		.bio-block,
 		.notes-block {
 		  border: 1px solid var(--border-light);
-		  padding: 6px;
-		  border-radius: 4px;
-		  margin-bottom: 8px;
 		  background: var(--sheet-bg);
-		  box-sizing: border-box;
 		}
 
 		.bio-appearance { 
-		  min-height: 90px; 
-		  height: auto; 
 		  border: 1px solid var(--border-color); 
-		  padding: 4px; 
 		  background: var(--box-bg); 
 		  color: var(--text-color); 
-		  border-radius: 3px; 
-		  box-sizing: border-box; 
-		  overflow-wrap: break-word; 
 		}
 
 		.bio-backstory { 
-		  min-height: 140px; 
-		  height: auto; 
 		  border: 1px solid var(--border-color); 
-		  padding: 4px; 
 		  background: var(--box-bg); 
 		  color: var(--text-color); 
-		  border-radius: 3px; 
-		  box-sizing: border-box; 
-		  overflow-wrap: break-word; 
 		}
 
 		.bio-allies { 
-		  min-height: 90px; 
-		  height: auto; 
 		  border: 1px solid var(--border-color); 
-		  padding: 4px; 
 		  background: var(--box-bg); 
 		  color: var(--text-color); 
-		  border-radius: 3px; 
-		  box-sizing: border-box; 
-		  overflow-wrap: break-word; 
+
 		}
 
 		.bio-traits-add { 
-		  min-height: 100px; 
-		  height: auto; 
 		  border: 1px solid var(--border-color); 
-		  padding: 4px; 
 		  background: var(--box-bg); 
 		  color: var(--text-color); 
-		  border-radius: 3px; 
-		  box-sizing: border-box; 
-		  overflow-wrap: break-word; 
 		}
 
 
 		.trait-box-field {
-		  min-height: 60px;
-		  height: auto;
 		  border: 1px solid var(--border-color);
-		  padding: 4px;
 		  background: var(--box-bg);
 		  color: var(--text-color);
-		  border-radius: 3px;
-		  box-sizing: border-box;
-		  overflow-wrap: break-word;
 		}
 
 		.attunement-content {
-		  font-size: 11px;
-		  margin-top: 4px;
-		  box-sizing: border-box;
-			 background: var(--box-bg);
+			background: var(--box-bg);
 			color: var(--text-color);
 			border: 1px solid var(--border-color);
 		}
 
 		.coin-slot {
-		  display: flex;
-		  align-items: center;
-		  gap: 4px;
-		  font-size: 11px;
-		  font-weight: bold;
 		  border: 1px solid var(--border-color);
-		  padding: 2px 4px;
-		  border-radius: 3px;
 		  background: var(--header-bg);
-		  box-sizing: border-box;
+
 		}
 
 		.coin-input {
-		  width: 40px;
-		  min-height: 24px;
-		  height: auto;
 		  border: 1px solid var(--border-color);
 		  background: var(--box-bg);
 		  color: var(--text-color);
-		  text-align: right;
-		  display: inline-block;
-		  line-height: 24px;
 		}
 
 		.treasure-field {
-		  min-height: 80px;
-		  height: auto;
 		  border: 1px solid var(--border-color);
-		  padding: 4px;
+
 		  background: var(--box-bg);
 		  color: var(--text-color);
-		  border-radius: 3px;
-		  box-sizing: border-box;
-		  overflow-wrap: break-word;
+
 		}
 
 		.spellcasting-field {
-		  min-height: 120px;
-		  height: auto;
 		  border: 1px solid var(--border-color);
-		  padding: 4px;
 		  background: var(--box-bg);
 		  color: var(--text-color);
-		  border-radius: 3px;
-		  box-sizing: border-box;
-		  overflow-wrap: break-word;
 		}
 
 	}
