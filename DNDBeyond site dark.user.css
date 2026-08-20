@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.706
+@version      1.2.708
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -3001,6 +3001,7 @@ regexp("https://www.dndbeyond.com/en/library/.*"){
 		--row-hover-color: var(--lexicon_gold-600);
 	}
     :root .site{
+		--vehicle-bg-color: var(--background-color);
         --theme-table-row-bg-hover: /*[[backgroundColor]]*/;
         --theme-table-row-bg-dark: /*[[backgroundColor]]*/;
         --theme-table-row-bg-light: /*[[backgroundColor]]*/;
@@ -3070,6 +3071,11 @@ regexp("https://www.dndbeyond.com/en/library/.*"){
 	body#tinymce {
 		background: #000 !important;
 	}
+	.vehicle-stat-block.vehicle-stat-block-elemental-airship{
+		--vehicle-bg-color: var(--background-color);
+	}
+
+
     div#site{
         height: initial;
     }
@@ -3801,7 +3807,11 @@ regexp("https://www.dndbeyond.com/en/library/.*"){
         border:none !important;
     }
      
-    
+    .integrated-dice__container{
+        color: /*[[rollColor]]*/ !important;
+        background: /*[[backgroundColor]]*/ !important;
+        border: 1px solid #0000 !important;
+    }
     
     .body-page #site .p-article-a .p-article-content .stat-block .monster-header,
     .stat-block .monster-header{
@@ -8244,6 +8254,10 @@ mask-position:center;
         color: /*[[fontColor]]*/!important;
         border-color: /*[[borderColor]]*/ !important;
     }
+	#contextSelect{
+		background: buttonface !important;
+		color: #333 !important;
+	}
     #vision_menu #bucket_menu{
         transform: translate(5px);
         border: 1px solid;
@@ -8288,7 +8302,8 @@ mask-position:center;
     #tokens-panel-header,
     #tokens-panel-footer,
     button.above-roll20,
-    .ddbc-tab-options--layout-pill .ddbc-tab-options__header-heading{
+    .ddbc-tab-options--layout-pill .ddbc-tab-options__header-heading,
+	.aoe-style-dropdown-item{
         background: /*[[backgroundColor]]*/ !important;
         color: /*[[fontColor]]*/!important;
     }
@@ -9033,7 +9048,8 @@ mask-position:center;
     #zoom_buttons button:hover, 
     .GameLogEntry_Message__1GoY3 button:hover,
     .ddbc-tab-options--layout-pill .ddbc-tab-options__header-heading:hover,
-    button.daylight.active-daylight{
+    button.daylight.active-daylight,
+	.aoe-style-dropdown-item:hover{
         background: /*[[backgroundColor]]*/ !important;
         color: /*[[linkColor]]*/ !important;
         border-color: /*[[linkColor]]*/ !important; 
