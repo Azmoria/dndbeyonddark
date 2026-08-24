@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.708
+@version      1.2.709
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -8254,10 +8254,7 @@ mask-position:center;
         color: /*[[fontColor]]*/!important;
         border-color: /*[[borderColor]]*/ !important;
     }
-	#contextSelect{
-		background: buttonface !important;
-		color: #333 !important;
-	}
+
     #vision_menu #bucket_menu{
         transform: translate(5px);
         border: 1px solid;
