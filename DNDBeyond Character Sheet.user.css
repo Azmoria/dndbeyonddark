@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.389
+@version      1.3.390
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -4792,7 +4792,7 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
     #tokens-panel-header,
     #tokens-panel-footer,
     button.above-roll20,
-    .ddbc-tab-options--layout-pill .ddbc-tab-options__header-heading{
+    :is(.ddbc-tab-options--layout-pill, .aoe-style-dropdown-list) .ddbc-tab-options__header-heading{
         background: /*[[background]]*/ !important;
         color: /*[[fontColor]]*/!important;
     }
@@ -5161,17 +5161,21 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
     .importer_toggle:hover, 
     #zoom_buttons button:hover, 
     .GameLogEntry_Message__1GoY3 button:hover,
-    .ddbc-tab-options--layout-pill .ddbc-tab-options__header-heading:hover{
+    :is(.ddbc-tab-options--layout-pill, .aoe-style-dropdown-list) .ddbc-tab-options__header-heading:hover{
         background: /*[[background]]*/ !important;
         color: /*[[highlightColor]]*/ !important;
         border-color: /*[[highlightColor]]*/ !important;
         transition: none;
     }
-    .top_menu .ddbc-tab-options--layout-pill button{
+    .top_menu .ddbc-tab-options--layout-pill button,
+	.top_menu .aoe-style-dropdown-toggle,
+	.aoe-style-dropdown-item.ddbc-tab-options__header-heading{
         backdrop-filter: brightness(3);
         background: none !important;
     }
-    .top_menu .ddbc-tab-options--layout-pill button:hover{
+    .top_menu .ddbc-tab-options--layout-pill button:hover,
+	.top_menu .aoe-style-dropdown-toggle:hover,
+	.aoe-style-dropdown-item.ddbc-tab-options__header-heading:hover{
         background: none !important;
         backdrop-filter: brightness(4) !important;
     }
