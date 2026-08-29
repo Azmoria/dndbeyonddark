@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.710
+@version      1.2.711
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -8661,7 +8661,8 @@ mask-position:center;
      
     }
     .top_menu .ddbc-tab-options--layout-pill button,
-	.top_menu .ddbc-tab-options--layout-pill #aoe_styles_dropdown>.aoe-style-dropdown-toggle{
+	.top_menu .ddbc-tab-options--layout-pill #aoe_styles_dropdown>.aoe-style-dropdown-toggle,
+	.aoe-style-dropdown-item.ddbc-tab-options__header-heading{
         backdrop-filter: brightness(3);
         background: none !important;
         box-sizing: border-box;
@@ -9075,7 +9076,8 @@ mask-position:center;
     } 
           
 
-    .top_menu .ddbc-tab-options--layout-pill button:hover{
+    .top_menu .ddbc-tab-options--layout-pill button:hover,
+	.aoe-style-dropdown-item.ddbc-tab-options__header-heading:hover{
         background: none !important;
         backdrop-filter: brightness(4) !important;
     }
