@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.711
+@version      1.2.713
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -2988,7 +2988,9 @@ regexp("https://www.dndbeyond.com/en/library/.*"){
 		--Heading-Text-on-light: /*[[fontColor]]*/;
 		--text-color: /*[[fontColor]]*/;
 		--text-color-active: /*[[fontColor]]*/;
-		--border-color-active: /*[[borderColor]]*/;   }
+		--border-color-active: /*[[borderColor]]*/;   
+		--theme-page-bg-color: /*[[backgroundColor]]*/;
+	}
 
 
     [class*="Table_root"] {
@@ -7111,7 +7113,8 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
 	.note-visibility-toggle-container,
 	#dmScreenContainer,
 	.dmScreenDropdown,
-	.dmScreenDropdown .dmScreenDropdownItem
+	.dmScreenDropdown .dmScreenDropdownItem,
+	.sidebar-flyout
     {
         text-shadow: none !important;   
         background: var(--background-color) !important;
