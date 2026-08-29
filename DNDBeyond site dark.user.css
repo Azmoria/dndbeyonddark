@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.709
+@version      1.2.710
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -720,7 +720,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/dmr/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/logeer/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/sgehpp/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/vsspp2/(.|\s)*\S(.|\s)*"),
-regexp("https://www.dndbeyond.com/sources/dnd/foeq/(.|\s)*\S(.|\s)*")
+regexp("https://www.dndbeyond.com/sources/dnd/foeq/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/fgfd/(.|\s)*\S(.|\s)*")
 {
 
     #site-main,
@@ -1515,7 +1516,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/nwb(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/dmr(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/logeer(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/sgehpp(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/foeq(/)?")
+regexp("https://www.dndbeyond.com/sources/dnd/foeq(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/fgfd(/)?")
 
 {
    
@@ -1642,7 +1644,8 @@ regexp("https://www.dndbeyond.com/sources/dnd/nwb(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/dmr(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/logeer(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/sgehpp(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/foeq(/)?") {
+regexp("https://www.dndbeyond.com/sources/dnd/foeq(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/fgfd(/)?") {
 
     @media (min-width: 1024px) {
         body {
@@ -3698,6 +3701,10 @@ regexp("https://www.dndbeyond.com/en/library/.*"){
         color: /*[[fontColor]]*/
         !important;
     }
+	.dnd-sheet .col{
+		background: none !important;
+	}
+
 	[class*='PageSection_section'][style*="background-color:"] > [class*='PageSection_imagePositionWrapper']{
 		mix-blend-mode: soft-light;
 	}
@@ -8653,7 +8660,8 @@ mask-position:center;
         color: /*[[linkColor]]*/ !important;
      
     }
-    .top_menu .ddbc-tab-options--layout-pill button{
+    .top_menu .ddbc-tab-options--layout-pill button,
+	.top_menu .ddbc-tab-options--layout-pill #aoe_styles_dropdown>.aoe-style-dropdown-toggle{
         backdrop-filter: brightness(3);
         background: none !important;
         box-sizing: border-box;
