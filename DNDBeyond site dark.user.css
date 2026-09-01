@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.713
+@version      1.2.714
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -345,7 +345,7 @@ dark "Dark Mode" <<<EOT
         color: #9c8473 !important;
     }
 	.section-ravenloft-the-horrors-within .dark-domain-details {
-		background: linear-gradient(90deg, hsl(304deg 33% 20% / 0%), hsl(304 33% 10% / 1) 40px, hsl(304 33% 10% / 1) 83%, hsl(304deg 33% 20% / 0%));
+		background: linear-gradient(90deg, hsl(304deg 33% 20% / 0%), hsl(304 33% 10% / 1) 40px, hsl(304 33% 10% / 1) 83%, hsl(304deg 33% 20% / 0%)) !important;
 	}
 	:root .section-ravenloft-the-horrors-within{
 		--theme-primary-color: #481839;
