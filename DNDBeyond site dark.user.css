@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.714
+@version      1.2.715
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -7125,16 +7125,16 @@ regexp("https://www.dndbeyond.com/campaigns.*popoutgame.*"){
 		top: -25px;
 	}
 	:root{
-		--pc-template-bg-color: #121212;
-		--pc-template-sheet-bg: #1e1e1e;
+		--pc-template-bg-color: #000;
+		--pc-template-sheet-bg: #0e0e0e;
 		--pc-template-text-color: #e0e0e0;
 		--pc-template-text-muted: #aaaaaa;
 		--pc-template-border-color: #444444;
 		--pc-template-border-light: #333333;
-		--pc-template-box-bg: #2d2d2d;
-		--pc-template-header-bg: #252525;
-		--pc-template-table-stripe: #252525;
-		--pc-template-section-bg: #2a2a2a;
+		--pc-template-box-bg: #1d1d1d;
+		--pc-template-header-bg: #151515;
+		--pc-template-table-stripe: #151515;
+		--pc-template-section-bg: #1a1a1a;
 		--pc-template-section-text: #ffffff;
 	}
 	.mce-btn[aria-label="Add Checkbox"] button>i[style*="background-image"] {
@@ -7168,16 +7168,16 @@ mask-position:center;
 
 	.dnd-sheet {
 
-		--bg-color: #121212;
-		--sheet-bg: #1e1e1e;
+		--bg-color: #000;
+		--sheet-bg: #0e0e0e;
 		--text-color: #e0e0e0;
 		--text-muted: #aaaaaa;
 		--border-color: #444444;
 		--border-light: #333333;
-		--box-bg: #2d2d2d;
-		--header-bg: #252525;
-		--table-stripe: #252525;
-		--section-bg: #2a2a2a;
+		--box-bg: #1d1d1d;
+		--header-bg: #151515;
+		--table-stripe: #151515;
+		--section-bg: #1a1a1a;
 		--section-text: #ffffff;
 
 
