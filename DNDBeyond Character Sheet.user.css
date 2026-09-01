@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         DNDBeyond Character Sheet Dark
-@version      1.3.391
+@version      1.3.392
 @namespace    DNDBeyond Character Sheet Dark
 @preprocessor uso
 @author       Azmoria (Jay_Lane)
@@ -5212,8 +5212,8 @@ regexp("https://www.dndbeyond.com/characters/\\d.*abovevtt=true.*"){
     }
     
     
-    button[id$='-button'], 
-    button[id$='_button'], 
+    button[id$='-button']:not(.ddbc-tab-options__header-heading), 
+    button[id$='_button']:not(.ddbc-tab-options__header-heading), 
     button[id^=jitsi_], 
     button[id^=peerVideo_],
     #combat_tracker > button, 
