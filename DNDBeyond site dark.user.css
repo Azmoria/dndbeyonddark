@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.716
+@version      1.2.718
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -97,6 +97,33 @@ dark "Dark Mode" <<<EOT
             color: #dd4043;
         }
     }
+
+	 .aud-adventure-box {
+		border:none !important;
+		background: var(--background-color);
+		filter:none !important;
+		position:relative;
+		z-index:1;
+	}
+	.aud-adventure-box:before {
+		border-style: solid;
+		border-color: transparent;
+		border-image-source: url(https://media.dndbeyond.com/compendium-images/aud/ui/dnd-AUD-level_frame.png);
+		border-image-slice: 266 249 266 249 fill;
+		border-image-width: 250px;
+		border-image-repeat: stretch;
+		background-clip: border-box;
+		position:absolute;
+		inset: 0;
+		content:'';
+		width:100%;
+		height:100%;
+		z-index:-1;
+		mix-blend-mode: overlay;
+    	filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, .25));
+	}
+	
+
     body.section-cthulhu-by-torchlight strong:not(ul strong, .flexible-double-column.hangingIndent strong, .epigraph strong),  
     body.section-cthulhu-by-torchlight li::marker{
         color: hsl(242 45% 71% / 1) !important;
@@ -721,7 +748,10 @@ regexp("https://www.dndbeyond.com/sources/dnd/logeer/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/sgehpp/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/vsspp2/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/foeq/(.|\s)*\S(.|\s)*"),
-regexp("https://www.dndbeyond.com/sources/dnd/fgfd/(.|\s)*\S(.|\s)*")
+regexp("https://www.dndbeyond.com/sources/dnd/fgfd/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/rwg/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/aud/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/au/(.|\s)*\S(.|\s)*")
 {
 
     #site-main,
@@ -878,7 +908,10 @@ regexp("https://www.dndbeyond.com/sources/dnd/hcs/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/vsspp/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/drde/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/oswhap/(.|\s)*\S(.|\s)*"),
-regexp("https://www.dndbeyond.com/sources/dnd/oswhap(/)?")
+regexp("https://www.dndbeyond.com/sources/dnd/oswhap(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/rwg/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/aud/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/au/(.|\s)*\S(.|\s)*")
 {
 
     body{
@@ -1517,7 +1550,10 @@ regexp("https://www.dndbeyond.com/sources/dnd/dmr(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/logeer(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/sgehpp(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/foeq(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/fgfd(/)?")
+regexp("https://www.dndbeyond.com/sources/dnd/fgfd(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/rwg(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/aud(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/au(/)?")
 
 {
    
@@ -1645,7 +1681,10 @@ regexp("https://www.dndbeyond.com/sources/dnd/dmr(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/logeer(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/sgehpp(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/foeq(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/fgfd(/)?") {
+regexp("https://www.dndbeyond.com/sources/dnd/fgfd(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/rwg(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/aud(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/au(/)?") {
 
     @media (min-width: 1024px) {
         body {
@@ -4196,9 +4235,13 @@ regexp("https://www.dndbeyond.com/en/library/.*"){
     [class*='styles_search__GpeP'],
     [class*='styles_alert'],
     .ability-score-calcs [class*='styles_highlight'],
-    .ability-score-calcs [class*='styles_value']{
+    .ability-score-calcs [class*='styles_value'],
+	.epigraph--with-author{
         background: none !important;
     }
+	.section-arcana-unleashed aside.epigraph--with-author:after{
+		filter: var(--custom-icon-filter);
+	}
 
     [class*='styles_searchLabel'],
     #sortLabel
