@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.719
+@version      1.2.720
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -4591,7 +4591,9 @@ regexp("https://www.dndbeyond.com/en/library/.*"){
     input[type="number"],
     input[type="search"],
     input[type="password"],
-    input[type="email"],
+    input[type="email"] {
+        color: /*[[fontColor]]*/ !important;
+    }
     textarea:not(.drawing-text-box),
     select,
     .listing-card__description,
@@ -4613,7 +4615,9 @@ regexp("https://www.dndbeyond.com/en/library/.*"){
     .content-container h3,
     .content-container h4,
     .content-container h5,
-    .content-container h6,
+    .content-container h6 {
+        color: /*[[fontColor]]*/ !important;
+    }
     .ddb-campaigns-listing-active-header-secondary,
     .ddb-campaigns-listing-inactive-header-secondary,
     .ddb-campaigns-listing-active-header-primary,
@@ -4634,7 +4638,9 @@ regexp("https://www.dndbeyond.com/en/library/.*"){
     .mon-stat-block__attribute,
     .mon-stat-block__feature,
     .mon-stat-block__stat-block .ability-block,
-    .mon-stat-block__tidbit,
+    .mon-stat-block__tidbit {
+        color: /*[[fontColor]]*/ !important;
+    }
     .mon-stat-block__description-block-heading,
     .mon-stat-block__description-block h3,
     .builder-field-toggle-description,
@@ -4670,7 +4676,9 @@ regexp("https://www.dndbeyond.com/en/library/.*"){
     .non-sortable-label,
     .tooltip-body-statblock-item-value,
     .tooltip-body-statblock-item-label,
-    .tooltip-body-description,
+    .tooltip-body-description {
+        color: /*[[fontColor]]*/ !important;
+    }
     .p-user-a .p-user-interaction .p-user-content .member-profile .profile-field-group .profile-field-text, 
     .p-user-a.s_myAccount .p-user-interaction .p-user-content .member-profile .profile-field-group .profile-field-text, 
     .p-user-a.s_myProfile .p-user-interaction .p-user-content .member-profile .profile-field-group .profile-field-text, 
@@ -4705,7 +4713,9 @@ regexp("https://www.dndbeyond.com/en/library/.*"){
     .b-pagination-a .b-pagination-list>.b-pagination-item>a.s-active, 
     .b-pagination-a .b-pagination-list>.b-pagination-item>span.s-active,
     .p-comments-b .p-comment-footer .forum-post-rating .content-box-rating span.like::before, 
-    .body-forum .comment-preview li .p-comment-footer .forum-post-rating .content-box-rating span.like::before, 
+    .body-forum .comment-preview li .p-comment-footer .forum-post-rating .content-box-rating span.like::before {
+        color: /*[[fontColor]]*/ !important;
+    } 
     .body-forum-search .p-comments-a .p-comment-footer .forum-post-rating .content-box-rating span.like::before,
     .dice-set__info__title,
     .ddb-modal-header-text,
@@ -4735,7 +4745,9 @@ regexp("https://www.dndbeyond.com/en/library/.*"){
     .mce-menu-item .mce-ico, 
     .mce-menu-item .mce-text,
     .mce-container, 
-    .mce-container *, 
+    .mce-container * {
+        color: /*[[fontColor]]*/ !important;
+    } 
     .mce-widget, 
     .mce-reset,
     .b-pagination-b li.b-pagination-item>a,
@@ -4772,7 +4784,9 @@ regexp("https://www.dndbeyond.com/en/library/.*"){
     .encounter-row__subtext,
     .loading-status-indicator__subtext,
     .encounter-monster__subtext,
-    .list-row-name-secondary-text,
+    .list-row-name-secondary-text {
+        color: /*[[fontColor]]*/ !important;
+    }
     .comment .forum-post-body-content .spoiler,
     .p-comment-content .spoiler,
     .ddb-homebrew-create-special .listing-body .b-table-a th .asc,
@@ -4804,7 +4818,9 @@ regexp("https://www.dndbeyond.com/en/library/.*"){
     .MuiPaper-root h2,
     .monstrous-logs p,
     .encounter-details-monster__quantity span,
-    .line-item span,
+    .line-item span {
+        color: /*[[fontColor]]*/ !important;
+    }
     .MuiFormLabel-colorPrimary.MuiFormLabel-filled[class*="ddb-character-app-"],
     .MuiInputLabel-formControl.MuiInputLabel-animated.MuiInputLabel-shrink[class*="ddb-character-app-"],
     .MuiTypography-h4[class*="ddb-character-app-"],
@@ -4832,14 +4848,17 @@ regexp("https://www.dndbeyond.com/en/library/.*"){
     [class*='styles_numberDisplay'],
     [class*='styles_labelSignColor'],
     [class*='LabelChip_labelChip'],
-    [class*='styles_font'],
+    [class*='styles_font'] {
+        color: /*[[fontColor]]*/ !important;
+    }
     [class*='styles_header'],
     [class*='ddb-character-app']>[class*='ddb-character-app'] .ddbc-ability-summary *,
     .character-builder span[class*=numberDisplay], .character-builder span[class*=spellName],
     .body-page .p-article-a .p-article-content .h5-override,
 	.section-grim-hollow-players-guide li::marker, 
 	.section-grim-hollow-players-guide strong:not(ul strong,.flexible-double-column.hangingIndent strong,.epigraph strong),
-	.section-resources .character-sheet-display p
+	.section-resources .character-sheet-display p,
+	.ddb-glance li
     {
         color: /*[[fontColor]]*/ !important;
     }
@@ -4877,7 +4896,9 @@ regexp("https://www.dndbeyond.com/en/library/.*"){
     body.body-forum .p-comment-sig a:not([style*="color:"]),
     .help-block a,
     .monster-row__name,
-    .article-main h2 a:hover,
+    .article-main h2 a:hover {
+        color: /*[[linkColor]]*/ !important
+    }
     .encounter-row__cell--campaign a,
     .compendium-toc-full a,
     .container span[role=button],
@@ -4899,7 +4920,9 @@ regexp("https://www.dndbeyond.com/en/library/.*"){
     .ddb-account-tab-marketplace .listing-orders td:nth-of-type(4) .link:visited,
     .forum-thread-row .col-thread .title:hover,
     .p-forum-a .col-forum .forum-subs a:hover,
-    .user:hover,
+    .user:hover{
+        color: /*[[linkColor]]*/ !important
+    }
     .ddbc-truncated-content__trigger-label,
     .body-forum li.b-pagination-item a[rel="prev"]:hover, 
     .body-forum li.b-pagination-item a[rel="next"]:hover, 
@@ -4909,7 +4932,9 @@ regexp("https://www.dndbeyond.com/en/library/.*"){
     .body-forum-search .p-comments-a .p-comment-footer .forum-post-rating .content-box-rating span.like:hover::before,
     .b-ratingForm-a a:hover .num-likes,
     .turn-controls__round, 
-    .turn-controls__turn,
+    .turn-controls__turn{
+        color: /*[[linkColor]]*/ !important
+    }
     .actions-container .actions__tooltip>ul li:hover,
     .actions-container .actions__tooltip>ul li:hover a span,
     .encounter-row__name:hover,
@@ -4931,7 +4956,9 @@ regexp("https://www.dndbeyond.com/en/library/.*"){
     .listing-forum-search .statistics .statistics-body a:hover,
     .listing-forum-search .statistics .statistics-body a:visited:hover, 
     .listing-forum-search .statistics .statistics-body a:active:hover,
-    .forum-post-body a:not([style*="color"]):not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip),
+    .forum-post-body a:not([style*="color"]):not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip){
+        color: /*[[linkColor]]*/ !important
+    }
     .forum-post-body a:hover:not([style*="color"]):not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip),
     .forum-post-body a:visited:not([style*="color"]):not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip),
     body.body-page .container a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip):not(.b-pagination-item):not([style*="color"]):not([class*='compendium-image']),
@@ -4939,7 +4966,9 @@ regexp("https://www.dndbeyond.com/en/library/.*"){
     body.body-rpgigear .container a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip):not(.b-pagination-item):not([style*="color"]):not(.homebrew-creation-actions-item-delete),
     body.body-rpgrace .container a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip):not(.b-pagination-item):not([style*="color"]):not(.homebrew-creation-actions-item-delete),
     body.body-rpgclass .container a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip):not(.b-pagination-item):not([style*="color"]):not(.homebrew-creation-actions-item-delete),
-    body.body-user .container a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip):not(.b-pagination-item):not([rel^="prev"]):not([rel^="next"]):not([style*="color"]):not(.homebrew-creation-actions-item-delete),
+    body.body-user .container a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip):not(.b-pagination-item):not([rel^="prev"]):not([rel^="next"]):not([style*="color"]):not(.homebrew-creation-actions-item-delete){
+        color: /*[[linkColor]]*/ !important
+    }
     body[class*="body-rpgrace"] .container a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip):not(.b-pagination-item):not([rel^="prev"]):not([rel^="next"]):not([style*="color"]):not(.homebrew-creation-actions-item-delete),
     .b-pagination-a .b-pagination-list>.b-pagination-item>a:hover,
     .body-privatemessage .container .p-comment-wrapper a:not(.spell-tooltip):not(.monster-tooltip):not(.magic-item-tooltip):not(.b-pagination-item):not([rel^="prev"]):not([rel^="next"]):not([style*="color"]),
@@ -4955,7 +4984,9 @@ regexp("https://www.dndbeyond.com/en/library/.*"){
     .party-selectors__stats a,
     .ddbc-html-content a,
     body[class*="rpg"] .listing-container .listing.b-table-a td a,
-    a[style*="color: rgba(71, 209, 140, 1)"],
+    a[style*="color: rgba(71, 209, 140, 1)"]{
+        color: /*[[linkColor]]*/ !important
+    }
     a[style*="color: #47d18c"],
     .article-author-name:hover,
     .article-author-name:hover span,
@@ -4973,7 +5004,9 @@ regexp("https://www.dndbeyond.com/en/library/.*"){
     .ddb-campaigns-character-card-footer-links a,
     .ddb-campaigns-character-card-footer-links div:not(:last-of-type)>button,
     .monster-row__stat-block a,
-    .above-vtt-content-div a[href*="discord"],
+    .above-vtt-content-div a[href*="discord"]{
+        color: /*[[linkColor]]*/ !important
+    }
     .encounter-details-difficulty-summary__campaign-summary a,
     .encounter-details-difficulty-summary__campaign-summary a:hover,
     .encounter-details-difficulty-summary__party-summary-button,
@@ -4987,8 +5020,7 @@ regexp("https://www.dndbeyond.com/en/library/.*"){
     .tooltip a,
     .tooltip-body-description a,
     [class*='styles_pdfLinkWrapper'] a,
-    .content-container blockquote a
-    {
+    .content-container blockquote a {
         color: /*[[linkColor]]*/ !important
     }
     .mon-stat-block .tooltip-hover.skill-tooltip,
