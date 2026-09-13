@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.720
+@version      1.2.721
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -97,7 +97,24 @@ dark "Dark Mode" <<<EOT
             color: #dd4043;
         }
     }
-
+	.avtt-statblock-buffs{
+		--theme-contrast: var(--font-color);
+		--theme-background-solid: var(--background-color)
+	}
+    .dropdown-check-list ul.avttBuffItems>ul,
+    .avttBuffSheetPins li{
+        background:none !important;
+        color-scheme: dark;
+    }
+    .dropdown-check-list ul.avttBuffItems>ul>li:first-of-type:hover,
+    .dropdown-check-list ul.avttBuffItems>ul>ul>li:first-of-type:hover{
+        backdrop-filter:brightness(3);
+    }
+    .dropdown-check-list ul.avttBuffItems select,
+    .avttBuffSheetPins select{
+        background: #363636 !important;       
+        color-scheme: dark;
+    }
 	 .aud-adventure-box {
 		border:none !important;
 		background: var(--background-color);
