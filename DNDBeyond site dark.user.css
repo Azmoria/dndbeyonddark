@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.721
+@version      1.2.722
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -7678,10 +7678,10 @@ mask-position:center;
    .ui-dialog .mce-edit-area iframe{
          filter: none !important; 
     }
-	.hide-button.active span{
+	#scenes-panel :is(.hide-button, .favorites-button).active span{
 		color: var(--link-color) !important;
 	}
-	.hide-button.active {
+	#scenes-panel :is(.hide-button, .favorites-button).active {
 		border-color: var(--link-color) !important;
 		background: color-mix(in srgb, var(--link-color) 15%, /*[[rollCalcColor]]*/ 100%) !important;
 	}
