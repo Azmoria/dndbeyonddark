@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.724
+@version      1.2.725
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -4635,6 +4635,9 @@ regexp("https://www.dndbeyond.com/en/library/.*"){
     .content-container h6 {
         color: /*[[fontColor]]*/ !important;
     }
+	select option {
+	   color: /*[[fontColor]]*/ !important;
+	}
     .ddb-campaigns-listing-active-header-secondary,
     .ddb-campaigns-listing-inactive-header-secondary,
     .ddb-campaigns-listing-active-header-primary,
