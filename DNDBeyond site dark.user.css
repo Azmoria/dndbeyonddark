@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.726
+@version      1.2.727
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -3130,14 +3130,29 @@ regexp("https://www.dndbeyond.com/en/search.*"){
 	[class*='Dropdown_trigger__'],
 	[class*='Dropdown_menu__'],
 	[class*='TabFilter_tabList__'],
-	[class*='TabFilter_active__']{
+	[class*='TabFilter_active__'],
+	[class*='ResultsPanel_panel']{
 		background: /*[[backgroundColor]]*/ !important;
 	
 	}
-	
-		[class*='TabFilter_option']:not([aria-checked=true],:disabled):hover, 
-		[class*='TabFilter_option']:not([aria-checked=true],:disabled)[data-hovered],
-		[class*='ResultsSkeleton_badge__'], 		[class*='ResultsSkeleton_image__'], [class*='ResultsSkeleton_lineShort__'], [class*='ResultsSkeleton_line__'], [class*='ResultsSkeleton_title__']{
+
+	[class*='TopResult_abilityName__'],
+	[class*='TopResult_abilityScore__'],
+	[class*='TopResult_abilityModifier__'] {
+		background: color-mix(in srgb, var(--background-color) 100%, #fff 10%);
+	}
+
+	[class*='TopResult_borders'] [fill='#D7D2BE']{
+		fill:  color-mix(in srgb, var(--background-color), #D7D2BE 70%) !important;
+	}
+
+	[class*='TabFilter_option']:not([aria-checked=true],:disabled):hover, 
+	[class*='TabFilter_option']:not([aria-checked=true],:disabled)[data-hovered],
+	[class*='ResultsSkeleton_badge__'], 		
+	[class*='ResultsSkeleton_image__'], 
+	[class*='ResultsSkeleton_lineShort__'], 
+	[class*='ResultsSkeleton_line__'], 
+	[class*='ResultsSkeleton_title__']{
 		background: color-mix(in srgb, var(--background-color) 100%, #fff 10%);
 	}
 
@@ -3150,9 +3165,14 @@ regexp("https://www.dndbeyond.com/en/search.*"){
 	[class*='Dropdown_option__'],
 	[class*='TabFilter_option__'],
 	[class*='FilterFields_dropdown___']>label, 
-	[class*='FilterFields_tabFilter__'] legend{
+	[class*='FilterFields_tabFilter__'] legend,
+	[class*='ResultsPanel_panel'] :is([class*='ResultsPanel_label'], [class*='ResultsPanel_option']){
 		color: /*[[fontColor]]*/ !important;
 		
+	}
+	[class*='ResultsPanel_option__']:hover, 
+	[class*='ResultsPanel_option__'][data-active=true]{
+		background: color-mix(in srgb, var(--background-color) 100%, #c19429 50%)
 	}
 
 	[class*='Badge_container__']{
