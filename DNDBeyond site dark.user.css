@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.725
+@version      1.2.726
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -3026,7 +3026,8 @@ regexp("https://www.dndbeyond.com/project-sigil/download"),
 regexp("https://www.dndbeyond.com/species.*"),
 regexp("https://www.dndbeyond.com/en/library.*"),
 regexp("https://www.dndbeyond.com/resources.*"),
-regexp("https://www.dndbeyond.com/en/library/.*"){
+regexp("https://www.dndbeyond.com/en/library/.*"),
+regexp("https://www.dndbeyond.com/en/search.*"){
 
 
     :root, :before, :after{
@@ -3123,6 +3124,63 @@ regexp("https://www.dndbeyond.com/en/library/.*"){
         }
 
     }
+
+	[class*='page_root__'],
+	[class*='TopResult_topResult__'],
+	[class*='Dropdown_trigger__'],
+	[class*='Dropdown_menu__'],
+	[class*='TabFilter_tabList__'],
+	[class*='TabFilter_active__']{
+		background: /*[[backgroundColor]]*/ !important;
+	
+	}
+	
+		[class*='TabFilter_option']:not([aria-checked=true],:disabled):hover, 
+		[class*='TabFilter_option']:not([aria-checked=true],:disabled)[data-hovered],
+		[class*='ResultsSkeleton_badge__'], 		[class*='ResultsSkeleton_image__'], [class*='ResultsSkeleton_lineShort__'], [class*='ResultsSkeleton_line__'], [class*='ResultsSkeleton_title__']{
+		background: color-mix(in srgb, var(--background-color) 100%, #fff 10%);
+	}
+
+	[class*='SearchCard_'],
+	[class*='Filters_filterGroupButtons'],
+	[class*='page_header'],
+	[class*='TopResult_'],
+	[class*='Badge_container__'],
+	[class*='Dropdown_trigger__'],
+	[class*='Dropdown_option__'],
+	[class*='TabFilter_option__'],
+	[class*='FilterFields_dropdown___']>label, 
+	[class*='FilterFields_tabFilter__'] legend{
+		color: /*[[fontColor]]*/ !important;
+		
+	}
+
+	[class*='Badge_container__']{
+		border-color: var(--border-color) !important;
+	}
+
+	[class*='SearchResults_cardDivider__'] path,
+	[class*='Button_content__'] svg{
+		fill: var(--border-color) !important;
+	}
+
+	[class*='SearchCard_description__'] table thead tr, 		    	[class*='SearchCard_description__'] table tr:nth-child(2n){
+		background: color-mix(in srgb, var(--background-color) 100%, #fff 2%)
+	}
+
+	[class*='TopResult_']{
+		--Surface\/BG\/Tertiarty\/Rest: var(--background-color);
+		--Surface\/BG\/Secondary\/Rest: var(--background-color);
+		--Surface\/BG\/Decorative-Subtle\/Rest: hsl(48 24 43);
+		--border-inner: #75673b;
+		--Surface\/Divider\/Decorative\/Rest: #c19429;
+	}
+
+	[class*='TopResult_footer__']:after, 
+	[class*='TopResult_header__']:after{
+		background-image:none;
+	}
+	
     body,
     .sidebar-scroll-menu{
        overflow: overlay !important;
