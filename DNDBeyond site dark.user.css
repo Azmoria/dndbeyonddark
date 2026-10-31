@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.727
+@version      1.2.728
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -3152,7 +3152,9 @@ regexp("https://www.dndbeyond.com/en/search.*"){
 	[class*='ResultsSkeleton_image__'], 
 	[class*='ResultsSkeleton_lineShort__'], 
 	[class*='ResultsSkeleton_line__'], 
-	[class*='ResultsSkeleton_title__']{
+	[class*='ResultsSkeleton_title__'],
+	[class*='SearchBar_skeletonRow___'],
+	[class*='SearchBar_skeletonLabel']{
 		background: color-mix(in srgb, var(--background-color) 100%, #fff 10%);
 	}
 
