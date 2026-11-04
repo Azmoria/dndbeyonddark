@@ -2,7 +2,7 @@
 @name         DNDBeyond Dark Theme
 @preprocessor uso
 @namespace    DNDBeyond Dark Theme
-@version      1.2.728
+@version      1.2.730
 @author       Azmoria (Jay_Lane) 
 @var color backgroundColor "Background Color" #0b0b0d
 @var color transparencyBackgroundColor "Transparency of some backgrounds/buttons" #000000aa
@@ -137,7 +137,12 @@ dark "Dark Mode" <<<EOT
     	filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, .25));
 	}
 	
-
+	:root .section-world-of-warcraft {
+		--theme-accent-dark: var(--font-color);
+	}
+.section-world-of-warcraft-icecrown-citadel div.stat-block>p:nth-of-type(-n+8):not(:first-of-type), .section-world-of-warcraft-icecrown-citadel div.stat-block td, .section-world-of-warcraft-icecrown-citadel div.stat-block th{
+	--theme-primary-dark: var(--font-color);
+	}
     body.section-cthulhu-by-torchlight strong:not(ul strong, .flexible-double-column.hangingIndent strong, .epigraph strong),  
     body.section-cthulhu-by-torchlight li::marker{
         color: hsl(242 45% 71% / 1) !important;
@@ -768,7 +773,10 @@ regexp("https://www.dndbeyond.com/sources/dnd/foeq/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/fgfd/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/rwg/(.|\s)*\S(.|\s)*"),
 regexp("https://www.dndbeyond.com/sources/dnd/aud/(.|\s)*\S(.|\s)*"),
-regexp("https://www.dndbeyond.com/sources/dnd/au/(.|\s)*\S(.|\s)*")
+regexp("https://www.dndbeyond.com/sources/dnd/au/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/dde/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/wow/(.|\s)*\S(.|\s)*"),
+regexp("https://www.dndbeyond.com/sources/dnd/icc/(.|\s)*\S(.|\s)*")
 {
 
     #site-main,
@@ -1570,7 +1578,10 @@ regexp("https://www.dndbeyond.com/sources/dnd/foeq(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/fgfd(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/rwg(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/aud(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/au(/)?")
+regexp("https://www.dndbeyond.com/sources/dnd/au(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/dde(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/wow(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/icc(/)?")
 
 {
    
@@ -1701,7 +1712,10 @@ regexp("https://www.dndbeyond.com/sources/dnd/foeq(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/fgfd(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/rwg(/)?"),
 regexp("https://www.dndbeyond.com/sources/dnd/aud(/)?"),
-regexp("https://www.dndbeyond.com/sources/dnd/au(/)?") {
+regexp("https://www.dndbeyond.com/sources/dnd/au(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/dde(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/wow(/)?"),
+regexp("https://www.dndbeyond.com/sources/dnd/icc(/)?") {
 
     @media (min-width: 1024px) {
         body {
@@ -3048,7 +3062,12 @@ regexp("https://www.dndbeyond.com/en/search.*"){
 		--border-color-active: /*[[borderColor]]*/;   
 		--theme-page-bg-color: /*[[backgroundColor]]*/;
 	}
-
+	:root .section-credits{
+		--theme-page-bg-image-base: var(--background-color);
+		--theme-page-bg-image-1024: var(--background-color);
+		--theme-page-bg-image-1921: var(--background-color);
+		--theme-page-bg-image-2561: var(--background-color);
+	}
 
     [class*="Table_root"] {
 		--input-label-color: var(--text-color);
@@ -3168,7 +3187,8 @@ regexp("https://www.dndbeyond.com/en/search.*"){
 	[class*='TabFilter_option__'],
 	[class*='FilterFields_dropdown___']>label, 
 	[class*='FilterFields_tabFilter__'] legend,
-	[class*='ResultsPanel_panel'] :is([class*='ResultsPanel_label'], [class*='ResultsPanel_option']){
+	[class*='ResultsPanel_panel'] :is([class*='ResultsPanel_label'], [class*='ResultsPanel_option']),
+	[class*='EmptyState_text']{
 		color: /*[[fontColor]]*/ !important;
 		
 	}
@@ -3199,7 +3219,9 @@ regexp("https://www.dndbeyond.com/en/search.*"){
 	}
 
 	[class*='TopResult_footer__']:after, 
-	[class*='TopResult_header__']:after{
+	[class*='TopResult_header__']:after,
+	.section-world-of-warcraft-icecrown-citadel .text--rules-sidebar,
+	.section-credits .text--rules-sidebar{
 		background-image:none;
 	}
 	
